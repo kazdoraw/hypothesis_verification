@@ -1,0 +1,482 @@
+# D1 v6 Seeds — базовые фразы для генерации датасета
+#
+# Источники: production router.py keywords, D2 cases.py, D4 KB, ручные
+# Каждый seed = semantic family; все Grok-вариации наследуют domain/subtype
+# ~415 seeds: anamnesis(105) + faq(120) + booking(90) + unsupported(100)
+
+seeds:
+
+  # =========================================================================
+  # ANAMNESIS — symptom (35 seeds)
+  # =========================================================================
+  - {id: seed_001, text: "Болит зуб", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_002, text: "Десна кровоточит", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_003, text: "Ноет под коронкой", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_004, text: "Чувствительность на холодное", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_005, text: "Опухла щека", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_006, text: "Резкая боль в нижнем правом зубе", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_007, text: "Дёсны опустились, видны корни", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_008, text: "Щёлкает челюсть при открывании рта", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_009, text: "Больно жевать на левой стороне", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_010, text: "Зуб мудрости лезет, десна опухла", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_011, text: "Неприятный запах изо рта", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_012, text: "Температура 37.8, десна болит", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_013, text: "Сильное кровотечение после удаления зуба", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_014, text: "Ребёнку плохо, зуб шатается после падения", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_015, text: "Боль отдаёт в висок и ухо", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_016, text: "Горячая еда усиливает боль", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_017, text: "Пульсирующая боль по ночам", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_018, text: "Гной выходит из десны при надавливании", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_019, text: "Рот полностью не открывается", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_020, text: "Утром челюсть скованная", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_021, text: "Ночью скрежет зубами", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_022, text: "Зубы стираются", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_023, text: "Лимфоузел под челюстью увеличился", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_024, text: "Припухлость на десне, как шарик", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_025, text: "Болит от сладкого", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_026, text: "Кровоточивость при чистке зубов", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_027, text: "Зуб потемнел", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_028, text: "Ребёнок жалуется на боль при еде", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_029, text: "Натирает щёку изнутри", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_030, text: "Дёсны отёкшие и красные", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_031, text: "Зуб стал розоватым после удара", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_032, text: "Чешутся дёсны", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_033, text: "Свищ на десне", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+  - {id: seed_034, text: "Флюс, щека раздуло", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent}
+  - {id: seed_035, text: "Онемение губы после лечения", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # ANAMNESIS — complaint (35 seeds)
+  # =========================================================================
+  - {id: seed_036, text: "Выпала пломба", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_037, text: "Откололся кусок зуба", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_038, text: "Коронка шатается", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_039, text: "Треснул зуб", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_040, text: "Брекет отклеился", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_041, text: "Сломался передний зуб", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_042, text: "Временная пломба вылетела", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_043, text: "Протез натирает десну", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_044, text: "Мост отпал", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_045, text: "Потерял два передних зуба", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_046, text: "Зуб крошится", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_047, text: "Выпал штифт из зуба", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_048, text: "Проволока от брекетов царапает щёку", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_049, text: "Винир отвалился", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_050, text: "Зуб разрушен до корня", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_051, text: "Стёрлись передние зубы", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_052, text: "Пломба потемнела, некрасиво", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_053, text: "Промежутки между зубами увеличились", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_054, text: "Ретейнер сломался", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_055, text: "Имплант шатается", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_056, text: "После лечения каналов стало хуже", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_057, text: "Зуб сместился после удара", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_058, text: "Съёмный протез не держится", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_059, text: "Скол на переднем зубе", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_060, text: "Камень на зубах, не чистили давно", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_061, text: "У ребёнка чёрные дырочки на зубах", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_062, text: "У ребёнка налёт на зубах", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_063, text: "Нет нескольких зубов, жевать неудобно", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_064, text: "Зубы серого цвета, стесняюсь улыбаться", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_065, text: "Щель между передними зубами", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_066, text: "Кривые зубы", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_067, text: "Неправильный прикус", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_068, text: "У ребёнка нет места для зубов", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_069, text: "У ребёнка не закрывается рот полностью", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+  - {id: seed_070, text: "Альвеолит после удаления", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # ANAMNESIS — treatment_interest (35 seeds)
+  # =========================================================================
+  - {id: seed_071, text: "Хочу отбеливание", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_072, text: "Интересует имплантация", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_073, text: "Нужны брекеты", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_074, text: "Хочу виниры", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_075, text: "Нужна профессиональная чистка", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_076, text: "Хочу поставить импланты вместо протеза", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_077, text: "Интересует исправление прикуса", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_078, text: "Хочу элайнеры", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_079, text: "Нужен мост на нижнюю челюсть", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_080, text: "Хочу удалить зуб мудрости", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_081, text: "Интересует пластика десны", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_082, text: "Хочу лечение под седацией", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_083, text: "Нужна реставрация переднего зуба", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_084, text: "Интересует протезирование на имплантах", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_085, text: "Хочу all-on-4", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_086, text: "Нужна детская чистка", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_087, text: "Хочу герметизацию фиссур ребёнку", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_088, text: "Интересует фторирование", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_089, text: "Хочу убрать зубной камень", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_090, text: "Нужно вылечить кариес", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_091, text: "Хочу лечение каналов", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_092, text: "Интересует закись азота для ребёнка", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_093, text: "Нужна коронка", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_094, text: "Хочу циркониевые коронки", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_095, text: "Интересует костная пластика", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_096, text: "Хочу одномоментную имплантацию", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_097, text: "Нужна пластика уздечки губы", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_098, text: "Интересуюсь лазерным лечением", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_099, text: "Хочу художественную реставрацию", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_100, text: "Нужно поставить вкладку", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_101, text: "Интересует синус-лифтинг", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_102, text: "Хочу ночную каппу от бруксизма", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_103, text: "Нужна спортивная каппа", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_104, text: "Хочу сделать КТ зубов", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+  - {id: seed_105, text: "Нужен профосмотр", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # FAQ — price (30 seeds)
+  # =========================================================================
+  - {id: seed_106, text: "Сколько стоит имплант?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_107, text: "Какие цены на чистку?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_108, text: "Стоимость брекетов", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_109, text: "Прайс на виниры", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_110, text: "Есть рассрочка на имплантацию?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_111, text: "Сколько стоит удаление зуба мудрости?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_112, text: "Цена отбеливания?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_113, text: "Почём коронка из циркония?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_114, text: "Сколько стоит лечение кариеса?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_115, text: "Есть беспроцентная рассрочка?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_116, text: "Стоимость консультации", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_117, text: "Сколько стоит КТ?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_118, text: "Цена элайнеров?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_119, text: "Что дешевле — мост или имплант?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_120, text: "Сколько будет стоить всё лечение?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_121, text: "Стоимость пломбы", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_122, text: "Цена протезирования", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_123, text: "Сколько стоит лечение каналов?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_124, text: "Цена детской чистки?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_125, text: "Анестезия входит в стоимость?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_126, text: "Стоимость пластики десны", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_127, text: "Прайс-лист есть?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_128, text: "На сколько месяцев рассрочка?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_129, text: "Цена снятия брекетов?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_130, text: "Стоимость all-on-4", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_131, text: "Сколько стоит снимок зуба?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_132, text: "Цена герметизации фиссур?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_133, text: "Стоимость удаления нерва", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_134, text: "Принимаете по ДМС?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+  - {id: seed_135, text: "Можно оплатить картой?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # FAQ — clinic_info (30 seeds)
+  # =========================================================================
+  - {id: seed_136, text: "Где вы находитесь?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_137, text: "Работаете в субботу?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_138, text: "Есть парковка?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_139, text: "Какой у вас адрес?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_140, text: "До скольки работаете?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_141, text: "Принимаете детей?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_142, text: "С какого возраста берёте детей?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_143, text: "Какой телефон клиники?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_144, text: "Работаете в воскресенье?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_145, text: "Есть ли у вас лицензия?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_146, text: "Есть седация?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_147, text: "Лечите под закисью азота?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_148, text: "Как к вам добраться?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_149, text: "Какие формы оплаты?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_150, text: "Даёте гарантию на лечение?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_151, text: "Какие документы нужны на приём?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_152, text: "Есть электронная запись?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_153, text: "Делаете КТ у вас?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_154, text: "Есть рентген в клинике?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_155, text: "Во сколько открываетесь?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_156, text: "Как называется ваша клиника?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_157, text: "Вы на Рябикова?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_158, text: "Есть налоговый вычет за лечение?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_159, text: "Даёте справку для налоговой?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_160, text: "Есть программа лояльности?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_161, text: "Акции есть?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_162, text: "Нужно ли направление?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_163, text: "Куда жаловаться?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_164, text: "Есть вай-фай в клинике?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_165, text: "Сколько детских стоматологов?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # FAQ — doctor_info (30 seeds)
+  # =========================================================================
+  - {id: seed_166, text: "Работает ли у вас Батылин?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_167, text: "Кто ваш лучший ортодонт?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_168, text: "Какой стаж у хирурга?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_169, text: "Есть детский стоматолог?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_170, text: "Кто делает имплантацию?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_171, text: "У вас есть ортодонт Ермаков?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_172, text: "Демин ещё работает у вас?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_173, text: "Кто лечит детей?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_174, text: "Есть ли пародонтолог?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_175, text: "Кто самый опытный врач?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_176, text: "Конновская принимает?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_177, text: "Какая специализация у Демина?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_178, text: "Кто ставит брекеты?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_179, text: "Есть ортопед?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_180, text: "Кто делает протезирование?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_181, text: "Есть врач-гнатолог?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_182, text: "Кто удаляет зубы мудрости?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_183, text: "Расскажите про ваших врачей", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_184, text: "Стаж работы Ермакова?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_185, text: "Есть анестезиолог?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_186, text: "Кто лечит десны?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_187, text: "Какие врачи работают по выходным?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_188, text: "У кого больше всего отзывов?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_189, text: "Есть терапевт-стоматолог?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_190, text: "Кто занимается эстетикой?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_191, text: "Сколько врачей в клинике?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_192, text: "Хочу к женщине-стоматологу", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_193, text: "Кто принимает беременных?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_194, text: "Есть хирург для имплантации?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+  - {id: seed_195, text: "Кто делает снимки?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # FAQ — procedure_info (30 seeds)
+  # =========================================================================
+  - {id: seed_196, text: "Имплантация это больно?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_197, text: "Сколько длится чистка?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_198, text: "Какие противопоказания у отбеливания?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_199, text: "Как проходит удаление зуба мудрости?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_200, text: "Через сколько можно есть после пломбы?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_201, text: "Сколько заживает после имплантации?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_202, text: "Как долго носить брекеты?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_203, text: "Анестезия общая или местная?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_204, text: "Какие есть виды имплантов?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_205, text: "Сколько визитов нужно?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_206, text: "Нужна ли подготовка к КТ?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_207, text: "Что нельзя после удаления?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_208, text: "Как ухаживать за брекетами?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_209, text: "Можно ли беременным лечить зубы?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_210, text: "Когда снимают швы после удаления?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_211, text: "Отбеливание вредит эмали?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_212, text: "Какой срок службы импланта?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_213, text: "Можно ли вылечить пульпит за один визит?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_214, text: "Как работает закись азота?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_215, text: "Сколько по времени ставить коронку?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_216, text: "Есть ли риски при имплантации?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_217, text: "Что лучше — мост или имплант?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_218, text: "Можно ли курить после удаления?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_219, text: "Как часто нужна профчистка?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_220, text: "Какие материалы для пломб?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_221, text: "Чем отличаются керамические и металлические брекеты?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_222, text: "Нужен ли ретейнер после брекетов?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_223, text: "Как долго действует анестезия?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_224, text: "Можно ли детям делать рентген?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+  - {id: seed_225, text: "Нужна ли диета после отбеливания?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # BOOKING — new_appointment (30 seeds)
+  # =========================================================================
+  - {id: seed_226, text: "Хочу записаться", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_227, text: "Когда можно попасть на приём?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_228, text: "Запишите на следующую неделю", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_229, text: "Есть свободное время на завтра?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_230, text: "Хочу на консультацию", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_231, text: "Записаться на чистку", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_232, text: "Запишите к стоматологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_233, text: "Есть окошко на этой неделе?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_234, text: "Хочу записать ребёнка", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_235, text: "Запишите на осмотр", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_236, text: "Можно записаться на сегодня?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_237, text: "Запишите к хирургу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "хирург"}
+  - {id: seed_238, text: "Хочу попасть к ортодонту", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортодонт"}
+  - {id: seed_239, text: "Нужна запись к детскому стоматологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "детский стоматолог"}
+  - {id: seed_240, text: "Запишите на удаление", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_241, text: "Хочу на приём в понедельник", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_242, text: "Можно ли записаться онлайн?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_243, text: "Запишите двоих — меня и мужа", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_244, text: "Есть утренние часы?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_245, text: "Запишите на вечер после 18", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_246, text: "Хочу на имплантацию", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_247, text: "Нужна срочная запись", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent}
+  - {id: seed_248, text: "Экстренный приём есть?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent}
+  - {id: seed_249, text: "Записываете первичных?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_250, text: "Запишите к Ермакову", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортодонт"}
+  - {id: seed_251, text: "Хочу записаться к Конновской", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "детский стоматолог"}
+  - {id: seed_252, text: "Запишите на ближайшее время", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_253, text: "Можно ко вторнику попасть?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_254, text: "Записаться на отбеливание", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_255, text: "Хочу на повторный приём", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+
+  # =========================================================================
+  # BOOKING — reschedule (30 seeds)
+  # =========================================================================
+  - {id: seed_256, text: "Перенесите на четверг", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_257, text: "Можно в другое время?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_258, text: "Хочу перенести запись", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_259, text: "Не могу в понедельник, давайте во вторник", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_260, text: "Перезапишите на утро", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_261, text: "Перенесите на следующую неделю", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_262, text: "Можно перенести на пятницу?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_263, text: "Давайте попозже, часа в 4", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_264, text: "Не успеваю к 10, можно к 12?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_265, text: "Перенести приём ребёнка", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_266, text: "Хочу на другой день", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_267, text: "Можно пораньше?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_268, text: "Перенести на послезавтра", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_269, text: "Запись была на среду, хочу на четверг", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_270, text: "Не получается прийти завтра", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_271, text: "Перезапишите на вечер", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_272, text: "Давайте перенесём на другого врача", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_273, text: "Сдвиньте на час позже", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_274, text: "Меня не устраивает время", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_275, text: "Перенести запись мужа", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_276, text: "Хочу перенести с утра на вечер", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_277, text: "Могу только в субботу", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_278, text: "Перенести на неделю позже", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_279, text: "Передвиньте на час раньше", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_280, text: "Хочу другое время приёма", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_281, text: "Давайте лучше в пятницу", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_282, text: "Можно на обед, около часу?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_283, text: "Перенести, заболел ребёнок", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_284, text: "Командировка, нужно на другую дату", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: seed_285, text: "Поменяйте мне время", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+
+  # =========================================================================
+  # BOOKING — cancel (30 seeds)
+  # =========================================================================
+  - {id: seed_286, text: "Отмените запись", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_287, text: "Не приду завтра", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_288, text: "Хочу отменить приём", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_289, text: "Отказываюсь от записи", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_290, text: "Снимите меня с записи", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_291, text: "Отмена", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_292, text: "Не буду приходить", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_293, text: "Отменяю запись на среду", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_294, text: "Передумал идти", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_295, text: "Уберите мою запись", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_296, text: "Не смогу прийти на приём", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_297, text: "Отменить запись ребёнка", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_298, text: "Хочу отказаться от лечения", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_299, text: "Не нужно, отмените", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_300, text: "Отменяю всё", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_301, text: "Убрать из расписания", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_302, text: "Болею, не приду", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_303, text: "Отмените завтрашний приём", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_304, text: "Решил не ходить", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_305, text: "Больше не хочу к вам", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_306, text: "Удалите мою запись", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_307, text: "Не приду, извините", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_308, text: "Уезжаю, отмените", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_309, text: "Отказ от записи", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_310, text: "Пойду в другую клинику", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_311, text: "Отменить и записать заново", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_312, text: "Не получается, отмените пожалуйста", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_313, text: "Не успеваю, снимайте", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_314, text: "Хочу отменить обе записи", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+  - {id: seed_315, text: "Не надо, отменяйте", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # UNSUPPORTED — offtopic (20 seeds)
+  # =========================================================================
+  - {id: seed_316, text: "Какая погода?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_317, text: "Расскажи анекдот", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_318, text: "Кто президент?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_319, text: "Закажи мне пиццу", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_320, text: "Переведи на английский", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_321, text: "Как дела?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_322, text: "Напиши мне стихотворение", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_323, text: "Когда конец света?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_324, text: "Ты живой?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_325, text: "Посоветуй фильм", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_326, text: "Ты робот?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_327, text: "Расскажи про себя", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_328, text: "Сколько будет 2+2?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_329, text: "Какой курс доллара?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_330, text: "Где можно поесть рядом?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_331, text: "Есть ли тут аптека поблизости?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_332, text: "Сколько лет ты работаешь?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_333, text: "Нарисуй зуб", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_334, text: "Поиграем?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+  - {id: seed_335, text: "Что ты умеешь?", route_domain: unsupported, subtype: offtopic, explicit_booking: false, urgency: normal, is_offtopic: true}
+
+  # =========================================================================
+  # UNSUPPORTED — greeting_only (20 seeds)
+  # =========================================================================
+  - {id: seed_336, text: "Привет", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_337, text: "Добрый день", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_338, text: "Здравствуйте", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_339, text: "Доброе утро", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_340, text: "Алло", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_341, text: "Привет!", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_342, text: "Добрый вечер", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_343, text: "Здрасьте", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_344, text: "Приветик", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_345, text: "Хай", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_346, text: "Здравствуйте!", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_347, text: "Добрый день!", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_348, text: "Привет, есть кто?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_349, text: "Здравствуйте, это стоматология?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_350, text: "Вы работаете?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_351, text: "Можно?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_352, text: "Здрасте", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_353, text: "Ку", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_354, text: "Салют", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_355, text: "Кто-нибудь на связи?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # UNSUPPORTED — farewell_only (20 seeds)
+  # =========================================================================
+  - {id: seed_356, text: "Пока", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_357, text: "До свидания", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_358, text: "Всего доброго", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_359, text: "Спасибо, до встречи", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_360, text: "Удачи", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_361, text: "До скорого", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_362, text: "Спасибо, пока", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_363, text: "Ладно, пока", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_364, text: "Всё, пока", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_365, text: "Хорошего дня", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_366, text: "Благодарю, до свидания", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_367, text: "Спасибо за помощь", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_368, text: "Спс", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_369, text: "Ок, спасибо", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_370, text: "Понял, спасибо", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_371, text: "Буду знать, спасибо", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_372, text: "Ясно, благодарю", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_373, text: "Всё понятно, пока", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_374, text: "Отлично, спасибо", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+  - {id: seed_375, text: "Ну всё, удачи", route_domain: unsupported, subtype: farewell_only, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # UNSUPPORTED — unclear_short (20 seeds)
+  # =========================================================================
+  - {id: seed_376, text: "Ааа", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_377, text: "Ну", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_378, text: "Ок", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_379, text: "...", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_380, text: "Хм", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_381, text: "Да", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_382, text: "Нет", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_383, text: "Ага", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_384, text: "Угу", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_385, text: "Ладно", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_386, text: "Не знаю", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_387, text: "Подумаю", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_388, text: "Ну такое", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_389, text: "Эмм", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_390, text: "Ой", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_391, text: "Что?", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_392, text: "А?", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_393, text: "Ну да", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_394, text: "Блин", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+  - {id: seed_395, text: "Понятно", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal}
+
+  # =========================================================================
+  # UNSUPPORTED — feedback (20 seeds)
+  # =========================================================================
+  - {id: seed_396, text: "Ужасная клиника", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_397, text: "Спасибо, всё отлично", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_398, text: "Хочу пожаловаться на врача", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_399, text: "Долго ждал в очереди", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_400, text: "Рекомендую вашу клинику", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_401, text: "Ужасный сервис", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_402, text: "Очень довольна лечением", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_403, text: "Врач был груб", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_404, text: "Лучшая клиника в городе", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_405, text: "Не перезвонили как обещали", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_406, text: "Хочу оставить отзыв", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_407, text: "Вы меня разочаровали", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_408, text: "Администратор хамит", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_409, text: "Спасибо доктору, зуб больше не болит", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_410, text: "Хочу написать жалобу", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_411, text: "Потеряли мою карту", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_412, text: "Прекрасные специалисты", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_413, text: "После вашего лечения стало хуже", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_414, text: "Очень уютная клиника", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_415, text: "Напишу на вас в Росздравнадзор", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}

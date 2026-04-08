@@ -1,0 +1,121 @@
+id,text,label_intent,label_scenario,source
+71,Сколько стоит лечение кариеса?,price_question,faq_flow,synthetic
+113,как к вам добраться?,other,faq_flow,synthetic
+62,Во сколько обойдётся снимок?,price_question,faq_flow,synthetic
+90,Можно отменить приём на завтра?,reschedule_cancel,reschedule_flow,synthetic
+10,Мне нужно к хирургу,booking,booking_flow,synthetic
+84,хочу перенести запись,reschedule_cancel,reschedule_flow,synthetic
+19,Можно ли записаться на имплантацию?,booking,booking_flow,synthetic
+105,Есть ли парковка?,other,faq_flow,synthetic
+23,Зуб потемнел,complaint_primary,anamnesis_flow,synthetic
+41,А что если не лечить,followup_question,faq_flow,synthetic
+72,какая цена на детский приём?,price_question,faq_flow,synthetic
+58,А что если не лечить!,followup_question,faq_flow,synthetic
+120,Можно ли оплатить картой?,other,faq_flow,synthetic
+102,есть ли парковка?,other,faq_flow,synthetic
+40,Зуб потемнел,complaint_primary,anamnesis_flow,synthetic
+15,хочу попасть к врачу как можно скорее,booking,booking_flow,synthetic
+27,появилась шишка на десне,complaint_primary,anamnesis_flow,synthetic
+81,нужно изменить время записи!,reschedule_cancel,reschedule_flow,synthetic
+101,Здравствуйте.,other,faq_flow,synthetic
+82,Можно отменить приём на завтра?,reschedule_cancel,reschedule_flow,synthetic
+100,"Хочу отменить, заболел",reschedule_cancel,reschedule_flow,synthetic
+1,Хочу записаться на приём к стоматологу,booking,booking_flow,synthetic
+47,А если боль вернётся!,followup_question,faq_flow,synthetic
+21,Беспокоит кровоточивость,complaint_primary,anamnesis_flow,synthetic
+119,"Спасибо, до свидания",other,faq_flow,synthetic
+104,"Ок, подумаю",other,faq_flow,synthetic
+118,спасибо за информацию,other,faq_flow,synthetic
+109,Работаете ли в выходные?,other,faq_flow,synthetic
+114,есть ли у вас сайт?,other,faq_flow,synthetic
+94,Хочу перенести запись,reschedule_cancel,reschedule_flow,synthetic
+12,Хочу прийти на чистку,booking,booking_flow,synthetic
+67,сколько стоит лечение кариеса?,price_question,faq_flow,synthetic
+95,Отмена записи на 15 число,reschedule_cancel,reschedule_flow,synthetic
+99,отмените мою запись,reschedule_cancel,reschedule_flow,synthetic
+57,Будут ли какие-то ограничения?,followup_question,faq_flow,synthetic
+16,Есть свободное время на эту неделю?,booking,booking_flow,synthetic
+5,Запись к хирургу на пятницу,booking,booking_flow,synthetic
+13,Хочу на приём к ортодонту,booking,booking_flow,synthetic
+68,стоимость брекетов?,price_question,faq_flow,synthetic
+25,"отёк, что делать?",complaint_primary,anamnesis_flow,synthetic
+110,Есть ли парковка?,other,faq_flow,synthetic
+96,Нужно изменить время записи,reschedule_cancel,reschedule_flow,synthetic
+2,Запишите меня на чистку зубов,booking,booking_flow,synthetic
+38,Откололся кусочек зуба,complaint_primary,anamnesis_flow,synthetic
+75,Во сколько обойдётся чистка?,price_question,faq_flow,synthetic
+66,Во сколько обойдётся снимок.,price_question,faq_flow,synthetic
+53,Сколько времени займёт лечение?,followup_question,faq_flow,synthetic
+78,стоимость брекетов?,price_question,faq_flow,synthetic
+46,А анестезия входит в стоимость?,followup_question,faq_flow,synthetic
+48,А это больно?,followup_question,faq_flow,synthetic
+111,Принимаете ли детей?,other,faq_flow,synthetic
+39,"чувствительность, что делать?",complaint_primary,anamnesis_flow,synthetic
+79,Сколько стоит лечение кариеса?,price_question,faq_flow,synthetic
+92,Нужно изменить время записи,reschedule_cancel,reschedule_flow,synthetic
+116,Здравствуйте,other,faq_flow,synthetic
+64,Стоимость брекетов?,price_question,faq_flow,synthetic
+74,Сколько стоит консультация?,price_question,faq_flow,synthetic
+30,Зуб шатается,complaint_primary,anamnesis_flow,synthetic
+14,"Запишите меня, пожалуйста, на следующую неделю",booking,booking_flow,synthetic
+37,Появилась шишка на десне,complaint_primary,anamnesis_flow,synthetic
+8,Хочу прийти на осмотр,booking,booking_flow,synthetic
+43,а можно без удаления?,followup_question,faq_flow,synthetic
+65,Почём коронка из циркония?,price_question,faq_flow,synthetic
+106,Какие врачи у вас работают?,other,faq_flow,synthetic
+31,"кровоточивость, что делать?",complaint_primary,anamnesis_flow,synthetic
+20,Хочу прийти на осмотр,booking,booking_flow,synthetic
+77,Сколько стоит консультация?,price_question,faq_flow,synthetic
+26,"боль при жевании, что делать?",complaint_primary,anamnesis_flow,synthetic
+32,Беспокоит боль при жевании,complaint_primary,anamnesis_flow,synthetic
+98,Отмена записи на 15 число,reschedule_cancel,reschedule_flow,synthetic
+6,запись на отбеливание возможна?,booking,booking_flow,synthetic
+9,Хочу прийти на чистку,booking,booking_flow,synthetic
+29,Болит десна уже давно,complaint_primary,anamnesis_flow,synthetic
+45,а анестезия входит в стоимость?,followup_question,faq_flow,synthetic
+91,"Не получается в это время, можно позже?",reschedule_cancel,reschedule_flow,synthetic
+70,Какая цена на детский приём?,price_question,faq_flow,synthetic
+3,"мне нужно к хирургу, как записаться?",booking,booking_flow,synthetic
+61,Почём коронка из циркония?,price_question,faq_flow,synthetic
+97,"Не смогу прийти, перенесите пожалуйста",reschedule_cancel,reschedule_flow,synthetic
+33,Зуб реагирует на холодное,complaint_primary,anamnesis_flow,synthetic
+54,что лучше выбрать?,followup_question,faq_flow,synthetic
+36,Неприятный запах изо рта,complaint_primary,anamnesis_flow,synthetic
+89,Нужно изменить время записи!,reschedule_cancel,reschedule_flow,synthetic
+115,Принимаете ли детей?,other,faq_flow,synthetic
+88,Можно перезаписаться на утро?,reschedule_cancel,reschedule_flow,synthetic
+59,что лучше выбрать?,followup_question,faq_flow,synthetic
+28,Беспокоит боль при жевании,complaint_primary,anamnesis_flow,synthetic
+42,Можно ли есть после процедуры?,followup_question,faq_flow,synthetic
+49,а это больно?,followup_question,faq_flow,synthetic
+34,неприятный запах изо рта,complaint_primary,anamnesis_flow,synthetic
+7,Мне нужно к терапевту,booking,booking_flow,synthetic
+24,Кровоточат дёсны при чистке,complaint_primary,anamnesis_flow,synthetic
+107,"Ок, подумаю",other,faq_flow,synthetic
+18,Хотела бы записаться к детскому стоматологу,booking,booking_flow,synthetic
+55,Какие есть альтернативы?,followup_question,faq_flow,synthetic
+83,"Не получается в это время, можно позже?",reschedule_cancel,reschedule_flow,synthetic
+11,запись на отбеливание возможна?,booking,booking_flow,synthetic
+112,до скольки работаете?,other,faq_flow,synthetic
+85,отмените мою запись,reschedule_cancel,reschedule_flow,synthetic
+73,почём коронка из циркония?,price_question,faq_flow,synthetic
+76,Во сколько обойдётся снимок!,price_question,faq_flow,synthetic
+51,нужно ли готовиться к процедуре?,followup_question,faq_flow,synthetic
+117,Здравствуйте,other,faq_flow,synthetic
+69,какие цены на виниры?,price_question,faq_flow,synthetic
+80,Есть ли рассрочка на лечение?,price_question,faq_flow,synthetic
+17,Мне нужно к пародонтологу,booking,booking_flow,synthetic
+60,Можно ли есть после процедуры?,followup_question,faq_flow,synthetic
+108,У вас есть рентген?,other,faq_flow,synthetic
+22,Зуб потемнел,complaint_primary,anamnesis_flow,synthetic
+93,"Не смогу прийти, перенесите пожалуйста",reschedule_cancel,reschedule_flow,synthetic
+52,Что лучше выбрать?,followup_question,faq_flow,synthetic
+103,"Спасибо, до свидания.",other,faq_flow,synthetic
+87,отмена записи на 15 число.,reschedule_cancel,reschedule_flow,synthetic
+86,Перенесите на другой день,reschedule_cancel,reschedule_flow,synthetic
+44,А можно без удаления.,followup_question,faq_flow,synthetic
+50,можно ли есть после процедуры?,followup_question,faq_flow,synthetic
+4,Хочу записаться на приём к стоматологу,booking,booking_flow,synthetic
+63,Какая цена на отбеливание?,price_question,faq_flow,synthetic
+56,Это точно поможет?,followup_question,faq_flow,synthetic
+35,Кровоточат дёсны при чистке,complaint_primary,anamnesis_flow,synthetic

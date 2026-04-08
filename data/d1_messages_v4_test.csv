@@ -1,0 +1,1501 @@
+id,text,label_l1,label_l2,scenario,source,complexity
+2015,"Привет, можно перенести на сегодня",booking,reschedule,booking_flow,augmented,complex
+7206,Наверное.,conversational,unclear,clarification_flow,augmented,simple
+1702,"Привет, смирновой был груб",negative_feedback,staff,escalation_flow,augmented,complex
+5638,"Здравствуйте, надо подумать",conversational,unclear,clarification_flow,augmented,complex
+9970,спасибо за информацию 😢,conversational,gratitude,conversation_flow,augmented,simple
+3977,"Подскажите, посоветуюсь!!",conversational,unclear,clarification_flow,augmented,complex
+7015,спасибо.,conversational,gratitude,conversation_flow,augmented,simple
+3403,Нужно перенести,booking,reschedule,booking_flow,template,simple
+4981,Можно перенести на в ближайшее время,booking,reschedule,booking_flow,augmented,medium
+5674,"Здравствуйте, окей",conversational,confirmation,conversation_flow,augmented,complex
+4014,У меня чувствительность с утра,anamnesis,symptom,anamnesis_flow,variation,simple
+9150,"Заболел, не приду!",booking,cancel,booking_flow,augmented,complex
+3662,У меня отёк несколько дней,anamnesis,symptom,anamnesis_flow,variation,simple
+5224,Хоучп ожаловаться,negative_feedback,general,escalation_flow,augmented,simple
+7400,"Здравствуйте, после имплантацию у Волкова стало хуже.",negative_feedback,quality,escalation_flow,augmented,complex
+9054,Пока.,conversational,farewell,conversation_flow,augmented,simple
+1800,Как проходитп рофгигиену?,faq,procedure,faq_flow,augmented,simple
+8363,Врач Морозовой не объяснил пожалуйста,negative_feedback,staff,escalation_flow,augmented,simple
+3010,"Добрый день, после осмотр у сидорова стало хуже",negative_feedback,quality,escalation_flow,augmented,complex
+6408,Не приду!,booking,cancel,booking_flow,augmented,simple
+8282,"Привет, сколько стоит лечение",faq,price,faq_flow,augmented,complex
+4201,"Привет, какая цена на реставрацию...",faq,price,faq_flow,augmented,complex
+3900,"Привет, спасибо за помощь",conversational,gratitude,conversation_flow,augmented,complex
+1324,Хочу пожаловаться...,negative_feedback,general,escalation_flow,augmented,simple
+8439,ПРНИИМАЕТЕ ДМС?,faq,clinic_info,faq_flow,augmented,simple
+4559,У меня треснул зуб 😊,anamnesis,complaint,anamnesis_flow,augmented,simple
+3944,Хочу отбелить зубы,anamnesis,services,anamnesis_flow,template,simple
+1144,Есть лазер спасибо,faq,clinic_info,faq_flow,augmented,simple
+4609,"Скажите, уточнтие, пожалуйста",faq,followup,faq_flow,augmented,complex
+9396,"Подскажите, а если я не буду?",faq,followup,faq_flow,augmented,complex
+9176,Интересует протезирование,anamnesis,services,anamnesis_flow,variation,simple
+9793,"Привет, как проходит отбеливание?",faq,procedure,faq_flow,augmented,complex
+5806,После консультацию у Смирновой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+6523,"Скажите, как подготовиться к снимок 🦷",faq,visit_prep,faq_flow,augmented,complex
+8373,Принимаете Apple Pya?,faq,clinic_info,faq_flow,augmented,simple
+5573,"Привет, до свидания 👍",conversational,farewell,conversation_flow,augmented,complex
+3997,СКОЛЬКО НЕЛЬЗЯ КУРИТЬ ПОСЛЕ СНИМОК 😊,faq,visit_prep,faq_flow,augmented,medium
+1165,"Уточните, пожалуйста заранее спасибо",faq,followup,faq_flow,augmented,complex
+3980,Сколько нельзя заниматься спортом после лечение кариеса пожалуйста,faq,visit_prep,faq_flow,augmented,medium
+3275,"Подскажите, врач Морозовой не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+2513,А вдруг не получится 👍,faq,followup,faq_flow,augmented,simple
+9078,не уверен!!,conversational,unclear,clarification_flow,augmented,simple
+5261,Как проходит чистку?,faq,procedure,faq_flow,variation,simple
+4175,Есть кредит на лечение пожалуйста,faq,price,faq_flow,augmented,simple
+9715,У меня кровоточивость две недели,anamnesis,symptom,anamnesis_flow,variation,simple
+8300,"Привет, недоволен обслуживанием 🙏",negative_feedback,general,escalation_flow,augmented,complex
+3933,А можно по-другОму 🙏,faq,followup,faq_flow,augmented,simple
+1529,Почём брекеты спасибо,faq,price,faq_flow,augmented,simple
+2754,Не уверен спасибо,conversational,unclear,clarification_flow,augmented,simple
+189,"Здравствуйте, случилось слетела коронка",anamnesis,complaint,anamnesis_flow,augmented,complex
+7746,Очень лбагодарен!!,conversational,gratitude,conversation_flow,augmented,simple
+7300,Надо посоветвоатЬся,conversational,unclear,clarification_flow,augmented,simple
+1344,НЕ ПОЛУЧИТСЯ ПРИЙТИ 👍,booking,cancel,booking_flow,augmented,simple
+5172,ХОРШОЕГО ДНЯ,conversational,farewell,conversation_flow,augmented,simple
+7739,"слетела коронка, что делать?",anamnesis,complaint,anamnesis_flow,variation,simple
+7797,Беспокоит запах изо рта,anamnesis,symptom,anamnesis_flow,variation,simple
+4079,После коронку у Лебедевой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+2840,"Подскажите, перезапишите на день?",booking,reschedule,booking_flow,augmented,complex
+3720,А если Я ен буду?,faq,followup,faq_flow,augmented,simple
+5486,Современный метод заранее спасибо,faq,procedure,faq_flow,augmented,simple
+7862,После снимок у Петровой стало хуже!!,negative_feedback,quality,escalation_flow,augmented,medium
+6859,Запись к челюстно-лицевому хирургу на вечер 👍,booking,new_appointment,booking_flow,augmented,medium
+3069,Работаете в воскресенье,faq,clinic_info,faq_flow,augmented,simple
+3883,Добрый вечер спасибо,conversational,greeting,conversation_flow,augmented,simple
+2875,"Не смогу прийти, уезжаю?",booking,cancel,booking_flow,augmented,complex
+9216,Как подготовиться к чистку?,faq,visit_prep,faq_flow,variation,simple
+602,"Не смогу притйи, не смогу",booking,cancel,booking_flow,augmented,complex
+6140,Сайт не работает 🙏,negative_feedback,service_issue,escalation_flow,augmented,simple
+9849,реставрацию этоб ольно?,faq,procedure,faq_flow,augmented,simple
+8141,"Подскажите, посоветуюсь",conversational,unclear,clarification_flow,augmented,complex
+1845,Коронка слетела,anamnesis,complaint,anamnesis_flow,template,simple
+1583,После пломбирование у Кузнецовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+5473,"Спасибо, всё понятно заранее спасибо!!",conversational,gratitude,conversation_flow,augmented,complex
+2202,"Подскажите, после снимок у Кузнецовой стало хуже",negative_feedback,quality,escalation_flow,augmented,complex
+4028,Болит шестёрка уже давно,anamnesis,symptom,anamnesis_flow,variation,simple
+2521,"Привет, нАДО ПОДУМАТЬ",conversational,unclear,clarification_flow,augmented,complex
+8469,Ага...,conversational,confirmation,conversation_flow,augmented,simple
+3042,Какие обезболивающие можно заранее спасибо,faq,visit_prep,faq_flow,augmented,simple
+4181,Теелфон не отвечает 😢,negative_feedback,service_issue,escalation_flow,augmented,simple
+5581,Элайнер треснул 😊,anamnesis,complaint,anamnesis_flow,augmented,simple
+5720,Беспокоит боль при жевании,anamnesis,symptom,anamnesis_flow,variation,simple
+4277,Не рекомендую.,negative_feedback,general,escalation_flow,augmented,simple
+4069,это безобразие спасибо,negative_feedback,general,escalation_flow,augmented,simple
+5041,Запись к ортопеду на понедельник,booking,new_appointment,booking_flow,variation,simple
+3784,"ОТМЕНТИЕ ЗАПИСЬ, НЕ СМОГУ",booking,cancel,booking_flow,augmented,complex
+7938,нунжо кт,anamnesis,services,anamnesis_flow,augmented,simple
+466,Сколько нельзя курить после отбеливание спасибо,faq,visit_prep,faq_flow,augmented,medium
+6880,Прощайте 🙏!!,conversational,farewell,conversation_flow,augmented,simple
+7599,Болит зуб мудрости уже месяц,anamnesis,symptom,anamnesis_flow,variation,simple
+5912,"Подскажите, привет 🙏",conversational,greeting,conversation_flow,augmented,complex
+4226,"Добрый день, здравствуйте?",conversational,greeting,conversation_flow,augmented,complex
+973,Как проходит чистку спасибо,faq,procedure,faq_flow,augmented,simple
+7753,До свдиания!,conversational,farewell,conversation_flow,augmented,simple
+329,"Добрый день, да",conversational,confirmation,conversation_flow,augmented,complex
+559,Хочу лечение кариеса заранее спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+2955,Требую компенсацию 🦷 спасибо,negative_feedback,general,escalation_flow,augmented,simple
+8204,"Подскажите, врач Петровой не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+9892,Планирую реставрацию?!,anamnesis,services,anamnesis_flow,augmented,simple
+8109,Добрый евчер,conversational,greeting,conversation_flow,augmented,simple
+7311,Хочу пожалоавться,negative_feedback,general,escalation_flow,augmented,simple
+3192,Что нельзя после осмотр заранее спасибо,faq,visit_prep,faq_flow,augmented,medium
+3626,Сколько нельзя пить после КТ,faq,visit_prep,faq_flow,augmented,simple
+3975,Спасибо!!,conversational,gratitude,conversation_flow,augmented,simple
+4822,Не приду 👍,booking,cancel,booking_flow,augmented,simple
+9540,ПЕЕРНЕСИТЕ НА ВТОРНИК,booking,reschedule,booking_flow,augmented,simple
+78,Как проходит ресатврацию.,faq,procedure,faq_flow,augmented,simple
+3436,Как связаться!!,faq,clinic_info,faq_flow,augmented,simple
+6269,"Добрый день, какие ещё варианты 🦷",faq,followup,faq_flow,augmented,complex
+1075,Ждал с утра,negative_feedback,service_issue,escalation_flow,variation,simple
+7094,хоч упоговорить с руководством,negative_feedback,general,escalation_flow,augmented,simple
+2260,сколько нельзя курить после коронку.,faq,visit_prep,faq_flow,augmented,simple
+5749,"Привет, пока не решил 🦷",conversational,unclear,clarification_flow,augmented,complex
+9434,Мне не перезвонили?!,negative_feedback,service_issue,escalation_flow,augmented,simple
+9810,КАКИЕ РИСКИ.,faq,procedure,faq_flow,augmented,simple
+1425,Удачи 🦷,conversational,farewell,conversation_flow,augmented,simple
+8952,СПС 😢,conversational,gratitude,conversation_flow,augmented,simple
+252,НЕ СОВСЕМ ПОНЯЛ...,faq,followup,faq_flow,augmented,simple
+1514,Не работает онлайн-запись пожалуйста,negative_feedback,service_issue,escalation_flow,augmented,simple
+2561,Случилось выпала пломба!!,anamnesis,complaint,anamnesis_flow,augmented,simple
+9114,хорошо спасибо,conversational,confirmation,conversation_flow,augmented,simple
+9980,Запись к терапевту на утро 🦷,booking,new_appointment,booking_flow,augmented,medium
+2824,Есть прайс-лист 😢,faq,price,faq_flow,augmented,simple
+9230,"Добрый день, спасибо за информацию пожалуйста",conversational,gratitude,conversation_flow,augmented,complex
+3071,Морозоовй был груб заранее спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+9943,Почём лечение кариеса 😊,faq,price,faq_flow,augmented,simple
+8252,Хочу поговорить с руководством заранее спасибо,negative_feedback,general,escalation_flow,augmented,medium
+7782,Интересуте реставрацию,anamnesis,services,anamnesis_flow,augmented,simple
+1893,запись к ортодонту на завтра спасибо,booking,new_appointment,booking_flow,augmented,medium
+6678,"Не смоуг прийти, форс-мажор",booking,cancel,booking_flow,augmented,complex
+1954,"Отмените запись, форс-мажор!!",booking,cancel,booking_flow,augmented,complex
+6781,Есть время на вторник?,booking,new_appointment,booking_flow,variation,simple
+1545,Можно в рассрочку,faq,price,faq_flow,augmented,simple
+3470,Пока 😢,conversational,farewell,conversation_flow,augmented,simple
+9531,Договориилсь,conversational,confirmation,conversation_flow,augmented,simple
+7678,Почём осмотр,faq,price,faq_flow,augmented,simple
+8563,"Подскажите, хочу невидимые каппы",anamnesis,services,anamnesis_flow,augmented,complex
+4424,А что будет если заранее спасибо,faq,followup,faq_flow,augmented,medium
+4828,А что будет если 👍,faq,followup,faq_flow,augmented,simple
+4075,После приёма болит сильнее,negative_feedback,quality,escalation_flow,template,simple
+6496,"Привет, до всидания!",conversational,farewell,conversation_flow,augmented,complex
+5778,"Здравствуйте, верхняя десна очень болит",anamnesis,symptom,anamnesis_flow,augmented,complex
+8473,Хочу отказаться от записи пожалуйста,booking,cancel,booking_flow,augmented,simple
+9521,пломбирование не помогло,negative_feedback,quality,escalation_flow,variation,simple
+6830,До скОрого спасибо,conversational,farewell,conversation_flow,augmented,simple
+7561,Верните деньги,negative_feedback,general,escalation_flow,template,simple
+7305,Сколько нельзя курить после лечение кариеса?,faq,visit_prep,faq_flow,variation,medium
+9809,"Добрый день, наверное!!",conversational,unclear,clarification_flow,augmented,complex
+5138,Расскажите боьлше заранее спасибо,faq,followup,faq_flow,augmented,simple
+5354,Сколько нельзя пить после консультацию.,faq,visit_prep,faq_flow,augmented,simple
+3967,Хочу к ортопеду,booking,new_appointment,booking_flow,variation,simple
+5204,СКОЛЬКО НЕЛЬЗЯ ЕСТЬ ПОСЛЕ БРЕКЕТЫ,faq,visit_prep,faq_flow,augmented,simple
+2156,Во сколько открвыаетесь?,faq,clinic_info,faq_flow,augmented,simple
+7009,Нужно элайнеры 😊,anamnesis,services,anamnesis_flow,augmented,simple
+9565,"Скажите, нужна художественная реставрация",anamnesis,services,anamnesis_flow,augmented,complex
+3252,"Не смогу прийти, занят на работе пожалуйста 👍",booking,cancel,booking_flow,augmented,complex
+8890,"Добрый день, спасибо за помощь спасибо",conversational,gratitude,conversation_flow,augmented,complex
+8618,"Отмените Запись, заболел.",booking,cancel,booking_flow,augmented,complex
+1677,"Добрый день, спасибо большое.",conversational,gratitude,conversation_flow,augmented,complex
+9184,НУЖНО ЛЕЧЕНИЕ КАНАЛОВ 🙏,anamnesis,services,anamnesis_flow,augmented,simple
+9893,"Привет, хочу протезирование",anamnesis,services,anamnesis_flow,augmented,complex
+9441,Хочу чистку пожалуйста,anamnesis,services,anamnesis_flow,augmented,simple
+371,"Здравствуйте, элайнер треснул",anamnesis,complaint,anamnesis_flow,augmented,complex
+1653,Я вам перезвоню,conversational,unclear,clarification_flow,template,simple
+7051,Можно перенести на послезавтра!!,booking,reschedule,booking_flow,augmented,simple
+8223,Нунжо реставрацию,anamnesis,services,anamnesis_flow,augmented,simple
+2318,Перенос запсии,booking,reschedule,booking_flow,augmented,simple
+1014,"Добрый день, добрый день, перенос записи",booking,reschedule,booking_flow,augmented,complex
+6135,"Спасибо, всё понятно 😢",conversational,gratitude,conversation_flow,augmented,complex
+9586,"Скажите, спасибо",conversational,gratitude,conversation_flow,augmented,complex
+7029,Это возмутитеьлно,negative_feedback,general,escalation_flow,augmented,simple
+853,"Не смогу прийти, заболел 👍",booking,cancel,booking_flow,augmented,complex
+9735,"Подскажите, подумаю спасибо",conversational,unclear,clarification_flow,augmented,complex
+2377,"Привет, а можно По-другому?",faq,followup,faq_flow,augmented,complex
+3156,Не решил ещё!!,conversational,unclear,clarification_flow,augmented,simple
+1249,Уберите мою запись?!,booking,cancel,booking_flow,augmented,simple
+8807,Верните деньги...,negative_feedback,general,escalation_flow,augmented,simple
+3712,У мнея ноющая боль неделю,anamnesis,symptom,anamnesis_flow,augmented,simple
+5327,Зубп отемнел,anamnesis,complaint,anamnesis_flow,augmented,simple
+5361,ЛЕЧЕНИЕ НЕ ПОМОГЛО СПАСИБО,negative_feedback,quality,escalation_flow,augmented,simple
+132,Что нельзя после элайнеры спасибо,faq,visit_prep,faq_flow,augmented,simple
+6051,ДО ВСТРЕЧИ.,conversational,farewell,conversation_flow,augmented,simple
+5420,Ждал неделю...,negative_feedback,service_issue,escalation_flow,augmented,simple
+3323,Буду 🦷,conversational,confirmation,conversation_flow,augmented,simple
+661,"скажите, элайнер треснул",anamnesis,complaint,anamnesis_flow,augmented,complex
+6843,Персонал хамит!,negative_feedback,staff,escalation_flow,augmented,simple
+8261,"шатается зуб, что делать",anamnesis,complaint,anamnesis_flow,augmented,complex
+6829,БОЛИТ СЕМЁРКА УЖЕ С УТРА?!,anamnesis,symptom,anamnesis_flow,augmented,simple
+5694,"Подскажите, случилось шатается зуб",anamnesis,complaint,anamnesis_flow,augmented,complex
+6015,Запишите на консультацию,booking,new_appointment,booking_flow,template,simple
+7888,Петровой был груб!!,negative_feedback,staff,escalation_flow,augmented,simple
+5006,Врач Морозовой не объяснил 🦷,negative_feedback,staff,escalation_flow,augmented,simple
+9461,Можно без этого заранее спасибо...,faq,followup,faq_flow,augmented,simple
+8771,После КТ у Волкова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+6844,Есть время на воскресенье?,booking,new_appointment,booking_flow,variation,simple
+8763,Благодарю вас 👍 спасибо,conversational,gratitude,conversation_flow,augmented,simple
+775,"Добрый день, хочу поговорить с руководством",negative_feedback,general,escalation_flow,augmented,complex
+7419,"Добрый день, поясните, пожалуйста пожалуйста",faq,followup,faq_flow,augmented,complex
+4400,"Здравствуйте, может быть",conversational,unclear,clarification_flow,augmented,complex
+9876,До свидания 🙏,conversational,farewell,conversation_flow,augmented,simple
+1321,ПОЧЁМ ЧИСТКА 👍,faq,price,faq_flow,augmented,simple
+6597,Сколько длится протезирование,faq,procedure,faq_flow,augmented,simple
+4066,Ждал два дня!!,negative_feedback,service_issue,escalation_flow,augmented,simple
+7165,Какие риски пожалуйста,faq,procedure,faq_flow,augmented,simple
+8564,Посоветуюсь!,conversational,unclear,clarification_flow,augmented,simple
+7691,До свидания?!,conversational,farewell,conversation_flow,augmented,simple
+4670,ПосоВетуюсь...,conversational,unclear,clarification_flow,augmented,simple
+5037,Болит семёрка уже с утра!!,anamnesis,symptom,anamnesis_flow,augmented,simple
+7006,профгигиену сколько стоит спасибо,faq,price,faq_flow,augmented,simple
+5329,Запись к терапевту на утро,booking,new_appointment,booking_flow,variation,simple
+5286,После профгигиену у Волкова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+2873,Согласе.н..,conversational,confirmation,conversation_flow,augmented,simple
+1453,"Здравствуйте, цена на лечение кариеса?",faq,price,faq_flow,augmented,complex
+4701,Работаете в сегодня 🦷,faq,clinic_info,faq_flow,augmented,simple
+4244,Есть детский стоматолог!!,faq,clinic_info,faq_flow,augmented,simple
+8045,Работаете в праздники?,faq,clinic_info,faq_flow,template,simple
+44,Часы работы пожалуйста,faq,clinic_info,faq_flow,augmented,simple
+8189,коронку сколько стоит 😊 пожалуйста,faq,price,faq_flow,augmented,simple
+9061,Сколько нельзя курить после имплантацию.,faq,visit_prep,faq_flow,augmented,simple
+5380,А можно по-другому спасибо,faq,followup,faq_flow,augmented,simple
+7673,"Да, конечно 👍",conversational,confirmation,conversation_flow,augmented,complex
+5155,После протезирование у Козловой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+1327,"Подскажите, планирую коронку",anamnesis,services,anamnesis_flow,augmented,complex
+6158,Врач был невнимателен,negative_feedback,staff,escalation_flow,template,simple
+7162,Мне ен перезвонили со вчера,negative_feedback,service_issue,escalation_flow,augmented,simple
+6507,Болит челюсть уже три дня,anamnesis,symptom,anamnesis_flow,variation,simple
+6295,Торопили!,negative_feedback,staff,escalation_flow,augmented,simple
+7515,Зубы не выровнялись,negative_feedback,quality,escalation_flow,template,simple
+7829,"Привет, хочу оставить жалобу",negative_feedback,general,escalation_flow,augmented,complex
+3620,Ждал месяц заранее спсаибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+894,Запись к ортодонту на вторник,booking,new_appointment,booking_flow,variation,simple
+5128,Хочу возврат пожалуйста,negative_feedback,general,escalation_flow,augmented,simple
+8284,Сколько стоит протезирование?,faq,price,faq_flow,variation,simple
+3124,Запись к гигиенистУ на вторник 😊,booking,new_appointment,booking_flow,augmented,medium
+6078,Уберите мою запись?,booking,cancel,booking_flow,augmented,simple
+7894,"Здравствуйте, иванова был груб",negative_feedback,staff,escalation_flow,augmented,complex
+6220,"Добрый день, не смогу прийти, форс-мажор 😢",booking,cancel,booking_flow,augmented,complex
+2136,"Подскажите, работаете в субботу?",faq,clinic_info,faq_flow,augmented,complex
+8912,Согласен...,conversational,confirmation,conversation_flow,augmented,simple
+2094,Персонал ахмит,negative_feedback,staff,escalation_flow,augmented,simple
+4019,"Подскажите, всего хорошего",conversational,farewell,conversation_flow,augmented,complex
+3038,Как подготовиться к удаление!!,faq,visit_prep,faq_flow,augmented,simple
+5880,Работаете в сегодня,faq,clinic_info,faq_flow,augmented,simple
+6831,ЗдАрсте,conversational,greeting,conversation_flow,augmented,simple
+431,Сколько дерижтся?,faq,procedure,faq_flow,augmented,simple
+7391,коренной зуб болит немного.,anamnesis,symptom,anamnesis_flow,augmented,simple
+1473,врач смирновой не объяснил пожалуйста,negative_feedback,staff,escalation_flow,augmented,simple
+8916,профгигиену это больно пожалуйста,faq,procedure,faq_flow,augmented,simple
+9631,Какие ещё варианты пожалуйста,faq,followup,faq_flow,augmented,simple
+9613,Есть седация?,faq,clinic_info,faq_flow,template,simple
+4239,Здорово!,conversational,greeting,conversation_flow,augmented,simple
+9749,Благодраю,conversational,gratitude,conversation_flow,augmented,simple
+1496,Не рекомендую...,negative_feedback,general,escalation_flow,augmented,simple
+5852,"Добрый день, здорово 🦷",conversational,greeting,conversation_flow,augmented,complex
+4844,"подскажите, очень благодарен",conversational,gratitude,conversation_flow,augmented,complex
+2370,Телефон нео твечает,negative_feedback,service_issue,escalation_flow,augmented,simple
+1233,"Отмените запись, форс-мажор 😢",booking,cancel,booking_flow,augmented,complex
+3306,"Здравствуйте, да, хорошо",conversational,confirmation,conversation_flow,augmented,complex
+9453,"Скажите, мне не перезвонили день",negative_feedback,service_issue,escalation_flow,augmented,complex
+6668,верхний зуб болит сильно...,anamnesis,symptom,anamnesis_flow,augmented,simple
+9754,зуб ночью болит,anamnesis,symptom,anamnesis_flow,variation,simple
+363,Здравствуйте спасибо заранее спасибо,conversational,greeting,conversation_flow,augmented,simple
+2642,"Добрый день, до встречи.",conversational,farewell,conversation_flow,augmented,complex
+3564,"Подскажите, почём брекеты 🙏",faq,price,faq_flow,augmented,complex
+7404,Какие ограничения?,faq,visit_prep,faq_flow,template,simple
+4515,Приветствую пожалуйста!!,conversational,greeting,conversation_flow,augmented,simple
+6463,Запишите к челюстно-лицевому хирургу,booking,new_appointment,booking_flow,variation,simple
+1759,МОЖНО ПЕРЕНЕСТИ НА ВОСКРЕСЕНЬЕ,booking,reschedule,booking_flow,augmented,simple
+5442,Запись к хирургу на вторник 🙏,booking,new_appointment,booking_flow,augmented,medium
+2115,"Скажите, как проходит коронку?",faq,procedure,faq_flow,augmented,complex
+5014,Здорово пожалуйста,conversational,greeting,conversation_flow,augmented,simple
+7918,Стоимость чистки?,faq,price,faq_flow,template,simple
+7617,А если не пмоожет?,faq,followup,faq_flow,augmented,simple
+9945,Можно перенести на понедельник?,booking,reschedule,booking_flow,variation,simple
+7858,Не уверен 😢 заранее спасибо,conversational,unclear,clarification_flow,augmented,simple
+5267,Отмена приёма?,booking,cancel,booking_flow,augmented,simple
+4796,Хочу отменить азпись,booking,cancel,booking_flow,augmented,simple
+1069,Почём элайнеры?,faq,price,faq_flow,template,simple
+1123,Запись к ортодонту на среду 😢,booking,new_appointment,booking_flow,augmented,medium
+1792,Очень благоадрен,conversational,gratitude,conversation_flow,augmented,simple
+9765,Перезапишите на день спасибо,booking,reschedule,booking_flow,augmented,simple
+7836,"Скажите, планирую имплантацию 😊",anamnesis,services,anamnesis_flow,augmented,complex
+990,Ждалд авно пожалуйста,negative_feedback,service_issue,escalation_flow,augmented,simple
+9913,"Подскажите, как добраться",faq,clinic_info,faq_flow,augmented,complex
+3574,Запись к имплантологу на вечер 🦷,booking,new_appointment,booking_flow,augmented,medium
+2133,"Скажите, нагрубили",negative_feedback,staff,escalation_flow,augmented,complex
+6606,элайнеры сколько стоит?,faq,price,faq_flow,variation,simple
+8404,"Привет, подскажите, ждал с утра",negative_feedback,service_issue,escalation_flow,augmented,complex
+4269,Врач был груб 😊,negative_feedback,staff,escalation_flow,augmented,simple
+1411,"слетела коронка ,что делать...",anamnesis,complaint,anamnesis_flow,augmented,complex
+6494,Случилось треснул зуб?,anamnesis,complaint,anamnesis_flow,augmented,simple
+944,Эй?,conversational,greeting,conversation_flow,augmented,simple
+7953,Можно оплатить картой...,faq,clinic_info,faq_flow,augmented,simple
+1456,виниры это больно,faq,procedure,faq_flow,augmented,simple
+8971,После профгигиену у Смирновой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+7168,Какая цена на снимок 🙏,faq,price,faq_flow,augmented,simple
+367,Невежливое обслуживание 😊,negative_feedback,staff,escalation_flow,augmented,simple
+8832,"Здравствуйте, анестезия входит в стоимость?",faq,procedure,faq_flow,augmented,complex
+5855,Здрасте 🦷,conversational,greeting,conversation_flow,augmented,simple
+2982,оченьб лагодарен,conversational,gratitude,conversation_flow,augmented,simple
+8667,"Привет, буду",conversational,confirmation,conversation_flow,augmented,complex
+802,У меня шатается зуб спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+6532,"Здравствуйте, нАДО ПОСОВЕТОВАТЬСЯ",conversational,unclear,clarification_flow,augmented,complex
+5176,Хочу виниры,anamnesis,services,anamnesis_flow,template,simple
+5662,Спасибо за помощь?,conversational,gratitude,conversation_flow,augmented,simple
+9066,"Добрый день, принято спасибо",conversational,confirmation,conversation_flow,augmented,complex
+2131,Треснул зуб!,anamnesis,complaint,anamnesis_flow,augmented,simple
+1825,Точно нужно пожалуйста,faq,followup,faq_flow,augmented,simple
+7045,Доброеу тро!,conversational,greeting,conversation_flow,augmented,simple
+5073,"ПРИВЕТ, ПЕРЕНОС ЗАПИСИ",booking,reschedule,booking_flow,augmented,complex
+3158,Добрый вечер 😊 😢,conversational,greeting,conversation_flow,augmented,simple
+1560,СМИРНОВОЙ БЫЛ ГРУБ?,negative_feedback,staff,escalation_flow,augmented,simple
+9871,Какие щеё варианты?,faq,followup,faq_flow,augmented,simple
+7871,"откооллся зуб, что делать?",anamnesis,complaint,anamnesis_flow,augmented,complex
+7635,Позовите главварча,negative_feedback,general,escalation_flow,augmented,simple
+3886,РАЗОЧАРОВАН?!,negative_feedback,general,escalation_flow,augmented,simple
+8475,Можно перенести на сегодня 😊,booking,reschedule,booking_flow,augmented,simple
+3644,Как проходит удаление заранее спасибо,faq,procedure,faq_flow,augmented,simple
+9610,Случилось выпала пломба спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+6320,"Привет, выпала пломба",anamnesis,complaint,anamnesis_flow,augmented,complex
+5690,СКОЛЬКО БУДЕТ СТОИТЬ ВСЁ ЛЕЧЕНИЕ,faq,price,faq_flow,augmented,simple
+6079,"Подскажите, здравствуйте 🙏",conversational,greeting,conversation_flow,augmented,complex
+2050,"Привет, не смогу прийти, уезжаю",booking,cancel,booking_flow,augmented,complex
+3932,"Скажите, здравствуйте?!",conversational,greeting,conversation_flow,augmented,complex
+7247,Это возмутительно.,negative_feedback,general,escalation_flow,augmented,simple
+3033,Запишите на реставрацию,booking,new_appointment,booking_flow,variation,simple
+1384,Сколько стоит леечние кариеса?,faq,price,faq_flow,augmented,simple
+8944,Есть микроскоп!,faq,clinic_info,faq_flow,augmented,simple
+6823,Приветсвтую,conversational,greeting,conversation_flow,augmented,simple
+6888,После отбеливание у Кузнецовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+7008,После осмотр у Морозовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+1938,"Скажите, разочарован",negative_feedback,general,escalation_flow,augmented,complex
+1258,Доброе урто 🦷,conversational,greeting,conversation_flow,augmented,simple
+1985,Что посоевтуете,faq,followup,faq_flow,augmented,simple
+5350,Добрый веечр!,conversational,greeting,conversation_flow,augmented,simple
+7901,"Добрый день, да, конечно 😢",conversational,confirmation,conversation_flow,augmented,complex
+9092,Хорошего дня!,conversational,farewell,conversation_flow,augmented,simple
+6979,"Не смогу прийти, занятн а работе",booking,cancel,booking_flow,augmented,complex
+3686,"Подскажите, сколько нельЗя курить после профгигиену?",faq,visit_prep,faq_flow,augmented,complex
+2206,десна ночью болит,anamnesis,symptom,anamnesis_flow,variation,simple
+7250,"Спасибо, до всидания!!",conversational,gratitude,conversation_flow,augmented,complex
+8681,Сколько нельзя пить после лечение кариеса?,faq,visit_prep,faq_flow,variation,medium
+4989,"Подскажите, здравствуйте, пока не решил",conversational,unclear,clarification_flow,augmented,complex
+8114,Очень благодарен.,conversational,gratitude,conversation_flow,augmented,simple
+2217,"Подскажите, сколько нельзя пить алкоголь после профгигиену?",faq,visit_prep,faq_flow,augmented,complex
+1393,"подскажите, а что будет если?",faq,followup,faq_flow,augmented,complex
+642,Как проходит протезирование,faq,procedure,faq_flow,augmented,simple
+239,Прощайте?,conversational,farewell,conversation_flow,augmented,simple
+7452,Хочу осмотр 🙏 😢,anamnesis,services,anamnesis_flow,augmented,simple
+5758,ПОКА?,conversational,farewell,conversation_flow,augmented,simple
+241,Добырй день,conversational,greeting,conversation_flow,augmented,simple
+9627,За сколько нельзя есть,faq,visit_prep,faq_flow,augmented,simple
+6951,"Привет, есть детский стоматолог?",faq,clinic_info,faq_flow,augmented,complex
+2054,Подскажите подробнее 🦷,faq,followup,faq_flow,augmented,simple
+6828,Сколько нельзя заниматься спортом после пломбирование?,faq,visit_prep,faq_flow,variation,medium
+3735,Анестезия входит в стоимость?,faq,procedure,faq_flow,template,simple
+984,Запись к имплантологу на завтра,booking,new_appointment,booking_flow,variation,simple
+1491,Расскажите больше!!,faq,followup,faq_flow,augmented,simple
+2986,Что нельзя после профгигиену?,faq,visit_prep,faq_flow,variation,simple
+7339,Буду,conversational,confirmation,conversation_flow,template,simple
+5680,"Скажите, появилась дырка в зубе заранее спасибо",anamnesis,complaint,anamnesis_flow,augmented,complex
+6156,Уберите мою запись заранее спасибо,booking,cancel,booking_flow,augmented,simple
+9798,Сколько нельзя есть после пломбы?,faq,visit_prep,faq_flow,template,simple
+8959,А это больно...,faq,procedure,faq_flow,augmented,simple
+2909,МОЖНО ПЕРЕНЕСТИ НА УТРО?!,booking,reschedule,booking_flow,augmented,simple
+6159,"ПОДСКАЖИТЕ, ХОЧУ ПЕРЕНЕСТИ НА УТРО",booking,reschedule,booking_flow,augmented,complex
+9302,Запись к челюстно-лицевому хирургу на в ближайшее время...,booking,new_appointment,booking_flow,augmented,medium
+1680,Хочу сдвинуть время спасибо,booking,reschedule,booking_flow,augmented,simple
+1359,Ужасный сервис!,negative_feedback,general,escalation_flow,augmented,simple
+5177,Буду?,conversational,confirmation,conversation_flow,augmented,simple
+7406,Доброе утро?,conversational,greeting,conversation_flow,augmented,simple
+4891,Запись к ортопеду на завтра,booking,new_appointment,booking_flow,variation,simple
+6966,Элайне ртреснул спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+4403,Запись к имплантологу на в ближайшее время пожалуйста,booking,new_appointment,booking_flow,augmented,medium
+7240,Сколько длится удаление?,faq,procedure,faq_flow,variation,simple
+3200,СКОЛЬКО НЕЛЬЗЯ КУРИТЬ ПОСЛЕ КТ...,faq,visit_prep,faq_flow,augmented,simple
+2112,Можно на пятницу 👍!,booking,new_appointment,booking_flow,augmented,simple
+3093,"Привет, возможно",conversational,unclear,clarification_flow,augmented,complex
+9295,сказали что запиис нет,negative_feedback,service_issue,escalation_flow,augmented,simple
+1901,консультацию не помогло,negative_feedback,quality,escalation_flow,variation,simple
+7430,ничего не объяснили 🙏,negative_feedback,staff,escalation_flow,augmented,simple
+8779,Петровой был груб,negative_feedback,staff,escalation_flow,variation,simple
+396,Мне не перезвонили два дня?!,negative_feedback,service_issue,escalation_flow,augmented,simple
+4408,"Поясните, пожалуйста.",faq,followup,faq_flow,augmented,complex
+5377,Уберите моюз апись спасибо,booking,cancel,booking_flow,augmented,simple
+9909,Можно раньше?,booking,reschedule,booking_flow,template,simple
+3801,Мне не перезвонили день 👍,negative_feedback,service_issue,escalation_flow,augmented,simple
+9542,Можно перенести на воскресенье спасибо,booking,reschedule,booking_flow,augmented,simple
+1756,Это правда необходимо!!,faq,followup,faq_flow,augmented,simple
+2287,"Здравствуйте, уточните, пожалуйста заранее спасибо",faq,followup,faq_flow,augmented,complex
+6237,"Добрый день, спасибо, до свидания",conversational,gratitude,conversation_flow,augmented,complex
+5084,Почём чистку заранее спасибо?,faq,price,faq_flow,augmented,simple
+2737,Мне не перезвонили две недели пожалуйста,negative_feedback,service_issue,escalation_flow,augmented,medium
+3040,Болит десна уже неделю,anamnesis,symptom,anamnesis_flow,variation,simple
+3258,Какая цена на брекеты!!,faq,price,faq_flow,augmented,simple
+7215,Надо поудмать,conversational,unclear,clarification_flow,augmented,simple
+8335,Хочу Поговорить с руководством 🦷,negative_feedback,general,escalation_flow,augmented,simple
+5089,После профгигиену у Козловой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+9898,Болит семёрка уже два дня,anamnesis,symptom,anamnesis_flow,variation,simple
+2640,Всгео хорошего пожалуйста,conversational,farewell,conversation_flow,augmented,simple
+2229,"Подскажите, большое спасибо",conversational,gratitude,conversation_flow,augmented,complex
+5218,Сломался проетз,anamnesis,complaint,anamnesis_flow,augmented,simple
+7101,Не работает онлайн-запись,negative_feedback,service_issue,escalation_flow,template,simple
+9430,"не смогу прийти, заболел заранее спасибо",booking,cancel,booking_flow,augmented,complex
+413,Спасибо за помощь пожалуйста,conversational,gratitude,conversation_flow,augmented,simple
+799,Спасбио зап омощь,conversational,gratitude,conversation_flow,augmented,simple
+6945,Какая стомиость?,faq,price,faq_flow,augmented,simple
+8497,После реставрацию у Кузнецовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+8130,СПАСИБО ЗА ИНФОРМАИЦЮ,conversational,gratitude,conversation_flow,augmented,simple
+9291,Болит зуб мудрости уже со вчера,anamnesis,symptom,anamnesis_flow,variation,medium
+1530,что нельзя после удаление пожалуйста,faq,visit_prep,faq_flow,augmented,simple
+7917,Какая цена на виниры,faq,price,faq_flow,augmented,simple
+7682,"Подскажите, как проходит отбеЛивание?",faq,procedure,faq_flow,augmented,complex
+113,Не понравилось 🦷,negative_feedback,general,escalation_flow,augmented,simple
+2776,верхняя десна немного болит заранее спасибо,anamnesis,symptom,anamnesis_flow,augmented,medium
+6232,"Здравствуйте, перенесите на втроник",booking,reschedule,booking_flow,augmented,complex
+6820,После протезирование у Кузнецовой стало хуже.,negative_feedback,quality,escalation_flow,augmented,medium
+4214,"Добрый день, не реши лещё",conversational,unclear,clarification_flow,augmented,complex
+3234,Сколько нельзя курить после чистку!!,faq,visit_prep,faq_flow,augmented,simple
+9101,Как проходи тосмотр?,faq,procedure,faq_flow,augmented,simple
+5455,Прощайте,conversational,farewell,conversation_flow,template,simple
+6925,Сколько стиот лечение каналов?,faq,price,faq_flow,augmented,simple
+4445,не уверен заранее спасибо,conversational,unclear,clarification_flow,augmented,simple
+1407,Спасибо за опмощь,conversational,gratitude,conversation_flow,augmented,simple
+5259,"откололся зуб, что делать!!",anamnesis,complaint,anamnesis_flow,augmented,complex
+1097,"здравствуйте, мне не перезвонили день",negative_feedback,service_issue,escalation_flow,augmented,complex
+332,Сколько нельзя заниматься спортом после пломбирование 🙏,faq,visit_prep,faq_flow,augmented,medium
+1703,добрео утро,conversational,greeting,conversation_flow,augmented,simple
+7878,работаете в в ближайшее время пожалуйста,faq,clinic_info,faq_flow,augmented,medium
+9336,"Привет, можно перенести на в ближайшее время?",booking,reschedule,booking_flow,augmented,complex
+458,виниры сколько стоит!,faq,price,faq_flow,augmented,simple
+1214,"Скажите, мне не перезвонили неделю",negative_feedback,service_issue,escalation_flow,augmented,complex
+826,Спасибо за помощь 😢,conversational,gratitude,conversation_flow,augmented,simple
+3375,"Привет, можно позже?",booking,reschedule,booking_flow,augmented,complex
+4124,НЕ ЗНАЮ.,conversational,unclear,clarification_flow,augmented,simple
+5799,"Привет, всего доброго 🦷",conversational,farewell,conversation_flow,augmented,complex
+1267,Как подготовиться к лЕчение каналов 😊,faq,visit_prep,faq_flow,augmented,medium
+1209,"НЕ СМОГУ ПРИЙТИ, НЕ СМОГУ...",booking,cancel,booking_flow,augmented,complex
+3845,Боль при жевании,anamnesis,symptom,anamnesis_flow,template,simple
+6477,Сколько нельзя пить после брекеты?,faq,visit_prep,faq_flow,variation,simple
+6328,Леебдевой был груб,negative_feedback,staff,escalation_flow,augmented,simple
+2985,После лечение карисеа у Новикова стало хуже 🦷,negative_feedback,quality,escalation_flow,augmented,medium
+8021,"Подскажите, перенесите на в ближайшее время",booking,reschedule,booking_flow,augmented,complex
+9678,Отклеилась коронка,anamnesis,complaint,anamnesis_flow,template,simple
+148,Хочу чистку,anamnesis,services,anamnesis_flow,variation,simple
+9472,Как подготовиться к профгигиену?,faq,visit_prep,faq_flow,variation,simple
+3794,Нужнок онсультацию 😢,anamnesis,services,anamnesis_flow,augmented,simple
+154,Мне не перезвонили заранее спасибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+648,Сколько длится КТ заранее спасибо,faq,procedure,faq_flow,augmented,simple
+5021,Болит семёрка уже с утра,anamnesis,symptom,anamnesis_flow,variation,simple
+8514,Всего доброго?!,conversational,farewell,conversation_flow,augmented,simple
+3653,"Скажите, срок службы?",faq,procedure,faq_flow,augmented,complex
+116,"Подскажите, сколько времени занимает!!",faq,procedure,faq_flow,augmented,complex
+1857,"Скажите, я вам перезвоню",conversational,unclear,clarification_flow,augmented,complex
+9581,"Подскажите, согласен 😢",conversational,confirmation,conversation_flow,augmented,complex
+5158,Эй 👍,conversational,greeting,conversation_flow,augmented,simple
+9324,Можно позже заранее спасибо,booking,reschedule,booking_flow,augmented,simple
+3078,"Добрый день, врач Лебедевой не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+4103,Да 🦷,conversational,confirmation,conversation_flow,augmented,simple
+4032,ПРОФГИГИЕНУ СКОЛЬКО СТОИТ!!,faq,price,faq_flow,augmented,simple
+6418,ВОЗМОЖНО?,conversational,unclear,clarification_flow,augmented,simple
+1830,Не приду заранее спасибо,booking,cancel,booking_flow,augmented,simple
+4573,"Здравствуйте, ждал давно",negative_feedback,service_issue,escalation_flow,augmented,complex
+5159,Откололся кусочек зуба пожалуйста,anamnesis,complaint,anamnesis_flow,augmented,simple
+5370,Работаетев  на этой неделе?,faq,clinic_info,faq_flow,augmented,simple
+3167,Есть у вас рентген?!,faq,clinic_info,faq_flow,augmented,simple
+6406,Не смогу в назначенное время,booking,reschedule,booking_flow,template,simple
+1711,Разочраован,negative_feedback,general,escalation_flow,augmented,simple
+6314,ВСЕГО ХОРОШЕГО 🙏,conversational,farewell,conversation_flow,augmented,simple
+6644,Сколько нельзя ипть после виниры?,faq,visit_prep,faq_flow,augmented,simple
+2065,"Отменитез апись, форс-мажор",booking,cancel,booking_flow,augmented,complex
+2084,Перезвоню пожалуйста,conversational,unclear,clarification_flow,augmented,simple
+4524,"Скажите, планирую снимок",anamnesis,services,anamnesis_flow,augmented,complex
+7785,У меня слетела коронка заранее спасибо 😢,anamnesis,complaint,anamnesis_flow,augmented,medium
+919,ТРЕБУЮ КОМПЕНСАЦИЮ 👍,negative_feedback,general,escalation_flow,augmented,simple
+5817,Это возмутительно,negative_feedback,general,escalation_flow,template,simple
+2611,Расскажите больше пожалуйста,faq,followup,faq_flow,augmented,simple
+1008,Так и не перезвонили заранее спасибо 🦷,negative_feedback,service_issue,escalation_flow,augmented,medium
+560,Ужасный Сервис?,negative_feedback,general,escalation_flow,augmented,simple
+590,Перенесите на вторник 🦷,booking,reschedule,booking_flow,augmented,simple
+3925,"Подскажите, ага",conversational,confirmation,conversation_flow,augmented,complex
+4972,"ЗДРАВСТВУЙТЕ, МОЖНО ПЕРЕНЕСТИ НА УТРО?",booking,reschedule,booking_flow,augmented,complex
+9554,"шатается зуб, что делать!",anamnesis,complaint,anamnesis_flow,augmented,complex
+5745,планирую пломбирование пожалуйста,anamnesis,services,anamnesis_flow,augmented,simple
+8351,Это правда необхоидмо?,faq,followup,faq_flow,augmented,simple
+6620,"Спасибо, всё понятно?!",conversational,gratitude,conversation_flow,augmented,complex
+6578,Окей заранее спасибо,conversational,confirmation,conversation_flow,augmented,simple
+4662,"Отмените запись, форс-мажор?",booking,cancel,booking_flow,augmented,complex
+6403,"Да,к онечно",conversational,confirmation,conversation_flow,augmented,complex
+772,Перенесите ан на следующей неделе,booking,reschedule,booking_flow,augmented,simple
+4178,Запись к эндодонтисту на воскресенье,booking,new_appointment,booking_flow,variation,simple
+7039,Спс 😊,conversational,gratitude,conversation_flow,augmented,simple
+7445,Приевт,conversational,greeting,conversation_flow,augmented,simple
+3498,НАВЕРНОЕ?!,conversational,unclear,clarification_flow,augmented,simple
+7602,Хорошего дня пожалуйста!,conversational,farewell,conversation_flow,augmented,simple
+2365,Не проходит онемение после лечения,anamnesis,symptom,anamnesis_flow,template,simple
+5728,Надо подумать 👍,conversational,unclear,clarification_flow,augmented,simple
+95,"Здравствуйте, привет заранее спасибо",conversational,greeting,conversation_flow,augmented,complex
+18,"Добрый день, мне не перезвонили две недели",negative_feedback,service_issue,escalation_flow,augmented,complex
+2496,петровой былг руб,negative_feedback,staff,escalation_flow,augmented,simple
+5787,У меня острая боль давно,anamnesis,symptom,anamnesis_flow,variation,simple
+8283,А есил не поможет заранее спасибо,faq,followup,faq_flow,augmented,medium
+9667,"Скажите, врач Кузнецовой не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+777,Жда лмесяц,negative_feedback,service_issue,escalation_flow,augmented,simple
+1873,Пока не ршеил,conversational,unclear,clarification_flow,augmented,simple
+3215,Врач опоздал на полчаса?,negative_feedback,service_issue,escalation_flow,augmented,simple
+7262,"Здравствуйте, большое спасибо",conversational,gratitude,conversation_flow,augmented,complex
+7182,Врач Сидорова не обяъснил,negative_feedback,staff,escalation_flow,augmented,simple
+908,После протезирование у Иванова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+8976,Что будут делать спасибо,faq,procedure,faq_flow,augmented,simple
+3638,"Подскажите, сколько длится отбеливание?",faq,procedure,faq_flow,augmented,complex
+8368,"Скажите, оКЕЙ",conversational,confirmation,conversation_flow,augmented,complex
+1262,"Добрый день, можно перенести на послезавтра?",booking,reschedule,booking_flow,augmented,complex
+6984,После элайнеры у Иванова стало хуже?,negative_feedback,quality,escalation_flow,augmented,medium
+1640,Недоволен обслуживанием,negative_feedback,general,escalation_flow,template,simple
+9595,"Привет, записал",conversational,confirmation,conversation_flow,augmented,complex
+5857,После снимок у Петровой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+8293,Нужно профгигиену,anamnesis,services,anamnesis_flow,variation,simple
+2327,"ПРИВЕТ, НИКТО НЕ ПЕРЕЗВОНИЛ",negative_feedback,service_issue,escalation_flow,augmented,complex
+2525,Зуб Тресунл,anamnesis,complaint,anamnesis_flow,augmented,simple
+3915,Мне не перезвонили день,negative_feedback,service_issue,escalation_flow,variation,simple
+9848,Сколько стоят брекеты?,faq,price,faq_flow,template,simple
+7519,Мне не перезвонили со вчера пожалуйста?,negative_feedback,service_issue,escalation_flow,augmented,medium
+5723,Какие обезболивающие можно?,faq,visit_prep,faq_flow,template,simple
+8884,"Привет, спасибо большое пожалуйста",conversational,gratitude,conversation_flow,augmented,complex
+4495,Записал 😊,conversational,confirmation,conversation_flow,augmented,simple
+1370,Сколько нельзя заниматься спортом после протезирование 😊,faq,visit_prep,faq_flow,augmented,medium
+106,Запись к хирургу на послезавтра пожалуйста,booking,new_appointment,booking_flow,augmented,medium
+4552,А обязательно пожалуйста,faq,followup,faq_flow,augmented,simple
+4798,Беспокои тотёк,anamnesis,symptom,anamnesis_flow,augmented,simple
+2780,Что нельзя после лечение кариеса,faq,visit_prep,faq_flow,augmented,simple
+6334,коронку не помогло,negative_feedback,quality,escalation_flow,variation,simple
+6858,Здорвоо,conversational,greeting,conversation_flow,augmented,simple
+6452,Можно записаться онлайн,faq,clinic_info,faq_flow,augmented,simple
+8060,Естьн очной приём?,faq,clinic_info,faq_flow,augmented,simple
+9373,Интересует коронка,anamnesis,services,anamnesis_flow,template,simple
+7095,Отмнеите запись,booking,cancel,booking_flow,augmented,simple
+5896,Перенесите на четверг,booking,reschedule,booking_flow,variation,simple
+2351,"Добрый день, элайнер треснул",anamnesis,complaint,anamnesis_flow,augmented,complex
+8432,Благодарю вас 🙏,conversational,gratitude,conversation_flow,augmented,simple
+8869,"Скажите, сколько нельзя курить после консультацию?",faq,visit_prep,faq_flow,augmented,complex
+6062,Отмена записи!,booking,cancel,booking_flow,augmented,simple
+8549,Очень длого ждал 🙏,negative_feedback,service_issue,escalation_flow,augmented,simple
+3725,ПочёМ КТ!,faq,price,faq_flow,augmented,simple
+9737,нижний зуб периодически болит,anamnesis,symptom,anamnesis_flow,variation,simple
+8249,Всего хорошего 👍,conversational,farewell,conversation_flow,augmented,simple
+8780,ПОЧЁМ ЧИСТКУ пожалуйста,faq,price,faq_flow,augmented,simple
+3322,После лечения стало хуже 👍,negative_feedback,quality,escalation_flow,augmented,simple
+5207,"Подскажите, ужасный сервис...",negative_feedback,general,escalation_flow,augmented,complex
+4379,Не понравилось спасибо спасибо,negative_feedback,general,escalation_flow,augmented,simple
+5355,Запись к челюстно-лицевому хирургу на среду,booking,new_appointment,booking_flow,variation,medium
+2610,Всего доброго пожалуйста 😢,conversational,farewell,conversation_flow,augmented,simple
+587,"Скажите, привет, врач Морозовой не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+3417,консультацию это больно 🦷,faq,procedure,faq_flow,augmented,simple
+12,До скорого спасибо!,conversational,farewell,conversation_flow,augmented,simple
+8642,ХОЧУ ЕПРЕНЕСТИ ЗАПИСЬ,booking,reschedule,booking_flow,augmented,simple
+2876,"Подскажите, договорились...",conversational,confirmation,conversation_flow,augmented,complex
+2292,"Добрый день, хочу отказаться от записи?",booking,cancel,booking_flow,augmented,complex
+8538,Ждал данво?!,negative_feedback,service_issue,escalation_flow,augmented,simple
+8723,После чистку у Сидорова стало хуже 👍,negative_feedback,quality,escalation_flow,augmented,medium
+4919,"Добрый день, торопили",negative_feedback,staff,escalation_flow,augmented,complex
+828,"Добрый день, сидорова был груб",negative_feedback,staff,escalation_flow,augmented,complex
+9076,Здорово 🦷 🙏,conversational,greeting,conversation_flow,augmented,simple
+5157,"Здравствуйте, хочу оставить жалобу",negative_feedback,general,escalation_flow,augmented,complex
+2063,Это ебзобразие,negative_feedback,general,escalation_flow,augmented,simple
+4926,Козловой был груб!!,negative_feedback,staff,escalation_flow,augmented,simple
+445,Пока 😢?!,conversational,farewell,conversation_flow,augmented,simple
+4245,"Добрый день, добрый день спасибо",conversational,greeting,conversation_flow,augmented,complex
+1737,После лечение кариеса у Новикова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+2321,Здроово,conversational,greeting,conversation_flow,augmented,simple
+7294,Прикус изменилсяп осле лечения спасибо,negative_feedback,quality,escalation_flow,augmented,simple
+5051,Планирую виниры.,anamnesis,services,anamnesis_flow,augmented,simple
+2393,"Привет, во сколько открываетесь.",faq,clinic_info,faq_flow,augmented,complex
+2790,"Привет, не смогу прийти, не смогу!",booking,cancel,booking_flow,augmented,complex
+2745,Где оставить жалобу заранее спасибо,negative_feedback,general,escalation_flow,augmented,simple
+9311,"Скажите, можно перенести на среду?",booking,reschedule,booking_flow,augmented,complex
+3116,Как долго прослужит 🦷,faq,procedure,faq_flow,augmented,simple
+3822,"Добрый день, не смогу прийти",booking,cancel,booking_flow,augmented,complex
+2368,Болит коренной зуб уже со вчера,anamnesis,symptom,anamnesis_flow,variation,medium
+4369,беспокоит острая боль спасибо,anamnesis,symptom,anamnesis_flow,augmented,simple
+5257,Хооршего дня,conversational,farewell,conversation_flow,augmented,simple
+7021,Работаете в на этой неделе!!,faq,clinic_info,faq_flow,augmented,simple
+4534,планирую профгигиену...,anamnesis,services,anamnesis_flow,augmented,simple
+6906,Интересуют элайнеры,anamnesis,services,anamnesis_flow,template,simple
+1580,Слчуилось откололся зуб,anamnesis,complaint,anamnesis_flow,augmented,simple
+624,"Подскажите, хорошо.",conversational,confirmation,conversation_flow,augmented,complex
+2149,До скольки работаете!,faq,clinic_info,faq_flow,augmented,simple
+8494,Планирую удаление,anamnesis,services,anamnesis_flow,variation,simple
+8378,А если не поможет заранее спасибо,faq,followup,faq_flow,augmented,medium
+8345,Работаете в яптницу?,faq,clinic_info,faq_flow,augmented,simple
+6793,Сколько нельзя пить после чистку?,faq,visit_prep,faq_flow,variation,simple
+951,После консультацию у Кузнецовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+420,Вра чМорозовой не объяснил,negative_feedback,staff,escalation_flow,augmented,simple
+1191,Больно ли,faq,procedure,faq_flow,augmented,simple
+7882,Спасибо большое заранее спасибо.,conversational,gratitude,conversation_flow,augmented,simple
+9215,После КТ у Смирновой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+6341,До всидания,conversational,farewell,conversation_flow,augmented,simple
+3517,"Подскажите, перенесите на субБоту",booking,reschedule,booking_flow,augmented,complex
+726,Что вы рекомендеуте?,faq,followup,faq_flow,augmented,simple
+97,Добры йдень,conversational,greeting,conversation_flow,augmented,simple
+8053,Нужно к ортодонту,booking,new_appointment,booking_flow,template,simple
+8349,"Добрый день, есть ночной приём?!",faq,clinic_info,faq_flow,augmented,complex
+2973,Хочу КТ спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+2548,Непрофессиональное отношение!!,negative_feedback,staff,escalation_flow,augmented,simple
+352,После коронку у Петровой стало хуже?,negative_feedback,quality,escalation_flow,augmented,medium
+4633,Нужна порфессиональная чистка,anamnesis,services,anamnesis_flow,augmented,simple
+5067,"ЗдравсТвуйте, хочу поговорить с руководством",negative_feedback,general,escalation_flow,augmented,complex
+2712,Благодарю пожалуйста,conversational,gratitude,conversation_flow,augmented,simple
+4152,Принимаете карту 🦷,faq,clinic_info,faq_flow,augmented,simple
+6358,ПРИКУСИЛ ЯЗЫК!!,anamnesis,complaint,anamnesis_flow,augmented,simple
+4440,Сколько нельзя заниматься спортом после виниры?,faq,visit_prep,faq_flow,variation,medium
+2519,Спаисбо!,conversational,gratitude,conversation_flow,augmented,simple
+4915,Запись к гигиенисту на понедельник,booking,new_appointment,booking_flow,variation,simple
+8966,СпаСибо большое 😢,conversational,gratitude,conversation_flow,augmented,simple
+1412,"Скажите, добрый день",conversational,greeting,conversation_flow,augmented,complex
+3715,"Скажите, лечение каналов это больно?",faq,procedure,faq_flow,augmented,complex
+1095,Почём имплантацию 🙏,faq,price,faq_flow,augmented,simple
+2567,"Подскажите, у меня выпала пломба",anamnesis,complaint,anamnesis_flow,augmented,complex
+1170,Как проходит протезиорвание 👍,faq,procedure,faq_flow,augmented,simple
+6254,Не предупредили об изменениях 🙏.,negative_feedback,service_issue,escalation_flow,augmented,simple
+6889,Можно перенести на воскресенье?,booking,reschedule,booking_flow,variation,simple
+3491,"Не смогу пирйти, форс-мажор",booking,cancel,booking_flow,augmented,complex
+370,У меня боль от горячего с утра,anamnesis,symptom,anamnesis_flow,variation,medium
+633,Запись к эндодонтисту на вечер,booking,new_appointment,booking_flow,variation,simple
+3527,Как добраться?!,faq,clinic_info,faq_flow,augmented,simple
+7268,"Отмеинте запись, не смогу",booking,cancel,booking_flow,augmented,complex
+7969,можно срочно записаться?!,booking,new_appointment,booking_flow,augmented,simple
+7634,Принято!!,conversational,confirmation,conversation_flow,augmented,simple
+5547,Запись к ортодонту на вечер,booking,new_appointment,booking_flow,variation,simple
+9338,"Добрый день, семёрка ночью болит",anamnesis,symptom,anamnesis_flow,augmented,complex
+556,Можно на в ближайшее время!,booking,new_appointment,booking_flow,augmented,simple
+2401,Всего Дборого,conversational,farewell,conversation_flow,augmented,simple
+389,Планирую коронку 😢,anamnesis,services,anamnesis_flow,augmented,simple
+8062,коронка шатается пожалуйста,anamnesis,complaint,anamnesis_flow,augmented,simple
+3347,Проволока от брекетов колет пожалуйста спасибо,anamnesis,complaint,anamnesis_flow,augmented,medium
+2673,"Здравствуйте, надо подумать!!",conversational,unclear,clarification_flow,augmented,complex
+1414,Невежливое обслуживание спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+8547,"Добрый день, надо подумать 🙏",conversational,unclear,clarification_flow,augmented,complex
+7580,Спасибо,conversational,gratitude,conversation_flow,template,simple
+3087,Элайнер треснул пожалуйста спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+6798,Так и болит после лечения 😊,negative_feedback,quality,escalation_flow,augmented,medium
+326,Онемела губа,anamnesis,symptom,anamnesis_flow,template,simple
+1066,"Скажите, сколько стоит лечение?",faq,price,faq_flow,augmented,complex
+4425,плохая клиника!!,negative_feedback,general,escalation_flow,augmented,simple
+330,"Подскажите, есть время на среду",booking,new_appointment,booking_flow,augmented,complex
+9473,"Здравствуйте, приду",conversational,confirmation,conversation_flow,augmented,complex
+8814,Не сейчас 👍,conversational,unclear,clarification_flow,augmented,simple
+2350,НУЖНО ОТМЕНИТЬ пожалуйста,booking,cancel,booking_flow,augmented,simple
+6474,"Добрый день, удачи",conversational,farewell,conversation_flow,augmented,complex
+8427,У меня боль от горячего несколько дней,anamnesis,symptom,anamnesis_flow,variation,medium
+7334,А обязАтельно 🙏,faq,followup,faq_flow,augmented,simple
+7670,"Подскажите, можно перенести приём?",booking,reschedule,booking_flow,augmented,complex
+5000,Согалсен пожалуйста,conversational,confirmation,conversation_flow,augmented,simple
+5689,МОЖТЕ БЫТЬ,conversational,unclear,clarification_flow,augmented,simple
+3914,Как проходит элайнеры?,faq,procedure,faq_flow,variation,simple
+1101,"Подскажите, доброе утро спасибо",conversational,greeting,conversation_flow,augmented,complex
+1645,Спасибо за помощь...,conversational,gratitude,conversation_flow,augmented,simple
+4197,"Подскажите, до свидания 👍",conversational,farewell,conversation_flow,augmented,complex
+4447,Алло заранее спасибо пожалуйста,conversational,greeting,conversation_flow,augmented,simple
+7402,Спасибо большое спасибо,conversational,gratitude,conversation_flow,augmented,simple
+3489,Планирую профгигиену,anamnesis,services,anamnesis_flow,variation,simple
+4637,Непрофессиональное отношение,negative_feedback,staff,escalation_flow,template,simple
+9091,КАК ДЕЛАЮТ!!,faq,procedure,faq_flow,augmented,simple
+6245,Можно перенести на вечер!,booking,reschedule,booking_flow,augmented,simple
+8482,"Здравствуйте, не смог дозвониться",negative_feedback,service_issue,escalation_flow,augmented,complex
+6816,Работаете в в ближайшее время спасибо,faq,clinic_info,faq_flow,augmented,medium
+3985,После лечение каналов у Козловой стало хуже заранее спасибо,negative_feedback,quality,escalation_flow,augmented,medium
+720,не могу дозвониться?,negative_feedback,service_issue,escalation_flow,augmented,simple
+7982,После лечения стало хуже,negative_feedback,quality,escalation_flow,template,simple
+5496,Больше неп риду,negative_feedback,general,escalation_flow,augmented,simple
+2752,Это правда необходимо 👍,faq,followup,faq_flow,augmented,simple
+1532,НУЖЕН ПРОТЕЗ 👍,anamnesis,services,anamnesis_flow,augmented,simple
+4641,Элайнер треснул?,anamnesis,complaint,anamnesis_flow,augmented,simple
+4053,"Привет, добрый вечер",conversational,greeting,conversation_flow,augmented,complex
+6977,Не уделили внимания!,negative_feedback,staff,escalation_flow,augmented,simple
+766,Здорвоо...,conversational,greeting,conversation_flow,augmented,simple
+7897,Можно перенести на субботу пожалуйста,booking,reschedule,booking_flow,augmented,simple
+8889,"Привет, планирую отбеливание",anamnesis,services,anamnesis_flow,augmented,complex
+8600,"ЗДРАВСТВУЙТЕ, СКОЛЬКО СТОИТ УДАЛИТЬ ЗУБ?",faq,price,faq_flow,augmented,complex
+7121,Врач опоздал спасибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+7350,Здравствуйте 😊,conversational,greeting,conversation_flow,augmented,simple
+8874,Принимаете наличные заранее спасибо,faq,clinic_info,faq_flow,augmented,simple
+7962,Можно на четверг?,booking,new_appointment,booking_flow,variation,simple
+2959,Хоршоо,conversational,confirmation,conversation_flow,augmented,simple
+3521,челюсть периодически болит,anamnesis,symptom,anamnesis_flow,variation,simple
+4991,а если я не буду,faq,followup,faq_flow,augmented,simple
+8571,После чистку у Смирновой стало хуже заранее спасибо,negative_feedback,quality,escalation_flow,augmented,medium
+2119,Лебедевойб ыл груб,negative_feedback,staff,escalation_flow,augmented,simple
+8416,Здрасте 😊 пожалуйста,conversational,greeting,conversation_flow,augmented,simple
+4953,Болит семёрка уже две недели,anamnesis,symptom,anamnesis_flow,variation,simple
+1507,"Добрый день, врач ничего не знает?",negative_feedback,staff,escalation_flow,augmented,complex
+9579,"Добрый день, спасибо, всё понятно",conversational,gratitude,conversation_flow,augmented,complex
+2104,Где находится клинкиа?,faq,clinic_info,faq_flow,augmented,simple
+8457,Можно перезаписаться.,booking,reschedule,booking_flow,augmented,simple
+4256,Интересуют виниры...,anamnesis,services,anamnesis_flow,augmented,simple
+8816,Случилось слетела коронка,anamnesis,complaint,anamnesis_flow,variation,simple
+5400,Больше не приуд 🦷,negative_feedback,general,escalation_flow,augmented,simple
+121,А обязательно заранее спасибо,faq,followup,faq_flow,augmented,simple
+5917,Цен ана брекеты 😢,faq,price,faq_flow,augmented,simple
+2422,Запись к терапевту на понедельник,booking,new_appointment,booking_flow,variation,simple
+1943,Ждал двано,negative_feedback,service_issue,escalation_flow,augmented,simple
+7947,А ВДРУГ НЕ ПОЛУЧИТСЯ 😢,faq,followup,faq_flow,augmented,simple
+5757,передний зуб немного болит,anamnesis,symptom,anamnesis_flow,variation,simple
+7551,Кузнецовой был груб,negative_feedback,staff,escalation_flow,variation,simple
+8190,Сколько нельзя есТь после пломбы заранее спасибо,faq,visit_prep,faq_flow,augmented,medium
+1401,"Подскажите, здравствуйте, до скорого",conversational,farewell,conversation_flow,augmented,complex
+2987,Запись к пародонтологу на завтра?,booking,new_appointment,booking_flow,augmented,simple
+8922,"Отмнеите запись, форс-мажор",booking,cancel,booking_flow,augmented,complex
+430,сколько стоит брекеты пожалуйста,faq,price,faq_flow,augmented,simple
+9529,Какая стоимость?,faq,price,faq_flow,template,simple
+2238,"Добрый день, да,к онечно",conversational,confirmation,conversation_flow,augmented,complex
+4582,Здравствуйте 😊 😊,conversational,greeting,conversation_flow,augmented,simple
+3870,Принято 😊,conversational,confirmation,conversation_flow,augmented,simple
+3286,Большое спасибо 🦷,conversational,gratitude,conversation_flow,augmented,simple
+847,"Здравствуйте, свободно ли завтра?",booking,new_appointment,booking_flow,augmented,complex
+6759,"Не смогу прийти, заблоел",booking,cancel,booking_flow,augmented,complex
+7873,Когда можно прИйти,booking,new_appointment,booking_flow,augmented,simple
+3776,Не совсем понял,faq,followup,faq_flow,template,simple
+1665,Работаете в выохдные?,faq,clinic_info,faq_flow,augmented,simple
+5323,Хорошего дня 🙏,conversational,farewell,conversation_flow,augmented,simple
+9628,Хочу изменить время записи.,booking,reschedule,booking_flow,augmented,simple
+2416,После профгигиену у Кузнецовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+706,"Добрый день, доброе утро 😢",conversational,greeting,conversation_flow,augmented,complex
+511,Болит передний зуб уже неделю,anamnesis,symptom,anamnesis_flow,variation,simple
+6273,Эй заранее спасибо,conversational,greeting,conversation_flow,augmented,simple
+8234,СМИРНОВОЙ БЫЛ ГРУБ спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+8401,Сколько нельзя курить после осмотр 🦷,faq,visit_prep,faq_flow,augmented,medium
+4121,"Добрый день, после виниры у Кузнецовой стало хуже",negative_feedback,quality,escalation_flow,augmented,complex
+2425,"Подскажите ,какая цена на реставрацию?",faq,price,faq_flow,augmented,complex
+2066,Выпала пломба пожалуйтса,anamnesis,complaint,anamnesis_flow,augmented,simple
+8758,"Здравствуйте, конечно",conversational,confirmation,conversation_flow,augmented,complex
+1883,Привет.,conversational,greeting,conversation_flow,augmented,simple
+1788,"Скажите, перенесите на вторник",booking,reschedule,booking_flow,augmented,complex
+3298,Всего хорошего 🙏 😢,conversational,farewell,conversation_flow,augmented,simple
+9301,Сколько нельзя пить после реставрацию?,faq,visit_prep,faq_flow,variation,simple
+8185,Запись к эндодонтисту на четверг,booking,new_appointment,booking_flow,variation,simple
+2271,"Отмените запись,з анят на работе 👍",booking,cancel,booking_flow,augmented,complex
+800,Хочу невидимые каппы!,anamnesis,services,anamnesis_flow,augmented,simple
+7789,"Добрый день, невежливо ответили",negative_feedback,staff,escalation_flow,augmented,complex
+2793,Хочу к терапевту!,booking,new_appointment,booking_flow,augmented,simple
+4934,"Подскажите, недоволен Обслуживанием",negative_feedback,general,escalation_flow,augmented,complex
+1146,Есть свободные окошки?,booking,new_appointment,booking_flow,template,simple
+8058,До скорого 🦷,conversational,farewell,conversation_flow,augmented,simple
+2180,Есть детский стоматолог?,faq,clinic_info,faq_flow,template,simple
+764,Как проходит профгигиену 👍,faq,procedure,faq_flow,augmented,simple
+8193,что будут делать заранее спасибо,faq,procedure,faq_flow,augmented,simple
+6845,Буду...,conversational,confirmation,conversation_flow,augmented,simple
+2644,Сидорова был гурб...,negative_feedback,staff,escalation_flow,augmented,simple
+6484,Конечно.,conversational,confirmation,conversation_flow,augmented,simple
+2361,Надо подумать,conversational,unclear,clarification_flow,template,simple
+2448,Есть лазер пожалуйста,faq,clinic_info,faq_flow,augmented,simple
+8071,Недопустимо пожалуйста,negative_feedback,general,escalation_flow,augmented,simple
+5798,Зуб шатается,anamnesis,complaint,anamnesis_flow,template,simple
+4502,Запись к детскому стоматологу на на следующей неделе,booking,new_appointment,booking_flow,variation,medium
+7695,"Подскажите, да",conversational,confirmation,conversation_flow,augmented,complex
+4632,Хочу пожаловаться спасибо,negative_feedback,general,escalation_flow,augmented,simple
+111,Приветствую заранее спасибо,conversational,greeting,conversation_flow,augmented,simple
+1687,Винир отклеился 👍,anamnesis,complaint,anamnesis_flow,augmented,simple
+8639,ПРИЯНТО,conversational,confirmation,conversation_flow,augmented,simple
+266,"Здравствуйте, так и не перезвонили",negative_feedback,service_issue,escalation_flow,augmented,complex
+6661,"Подскажите, не смогу прийти, заболел",booking,cancel,booking_flow,augmented,complex
+3519,Сидорова был груб,negative_feedback,staff,escalation_flow,variation,simple
+8972,Сколько длится профгигиену,faq,procedure,faq_flow,augmented,simple
+8582,Хоч увозврат,negative_feedback,general,escalation_flow,augmented,simple
+3946,Интересуют виниры 🙏,anamnesis,services,anamnesis_flow,augmented,simple
+8033,Врач был невнимателен спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+9500,А вдруг не плоучится?,faq,followup,faq_flow,augmented,simple
+7113,"Скажите, смирновой был груб",negative_feedback,staff,escalation_flow,augmented,complex
+422,"Здравствуйте, не предупредили об изменениях 👍",negative_feedback,service_issue,escalation_flow,augmented,complex
+3565,Прощайте 👍 спасибо,conversational,farewell,conversation_flow,augmented,simple
+5280,ОТМЕНИТЕ ПРИЁМ 🙏,booking,cancel,booking_flow,augmented,simple
+1388,"Привет, не совсем понял",faq,followup,faq_flow,augmented,complex
+733,Принято...,conversational,confirmation,conversation_flow,augmented,simple
+2991,"Скажите, отбеливание не помогло...",negative_feedback,quality,escalation_flow,augmented,complex
+5808,Хочу отменить заипсь,booking,cancel,booking_flow,augmented,simple
+3635,удаление это больно 😢 спасибо,faq,procedure,faq_flow,augmented,simple
+3550,А можноп о-другому 🦷,faq,followup,faq_flow,augmented,simple
+4925,"Привет, спасибо пожалуйста",conversational,gratitude,conversation_flow,augmented,complex
+6981,Перезапишите на 180:0?,booking,reschedule,booking_flow,augmented,simple
+3395,Где оставить жалобу,negative_feedback,general,escalation_flow,augmented,simple
+7361,Нужно окронку,anamnesis,services,anamnesis_flow,augmented,simple
+1088,У МЕНЯ ТРЕСНУЛ ЗУБ!,anamnesis,complaint,anamnesis_flow,augmented,simple
+7826,Запись к хирургу на завтра,booking,new_appointment,booking_flow,variation,simple
+2059,Интересует пломбирование?,anamnesis,services,anamnesis_flow,augmented,simple
+7183,Всего хорошего?,conversational,farewell,conversation_flow,augmented,simple
+3160,Можно есть после процедуры?,faq,visit_prep,faq_flow,template,simple
+32,"Привет, ясно",conversational,confirmation,conversation_flow,augmented,complex
+1472,"Скажите, это возмутительно",negative_feedback,general,escalation_flow,augmented,complex
+801,Пока не решил пожалуйста,conversational,unclear,clarification_flow,augmented,simple
+6101,Что нельзя посел виниры?,faq,visit_prep,faq_flow,augmented,simple
+2917,Сколько нельзя есть после протезирование!,faq,visit_prep,faq_flow,augmented,simple
+845,Сколько времени занимает пожалуйста,faq,procedure,faq_flow,augmented,simple
+6947,Работаете вс егодня?,faq,clinic_info,faq_flow,augmented,simple
+9771,"Добрый день, а что лучше?",faq,followup,faq_flow,augmented,complex
+9661,ОЧНЕЬ ДОЛГО ЖДАЛ,negative_feedback,service_issue,escalation_flow,augmented,simple
+3171,"Добрый день, врач Новикова не объяснил",negative_feedback,staff,escalation_flow,augmented,complex
+857,прщоайте,conversational,farewell,conversation_flow,augmented,simple
+7825,Почём дуаление?,faq,price,faq_flow,augmented,simple
+5476,"Отмените запись, форс-мажор спасибо",booking,cancel,booking_flow,augmented,complex
+7274,"Здравствуйте, можно перенести на понедельник?",booking,reschedule,booking_flow,augmented,complex
+1681,Как подготовиться к элайнеры!!,faq,visit_prep,faq_flow,augmented,simple
+3588,Удачи спсаибо,conversational,farewell,conversation_flow,augmented,simple
+1882,Это правда необходимо спасИбо,faq,followup,faq_flow,augmented,simple
+6907,Хочу виниры 👍,anamnesis,services,anamnesis_flow,augmented,simple
+2554,Случилось треснул зуб...,anamnesis,complaint,anamnesis_flow,augmented,simple
+1540,Есть время на сегодня?,booking,new_appointment,booking_flow,variation,simple
+4746,"Добрый день, ок",conversational,confirmation,conversation_flow,augmented,complex
+9335,Приложение глючит спасибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+5121,Винир отклеился пОжалуйста,anamnesis,complaint,anamnesis_flow,augmented,simple
+2172,ПЕРЕЗАПШИИТЕ НА УТРО,booking,reschedule,booking_flow,augmented,simple
+4490,"Скажите, надо подумать",conversational,unclear,clarification_flow,augmented,complex
+5229,Ладно заранее спасибо,conversational,confirmation,conversation_flow,augmented,simple
+8100,"Скажите, до свидания спасибо",conversational,farewell,conversation_flow,augmented,complex
+1771,Это безобразие 😢 🦷,negative_feedback,general,escalation_flow,augmented,simple
+1423,"Скажите, спасибо за информацию?!",conversational,gratitude,conversation_flow,augmented,complex
+2078,Точно нужно спасибо,faq,followup,faq_flow,augmented,simple
+7239,ЗАПИСЬ К ПАРОДОНТОЛОГУ НА ВОСКРЕСЕНЬЕ.,booking,new_appointment,booking_flow,augmented,simple
+3174,Какую анестезию используете?,faq,procedure,faq_flow,template,simple
+6268,У МЕНЯ ШАТАЕТСЯ ЗУБ 🙏,anamnesis,complaint,anamnesis_flow,augmented,simple
+6165,Планирую имплантацию!,anamnesis,services,anamnesis_flow,augmented,simple
+6819,Перенесите на сегодня заранее спасибо,booking,reschedule,booking_flow,augmented,simple
+9920,Интересует Air-Flow!,anamnesis,services,anamnesis_flow,augmented,simple
+3681,Сколько стоит?,faq,price,faq_flow,template,simple
+9528,"Отмените, пожалуйста 🙏",booking,cancel,booking_flow,augmented,complex
+3311,Всего доброго 👍,conversational,farewell,conversation_flow,augmented,simple
+5929,После бреекты у Кузнецовой стало хуже?!,negative_feedback,quality,escalation_flow,augmented,medium
+9692,мне не перезвноили с утра,negative_feedback,service_issue,escalation_flow,augmented,simple
+7977,Сколько нельзя пить алкоголь после реставрацию.,faq,visit_prep,faq_flow,augmented,medium
+4078,Хочу отменить запись?!,booking,cancel,booking_flow,augmented,simple
+7143,интересует эстетическая стоматология спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+7639,"Здравствуйте, спс",conversational,gratitude,conversation_flow,augmented,complex
+3674,"Подскажите, поясните, пожалуйста",faq,followup,faq_flow,augmented,complex
+5966,Делаете панорамный снимок,faq,clinic_info,faq_flow,augmented,simple
+2264,Есть наркоз...,faq,clinic_info,faq_flow,augmented,simple
+3372,"Спасибо, до свидания 😢?!",conversational,gratitude,conversation_flow,augmented,complex
+2086,Можно в рассрочку 🙏,faq,price,faq_flow,augmented,simple
+3099,"Привет, привет, добрый вечер",conversational,greeting,conversation_flow,augmented,complex
+2146,"подскажите, какая цена на снимок?",faq,price,faq_flow,augmented,complex
+3501,Сколько нельзя пить алкоголь после снимок?,faq,visit_prep,faq_flow,variation,medium
+8090,"Добрый день, во сколько обойдётся?",faq,price,faq_flow,augmented,complex
+6646,"Привет, работаете в на этой неделе",faq,clinic_info,faq_flow,augmented,complex
+1984,Никот не перезвонил,negative_feedback,service_issue,escalation_flow,augmented,simple
+412,доброе утро пожалуйста,conversational,greeting,conversation_flow,augmented,simple
+2343,ВСЕГО ДОБРОГО 😢,conversational,farewell,conversation_flow,augmented,simple
+1270,"Добрый день, привет, всего хорошего",conversational,farewell,conversation_flow,augmented,complex
+8672,пломбирование сколько стоит?,faq,price,faq_flow,variation,simple
+2470,"Подскажите, спасибо!",conversational,gratitude,conversation_flow,augmented,complex
+2672,"Подскажите, не смогу прийти, уезжаю",booking,cancel,booking_flow,augmented,complex
+6436,"треснул зуб, что делать пожалуйста",anamnesis,complaint,anamnesis_flow,augmented,complex
+1657,Всего хороешго 😢,conversational,farewell,conversation_flow,augmented,simple
+8835,БОЛЬШЕ НЕ ПРИДУ СПАСИБО,negative_feedback,general,escalation_flow,augmented,simple
+7533,Нужно отменить 🙏,booking,cancel,booking_flow,augmented,simple
+2033,Дос видания?!,conversational,farewell,conversation_flow,augmented,simple
+8411,семёрка болит ночью,anamnesis,symptom,anamnesis_flow,variation,simple
+6205,Планирую исправить прикус 🦷,anamnesis,services,anamnesis_flow,augmented,simple
+203,Откололся кусочек зуба,anamnesis,complaint,anamnesis_flow,template,simple
+179,Всегод оброго 😢,conversational,farewell,conversation_flow,augmented,simple
+9074,Интересуют элайнеры 🙏,anamnesis,services,anamnesis_flow,augmented,simple
+6535,СнимитЕ меня с азписи,booking,cancel,booking_flow,augmented,simple
+5474,Сколько стоит удалить зуб?,faq,price,faq_flow,template,simple
+4367,Позже 🙏,conversational,unclear,clarification_flow,augmented,simple
+2549,"Подскажите, интересует виниры",anamnesis,services,anamnesis_flow,augmented,complex
+6928,Согалсен,conversational,confirmation,conversation_flow,augmented,simple
+5116,Возможно заранее спасибо?!,conversational,unclear,clarification_flow,augmented,simple
+6573,"Подскажите, перенесите на утро",booking,reschedule,booking_flow,augmented,complex
+1061,Сколько нельзя пить алкоголь после осмотр?,faq,visit_prep,faq_flow,variation,medium
+3454,Зуб аштается,anamnesis,complaint,anamnesis_flow,augmented,simple
+8813,Мне не перезвонили!,negative_feedback,service_issue,escalation_flow,augmented,simple
+6777,Запись к гигиенисту на вечер,booking,new_appointment,booking_flow,variation,simple
+4344,После КТ у Козловой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+4155,Срок службы 😢,faq,procedure,faq_flow,augmented,simple
+2186,Проблема осталась,negative_feedback,quality,escalation_flow,template,simple
+7022,После консультацию у Волкова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+5311,"Привет, хочу чистку",anamnesis,services,anamnesis_flow,augmented,complex
+5631,До скольки работаете?,faq,clinic_info,faq_flow,template,simple
+6448,"Скажите, наверное спасибо",conversational,unclear,clarification_flow,augmented,complex
+7964,После лечение кариеса у Смирновой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+4549,Как подготовиться к брекеты?,faq,visit_prep,faq_flow,variation,simple
+863,работаете в праздники!,faq,clinic_info,faq_flow,augmented,simple
+6115,"Скажите, не знаю!",conversational,unclear,clarification_flow,augmented,complex
+6623,Подумаю 🙏,conversational,unclear,clarification_flow,augmented,simple
+8845,Хочу реставрацию зуба,anamnesis,services,anamnesis_flow,template,simple
+3637,"Добрый день, до свидания заранее спасибо",conversational,farewell,conversation_flow,augmented,complex
+1377,Спасибо большое?,conversational,gratitude,conversation_flow,augmented,simple
+2247,"Подскажите, здравствуйте, это безобразие",negative_feedback,general,escalation_flow,augmented,complex
+3472,"Здравствуйте, сколько длится чистку?",faq,procedure,faq_flow,augmented,complex
+6564,Сколько длится элайнеры,faq,procedure,faq_flow,augmented,simple
+3283,ДО СКОРОГО 😢,conversational,farewell,conversation_flow,augmented,simple
+3044,Можн она другой день?,booking,reschedule,booking_flow,augmented,simple
+5297,Мне не перезвонили три дня...,negative_feedback,service_issue,escalation_flow,augmented,simple
+1241,посоветюусь,conversational,unclear,clarification_flow,augmented,simple
+9996,"Заболел, не приду 👍",booking,cancel,booking_flow,augmented,complex
+3139,А что будет если спасибо,faq,followup,faq_flow,augmented,simple
+7033,"Да, хорошо заранее спасибо",conversational,confirmation,conversation_flow,augmented,complex
+7530,Может быть,conversational,unclear,clarification_flow,template,simple
+3987,ДОГОВОРИЛСИЬ,conversational,confirmation,conversation_flow,augmented,simple
+4939,После консультацию у Новикова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+3984,НЕ СЕЙЧАС?,conversational,unclear,clarification_flow,augmented,simple
+446,Мне не перезвонили два дня заранее спасибо,negative_feedback,service_issue,escalation_flow,augmented,medium
+8044,"Скажите, лебедевой был груб 👍",negative_feedback,staff,escalation_flow,augmented,complex
+2042,Болит верхняя десна уже с утра,anamnesis,symptom,anamnesis_flow,variation,medium
+36,Сколько длится коронку?,faq,procedure,faq_flow,variation,simple
+2403,Торопили пожалуйста?,negative_feedback,staff,escalation_flow,augmented,simple
+3421,Отмениет запись,booking,cancel,booking_flow,augmented,simple
+6323,"Скажите, ждал несколько дней",negative_feedback,service_issue,escalation_flow,augmented,complex
+1236,Окей...,conversational,confirmation,conversation_flow,augmented,simple
+513,У меня пульсирующая боль со вчера.,anamnesis,symptom,anamnesis_flow,augmented,medium
+607,Приём начался с опозданием спасибо заранее спасибо,negative_feedback,service_issue,escalation_flow,augmented,medium
+2887,ПРИДУ?!,conversational,confirmation,conversation_flow,augmented,simple
+2736,Болит семёрка уже со вчера,anamnesis,symptom,anamnesis_flow,variation,simple
+4485,После лечение кариеса у Кузнецовой стало хуже заранее спасибо,negative_feedback,quality,escalation_flow,augmented,medium
+9345,"Добрый день, подумаю",conversational,unclear,clarification_flow,augmented,complex
+9255,"отмените запись, уезжаю спасибо",booking,cancel,booking_flow,augmented,complex
+7735,Врач Кузнецовой не объяснил заранее спасибо,negative_feedback,staff,escalation_flow,augmented,medium
+9629,"Подскажите, не работает онлайн-запись",negative_feedback,service_issue,escalation_flow,augmented,complex
+1739,сколько нельзя пить алкоголь после профгигиену 👍,faq,visit_prep,faq_flow,augmented,medium
+897,После снимок у Морозовой стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+1398,Привет спасибо спасибо,conversational,greeting,conversation_flow,augmented,simple
+8542,"Здравствуйте, как связаться?",faq,clinic_info,faq_flow,augmented,complex
+5569,Договорились.,conversational,confirmation,conversation_flow,augmented,simple
+2645,Зуб треснул?!,anamnesis,complaint,anamnesis_flow,augmented,simple
+3143,Не работает онлайн-запись 🙏,negative_feedback,service_issue,escalation_flow,augmented,simple
+1670,Иванова был груб заранее спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+4319,Случилось отколосля зуб,anamnesis,complaint,anamnesis_flow,augmented,simple
+1357,Запись к челюстно-лицевому хирургу на вечер,booking,new_appointment,booking_flow,variation,medium
+9911,Плохая клиника...,negative_feedback,general,escalation_flow,augmented,simple
+9572,До свидания 🙏 🙏,conversational,farewell,conversation_flow,augmented,simple
+9029,Поосветуюсь,conversational,unclear,clarification_flow,augmented,simple
+8911,Пломба выпала 👍,anamnesis,complaint,anamnesis_flow,augmented,simple
+2037,перенесите н асреду,booking,reschedule,booking_flow,augmented,simple
+1375,Ждал две ендели,negative_feedback,service_issue,escalation_flow,augmented,simple
+8070,"Привет, есть наркоз?",faq,clinic_info,faq_flow,augmented,complex
+7425,"Подскажите, большое спасибо.",conversational,gratitude,conversation_flow,augmented,complex
+320,"Добрый день, да, конечно?!",conversational,confirmation,conversation_flow,augmented,complex
+2628,Всегод оброго?,conversational,farewell,conversation_flow,augmented,simple
+6219,Зубы стали подвижными?!,anamnesis,complaint,anamnesis_flow,augmented,simple
+8389,Почём профгигиену заранее спасибо,faq,price,faq_flow,augmented,simple
+4167,требую компенсаицю,negative_feedback,general,escalation_flow,augmented,simple
+7047,Пока не решил?,conversational,unclear,clarification_flow,augmented,simple
+615,Нужно отменить заранее спасибо,booking,cancel,booking_flow,augmented,simple
+9178,"Привет ,спс",conversational,gratitude,conversation_flow,augmented,complex
+8027,Добрый день?,conversational,greeting,conversation_flow,augmented,simple
+9882,Сколько нельзя пить алкоголь после имплантацию?,faq,visit_prep,faq_flow,variation,medium
+6117,КАКУЮ ЩЁТКУИ СПОЛЬЗОВАТЬ?,faq,visit_prep,faq_flow,augmented,simple
+4638,Как делают?,faq,procedure,faq_flow,template,simple
+4031,"Поясните, пожалуйста!!",faq,followup,faq_flow,augmented,complex
+7453,ХоЧу пожаловаться 😊,negative_feedback,general,escalation_flow,augmented,simple
+1803,"Подскажите, долго ждал в очереди",negative_feedback,service_issue,escalation_flow,augmented,complex
+6572,У меня откололся зуб,anamnesis,complaint,anamnesis_flow,variation,simple
+1216,Хочу к ортодотну...,booking,new_appointment,booking_flow,augmented,simple
+550,До скороог?!,conversational,farewell,conversation_flow,augmented,simple
+9227,А что будет если пожалуйста,faq,followup,faq_flow,augmented,simple
+9714,"Скажите, хочу изменить время записи",booking,reschedule,booking_flow,augmented,complex
+9724,Есть время на в ближайшее время?,booking,new_appointment,booking_flow,variation,medium
+2154,НЕ РЕШЛИ ЕЩЁ,conversational,unclear,clarification_flow,augmented,simple
+7934,Врач опоздал н аполчаса,negative_feedback,service_issue,escalation_flow,augmented,simple
+8998,Какие еёщ варианты?,faq,followup,faq_flow,augmented,simple
+7050,Можно на на этой неделе!,booking,new_appointment,booking_flow,augmented,simple
+2498,"Привет, какая цена на протезирование?",faq,price,faq_flow,augmented,complex
+8897,Интересуют элайнеры?,anamnesis,services,anamnesis_flow,augmented,simple
+5673,Сколько стоит профгигиену!!,faq,price,faq_flow,augmented,simple
+4735,А что лучше 🙏,faq,followup,faq_flow,augmented,simple
+4180,Всего дборого 😊,conversational,farewell,conversation_flow,augmented,simple
+5330,"Привет, врач не слушал 🙏",negative_feedback,staff,escalation_flow,augmented,complex
+5705,Болит десна,anamnesis,symptom,anamnesis_flow,template,simple
+6299,Пока пожалйуста,conversational,farewell,conversation_flow,augmented,simple
+3821,"Привет, работаете по ДМС?",faq,clinic_info,faq_flow,augmented,complex
+6511,Здравсвтуйте!,conversational,greeting,conversation_flow,augmented,simple
+2965,Врач Петровой не объяснил?!,negative_feedback,staff,escalation_flow,augmented,simple
+4694,Запись к детскому стоМатологу на среду!!,booking,new_appointment,booking_flow,augmented,medium
+5279,До скроого,conversational,farewell,conversation_flow,augmented,simple
+7666,Тупая боль в зубе,anamnesis,symptom,anamnesis_flow,template,simple
+9938,"Добрый день, врач ничего не знает",negative_feedback,staff,escalation_flow,augmented,complex
+2399,Можно перенести на воскресенье...,booking,reschedule,booking_flow,augmented,simple
+2438,Нужно пломбирование,anamnesis,services,anamnesis_flow,variation,simple
+1524,У меня запах изо рта с утра,anamnesis,symptom,anamnesis_flow,variation,medium
+4665,Здрасте!!,conversational,greeting,conversation_flow,augmented,simple
+9154,Послеэ лайнеры у Волкова стало хуже,negative_feedback,quality,escalation_flow,augmented,medium
+8414,Какая ценан а чистку?,faq,price,faq_flow,augmented,simple
+829,"отёк, что делать?!",anamnesis,symptom,anamnesis_flow,augmented,complex
+7054,"Здравствуйте, верните деньги",negative_feedback,general,escalation_flow,augmented,complex
+974,Склоько стоит удаление?,faq,price,faq_flow,augmented,simple
+9086,а вдруг не получится!,faq,followup,faq_flow,augmented,simple
+9384,Пломба быстро выпала,negative_feedback,quality,escalation_flow,template,simple
+6424,"отменит езапись, уезжаю",booking,cancel,booking_flow,augmented,complex
+8448,Работаете в праздники спасибо,faq,clinic_info,faq_flow,augmented,simple
+5308,Естьк редит на лечение?,faq,price,faq_flow,augmented,simple
+7503,Ждал несколько дней!!,negative_feedback,service_issue,escalation_flow,augmented,simple
+3085,Интересует профгигиену спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+6280,Пока ен решил 🦷,conversational,unclear,clarification_flow,augmented,simple
+5435,Можно перенести на послезавтра!,booking,reschedule,booking_flow,augmented,simple
+7422,"Скажите, добрый день, всего хорошего",conversational,farewell,conversation_flow,augmented,complex
+213,Болит зуб мудрости уже давно,anamnesis,symptom,anamnesis_flow,variation,simple
+7173,Не сейчас!!,conversational,unclear,clarification_flow,augmented,simple
+4188,Добрйы вечер,conversational,greeting,conversation_flow,augmented,simple
+9933,Ок!,conversational,confirmation,conversation_flow,augmented,simple
+8958,реставрацию сколько стоит,faq,price,faq_flow,augmented,simple
+90,Почём?,faq,price,faq_flow,template,simple
+5774,"Подскажите, до свидания 😢",conversational,farewell,conversation_flow,augmented,complex
+7830,шестёрка постоянно болит,anamnesis,symptom,anamnesis_flow,variation,simple
+3186,"Подскажите, пЛОМБИРОВАНИЕ СКОЛЬКО СТОИТ?",faq,price,faq_flow,augmented,complex
+5029,Хочу выровнять зубы 🦷,anamnesis,services,anamnesis_flow,augmented,simple
+3554,Снимитем еня с записи,booking,cancel,booking_flow,augmented,simple
+463,Полсе пРофгигиену у Смирновой стало хуже,negative_feedback,quality,escalation_flow,augmented,medium
+9156,Зуб потемнел пожалуйста,anamnesis,complaint,anamnesis_flow,augmented,simple
+443,передний зуб болит ночью!!,anamnesis,symptom,anamnesis_flow,augmented,simple
+5044,У меня откололся зуб 😊,anamnesis,complaint,anamnesis_flow,augmented,simple
+6673,До свидания пожалуйста,conversational,farewell,conversation_flow,augmented,simple
+5727,После протезирование у Новикова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+6194,"Здравствуйте, часы работы.",faq,clinic_info,faq_flow,augmented,complex
+531,"Да, хорошо!!",conversational,confirmation,conversation_flow,augmented,complex
+8029,морозовой был груб спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+4739,"Скажите, пока 😢",conversational,farewell,conversation_flow,augmented,complex
+7951,Позовите главврача заранее спасибо,negative_feedback,general,escalation_flow,augmented,simple
+3935,Иванова был груб 🙏,negative_feedback,staff,escalation_flow,augmented,simple
+7861,После снимок у Сидорова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+1912,Какие документы взять?,faq,visit_prep,faq_flow,template,simple
+7954,"Здравствуйте, ужасный сервис",negative_feedback,general,escalation_flow,augmented,complex
+6663,Врач Смирновой не объяснил заранее спасибо,negative_feedback,staff,escalation_flow,augmented,medium
+5994,"Скажите, спасибо заранее спасибо",conversational,gratitude,conversation_flow,augmented,complex
+1762,Сколько нельзя есть после чистку 😊,faq,visit_prep,faq_flow,augmented,medium
+1623,Волкова был груб спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+2594,"Здравствуйте, какая цена на удаление?",faq,price,faq_flow,augmented,complex
+7255,КАКИЕВ РАЧИ РАБОТАЮТ?,faq,clinic_info,faq_flow,augmented,simple
+8942,"Привет, всего хорошего.",conversational,farewell,conversation_flow,augmented,complex
+1772,"Привет, долго оформляли документы",negative_feedback,service_issue,escalation_flow,augmented,complex
+3254,"Добрый день, до свидания!",conversational,farewell,conversation_flow,augmented,complex
+7598,Врач Иванова ен объяснил,negative_feedback,staff,escalation_flow,augmented,simple
+3396,"Добрый день, не совсем понял",faq,followup,faq_flow,augmented,complex
+7792,Беспокоит ноющая боль,anamnesis,symptom,anamnesis_flow,variation,simple
+7042,Спасибо за пмоощь,conversational,gratitude,conversation_flow,augmented,simple
+5913,семёрка болит очень 🦷,anamnesis,symptom,anamnesis_flow,augmented,simple
+9597,"Здравствуйте, здорово",conversational,greeting,conversation_flow,augmented,complex
+1735,"Добрый день, интересует осмотр",anamnesis,services,anamnesis_flow,augmented,complex
+3344,Болит десна уже два дня,anamnesis,symptom,anamnesis_flow,variation,simple
+5537,"Отмените, пожалуйста спасибо",booking,cancel,booking_flow,augmented,complex
+5385,Очень долго ждал,negative_feedback,service_issue,escalation_flow,template,simple
+7707,МОНЖО НА В БЛИЖАЙШЕЕ ВРЕМЯ?,booking,new_appointment,booking_flow,augmented,simple
+5469,РАОЗЧАРОВАН,negative_feedback,general,escalation_flow,augmented,simple
+3128,"Здравствуйте, наверное",conversational,unclear,clarification_flow,augmented,complex
+1342,Невежливо ответили...,negative_feedback,staff,escalation_flow,augmented,simple
+2022,"Подскажите, возможно",conversational,unclear,clarification_flow,augmented,complex
+9459,Согласен пожалуйста,conversational,confirmation,conversation_flow,augmented,simple
+7628,"Подскажите, появилась дырка в зубе",anamnesis,complaint,anamnesis_flow,augmented,complex
+6743,"Добрый день, перенесите запись",booking,reschedule,booking_flow,augmented,complex
+7986,"Добрый день, можно перенести на в ближайшее время?",booking,reschedule,booking_flow,augmented,complex
+7034,Большое спасибо!!,conversational,gratitude,conversation_flow,augmented,simple
+4046,После осмотр  уКузнецовой стало хуже,negative_feedback,quality,escalation_flow,augmented,simple
+4151,СКОЛЬКО СТОЯТ БРЕКЕТЫ заранее спасибо,faq,price,faq_flow,augmented,simple
+8829,"Добрый день, точно нужно?",faq,followup,faq_flow,augmented,complex
+2538,Очень благодаерн,conversational,gratitude,conversation_flow,augmented,simple
+2109,"Скажите, планирую отбеливание",anamnesis,services,anamnesis_flow,augmented,complex
+2626,Какая цеан на осмотр?,faq,price,faq_flow,augmented,simple
+4578,А обязательно?,faq,followup,faq_flow,template,simple
+7245,Протез лсомался,anamnesis,complaint,anamnesis_flow,augmented,simple
+9457,Как подготовиться к удаление...,faq,visit_prep,faq_flow,augmented,simple
+6025,"ПРИВЕТ, ПРОТЕЗИРОВАНИЕ НЕ ПОМОГЛО",negative_feedback,quality,escalation_flow,augmented,complex
+5870,"Добрый день, возможно!",conversational,unclear,clarification_flow,augmented,complex
+3813,Нужно снимОк заранее спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+4381,Перенесите на следующую неделю спасибо,booking,reschedule,booking_flow,augmented,simple
+5170,Какой адрес заранее спасибо,faq,clinic_info,faq_flow,augmented,simple
+2379,У меня боль при жевании месяц,anamnesis,symptom,anamnesis_flow,variation,medium
+9705,имплантацию сколько стоит?,faq,price,faq_flow,variation,simple
+3836,Как проходит виниры?,faq,procedure,faq_flow,variation,simple
+4137,Недопустимо 🦷,negative_feedback,general,escalation_flow,augmented,simple
+9435,Перенесите на понедельник заранее спасибо 🦷,booking,reschedule,booking_flow,augmented,medium
+3928,Почём протезирование?,faq,price,faq_flow,variation,simple
+3766,Хочу на эту неделю!,booking,new_appointment,booking_flow,augmented,simple
+9431,подумаю заранее спасибо,conversational,unclear,clarification_flow,augmented,simple
+4068,нужно отбеливание 😊,anamnesis,services,anamnesis_flow,augmented,simple
+9868,"здравствуйте, угу",conversational,confirmation,conversation_flow,augmented,complex
+9851,"ДОБРЫЙ ДЕНЬ, ПЕРЕЗАПИШИТЕ НА ДЕНЬ",booking,reschedule,booking_flow,augmented,complex
+5130,нужно отментиь,booking,cancel,booking_flow,augmented,simple
+2653,"Подскажите, после элайнеры у Петровой стало хуже заранее спасибо",negative_feedback,quality,escalation_flow,augmented,complex
+968,Что нельзя после отбеливание,faq,visit_prep,faq_flow,augmented,simple
+193,Наеврное,conversational,unclear,clarification_flow,augmented,simple
+5841,У меня ноющая боль с утра 🦷,anamnesis,symptom,anamnesis_flow,augmented,medium
+7751,"Добрый день, ждал три дня",negative_feedback,service_issue,escalation_flow,augmented,complex
+8546,Сколько держится заранее спасибо,faq,procedure,faq_flow,augmented,simple
+506,Перенесите на сегодня?,booking,reschedule,booking_flow,augmented,simple
+254,Какая цена на брекеты,faq,price,faq_flow,augmented,simple
+608,Протез сломался 🙏,anamnesis,complaint,anamnesis_flow,augmented,simple
+8603,"Здравствуйте, брекеты сколько стоит?",faq,price,faq_flow,augmented,complex
+2691,Записать ребёнка на осмотр,booking,new_appointment,booking_flow,template,simple
+7631,Ладно 😢,conversational,confirmation,conversation_flow,augmented,simple
+6976,"Добрый день, хочу выровнять зубы",anamnesis,services,anamnesis_flow,augmented,complex
+5997,Хочу пожаолваться,negative_feedback,general,escalation_flow,augmented,simple
+1153,ладно.,conversational,confirmation,conversation_flow,augmented,simple
+451,Сколько стоит протезирование,faq,price,faq_flow,augmented,simple
+2905,осмотр сколько стоит?,faq,price,faq_flow,variation,simple
+1537,Запись потеряли заранее спасибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+1543,"Добрый день, здравствуйте, врач ничего не знает",negative_feedback,staff,escalation_flow,augmented,complex
+1034,Запись к челюстно-лицевому хирургу на на этой неделе,booking,new_appointment,booking_flow,variation,medium
+1730,А если я не буду?,faq,followup,faq_flow,template,simple
+9226,Какой материал лучше 😢,faq,procedure,faq_flow,augmented,simple
+1663,Запись к ортодонту на утро,booking,new_appointment,booking_flow,variation,simple
+827,"Добрый день, здорово",conversational,greeting,conversation_flow,augmented,complex
+1156,"Скажите, заболел, не приду",booking,cancel,booking_flow,augmented,complex
+1589,Хочу поговорить с руководством,negative_feedback,general,escalation_flow,template,simple
+4499,элайнеры это больно?,faq,procedure,faq_flow,variation,simple
+3133,АГА заранее спасибо,conversational,confirmation,conversation_flow,augmented,simple
+8436,"Спасибо, всё понятно?",conversational,gratitude,conversation_flow,augmented,complex
+2770,Пока!!,conversational,farewell,conversation_flow,augmented,simple
+9058,Сколько нельзя есть после осмотр...,faq,visit_prep,faq_flow,augmented,simple
+5531,Нес ейчас 🙏,conversational,unclear,clarification_flow,augmented,simple
+5623,Ждал с утра 😊,negative_feedback,service_issue,escalation_flow,augmented,simple
+3859,семёрка облти сильно,anamnesis,symptom,anamnesis_flow,augmented,simple
+2032,После профгигиену у Иванова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+5603,А если не помжоет?,faq,followup,faq_flow,augmented,simple
+3279,"Не смогу прийти, заболел 🙏",booking,cancel,booking_flow,augmented,complex
+5830,"Добрый день, непрофессионаЛьное отношение",negative_feedback,staff,escalation_flow,augmented,complex
+1150,"привет, часы работы?",faq,clinic_info,faq_flow,augmented,complex
+8180,Запишите меня на приём,booking,new_appointment,booking_flow,template,simple
+7777,"Добрый день, добрый день заранее спасибо",conversational,greeting,conversation_flow,augmented,complex
+5679,Ужсаный сервис,negative_feedback,general,escalation_flow,augmented,simple
+2978,"Привет, скажите, можно перенести на сегодня?",booking,reschedule,booking_flow,augmented,complex
+3088,"Добрый день, сколько нельзя заниматься спортом после брекеты 😊",faq,visit_prep,faq_flow,augmented,complex
+2085,Не получитсяп рийти,booking,cancel,booking_flow,augmented,simple
+7026,Запись к терапевту на на следующей неделе спасибо,booking,new_appointment,booking_flow,augmented,medium
+855,Подскажите подробнее спасибо,faq,followup,faq_flow,augmented,simple
+6189,ОТЕМНА ЗАПИСИ,booking,cancel,booking_flow,augmented,simple
+6610,"Скажите, не смогу прийти, занят на работе",booking,cancel,booking_flow,augmented,complex
+7806,Да...,conversational,confirmation,conversation_flow,augmented,simple
+9304,Сколько нельзя курить после лечение кариеса.,faq,visit_prep,faq_flow,augmented,medium
+196,Сколько нельзя пить алкоголь после брекеты?,faq,visit_prep,faq_flow,variation,medium
+7573,"не смогу прийти, уезжаю 😢",booking,cancel,booking_flow,augmented,complex
+3887,Как проходит удаление!,faq,procedure,faq_flow,augmented,simple
+6599,Скололась эмаль.,anamnesis,complaint,anamnesis_flow,augmented,simple
+8586,Анестезия входит в стоимость,faq,procedure,faq_flow,augmented,simple
+64,Что нужно перед приёмом,faq,visit_prep,faq_flow,augmented,simple
+2520,После консультацию у Волкова стало хуже пожалуйста,negative_feedback,quality,escalation_flow,augmented,medium
+7922,спсаибо за информацию,conversational,gratitude,conversation_flow,augmented,simple
+8570,Почём пломбирование?,faq,price,faq_flow,variation,simple
+2285,СПАСИБО БОЛЬШОЕ 👍,conversational,gratitude,conversation_flow,augmented,simple
+7351,Можно перенести на вторник 😊,booking,reschedule,booking_flow,augmented,simple
+1087,"Скажите, удаление это больно?",faq,procedure,faq_flow,augmented,complex
+7787,Не уделилив нимания,negative_feedback,staff,escalation_flow,augmented,simple
+7967,Хочу возврат спасибо,negative_feedback,general,escalation_flow,augmented,simple
+7671,Сколько держтися?,faq,procedure,faq_flow,augmented,simple
+6727,"Здравствуйте, семёрка силЬно болит",anamnesis,symptom,anamnesis_flow,augmented,complex
+6391,"Скажите, здорвоо",conversational,greeting,conversation_flow,augmented,complex
+3437,ВЕРИНТЕ ДЕНЬГИ,negative_feedback,general,escalation_flow,augmented,simple
+673,Хочу пломбирование?,anamnesis,services,anamnesis_flow,augmented,simple
+2494,Что нельзя после элайнеры пожалуйста,faq,visit_prep,faq_flow,augmented,simple
+6064,Хочу протезирование,anamnesis,services,anamnesis_flow,template,simple
+6203,Как проходит снимок?,faq,procedure,faq_flow,variation,simple
+950,"Привет, добрый день 😊",conversational,greeting,conversation_flow,augmented,complex
+2227,Болит при надавливании,anamnesis,symptom,anamnesis_flow,template,simple
+6175,Посоветуюсь пожалуйста,conversational,unclear,clarification_flow,augmented,simple
+8550,Можно перезаписаться 🦷...,booking,reschedule,booking_flow,augmented,simple
+9553,Планиурю отбеливание,anamnesis,services,anamnesis_flow,augmented,simple
+8267,Проволока от брекетов колет,anamnesis,complaint,anamnesis_flow,template,simple
+4663,"спасибо, до свидания 👍",conversational,gratitude,conversation_flow,augmented,complex
+3435,Работаете по ДМС!!,faq,clinic_info,faq_flow,augmented,simple
+8198,Зуб треснул спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+1161,Можно перенести на завтра,booking,reschedule,booking_flow,augmented,simple
+9359,"Добрый день, не предупредили об изменениях",negative_feedback,service_issue,escalation_flow,augmented,complex
+4356,"Скажите, отмените приём",booking,cancel,booking_flow,augmented,complex
+9866,Отмените запись 🙏,booking,cancel,booking_flow,augmented,simple
+8920,Добрый день,conversational,greeting,conversation_flow,template,simple
+5156,Работаете в четверг?,faq,clinic_info,faq_flow,variation,simple
+6827,Сколько длитс явиниры 😢,faq,procedure,faq_flow,augmented,simple
+7499,СПАСИБО ЗА ПООМЩЬ,conversational,gratitude,conversation_flow,augmented,simple
+7761,профгигиену это больно?,faq,procedure,faq_flow,variation,simple
+5197,"Добрый день, спасибо!",conversational,gratitude,conversation_flow,augmented,complex
+9780,Хочу брекеты пожалуйста,anamnesis,services,anamnesis_flow,augmented,simple
+5963,ПОСЛЕ ВИНИРЫ У КУЗНЕЦОВОЙ СТАЛО ХУЖЕ СПАСИБО,negative_feedback,quality,escalation_flow,augmented,medium
+4833,Сколько длится виниры 😢,faq,procedure,faq_flow,augmented,simple
+5459,Хочу к гигиенисту 🙏,booking,new_appointment,booking_flow,augmented,simple
+46,"Добрый день, приветствую пожалуйста",conversational,greeting,conversation_flow,augmented,complex
+4933,"Привет, хочу реставрацию зуба 🦷",anamnesis,services,anamnesis_flow,augmented,complex
+9593,"Здравствуйте, есть нракоз?",faq,clinic_info,faq_flow,augmented,complex
+6097,Хорошо!,conversational,confirmation,conversation_flow,template,simple
+4551,Здравствуйте 🦷.,conversational,greeting,conversation_flow,augmented,simple
+7189,Не понравилось заранее спасибо,negative_feedback,general,escalation_flow,augmented,simple
+5238,"скажите, всего доброго",conversational,farewell,conversation_flow,augmented,complex
+2786,Спс 🦷...,conversational,gratitude,conversation_flow,augmented,simple
+3936,А это больно!,faq,procedure,faq_flow,augmented,simple
+8581,"Добрый день, всего хорошего",conversational,farewell,conversation_flow,augmented,complex
+2170,"Скажите, есть у вас рентген?",faq,clinic_info,faq_flow,augmented,complex
+8227,Случилось треснул зуб,anamnesis,complaint,anamnesis_flow,variation,simple
+7184,консульатцию сколько стоит?,faq,price,faq_flow,augmented,simple
+3778,"Привет, нужно отмеинть",booking,cancel,booking_flow,augmented,complex
+4231,Приветствую 🦷,conversational,greeting,conversation_flow,augmented,simple
+4312,У меня запах изо рта неделю,anamnesis,symptom,anamnesis_flow,variation,medium
+3219,Спасибо большое 😊,conversational,gratitude,conversation_flow,augmented,simple
+1782,МНЕ НЕ ПЕРЕЗВОНИЛИ ДЕНЬ?,negative_feedback,service_issue,escalation_flow,augmented,simple
+5222,Как подготовиться к КТ...,faq,visit_prep,faq_flow,augmented,simple
+9320,Врач не слушал 👍,negative_feedback,staff,escalation_flow,augmented,simple
+1110,"Здравствуйте, большое спасибо!!",conversational,gratitude,conversation_flow,augmented,complex
+6114,"Добрый день, после консультацию у Иванова стало хуже",negative_feedback,quality,escalation_flow,augmented,complex
+920,"Привет, очень благодарен 😊",conversational,gratitude,conversation_flow,augmented,complex
+9327,Удачи заранее спасибо,conversational,farewell,conversation_flow,augmented,simple
+8393,Выпала пломба!,anamnesis,complaint,anamnesis_flow,augmented,simple
+6501,После осмотр у Волкова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+4936,Лебедевой был груб 😊?!,negative_feedback,staff,escalation_flow,augmented,simple
+9115,Почём чистка,faq,price,faq_flow,augmented,simple
+8649,"Скажите, у меня кровоточивость с утра",anamnesis,symptom,anamnesis_flow,augmented,complex
+3876,КТ не помогло,negative_feedback,quality,escalation_flow,variation,simple
+7466,"Подскажите, сколько нельзя заниматься спортом после имплантацию?",faq,visit_prep,faq_flow,augmented,complex
+5283,Зуб реагирует на сладкое,anamnesis,symptom,anamnesis_flow,template,simple
+4139,До свдиания,conversational,farewell,conversation_flow,augmented,simple
+5685,Сколько нельзя заниматься спортом после коронку?,faq,visit_prep,faq_flow,variation,medium
+9534,"Скажите, после осмотр у морозовой стало хуже",negative_feedback,quality,escalation_flow,augmented,complex
+6595,После отбеливание у Смирнвоой стало хуже,negative_feedback,quality,escalation_flow,augmented,medium
+2159,Прайс,faq,price,faq_flow,template,simple
+3408,Как проходит осмотр?,faq,procedure,faq_flow,variation,simple
+9136,Добрый вечер 🦷...,conversational,greeting,conversation_flow,augmented,simple
+9796,Можте ыбть,conversational,unclear,clarification_flow,augmented,simple
+8822,"Здравствуйте, посоветуюсь",conversational,unclear,clarification_flow,augmented,complex
+2928,"Скажите, какая цена на имплантацию?",faq,price,faq_flow,augmented,complex
+3835,Можно оплатить картой спасибо,faq,clinic_info,faq_flow,augmented,simple
+3187,"Привет, хочу коронку 🦷",anamnesis,services,anamnesis_flow,augmented,complex
+231,"Поясните, пожалуйста 🦷 заранее спасибо",faq,followup,faq_flow,augmented,complex
+2822,"Добрый день, пока.",conversational,farewell,conversation_flow,augmented,complex
+5357,РАБОТАТЕЕ В ВЕЧЕР?,faq,clinic_info,faq_flow,augmented,simple
+8517,коренной зуб периодически болит,anamnesis,symptom,anamnesis_flow,variation,simple
+3209,Запись к ортопеду на на следующей неделе 😊,booking,new_appointment,booking_flow,augmented,medium
+2009,"Здравствуйте, скажите, добрый вечер",conversational,greeting,conversation_flow,augmented,complex
+5711,Врач ИваноВа не объяснил...,negative_feedback,staff,escalation_flow,augmented,simple
+5859,"Добрый день, до скорого",conversational,farewell,conversation_flow,augmented,complex
+1068,Не знаю,conversational,unclear,clarification_flow,template,simple
+4412,"Добрый день, болит десна уже несколько дней 😊",anamnesis,symptom,anamnesis_flow,augmented,complex
+1118,Хочу поговорить с руководством спасибо,negative_feedback,general,escalation_flow,augmented,simple
+9671,Что вы рекомендуете пожалуйста пожалуйста,faq,followup,faq_flow,augmented,simple
+5078,"Поясните, пожалуйста 👍?",faq,followup,faq_flow,augmented,complex
+4251,Как проходит Осмотр заранее спасибо,faq,procedure,faq_flow,augmented,simple
+8876,Скольок длится брекеты?,faq,procedure,faq_flow,augmented,simple
+7388,"Добрый день, можнО перенести на вторник?",booking,reschedule,booking_flow,augmented,complex
+2833,можно без этого 👍,faq,followup,faq_flow,augmented,simple
+9481,После коронку у Морозовой стало хуже?,negative_feedback,quality,escalation_flow,augmented,medium
+3334,Есть у вас рентген пожалуйста.,faq,clinic_info,faq_flow,augmented,simple
+1932,Сколько нельзя пить алкоголь после пломбирование?,faq,visit_prep,faq_flow,variation,medium
+7600,Элайнер треснул пожалуйста,anamnesis,complaint,anamnesis_flow,augmented,simple
+9380,Планирую пломбирование,anamnesis,services,anamnesis_flow,variation,simple
+5708,Окей 😢,conversational,confirmation,conversation_flow,augmented,simple
+9044,Алло!!,conversational,greeting,conversation_flow,augmented,simple
+1025,Плохаяк линика.,negative_feedback,general,escalation_flow,augmented,simple
+7966,ПРИНЯТО.,conversational,confirmation,conversation_flow,augmented,simple
+3465,"Подскажите, алло 😊",conversational,greeting,conversation_flow,augmented,complex
+6446,"Скажите, верните деньги 😢",negative_feedback,general,escalation_flow,augmented,complex
+6325,Появилась язвочка во рту заранее спасибо,anamnesis,complaint,anamnesis_flow,augmented,medium
+4147,Сколько стоит пломба?!,faq,price,faq_flow,augmented,simple
+6964,Есть рассрочка?,faq,price,faq_flow,template,simple
+39,"Подскажите, принято",conversational,confirmation,conversation_flow,augmented,complex
+4482,Спасибо пожалуйста,conversational,gratitude,conversation_flow,augmented,simple
+7927,Можно есть перед приёмом?,faq,visit_prep,faq_flow,template,simple
+8303,Пока 😊 заранее спасибо,conversational,farewell,conversation_flow,augmented,simple
+8323,Сайтн е рабоатет,negative_feedback,service_issue,escalation_flow,augmented,simple
+9009,Персонал хамит?,negative_feedback,staff,escalation_flow,augmented,simple
+3008,"ПОЯСНИТЕ, ПЖОАЛУЙСТА",faq,followup,faq_flow,augmented,complex
+9171,После брекеты у Козловйо стало хуже,negative_feedback,quality,escalation_flow,augmented,medium
+7385,У МЕНЯ ОТЁК НЕДЕЛЮ 😊,anamnesis,symptom,anamnesis_flow,augmented,simple
+5981,Сколько длится чистку пожалуйста,faq,procedure,faq_flow,augmented,simple
+5451,Болит челюсть уже неделю,anamnesis,symptom,anamnesis_flow,variation,simple
+7507,"Привет, ужасный сервис",negative_feedback,general,escalation_flow,augmented,complex
+632,Благодарю вас заранее спасибо,conversational,gratitude,conversation_flow,augmented,simple
+9822,"Скажите, хочу перенести запись спасибо",booking,reschedule,booking_flow,augmented,complex
+8165,НадО псооветоваться,conversational,unclear,clarification_flow,augmented,simple
+752,Есть детский кабинет?,faq,clinic_info,faq_flow,template,simple
+5077,Нужно осмотр?!,anamnesis,services,anamnesis_flow,augmented,simple
+8559,У меня ноющая боль неделю,anamnesis,symptom,anamnesis_flow,variation,simple
+9202,Недопустимо 😢,negative_feedback,general,escalation_flow,augmented,simple
+3325,мне не перезвоинли со вчера,negative_feedback,service_issue,escalation_flow,augmented,simple
+1296,Хочу коронку,anamnesis,services,anamnesis_flow,variation,simple
+7893,А обязательон...,faq,followup,faq_flow,augmented,simple
+5154,"Добрый день, благодарю",conversational,gratitude,conversation_flow,augmented,complex
+2308,"Привет, не уверен...",conversational,unclear,clarification_flow,augmented,complex
+6236,Принято?,conversational,confirmation,conversation_flow,augmented,simple
+3659,Сколько нельзя курить после брекеты?,faq,visit_prep,faq_flow,variation,simple
+6228,"Скажите, да, хорошо 🦷",conversational,confirmation,conversation_flow,augmented,complex
+1935,Какп роходит лечение?,faq,procedure,faq_flow,augmented,simple
+4727,Есть рентген?,faq,clinic_info,faq_flow,variation,simple
+4937,Понял...,conversational,confirmation,conversation_flow,augmented,simple
+1304,Жда лнеделю,negative_feedback,service_issue,escalation_flow,augmented,simple
+6674,"Добрый день, принимаете наличные?",faq,clinic_info,faq_flow,augmented,complex
+9300,До встерчи,conversational,farewell,conversation_flow,augmented,simple
+7686,имплантацию это больно,faq,procedure,faq_flow,augmented,simple
+8391,Хочу поставить коронку 😢,anamnesis,services,anamnesis_flow,augmented,simple
+9143,Договорились 🙏,conversational,confirmation,conversation_flow,augmented,simple
+3404,После имплантацию у Сидорова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+9231,"Скажите, хОРОШО!",conversational,confirmation,conversation_flow,augmented,complex
+7663,Работаете в вечер?!,faq,clinic_info,faq_flow,augmented,simple
+6946,Как проходит процедура,faq,procedure,faq_flow,augmented,simple
+3025,спасибо за информацию!,conversational,gratitude,conversation_flow,augmented,simple
+2503,Спасибо за помощь.,conversational,gratitude,conversation_flow,augmented,simple
+2556,"Подскажите, мне не перезвонили давно",negative_feedback,service_issue,escalation_flow,augmented,complex
+3540,Мне не перезвонили месяц,negative_feedback,service_issue,escalation_flow,variation,simple
+1271,"Скажите, спасибо большое...",conversational,gratitude,conversation_flow,augmented,complex
+8337,Добрый день 😢 😢,conversational,greeting,conversation_flow,augmented,simple
+8458,"Здравствуйте, буду",conversational,confirmation,conversation_flow,augmented,complex
+5724,"Здравствуйте, здравствуйте!",conversational,greeting,conversation_flow,augmented,complex
+5111,Работаете в воскресенье спасибо,faq,clinic_info,faq_flow,augmented,simple
+2404,Сказали что записи нет?,negative_feedback,service_issue,escalation_flow,augmented,simple
+1502,Протез сломался заранее спасибо!!,anamnesis,complaint,anamnesis_flow,augmented,simple
+8974,верхняя десна болит постоянно,anamnesis,symptom,anamnesis_flow,variation,simple
+6138,"Скажите, ждал с утра",negative_feedback,service_issue,escalation_flow,augmented,complex
+5738,Работаете в послезавтра 🦷,faq,clinic_info,faq_flow,augmented,simple
+5213,Запись к детскому стоматологу на вторник,booking,new_appointment,booking_flow,variation,medium
+5300,договорились!!,conversational,confirmation,conversation_flow,augmented,simple
+8228,"Добрый день, здрасте",conversational,greeting,conversation_flow,augmented,complex
+8157,Большое спасибо!,conversational,gratitude,conversation_flow,augmented,simple
+4567,Болит верхняя десна уже два дня,anamnesis,symptom,anamnesis_flow,variation,medium
+1338,Врач Козловой не объяснил 👍,negative_feedback,staff,escalation_flow,augmented,simple
+1978,"Добрый день, да, конечно пожалуйста",conversational,confirmation,conversation_flow,augmented,complex
+7175,Наверное 😢,conversational,unclear,clarification_flow,augmented,simple
+6197,Очеьн благодарен,conversational,gratitude,conversation_flow,augmented,simple
+8396,"Подскажите, сЛОМАЛСЯ ПРОТЕЗ",anamnesis,complaint,anamnesis_flow,augmented,complex
+5892,Ждал месяц,negative_feedback,service_issue,escalation_flow,variation,simple
+392,Можно записаться онлайн 😊,faq,clinic_info,faq_flow,augmented,simple
+1860,После осмотр у Козловой стало хуже пожалуйста,negative_feedback,quality,escalation_flow,augmented,medium
+3296,"Добрый день, расскаЖите больше",faq,followup,faq_flow,augmented,complex
+4415,ЗАПИШИТЕ НА ЧИСТКУ 👍,booking,new_appointment,booking_flow,augmented,simple
+8040,"Скажите, есть время на сегодня?",booking,new_appointment,booking_flow,augmented,complex
+317,Работаете в субботу,faq,clinic_info,faq_flow,augmented,simple
+3559,Да,conversational,confirmation,conversation_flow,template,simple
+8957,После брекеты у Петровой стало хуже пожалуйста,negative_feedback,quality,escalation_flow,augmented,medium
+4910,Какие ещё варианты?!,faq,followup,faq_flow,augmented,simple
+7178,"Привет, ок",conversational,confirmation,conversation_flow,augmented,complex
+1080,Врач Морозовой не объяснил 😢,negative_feedback,staff,escalation_flow,augmented,simple
+3800,НАДО ПОДМУАТЬ,conversational,unclear,clarification_flow,augmented,simple
+9755,"ЗДРАВСТВУЙТЕ, ХОЧУ КРАСИВУЮ УЛЫБКУ",anamnesis,services,anamnesis_flow,augmented,complex
+9139,Сколько стоит элайнреы?,faq,price,faq_flow,augmented,simple
+3956,До встречи,conversational,farewell,conversation_flow,template,simple
+7844,Когда работаете заранее спасибо,faq,clinic_info,faq_flow,augmented,simple
+967,"Скажите, привет, благодарю вас",conversational,gratitude,conversation_flow,augmented,complex
+4724,Возможно пожалуйста,conversational,unclear,clarification_flow,augmented,simple
+9800,что нельзя после КТ заранее спасибо,faq,visit_prep,faq_flow,augmented,medium
+9904,Не смгоу прийти,booking,cancel,booking_flow,augmented,simple
+8946,"Подскажите, угу",conversational,confirmation,conversation_flow,augmented,complex
+3790,"Не смогу прийти, заболел",booking,cancel,booking_flow,variation,simple
+9096,Как к вам проехать?,faq,clinic_info,faq_flow,template,simple
+1558,Можно перенести на вечер?,booking,reschedule,booking_flow,variation,simple
+3717,Понятно?!,conversational,confirmation,conversation_flow,augmented,simple
+1847,"Привет, осмотр это больно 😊",faq,procedure,faq_flow,augmented,complex
+347,Не смогу прийти,booking,cancel,booking_flow,template,simple
+9778,"Здравствуйте, здравствуйте заранее спасибо",conversational,greeting,conversation_flow,augmented,complex
+2255,Перезапишите на утро 😊,booking,reschedule,booking_flow,augmented,simple
+1664,Элайнер треснул 🦷,anamnesis,complaint,anamnesis_flow,augmented,simple
+4848,До которого часа приём заранее спасибо,faq,clinic_info,faq_flow,augmented,medium
+9504,Пока 😊,conversational,farewell,conversation_flow,augmented,simple
+9279,Ничего не объяснили пожалуйста,negative_feedback,staff,escalation_flow,augmented,simple
+5571,"Добрый день, челюсть постоянно облит",anamnesis,symptom,anamnesis_flow,augmented,complex
+3608,Хочу остваить жалобу,negative_feedback,general,escalation_flow,augmented,simple
+221,Отнеслись наплевательски 👍,negative_feedback,staff,escalation_flow,augmented,simple
+5418,Болит шестёрка уже два дня,anamnesis,symptom,anamnesis_flow,variation,simple
+25,Треснул зуб,anamnesis,complaint,anamnesis_flow,template,simple
+6857,"Изменились планы, нужно преенести",booking,reschedule,booking_flow,augmented,complex
+3190,Запишит ена пломбирование,booking,new_appointment,booking_flow,augmented,simple
+5426,После брекеты у Морозовой стало хуже заранее спасибо,negative_feedback,quality,escalation_flow,augmented,medium
+309,Цена на имплантацию заранее спасибо,faq,price,faq_flow,augmented,simple
+3277,"Скажите, сНИМОК СКОЛЬКО СТОИТ?",faq,price,faq_flow,augmented,complex
+2992,Планирую имплантацию 😢,anamnesis,services,anamnesis_flow,augmented,simple
+3826,ГДЕ ВЫ НАХОИДТЕСЬ?,faq,clinic_info,faq_flow,augmented,simple
+9223,Болит верхняя десна уже две недели,anamnesis,symptom,anamnesis_flow,variation,medium
+3556,Сколько стоит лечение кариеса?,faq,price,faq_flow,variation,simple
+2302,Сколько нельзя есть после протезирование 😊,faq,visit_prep,faq_flow,augmented,medium
+2488,Можно на на этой неделе заранее спасибо,booking,new_appointment,booking_flow,augmented,medium
+8659,Прикусил щёку 👍,anamnesis,complaint,anamnesis_flow,augmented,simple
+4541,Прикусил щёку,anamnesis,complaint,anamnesis_flow,template,simple
+4281,"Поясните, пожалуйста 😊",faq,followup,faq_flow,augmented,complex
+3361,Разочарован 😢 👍,negative_feedback,general,escalation_flow,augmented,simple
+2089,Какой материал лчуше?,faq,procedure,faq_flow,augmented,simple
+815,У меня чувствительность день!!,anamnesis,symptom,anamnesis_flow,augmented,simple
+1248,Коронка шататеся,anamnesis,complaint,anamnesis_flow,augmented,simple
+8702,Хочу изменить время записи спасибо,booking,reschedule,booking_flow,augmented,simple
+2744,После профгигиену у Новикова стало хуже,negative_feedback,quality,escalation_flow,variation,medium
+8495,"Добрый день, моЖно перенести на четверг?",booking,reschedule,booking_flow,augmented,complex
+6196,Врач Смирновой не объяснил спасибо,negative_feedback,staff,escalation_flow,augmented,simple
+3615,СКОЛЬКО ДЛИТСЯ ПРОТЕЗИРОВАНИЕ!!,faq,procedure,faq_flow,augmented,simple
+9406,"Здравствуйте, надо посоветоваться 🙏",conversational,unclear,clarification_flow,augmented,complex
+9341,"Скажите, здравствуйте, нужно перенести",booking,reschedule,booking_flow,augmented,complex
+4817,"Здравствуйте, почём удаление?",faq,price,faq_flow,augmented,complex
+6338,Чт овы рекомендуете,faq,followup,faq_flow,augmented,simple
+7494,Нужон снимок 👍,anamnesis,services,anamnesis_flow,augmented,simple
+3634,коренной зуб немного болит,anamnesis,symptom,anamnesis_flow,variation,simple
+8442,Можно на на следующей неделе?,booking,new_appointment,booking_flow,variation,simple
+5479,где находится клиника...,faq,clinic_info,faq_flow,augmented,simple
+4341,Зуб реагирует на холодное,anamnesis,symptom,anamnesis_flow,template,simple
+1725,какие ещё варианты!,faq,followup,faq_flow,augmented,simple
+1709,верхний зуб сильно болит?,anamnesis,symptom,anamnesis_flow,augmented,simple
+9665,Хочу на КТ,booking,new_appointment,booking_flow,template,simple
+3709,Ждал два дня заранее спасибо,negative_feedback,service_issue,escalation_flow,augmented,simple
+9588,Можно оплатить кратой?,faq,clinic_info,faq_flow,augmented,simple
+9812,"Привет, ага пожалуйста",conversational,confirmation,conversation_flow,augmented,complex
+3937,Отнеслись наплевательски 😢,negative_feedback,staff,escalation_flow,augmented,simple
+5932,реставрацию это больно заранее спасибо,faq,procedure,faq_flow,augmented,simple
+5272,Рядом есть метор?,faq,clinic_info,faq_flow,augmented,simple
+9303,"Здравствуйте, спасибо большое пожалуйста",conversational,gratitude,conversation_flow,augmented,complex
+8899,АДМИНИСТРАТОР НАХАМИЛ?!,negative_feedback,staff,escalation_flow,augmented,simple
+2682,Не предупредили об изменениях 👍,negative_feedback,service_issue,escalation_flow,augmented,simple
+5487,Запишите на пломбирование спасибо,booking,new_appointment,booking_flow,augmented,simple
+5034,"откололся зуб, что делать 😢",anamnesis,complaint,anamnesis_flow,augmented,complex
+9253,Сколько нельзя пить алкоголь после консультацию?,faq,visit_prep,faq_flow,variation,medium
+6145,"Добрый день ,перезапишите на 14:00",booking,reschedule,booking_flow,augmented,complex
+5938,Сколько нельзя пить алкоголь после профгигиену?,faq,visit_prep,faq_flow,variation,medium
+5139,Дос видания!,conversational,farewell,conversation_flow,augmented,simple
+8199,Хочу отменить запись 🙏,booking,cancel,booking_flow,augmented,simple
+6639,Запись к имплантологу на пятницу,booking,new_appointment,booking_flow,variation,simple
+3203,"Привет, перезапишите на 18:00",booking,reschedule,booking_flow,augmented,complex
+7936,Нужно элайнеры,anamnesis,services,anamnesis_flow,variation,simple
+6786,"Привет, пОСЛЕ ОТБЕЛИВАНИЕ У МОРОЗОВОЙ СТАЛО ХУЖЕ",negative_feedback,quality,escalation_flow,augmented,complex
+9281,Плохая клиника!,negative_feedback,general,escalation_flow,augmented,simple
+2283,Иванова был груб?,negative_feedback,staff,escalation_flow,augmented,simple
+7874,Ужансый сервис,negative_feedback,general,escalation_flow,augmented,simple
+8292,"Скажите, лечение каналов не помогло",negative_feedback,quality,escalation_flow,augmented,complex
+4003,а вдруг не получится спасибо,faq,followup,faq_flow,augmented,simple
+7128,ТОЧНО НУЖНО.,faq,followup,faq_flow,augmented,simple
+8138,ПОСЛЕ ЛЕЧЕНИЕ КАРИЕСА У ПЕТРОВОЙ СТАЛО ХУЖЕ?,negative_feedback,quality,escalation_flow,augmented,medium
+6431,Мне не перезвонили со вчера,negative_feedback,service_issue,escalation_flow,variation,simple
+8171,Не знаю 😊,conversational,unclear,clarification_flow,augmented,simple
+2798,Перенесите на вечер 🙏,booking,reschedule,booking_flow,augmented,simple
+6003,Случилось шатается зуб 😢,anamnesis,complaint,anamnesis_flow,augmented,simple
+2945,Запись к хирургу на вечер,booking,new_appointment,booking_flow,variation,simple
+4802,Хочу снимок!,anamnesis,services,anamnesis_flow,augmented,simple
+1468,Планирую осмотр пожалуйста,anamnesis,services,anamnesis_flow,augmented,simple
+7643,"Здравствуйте, работаете в на этой неделе?",faq,clinic_info,faq_flow,augmented,complex
+2791,Перезапишите на вечер,booking,reschedule,booking_flow,template,simple
+830,Надо посоветоваться заранее спасибо,conversational,unclear,clarification_flow,augmented,simple
+8907,"Отмените запись, уезжаю пожалуйста",booking,cancel,booking_flow,augmented,complex
+4826,БУДЕТ БОЛЬНО,faq,procedure,faq_flow,augmented,simple
+834,Запись к имплантологу на завтра спасибо,booking,new_appointment,booking_flow,augmented,medium
+7851,"Скажите, доброе утро",conversational,greeting,conversation_flow,augmented,complex
+9601,Почём пожалуйста,faq,price,faq_flow,augmented,simple
+9168,"Отмените запись, форс-мажор 🙏",booking,cancel,booking_flow,augmented,complex
+3065,Перенесите на среду пожалуйста,booking,reschedule,booking_flow,augmented,simple
+9164,"Отментие запись, уезжаю",booking,cancel,booking_flow,augmented,complex
+5481,"Здравствуйте, какие обебзоливающие можно?",faq,visit_prep,faq_flow,augmented,complex
+5217,Отмеинте приём,booking,cancel,booking_flow,augmented,simple
+8836,"Скажите, есть альтеРнативы?",faq,procedure,faq_flow,augmented,complex
+4859,Нужно лечение кариеса,anamnesis,services,anamnesis_flow,variation,simple
+4752,Больш ене приду,negative_feedback,general,escalation_flow,augmented,simple
+992,Ничего не объяснили 😢,negative_feedback,staff,escalation_flow,augmented,simple
+3320,Здравствуйте пожалуйста спасибо,conversational,greeting,conversation_flow,augmented,simple
+5544,Спасибо большое заранее спасибо,conversational,gratitude,conversation_flow,augmented,simple
+4065,"Добрый день,з драсте",conversational,greeting,conversation_flow,augmented,complex
+564,Перенесите запись?,booking,reschedule,booking_flow,augmented,simple
+6799,Мне не перезвонили неделю спасибо спасибо,negative_feedback,service_issue,escalation_flow,augmented,medium
+6956,Петровой был груб пожалуйста,negative_feedback,staff,escalation_flow,augmented,simple
+5202,Ужасный сервис 👍,negative_feedback,general,escalation_flow,augmented,simple
+4781,Можетб ыть,conversational,unclear,clarification_flow,augmented,simple
+1918,лечение каиреса это больно?,faq,procedure,faq_flow,augmented,simple
+1127,Врач Смирновой не объяснил!!,negative_feedback,staff,escalation_flow,augmented,simple
+812,"Скажите, ужасный сервис",negative_feedback,general,escalation_flow,augmented,complex
+3744,"Подскажите, добрый день 🙏",conversational,greeting,conversation_flow,augmented,complex
+912,добрйы вечер!,conversational,greeting,conversation_flow,augmented,simple
+876,"Добрый день, до скольки рабтоаете?",faq,clinic_info,faq_flow,augmented,complex
+7674,ПОКА НЕ РЕШИЛ 🦷,conversational,unclear,clarification_flow,augmented,simple
+1959,"Привет, пломбирование это больно?",faq,procedure,faq_flow,augmented,complex
+4604,"Подскажите, врач был груб",negative_feedback,staff,escalation_flow,augmented,complex
+1512,"Добрый день, не получается в это время",booking,reschedule,booking_flow,augmented,complex
+2382,Запись к ортопеду на пятницу,booking,new_appointment,booking_flow,variation,simple
+609,Болит семёрка уже месяц,anamnesis,symptom,anamnesis_flow,variation,simple
+6238,Здорово 👍 спасибо,conversational,greeting,conversation_flow,augmented,simple
+1474,"Привет, да, хорошо",conversational,confirmation,conversation_flow,augmented,complex
+7791,А вдруг не получится заранее спасибо,faq,followup,faq_flow,augmented,medium
+1416,"Здравствуйте, работаете с наркозом?",faq,clinic_info,faq_flow,augmented,complex
+7356,Сколько нельзя пить после осмотр,faq,visit_prep,faq_flow,augmented,simple
+5189,Хочу попасть на приём,booking,new_appointment,booking_flow,template,simple
+2245,Не решил ещё заранее спасибо,conversational,unclear,clarification_flow,augmented,simple
+1237,Перенесите на послезавтра...,booking,reschedule,booking_flow,augmented,simple
+6735,А обязательно 👍,faq,followup,faq_flow,augmented,simple
+4193,После чистку у Козловой стало хуже пожалуйста,negative_feedback,quality,escalation_flow,augmented,medium
+7141,Откололся кусочек зуба заранее спасибо,anamnesis,complaint,anamnesis_flow,augmented,simple
+2299,"ПРИВЕТ, ХОЧУ ВОЗВРАТ",negative_feedback,general,escalation_flow,augmented,complex
+7514,Поосветуюсь пожалуйста,conversational,unclear,clarification_flow,augmented,simple
+6363,"Спасибо, всё понятно 👍",conversational,gratitude,conversation_flow,augmented,complex
+514,"Добрый день, запись к эндодонтисту на пятницу",booking,new_appointment,booking_flow,augmented,complex
+8749,"Привет, привет, да",conversational,confirmation,conversation_flow,augmented,complex
+3918,СКОЛЬКО НЕЛЬЗЯ ЕСТЬ ПОСЛЕ ЭЛАЙНЕРЫ!,faq,visit_prep,faq_flow,augmented,simple
+886,доброе урто!,conversational,greeting,conversation_flow,augmented,simple
+2493,Запись к имплантологу на на этой неделе,booking,new_appointment,booking_flow,variation,medium
+696,"Скажите, добрый вечер!",conversational,greeting,conversation_flow,augmented,complex
+8622,Есть время на на этой неделе?,booking,new_appointment,booking_flow,variation,medium
+9479,"Скажите, а обязательно?",faq,followup,faq_flow,augmented,complex
+745,Удачи 😢,conversational,farewell,conversation_flow,augmented,simple
+3213,Нужно протезирование 🙏 заранее спасибо,anamnesis,services,anamnesis_flow,augmented,simple
+3458,"Отмените запись, занят на работе!",booking,cancel,booking_flow,augmented,complex
+2051,У меня пульсирующая боль день,anamnesis,symptom,anamnesis_flow,variation,simple
+5201,Так и не перезвонили,negative_feedback,service_issue,escalation_flow,template,simple
+7248,Не совсем понял 👍,faq,followup,faq_flow,augmented,simple
+9891,У меня кровоточивость с утра,anamnesis,symptom,anamnesis_flow,variation,simple
+3536,Случилось выпала пломба.,anamnesis,complaint,anamnesis_flow,augmented,simple
+291,"Подскажите, хочу профгигиену",anamnesis,services,anamnesis_flow,augmented,complex
+3316,какую аенстезию используете?,faq,procedure,faq_flow,augmented,simple
+5652,"Добрый день, записал 🦷",conversational,confirmation,conversation_flow,augmented,complex
+4620,ПОКА НЕР ЕШИЛ,conversational,unclear,clarification_flow,augmented,simple
+6276,Хочу к эндодонтисту спасибо,booking,new_appointment,booking_flow,augmented,simple
+7044,"Отмените запись, уезжаю 😊",booking,cancel,booking_flow,augmented,complex
+7556,где оставить жалобу пожалуйста,negative_feedback,general,escalation_flow,augmented,simple
+3302,Всего доборго спасибо,conversational,farewell,conversation_flow,augmented,simple
+8440,Работаете в послезавтра 😊,faq,clinic_info,faq_flow,augmented,simple
+9732,подумаю 🦷,conversational,unclear,clarification_flow,augmented,simple
+1591,Сколько длится коронку!,faq,procedure,faq_flow,augmented,simple
+883,"Скажите, хочу возврат",negative_feedback,general,escalation_flow,augmented,complex
+3602,"Добрый день, ждал две недели",negative_feedback,service_issue,escalation_flow,augmented,complex
+3332,Добрый вечер спасибо 😊,conversational,greeting,conversation_flow,augmented,simple
+7656,А что будет если 🦷,faq,followup,faq_flow,augmented,simple
+8864,"ПОДСКАЖИТЕ, МНЕ НЕ ПЕРЕЗВОНИЛИ НЕСКОЛЬКО ДНЕЙ",negative_feedback,service_issue,escalation_flow,augmented,complex
+6321,У меня откололся зуб!,anamnesis,complaint,anamnesis_flow,augmented,simple
+9864,Сколько нельзя курить после профгигиену?,faq,visit_prep,faq_flow,variation,simple

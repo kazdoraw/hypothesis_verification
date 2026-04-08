@@ -1,0 +1,189 @@
+# Mini eval set: representative samples для smoke-тестов
+# Распределение: 2 factoid, 2 doctor_lookup, 2 complaint_routing,
+#                1 reasoning, 2 pricing, 2 out_of_scope
+# Источник: подвыборка из data/eval_set.yaml (seed examples)
+
+- sample_id: q_0001
+  query: Где вы находитесь?
+  category: factoid
+  subtype: address_location
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: factoid address"
+  gold_chunk_ids:
+  - clinic_location
+
+- sample_id: q_0005
+  query: Какой телефон?
+  category: factoid
+  subtype: phone_contact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: factoid phone"
+  gold_chunk_ids:
+  - clinic_contacts
+
+- sample_id: q_0015
+  query: Ермаков у вас работает?
+  category: doctor_lookup
+  subtype: by_surname_nominative
+  answerable: true
+  expected_answer: ""
+  expected_doctor: Ермаков Александр Владимирович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: doctor by surname"
+  gold_chunk_ids:
+  - doctor_1
+
+- sample_id: q_0016
+  query: Есть доктор Батылин?
+  category: doctor_lookup
+  subtype: by_surname_nominative
+  answerable: true
+  expected_answer: ""
+  expected_doctor: Батылин Александр Александрович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: doctor by surname"
+  gold_chunk_ids:
+  - doctor_2
+
+- sample_id: q_0029
+  query: Болит зуб мудрости
+  category: complaint_routing
+  subtype: surgical
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: Хирургическая стоматология
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: complaint routing"
+  gold_chunk_ids:
+  - doctor_2
+  - doctor_4
+  - doctor_5
+  - doctor_11
+  - doctor_14
+  - doctor_17
+  - doctor_21
+  - doctor_22
+
+- sample_id: q_0030
+  query: Хочу имплант
+  category: complaint_routing
+  subtype: surgical
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: Хирургическая стоматология
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: complaint routing"
+  gold_chunk_ids:
+  - doctor_2
+  - doctor_4
+  - doctor_5
+  - doctor_11
+  - doctor_14
+  - doctor_17
+  - doctor_21
+  - doctor_22
+
+- sample_id: q_0039
+  query: Кто из хирургов самый опытный?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: reasoning"
+  gold_chunk_ids:
+  - doctor_2
+  - doctor_4
+  - doctor_5
+  - doctor_11
+  - doctor_14
+  - doctor_17
+  - doctor_21
+  - doctor_22
+
+- sample_id: q_price_01
+  query: Сколько стоит имплант?
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: pricing specific"
+  gold_chunk_ids:
+    - price_implantation
+
+- sample_id: q_price_02
+  query: Прайс на протезирование
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: pricing category"
+  gold_chunk_ids:
+    - price_prosthetics_p1
+    - price_prosthetics_p2
+
+- sample_id: q_0048
+  query: Работает ли у вас Иванов?
+  category: out_of_scope
+  subtype: unknown_doctor
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "smoke: out_of_scope unknown_doctor"
+  gold_chunk_ids: []
+
+- sample_id: q_0050
+  query: Где ближайшая аптека?
+  category: out_of_scope
+  subtype: wrong_domain
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "smoke: out_of_scope wrong_domain"
+  gold_chunk_ids: []

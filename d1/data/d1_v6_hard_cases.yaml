@@ -1,0 +1,202 @@
+# D1 v6 Hard Cases — пограничные и сложные случаи для тестирования
+#
+# Категории:
+# 1. mixed_intent — смешанные интенты (жалоба + вопрос/запись)
+# 2. short_ambiguous — короткие неоднозначные фразы
+# 3. urgent — ургентные случаи (anamnesis + urgency=urgent)
+# 4. intent_switch — пары (контекст, новое сообщение) для switch_test
+# 5. feedback_as_routing — отзывы, которые можно спутать с routing
+# 6. booking_with_spec — запись + специализация
+# 7. booking_with_doctor — упоминание фамилии → faq (production logic)
+# 8. greeting_with_intent — приветствие + интент → по интенту
+# 9. faq_borderline — faq/anamnesis граница
+#
+# Правила разметки:
+# - mixed_intent → anamnesis (domain_priority из production)
+# - greeting + intent → по интенту (НЕ unsupported)
+# - doctor surname → faq (verification через faq_node)
+# - urgency markers → anamnesis + urgency=urgent
+
+hard_cases:
+
+  # =========================================================================
+  # 1. MIXED INTENT — жалоба + вопрос/запись → anamnesis (domain_priority)
+  # =========================================================================
+  - {id: hard_001, text: "У меня болит зуб, сколько стоит лечение?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + price → anamnesis по domain_priority"}
+  - {id: hard_002, text: "Десна кровоточит, можно записаться?", route_domain: anamnesis, subtype: symptom, explicit_booking: true, urgency: normal, source: manual_hard, notes: "symptom + booking → anamnesis"}
+  - {id: hard_003, text: "Выпала пломба, когда можно прийти?", route_domain: anamnesis, subtype: complaint, explicit_booking: true, urgency: normal, source: manual_hard, notes: "complaint + booking → anamnesis"}
+  - {id: hard_004, text: "Хочу брекеты, сколько это стоит и когда можно?", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: true, urgency: normal, source: manual_hard, notes: "treatment + price + booking → anamnesis"}
+  - {id: hard_005, text: "Болит зуб мудрости, есть ли у вас хирург?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + doctor_info → anamnesis"}
+  - {id: hard_006, text: "Нужна чистка, какие цены и когда свободно?", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: true, urgency: normal, source: manual_hard, notes: "treatment + price + booking"}
+  - {id: hard_007, text: "Откололся зуб, больно жевать, запишите срочно", route_domain: anamnesis, subtype: complaint, explicit_booking: true, urgency: urgent, source: manual_hard, notes: "complaint + booking + urgent"}
+  - {id: hard_008, text: "Хочу имплант, но десна болит. Это нормально?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + symptom → anamnesis"}
+  - {id: hard_009, text: "Коронка шатается и болит, сколько будет замена?", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "complaint + price → anamnesis"}
+  - {id: hard_010, text: "Нужны виниры, но передний зуб потемнел", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + complaint → anamnesis"}
+  - {id: hard_011, text: "Ноет зуб после пломбы, это гарантийный случай?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + clinic_info"}
+  - {id: hard_012, text: "Хочу отбеливание и чистку, записаться можно?", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: true, urgency: normal, source: manual_hard, notes: "treatment + booking"}
+  - {id: hard_013, text: "Опухла щека и температура, когда примете?", route_domain: anamnesis, subtype: symptom, explicit_booking: true, urgency: urgent, source: manual_hard, notes: "urgent symptom + booking"}
+  - {id: hard_014, text: "Ребёнку нужно удалить зуб, сколько стоит?", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + price"}
+  - {id: hard_015, text: "Зуб шатается, есть ли у вас пародонтолог?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + doctor_info"}
+  - {id: hard_016, text: "Выпал штифт, больно, запишите к хирургу", route_domain: anamnesis, subtype: complaint, explicit_booking: true, urgency: normal, source: manual_hard, notes: "complaint + booking + spec"}
+  - {id: hard_017, text: "Треснул зуб, имплант нужен? сколько стоит?", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "complaint + treatment + price"}
+  - {id: hard_018, text: "Хочу исправить прикус, у меня ещё кривые зубы", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + complaint"}
+  - {id: hard_019, text: "Нужна профчистка и осмотр, есть свободное время?", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: true, urgency: normal, source: manual_hard, notes: "treatment + booking"}
+  - {id: hard_020, text: "Кровоточат дёсны, до скольки работаете?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + clinic_info"}
+  - {id: hard_021, text: "Пломба потемнела, хочу виниры и записаться", route_domain: anamnesis, subtype: complaint, explicit_booking: true, urgency: normal, source: manual_hard, notes: "complaint + treatment + booking"}
+  - {id: hard_022, text: "Болит после лечения каналов, это нормально?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + procedure_info"}
+  - {id: hard_023, text: "Хочу отбеливание, но зубы чувствительные", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + symptom"}
+  - {id: hard_024, text: "Нужна коронка и чистка, запишите на одну дату", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: true, urgency: normal, source: manual_hard, notes: "treatment + booking"}
+  - {id: hard_025, text: "Сломался ретейнер, болит, как быть?", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "complaint + procedure_info"}
+  - {id: hard_026, text: "Мне нужен имплант, десна отёкла вокруг штифта", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + complaint"}
+  - {id: hard_027, text: "Зуб ноет от сладкого, плюс хочу чистку", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + treatment"}
+  - {id: hard_028, text: "Ребёнку больно, есть детский стоматолог?", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "symptom + doctor_info"}
+  - {id: hard_029, text: "Хочу элайнеры, у меня скученность зубов", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "treatment + complaint"}
+  - {id: hard_030, text: "Протез давит десну, хочу на импланты перейти", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "complaint + treatment"}
+
+  # =========================================================================
+  # 2. SHORT AMBIGUOUS — короткие неоднозначные фразы
+  # =========================================================================
+  - {id: hard_031, text: "Врач", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, нет контекста"}
+  - {id: hard_032, text: "Лечение", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово"}
+  - {id: hard_033, text: "Записать", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, source: manual_hard, notes: "1 слово, но явный booking intent"}
+  - {id: hard_034, text: "Зуб", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, нет контекста"}
+  - {id: hard_035, text: "Цена", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, но явный FAQ"}
+  - {id: hard_036, text: "Больно", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, symptom"}
+  - {id: hard_037, text: "Помогите", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard, notes: "1 слово, urgent"}
+  - {id: hard_038, text: "Срочно", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent, source: manual_hard, notes: "1 слово, urgent booking"}
+  - {id: hard_039, text: "Чистка", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, treatment"}
+  - {id: hard_040, text: "Отмена", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, cancel"}
+  - {id: hard_041, text: "Перенос", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal, source: manual_hard, notes: "1 слово, reschedule"}
+  - {id: hard_042, text: "Вопрос", route_domain: unsupported, subtype: unclear_short, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово"}
+  - {id: hard_043, text: "Импланты", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, treatment"}
+  - {id: hard_044, text: "Адрес", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "1 слово, FAQ"}
+  - {id: hard_045, text: "Снимок", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "может быть price или treatment"}
+
+  # =========================================================================
+  # 3. URGENT — ургентные (anamnesis + urgency=urgent)
+  # =========================================================================
+  - {id: hard_046, text: "Сильное кровотечение, не останавливается", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_047, text: "Ребёнку очень плохо, температура 39", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_048, text: "Выбили зуб, кровь идёт", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_049, text: "Сильный отёк, не могу глотать", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_050, text: "Острая боль, таблетки не помогают", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_051, text: "Ребёнок упал, зуб шатается, кровь", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_052, text: "Аллергическая реакция после анестезии", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_053, text: "Гной из десны, температура, отёк", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_054, text: "Челюсть не открывается совсем", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_055, text: "Беременна, зуб болит невыносимо", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_056, text: "Кровь не останавливается уже час", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_057, text: "Отёк горла после удаления, задыхаюсь", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_058, text: "Малышу 2 года, упал, зуб выбит", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_059, text: "Нагноение после имплантации, щека горит", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_060, text: "Потерял сознание от боли", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+
+  # =========================================================================
+  # 4. INTENT SWITCH — пары для switch_test
+  # Формат: active_domain + текст → expected_domain
+  # =========================================================================
+  - {id: switch_001, text: "Сколько стоит?", route_domain: faq, subtype: price, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq switch"}
+  - {id: switch_002, text: "Запишите меня", route_domain: booking, subtype: new_appointment, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking switch"}
+  - {id: switch_003, text: "А вообще у меня ещё десна болит", route_domain: anamnesis, subtype: symptom, active_domain: booking, source: manual_hard, notes: "booking → anamnesis switch"}
+  - {id: switch_004, text: "Подождите, а где вы находитесь?", route_domain: faq, subtype: clinic_info, active_domain: booking, source: manual_hard, notes: "booking → faq switch"}
+  - {id: switch_005, text: "Ладно, запишите тогда", route_domain: booking, subtype: new_appointment, active_domain: anamnesis, explicit_booking: true, source: manual_hard, notes: "anamnesis → booking switch"}
+  - {id: switch_006, text: "Нет, я хочу спросить про цены", route_domain: faq, subtype: price, active_domain: booking, source: manual_hard, notes: "booking → faq switch"}
+  - {id: switch_007, text: "У меня ещё вопрос — кто делает имплантацию?", route_domain: faq, subtype: doctor_info, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq switch"}
+  - {id: switch_008, text: "Забудьте, у меня просто болит зуб", route_domain: anamnesis, subtype: symptom, active_domain: faq, source: manual_hard, notes: "faq → anamnesis switch"}
+  - {id: switch_009, text: "Отмените запись, я передумал", route_domain: booking, subtype: cancel, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → booking cancel"}
+  - {id: switch_010, text: "А ещё у ребёнка кривые зубы", route_domain: anamnesis, subtype: complaint, active_domain: faq, source: manual_hard, notes: "faq → anamnesis switch"}
+  - {id: switch_011, text: "Кстати, работаете в воскресенье?", route_domain: faq, subtype: clinic_info, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq switch"}
+  - {id: switch_012, text: "Хочу на чистку записаться", route_domain: booking, subtype: new_appointment, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking switch"}
+  - {id: switch_013, text: "Нет, мне нужно не это. У меня болит десна", route_domain: anamnesis, subtype: symptom, active_domain: booking, source: manual_hard, notes: "booking → anamnesis switch"}
+  - {id: switch_014, text: "Ещё вопрос: есть рассрочка?", route_domain: faq, subtype: price, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq switch"}
+  - {id: switch_015, text: "Перенесите мне запись", route_domain: booking, subtype: reschedule, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking reschedule"}
+  - {id: switch_016, text: "Стоп, а зуб-то болит уже неделю", route_domain: anamnesis, subtype: symptom, active_domain: booking, source: manual_hard, notes: "booking → anamnesis"}
+  - {id: switch_017, text: "А какой телефон клиники?", route_domain: faq, subtype: clinic_info, active_domain: booking, source: manual_hard, notes: "booking → faq"}
+  - {id: switch_018, text: "Ладно, тогда запишите к ортодонту", route_domain: booking, subtype: new_appointment, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking"}
+  - {id: switch_019, text: "Подождите, у меня ещё щека опухла", route_domain: anamnesis, subtype: symptom, active_domain: faq, urgency: normal, source: manual_hard, notes: "faq → anamnesis"}
+  - {id: switch_020, text: "Хорошо, а сколько стоит имплант?", route_domain: faq, subtype: price, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq"}
+  - {id: switch_021, text: "Всё, запишите меня на завтра", route_domain: booking, subtype: new_appointment, active_domain: anamnesis, explicit_booking: true, source: manual_hard, notes: "anamnesis → booking"}
+  - {id: switch_022, text: "Нет, не надо записывать. Просто скажите цену", route_domain: faq, subtype: price, active_domain: booking, source: manual_hard, notes: "booking → faq"}
+  - {id: switch_023, text: "Так, а у меня ещё пломба выпала", route_domain: anamnesis, subtype: complaint, active_domain: booking, source: manual_hard, notes: "booking → anamnesis"}
+  - {id: switch_024, text: "Подождите, есть ли парковка?", route_domain: faq, subtype: clinic_info, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq"}
+  - {id: switch_025, text: "Записываюсь на чистку", route_domain: booking, subtype: new_appointment, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking"}
+  - {id: switch_026, text: "Минутку, десна вокруг импланта красная", route_domain: anamnesis, subtype: symptom, active_domain: faq, source: manual_hard, notes: "faq → anamnesis"}
+  - {id: switch_027, text: "А, и ещё — вы по ДМС работаете?", route_domain: faq, subtype: price, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq"}
+  - {id: switch_028, text: "Хватит вопросов, записывайте!", route_domain: booking, subtype: new_appointment, active_domain: faq, explicit_booking: true, source: manual_hard, notes: "faq → booking"}
+  - {id: switch_029, text: "Ой, я забыла сказать — ребёнок тоже болеет", route_domain: anamnesis, subtype: symptom, active_domain: booking, source: manual_hard, notes: "booking → anamnesis"}
+  - {id: switch_030, text: "А скидки для пенсионеров есть?", route_domain: faq, subtype: price, active_domain: anamnesis, source: manual_hard, notes: "anamnesis → faq"}
+
+  # =========================================================================
+  # 5. FEEDBACK AS ROUTING — отзывы ≠ routing
+  # =========================================================================
+  - {id: hard_061, text: "Классная клиника, хочу записаться ещё раз", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, feedback_flag: true, source: manual_hard, notes: "feedback + booking → booking wins"}
+  - {id: hard_062, text: "Плохой врач, зуб болит после лечения", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, feedback_flag: true, source: manual_hard, notes: "feedback + symptom → anamnesis"}
+  - {id: hard_063, text: "Спасибо за лечение, но десна ноет", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, feedback_flag: true, source: manual_hard, notes: "feedback + symptom → anamnesis"}
+  - {id: hard_064, text: "Довольна результатом", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true, source: manual_hard, notes: "pure feedback"}
+  - {id: hard_065, text: "Плохо обслужили, хочу жаловаться", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true, source: manual_hard, notes: "pure feedback"}
+
+  # =========================================================================
+  # 6. BOOKING + SPECIALIZATION
+  # =========================================================================
+  - {id: hard_066, text: "Запишите к ортодонту на четверг", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортодонт", source: manual_hard}
+  - {id: hard_067, text: "Нужна запись к хирургу-имплантологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "хирург", source: manual_hard}
+  - {id: hard_068, text: "Хочу к пародонтологу, когда свободно?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "пародонтолог", source: manual_hard}
+  - {id: hard_069, text: "Записать ребёнка к детскому стоматологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "детский стоматолог", source: manual_hard}
+  - {id: hard_070, text: "На ортопедический приём запишите", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортопед", source: manual_hard}
+  - {id: hard_071, text: "Нужна консультация терапевта-стоматолога", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "терапевт", source: manual_hard}
+  - {id: hard_072, text: "Запишите к гнатологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "гнатолог", source: manual_hard}
+  - {id: hard_073, text: "Хочу записаться к эндодонтисту", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "эндодонтист", source: manual_hard}
+  - {id: hard_074, text: "Запись к анестезиологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "анестезиолог", source: manual_hard}
+  - {id: hard_075, text: "Нужен приём у стоматолога-хирурга", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "хирург", source: manual_hard}
+
+  # =========================================================================
+  # 7. BOOKING WITH DOCTOR NAME → faq (surname verification)
+  # =========================================================================
+  - {id: hard_076, text: "Хочу к Батылину", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "doctor surname → faq verification"}
+  - {id: hard_077, text: "Запишите к Ермакову", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "booking + surname → faq first"}
+  - {id: hard_078, text: "Хочу на приём к Демину", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "booking + surname → faq first"}
+  - {id: hard_079, text: "Мне нужна Конновская", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "doctor surname → faq"}
+  - {id: hard_080, text: "Есть ли у вас доктор Иванов?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "unknown surname → faq"}
+  - {id: hard_081, text: "К Петрову запишите на пятницу", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "booking + surname → faq first"}
+  - {id: hard_082, text: "Хочу к тому врачу, который делал мне коронку", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "indirect doctor reference → faq"}
+  - {id: hard_083, text: "Запишите к детскому врачу Конновской", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "booking + surname → faq first"}
+  - {id: hard_084, text: "Ермаков свободен завтра?", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "schedule + surname → faq"}
+  - {id: hard_085, text: "Есть Сидорова? Запишите к ней", route_domain: faq, subtype: doctor_info, explicit_booking: true, urgency: normal, source: manual_hard, notes: "unknown surname → faq"}
+
+  # =========================================================================
+  # 8. GREETING + INTENT → по интенту (НЕ unsupported!)
+  # =========================================================================
+  - {id: hard_086, text: "Привет, болит зуб", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + symptom → anamnesis"}
+  - {id: hard_087, text: "Здравствуйте, хочу записаться", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, source: manual_hard, notes: "greeting + booking"}
+  - {id: hard_088, text: "Добрый день, сколько стоит чистка?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + price"}
+  - {id: hard_089, text: "Привет! Где вы находитесь?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + clinic_info"}
+  - {id: hard_090, text: "Здравствуйте, хочу брекеты", route_domain: anamnesis, subtype: treatment_interest, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + treatment"}
+  - {id: hard_091, text: "Доброе утро, запишите к ортодонту", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортодонт", source: manual_hard, notes: "greeting + booking + spec"}
+  - {id: hard_092, text: "Привет, кто у вас лечит дёсны?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + doctor_info"}
+  - {id: hard_093, text: "Алло, у ребёнка откололся зуб", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + complaint"}
+  - {id: hard_094, text: "Добрый вечер, отмените мою запись", route_domain: booking, subtype: cancel, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + cancel"}
+  - {id: hard_095, text: "Здрасте, сколько стоит имплант?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + price"}
+  - {id: hard_096, text: "Привет, выпала пломба, что делать?", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + complaint"}
+  - {id: hard_097, text: "Здравствуйте, перенесите запись", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal, source: manual_hard, notes: "greeting + reschedule"}
+  - {id: hard_098, text: "Добрый день, работает ли Ермаков?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + doctor surname → faq"}
+  - {id: hard_099, text: "Привет, срочно болит, запишите сегодня", route_domain: anamnesis, subtype: symptom, explicit_booking: true, urgency: urgent, source: manual_hard, notes: "greeting + urgent symptom + booking"}
+  - {id: hard_100, text: "Алло, есть рассрочка?", route_domain: faq, subtype: price, explicit_booking: false, urgency: normal, source: manual_hard, notes: "greeting + price"}
+
+  # =========================================================================
+  # 9. FAQ BORDERLINE — граница faq/anamnesis
+  # =========================================================================
+  - {id: hard_101, text: "Что делать если болит после удаления?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "info request (procedure), не личная жалоба"}
+  - {id: hard_102, text: "Какие обезболивающие можно после имплантации?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general info question"}
+  - {id: hard_103, text: "Нормально ли что болит после пломбы?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general/hypothetical question"}
+  - {id: hard_104, text: "Через сколько проходит боль после удаления?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "procedure timeline info"}
+  - {id: hard_105, text: "Может ли десна кровоточить от чистки?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "hypothetical, not personal complaint"}
+  - {id: hard_106, text: "Можно ли лечить зубы при беременности?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general medical info"}
+  - {id: hard_107, text: "Какие риски у имплантации при диабете?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general medical info"}
+  - {id: hard_108, text: "Как понять что нужна коронка а не пломба?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "educational question"}
+  - {id: hard_109, text: "Чем отличается имплант от моста?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "comparison question"}
+  - {id: hard_110, text: "Вредно ли отбеливание для эмали?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general medical info"}
+  - {id: hard_111, text: "Как ухаживать за имплантом?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "post-procedure care info"}
+  - {id: hard_112, text: "Со скольки лет можно ставить брекеты?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "general info"}
+  - {id: hard_113, text: "Можно ли курить после удаления зуба?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "post-procedure info"}
+  - {id: hard_114, text: "Нужна ли анестезия при чистке?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "procedure info"}
+  - {id: hard_115, text: "Какой имплант лучше — корейский или немецкий?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "product comparison"}

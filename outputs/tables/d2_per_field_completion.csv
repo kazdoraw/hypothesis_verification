@@ -1,0 +1,11 @@
+Field,Count,Completion_A,Completion_B
+bite_issues,6,0.0,1.0
+chief_complaint,30,1.0,1.0
+desired_outcome,6,0.0,1.0
+duration,12,0.5,1.0
+intensity,12,0.0,1.0
+last_visit,6,0.0,0.6666666666666666
+localization,30,0.0,1.0
+onset,12,0.0,1.0
+relievers,6,0.0,1.0
+triggers,6,0.0,1.0

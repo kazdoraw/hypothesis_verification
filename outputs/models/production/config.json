@@ -1,0 +1,71 @@
+{
+  "model_type": "GridSearchCV",
+  "l1_classes": [
+    "anamnesis",
+    "booking",
+    "faq",
+    "negative_feedback",
+    "conversational"
+  ],
+  "l2_classes": [
+    "symptom",
+    "complaint",
+    "services",
+    "new_appointment",
+    "reschedule",
+    "cancel",
+    "price",
+    "clinic_info",
+    "procedure",
+    "visit_prep",
+    "followup",
+    "service_issue",
+    "quality",
+    "staff",
+    "general",
+    "greeting",
+    "gratitude",
+    "confirmation",
+    "farewell",
+    "unclear"
+  ],
+  "l2_to_l1_mapping": {
+    "symptom": "anamnesis",
+    "complaint": "anamnesis",
+    "services": "anamnesis",
+    "new_appointment": "booking",
+    "reschedule": "booking",
+    "cancel": "booking",
+    "price": "faq",
+    "clinic_info": "faq",
+    "procedure": "faq",
+    "visit_prep": "faq",
+    "followup": "faq",
+    "service_issue": "negative_feedback",
+    "quality": "negative_feedback",
+    "staff": "negative_feedback",
+    "general": "negative_feedback",
+    "greeting": "conversational",
+    "gratitude": "conversational",
+    "confirmation": "conversational",
+    "farewell": "conversational",
+    "unclear": "conversational"
+  },
+  "confidence_thresholds": {
+    "high": 0.85,
+    "medium": 0.65,
+    "low": 0.4
+  },
+  "class_weights_l1": {
+    "anamnesis": 1.0,
+    "booking": 1.0,
+    "faq": 1.0,
+    "negative_feedback": 2.0,
+    "conversational": 0.8
+  },
+  "created": "2026-01-24T02:50:49.478231",
+  "performance": {
+    "f1_macro": 0.9799723346207326,
+    "nf_recall": 0.9633333333333334
+  }
+}

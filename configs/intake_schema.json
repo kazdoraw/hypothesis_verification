@@ -1,0 +1,210 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DentalIntake",
+  "description": "JSON Schema для преданамнеза стоматологического пациента",
+  "type": "object",
+  "properties": {
+    "complaint_type": {
+      "type": "string",
+      "enum": [
+        "acute_pain",
+        "chronic_pain",
+        "esthetics",
+        "ortho",
+        "therapy"
+      ],
+      "description": "Тип жалобы"
+    },
+    "chief_complaint": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Основная жалоба пациента"
+    },
+    "localization": {
+      "type": "string",
+      "description": "Локализация проблемы (зуб, область)"
+    },
+    "duration": {
+      "type": "string",
+      "description": "Как давно беспокоит"
+    },
+    "intensity": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "Интенсивность боли (1-10)"
+    },
+    "onset": {
+      "type": "string",
+      "description": "Когда и как началось"
+    },
+    "triggers": {
+      "type": "string",
+      "description": "Что усиливает боль/дискомфорт"
+    },
+    "relievers": {
+      "type": "string",
+      "description": "Что облегчает состояние"
+    },
+    "temperature": {
+      "type": "boolean",
+      "description": "Повышенная температура"
+    },
+    "swelling": {
+      "type": "boolean",
+      "description": "Отёк"
+    },
+    "bleeding": {
+      "type": "boolean",
+      "description": "Кровоточивость"
+    },
+    "allergies": {
+      "type": "string",
+      "description": "Аллергии"
+    },
+    "chronic_conditions": {
+      "type": "string",
+      "description": "Хронические заболевания"
+    },
+    "medications": {
+      "type": "string",
+      "description": "Текущие препараты"
+    },
+    "pregnancy": {
+      "type": "boolean",
+      "description": "Беременность"
+    },
+    "red_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Красные флаги (требующие срочного внимания)"
+    },
+    "urgency": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "emergency"
+      ],
+      "description": "Срочность"
+    },
+    "desired_outcome": {
+      "type": "string",
+      "description": "Желаемый результат (для эстетики)"
+    },
+    "last_visit": {
+      "type": "string",
+      "description": "Дата последнего визита"
+    },
+    "bite_issues": {
+      "type": "string",
+      "description": "Проблемы с прикусом"
+    },
+    "previous_treatment": {
+      "type": "string",
+      "description": "Предыдущее лечение"
+    },
+    "budget_range": {
+      "type": "string",
+      "description": "Бюджет"
+    },
+    "previous_ortho": {
+      "type": "string",
+      "description": "Предыдущее ортодонтическое лечение"
+    },
+    "caries_history": {
+      "type": "string",
+      "description": "История кариеса"
+    }
+  },
+  "required": [
+    "complaint_type",
+    "chief_complaint"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "complaint_type": {
+            "const": "acute_pain"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "localization",
+          "duration",
+          "intensity",
+          "onset",
+          "triggers"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "complaint_type": {
+            "const": "chronic_pain"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "localization",
+          "duration",
+          "intensity",
+          "onset",
+          "relievers"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "complaint_type": {
+            "const": "esthetics"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "localization",
+          "desired_outcome"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "complaint_type": {
+            "const": "ortho"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "localization",
+          "bite_issues"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "complaint_type": {
+            "const": "therapy"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "localization",
+          "last_visit"
+        ]
+      }
+    }
+  ]
+}

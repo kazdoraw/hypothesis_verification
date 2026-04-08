@@ -1,0 +1,542 @@
+# D4 Golden Samples: FAQ запросы с ожидаемыми результатами
+# Категории: clinic_info, doctor_search, specialization, not_found
+# Сложность для keyword matching: easy (прямое слово), medium (синоним), hard (парафраза)
+#
+# Источники данных:
+#   clinic_info.yaml: адрес, часы, контакты, седация, рассрочка, дети
+#   doctors.yaml: 22 врача, 5 специализаций
+
+samples:
+
+  # =========================================================================
+  # CLINIC INFO — адрес (6 запросов)
+  # =========================================================================
+  - id: "ci_addr_1"
+    query: "Где находится клиника?"
+    category: "clinic_info"
+    subcategory: "address"
+    difficulty: "easy"
+    expected_answer_contains: ["Ульяновск", "Рябикова"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_addr_2"
+    query: "Подскажите адрес"
+    category: "clinic_info"
+    subcategory: "address"
+    difficulty: "easy"
+    expected_answer_contains: ["Рябикова", "56"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_addr_3"
+    query: "Как к вам приехать?"
+    category: "clinic_info"
+    subcategory: "address"
+    difficulty: "hard"
+    expected_answer_contains: ["Ульяновск", "Рябикова"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_addr_4"
+    query: "В каком городе вы работаете?"
+    category: "clinic_info"
+    subcategory: "address"
+    difficulty: "hard"
+    expected_answer_contains: ["Ульяновск"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — часы работы (4 запроса)
+  # =========================================================================
+  - id: "ci_hours_1"
+    query: "Во сколько вы работаете?"
+    category: "clinic_info"
+    subcategory: "hours"
+    difficulty: "medium"
+    expected_answer_contains: ["08:00", "20:00"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_hours_2"
+    query: "Какой у вас график?"
+    category: "clinic_info"
+    subcategory: "hours"
+    difficulty: "easy"
+    expected_answer_contains: ["08:00", "20:00"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_hours_3"
+    query: "Вы по выходным принимаете?"
+    category: "clinic_info"
+    subcategory: "hours"
+    difficulty: "hard"
+    expected_answer_contains: ["ежедневно"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_hours_4"
+    query: "Можно прийти в воскресенье?"
+    category: "clinic_info"
+    subcategory: "hours"
+    difficulty: "hard"
+    expected_answer_contains: ["ежедневно"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — контакты (3 запроса)
+  # =========================================================================
+  - id: "ci_phone_1"
+    query: "Какой у вас телефон?"
+    category: "clinic_info"
+    subcategory: "contacts"
+    difficulty: "easy"
+    expected_answer_contains: ["231-45-55"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_phone_2"
+    query: "Как с вами связаться?"
+    category: "clinic_info"
+    subcategory: "contacts"
+    difficulty: "medium"
+    expected_answer_contains: ["231-45-55"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_phone_3"
+    query: "Дайте номер для записи"
+    category: "clinic_info"
+    subcategory: "contacts"
+    difficulty: "hard"
+    expected_answer_contains: ["231-45-55"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — седация (3 запроса)
+  # =========================================================================
+  - id: "ci_sed_1"
+    query: "Можно лечить зубы под наркозом?"
+    category: "clinic_info"
+    subcategory: "sedation"
+    difficulty: "easy"
+    expected_answer_contains: ["седация", "во сне"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_sed_2"
+    query: "Я очень боюсь стоматологов, что делать?"
+    category: "clinic_info"
+    subcategory: "sedation"
+    difficulty: "medium"
+    expected_answer_contains: ["седация", "закись азота"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_sed_3"
+    query: "Есть ли лечение во сне для ребенка?"
+    category: "clinic_info"
+    subcategory: "sedation"
+    difficulty: "medium"
+    expected_answer_contains: ["седация", "закись азота"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — рассрочка (3 запроса)
+  # =========================================================================
+  - id: "ci_fin_1"
+    query: "Есть ли рассрочка на лечение?"
+    category: "clinic_info"
+    subcategory: "financing"
+    difficulty: "easy"
+    expected_answer_contains: ["рассрочка", "беспроцентная"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_fin_2"
+    query: "Можно заплатить частями?"
+    category: "clinic_info"
+    subcategory: "financing"
+    difficulty: "hard"
+    expected_answer_contains: ["рассрочка"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_fin_3"
+    query: "Какие варианты оплаты?"
+    category: "clinic_info"
+    subcategory: "financing"
+    difficulty: "medium"
+    expected_answer_contains: ["рассрочка"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — дети (2 запроса)
+  # =========================================================================
+  - id: "ci_child_1"
+    query: "Вы принимаете детей?"
+    category: "clinic_info"
+    subcategory: "children"
+    difficulty: "easy"
+    expected_answer_contains: ["дет"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_child_2"
+    query: "С какого возраста можно привести ребенка?"
+    category: "clinic_info"
+    subcategory: "children"
+    difficulty: "hard"
+    expected_answer_contains: ["дет", "семейная"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # CLINIC INFO — не покрытые категории (4 запроса)
+  # =========================================================================
+  - id: "ci_lic_1"
+    query: "Есть ли у вас лицензия?"
+    category: "clinic_info"
+    subcategory: "licenses"
+    difficulty: "hard"
+    expected_answer_contains: ["лицензи"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_doc_1"
+    query: "Какие документы нужны для приёма?"
+    category: "clinic_info"
+    subcategory: "documents"
+    difficulty: "hard"
+    expected_answer_contains: ["договор", "согласие"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_about_1"
+    query: "Расскажите о вашей клинике"
+    category: "clinic_info"
+    subcategory: "summary"
+    difficulty: "hard"
+    expected_answer_contains: ["Клевер", "семейная"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "ci_nadzor_1"
+    query: "Кто контролирует вашу деятельность?"
+    category: "clinic_info"
+    subcategory: "supervisory"
+    difficulty: "hard"
+    expected_answer_contains: ["Росздравнадзор"]
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # DOCTOR SEARCH — по фамилии (8 запросов)
+  # =========================================================================
+  - id: "doc_name_1"
+    query: "Хочу записаться к Батылину"
+    category: "doctor_search"
+    subcategory: "surname_dative"
+    difficulty: "easy"
+    expected_answer_contains: ["Батылин"]
+    expected_doctor: "Батылин Александр Александрович"
+    expected_specialization: "Хирургическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "doc_name_2"
+    query: "Ермаков у вас работает?"
+    category: "doctor_search"
+    subcategory: "surname_nominative"
+    difficulty: "easy"
+    expected_answer_contains: ["Ермаков"]
+    expected_doctor: "Ермаков Александр Владимирович"
+    expected_specialization: "Ортодонтия"
+    expected_suggest_booking: true
+
+  - id: "doc_name_3"
+    query: "Запишите к Конновской"
+    category: "doctor_search"
+    subcategory: "surname_dative"
+    difficulty: "easy"
+    expected_answer_contains: ["Конновская"]
+    expected_doctor: "Конновская Алена Евгеньевна"
+    expected_specialization: "Детская стоматология"
+    expected_suggest_booking: true
+
+  - id: "doc_name_4"
+    query: "Кто такой Булатов?"
+    category: "doctor_search"
+    subcategory: "surname_question"
+    difficulty: "medium"
+    expected_answer_contains: ["Булатов", "Ортопедическая"]
+    expected_doctor: "Булатов Руслан Тальгатович"
+    expected_specialization: "Ортопедическая стоматология"
+    expected_suggest_booking: false
+
+  - id: "doc_name_5"
+    query: "Хочу к Абраамян"
+    category: "doctor_search"
+    subcategory: "surname_dative"
+    difficulty: "easy"
+    expected_answer_contains: ["Абраамян"]
+    expected_doctor: "Абраамян Андела Корюновна"
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "doc_name_6"
+    query: "Живора принимает сегодня?"
+    category: "doctor_search"
+    subcategory: "surname_question"
+    difficulty: "medium"
+    expected_answer_contains: ["Живора"]
+    expected_doctor: "Живора Инна Григорьевна"
+    expected_specialization: "Ортодонтия"
+    expected_suggest_booking: true
+
+  - id: "doc_name_7"
+    query: "Мне нужен Заволжский"
+    category: "doctor_search"
+    subcategory: "surname_nominative"
+    difficulty: "easy"
+    expected_answer_contains: ["Заволжский"]
+    expected_doctor: "Заволжский Александр Михайлович"
+    expected_specialization: "Хирургическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "doc_name_8"
+    query: "Запишите меня к доктору Васильевой"
+    category: "doctor_search"
+    subcategory: "surname_dative"
+    difficulty: "easy"
+    expected_answer_contains: ["Васильева"]
+    expected_doctor: "Васильева Елена Владимировна"
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  # =========================================================================
+  # SPECIALIZATION — по жалобе/запросу (12 запросов)
+  # =========================================================================
+  - id: "spec_surg_1"
+    query: "У меня болит зуб мудрости"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "medium"
+    expected_answer_contains: ["хирург"]
+    expected_doctor: null
+    expected_specialization: "Хирургическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_surg_2"
+    query: "Хочу поставить имплант"
+    category: "specialization"
+    subcategory: "service"
+    difficulty: "medium"
+    expected_answer_contains: ["Хирургическ"]
+    expected_doctor: null
+    expected_specialization: "Хирургическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_ther_1"
+    query: "Откололся кусочек зуба"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "medium"
+    expected_answer_contains: ["терапевт"]
+    expected_doctor: null
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_ther_2"
+    query: "Хочу убрать зубной камень"
+    category: "specialization"
+    subcategory: "service"
+    difficulty: "medium"
+    expected_answer_contains: ["терапевт"]
+    expected_doctor: null
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_ortho_1"
+    query: "У меня кривые зубы"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "medium"
+    expected_answer_contains: ["ортодонт"]
+    expected_doctor: null
+    expected_specialization: "Ортодонтия"
+    expected_suggest_booking: true
+
+  - id: "spec_ortho_2"
+    query: "Хочу поставить брекеты"
+    category: "specialization"
+    subcategory: "service"
+    difficulty: "hard"
+    expected_answer_contains: ["ортодонт"]
+    expected_doctor: null
+    expected_specialization: "Ортодонтия"
+    expected_suggest_booking: true
+
+  - id: "spec_child_1"
+    query: "У ребенка болит зуб"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "easy"
+    expected_answer_contains: ["дет"]
+    expected_doctor: null
+    expected_specialization: "Детская стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_prosth_1"
+    query: "Мне нечем жевать, нужна коронка"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "medium"
+    expected_answer_contains: ["ортопед"]
+    expected_doctor: null
+    expected_specialization: "Ортопедическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_prosth_2"
+    query: "У меня слетела коронка"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "hard"
+    expected_answer_contains: ["ортопед"]
+    expected_doctor: null
+    expected_specialization: "Ортопедическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_para_1"
+    query: "Кровоточат десны при чистке"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "hard"
+    expected_answer_contains: ["терапевт"]
+    expected_doctor: null
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  - id: "spec_gen_1"
+    query: "Щелкает челюсть когда жую"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "hard"
+    expected_answer_contains: ["ортодонт"]
+    expected_doctor: null
+    expected_specialization: "Ортодонтия"
+    expected_suggest_booking: true
+
+  - id: "spec_gen_2"
+    query: "Неприятный запах изо рта, что делать?"
+    category: "specialization"
+    subcategory: "complaint"
+    difficulty: "hard"
+    expected_answer_contains: ["терапевт"]
+    expected_doctor: null
+    expected_specialization: "Терапевтическая стоматология"
+    expected_suggest_booking: true
+
+  # =========================================================================
+  # NOT FOUND / EDGE CASES (5 запросов)
+  # =========================================================================
+  - id: "nf_1"
+    query: "Сколько стоит имплант?"
+    category: "not_found"
+    subcategory: "price"
+    difficulty: "hard"
+    expected_answer_contains: []
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: true
+
+  - id: "nf_2"
+    query: "Есть ли у вас акции?"
+    category: "not_found"
+    subcategory: "promo"
+    difficulty: "hard"
+    expected_answer_contains: []
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "nf_3"
+    query: "Работает ли у вас доктор Сидоров?"
+    category: "not_found"
+    subcategory: "unknown_doctor"
+    difficulty: "easy"
+    expected_answer_contains: []
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "nf_4"
+    query: "Можно ли оплатить картой?"
+    category: "not_found"
+    subcategory: "payment"
+    difficulty: "hard"
+    expected_answer_contains: []
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  - id: "nf_5"
+    query: "Есть ли парковка?"
+    category: "not_found"
+    subcategory: "infrastructure"
+    difficulty: "hard"
+    expected_answer_contains: []
+    expected_doctor: null
+    expected_specialization: null
+    expected_suggest_booking: false
+
+  # =========================================================================
+  # MIXED / PARAPHRASE (2 запроса для доведения до 50)
+  # =========================================================================
+  - id: "mix_1"
+    query: "У ребёнка шатается молочный зуб, это нормально? И до скольки вы работаете?"
+    category: "clinic_info"
+    subcategory: "mixed"
+    difficulty: "hard"
+    expected_answer_contains: ["20:00"]
+    expected_doctor: null
+    expected_specialization: "Детская стоматология"
+    expected_suggest_booking: false
+
+  - id: "mix_2"
+    query: "Мигачёв — хороший хирург? Какой у него опыт?"
+    category: "doctor_search"
+    subcategory: "surname_question"
+    difficulty: "medium"
+    expected_answer_contains: ["Мигачёв", "Хирургическая"]
+    expected_doctor: "Мигачёв Алексей Сергеевич"
+    expected_specialization: "Хирургическая стоматология"
+    expected_suggest_booking: false

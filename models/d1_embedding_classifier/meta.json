@@ -1,0 +1,19 @@
+{
+  "model_name": "cointegrated/rubert-tiny2",
+  "classifier_type": "logistic",
+  "classifier_params": {
+    "max_iter": 1000,
+    "C": 10.0,
+    "class_weight": "balanced"
+  },
+  "classes": [
+    "booking",
+    "clinic_faq",
+    "complaint_primary",
+    "followup_question",
+    "other",
+    "price_question",
+    "reschedule_cancel",
+    "visit_recommendations"
+  ]
+}

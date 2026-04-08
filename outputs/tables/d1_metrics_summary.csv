@@ -1,0 +1,3 @@
+Approach,Intent_Accuracy,Intent_Macro_F1,Intent_Weighted_F1,Scenario_Accuracy,Scenario_Macro_F1,LLM_Calls,Total_Tokens
+Baseline A (LLM),0.875,0.8688,0.8688,0.9583,0.9614,24,4728
+Proposed B (Rule+ML),0.8333,0.8254,0.8254,0.9167,0.8979,0,0

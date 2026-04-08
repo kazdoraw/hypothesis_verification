@@ -1,0 +1,109 @@
+clinic:
+  id: "dentklever"
+  name: "Семейная клиника «Клевер»"
+  brand_name: "Клевер"
+
+  website:
+    base_url: "https://dentklever.ru"
+    pages:
+      clinic: "https://dentklever.ru/klinika/"
+      contacts: "https://dentklever.ru/contacts/"
+      services: "https://dentklever.ru/services/"
+      prices: "https://dentklever.ru/price/"
+      faq: "https://dentklever.ru/faq/"
+      documents: "https://dentklever.ru/documents/"
+      licenses: "https://dentklever.ru/licenses/"
+      requisites: "https://dentklever.ru/klinika/requisites/"
+      supervisory_bodies: "https://dentklever.ru/klinika/nadzornye-organy/"
+
+  summary:
+    description: >
+      Современное и уютное медицинское учреждение, специализирующееся на
+      предоставлении высококачественных медицинских и стоматологических услуг для
+      всей семьи.
+    key_messages:
+      - "комфортные условия"
+      - "безопасность пациентов"
+      - "современные методы диагностики и лечения"
+
+  location:
+    country: "Россия"
+    city: "Ульяновск"
+    address: "ул. Рябикова, 56"
+
+  contacts:
+    phones:
+      - "+7 (842) 231-45-55"
+      - "+7 (927) 831-45-55"
+    emails:
+      - "klever_dent@mail.ru"
+
+  working_hours:
+    days: "Пн-Вс"
+    open_time: "08:00"
+    close_time: "20:00"
+    schedule_text: "ежедневно с 08:00 до 20:00"
+
+  patient_comfort_and_safety:
+    sedation:
+      dental_sleep: true
+      nitrous_oxide:
+        available: true
+        mixture: "закись азота + кислород"
+        purpose: "снятие страха перед лечением у детей и взрослых"
+
+  children_info:
+    accepted: true
+    min_age: "с первого зуба"
+    note: "3 детских стоматолога в штате"
+
+  financing:
+    installments:
+      available: true
+      type: "беспроцентная рассрочка"
+      months:
+        - 6
+        - 10
+
+  documents:
+    page_url: "https://dentklever.ru/documents/"
+    items:
+      - name: "Договор на оказание стоматологических услуг"
+        url: "https://dentklever.ru/wp-content/uploads/2023/07/dogovor.pdf"
+      - name: "Согласие на обработку персональных данных"
+        url: "https://dentklever.ru/wp-content/uploads/2023/03/soglasie-na-obrabotku-personalnyh-dannyh.pdf"
+      - name: "ИДС — информированное добровольное согласие"
+        url: "https://dentklever.ru/wp-content/uploads/2023/07/ids-informirovannoe-dobrovolnoe-soglasie.pdf"
+      - name: "ИДС РОДИТЕЛЬ — информированное добровольное согласие"
+        url: "https://dentklever.ru/wp-content/uploads/2023/01/ids-roditel-informirovannoe-dobrovolnoe-soglasie-1.pdf"
+      - name: "ИС на проведение анестезиологического пособия"
+        url: "https://dentklever.ru/wp-content/uploads/2023/01/is-na-provedenie-anesteziologicheskogo-posobiya.pdf"
+      - name: "Положение о гарантийном сроке и сроке службы в ООО «Клевер»"
+        url: "https://dentklever.ru/wp-content/uploads/2023/06/polozhenie-o-garantijnom-sroke-i-sroke-sluzhby.pdf"
+      - name: "Анкета здоровья (детская)"
+        url: "https://dentklever.ru/wp-content/uploads/2022/05/anketa-zdorovya-detskaya.pdf"
+      - name: "Анкета здоровья (взрослые)"
+        url: "https://dentklever.ru/wp-content/uploads/2023/01/anketa-zdorovya-vzroslye.pdf"
+
+  licenses:
+    page_url: "https://dentklever.ru/licenses/"
+    items:
+      - name: "Выписка из реестра лицензий (2024-02-22)"
+        url: "https://dentklever.ru/wp-content/uploads/2024/04/vypiska_iz_reestra__klever-_2024-02-22-1.pdf"
+
+  requisites:
+    page_url: "https://dentklever.ru/klinika/requisites/"
+    note: "Реквизиты не извлечены: в доступной выдаче контента страницы видна навигация без полей реквизитов."
+
+  supervisory_bodies:
+    page_url: "https://dentklever.ru/klinika/nadzornye-organy/"
+    items:
+      - name: "Территориальный орган Росздравнадзора по Ульяновской области"
+      - name: "Управление Роспотребнадзора по Ульяновской области"
+      - name: "Министерство здравоохранения РФ"
+
+  faq:
+    page_url: "https://dentklever.ru/faq/"
+    note: "Пары вопрос/ответ не извлечены (в выдаче видна навигация)."
+    items: []
+

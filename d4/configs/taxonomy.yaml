@@ -1,0 +1,227 @@
+# Таксономия FAQ-запросов пациентов стоматологической клиники
+# Создана доменным экспертом (стоматолог-ортопед)
+#
+# Используется для систематической генерации eval set:
+# - Для каждого leaf-типа генерируется 5-10 запросов
+# - Запросы варьируются по стилю (формальный, разговорный, с опечатками)
+
+taxonomy:
+
+  # ===== ФАКТОИДНЫЕ ЗАПРОСЫ (точный ответ из KB) =====
+  factoid:
+    description: "Запросы с единственным правильным ответом (факт из KB)"
+    answerable: true
+    subtypes:
+      address_location:
+        description: "Где находится клиника"
+        examples: ["Где вы находитесь?", "Подскажите адрес", "Как до вас добраться?", "Адрес клиники скиньте"]
+        expected_fields: ["address", "city"]
+        n_queries: 8
+
+      working_hours:
+        description: "Часы работы, расписание"
+        examples: ["До скольки работаете?", "Вы по выходным принимаете?", "В субботу работаете?", "Во сколько открываетесь?"]
+        expected_fields: ["schedule_text"]
+        n_queries: 8
+
+      phone_contact:
+        description: "Телефон, email, способы связи"
+        examples: ["Какой телефон?", "Как позвонить?", "Номер для записи скиньте"]
+        expected_fields: ["phones"]
+        n_queries: 6
+
+      sedation_options:
+        description: "Седация, лечение во сне, закись азота"
+        examples: ["Можно под наркозом?", "Боюсь стоматологов", "Лечите под седацией?"]
+        expected_fields: ["sedation"]
+        n_queries: 6
+
+      financing:
+        description: "Рассрочка, способы оплаты"
+        examples: ["Есть рассрочка?", "Можно в кредит?", "Оплата частями есть?"]
+        expected_fields: ["installments"]
+        n_queries: 5
+
+      children_accepted:
+        description: "Приём детей"
+        examples: ["Принимаете детей?", "С какого возраста?", "Ребёнку 3 года, примете?"]
+        expected_fields: ["children_info"]
+        n_queries: 4
+
+      licenses_documents:
+        description: "Лицензии, документы, сертификаты"
+        examples: ["Есть лицензия?", "Какие документы нужны?", "Что с собой брать на приём?"]
+        expected_fields: ["licenses", "documents"]
+        n_queries: 4
+
+  # ===== ПОИСК ВРАЧА (entity lookup) =====
+  doctor_lookup:
+    description: "Поиск врача по имени или характеристикам"
+    answerable: true
+    subtypes:
+      by_surname_nominative:
+        description: "Поиск по фамилии в именительном падеже"
+        examples:
+          - "Ермаков у вас работает?"
+          - "Есть доктор Батылин?"
+          - "Молгачева у вас принимает?"
+          - "Абраамян работает в клинике?"
+        n_queries: 8
+
+      by_surname_dative:
+        description: "Запись к врачу (дательный падеж)"
+        examples:
+          - "Хочу к Батылину"
+          - "Запишите к Конновской"
+          - "Хочу записаться к Заволжскому"
+          - "Запишите к Сибгатулиной"
+        n_queries: 6
+
+      by_surname_question:
+        description: "Вопрос о враче"
+        examples:
+          - "Кто такой Булатов?"
+          - "Какой опыт у Ермакова?"
+          - "Кто такая Сотникова?"
+          - "Какой стаж у Филькина?"
+        n_queries: 6
+
+      by_specialization_list:
+        description: "Список врачей определённой специализации"
+        examples: ["Кто у вас ортодонт?", "Есть хирурги?", "Какие ортопеды есть?", "Список детских стоматологов"]
+        n_queries: 5
+
+  # ===== МАРШРУТИЗАЦИЯ ПО ЖАЛОБЕ (reasoning) =====
+  complaint_routing:
+    description: "Определение специализации по жалобе/симптому"
+    answerable: true
+    subtypes:
+      surgical:
+        description: "Хирургические: удаление, имплантация, зуб мудрости"
+        expected_specialization: "Хирургическая стоматология"
+        examples: ["Болит зуб мудрости", "Хочу имплант", "Нужно зуб вырвать", "Десна опухла, гной"]
+        n_queries: 6
+
+      therapeutic:
+        description: "Терапевтические: кариес, пломба, камень, боль"
+        expected_specialization: "Терапевтическая стоматология"
+        examples: ["Откололся зуб", "Убрать камень", "Зуб потемнел", "Дырка в зубе"]
+        n_queries: 6
+
+      orthodontic:
+        description: "Ортодонтия: прикус, брекеты, выравнивание"
+        expected_specialization: "Ортодонтия"
+        examples: ["Кривые зубы", "Хочу брекеты", "Исправить прикус"]
+        n_queries: 5
+
+      pediatric:
+        description: "Детская: боль у ребёнка, молочные зубы"
+        expected_specialization: "Детская стоматология"
+        examples: ["У ребёнка болит зуб", "Шатается молочный", "Кариес у ребёнка 5 лет"]
+        n_queries: 5
+
+      prosthetic:
+        description: "Ортопедия: коронки, протезы, виниры"
+        expected_specialization: "Ортопедическая стоматология"
+        examples: ["Слетела коронка", "Нечем жевать", "Нет передних зубов"]
+        n_queries: 5
+
+  # ===== СЛОЖНЫЕ / REASONING =====
+  reasoning:
+    description: "Запросы, требующие объединения нескольких фактов из KB"
+    answerable: true
+    subtypes:
+      multi_fact:
+        description: "Запрос, требующий данных из разных частей KB"
+        examples: ["Кто из хирургов самый опытный?", "Есть ли детский стоматолог с опытом >10 лет?", "Какой терапевт с наибольшим стажем?"]
+        n_queries: 5
+
+      conditional:
+        description: "Условные запросы"
+        examples: ["Если болит при жевании, к кому идти?", "К какому врачу если ребёнку нужны брекеты?", "Куда обратиться если десна кровоточит?"]
+        n_queries: 5
+
+      comparison:
+        description: "Сравнительные запросы"
+        examples: ["Чем терапевт отличается от ортопеда?", "Какой хирург опытнее?", "Кто лучше для виниров — ортопед или терапевт?"]
+        n_queries: 4
+
+  # ===== ЗАПРОСЫ О ЦЕНАХ =====
+  pricing:
+    description: "Запросы о стоимости услуг клиники"
+    answerable: true
+    subtypes:
+      specific_service:
+        description: "Цена конкретной услуги"
+        examples: ["Сколько стоит имплант?", "Цена удаления зуба мудрости", "Почём удаление?", "Стоимость виниров"]
+        expected_fields: ["price"]
+        n_queries: 8
+
+      category_overview:
+        description: "Обзор цен по направлению"
+        examples: ["Сколько стоят брекеты?", "Прайс на протезирование", "Цены на детскую стоматологию"]
+        expected_fields: ["price"]
+        n_queries: 6
+
+      consultation_cost:
+        description: "Стоимость первичного приёма / консультации"
+        examples: ["Сколько стоит консультация?", "Цена осмотра ребёнка", "Первичный осмотр платный?"]
+        expected_fields: ["price"]
+        n_queries: 5
+
+      price_comparison:
+        description: "Сравнение цен между услугами"
+        examples: ["Что дешевле — металлокерамика или цирконий?", "Импланты или протезы что дешевле?", "Керамические брекеты дороже металлических?"]
+        expected_fields: ["price"]
+        n_queries: 3
+
+  # ===== ВНЕ ЗОНЫ ПОКРЫТИЯ =====
+  out_of_scope:
+    description: "Запросы, на которые нет ответа в KB"
+    answerable: false
+    subtypes:
+      promotions:
+        description: "Акции, скидки"
+        examples: ["Есть акции?", "Скидка пенсионерам?", "Есть программа лояльности?"]
+        expected_behavior: "answerable: false; объяснить что информации об акциях нет, предложить позвонить"
+        n_queries: 4
+
+      unknown_doctor:
+        description: "Несуществующий врач"
+        examples: ["Работает ли у вас Иванов?", "Запишите к Петрову", "Принимает ли у вас Козлова?"]
+        expected_behavior: "answerable: false; сообщить что врач не найден в базе, предложить позвонить"
+        n_queries: 4
+
+      wrong_domain:
+        description: "Вопросы не по теме клиники"
+        examples: ["Где ближайшая аптека?", "Какая погода?", "А вы зрение проверяете?"]
+        expected_behavior: "answerable: false; вежливо отказать, клиника не предоставляет эту информацию"
+        n_queries: 4
+
+      ambiguous:
+        description: "Неоднозначные, неполные запросы"
+        examples: ["Мне плохо", "Помогите", "Здравствуйте", "Записаться"]
+        expected_behavior: "answerable: false; предложить уточнить вопрос или позвонить"
+        n_queries: 4
+
+# Стили генерации запросов (для вариативности)
+query_styles:
+  - id: "formal"
+    description: "Формальный, грамотный вопрос"
+    weight: 0.2
+
+  - id: "casual"
+    description: "Разговорный стиль, как в Telegram"
+    weight: 0.3
+
+  - id: "typo"
+    description: "С опечатками и ошибками"
+    weight: 0.2
+
+  - id: "incomplete"
+    description: "Неполное предложение, без знаков препинания"
+    weight: 0.15
+
+  - id: "indirect"
+    description: "Косвенный вопрос, не прямой"
+    weight: 0.15

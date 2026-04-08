@@ -1,0 +1,5 @@
+Approach,Accuracy,Macro F1,Weighted F1,LLM Calls,Tokens
+Baseline A (LLM),0.65,0.6208,0.6374,100,21037
+B1: TF-IDF + GridSearch,0.9153,0.9164,0.915,0,0
+B2: Sentence-Transformers,0.9322,0.9323,0.9312,0,0
+B4: Cascade (Rule+ML+LLM),0.8983,0.8967,0.8989,8,800

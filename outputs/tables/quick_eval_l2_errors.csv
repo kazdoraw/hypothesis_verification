@@ -1,0 +1,5 @@
+id,text,gold,pred,confidence,source,complexity
+21,А если после лечения боль не пройдет?,followup,negative_quality,0.8462815375180972,,
+22,Что лучше выбрать: брекеты или элайнеры?,followup,procedure,0.7419740545501362,,
+27,Администратор разговаривал очень грубо,negative_staff,positive_service,0.6200689117264757,,
+33,"Лечение помогло, зуб больше не болит",positive_quality,negative_general,0.3636535713099015,,

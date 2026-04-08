@@ -1,0 +1,5 @@
+schema,schema_name,strategy,n_cases,avg_completion_rate,std_completion_rate,avg_turns,std_turns,expert_sufficient_rate,complete_count,cooperation_rate
+SD-1,Universal 4,B1 (Deterministic SM + Regex),10,0.95,0.15,2.9,0.3,0.9,9,0.9
+SD-2,Type-specific,B1 (Deterministic SM + Regex),10,1.0,0.0,3.5,1.5,1.0,10,0.9
+SD-3,Adaptive,B1 (Deterministic SM + Regex),10,0.9400000000000001,0.18,4.8,1.32664991614216,0.9,9,0.9
+SD-4,Flat Extended 8,B1 (Deterministic SM + Regex),10,0.925,0.225,6.5,1.5,0.9,9,0.9

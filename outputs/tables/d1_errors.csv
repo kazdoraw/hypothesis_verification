@@ -1,0 +1,9 @@
+text,true,pred
+Подходит ли для детей.,followup_question,clinic_faq
+Какой срок службы коронки!,followup_question,price_question
+Во сколько открываетесь?,clinic_faq,followup_question
+Нужна ли подготовка,followup_question,visit_recommendations
+Какой график работы?,clinic_faq,followup_question
+Подходит ли для детей,followup_question,clinic_faq
+Есть ли приём в субботу?,booking,clinic_faq
+как чистить зубы с винирами.,visit_recommendations,complaint_primary

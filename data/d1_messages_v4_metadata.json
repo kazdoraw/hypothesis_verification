@@ -1,0 +1,42 @@
+{
+  "total_samples": 10000,
+  "l1_distribution": {
+    "conversational": 2500,
+    "faq": 2500,
+    "negative_feedback": 2000,
+    "booking": 1500,
+    "anamnesis": 1500
+  },
+  "l2_distribution": {
+    "gratitude": 500,
+    "greeting": 500,
+    "visit_prep": 500,
+    "procedure": 500,
+    "complaint": 500,
+    "followup": 500,
+    "staff": 500,
+    "confirmation": 500,
+    "price": 500,
+    "services": 500,
+    "general": 500,
+    "farewell": 500,
+    "clinic_info": 500,
+    "service_issue": 500,
+    "quality": 500,
+    "reschedule": 500,
+    "symptom": 500,
+    "new_appointment": 500,
+    "unclear": 500,
+    "cancel": 500
+  },
+  "source_distribution": {
+    "augmented": 8428,
+    "variation": 1110,
+    "template": 462
+  },
+  "complexity_distribution": {
+    "simple": 6414,
+    "complex": 2646,
+    "medium": 940
+  }
+}
