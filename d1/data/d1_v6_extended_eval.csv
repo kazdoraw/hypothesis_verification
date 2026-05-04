@@ -1,0 +1,102 @@
+id,text,route_domain,subtype,explicit_booking,urgency,is_offtopic,specialization_hint,feedback_flag,faq_category,style,source,seed_id
+seed_134,Принимаете по ДМС?,faq,price,False,normal,False,,False,,,seed,seed_134
+seed_158,Есть налоговый вычет за лечение?,faq,clinic_info,False,normal,False,,False,,,seed,seed_158
+seed_159,Даёте справку для налоговой?,faq,clinic_info,False,normal,False,,False,,,seed,seed_159
+seed_160,Есть программа лояльности?,faq,clinic_info,False,normal,False,,False,,,seed,seed_160
+seed_161,Акции есть?,faq,clinic_info,False,normal,False,,False,,,seed,seed_161
+seed_167,Кто ваш лучший ортодонт?,faq,doctor_info,False,normal,False,,False,,,seed,seed_167
+seed_175,Кто самый опытный врач?,faq,doctor_info,False,normal,False,,False,,,seed,seed_175
+seed_188,У кого больше всего отзывов?,faq,doctor_info,False,normal,False,,False,,,seed,seed_188
+seed_192,Хочу к женщине-стоматологу,faq,doctor_info,False,normal,False,,False,,,seed,seed_192
+seed_242,Можно ли записаться онлайн?,faq,clinic_info,False,normal,False,,False,,,seed,seed_242
+seed_249,Записываете первичных?,faq,clinic_info,False,normal,False,,False,,,seed,seed_249
+var_seed_175_79651b,кто опытней всех,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_175
+var_seed_175_cf6c8b,лучший доктор у вас,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_175
+var_seed_175_9d7f83,ребёнку 5 лет зубки болеть начал к кому опытному детскому,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_175
+var_seed_175_cae135,муж зуб боится лечить посоветуйте самого опытного стоматолога,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_175
+var_seed_175_f94d13,давно не чистили зубы на работе некогда кто с большим стажем,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_175
+var_seed_175_64453f,свадьба скоро идеальные зубы нужны к вашему топовому врачу,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_175
+var_seed_175_4b916c,посоветуйте опытного врача,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_175
+var_seed_175_5fc176,кто у вас с большим стажем,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_175
+var_seed_175_b030ce,самый опытный стоматолог какой,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_175
+var_seed_159_74b8cc,справку налоговую даете,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_159
+var_seed_159_a53fab,даёте бумагу для налоговой,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_159
+var_seed_159_c89a7f,лечила зубы у вас чистку делала нужна справка для налогового вычета дадите,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_159
+var_seed_159_315839,пенсионер я пломбу поставили теперь для налоговой справочка нужна выписываете такую,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_159
+var_seed_159_ad914c,отбеливание делал вчера дорого вышло справку для налоговой оформите пожалуйста,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_159
+var_seed_159_c2457e,имплант вставлял у вас для вычета в налоговой нужна ваша справка даёте,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_159
+var_seed_159_95ae17,можно ли у вас взять справку для налоговой,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_159
+var_seed_159_aaa2fb,выдаёте справки для налоговой вычета,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_159
+var_seed_159_497199,нужна справка в налоговую от клиники есть,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_159
+var_seed_134_38dcd0,дмс принимаете?,faq,price,False,normal,False,,False,policy_only,hurried,grok_variation,seed_134
+var_seed_134_916744,по дмс можно?,faq,price,False,normal,False,,False,policy_only,hurried,grok_variation,seed_134
+var_seed_134_f092bb,дмс есть?,faq,price,False,normal,False,,False,policy_only,hurried,grok_variation,seed_134
+var_seed_134_59dcc8,у меня дмс от работы принимаете такие полисы или нет,faq,price,False,normal,False,,False,policy_only,contextual,grok_variation,seed_134
+var_seed_134_4cdfb3,ребёнку зубы лечить по дмс подойдёт у вас или только наличкой,faq,price,False,normal,False,,False,policy_only,contextual,grok_variation,seed_134
+var_seed_134_7c8de9,на пенсии дмс дали интересно принимаете вы их для осмотра,faq,price,False,normal,False,,False,policy_only,contextual,grok_variation,seed_134
+var_seed_134_441d19,мужа отправляют по дмс к вам чё нужно принести полис,faq,price,False,normal,False,,False,policy_only,contextual,grok_variation,seed_134
+var_seed_134_0dc85d,принимаете дмс полисы?,faq,price,False,normal,False,,False,policy_only,normal,grok_variation,seed_134
+var_seed_134_d23d1b,работает дмс у вас?,faq,price,False,normal,False,,False,policy_only,normal,grok_variation,seed_134
+var_seed_158_8b41c8,вычет за лечение зубов есть,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_158
+var_seed_158_611392,налоговый вычет дают,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_158
+var_seed_158_90ade8,возврат налога за пломбы,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_158
+var_seed_158_1b4de1,лечила дочку зубы платно можно ли вычет получить за лечение в клинике,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_158
+var_seed_158_4a8928,мужу имплант ставили дорого а вычет налоговый за такое положен или нет,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_158
+var_seed_158_521c21,в прошлом месяце чистку делал слышал про возврат налогов подскажите как,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_158
+var_seed_158_d4b13e,отбеливание делала у вас а налоговый вычет за косметику дают,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_158
+var_seed_158_211ad6,подскажите про вычет за лечение,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_158
+var_seed_158_905703,налоговый возврат за зубы возможен,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_158
+var_seed_158_693112,есть ли вычет на услуги стоматолога,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_158
+var_seed_160_fdb7f5,програма лояльности есть,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_160
+var_seed_160_cc8995,лояльность программа?,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_160
+var_seed_160_85a9b6,дисконт для своих есть,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_160
+var_seed_160_36a1db,дочке 6 лет часто чистку делаем есть ли программа лояльности чтоб дешевле выходило,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_160
+var_seed_160_f92c53,пенсионер я каждый месяц прихожу зубы лечить программа лояльности у вас какая,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_160
+var_seed_160_47247e,на работе коллеги хвалят вашу лояльность а у вас правда есть такая программа,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_160
+var_seed_160_cae818,семья большая все зубы болят есть программа лояльности для постоянных клиентов,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_160
+var_seed_160_c1c81f,подскажите про программу лояльности,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_160
+var_seed_160_fcb6d0,есть ли лояльность у вас,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_160
+var_seed_161_0bc787,акции чё есть,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_161
+var_seed_161_3c9812,скока акции,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_161
+var_seed_161_ca2751,скидки имеются,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_161
+var_seed_161_7c1a5c,женюсь скоро отбеливание надо акции на него у вас есть сейчас,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_161
+var_seed_161_eb25d6,ребенку 6 лет чистка зубов акции на детскую какая цена,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_161
+var_seed_161_9ec889,пенсионер скидки для нас на камень с зубов какие акции действуют,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_161
+var_seed_161_c4d9a0,на работе весь день акции на вечерний осмотр есть подскажите,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_161
+var_seed_161_dc3be9,какие акции сейчас,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_161
+var_seed_161_0143d8,подскажите про акции,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_161
+var_seed_161_9c0305,есть акции на чистку,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_161
+var_seed_167_bac1a9,лучший ортодонт кто,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_167
+var_seed_167_1cd7b1,ортодонт лучший у вас,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_167
+var_seed_167_710ee4,дочке 12 лет брекеты нужны кто у вас лучший ортодонт сделает красиво,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_167
+var_seed_167_bd967c,на работе посоветовали к ортодонту кто у вас самый опытный по ровным зубам,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_167
+var_seed_167_3a1bb1,читала отзывы про брекеты ваш лучший ортодонт какой чтобы не ошибиться,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_167
+var_seed_167_8b9bcf,жене для улыбки ортодонт нужен посоветуйте лучшего у вас в клинике,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_167
+var_seed_167_71b567,кто лучший ортодонт у вас,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_167
+var_seed_188_30ad82,кто лидер по отзывам,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_188
+var_seed_188_e25233,у кого отзивов топ,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_188
+var_seed_188_43785c,больше отзывов чьих,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_188
+var_seed_188_2ed028,на сайте у вас отзывы читала у какого доктора их больше всего хочу понять кто опытный,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_188
+var_seed_188_97016d,ребёнку 7 лет вести к стоматологу с отзывами кучей у вас кто такой самый популярный,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_188
+var_seed_188_462738,муж боится зубных врачей подскажите кто у вас с наибольшим количеством отзывов чтобы не ошибиться,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_188
+var_seed_188_950d9a,на работе коллеги хвалят клинику а кто доктор с рекордными отзывами посоветуйте такого,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_188
+var_seed_188_1015d3,кто из стоматологов у вас больше отзывов имеет,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_188
+var_seed_188_94580e,подскажите врача с максимумом отзывов,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_188
+var_seed_192_abc9ba,есть женщина стоматолог,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_192
+var_seed_192_352fba,к даме врачу можно,faq,doctor_info,False,normal,False,,False,subjective,hurried,grok_variation,seed_192
+var_seed_192_45ae4c,ребёнку 5 лет боюсь мужиков врачей есть женщина стоматолог,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_192
+var_seed_192_bdd093,мужа отправляю к вам предпочитает даму у вас такая есть,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_192
+var_seed_192_d7ab48,на работе все хвалят женщин стоматологов делаете у себя,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_192
+var_seed_192_e2ea28,старая к тетке ходила теперь хочу к молодой женщине есть ли,faq,doctor_info,False,normal,False,,False,subjective,contextual,grok_variation,seed_192
+var_seed_192_1cdc18,есть женщины стоматологи у вас,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_192
+var_seed_192_caf699,подскажите про женщин врачей,faq,doctor_info,False,normal,False,,False,subjective,normal,grok_variation,seed_192
+var_seed_242_a2d2eb,можно онлайн?,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_242
+var_seed_249_b9b96a,берёте новичков,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_249
+var_seed_249_12bdb0,первичных принимаете,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_249
+var_seed_249_30707b,первых берёте,faq,clinic_info,False,normal,False,,False,policy_only,hurried,grok_variation,seed_249
+var_seed_249_ef5f67,ребёнку первый раз к стоматологу берёте ли таких маленьких первичных,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_249
+var_seed_249_14216b,никогда не лечился в платных клиниках у вас первичку принимаете,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_249
+var_seed_249_3008dc,переехал в город нужен стоматолог берёте ли первичных пациентов,faq,clinic_info,False,normal,False,,False,policy_only,contextual,grok_variation,seed_249
+var_seed_249_3c0583,можно к вам на первый приём,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_249
+var_seed_249_3caf7c,принимаете первичных пациентов,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_249
+var_seed_249_cf3965,берёте ли первых посетителей,faq,clinic_info,False,normal,False,,False,policy_only,normal,grok_variation,seed_249

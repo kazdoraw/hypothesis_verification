@@ -12,12 +12,57 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from transformers import AutoTokenizer
 
 from d4.models import KBChunk
 
-# Токенизатор Qwen3.5 для точного подсчёта токенов (загружается однократно)
-_TOKENIZER = AutoTokenizer.from_pretrained("Qwen/Qwen3.5-35B-A3B")
+# Lazy-загрузка токенизатора с explicit warning при fallback.
+_TOKENIZER = None
+_TOKENIZER_MODEL = "Qwen/Qwen3.5-35B-A3B"
+_TOKENIZER_REVISION: str | None = None
+_TOKENIZER_LOCAL_FILES_ONLY: bool = False
+_FALLBACK_WARNED = False
+
+
+def configure_tokenizer(
+    model: str | None = None,
+    revision: str | None = None,
+    local_files_only: bool = False,
+) -> None:
+    """Устанавливает параметры загрузки токенизатора (из experiment.yaml → factory).
+
+    model: если указан, перезаписывает дефолтный _TOKENIZER_MODEL.
+    Без этого при смене модели в experiment.yaml chunker продолжил бы
+    использовать старый хардкод.
+    """
+    global _TOKENIZER_MODEL, _TOKENIZER_REVISION, _TOKENIZER_LOCAL_FILES_ONLY
+    if model:
+        _TOKENIZER_MODEL = model
+    _TOKENIZER_REVISION = revision
+    _TOKENIZER_LOCAL_FILES_ONLY = local_files_only
+
+
+def _get_tokenizer():
+    """Lazy init токенизатора — загрузка при первом вызове count_tokens()."""
+    global _TOKENIZER, _FALLBACK_WARNED
+    if _TOKENIZER is None:
+        try:
+            from transformers import AutoTokenizer
+            kwargs: dict = {"local_files_only": _TOKENIZER_LOCAL_FILES_ONLY}
+            if _TOKENIZER_REVISION:
+                kwargs["revision"] = _TOKENIZER_REVISION
+            _TOKENIZER = AutoTokenizer.from_pretrained(_TOKENIZER_MODEL, **kwargs)
+        except Exception as exc:
+            import warnings
+            warnings.warn(
+                f"Tokenizer '{_TOKENIZER_MODEL}' недоступен ({exc!r}). "
+                f"Используется fallback len(text.split()) — token counts будут неточны. "
+                f"Это допустимо для тестов, но НЕ для production/eval прогонов.",
+                RuntimeWarning,
+                stacklevel=2,
+            )
+            _TOKENIZER = "fallback"
+            _FALLBACK_WARNED = True
+    return _TOKENIZER
 
 # Секции clinic_info, которые становятся отдельными retrieval units
 CLINIC_SECTION_MAP: dict[str, str] = {
@@ -38,8 +83,11 @@ CLINIC_SECTION_MAP: dict[str, str] = {
 
 
 def count_tokens(text: str) -> int:
-    """Подсчёт токенов в тексте (Qwen3.5 tokenizer)."""
-    return len(_TOKENIZER.encode(text, add_special_tokens=False))
+    """Подсчёт токенов в тексте. Qwen3.5 tokenizer, fallback на word split."""
+    tok = _get_tokenizer()
+    if tok == "fallback":
+        return len(text.split())
+    return len(tok.encode(text, add_special_tokens=False))
 
 
 def _serialize_value(value: Any, indent: int = 0) -> str:
@@ -398,14 +446,68 @@ def chunk_prices(
     return chunks
 
 
+def _load_aftercare_chunks(yaml_path: Path) -> list[KBChunk]:
+    """Загрузка aftercare рекомендаций из YAML → retrieval units.
+
+    1 рекомендация (procedure_type) = 1 chunk.
+    """
+    with open(yaml_path, encoding="utf-8") as f:
+        data = yaml.safe_load(f)
+
+    chunks: list[KBChunk] = []
+    for rec in data.get("recommendations", []):
+        proc = rec["procedure_type"]
+        title = rec.get("title", proc)
+        content = rec.get("content", "")
+        if not content.strip():
+            continue
+
+        chunks.append(KBChunk(
+            id=f"aftercare_{proc}",
+            title=title,
+            content=content,
+            source="aftercare_recommendations.yaml",
+            source_type="aftercare",
+            entity_type="aftercare_recommendation",
+            entity_id=proc,
+            token_count=count_tokens(content),
+            raw_data=rec,
+        ))
+
+    return chunks
+
+
+# Русские названия ценовых категорий для BM25-совместимости
+_PRICE_CATEGORY_LABELS_RU: dict[str, str] = {
+    "Sedation under nitrous oxide (children)": "Седация закисью азота (дети)",
+    "Sedation under nitrous oxide (adults)": "Седация закисью азота (взрослые)",
+    "Treatment under microscope": "Лечение под микроскопом",
+    "Anesthesia": "Анестезия, обезболивание",
+    "Certificates": "Сертификаты",
+    "Orthodontics": "Ортодонтия, брекеты, выравнивание зубов",
+    "ENT": "ЛОР, оториноларингология",
+    "Sedation/Removal in Sleep (children)": "Седация и удаление во сне (дети)",
+    "Maxillofacial surgery (adults)": "Челюстно-лицевая хирургия (взрослые)",
+    "Primary appointment & consultations": "Первичный приём и консультации",
+    "Diagnostics 2D/3D & Viziograf": "Диагностика, рентген, КТ, снимки зубов",
+    "Children therapy": "Детская стоматология, лечение зубов у детей",
+    "Adult therapy": "Терапия, лечение зубов, гигиена полости рта",
+    "Adult surgery (removals)": "Хирургия, удаление зубов",
+    "Implantation": "Имплантация, установка имплантов",
+    "Prosthetics": "Протезирование, коронки, виниры, протезы",
+    "Parodontology": "Пародонтология, лечение дёсен",
+}
+
+
 def load_and_chunk_kb(kb_dir: str | Path) -> list[KBChunk]:
     """Загрузка KB и разбиение на логические retrieval units.
 
     Args:
-        kb_dir: путь к папке с clinic_info.yaml, doctors.yaml и опционально CSV прайса
+        kb_dir: путь к папке с clinic_info.yaml, doctors.yaml,
+                CSV прайса и aftercare_recommendations.yaml
 
     Returns:
-        список KBChunk (clinic секции + прайс + врачи)
+        список KBChunk (clinic секции + прайс + aftercare + врачи)
     """
     kb_path = Path(kb_dir)
 
@@ -421,28 +523,7 @@ def load_and_chunk_kb(kb_dir: str | Path) -> list[KBChunk]:
         doctors_data = yaml.safe_load(f)
     doctor_chunks = chunk_doctors(doctors_data)
 
-    # Прайс-лист CSV (опционально — если файл найден в kb_dir)
-    # Русские названия категорий для BM25-совместимости.
-    # Для другой отрасли — обновить этот маппинг или передать через параметр.
-    _PRICE_CATEGORY_LABELS_RU: dict[str, str] = {
-        "Sedation under nitrous oxide (children)": "Седация закисью азота (дети)",
-        "Sedation under nitrous oxide (adults)": "Седация закисью азота (взрослые)",
-        "Treatment under microscope": "Лечение под микроскопом",
-        "Anesthesia": "Анестезия, обезболивание",
-        "Certificates": "Сертификаты",
-        "Orthodontics": "Ортодонтия, брекеты, выравнивание зубов",
-        "ENT": "ЛОР, оториноларингология",
-        "Sedation/Removal in Sleep (children)": "Седация и удаление во сне (дети)",
-        "Maxillofacial surgery (adults)": "Челюстно-лицевая хирургия (взрослые)",
-        "Primary appointment & consultations": "Первичный приём и консультации",
-        "Diagnostics 2D/3D & Viziograf": "Диагностика, рентген, КТ, снимки зубов",
-        "Children therapy": "Детская стоматология, лечение зубов у детей",
-        "Adult therapy": "Терапия, лечение зубов, гигиена полости рта",
-        "Adult surgery (removals)": "Хирургия, удаление зубов",
-        "Implantation": "Имплантация, установка имплантов",
-        "Prosthetics": "Протезирование, коронки, виниры, протезы",
-        "Parodontology": "Пародонтология, лечение дёсен",
-    }
+    # Прайс-лист CSV (опционально)
     price_chunks: list[KBChunk] = []
     price_files = list(kb_path.glob("*prices*.csv")) + list(kb_path.glob("*price*.csv"))
     if price_files:
@@ -451,7 +532,13 @@ def load_and_chunk_kb(kb_dir: str | Path) -> list[KBChunk]:
             category_labels=_PRICE_CATEGORY_LABELS_RU,
         )
 
-    all_chunks = clinic_chunks + price_chunks + doctor_chunks
+    # Aftercare рекомендации (опционально)
+    aftercare_chunks: list[KBChunk] = []
+    aftercare_path = kb_path / "aftercare_recommendations.yaml"
+    if aftercare_path.exists():
+        aftercare_chunks = _load_aftercare_chunks(aftercare_path)
+
+    all_chunks = clinic_chunks + price_chunks + aftercare_chunks + doctor_chunks
     return all_chunks
 
 
@@ -474,13 +561,20 @@ def load_chunks(chunks_path: str | Path) -> list[KBChunk]:
 def print_chunk_summary(chunks: list[KBChunk]) -> None:
     """Вывод сводки по chunks."""
     total_tokens = sum(c.token_count for c in chunks)
-    clinic_chunks = [c for c in chunks if c.source_type == "clinic_info"]
-    doctor_chunks = [c for c in chunks if c.source_type == "doctors"]
-    price_chunks = [c for c in chunks if c.source_type == "price_list"]
+    by_type = {}
+    for c in chunks:
+        by_type.setdefault(c.source_type, []).append(c)
+
+    labels = {
+        "clinic_info": "секций",
+        "price_list": "категорий",
+        "aftercare": "рекомендаций",
+        "doctors": "врачей",
+    }
 
     print(f"Всего chunks: {len(chunks)}")
-    print(f"  clinic_info: {len(clinic_chunks)} секций")
-    if price_chunks:
-        print(f"  price_list: {len(price_chunks)} категорий")
-    print(f"  doctors: {len(doctor_chunks)} врачей")
+    for st, label in labels.items():
+        if st in by_type:
+            tokens = sum(c.token_count for c in by_type[st])
+            print(f"  {st}: {len(by_type[st])} {label} ({tokens} токенов)")
     print(f"  общий размер: {total_tokens} токенов")

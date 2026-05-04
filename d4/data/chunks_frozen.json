@@ -1,0 +1,2630 @@
+[
+  {
+    "id": "clinic_meta",
+    "title": "Название клиники",
+    "content": "Название клиники: Семейная клиника «Клевер» (Клевер).",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "meta",
+    "token_count": 18,
+    "raw_data": {
+      "id": "dentklever",
+      "name": "Семейная клиника «Клевер»",
+      "brand_name": "Клевер"
+    }
+  },
+  {
+    "id": "clinic_summary",
+    "title": "Общая информация о клинике",
+    "content": "Современное и уютное медицинское учреждение, специализирующееся на предоставлении высококачественных медицинских и стоматологических услуг для всей семьи. Ключевые направления: комфортные условия, безопасность пациентов, современные методы диагностики и лечения.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "summary",
+    "token_count": 53,
+    "raw_data": {
+      "description": "Современное и уютное медицинское учреждение, специализирующееся на предоставлении высококачественных медицинских и стоматологических услуг для всей семьи.\n",
+      "key_messages": [
+        "комфортные условия",
+        "безопасность пациентов",
+        "современные методы диагностики и лечения"
+      ]
+    }
+  },
+  {
+    "id": "clinic_location",
+    "title": "Адрес и местоположение",
+    "content": "Клиника расположена по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "location",
+    "token_count": 25,
+    "raw_data": {
+      "country": "Россия",
+      "city": "Ульяновск",
+      "address": "ул. Рябикова, 56"
+    }
+  },
+  {
+    "id": "clinic_contacts",
+    "title": "Контакты клиники",
+    "content": "Телефоны клиники: +7 (842) 231-45-55, +7 (927) 831-45-55. Email: klever_dent@mail.ru.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "contacts",
+    "token_count": 50,
+    "raw_data": {
+      "phones": [
+        "+7 (842) 231-45-55",
+        "+7 (927) 831-45-55"
+      ],
+      "emails": [
+        "klever_dent@mail.ru"
+      ]
+    }
+  },
+  {
+    "id": "clinic_working_hours",
+    "title": "Режим работы",
+    "content": "Режим работы: ежедневно с 08:00 до 20:00.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "working_hours",
+    "token_count": 20,
+    "raw_data": {
+      "days": "Пн-Вс",
+      "open_time": "08:00",
+      "close_time": "20:00",
+      "schedule_text": "ежедневно с 08:00 до 20:00"
+    }
+  },
+  {
+    "id": "clinic_patient_comfort_and_safety",
+    "title": "Комфорт и безопасность (седация)",
+    "content": "Седация: лечение во сне (dental sleep); закись азота + кислород — снятие страха перед лечением у детей и взрослых.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "patient_comfort_and_safety",
+    "token_count": 31,
+    "raw_data": {
+      "sedation": {
+        "dental_sleep": true,
+        "nitrous_oxide": {
+          "available": true,
+          "mixture": "закись азота + кислород",
+          "purpose": "снятие страха перед лечением у детей и взрослых"
+        }
+      }
+    }
+  },
+  {
+    "id": "clinic_children_info",
+    "title": "Приём детей",
+    "content": "Приём детей: да, с первого зуба. 3 детских стоматолога в штате.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "children_info",
+    "token_count": 20,
+    "raw_data": {
+      "accepted": true,
+      "min_age": "с первого зуба",
+      "note": "3 детских стоматолога в штате"
+    }
+  },
+  {
+    "id": "clinic_financing",
+    "title": "Оплата и рассрочка",
+    "content": "Доступна беспроцентная рассрочка на 6, 10 месяцев.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "financing",
+    "token_count": 21,
+    "raw_data": {
+      "installments": {
+        "available": true,
+        "type": "беспроцентная рассрочка",
+        "months": [
+          6,
+          10
+        ]
+      }
+    }
+  },
+  {
+    "id": "clinic_documents",
+    "title": "Документы для пациентов",
+    "content": "Документы для пациентов: https://dentklever.ru/documents/. Доступные документы: Договор на оказание стоматологических услуг; Согласие на обработку персональных данных; ИДС — информированное добровольное согласие; ИДС РОДИТЕЛЬ — информированное добровольное согласие; ИС на проведение анестезиологического пособия; Положение о гарантийном сроке и сроке службы в ООО «Клевер»; Анкета здоровья (детская); Анкета здоровья (взрослые).",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "documents",
+    "token_count": 110,
+    "raw_data": {
+      "page_url": "https://dentklever.ru/documents/",
+      "items": [
+        {
+          "name": "Договор на оказание стоматологических услуг",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/07/dogovor.pdf"
+        },
+        {
+          "name": "Согласие на обработку персональных данных",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/03/soglasie-na-obrabotku-personalnyh-dannyh.pdf"
+        },
+        {
+          "name": "ИДС — информированное добровольное согласие",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/07/ids-informirovannoe-dobrovolnoe-soglasie.pdf"
+        },
+        {
+          "name": "ИДС РОДИТЕЛЬ — информированное добровольное согласие",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/01/ids-roditel-informirovannoe-dobrovolnoe-soglasie-1.pdf"
+        },
+        {
+          "name": "ИС на проведение анестезиологического пособия",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/01/is-na-provedenie-anesteziologicheskogo-posobiya.pdf"
+        },
+        {
+          "name": "Положение о гарантийном сроке и сроке службы в ООО «Клевер»",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/06/polozhenie-o-garantijnom-sroke-i-sroke-sluzhby.pdf"
+        },
+        {
+          "name": "Анкета здоровья (детская)",
+          "url": "https://dentklever.ru/wp-content/uploads/2022/05/anketa-zdorovya-detskaya.pdf"
+        },
+        {
+          "name": "Анкета здоровья (взрослые)",
+          "url": "https://dentklever.ru/wp-content/uploads/2023/01/anketa-zdorovya-vzroslye.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "clinic_licenses",
+    "title": "Лицензии",
+    "content": "Лицензии клиники: https://dentklever.ru/licenses/. Выписка из реестра лицензий (2024-02-22).",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "licenses",
+    "token_count": 33,
+    "raw_data": {
+      "page_url": "https://dentklever.ru/licenses/",
+      "items": [
+        {
+          "name": "Выписка из реестра лицензий (2024-02-22)",
+          "url": "https://dentklever.ru/wp-content/uploads/2024/04/vypiska_iz_reestra__klever-_2024-02-22-1.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id": "clinic_requisites",
+    "title": "Реквизиты",
+    "content": "Реквизиты клиники: https://dentklever.ru/klinika/requisites/. Реквизиты не извлечены: в доступной выдаче контента страницы видна навигация без полей реквизитов.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "requisites",
+    "token_count": 52,
+    "raw_data": {
+      "page_url": "https://dentklever.ru/klinika/requisites/",
+      "note": "Реквизиты не извлечены: в доступной выдаче контента страницы видна навигация без полей реквизитов."
+    }
+  },
+  {
+    "id": "clinic_supervisory_bodies",
+    "title": "Надзорные органы",
+    "content": "Надзорные органы: https://dentklever.ru/klinika/nadzornye-organy/. Территориальный орган Росздравнадзора по Ульяновской области; Управление Роспотребнадзора по Ульяновской области; Министерство здравоохранения РФ.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "supervisory_bodies",
+    "token_count": 53,
+    "raw_data": {
+      "page_url": "https://dentklever.ru/klinika/nadzornye-organy/",
+      "items": [
+        {
+          "name": "Территориальный орган Росздравнадзора по Ульяновской области"
+        },
+        {
+          "name": "Управление Роспотребнадзора по Ульяновской области"
+        },
+        {
+          "name": "Министерство здравоохранения РФ"
+        }
+      ]
+    }
+  },
+  {
+    "id": "clinic_website",
+    "title": "Сайт клиники",
+    "content": "Сайт клиники: https://dentklever.ru. Страницы: clinic: https://dentklever.ru/klinika/; contacts: https://dentklever.ru/contacts/; services: https://dentklever.ru/services/; prices: https://dentklever.ru/price/; faq: https://dentklever.ru/faq/; documents: https://dentklever.ru/documents/; licenses: https://dentklever.ru/licenses/; requisites: https://dentklever.ru/klinika/requisites/; supervisory_bodies: https://dentklever.ru/klinika/nadzornye-organy/.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "website",
+    "token_count": 136,
+    "raw_data": {
+      "base_url": "https://dentklever.ru",
+      "pages": {
+        "clinic": "https://dentklever.ru/klinika/",
+        "contacts": "https://dentklever.ru/contacts/",
+        "services": "https://dentklever.ru/services/",
+        "prices": "https://dentklever.ru/price/",
+        "faq": "https://dentklever.ru/faq/",
+        "documents": "https://dentklever.ru/documents/",
+        "licenses": "https://dentklever.ru/licenses/",
+        "requisites": "https://dentklever.ru/klinika/requisites/",
+        "supervisory_bodies": "https://dentklever.ru/klinika/nadzornye-organy/"
+      }
+    }
+  },
+  {
+    "id": "clinic_faq",
+    "title": "Часто задаваемые вопросы",
+    "content": "Часто задаваемые вопросы: https://dentklever.ru/faq/.",
+    "source": "clinic_info.yaml",
+    "source_type": "clinic_info",
+    "entity_type": "faq_section",
+    "entity_id": "faq",
+    "token_count": 15,
+    "raw_data": {
+      "page_url": "https://dentklever.ru/faq/",
+      "note": "Пары вопрос/ответ не извлечены (в выдаче видна навигация).",
+      "items": []
+    }
+  },
+  {
+    "id": "price_sedation_under_nitrous_oxide_children",
+    "title": "Цены: Седация закисью азота (дети)",
+    "content": "Прайс-лист: Седация закисью азота (дети).\n- Анестезиологическое обеспечение (седация закисью азота при лечении 1 час) — от 4 000 ₽\n- Анестезиологическое обеспечение (седация закисью азота при удалении зуба до 30 мин) — от 3 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "sedation_under_nitrous_oxide_children",
+    "token_count": 90,
+    "raw_data": {
+      "category": "Sedation under nitrous oxide (children)",
+      "services": [
+        {
+          "Category": "Sedation under nitrous oxide (children)",
+          "Service": "Анестезиологическое обеспечение (седация закисью азота при лечении 1 час)",
+          "Price": "от 4 000 ₽"
+        },
+        {
+          "Category": "Sedation under nitrous oxide (children)",
+          "Service": "Анестезиологическое обеспечение (седация закисью азота при удалении зуба до 30 мин)",
+          "Price": "от 3 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_sedation_under_nitrous_oxide_adults",
+    "title": "Цены: Седация закисью азота (взрослые)",
+    "content": "Прайс-лист: Седация закисью азота (взрослые).\n- Анестезиологическое обеспечение (седация закисью азота при лечении 1 час) — от 7 500 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "sedation_under_nitrous_oxide_adults",
+    "token_count": 54,
+    "raw_data": {
+      "category": "Sedation under nitrous oxide (adults)",
+      "services": [
+        {
+          "Category": "Sedation under nitrous oxide (adults)",
+          "Service": "Анестезиологическое обеспечение (седация закисью азота при лечении 1 час)",
+          "Price": "от 7 500 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_treatment_under_microscope",
+    "title": "Цены: Лечение под микроскопом",
+    "content": "Прайс-лист: Лечение под микроскопом.\n- Лечение глубокого кариеса — от 7 500 ₽\n- Лечение среднего кариеса — от 6 600 ₽\n- Лечение периодонтита — от 9 600 ₽\n- Лечение пульпита — от 6 700 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "treatment_under_microscope",
+    "token_count": 76,
+    "raw_data": {
+      "category": "Treatment under microscope",
+      "services": [
+        {
+          "Category": "Treatment under microscope",
+          "Service": "Лечение глубокого кариеса",
+          "Price": "от 7 500 ₽"
+        },
+        {
+          "Category": "Treatment under microscope",
+          "Service": "Лечение среднего кариеса",
+          "Price": "от 6 600 ₽"
+        },
+        {
+          "Category": "Treatment under microscope",
+          "Service": "Лечение периодонтита",
+          "Price": "от 9 600 ₽"
+        },
+        {
+          "Category": "Treatment under microscope",
+          "Service": "Лечение пульпита",
+          "Price": "от 6 700 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_anesthesia",
+    "title": "Цены: Анестезия, обезболивание",
+    "content": "Прайс-лист: Анестезия, обезболивание.\n- Местная анестезия (1 картридж) — от 590 ₽\n- Проводниковая анестезия — от 490 ₽\n- Аппликационная анестезия — от 220 ₽\n- Аэрозольная анестезия — от 290 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "anesthesia",
+    "token_count": 85,
+    "raw_data": {
+      "category": "Anesthesia",
+      "services": [
+        {
+          "Category": "Anesthesia",
+          "Service": "Местная анестезия (1 картридж)",
+          "Price": "от 590 ₽"
+        },
+        {
+          "Category": "Anesthesia",
+          "Service": "Проводниковая анестезия",
+          "Price": "от 490 ₽"
+        },
+        {
+          "Category": "Anesthesia",
+          "Service": "Аппликационная анестезия",
+          "Price": "от 220 ₽"
+        },
+        {
+          "Category": "Anesthesia",
+          "Service": "Аэрозольная анестезия",
+          "Price": "от 290 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_certificates",
+    "title": "Цены: Сертификаты",
+    "content": "Прайс-лист: Сертификаты.\n- Сертификат на 2000 рублей — 2 000 ₽\n- Сертификат на 3000 рублей — 3 000 ₽\n- Сертификат на 5000 рублей — 5 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "certificates",
+    "token_count": 74,
+    "raw_data": {
+      "category": "Certificates",
+      "services": [
+        {
+          "Category": "Certificates",
+          "Service": "Сертификат на 2000 рублей",
+          "Price": "2 000 ₽"
+        },
+        {
+          "Category": "Certificates",
+          "Service": "Сертификат на 3000 рублей",
+          "Price": "3 000 ₽"
+        },
+        {
+          "Category": "Certificates",
+          "Service": "Сертификат на 5000 рублей",
+          "Price": "5 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_orthodontics_p1",
+    "title": "Цены: Ортодонтия, брекеты, выравнивание зубов (часть 1)",
+    "content": "Прайс-лист: Ортодонтия, брекеты, выравнивание зубов.\n- Ключ ортодонтический — от 500 ₽\n- Определение прикуса — от 700 ₽\n- Исследование на диагностических моделях челюстей. Диагностика будущего результата — от 4 200 ₽\n- Компьютерная диагностика будущего результата ортодонтического лечения (Сетап) — от 20 000 ₽\n- Снятие слепка/изготовление модели (1 челюсть) — от 2 000 ₽\n- Внутриротовое сканирование. Цифровой слепок на сканере ПРАЙМСКАН — от 3 900 ₽\n- Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета — от 1 200 ₽\n- Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета — от 1 200 ₽\n- Коррекция: изготовление прозрачного съемного ретейнера — от 10 000 ₽\n- Коррекция: фиксация несъемного ретейнера — от 4 500 ₽\n- Коррекция: фиксация несъемного ретейнера (1 зуб) — от 1 000 ₽\n- Коррекция: наложение окклюзионной накладки — от 600 ₽\n- Коррекция: обслуживание ортодонтических аппаратов (смена дуг и др.) — от 3 900 ₽\n- Коррекция: снятие и постановка коронки или кольца ортодонтических, снятие коронки по технологии СЛМ — от 1 500 ₽\n- Коррекция: добавление дополнительного винта СЛМ — от 12 000 ₽\n- Коррекция несъемным ортодонтическим аппаратом: лингвальная дуга — от 12 000 ₽\n- Коррекция несъемным ортодонтическим аппаратом: аппарат Гербст — от 90 000 ₽\n- Коррекция несъемным ортодонтическим аппаратом: аппарат Марко Росса/Хаас — от 35 000 ₽\n- Коррекция: местосохраняющее кольцо с распоркой — от 11 000 ₽\n- Коррекция съемным ортодонтическим аппаратом: эластопозиционер — от 18 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "orthodontics_p1",
+    "token_count": 569,
+    "raw_data": {
+      "category": "Orthodontics",
+      "services": [
+        {
+          "Category": "Orthodontics",
+          "Service": "Ключ ортодонтический",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Определение прикуса",
+          "Price": "от 700 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Исследование на диагностических моделях челюстей. Диагностика будущего результата",
+          "Price": "от 4 200 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Компьютерная диагностика будущего результата ортодонтического лечения (Сетап)",
+          "Price": "от 20 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Снятие слепка/изготовление модели (1 челюсть)",
+          "Price": "от 2 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Внутриротовое сканирование. Цифровой слепок на сканере ПРАЙМСКАН",
+          "Price": "от 3 900 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета",
+          "Price": "от 1 200 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета",
+          "Price": "от 1 200 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: изготовление прозрачного съемного ретейнера",
+          "Price": "от 10 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: фиксация несъемного ретейнера",
+          "Price": "от 4 500 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: фиксация несъемного ретейнера (1 зуб)",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: наложение окклюзионной накладки",
+          "Price": "от 600 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: обслуживание ортодонтических аппаратов (смена дуг и др.)",
+          "Price": "от 3 900 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: снятие и постановка коронки или кольца ортодонтических, снятие коронки по технологии СЛМ",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: добавление дополнительного винта СЛМ",
+          "Price": "от 12 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция несъемным ортодонтическим аппаратом: лингвальная дуга",
+          "Price": "от 12 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция несъемным ортодонтическим аппаратом: аппарат Гербст",
+          "Price": "от 90 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция несъемным ортодонтическим аппаратом: аппарат Марко Росса/Хаас",
+          "Price": "от 35 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: местосохраняющее кольцо с распоркой",
+          "Price": "от 11 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция съемным ортодонтическим аппаратом: эластопозиционер",
+          "Price": "от 18 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_orthodontics_p2",
+    "title": "Цены: Ортодонтия, брекеты, выравнивание зубов (часть 2)",
+    "content": "Прайс-лист: Ортодонтия, брекеты, выравнивание зубов.\n- Коррекция: применение капы/сплинта — от 25 000 ₽\n- Коррекция съемным ортодонтическим аппаратом 'Твинблок' — от 28 000 ₽\n- Коррекция съемной ортодонтической пластинкой (с винтом/без) — от 18 000 ₽\n- Коррекция съемным ортодонтическим аппаратом: обводной ретенционный аппарат — от 16 000 ₽\n- Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice) — от 5 000 ₽\n- Брекет-системы: фиксация нового брекета Дэймон Клир — от 9 000 ₽\n- Брекет-система 2х4 — от 45 000 ₽\n- Damon Q (самолигирующаяся металлическая система, 1 челюсть) — от 70 000 ₽\n- Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов) — от 85 000 ₽\n- Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов) — от 140 000 ₽\n- Фиксация на стеклоиномерный цемент — от 1 000 ₽\n- Фиксация на светоотверждаемый цемент — от 1 000 ₽\n- Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов — от 3 500 ₽\n- Снятие и постановка коронки или кольца — от 1 000 ₽\n- Фиксация брекетов с помощью каппы (непрямым методом) — от 5 000 ₽\n- Коррекция с опорой на 2 минивинта — от 80 000 ₽\n- Расширение верхней челюсти с опорой на 4 минивинта — от 100 000 ₽\n- Эластический тяг (эластик) — от 400 ₽\n- Фиксация нового замка — от 2 500 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "orthodontics_p2",
+    "token_count": 539,
+    "raw_data": {
+      "category": "Orthodontics",
+      "services": [
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция: применение капы/сплинта",
+          "Price": "от 25 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция съемным ортодонтическим аппаратом 'Твинблок'",
+          "Price": "от 28 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция съемной ортодонтической пластинкой (с винтом/без)",
+          "Price": "от 18 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция съемным ортодонтическим аппаратом: обводной ретенционный аппарат",
+          "Price": "от 16 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice)",
+          "Price": "от 5 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Брекет-системы: фиксация нового брекета Дэймон Клир",
+          "Price": "от 9 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Брекет-система 2х4",
+          "Price": "от 45 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Damon Q (самолигирующаяся металлическая система, 1 челюсть)",
+          "Price": "от 70 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов)",
+          "Price": "от 85 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов)",
+          "Price": "от 140 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Фиксация на стеклоиномерный цемент",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Фиксация на светоотверждаемый цемент",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов",
+          "Price": "от 3 500 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Снятие и постановка коронки или кольца",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Фиксация брекетов с помощью каппы (непрямым методом)",
+          "Price": "от 5 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Коррекция с опорой на 2 минивинта",
+          "Price": "от 80 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Расширение верхней челюсти с опорой на 4 минивинта",
+          "Price": "от 100 000 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Эластический тяг (эластик)",
+          "Price": "от 400 ₽"
+        },
+        {
+          "Category": "Orthodontics",
+          "Service": "Фиксация нового замка",
+          "Price": "от 2 500 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_ent",
+    "title": "Цены: ЛОР, оториноларингология",
+    "content": "Прайс-лист: ЛОР, оториноларингология.\n- Забор для биопсии — от 5 000 ₽\n- Эндоскопия — от 2 000 ₽\n- Пункция гайморовой пазухи с промыванием и введением лекарства (1 сторона) — от 800 ₽\n- Анемизация слизистой носа — от 290 ₽\n- Промывание околоносовых пазух и носоглотки методом 'кукушка' — от 1 500 ₽\n- Удаление доброкачественных новообразований кожи/носа/глотки — от 4 500 ₽\n- Хейлоринопластика — от 25 000 ₽\n- Увулопластика — от 8 000 ₽\n- Аденоидэктомия — от 13 000 ₽\n- Аденоидэктомия с видеоэндоскопией — от 19 000 ₽\n- Удаление инородного тела из ротоглотки/гортаноглотки/носового хода — от 1 500 ₽\n- Полипэктомия носа — от 5 000 ₽\n- Радиодеструкция нижних носовых раковин с конхопексией — от 4 500 ₽\n- Септопластика — от 17 000 ₽\n- Репозиция костей носа — от 1 000 ₽\n- Гайморотомия — от 7 000 ₽\n- Вскрытие гематомы/абсцесса/кисты ЛОР органов — от 1 000 ₽\n- Устранение рубцов с пластикой местными тканями — от 8 000 ₽\n- Внутриносовая блокада — от 500 ₽\n- Отопластика устранение лопоухости — от 12 000 ₽\n- Устранение/коррекция деформации ушной раковины — от 18 000 ₽\n- Коррекция мочки уха — от 9 000 ₽\n- Парацентез (тимпанотомия) одной стороны — от 1 500 ₽\n- Забор материала на микробиологическое исследование носоглоточных смывов — от 3 500 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "ent",
+    "token_count": 561,
+    "raw_data": {
+      "category": "ENT",
+      "services": [
+        {
+          "Category": "ENT",
+          "Service": "Забор для биопсии",
+          "Price": "от 5 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Эндоскопия",
+          "Price": "от 2 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Пункция гайморовой пазухи с промыванием и введением лекарства (1 сторона)",
+          "Price": "от 800 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Анемизация слизистой носа",
+          "Price": "от 290 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Промывание околоносовых пазух и носоглотки методом 'кукушка'",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Удаление доброкачественных новообразований кожи/носа/глотки",
+          "Price": "от 4 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Хейлоринопластика",
+          "Price": "от 25 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Увулопластика",
+          "Price": "от 8 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Аденоидэктомия",
+          "Price": "от 13 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Аденоидэктомия с видеоэндоскопией",
+          "Price": "от 19 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Удаление инородного тела из ротоглотки/гортаноглотки/носового хода",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Полипэктомия носа",
+          "Price": "от 5 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Радиодеструкция нижних носовых раковин с конхопексией",
+          "Price": "от 4 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Септопластика",
+          "Price": "от 17 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Репозиция костей носа",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Гайморотомия",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Вскрытие гематомы/абсцесса/кисты ЛОР органов",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Устранение рубцов с пластикой местными тканями",
+          "Price": "от 8 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Внутриносовая блокада",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Отопластика устранение лопоухости",
+          "Price": "от 12 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Устранение/коррекция деформации ушной раковины",
+          "Price": "от 18 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Коррекция мочки уха",
+          "Price": "от 9 000 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Парацентез (тимпанотомия) одной стороны",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "ENT",
+          "Service": "Забор материала на микробиологическое исследование носоглоточных смывов",
+          "Price": "от 3 500 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_sedation_removal_in_sleep_children",
+    "title": "Цены: Седация и удаление во сне (дети)",
+    "content": "Прайс-лист: Седация и удаление во сне (дети).\n- Анестезиологическое пособие – седация закисью азота при лечении 1 час — от 4 000 ₽\n- Анестезиологическое пособие – седация закисью азота при удалении зубов до 30 мин — от 3 000 ₽\n- Анестезиологическое пособие – седация при лечении 1 час (дети) — от 10 900 ₽\n- Анестезиологическое пособие – седация до 30 мин (дети) — от 5 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "sedation_removal_in_sleep_children",
+    "token_count": 152,
+    "raw_data": {
+      "category": "Sedation/Removal in Sleep (children)",
+      "services": [
+        {
+          "Category": "Sedation/Removal in Sleep (children)",
+          "Service": "Анестезиологическое пособие – седация закисью азота при лечении 1 час",
+          "Price": "от 4 000 ₽"
+        },
+        {
+          "Category": "Sedation/Removal in Sleep (children)",
+          "Service": "Анестезиологическое пособие – седация закисью азота при удалении зубов до 30 мин",
+          "Price": "от 3 000 ₽"
+        },
+        {
+          "Category": "Sedation/Removal in Sleep (children)",
+          "Service": "Анестезиологическое пособие – седация при лечении 1 час (дети)",
+          "Price": "от 10 900 ₽"
+        },
+        {
+          "Category": "Sedation/Removal in Sleep (children)",
+          "Service": "Анестезиологическое пособие – седация до 30 мин (дети)",
+          "Price": "от 5 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_maxillofacial_surgery_adults",
+    "title": "Цены: Челюстно-лицевая хирургия (взрослые)",
+    "content": "Прайс-лист: Челюстно-лицевая хирургия (взрослые).\n- Забор для биопсии (анализ 511) — от 5 800 ₽\n- Удаление атеромы — от 7 000 ₽\n- Удаление доброкачественных новообразований подкожно-жировой клетчатки — от 7 500 ₽\n- Удаление доброкачественных новообразований лицевых костей с остеотомией — от 12 000 ₽\n- Цистэктомия (удаление кисты) — от 8 000 ₽\n- Пластика уздечки языка — от 7 000 ₽\n- Вестибулопластика — от 11 500 ₽\n- Хейлоринопластика — от 30 000 ₽\n- Устранение дефекта наружного носа (посттравматическая деформация) — от 40 000 ₽\n- Удаление доброкачественных новообразований слизистой полости рта (ретенционные кисты) — от 4 000 ₽\n- Увулопластика — от 8 000 ₽\n- Вейлопластика — от 35 000 ₽\n- Уранопластика — от 45 000 ₽\n- Пластика переднего отдела твердого неба — от 40 000 ₽\n- Удаление боковых кист шеи — от 25 000 ₽\n- Гайморотомия 1 степени сложности — от 7 000 ₽\n- Гайморотомия 2 степени сложности — от 11 600 ₽\n- Коррекция блефарохалязиса двух век (1 категория сложности) — от 30 000 ₽\n- Коррекция блефарохалязиса двух век (2 категория сложности) — от 35 000 ₽\n- Удаление новообразования мягких тканей — от 6 500 ₽\n- Отопластика устранение лопоухости (2 уха) — от 40 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "maxillofacial_surgery_adults",
+    "token_count": 515,
+    "raw_data": {
+      "category": "Maxillofacial surgery (adults)",
+      "services": [
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Забор для биопсии (анализ 511)",
+          "Price": "от 5 800 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление атеромы",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление доброкачественных новообразований подкожно-жировой клетчатки",
+          "Price": "от 7 500 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление доброкачественных новообразований лицевых костей с остеотомией",
+          "Price": "от 12 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Цистэктомия (удаление кисты)",
+          "Price": "от 8 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Пластика уздечки языка",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Вестибулопластика",
+          "Price": "от 11 500 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Хейлоринопластика",
+          "Price": "от 30 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Устранение дефекта наружного носа (посттравматическая деформация)",
+          "Price": "от 40 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление доброкачественных новообразований слизистой полости рта (ретенционные кисты)",
+          "Price": "от 4 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Увулопластика",
+          "Price": "от 8 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Вейлопластика",
+          "Price": "от 35 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Уранопластика",
+          "Price": "от 45 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Пластика переднего отдела твердого неба",
+          "Price": "от 40 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление боковых кист шеи",
+          "Price": "от 25 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Гайморотомия 1 степени сложности",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Гайморотомия 2 степени сложности",
+          "Price": "от 11 600 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Коррекция блефарохалязиса двух век (1 категория сложности)",
+          "Price": "от 30 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Коррекция блефарохалязиса двух век (2 категория сложности)",
+          "Price": "от 35 000 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Удаление новообразования мягких тканей",
+          "Price": "от 6 500 ₽"
+        },
+        {
+          "Category": "Maxillofacial surgery (adults)",
+          "Service": "Отопластика устранение лопоухости (2 уха)",
+          "Price": "от 40 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_primary_appointment_consultations",
+    "title": "Цены: Первичный приём и консультации",
+    "content": "Прайс-лист: Первичный приём и консультации.\n- Прием (осмотр, консультация) врача-ортодонта первичный — от 1 000 ₽\n- Прием (осмотр, консультация) врача-стоматолога детского первичный — от 500 ₽\n- Адаптационный прием (детский стоматолог, 60 мин) — от 1 500 ₽\n- Прием (осмотр, консультация) зубного врача — от 390 ₽\n- Прием (осмотр, консультация) врача-стоматолога терапевта — от 390 ₽\n- Прием (осмотр, консультация) врача-челюстно-лицевого хирурга первичный — от 2 000 ₽\n- Прием (осмотр, консультация) гигиениста стоматологического первичный — от 300 ₽\n- Прием (осмотр, консультация) врача-пародонтолога первичный — от 700 ₽\n- Прием (осмотр, консультация) врача-стоматолога ортопеда первичный — от 500 ₽\n- Прием (осмотр, консультация) врача-стоматолога хирурга первичный — от 500 ₽\n- Прием (осмотр, консультация) врача-имплантолога первичный — от 1 000 ₽\n- Профилактический прием с выдачей справки о санации — от 500 ₽\n- Прием (осмотр, консультация) врача-стоматолога – консилиум первичный — от 1 500 ₽\n- Прием (осмотр, консультация) врача-анестезиолога-реаниматолога первичный — от 1 000 ₽\n- Прием (осмотр, консультация) врача-оториноларинголога первичный — от 2 500 ₽\n- Прием (осмотр, консультация) врача-оториноларинголога повторный — от 2 200 ₽\n- Прием (осмотр, консультация) врача-ортодонта повторный — от 1 000 ₽\n- Прием (осмотр, консультация) врача-стоматолога повторный – консилиум — от 1 000 ₽\n- Прием (осмотр, консультация) врача-челюстно-лицевого хирурга повторный — от 1 000 ₽\n- Прием (осмотр, консультация) врача-стоматолога детского повторный — от 300 ₽\n- Прием (осмотр, консультация) врача-пародонтолога повторный — от 400 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "primary_appointment_consultations",
+    "token_count": 586,
+    "raw_data": {
+      "category": "Primary appointment & consultations",
+      "services": [
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-ортодонта первичный",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога детского первичный",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Адаптационный прием (детский стоматолог, 60 мин)",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) зубного врача",
+          "Price": "от 390 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога терапевта",
+          "Price": "от 390 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-челюстно-лицевого хирурга первичный",
+          "Price": "от 2 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) гигиениста стоматологического первичный",
+          "Price": "от 300 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-пародонтолога первичный",
+          "Price": "от 700 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога ортопеда первичный",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога хирурга первичный",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-имплантолога первичный",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Профилактический прием с выдачей справки о санации",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога – консилиум первичный",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-анестезиолога-реаниматолога первичный",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-оториноларинголога первичный",
+          "Price": "от 2 500 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-оториноларинголога повторный",
+          "Price": "от 2 200 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-ортодонта повторный",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога повторный – консилиум",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-челюстно-лицевого хирурга повторный",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-стоматолога детского повторный",
+          "Price": "от 300 ₽"
+        },
+        {
+          "Category": "Primary appointment & consultations",
+          "Service": "Прием (осмотр, консультация) врача-пародонтолога повторный",
+          "Price": "от 400 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_diagnostics_2d_3d_viziograf",
+    "title": "Цены: Диагностика, рентген, КТ, снимки зубов",
+    "content": "Прайс-лист: Диагностика, рентген, КТ, снимки зубов.\n- Исследование слюнных желез и притоков — от 2 200 ₽\n- КТ верхней конечности 2Д — от 300 ₽\n- КТ височно-нижнечелюстных суставов — от 1 000 ₽\n- КТ сустава (открытый/закрытый рот) 2Д — от 400 ₽\n- КТ сустава (открытый/закрытый рот) 3Д — от 500 ₽\n- КТ затылка (взрослые) — от 390 ₽\n- КТ гайморовых и лобных пазух 2Д — от 400 ₽\n- КТ челюстно-лицевой области (две челюсти + ВНЧС) 16x9 — от 3 800 ₽\n- КТ челюстно-лицевой области (лобных пазух) 3Д — от 600 ₽\n- КТ челюстно-лицевой области (придаточные пазухи носа) — от 2 000 ₽\n- КТ челюстно-лицевой области с захватом гайморовых пазух 3Д — от 1 500 ₽\n- Описание и интерпретация рентгенографических изображений — от 390 ₽\n- Радиовизиография — от 290 ₽\n- Рентгенография височно-нижнечелюстного сустава / цифровая зонография — от 790 ₽\n- Рентгенография гайморовых пазух 2Д — от 500 ₽\n- Рентгенография лобных пазух 2Д — от 300 ₽\n- Рентгенография носоглотки в боковой проекции — от 900 ₽\n- ТРГ (телерентгенография) черепа, боковая проекция по Шюллеру — от 1 200 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "diagnostics_2d_3d_viziograf",
+    "token_count": 472,
+    "raw_data": {
+      "category": "Diagnostics 2D/3D & Viziograf",
+      "services": [
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Исследование слюнных желез и притоков",
+          "Price": "от 2 200 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ верхней конечности 2Д",
+          "Price": "от 300 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ височно-нижнечелюстных суставов",
+          "Price": "от 1 000 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ сустава (открытый/закрытый рот) 2Д",
+          "Price": "от 400 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ сустава (открытый/закрытый рот) 3Д",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ затылка (взрослые)",
+          "Price": "от 390 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ гайморовых и лобных пазух 2Д",
+          "Price": "от 400 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ челюстно-лицевой области (две челюсти + ВНЧС) 16x9",
+          "Price": "от 3 800 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ челюстно-лицевой области (лобных пазух) 3Д",
+          "Price": "от 600 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ челюстно-лицевой области (придаточные пазухи носа)",
+          "Price": "от 2 000 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "КТ челюстно-лицевой области с захватом гайморовых пазух 3Д",
+          "Price": "от 1 500 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Описание и интерпретация рентгенографических изображений",
+          "Price": "от 390 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Радиовизиография",
+          "Price": "от 290 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Рентгенография височно-нижнечелюстного сустава / цифровая зонография",
+          "Price": "от 790 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Рентгенография гайморовых пазух 2Д",
+          "Price": "от 500 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Рентгенография лобных пазух 2Д",
+          "Price": "от 300 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "Рентгенография носоглотки в боковой проекции",
+          "Price": "от 900 ₽"
+        },
+        {
+          "Category": "Diagnostics 2D/3D & Viziograf",
+          "Service": "ТРГ (телерентгенография) черепа, боковая проекция по Шюллеру",
+          "Price": "от 1 200 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_children_therapy",
+    "title": "Цены: Детская стоматология, лечение зубов у детей",
+    "content": "Прайс-лист: Детская стоматология, лечение зубов у детей.\n- Герметизация фиссур 1 зуб — от 1 600 ₽\n- Профессиональная гигиена полости рта (дети) — от 2 500 ₽\n- Фторирование (вся полость рта) — от 2 500 ₽\n- Коронка стальная боковая — от 7 000 ₽\n- Коронка эстетическая — от 10 000 ₽\n- Восстановление зуба пломбой (метод Айкон) — от 4 000 ₽\n- Лечение кариеса молочного зуба с постановкой пломбы — от 4 050 ₽\n- Лечение периодонтита одноканального молочного зуба 1 этап — от 3 800 ₽\n- Лечение периодонтита многоканального молочного зуба 1 этап — от 4 350 ₽\n- Лечение пульпита одноканального молочного зуба 1 этап — от 3 800 ₽\n- Лечение пульпита многоканального молочного зуба 1 этап — от 4 350 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "children_therapy",
+    "token_count": 260,
+    "raw_data": {
+      "category": "Children therapy",
+      "services": [
+        {
+          "Category": "Children therapy",
+          "Service": "Герметизация фиссур 1 зуб",
+          "Price": "от 1 600 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Профессиональная гигиена полости рта (дети)",
+          "Price": "от 2 500 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Фторирование (вся полость рта)",
+          "Price": "от 2 500 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Коронка стальная боковая",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Коронка эстетическая",
+          "Price": "от 10 000 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Восстановление зуба пломбой (метод Айкон)",
+          "Price": "от 4 000 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Лечение кариеса молочного зуба с постановкой пломбы",
+          "Price": "от 4 050 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Лечение периодонтита одноканального молочного зуба 1 этап",
+          "Price": "от 3 800 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Лечение периодонтита многоканального молочного зуба 1 этап",
+          "Price": "от 4 350 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Лечение пульпита одноканального молочного зуба 1 этап",
+          "Price": "от 3 800 ₽"
+        },
+        {
+          "Category": "Children therapy",
+          "Service": "Лечение пульпита многоканального молочного зуба 1 этап",
+          "Price": "от 4 350 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_adult_therapy",
+    "title": "Цены: Терапия, лечение зубов, гигиена полости рта",
+    "content": "Прайс-лист: Терапия, лечение зубов, гигиена полости рта.\n- Художественная реставрация жевательного зуба — от 7 300 ₽\n- Профессиональная гигиена полости рта и зубов (Стандарт) — от 4 500 ₽\n- Профессиональная гигиена полости рта и зубов (Сильный налет) — от 5 500 ₽\n- Фторирование (вся полость рта) — от 2 500 ₽\n- Художественная реставрация фронтального зуба — от 9 300 ₽\n- Восстановление твердых тканей зуба в пределах дентина (1 поверхность) — от 6 500 ₽\n- Лечение периодонтита одноканального зуба 1 этап — от 8 300 ₽\n- Лечение периодонтита двухканального зуба 1 этап — от 9 300 ₽\n- Лечение периодонтита многоканального зуба 1 этап — от 10 300 ₽\n- Постановка пломбы после лечения каналов — от 5 500 ₽\n- Лечение пульпита одноканального зуба 1 этап — от 5 750 ₽\n- Лечение пульпита двухканального зуба 1 этап — от 7 250 ₽\n- Лечение пульпита многоканального зуба 1 этап — от 8 750 ₽\n- Реставрация зуба после эндолечения — от 2 500 ₽\n- Эстетическое контурирование зуба — от 5 700 ₽\n- Герметизация фиссур 1 зуб — от 2 600 ₽\n- Культевое восстановление — от 11 900 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "adult_therapy",
+    "token_count": 390,
+    "raw_data": {
+      "category": "Adult therapy",
+      "services": [
+        {
+          "Category": "Adult therapy",
+          "Service": "Художественная реставрация жевательного зуба",
+          "Price": "от 7 300 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Профессиональная гигиена полости рта и зубов (Стандарт)",
+          "Price": "от 4 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Профессиональная гигиена полости рта и зубов (Сильный налет)",
+          "Price": "от 5 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Фторирование (вся полость рта)",
+          "Price": "от 2 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Художественная реставрация фронтального зуба",
+          "Price": "от 9 300 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Восстановление твердых тканей зуба в пределах дентина (1 поверхность)",
+          "Price": "от 6 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение периодонтита одноканального зуба 1 этап",
+          "Price": "от 8 300 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение периодонтита двухканального зуба 1 этап",
+          "Price": "от 9 300 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение периодонтита многоканального зуба 1 этап",
+          "Price": "от 10 300 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Постановка пломбы после лечения каналов",
+          "Price": "от 5 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение пульпита одноканального зуба 1 этап",
+          "Price": "от 5 750 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение пульпита двухканального зуба 1 этап",
+          "Price": "от 7 250 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Лечение пульпита многоканального зуба 1 этап",
+          "Price": "от 8 750 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Реставрация зуба после эндолечения",
+          "Price": "от 2 500 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Эстетическое контурирование зуба",
+          "Price": "от 5 700 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Герметизация фиссур 1 зуб",
+          "Price": "от 2 600 ₽"
+        },
+        {
+          "Category": "Adult therapy",
+          "Service": "Культевое восстановление",
+          "Price": "от 11 900 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_adult_surgery_removals",
+    "title": "Цены: Хирургия, удаление зубов",
+    "content": "Прайс-лист: Хирургия, удаление зубов.\n- Удаление постоянного зуба — от 6 000 ₽\n- Удаление 8-го зуба (простая операция) — от 4 900 ₽\n- Удаление 8-го зуба (сложная операция) — от 6 900 ₽\n- Удаление импланта, трансплантата — от 5 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "adult_surgery_removals",
+    "token_count": 99,
+    "raw_data": {
+      "category": "Adult surgery (removals)",
+      "services": [
+        {
+          "Category": "Adult surgery (removals)",
+          "Service": "Удаление постоянного зуба",
+          "Price": "от 6 000 ₽"
+        },
+        {
+          "Category": "Adult surgery (removals)",
+          "Service": "Удаление 8-го зуба (простая операция)",
+          "Price": "от 4 900 ₽"
+        },
+        {
+          "Category": "Adult surgery (removals)",
+          "Service": "Удаление 8-го зуба (сложная операция)",
+          "Price": "от 6 900 ₽"
+        },
+        {
+          "Category": "Adult surgery (removals)",
+          "Service": "Удаление импланта, трансплантата",
+          "Price": "от 5 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_implantation",
+    "title": "Цены: Имплантация, установка имплантов",
+    "content": "Прайс-лист: Имплантация, установка имплантов.\n- Установка миниимплантата ортодонтического — от 8 000 ₽\n- Установка имплантатов Все на 4 (Дентиум, Корея) — от 140 000 ₽\n- Установка имплантатов Все на 6 (Дентиум, Корея) — от 250 000 ₽\n- Установка имплантата Дентиум — от 35 000 ₽\n- Установка имплантата Штрауманн — от 65 000 ₽\n- Костная пластика челюстно-лицевой области (1 сложность, без материала) — от 17 000 ₽\n- Остеопластика лунки (без материала) — от 7 000 ₽\n- Открытый/закрытый синус-лифтинг — от 22 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "implantation",
+    "token_count": 214,
+    "raw_data": {
+      "category": "Implantation",
+      "services": [
+        {
+          "Category": "Implantation",
+          "Service": "Установка миниимплантата ортодонтического",
+          "Price": "от 8 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Установка имплантатов Все на 4 (Дентиум, Корея)",
+          "Price": "от 140 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Установка имплантатов Все на 6 (Дентиум, Корея)",
+          "Price": "от 250 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Установка имплантата Дентиум",
+          "Price": "от 35 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Установка имплантата Штрауманн",
+          "Price": "от 65 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Костная пластика челюстно-лицевой области (1 сложность, без материала)",
+          "Price": "от 17 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Остеопластика лунки (без материала)",
+          "Price": "от 7 000 ₽"
+        },
+        {
+          "Category": "Implantation",
+          "Service": "Открытый/закрытый синус-лифтинг",
+          "Price": "от 22 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_prosthetics_p1",
+    "title": "Цены: Протезирование, коронки, виниры, протезы (часть 1)",
+    "content": "Прайс-лист: Протезирование, коронки, виниры, протезы.\n- Винир — от 17 500 ₽\n- Съемный нейлоновый протез — от 30 000 ₽\n- Бюгельный протез — от 50 000 ₽\n- Съемный протез на металле 'Квадротти' (верх без неба) — от 32 000 ₽\n- Полный съемный протез — от 26 000 ₽\n- Временная композитная коронка (прямой метод) — от 2 850 ₽\n- Временная пластмассовая коронка (лаборатория) — от 4 200 ₽\n- Временная металлопластмассовая коронка (облицовка с напылением) — от 10 000 ₽\n- Коронка из диоксида циркония (боковая) — от 17 000 ₽\n- Коронка из диоксида циркония (фронтальная) — от 18 000 ₽\n- Коронка из металлокерамики (боковая) — от 16 000 ₽\n- Коронка из металлокерамики (фронтальная) — от 17 000 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "prosthetics_p1",
+    "token_count": 327,
+    "raw_data": {
+      "category": "Prosthetics",
+      "services": [
+        {
+          "Category": "Prosthetics",
+          "Service": "Винир",
+          "Price": "от 17 500 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Съемный нейлоновый протез",
+          "Price": "от 30 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Бюгельный протез",
+          "Price": "от 50 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Съемный протез на металле 'Квадротти' (верх без неба)",
+          "Price": "от 32 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Полный съемный протез",
+          "Price": "от 26 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Временная композитная коронка (прямой метод)",
+          "Price": "от 2 850 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Временная пластмассовая коронка (лаборатория)",
+          "Price": "от 4 200 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Временная металлопластмассовая коронка (облицовка с напылением)",
+          "Price": "от 10 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка из диоксида циркония (боковая)",
+          "Price": "от 17 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка из диоксида циркония (фронтальная)",
+          "Price": "от 18 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка из металлокерамики (боковая)",
+          "Price": "от 16 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка из металлокерамики (фронтальная)",
+          "Price": "от 17 000 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_prosthetics_p2",
+    "title": "Цены: Протезирование, коронки, виниры, протезы (часть 2)",
+    "content": "Прайс-лист: Протезирование, коронки, виниры, протезы.\n- Цельнокерамическая коронка из диоксида циркония (боковая) — от 18 000 ₽\n- Цельнокерамическая коронка из диоксида циркония (фронтальная) — от 19 000 ₽\n- Протезирование на 4 или 6 имплантатах (акриловый протез) — от 60 000 ₽\n- Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке) — от 400 000 ₽\n- Коронка на имплантате (диоксид циркония) — от 20 000 ₽\n- Коронка на имплантате (металлокерамика) — от 16 000 ₽\n- Временная коронка на имплантате — от 10 000 ₽\n- Снятие слепка/изготовление модели (1 челюсть) — от 2 000 ₽\n- Внутриротовое сканирование (цифровой слепок) на Праймскан — от 3 900 ₽\n- Восстановление зуба пломбировочными материалами с внутриканальным штифтом — от 11 900 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "prosthetics_p2",
+    "token_count": 342,
+    "raw_data": {
+      "category": "Prosthetics",
+      "services": [
+        {
+          "Category": "Prosthetics",
+          "Service": "Цельнокерамическая коронка из диоксида циркония (боковая)",
+          "Price": "от 18 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Цельнокерамическая коронка из диоксида циркония (фронтальная)",
+          "Price": "от 19 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Протезирование на 4 или 6 имплантатах (акриловый протез)",
+          "Price": "от 60 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке)",
+          "Price": "от 400 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка на имплантате (диоксид циркония)",
+          "Price": "от 20 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Коронка на имплантате (металлокерамика)",
+          "Price": "от 16 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Временная коронка на имплантате",
+          "Price": "от 10 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Снятие слепка/изготовление модели (1 челюсть)",
+          "Price": "от 2 000 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Внутриротовое сканирование (цифровой слепок) на Праймскан",
+          "Price": "от 3 900 ₽"
+        },
+        {
+          "Category": "Prosthetics",
+          "Service": "Восстановление зуба пломбировочными материалами с внутриканальным штифтом",
+          "Price": "от 11 900 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "price_parodontology",
+    "title": "Цены: Пародонтология, лечение дёсен",
+    "content": "Прайс-лист: Пародонтология, лечение дёсен.\n- Введение лекарственных препаратов в пародонтальный карман (орошение, аппликация) — от 600 ₽\n- Введение препарата 'Коллапан' в пародонтальный карман — от 1 490 ₽\n- Временное шинирование при заболеваниях пародонта (1 зуб) — от 1 800 ₽\n- Открытый кюретаж при заболеваниях пародонта в области зуба — от 1 400 ₽\n- Ультразвуковая обработка пародонтальных карманов всей полости рта — от 2 150 ₽\n- Назначение лекарственных препаратов при заболеваниях полости рта — от 500 ₽",
+    "source": "dentklever_prices.csv",
+    "source_type": "price_list",
+    "entity_type": "price_category",
+    "entity_id": "parodontology",
+    "token_count": 168,
+    "raw_data": {
+      "category": "Parodontology",
+      "services": [
+        {
+          "Category": "Parodontology",
+          "Service": "Введение лекарственных препаратов в пародонтальный карман (орошение, аппликация)",
+          "Price": "от 600 ₽"
+        },
+        {
+          "Category": "Parodontology",
+          "Service": "Введение препарата 'Коллапан' в пародонтальный карман",
+          "Price": "от 1 490 ₽"
+        },
+        {
+          "Category": "Parodontology",
+          "Service": "Временное шинирование при заболеваниях пародонта (1 зуб)",
+          "Price": "от 1 800 ₽"
+        },
+        {
+          "Category": "Parodontology",
+          "Service": "Открытый кюретаж при заболеваниях пародонта в области зуба",
+          "Price": "от 1 400 ₽"
+        },
+        {
+          "Category": "Parodontology",
+          "Service": "Ультразвуковая обработка пародонтальных карманов всей полости рта",
+          "Price": "от 2 150 ₽"
+        },
+        {
+          "Category": "Parodontology",
+          "Service": "Назначение лекарственных препаратов при заболеваниях полости рта",
+          "Price": "от 500 ₽"
+        }
+      ]
+    }
+  },
+  {
+    "id": "aftercare_post_orthodontics",
+    "title": "Памятка пациенту при ортодонтическом лечении (брекеты)",
+    "content": "Привыкание к брекет-системе:\nВ первые дни после фиксации брекетов (обычно 3-7 дней) может возникать некоторый дискомфорт или болевые ощущения в области зубов. Они очень индивидуальны и у разных пациентов могут быть выражены в различной степени. Если боль мешает Вам уснуть, можно воспользоваться обезболивающими средствами, которые назначит врач. При травмировании слизистой щек и губ брекет-системой применяют специальный защитный воск. Им заклеивают брекеты, если они натирают щеки, губы, язык.\nЧистка зубов:\nМиллионы людей каждый день чистят зубы, но лишь немногие делают это действительно сознательно и хорошо. При наличии на зубах брекет-системы хорошо чистить зубы становится сложнее - требуется еще больше старания. Тем не менее, это абсолютно реально. Нужно лишь понимать, к чему приводит плохая чистка зубов.\nПлохая чистка зубов:\nВокруг брекетов собирается зубной налет, который содержит миллионы вредных микроорганизмов. Они выделяют агрессивную кислоту. Кислота постепенно разъедает эмаль зубов, на ней могут образовываться белые пятна (участки деминерализации), особенно заметные после снятия брекетов\nВозникает воспаление десен (гингивит), они становятся отечными, начинают болеть и кровоточить.\nВследствие воспаления десен увеличивается срок ортодонтического лечения.\nПри постоянно плохой гигиене (неудовлетворительной чистке зубов) может быть поставлен вопрос о досрочном прекращении лечения.\nХорошая чистка зубов:\nЗубы чистые, эмаль блестящая, после снятия брекетов не остается никаких следов.\nДесна не воспалена, нормального бледно-розового цвета, при чистке не болит и не кровоточит.\nЗубы перемещаются быстрее, срок лечения меньше, врач и пациент довольны результатом.\nХорошая чистка зубов при лечении брекет-системой - это действительно важно.\nДля чистки зубов понадобятся:\nОбычная зубная щетка.\nОртодонтическая зубная щетка, которую рекомендует врач.\nЩетка со специальными ершиками и набор ершиков к ней. Ершики необходимо регулярно (не менее, чем 1 раз в неделю) заменять, поскольку они быстро изнашиваются.\nИрригатор.\nЭлектрическая зубная щетка с ортодонтической насадкой.\nТехника чистки зубов:\nОчищение брекетов и зубов с передней поверхности с помощью ортодонтической зубной щетки 10-15 горизонтальных движений в каждом из трех сегментов (боковые зубы справа, передние зубы, боковые зубы слева). В щетине ортодонтической щетки имеется специальное углубление для брекетов, что облегчает чистку. После горизонтальных движений, той же щеткой проводят вертикальные\n«подметающие» движения по наружной поверхности зубов от десны к краю зуба.\n2. Очищение обычной зубной щеткой внутренней и жевательной поверхности зубов по обычной методике (подметающие возвратно-поступательные движения от десны к краю зуба).\n3. Очищение зубных промежутков с помощью ирригатора: направить струю на участки зубов, которые не были обработаны зубной щеткой, постараться направить струю жидкости на внутреннюю сторону, чтобы все внутренние поверхности зубов были очищены. Мы рекомендуем всем пациентам пользоваться ирригатором после каждого приема пищи. Он не большой и не занимает много места, а его польза очевидна.\nПроводить чистку вокруг брекетов с помощью щетки с ёршиками.\nВы можете приобрести электрическую зубную щетку, но она не должна быть единственным существующим средством гигиены полости рта.\nНеобходимо чистить зубы после каждого приема пищи или хотя бы полоскать рот водой.\nОграничения в питании\nНа время печения следует отказаться от употребления:\nЛипких продуктов (ириски, тянучки, жевательная резинка, вафли, чипсы, халва и тд.)\nТвердых продуктов (орехи, конфеты с орехами, сушки, бублики, сухари и тд.). Твердые овощи и фрукты, такие как морковь, яблоки, груши, откусывать нельзя, их режут на небольшие кусочки. Это касается также жесткого мяса и любых продуктов, требующих откусывания.\nНевыполнение этих рекомендаций ведет к отклеиванию брекетов. Отклейка брекетов может вести к удлинению сроков лечения.\nВозможные поломки\nПри соблюдении рекомендаций поломки и отклейки брекетов случаются редко. Тем не менее, они возможны.\nВ случае отклеивания брекета (брекет не плотно фиксирован к зубу, скользит по дуге) необходимо обратиться к врачу-ортодонту.\nВ случае возникновения любых неудобств, сомнений, связанных с процессом лечения, Вы всегда можете обратиться к своему лечащему врачу-ортодонту и задать любые интересующие вопросы.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_orthodontics",
+    "token_count": 1150,
+    "raw_data": {
+      "procedure_type": "post_orthodontics",
+      "title": "Памятка пациенту при ортодонтическом лечении (брекеты)",
+      "source_file": "ПАМЯТКА_ортодонтическое лечение.docx",
+      "content": "Привыкание к брекет-системе:\nВ первые дни после фиксации брекетов (обычно 3-7 дней) может возникать некоторый дискомфорт или болевые ощущения в области зубов. Они очень индивидуальны и у разных пациентов могут быть выражены в различной степени. Если боль мешает Вам уснуть, можно воспользоваться обезболивающими средствами, которые назначит врач. При травмировании слизистой щек и губ брекет-системой применяют специальный защитный воск. Им заклеивают брекеты, если они натирают щеки, губы, язык.\nЧистка зубов:\nМиллионы людей каждый день чистят зубы, но лишь немногие делают это действительно сознательно и хорошо. При наличии на зубах брекет-системы хорошо чистить зубы становится сложнее - требуется еще больше старания. Тем не менее, это абсолютно реально. Нужно лишь понимать, к чему приводит плохая чистка зубов.\nПлохая чистка зубов:\nВокруг брекетов собирается зубной налет, который содержит миллионы вредных микроорганизмов. Они выделяют агрессивную кислоту. Кислота постепенно разъедает эмаль зубов, на ней могут образовываться белые пятна (участки деминерализации), особенно заметные после снятия брекетов\nВозникает воспаление десен (гингивит), они становятся отечными, начинают болеть и кровоточить.\nВследствие воспаления десен увеличивается срок ортодонтического лечения.\nПри постоянно плохой гигиене (неудовлетворительной чистке зубов) может быть поставлен вопрос о досрочном прекращении лечения.\nХорошая чистка зубов:\nЗубы чистые, эмаль блестящая, после снятия брекетов не остается никаких следов.\nДесна не воспалена, нормального бледно-розового цвета, при чистке не болит и не кровоточит.\nЗубы перемещаются быстрее, срок лечения меньше, врач и пациент довольны результатом.\nХорошая чистка зубов при лечении брекет-системой - это действительно важно.\nДля чистки зубов понадобятся:\nОбычная зубная щетка.\nОртодонтическая зубная щетка, которую рекомендует врач.\nЩетка со специальными ершиками и набор ершиков к ней. Ершики необходимо регулярно (не менее, чем 1 раз в неделю) заменять, поскольку они быстро изнашиваются.\nИрригатор.\nЭлектрическая зубная щетка с ортодонтической насадкой.\nТехника чистки зубов:\nОчищение брекетов и зубов с передней поверхности с помощью ортодонтической зубной щетки 10-15 горизонтальных движений в каждом из трех сегментов (боковые зубы справа, передние зубы, боковые зубы слева). В щетине ортодонтической щетки имеется специальное углубление для брекетов, что облегчает чистку. После горизонтальных движений, той же щеткой проводят вертикальные\n«подметающие» движения по наружной поверхности зубов от десны к краю зуба.\n2. Очищение обычной зубной щеткой внутренней и жевательной поверхности зубов по обычной методике (подметающие возвратно-поступательные движения от десны к краю зуба).\n3. Очищение зубных промежутков с помощью ирригатора: направить струю на участки зубов, которые не были обработаны зубной щеткой, постараться направить струю жидкости на внутреннюю сторону, чтобы все внутренние поверхности зубов были очищены. Мы рекомендуем всем пациентам пользоваться ирригатором после каждого приема пищи. Он не большой и не занимает много места, а его польза очевидна.\nПроводить чистку вокруг брекетов с помощью щетки с ёршиками.\nВы можете приобрести электрическую зубную щетку, но она не должна быть единственным существующим средством гигиены полости рта.\nНеобходимо чистить зубы после каждого приема пищи или хотя бы полоскать рот водой.\nОграничения в питании\nНа время печения следует отказаться от употребления:\nЛипких продуктов (ириски, тянучки, жевательная резинка, вафли, чипсы, халва и тд.)\nТвердых продуктов (орехи, конфеты с орехами, сушки, бублики, сухари и тд.). Твердые овощи и фрукты, такие как морковь, яблоки, груши, откусывать нельзя, их режут на небольшие кусочки. Это касается также жесткого мяса и любых продуктов, требующих откусывания.\nНевыполнение этих рекомендаций ведет к отклеиванию брекетов. Отклейка брекетов может вести к удлинению сроков лечения.\nВозможные поломки\nПри соблюдении рекомендаций поломки и отклейки брекетов случаются редко. Тем не менее, они возможны.\nВ случае отклеивания брекета (брекет не плотно фиксирован к зубу, скользит по дуге) необходимо обратиться к врачу-ортодонту.\nВ случае возникновения любых неудобств, сомнений, связанных с процессом лечения, Вы всегда можете обратиться к своему лечащему врачу-ортодонту и задать любые интересующие вопросы."
+    }
+  },
+  {
+    "id": "aftercare_post_anesthesia",
+    "title": "Рекомендации после лечения под общим наркозом",
+    "content": "После того, как лечение под наркозом будет завершено анестезиолог дождется восстановления основных рефлексов и параметров жизнедеятельности ребенка в наркозном кабинете. Только после этого малыша можно безопасно перенести в послеоперационную комнату восстановления.\nВсе дети просыпаются по-разному: обычно для восстановления сознания достаточно 10-30 минут.\nЛегкие побочные эффекты анестезии могут сохранятся в течение нескольких часов после лечения. Как правило, они безопасны и непостоянны.\nДопустимые состояния после лечения:\nИзменение настроения или поведения (вялость, психомоторное или эмоциональное возбуждение) после лечения во сне;\nОтсутствие аппетита;\nШаткость походки;\nЛегкое головокружение;\nУмеренный отек нижней половины лица и губ;\nнебольшая припухлость на слизистой.\nпокалывание или онемение в месте укола;\nСубфебрильная (до 37,5 градусов) температура тела, которая может держаться в течение первых суток.\nПациент может кашлять или жаловаться на небольшую боль в горле в течение 1-2 дней после анестезии. Это тоже нормально и связано с техникой проведения наркоза, как правило все неприятные ощущения проходят сами, но для облегчения симптомов можно рассасывать любые леденцы от кашля или карамельки.\nКогда нужно связаться с вашим лечащим врачом или анестезиологом?\nЕсли у вас рвота\nВысокая температура тела (выше 38,5 градусов);\nСильная вялость;\nНарастающий отек лица, губ;\nЗатрудненное или шумное дыхание, кашель;\nВозникшая и/или нарастающая сыпь.\nЧто нельзя делать после лечения в наркозе?\nНе стоит садится за руль автомобиля в течение 24 часов. В первые часы после общего обезболивания может нарушаться скорость реакции на изменение дорожной обстановки, возможно наличие выраженной сонливости.\nИсключите активную физическую нагрузку в ближайшие сутки.\nВ течение суток после общего обезболивания не работайте со сложным оборудованием (газонокосилка, бензопила и другая потенциально опасная техника), которое при неправильной эксплуатации может быть опасна для вашего здоровья.\nНе принимайте в первые сутки после общего обезболивания никаких лекарств, если только прием не был согласован с вашим лечащим доктором. Некоторые лекарства могут неблагоприятно взаимодействовать с препаратами для наркоза (например, снотворные, транквилизаторы и другие).\nВ течение суток после наркоза исключите приём алкоголя. В сочетании с лекарствами для общей анестезии он может отрицательно повлиять на ваш организм. Под алкоголем подразумеваются не только крепкие спиртные напитки, но и коктейли, пиво, вино.\nПосле проведения операции под наркозом можно принимать жидкость сразу, если нет ограничений со стороны стоматологов.\n2–3 часа после наркоза не рекомендуется принимать пищу, чтобы избежать тошноты.\nИсключите в первые сутки после наркоза из рациона кислую, острую, горячую пищу и газированные напитки.\nВсе назначенные доктором препараты: парацетамол или ибупрофен, антибиотики и прочее, нужно принимать по схеме, не допуская пропусков. Это важно и в первую очередь сказывается на скорости восстановления после лечения и эмоциональном фоне ребенка.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_anesthesia",
+    "token_count": 762,
+    "raw_data": {
+      "procedure_type": "post_anesthesia",
+      "title": "Рекомендации после лечения под общим наркозом",
+      "source_file": "Памятка пациенту после лечения в условиях общего наркоза.doc",
+      "content": "После того, как лечение под наркозом будет завершено анестезиолог дождется восстановления основных рефлексов и параметров жизнедеятельности ребенка в наркозном кабинете. Только после этого малыша можно безопасно перенести в послеоперационную комнату восстановления.\nВсе дети просыпаются по-разному: обычно для восстановления сознания достаточно 10-30 минут.\nЛегкие побочные эффекты анестезии могут сохранятся в течение нескольких часов после лечения. Как правило, они безопасны и непостоянны.\nДопустимые состояния после лечения:\nИзменение настроения или поведения (вялость, психомоторное или эмоциональное возбуждение) после лечения во сне;\nОтсутствие аппетита;\nШаткость походки;\nЛегкое головокружение;\nУмеренный отек нижней половины лица и губ;\nнебольшая припухлость на слизистой.\nпокалывание или онемение в месте укола;\nСубфебрильная (до 37,5 градусов) температура тела, которая может держаться в течение первых суток.\nПациент может кашлять или жаловаться на небольшую боль в горле в течение 1-2 дней после анестезии. Это тоже нормально и связано с техникой проведения наркоза, как правило все неприятные ощущения проходят сами, но для облегчения симптомов можно рассасывать любые леденцы от кашля или карамельки.\nКогда нужно связаться с вашим лечащим врачом или анестезиологом?\nЕсли у вас рвота\nВысокая температура тела (выше 38,5 градусов);\nСильная вялость;\nНарастающий отек лица, губ;\nЗатрудненное или шумное дыхание, кашель;\nВозникшая и/или нарастающая сыпь.\nЧто нельзя делать после лечения в наркозе?\nНе стоит садится за руль автомобиля в течение 24 часов. В первые часы после общего обезболивания может нарушаться скорость реакции на изменение дорожной обстановки, возможно наличие выраженной сонливости.\nИсключите активную физическую нагрузку в ближайшие сутки.\nВ течение суток после общего обезболивания не работайте со сложным оборудованием (газонокосилка, бензопила и другая потенциально опасная техника), которое при неправильной эксплуатации может быть опасна для вашего здоровья.\nНе принимайте в первые сутки после общего обезболивания никаких лекарств, если только прием не был согласован с вашим лечащим доктором. Некоторые лекарства могут неблагоприятно взаимодействовать с препаратами для наркоза (например, снотворные, транквилизаторы и другие).\nВ течение суток после наркоза исключите приём алкоголя. В сочетании с лекарствами для общей анестезии он может отрицательно повлиять на ваш организм. Под алкоголем подразумеваются не только крепкие спиртные напитки, но и коктейли, пиво, вино.\nПосле проведения операции под наркозом можно принимать жидкость сразу, если нет ограничений со стороны стоматологов.\n2–3 часа после наркоза не рекомендуется принимать пищу, чтобы избежать тошноты.\nИсключите в первые сутки после наркоза из рациона кислую, острую, горячую пищу и газированные напитки.\nВсе назначенные доктором препараты: парацетамол или ибупрофен, антибиотики и прочее, нужно принимать по схеме, не допуская пропусков. Это важно и в первую очередь сказывается на скорости восстановления после лечения и эмоциональном фоне ребенка."
+    }
+  },
+  {
+    "id": "aftercare_post_hygiene",
+    "title": "Рекомендации после профессиональной гигиены полости рта",
+    "content": "Поменяйте свою старую щетку на новую. В дальнейшем менять зубную щетку необходимо каждые три месяца.\nПосле процедуры возможной реакцией организма является возникновение повышенной чувствительности зубов на холодное, горячее, кислое, сладкое и незначительной кровоточивости десен. Возможен дискомфорт во время чистки зубов. Для снижения чувствительности Вы можете использовать зубные пасты с пометкой «Sensetiv» и гель «Тусс Мусс» ,содержащий кальций и фосфат.\nВ течение 2 дней после гигиены воздержитесь от курения, употребления продуктов, которые способствуют повышению чувствительности зубов (соки, газированные напитки, фрукты), от употребления красящих продуктов:\nКоричневый и черный цвет: кофе, чай, кола, ягоды (черника, ежевика и др.), шоколад, какао, бальзамический уксус, а также соевый соус\nКрасный цвет: красное вино, кетчупы, красные ягоды, томаты и томатный сок\nНасыщенный желтый цвет: горчица и карри\nВсе ненатуральные красители: фруктовое мороженное, газированные напитки, многие конфеты и другие продукты, цвет которых бросается в глаза.\nСоблюдать гигиену полости рта: используйте флосс (зубную нить) и зубные ершики для очистки межзубных промежутков, качественную зубную щетку и пасту, ирригатор. Гигиенические процедуры желательно проводить после каждого приема пищи, минимум - дважды в день. Первые дни после гигиены рекомендуется чистить зубы мягкой зубной щеткой (Soft), через 7 дней можно переходить на чистку зубов щетками средней жесткости.\nДля профилактики необходимо включить в свой рацион больше твердой пищи (морковь, яблоки, капуста)\nРегулярные визиты в стоматологию для поддержания результатов лечения зубов, удаления зубного камня или бактериального налета и контроля гигиены необходимо проводить не менее одного раза в полгода. Пациентам, которые лечатся с помощью ортодонтических конструкций, требуется проведение профессиональной гигиены каждые 3-4 месяца.\nМедикаментозное лечение:\nНаименование:Кол-во дней\nПерекись водорода 3 % развести 1:1 с кипяченой водой\nХлоргексидин 0,12%, 2%.\nРотокан (1 ч.л. На 1 ст. кипяченой воды)\nОблепиховое масло (аппликации 3-4р. В день по 5 минут)\nАСЕПТА Бальзам для десен адгезивный 2 р/день\nМетрогил Дента 3-4 р. в день массирующими движениями наносить на десну\nХолисал 2 раза в день 5 дней.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_hygiene",
+    "token_count": 663,
+    "raw_data": {
+      "procedure_type": "post_hygiene",
+      "title": "Рекомендации после профессиональной гигиены полости рта",
+      "source_file": "Рекомендации гигиена.doc",
+      "content": "Поменяйте свою старую щетку на новую. В дальнейшем менять зубную щетку необходимо каждые три месяца.\nПосле процедуры возможной реакцией организма является возникновение повышенной чувствительности зубов на холодное, горячее, кислое, сладкое и незначительной кровоточивости десен. Возможен дискомфорт во время чистки зубов. Для снижения чувствительности Вы можете использовать зубные пасты с пометкой «Sensetiv» и гель «Тусс Мусс» ,содержащий кальций и фосфат.\nВ течение 2 дней после гигиены воздержитесь от курения, употребления продуктов, которые способствуют повышению чувствительности зубов (соки, газированные напитки, фрукты), от употребления красящих продуктов:\nКоричневый и черный цвет: кофе, чай, кола, ягоды (черника, ежевика и др.), шоколад, какао, бальзамический уксус, а также соевый соус\nКрасный цвет: красное вино, кетчупы, красные ягоды, томаты и томатный сок\nНасыщенный желтый цвет: горчица и карри\nВсе ненатуральные красители: фруктовое мороженное, газированные напитки, многие конфеты и другие продукты, цвет которых бросается в глаза.\nСоблюдать гигиену полости рта: используйте флосс (зубную нить) и зубные ершики для очистки межзубных промежутков, качественную зубную щетку и пасту, ирригатор. Гигиенические процедуры желательно проводить после каждого приема пищи, минимум - дважды в день. Первые дни после гигиены рекомендуется чистить зубы мягкой зубной щеткой (Soft), через 7 дней можно переходить на чистку зубов щетками средней жесткости.\nДля профилактики необходимо включить в свой рацион больше твердой пищи (морковь, яблоки, капуста)\nРегулярные визиты в стоматологию для поддержания результатов лечения зубов, удаления зубного камня или бактериального налета и контроля гигиены необходимо проводить не менее одного раза в полгода. Пациентам, которые лечатся с помощью ортодонтических конструкций, требуется проведение профессиональной гигиены каждые 3-4 месяца.\nМедикаментозное лечение:\nНаименование:Кол-во дней\nПерекись водорода 3 % развести 1:1 с кипяченой водой\nХлоргексидин 0,12%, 2%.\nРотокан (1 ч.л. На 1 ст. кипяченой воды)\nОблепиховое масло (аппликации 3-4р. В день по 5 минут)\nАСЕПТА Бальзам для десен адгезивный 2 р/день\nМетрогил Дента 3-4 р. в день массирующими движениями наносить на десну\nХолисал 2 раза в день 5 дней."
+    }
+  },
+  {
+    "id": "aftercare_post_prosthetics_fixed",
+    "title": "Рекомендации по уходу за несъёмными протезами (коронки, мосты)",
+    "content": "Уважаемый пациент! Вам было проведено протезирование, после которого необходимо соблюдать следующие рекомендации:\nМожет наблюдаться повышенная чувствительность зубов на горячее холодное, которая со временем будет проходить и зависит от индивидуальных особенностях организма.\nЗубы, на которые поставлены коронки, требуют, как и естественные зубы, тщательного ухода.\nДва раза в день чистите зубы: утром после еды и вечером, перед сном!\nДля зубов, на которых установлены коронки, особенно важно удалять зубной налет и остатки пищи из межзубных промежутков, мест, где искусственный зуб контактирует с десной. Пользуйтесь для этого при необходимости зубными нитями (флоссами), щеточками специальной формы, ирригатор.\nНе следует жевать или грызть твердые продукты (сухари, орехи, лед, конфеты типа ирисок и леденцов и т.п.), жесткие предметы, так как это может привести к повреждению или поломке коронки, мостовидного протеза.\nПосле  протезирования следует исключить откусывание жесткой пищи (морковь, яблоко, мясо), так как это может привести к сколам, выпадению ортопедических конструкций. Разумнее пользоваться ножом, разрезая их на мелкие кусочки.\nВоздержитесь от вредных привычек кусать губы, ногти, ручки.\nНе  цокайте зубами после установки искусственных зубов, старайтесь избегать ударов, травм, аварий.\n1 раз в 6 мес посещайте врача-стоматолога, консультируйтесь с ним об особенностях ухода за Вашей полостью рта, используйте при необходимости рекомендованные им специальные приспособления и препараты!\nЕсли Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники. Если Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_prosthetics_fixed",
+    "token_count": 451,
+    "raw_data": {
+      "procedure_type": "post_prosthetics_fixed",
+      "title": "Рекомендации по уходу за несъёмными протезами (коронки, мосты)",
+      "source_file": "Рекомендации несъемные протезы.docx",
+      "content": "Уважаемый пациент! Вам было проведено протезирование, после которого необходимо соблюдать следующие рекомендации:\nМожет наблюдаться повышенная чувствительность зубов на горячее холодное, которая со временем будет проходить и зависит от индивидуальных особенностях организма.\nЗубы, на которые поставлены коронки, требуют, как и естественные зубы, тщательного ухода.\nДва раза в день чистите зубы: утром после еды и вечером, перед сном!\nДля зубов, на которых установлены коронки, особенно важно удалять зубной налет и остатки пищи из межзубных промежутков, мест, где искусственный зуб контактирует с десной. Пользуйтесь для этого при необходимости зубными нитями (флоссами), щеточками специальной формы, ирригатор.\nНе следует жевать или грызть твердые продукты (сухари, орехи, лед, конфеты типа ирисок и леденцов и т.п.), жесткие предметы, так как это может привести к повреждению или поломке коронки, мостовидного протеза.\nПосле  протезирования следует исключить откусывание жесткой пищи (морковь, яблоко, мясо), так как это может привести к сколам, выпадению ортопедических конструкций. Разумнее пользоваться ножом, разрезая их на мелкие кусочки.\nВоздержитесь от вредных привычек кусать губы, ногти, ручки.\nНе  цокайте зубами после установки искусственных зубов, старайтесь избегать ударов, травм, аварий.\n1 раз в 6 мес посещайте врача-стоматолога, консультируйтесь с ним об особенностях ухода за Вашей полостью рта, используйте при необходимости рекомендованные им специальные приспособления и препараты!\nЕсли Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники. Если Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники."
+    }
+  },
+  {
+    "id": "aftercare_post_prosthetics_removable",
+    "title": "Рекомендации по пользованию съёмными протезами",
+    "content": "Уважаемый пациент! Вы получили высокотехнологичную ортопедическую конструкцию, которая поможет Вам восстановить эстетические качества зубных рядов, функцию жевания и речи!\nПроцесс привыкания к съемным протезам длится около месяца. В первое время (период адаптации к протезам) зубные протезы могут вызывать различные временные субъективные ощущения, связанные с привыканием к новому предмету в ротовой полости, которые сильно разнятся у разных людей, в том числе тошноту, слюнотечение, неясность речи, потерю вкусовых ощущений, затрудненное откусывание пищи и ее разжевывание. По мере привыкания к протезам все эти явления проходят.\nДля того, чтобы период адаптации к протезам протекал наиболее комфортно, необходимо следовать простым правилам:\nЕще в кресле у врача-стоматолога научитесь самостоятельно снимать и надевать протез. Затем потренируйтесь дома перед зеркалом, потом без него. Перед наложением протез нужно смочить в воде или воспользоваться фиксирующим средством.\nВ первое время (1,5-2 недели) после наложения протеза его не следует вынимать из полости рта, даже ночью. Вынимать можно только для проведения гигиены (см. ниже).\nВ целях лучшего привыкания к протезам и восстановления речи (дикции) рекомендуется читать вслух.\nНе кусать передними зубами первое время. Пережевывать пищу боковыми зубами одновременно (левыми и правыми сразу).\nПервое время постарайтесь употреблять только мягкую пищу. Рекомендуем есть мелкими кусочками, даже фрукты и овощи.\nЧерез 2-3 дня после наложения протеза явиться к врачу для контроля фиксации протеза.\nЕсли во время пользования протезами возникают сильные болевые ощущения в слизистой, то протезы можно снять и обратиться к врачу для коррекции. Протезы за 2-3 часа до прихода к врачу должны быть в полости рта, чтобы стала очевидной причина, вызывающая боль. Поправка протеза занимает 5-15 минут.\nНе поправлять протез самостоятельно.\nПосле коррекции (поправки) протеза необходимо 1-3 дня не пользоваться протезом. Применять его для принятия пищи и для восстановления эстетики улыбки. В этот период, в период заживления желательно полоскать рот и делать ванночки. Использовать отвар цветков ромашки, коры дуба и др., например, взять 0,5 столовые ложки сухой коры дуба, заварить в одном стакане кипятка, охладить, применять отвар 3-5 раз в день. Использование лекарственных средств по назначению врача.\nПри неблагоприятных условиях для удержания во рту протеза используются специальные фиксирующие средства в виде кремов, фиксирующих прокладок, порошков.\nФиксирующий порошок тонким слоем наноситься на влажный протез, после протез можно надевать. Используется при малом слюноотделении (Protefix, Corega).\nФиксирующий крем наносится тонкой прерывистой линией на протез. Перед нанесением крема протез необходимо высушить, например, ватным тампоном.\nНельзя жевать или грызть твердые продукты (сухари, орехи, лед, конфеты типа ирисок и леденцов и т.п.), жесткие предметы, так как это может привести к повреждению или поломке протеза.\nХранить протезы вне полости рта рекомендуем в сухой чистой емкости. Перед наложением протез стоит смочить в воде или воспользоваться фиксирующим средством.\nЕсли искусственные зубы не носить длительный срок, то привычка и правильное прилегание к десне нарушаются, поэтому при проблемах лучше сразу обратиться к врачу.\nУход за протезами.\nДля максимально долгого и удобного использования ортопедической конструкцией рекомендуем соблюдать следующие гигиенические правила.\nПосле каждого приема пищи протез следует вынимать из полости рта и тщательно промыть водой с мылом и щеткой. Протез должен быть чистым.\nДважды в день (утром и вечером) чистить протез пастой и жесткой щеткой (HARD).\nНеобходимо использовать очистительные таблетки минимум 1 раз в неделю. Согласно инструкции. После использования очищающих таблеток, необходимо хорошо промыть и почистить протез во избежания химических ожогов.\nПри пользовании съемными ортопедическими конструкциями необходимо 2 раза в год посещать врача-стоматолога.\nВо избежание порчи протезов, их не следует гнуть, сдавливать, ронять, носить в кармане без специальной емкости.\nНе подвергать протез механическим, термическим и химическим воздействиям.\nПочинка протезов.\nВ процессе использования съемных протезов может произойти перелом протеза или отдельных его частей (зуб, кламмер и др.). В данном случае необходимо обратиться в клинику, предварительно почистив протез. При утрате зуба (зубов), за который удерживаются или опираются частичные съемные протезы, возможна приварка искусственного зуба к протезу на место утраченного своего. Починка съемного протеза занимает в среднем 3-5 дней. Починка производится бесплатно в период гарантийного срока.\nЕсли Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_prosthetics_removable",
+    "token_count": 1274,
+    "raw_data": {
+      "procedure_type": "post_prosthetics_removable",
+      "title": "Рекомендации по пользованию съёмными протезами",
+      "source_file": "Рекомендации съемные протезы.docx",
+      "content": "Уважаемый пациент! Вы получили высокотехнологичную ортопедическую конструкцию, которая поможет Вам восстановить эстетические качества зубных рядов, функцию жевания и речи!\nПроцесс привыкания к съемным протезам длится около месяца. В первое время (период адаптации к протезам) зубные протезы могут вызывать различные временные субъективные ощущения, связанные с привыканием к новому предмету в ротовой полости, которые сильно разнятся у разных людей, в том числе тошноту, слюнотечение, неясность речи, потерю вкусовых ощущений, затрудненное откусывание пищи и ее разжевывание. По мере привыкания к протезам все эти явления проходят.\nДля того, чтобы период адаптации к протезам протекал наиболее комфортно, необходимо следовать простым правилам:\nЕще в кресле у врача-стоматолога научитесь самостоятельно снимать и надевать протез. Затем потренируйтесь дома перед зеркалом, потом без него. Перед наложением протез нужно смочить в воде или воспользоваться фиксирующим средством.\nВ первое время (1,5-2 недели) после наложения протеза его не следует вынимать из полости рта, даже ночью. Вынимать можно только для проведения гигиены (см. ниже).\nВ целях лучшего привыкания к протезам и восстановления речи (дикции) рекомендуется читать вслух.\nНе кусать передними зубами первое время. Пережевывать пищу боковыми зубами одновременно (левыми и правыми сразу).\nПервое время постарайтесь употреблять только мягкую пищу. Рекомендуем есть мелкими кусочками, даже фрукты и овощи.\nЧерез 2-3 дня после наложения протеза явиться к врачу для контроля фиксации протеза.\nЕсли во время пользования протезами возникают сильные болевые ощущения в слизистой, то протезы можно снять и обратиться к врачу для коррекции. Протезы за 2-3 часа до прихода к врачу должны быть в полости рта, чтобы стала очевидной причина, вызывающая боль. Поправка протеза занимает 5-15 минут.\nНе поправлять протез самостоятельно.\nПосле коррекции (поправки) протеза необходимо 1-3 дня не пользоваться протезом. Применять его для принятия пищи и для восстановления эстетики улыбки. В этот период, в период заживления желательно полоскать рот и делать ванночки. Использовать отвар цветков ромашки, коры дуба и др., например, взять 0,5 столовые ложки сухой коры дуба, заварить в одном стакане кипятка, охладить, применять отвар 3-5 раз в день. Использование лекарственных средств по назначению врача.\nПри неблагоприятных условиях для удержания во рту протеза используются специальные фиксирующие средства в виде кремов, фиксирующих прокладок, порошков.\nФиксирующий порошок тонким слоем наноситься на влажный протез, после протез можно надевать. Используется при малом слюноотделении (Protefix, Corega).\nФиксирующий крем наносится тонкой прерывистой линией на протез. Перед нанесением крема протез необходимо высушить, например, ватным тампоном.\nНельзя жевать или грызть твердые продукты (сухари, орехи, лед, конфеты типа ирисок и леденцов и т.п.), жесткие предметы, так как это может привести к повреждению или поломке протеза.\nХранить протезы вне полости рта рекомендуем в сухой чистой емкости. Перед наложением протез стоит смочить в воде или воспользоваться фиксирующим средством.\nЕсли искусственные зубы не носить длительный срок, то привычка и правильное прилегание к десне нарушаются, поэтому при проблемах лучше сразу обратиться к врачу.\nУход за протезами.\nДля максимально долгого и удобного использования ортопедической конструкцией рекомендуем соблюдать следующие гигиенические правила.\nПосле каждого приема пищи протез следует вынимать из полости рта и тщательно промыть водой с мылом и щеткой. Протез должен быть чистым.\nДважды в день (утром и вечером) чистить протез пастой и жесткой щеткой (HARD).\nНеобходимо использовать очистительные таблетки минимум 1 раз в неделю. Согласно инструкции. После использования очищающих таблеток, необходимо хорошо промыть и почистить протез во избежания химических ожогов.\nПри пользовании съемными ортопедическими конструкциями необходимо 2 раза в год посещать врача-стоматолога.\nВо избежание порчи протезов, их не следует гнуть, сдавливать, ронять, носить в кармане без специальной емкости.\nНе подвергать протез механическим, термическим и химическим воздействиям.\nПочинка протезов.\nВ процессе использования съемных протезов может произойти перелом протеза или отдельных его частей (зуб, кламмер и др.). В данном случае необходимо обратиться в клинику, предварительно почистив протез. При утрате зуба (зубов), за который удерживаются или опираются частичные съемные протезы, возможна приварка искусственного зуба к протезу на место утраченного своего. Починка съемного протеза занимает в среднем 3-5 дней. Починка производится бесплатно в период гарантийного срока.\nЕсли Ваше состояние вызывает у вас беспокойство, пожалуйста обратитесь к вашему врачу или к администратору клиники."
+    }
+  },
+  {
+    "id": "aftercare_post_extraction",
+    "title": "Рекомендации после удаления зуба",
+    "content": "/установки формирователя/пластики десны\nЛекарственные препараты:\n1. Обезболивающее\n- взрослым и детям старше 12 лет:  Нимесил 100 мг по 1 пакетику 2 раза/сутки, после еды – по потребности;\n- детям с 6 до 12 лет (с массой тела более 20 кг): по 1 таб 200 мг не более 4 раз/сут. Интервал между приемом таблеток не менее 6 ч, после еды – по потребности;\n- детям до 6 лет: Нурофен для детей суспензия 100 мг/5 мл – 3 раза/сут в соответствии с инструкцией по применению;\n2. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01% – начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n3. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После удаления зуба необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В этот и на следующий день нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не нагибайтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной стороне от операции\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_extraction",
+    "token_count": 917,
+    "raw_data": {
+      "procedure_type": "post_extraction",
+      "title": "Рекомендации после удаления зуба",
+      "source_file": "Рекомендации_после_хир_вмешательства.docx",
+      "content": "/установки формирователя/пластики десны\nЛекарственные препараты:\n1. Обезболивающее\n- взрослым и детям старше 12 лет:  Нимесил 100 мг по 1 пакетику 2 раза/сутки, после еды – по потребности;\n- детям с 6 до 12 лет (с массой тела более 20 кг): по 1 таб 200 мг не более 4 раз/сут. Интервал между приемом таблеток не менее 6 ч, после еды – по потребности;\n- детям до 6 лет: Нурофен для детей суспензия 100 мг/5 мл – 3 раза/сут в соответствии с инструкцией по применению;\n2. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01% – начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n3. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После удаления зуба необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В этот и на следующий день нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не нагибайтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной стороне от операции\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику."
+    }
+  },
+  {
+    "id": "aftercare_post_implantation",
+    "title": "Рекомендации после имплантации и костной пластики",
+    "content": ", имплантации, костной пластики.\nЛекарственные препараты:\n1. Антибиотик:\nНеобходимо начать за час до операции ДА    /    НЕТ.\nамоксициллин+клавулановая кислота (амоксиклав/аугментин) 1000 мг (875 мг + 125 мг) –1 таблетка\nпродолжить: 2 р/день – 5 дней;\nПри операции под общим наркозом принимать заранее препарат не нужно, антибиотик будет вводиться во время наркоза!\n2. Обезболивающее: Нимесил 100 мг по 1 пакетику 2 раза/сутки, после еды – по потребности;\n3. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01%– начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n4. Эубиотик: Линекс по 2 капсулы 3 раза/сут – 5 дней;\n5. Антигистаминный препарат: Дезлоратадин 5 мг, по 1 таб 1 р/день - 5 дней;\n6. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После операции необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В день операции и на следующий нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не нагибайтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной стороне от операции\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\n• Сроки интеграции имплантатов на верхней челюсти составляют 4-6 месяцев, на нижней: 3-4 месяца\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_implantation",
+    "token_count": 1013,
+    "raw_data": {
+      "procedure_type": "post_implantation",
+      "title": "Рекомендации после имплантации и костной пластики",
+      "source_file": "Рекомендации_после_хир_вмешательства.docx",
+      "content": ", имплантации, костной пластики.\nЛекарственные препараты:\n1. Антибиотик:\nНеобходимо начать за час до операции ДА    /    НЕТ.\nамоксициллин+клавулановая кислота (амоксиклав/аугментин) 1000 мг (875 мг + 125 мг) –1 таблетка\nпродолжить: 2 р/день – 5 дней;\nПри операции под общим наркозом принимать заранее препарат не нужно, антибиотик будет вводиться во время наркоза!\n2. Обезболивающее: Нимесил 100 мг по 1 пакетику 2 раза/сутки, после еды – по потребности;\n3. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01%– начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n4. Эубиотик: Линекс по 2 капсулы 3 раза/сут – 5 дней;\n5. Антигистаминный препарат: Дезлоратадин 5 мг, по 1 таб 1 р/день - 5 дней;\n6. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После операции необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В день операции и на следующий нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не нагибайтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной стороне от операции\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\n• Сроки интеграции имплантатов на верхней челюсти составляют 4-6 месяцев, на нижней: 3-4 месяца\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику."
+    }
+  },
+  {
+    "id": "aftercare_post_sinus_lift",
+    "title": "Рекомендации после синус-лифтинга",
+    "content": ", пластики ороантрального сообщения\nЛекарственные препараты:\n1. Антибиотик НАЧАТЬ ЗА ЧАС ДО ОПЕРАЦИИ:\nамоксициллин+клавулановая кислота (амоксиклав/аугментин) 1000 мг (875 мг + 125 мг) –1 таблетка\nпродолжить: 2 р/день – 7 дней;\nПри операции под общим наркозом принимать заранее препарат не нужно, антибиотик будет вводиться во время наркоза!\n2. Полидекса с фенилэфрином спрей по 1 впрыскиванию в каждую ноздрю НА ВДОХЕ 3-5 р/день – 10 дней (обязательно запшикать перед сном);\n3. Обезболивающее: Нимесил 100 мг по 1 пакетику 2 р/сутки, после еды – по потребности;\n4. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01%– начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n5. Эубиотик (для микрофлоры кишечника): Линекс по 2 капсулы 3 раза/сут – 7 дней;;\n6. Антигистаминный препарат: Дезлоратадин 5 мг, по 1 таб 1 р/день - 7 дней\n7. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После удаления зуба необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В этот и на следующий день нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не наклоняйтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной от удаляемой стороне или на спине\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\n• Исключить полеты на самолете в течение 2 недель, далее при перелетах иметь Ксилометазолин 0,1%, капать в нос по 2-3 капли в каждую ноздрю перед взлетом и посадкой\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику.",
+    "source": "aftercare_recommendations.yaml",
+    "source_type": "aftercare",
+    "entity_type": "aftercare_recommendation",
+    "entity_id": "post_sinus_lift",
+    "token_count": 1102,
+    "raw_data": {
+      "procedure_type": "post_sinus_lift",
+      "title": "Рекомендации после синус-лифтинга",
+      "source_file": "Рекомендации_после_хир_вмешательства.docx",
+      "content": ", пластики ороантрального сообщения\nЛекарственные препараты:\n1. Антибиотик НАЧАТЬ ЗА ЧАС ДО ОПЕРАЦИИ:\nамоксициллин+клавулановая кислота (амоксиклав/аугментин) 1000 мг (875 мг + 125 мг) –1 таблетка\nпродолжить: 2 р/день – 7 дней;\nПри операции под общим наркозом принимать заранее препарат не нужно, антибиотик будет вводиться во время наркоза!\n2. Полидекса с фенилэфрином спрей по 1 впрыскиванию в каждую ноздрю НА ВДОХЕ 3-5 р/день – 10 дней (обязательно запшикать перед сном);\n3. Обезболивающее: Нимесил 100 мг по 1 пакетику 2 р/сутки, после еды – по потребности;\n4. Ротовые ванночки водный раствор хлоргексидина 0,05% / мирамистин 0,01%– начать ЧЕРЕЗ ДЕНЬ после операции: 7 дней, 3 р/день, НЕ полоскать.\n5. Эубиотик (для микрофлоры кишечника): Линекс по 2 капсулы 3 раза/сут – 7 дней;;\n6. Антигистаминный препарат: Дезлоратадин 5 мг, по 1 таб 1 р/день - 7 дней\n7. Метрогил дента  2 р/день 10 дней, АСЕПТА Бальзам для десен адгезивный 2 р/день 10 дней;\n\nРекомендации:\n• После удаления зуба необходимо прикладывают лед к щеке на 15-20 минут с перерывом 30 мин. (4-5 раз).\n• Сукровичное отделяемое из раны является нормальным в течение нескольких часов после удаления.\n• После того, как вы вышли от стоматолога, не полощите рану и не сплевывайте образующиеся сгустки, иначе вы вымоете образовавшийся сгусток в лунке от удаленного зуба, и начнется кровотечение.\n• При возникновении кровотечения положите на рану стерильный марлевый тампон /бинт и прикусите его таким образом, чтобы материал плотно прилегал к ране. В случае, если кровотечение не прекращается, немедленно обратитесь в клинику.\n• После удаления зуба пищу рекомендуется принимать не ранее, чем через 2 часа, чтобы не удалить сгусток крови в лунке зуба, который выполняет нужную защитную и восстановительную функцию.\n• В этот и на следующий день нельзя употреблять горячую, жесткую пищу и пищу, требующую длительного пережевывания, исключить спиртное, крепкий чай и кофе. Жевать на оперированной стороне не рекомендуется.\n• После прекращения действия анестезии может возникнуть боль. По необходимости принимайте болеутоляющие средства, рекомендованные врачом. Если же боли не пройдут или усилятся в течение 4-5 дней, необходимо обратиться к врачу.\n• После удаления зуба необходимо избегать физических нагрузок. Не наклоняйтесь и не поднимайте тяжелые предметы. Не принимайте горячие ванны. Не ходите в баню минимум 2 недели.\n• Спать рекомендуется на противоположной от удаляемой стороне или на спине\n• Наличие послеоперационного отека является нормой. Отек возникает в течение нескольких часов и может нарастать до нескольких дней. Максимальный отек наблюдается на третий день после операции, затем начинает спадать, но может сохраняться у некоторых пациентов более 7 дней.\n• Ни в коем случае не применяйте теплый компресс!\n• При чистке зубов не затрагивайте область раны. Ротовые ванночки осуществлять на следующий день после удаления. Надо набрать на больную сторону, подержать и сплюнуть после каждого приема пищи.\n• В день удаления не садитесь за руль, если вы принимали болеутоляющие медикаменты.\n• На месте удаленного зуба остается лунка, которая эпителизируется через 2 недели, костная ткань образуется в течение 3 месяцев, полное заживление и ремоделирование костной ткани проходит до 12 месяцев.\n• Исключить полеты на самолете в течение 2 недель, далее при перелетах иметь Ксилометазолин 0,1%, капать в нос по 2-3 капли в каждую ноздрю перед взлетом и посадкой\nНазначаемый препарат, дозировка и режим применения могут отличаться в зависимости от назначений лечащего врача.\nПри наличии непереносимости, аллергической реакции необходимо сообщить об этом лечащему врачу. При развитии признаков аллергии и/или непереносимости препарата – незамедлительно сообщить в клинику."
+    }
+  },
+  {
+    "id": "doctor_1",
+    "title": "Ермаков Александр Владимирович — Ортодонтия",
+    "content": "Ермаков Александр Владимирович — врач-ортодонт (Ортодонтия), стаж 7 лет. Клинические случаи: неправильный прикус, скученность зубов, щель между зубами, щелкает сустав, неровные зубы. Жалобы пациентов: у меня неправильный прикус, меня беспокоит скрежет зубами во сне, у меня болит в области сустава, у меня щелкает челюсть во время открывании рта/приема пищи, хочу убрать щель между зубами, у меня кривые зубы, у ребенка не до конца закрывается рот, у ребенка нет места для прорезывания зубов. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "1",
+    "token_count": 151,
+    "raw_data": {
+      "id": 1,
+      "full_name": "Ермаков Александр Владимирович",
+      "specialization": "Ортодонтия",
+      "experience_years": 7,
+      "clinical_cases": [
+        "неправильный прикус",
+        "скученность зубов",
+        "щель между зубами",
+        "щелкает сустав",
+        "неровные зубы"
+      ],
+      "patient_complaints": [
+        "у меня неправильный прикус",
+        "меня беспокоит скрежет зубами во сне",
+        "у меня болит в области сустава",
+        "у меня щелкает челюсть во время открывании рта/приема пищи",
+        "хочу убрать щель между зубами",
+        "у меня кривые зубы",
+        "у ребенка не до конца закрывается рот",
+        "у ребенка нет места для прорезывания зубов"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_2",
+    "title": "Демин Евгений Дмитриевич — Хирургическая стоматология",
+    "content": "Демин Евгений Дмитриевич — врач-хирург (Хирургическая стоматология), стаж 3 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы/языка, недостаток костный ткани, периостит, имплантация, одномоментная имплантация, имплантация по хирургическому шаблону, имплантация по принципу all-on 4, сверхкомплектные зубы, альвеолит, свищ, флюс. Жалобы пациентов: не могу кушать на левой/правой стороне из-за отсутствующего зуба, чувствую припухлость щеки, хочу установить имплант, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит зуб мудрости, у меня отсутствуют зубы на верхней/нижней челюсти, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила шарик на десне. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "2",
+    "token_count": 237,
+    "raw_data": {
+      "id": 2,
+      "full_name": "Демин Евгений Дмитриевич",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 3,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы/языка",
+        "недостаток костный ткани",
+        "периостит",
+        "имплантация",
+        "одномоментная имплантация",
+        "имплантация по хирургическому шаблону",
+        "имплантация по принципу all-on 4",
+        "сверхкомплектные зубы",
+        "альвеолит",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "не могу кушать на левой/правой стороне из-за отсутствующего зуба",
+        "чувствую припухлость щеки",
+        "хочу установить имплант",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня болит зуб мудрости",
+        "у меня отсутствуют зубы на верхней/нижней челюсти",
+        "мне натирает щеку с левой/правой стороны",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила шарик на десне"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_3",
+    "title": "Конновская Алена Евгеньевна — Детская стоматология",
+    "content": "Конновская Алена Евгеньевна — врач-детский стоматолог (Детская стоматология), стаж 3 лет. Клинические случаи: кариес, пульпит, налет на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: мой ребенок ощущает боль от горячего/холодного/при жевании, у ребенка откололся зуб/пломба, обнаружила у моего ребенка на зубах черные дырочки, у моего ребенка налет на зубах, у ребенка крошится зуб, увидели у ребенка шишку возле зуба, заметили легкий отек десны у ребенка, у ребенка сломан передний зуб, у ребенка ноющая боль в зубе. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "3",
+    "token_count": 172,
+    "raw_data": {
+      "id": 3,
+      "full_name": "Конновская Алена Евгеньевна",
+      "specialization": "Детская стоматология",
+      "experience_years": 3,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "мой ребенок ощущает боль от горячего/холодного/при жевании",
+        "у ребенка откололся зуб/пломба",
+        "обнаружила у моего ребенка на зубах черные дырочки",
+        "у моего ребенка налет на зубах",
+        "у ребенка крошится зуб",
+        "увидели у ребенка шишку возле зуба",
+        "заметили легкий отек десны у ребенка",
+        "у ребенка сломан передний зуб",
+        "у ребенка ноющая боль в зубе"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_4",
+    "title": "Батылин Александр Александрович — Хирургическая стоматология",
+    "content": "Батылин Александр Александрович — врач-хирург (Хирургическая стоматология), стаж 17 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы/языка, недостаток костный ткани, периостит, имплантация, одномоментная имплантация, имплантация по хирургическому шаблону, имплантация по принципу all-on 4, сверхкомплектные зубы, альвеолит, свищ, флюс. Жалобы пациентов: не могу кушать на левой/правой стороне из-за отсутствующего зуба, чувствую припухлость щеки, хочу установить имплант, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит зуб мудрости, у меня отсутствуют зубы на верхней/нижней челюсти, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила шарик на десне. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "4",
+    "token_count": 239,
+    "raw_data": {
+      "id": 4,
+      "full_name": "Батылин Александр Александрович",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 17,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы/языка",
+        "недостаток костный ткани",
+        "периостит",
+        "имплантация",
+        "одномоментная имплантация",
+        "имплантация по хирургическому шаблону",
+        "имплантация по принципу all-on 4",
+        "сверхкомплектные зубы",
+        "альвеолит",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "не могу кушать на левой/правой стороне из-за отсутствующего зуба",
+        "чувствую припухлость щеки",
+        "хочу установить имплант",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня болит зуб мудрости",
+        "у меня отсутствуют зубы на верхней/нижней челюсти",
+        "мне натирает щеку с левой/правой стороны",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила шарик на десне"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_5",
+    "title": "Мигачёв Алексей Сергеевич — Хирургическая стоматология",
+    "content": "Мигачёв Алексей Сергеевич — врач-хирург (Хирургическая стоматология), стаж 4 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы/языка, недостаток костный ткани, периостит, имплантация, одномоментная имплантация, имплантация по хирургическому шаблону, имплантация по принципу all-on 4, сверхкомплектные зубы, альвеолит, свищ, флюс. Жалобы пациентов: не могу кушать на левой/правой стороне из-за отсутствующего зуба, чувствую припухлость щеки, хочу установить имплант, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит зуб мудрости, у меня отсутствуют зубы на верхней/нижней челюсти, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила шарик на десне. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "5",
+    "token_count": 241,
+    "raw_data": {
+      "id": 5,
+      "full_name": "Мигачёв Алексей Сергеевич",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 4,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы/языка",
+        "недостаток костный ткани",
+        "периостит",
+        "имплантация",
+        "одномоментная имплантация",
+        "имплантация по хирургическому шаблону",
+        "имплантация по принципу all-on 4",
+        "сверхкомплектные зубы",
+        "альвеолит",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "не могу кушать на левой/правой стороне из-за отсутствующего зуба",
+        "чувствую припухлость щеки",
+        "хочу установить имплант",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня болит зуб мудрости",
+        "у меня отсутствуют зубы на верхней/нижней челюсти",
+        "мне натирает щеку с левой/правой стороны",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила шарик на десне"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_6",
+    "title": "Абраамян Андела Корюновна — Терапевтическая стоматология",
+    "content": "Абраамян Андела Корюновна — врач-терапевт (Терапевтическая стоматология), стаж 17 лет. Клинические случаи: кариес, пульпит, налет/камень на зубах, художественная реставрация, периодонтит, подвижность зубов любой степени, скол зуба, гингивит. Жалобы пациентов: у меня откололся зуб/пломба, ощущаю боль на горячее/холодное/при накусывании, я обнаружила кровоточивость десен при чистке зубов, хочу сделать реставрацию передних зубов, у меня воспаленные десна во рту, у меня застревает пища в зубах, хочу убрать на зубах зубной камень/налет, ощущаю неприятный запах изо рта, заметил подвижность зубов, чувствую болезненную припухлость возле зуба, у меня оголилась десна. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "6",
+    "token_count": 217,
+    "raw_data": {
+      "id": 6,
+      "full_name": "Абраамян Андела Корюновна",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 17,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет/камень на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "подвижность зубов любой степени",
+        "скол зуба",
+        "гингивит"
+      ],
+      "patient_complaints": [
+        "у меня откололся зуб/пломба",
+        "ощущаю боль на горячее/холодное/при накусывании",
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу сделать реставрацию передних зубов",
+        "у меня воспаленные десна во рту",
+        "у меня застревает пища в зубах",
+        "хочу убрать на зубах зубной камень/налет",
+        "ощущаю неприятный запах изо рта",
+        "заметил подвижность зубов",
+        "чувствую болезненную припухлость возле зуба",
+        "у меня оголилась десна"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_7",
+    "title": "Булатов Руслан Тальгатович — Ортопедическая стоматология",
+    "content": "Булатов Руслан Тальгатович — врач-ортопед (Ортопедическая стоматология), стаж 25 лет. Клинические случаи: протезирование на зубах и имплантах, протезирование челюсти, протезирование при стираемости, ортопедическое восстановление. Жалобы пациентов: у меня слетела коронка, хочу восстановить зуб коронкой, у меня отсутствуют зубы, мне нечем жевать, натирает протез, ощущаю дискомфорт под коронкой, мне не нравится внешний вид зубов, хочу снять коронки, у меня повышенная стираемость зубов. Методы диагностики: Оттиски, Сканирование.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "7",
+    "token_count": 161,
+    "raw_data": {
+      "id": 7,
+      "full_name": "Булатов Руслан Тальгатович",
+      "specialization": "Ортопедическая стоматология",
+      "experience_years": 25,
+      "clinical_cases": [
+        "протезирование на зубах и имплантах",
+        "протезирование челюсти",
+        "протезирование при стираемости",
+        "ортопедическое восстановление"
+      ],
+      "patient_complaints": [
+        "у меня слетела коронка",
+        "хочу восстановить зуб коронкой",
+        "у меня отсутствуют зубы",
+        "мне нечем жевать",
+        "натирает протез",
+        "ощущаю дискомфорт под коронкой",
+        "мне не нравится внешний вид зубов",
+        "хочу снять коронки",
+        "у меня повышенная стираемость зубов"
+      ],
+      "diagnostics_methods": [
+        "Оттиски",
+        "Сканирование"
+      ]
+    }
+  },
+  {
+    "id": "doctor_8",
+    "title": "Васильева Елена Владимировна — Терапевтическая стоматология",
+    "content": "Васильева Елена Владимировна — врач-терапевт (Терапевтическая стоматология), стаж 39 лет. Клинические случаи: кариес, пульпит, налет/камень на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: у меня откололся зуб/пломба, ощущаю боль на горячее/холодное/при накусывании, я обнаружила кровоточивость десен при чистке зубов, хочу сделать реставрацию передних зубов, у меня воспаленные десна во рту, у меня застревает пища в зубах, хочу убрать на зубах зубной камень/налет, ощущаю неприятный запах изо рта. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "8",
+    "token_count": 176,
+    "raw_data": {
+      "id": 8,
+      "full_name": "Васильева Елена Владимировна",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 39,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет/камень на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "у меня откололся зуб/пломба",
+        "ощущаю боль на горячее/холодное/при накусывании",
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу сделать реставрацию передних зубов",
+        "у меня воспаленные десна во рту",
+        "у меня застревает пища в зубах",
+        "хочу убрать на зубах зубной камень/налет",
+        "ощущаю неприятный запах изо рта"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_9",
+    "title": "Емелина Татьяна Евгеньевна — Детская стоматология",
+    "content": "Емелина Татьяна Евгеньевна — врач-детский стоматолог (Детская стоматология), стаж 6 лет. Клинические случаи: кариес, пульпит, налет на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: мой ребенок ощущает боль от горячего/холодного/при жевании, у ребенка откололся зуб/пломба, обнаружила у моего ребенка на зубах черные дырочки, у моего ребенка налет на зубах, у ребенка крошится зуб, увидели у ребенка шишку возле зуба, заметили легкий отек десны возле зуба у ребенка, у ребенка сломан передний зуб, у ребенка ноющая боль в зубе. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "9",
+    "token_count": 174,
+    "raw_data": {
+      "id": 9,
+      "full_name": "Емелина Татьяна Евгеньевна",
+      "specialization": "Детская стоматология",
+      "experience_years": 6,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "мой ребенок ощущает боль от горячего/холодного/при жевании",
+        "у ребенка откололся зуб/пломба",
+        "обнаружила у моего ребенка на зубах черные дырочки",
+        "у моего ребенка налет на зубах",
+        "у ребенка крошится зуб",
+        "увидели у ребенка шишку возле зуба",
+        "заметили легкий отек десны возле зуба у ребенка",
+        "у ребенка сломан передний зуб",
+        "у ребенка ноющая боль в зубе"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_10",
+    "title": "Живора Инна Григорьевна — Ортодонтия",
+    "content": "Живора Инна Григорьевна — врач-ортодонт (Ортодонтия), стаж 4 лет. Клинические случаи: неправильный прикус, скученность зубов, щель между зубами, щелкает сустав, неровные зубы. Жалобы пациентов: у меня неправильный прикус, меня беспокоит скрежет зубами во сне, у меня болит в области сустава, у меня щелкает челюсть во время открывании рта/приема пищи, хочу убрать щель между зубами, у меня кривые зубы, у ребенка не до конца закрывается рот, у ребенка нет места для прорезывания зубов. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "10",
+    "token_count": 153,
+    "raw_data": {
+      "id": 10,
+      "full_name": "Живора Инна Григорьевна",
+      "specialization": "Ортодонтия",
+      "experience_years": 4,
+      "clinical_cases": [
+        "неправильный прикус",
+        "скученность зубов",
+        "щель между зубами",
+        "щелкает сустав",
+        "неровные зубы"
+      ],
+      "patient_complaints": [
+        "у меня неправильный прикус",
+        "меня беспокоит скрежет зубами во сне",
+        "у меня болит в области сустава",
+        "у меня щелкает челюсть во время открывании рта/приема пищи",
+        "хочу убрать щель между зубами",
+        "у меня кривые зубы",
+        "у ребенка не до конца закрывается рот",
+        "у ребенка нет места для прорезывания зубов"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_11",
+    "title": "Заволжский Александр Михайлович — Хирургическая стоматология",
+    "content": "Заволжский Александр Михайлович — врач-хирург (Хирургическая стоматология), стаж 41 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы, сверхкомплектные зубы, верхнечелюстной синусит, врожденные расщелины губы и неба, выступающее ухо, гемангиома, доброкачественные новообразования, атерома шеи и лица, периостит, альвеолит, эпулис, свищ, флюс. Жалобы пациентов: чувствую припухлость щеки, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит ВЧ/НЧ, у меня воспалилась и отекла десна в области зуба, у меня болит зуб мудрости, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила гной возле зуба, обнаружила шарик на десне, у меня затрудненое дыхание, беспокоят периодические кровотечения из носа, у меня торчат уши, заметил образование на лице, ощущаю образование в ротовой полости, у меня щелкает челюсть. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "11",
+    "token_count": 286,
+    "raw_data": {
+      "id": 11,
+      "full_name": "Заволжский Александр Михайлович",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 41,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы",
+        "сверхкомплектные зубы",
+        "верхнечелюстной синусит",
+        "врожденные расщелины губы и неба",
+        "выступающее ухо",
+        "гемангиома",
+        "доброкачественные новообразования",
+        "атерома шеи и лица",
+        "периостит",
+        "альвеолит",
+        "эпулис",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "чувствую припухлость щеки",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня болит ВЧ/НЧ",
+        "у меня воспалилась и отекла десна в области зуба",
+        "у меня болит зуб мудрости",
+        "мне натирает щеку с левой/правой стороны",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила гной возле зуба",
+        "обнаружила шарик на десне",
+        "у меня затрудненое дыхание",
+        "беспокоят периодические кровотечения из носа",
+        "у меня торчат уши",
+        "заметил образование на лице",
+        "ощущаю образование в ротовой полости",
+        "у меня щелкает челюсть"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_12",
+    "title": "Золин Павел Евгеньевич — Терапевтическая стоматология",
+    "content": "Золин Павел Евгеньевич — врач-терапевт (Терапевтическая стоматология), стаж 1 лет. Клинические случаи: налет/камень на зубах. Жалобы пациентов: я обнаружила кровоточивость десен при чистке зубов, хочу убрать на зубах зубной камень/налет. Методы диагностики: Осмотр.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "12",
+    "token_count": 78,
+    "raw_data": {
+      "id": 12,
+      "full_name": "Золин Павел Евгеньевич",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 1,
+      "clinical_cases": [
+        "налет/камень на зубах"
+      ],
+      "patient_complaints": [
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу убрать на зубах зубной камень/налет"
+      ],
+      "diagnostics_methods": [
+        "Осмотр"
+      ]
+    }
+  },
+  {
+    "id": "doctor_13",
+    "title": "Куприянов Илья Александрович — Ортопедическая стоматология",
+    "content": "Куприянов Илья Александрович — врач-ортопед (Ортопедическая стоматология), стаж 4 лет. Клинические случаи: протезирование на зубах и имплантах, протезирование челюсти, протезирование при стираемости, ортопедическое восстановление. Жалобы пациентов: у меня слетела коронка, хочу восстановить зуб коронкой, у меня отсутствуют зубы, мне нечем жевать, натирает протез, ощущаю дискомфорт под коронкой, мне не нравится внешний вид зубов, хочу снять коронки, у меня повышенная стираемость зубов. Методы диагностики: Оттиски, Сканирование.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "13",
+    "token_count": 159,
+    "raw_data": {
+      "id": 13,
+      "full_name": "Куприянов Илья Александрович",
+      "specialization": "Ортопедическая стоматология",
+      "experience_years": 4,
+      "clinical_cases": [
+        "протезирование на зубах и имплантах",
+        "протезирование челюсти",
+        "протезирование при стираемости",
+        "ортопедическое восстановление"
+      ],
+      "patient_complaints": [
+        "у меня слетела коронка",
+        "хочу восстановить зуб коронкой",
+        "у меня отсутствуют зубы",
+        "мне нечем жевать",
+        "натирает протез",
+        "ощущаю дискомфорт под коронкой",
+        "мне не нравится внешний вид зубов",
+        "хочу снять коронки",
+        "у меня повышенная стираемость зубов"
+      ],
+      "diagnostics_methods": [
+        "Оттиски",
+        "Сканирование"
+      ]
+    }
+  },
+  {
+    "id": "doctor_14",
+    "title": "Лисин Валерий Константинович — Хирургическая стоматология",
+    "content": "Лисин Валерий Константинович — врач-хирург (Хирургическая стоматология), стаж 39 лет. Клинические случаи: отит, перфорация барабанной перепонки, храп, аденоидит, инородное тело в носу/гортани, ринит. Жалобы пациентов: я плохо слышу, у меня болит ухо, чувствую инородный объект в ухе, у меня гнойные выделения из носа, храплю во сне, мне мешает что-то в горле. Методы диагностики: Осмотр.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "14",
+    "token_count": 129,
+    "raw_data": {
+      "id": 14,
+      "full_name": "Лисин Валерий Константинович",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 39,
+      "clinical_cases": [
+        "отит",
+        "перфорация барабанной перепонки",
+        "храп",
+        "аденоидит",
+        "инородное тело в носу/гортани",
+        "ринит"
+      ],
+      "patient_complaints": [
+        "я плохо слышу",
+        "у меня болит ухо",
+        "чувствую инородный объект в ухе",
+        "у меня гнойные выделения из носа",
+        "храплю во сне",
+        "мне мешает что-то в горле"
+      ],
+      "diagnostics_methods": [
+        "Осмотр"
+      ]
+    }
+  },
+  {
+    "id": "doctor_15",
+    "title": "Молгачева Оксана Александровна — Детская стоматология",
+    "content": "Молгачева Оксана Александровна — врач-детский стоматолог (Детская стоматология), стаж 23 лет. Клинические случаи: кариес, пульпит, налет на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: мой ребенок ощущает боль от горячего/холодного/при жевании, у ребенка откололся зуб/пломба, обнаружила у моего ребенка на зубах черные дырочки, у моего ребенка налет на зубах, у ребенка крошится зуб, увидели у ребенка шишку возле зуба, заметили легкий отек десны возле зуба у ребенка, у ребенка сломан передний зуб, у ребенка ноющая боль в зубе. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "15",
+    "token_count": 178,
+    "raw_data": {
+      "id": 15,
+      "full_name": "Молгачева Оксана Александровна",
+      "specialization": "Детская стоматология",
+      "experience_years": 23,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "мой ребенок ощущает боль от горячего/холодного/при жевании",
+        "у ребенка откололся зуб/пломба",
+        "обнаружила у моего ребенка на зубах черные дырочки",
+        "у моего ребенка налет на зубах",
+        "у ребенка крошится зуб",
+        "увидели у ребенка шишку возле зуба",
+        "заметили легкий отек десны возле зуба у ребенка",
+        "у ребенка сломан передний зуб",
+        "у ребенка ноющая боль в зубе"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_16",
+    "title": "Морозова Наталья Александровна — Терапевтическая стоматология",
+    "content": "Морозова Наталья Александровна — врач-терапевт (Терапевтическая стоматология), стаж 2 лет. Клинические случаи: кариес, пульпит, налет/камень на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: у меня откололся зуб/пломба, ощущаю боль на горячее/холодное/при накусывании, я обнаружила кровоточивость десен при чистке зубов, хочу сделать реставрацию передних зубов, у меня воспаленные десна во рту, у меня застревает пища в зубах, хочу убрать на зубах зубной камень/налет, ощущаю неприятный запах изо рта. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "16",
+    "token_count": 175,
+    "raw_data": {
+      "id": 16,
+      "full_name": "Морозова Наталья Александровна",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 2,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет/камень на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "у меня откололся зуб/пломба",
+        "ощущаю боль на горячее/холодное/при накусывании",
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу сделать реставрацию передних зубов",
+        "у меня воспаленные десна во рту",
+        "у меня застревает пища в зубах",
+        "хочу убрать на зубах зубной камень/налет",
+        "ощущаю неприятный запах изо рта"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_17",
+    "title": "Никифоров Дмитрий Олегович — Хирургическая стоматология",
+    "content": "Никифоров Дмитрий Олегович — врач-хирург (Хирургическая стоматология), стаж 10 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы/языка, периостит, сверхкомплектные зубы, альвеолит, свищ, флюс. Жалобы пациентов: у моего ребенка шатается зуб, у моего ребенка флюс, нам нужно подрезать уздечку языка/губы, чувствую припухлость щеки, хочу удалить разрушенный зуб, у меня шатается зуб, у меня воспалилась/отекла десна в области зуба, у меня болит зуб мудрости, обнаружила шарик на десне. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "17",
+    "token_count": 178,
+    "raw_data": {
+      "id": 17,
+      "full_name": "Никифоров Дмитрий Олегович",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 10,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы/языка",
+        "периостит",
+        "сверхкомплектные зубы",
+        "альвеолит",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "у моего ребенка шатается зуб",
+        "у моего ребенка флюс",
+        "нам нужно подрезать уздечку языка/губы",
+        "чувствую припухлость щеки",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня воспалилась/отекла десна в области зуба",
+        "у меня болит зуб мудрости",
+        "обнаружила шарик на десне"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_18",
+    "title": "Окружнова Виктория Валерьевна — Ортодонтия",
+    "content": "Окружнова Виктория Валерьевна — врач-ортодонт (Ортодонтия), стаж 4 лет. Клинические случаи: неправильный прикус, скученность зубов, щель между зубами, щелкает сустав, неровные зубы. Жалобы пациентов: у меня неправильный прикус, меня беспокоит скрежет зубами во сне, у меня болит в области сустава, у меня щелкает челюсть во время открывании рта/приема пищи, хочу убрать щель между зубами, у меня кривые зубы, у ребенка не до конца закрывается рот, у ребенка нет места для прорезывания зубов. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "18",
+    "token_count": 154,
+    "raw_data": {
+      "id": 18,
+      "full_name": "Окружнова Виктория Валерьевна",
+      "specialization": "Ортодонтия",
+      "experience_years": 4,
+      "clinical_cases": [
+        "неправильный прикус",
+        "скученность зубов",
+        "щель между зубами",
+        "щелкает сустав",
+        "неровные зубы"
+      ],
+      "patient_complaints": [
+        "у меня неправильный прикус",
+        "меня беспокоит скрежет зубами во сне",
+        "у меня болит в области сустава",
+        "у меня щелкает челюсть во время открывании рта/приема пищи",
+        "хочу убрать щель между зубами",
+        "у меня кривые зубы",
+        "у ребенка не до конца закрывается рот",
+        "у ребенка нет места для прорезывания зубов"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_19",
+    "title": "Сибгатулина Екатерина Михайловна — Терапевтическая стоматология",
+    "content": "Сибгатулина Екатерина Михайловна — врач-терапевт (Терапевтическая стоматология), стаж 11 лет. Клинические случаи: кариес, пульпит, налет/камень на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: у меня откололся зуб/пломба, ощущаю боль на горячее/холодное/при накусывании, я обнаружила кровоточивость десен при чистке зубов, хочу сделать реставрацию передних зубов, у меня воспаленные десна во рту, у меня застревает пища в зубах, хочу убрать на зубах зубной камень/налет, ощущаю неприятный запах изо рта. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "19",
+    "token_count": 177,
+    "raw_data": {
+      "id": 19,
+      "full_name": "Сибгатулина Екатерина Михайловна",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 11,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет/камень на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "у меня откололся зуб/пломба",
+        "ощущаю боль на горячее/холодное/при накусывании",
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу сделать реставрацию передних зубов",
+        "у меня воспаленные десна во рту",
+        "у меня застревает пища в зубах",
+        "хочу убрать на зубах зубной камень/налет",
+        "ощущаю неприятный запах изо рта"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_20",
+    "title": "Сорокина Регина Вячеславовна — Терапевтическая стоматология",
+    "content": "Сорокина Регина Вячеславовна — врач-терапевт (Терапевтическая стоматология), стаж 7 лет. Клинические случаи: кариес, пульпит, налет/камень на зубах, художественная реставрация, периодонтит, скол зуба. Жалобы пациентов: у меня откололся зуб/пломба, ощущаю боль на горячее/холодное/при накусывании, я обнаружила кровоточивость десен при чистке зубов, хочу сделать реставрацию передних зубов, у меня воспаленные десна во рту, у меня застревает пища в зубах, хочу убрать на зубах зубной камень/налет, ощущаю неприятный запах изо рта. Методы диагностики: Прицельный снимок.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "20",
+    "token_count": 177,
+    "raw_data": {
+      "id": 20,
+      "full_name": "Сорокина Регина Вячеславовна",
+      "specialization": "Терапевтическая стоматология",
+      "experience_years": 7,
+      "clinical_cases": [
+        "кариес",
+        "пульпит",
+        "налет/камень на зубах",
+        "художественная реставрация",
+        "периодонтит",
+        "скол зуба"
+      ],
+      "patient_complaints": [
+        "у меня откололся зуб/пломба",
+        "ощущаю боль на горячее/холодное/при накусывании",
+        "я обнаружила кровоточивость десен при чистке зубов",
+        "хочу сделать реставрацию передних зубов",
+        "у меня воспаленные десна во рту",
+        "у меня застревает пища в зубах",
+        "хочу убрать на зубах зубной камень/налет",
+        "ощущаю неприятный запах изо рта"
+      ],
+      "diagnostics_methods": [
+        "Прицельный снимок"
+      ]
+    }
+  },
+  {
+    "id": "doctor_21",
+    "title": "Сотникова Анна Юрьевна — Хирургическая стоматология",
+    "content": "Сотникова Анна Юрьевна — врач-хирург (Хирургическая стоматология), стаж 14 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы, блефаропластика, сверхкомплектные зубы, верхнечелюстной синусит, врожденные расщелины губы и неба, выступающее ухо, гемангиома, доброкачественные новообразования, атерома шеи и лица, периостит, альвеолит, эпулис, свищ, флюс. Жалобы пациентов: чувствую припухлость щеки, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит ВЧ/НЧ, у меня воспалилась и отекла десна в области зуба, у меня болит зуб мудрости, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила шарик на десне, у меня затрудненое дыхание, беспокоят периодические кровотечения из носа, у меня торчат уши, заметил образование на лице, ощущаю образование в ротовой полости, у меня гнойные выделения из носа, храплю во сне, у меня щелкает челюсть, у меня мешки под глазами, беспокоит свисающая кожа над глазом. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "21",
+    "token_count": 318,
+    "raw_data": {
+      "id": 21,
+      "full_name": "Сотникова Анна Юрьевна",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 14,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы",
+        "блефаропластика",
+        "сверхкомплектные зубы",
+        "верхнечелюстной синусит",
+        "врожденные расщелины губы и неба",
+        "выступающее ухо",
+        "гемангиома",
+        "доброкачественные новообразования",
+        "атерома шеи и лица",
+        "периостит",
+        "альвеолит",
+        "эпулис",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "чувствую припухлость щеки",
+        "хочу удалить разрушенный зуб",
+        "у меня шатается зуб",
+        "у меня болит ВЧ/НЧ",
+        "у меня воспалилась и отекла десна в области зуба",
+        "у меня болит зуб мудрости",
+        "мне натирает щеку с левой/правой стороны",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила шарик на десне",
+        "у меня затрудненое дыхание",
+        "беспокоят периодические кровотечения из носа",
+        "у меня торчат уши",
+        "заметил образование на лице",
+        "ощущаю образование в ротовой полости",
+        "у меня гнойные выделения из носа",
+        "храплю во сне",
+        "у меня щелкает челюсть",
+        "у меня мешки под глазами",
+        "беспокоит свисающая кожа над глазом"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  },
+  {
+    "id": "doctor_22",
+    "title": "Филькин Вадим Сергеевич — Хирургическая стоматология",
+    "content": "Филькин Вадим Сергеевич — врач-хирург (Хирургическая стоматология), стаж 20 лет. Клинические случаи: ретенированные зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы, сверхкомплектные зубы, верхнечелюстной синусит, врожденные расщелины губы и неба, выступающее ухо, гемангиома, доброкачественные новообразования, атерома шеи и лица, периостит, альвеолит, эпулис, свищ, флюс. Жалобы пациентов: у меня щелкает челюсть, чувствую припухлость десны/щеки, хочу удалить разрушенный зуб, у меня болит ВЧ/НЧ, у меня шатается зуб, у меня болит зуб мудрости, хочу удалить зуб мудрости для дальнейшей установки брекет-системы, обнаружила гной возле зуба, беспокоят периодические кровотечения из носа, заметил образование на лице, ощущаю образование в ротовой полости, у меня гнойные выделения из носа, нам необходима пластика губы/языка, обнаружила шарик на десне. Методы диагностики: КТ.",
+    "source": "doctors.yaml",
+    "source_type": "doctors",
+    "entity_type": "doctor",
+    "entity_id": "22",
+    "token_count": 267,
+    "raw_data": {
+      "id": 22,
+      "full_name": "Филькин Вадим Сергеевич",
+      "specialization": "Хирургическая стоматология",
+      "experience_years": 20,
+      "clinical_cases": [
+        "ретенированные зубы мудрости любой сложности",
+        "разрушенность зубов любой сложности",
+        "пластика губы",
+        "сверхкомплектные зубы",
+        "верхнечелюстной синусит",
+        "врожденные расщелины губы и неба",
+        "выступающее ухо",
+        "гемангиома",
+        "доброкачественные новообразования",
+        "атерома шеи и лица",
+        "периостит",
+        "альвеолит",
+        "эпулис",
+        "свищ",
+        "флюс"
+      ],
+      "patient_complaints": [
+        "у меня щелкает челюсть",
+        "чувствую припухлость десны/щеки",
+        "хочу удалить разрушенный зуб",
+        "у меня болит ВЧ/НЧ",
+        "у меня шатается зуб",
+        "у меня болит зуб мудрости",
+        "хочу удалить зуб мудрости для дальнейшей установки брекет-системы",
+        "обнаружила гной возле зуба",
+        "беспокоят периодические кровотечения из носа",
+        "заметил образование на лице",
+        "ощущаю образование в ротовой полости",
+        "у меня гнойные выделения из носа",
+        "нам необходима пластика губы/языка",
+        "обнаружила шарик на десне"
+      ],
+      "diagnostics_methods": [
+        "КТ"
+      ]
+    }
+  }
+]

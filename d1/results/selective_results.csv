@@ -1,0 +1,7 @@
+eval_set,router,n,coverage,accepted_accuracy,accepted_recall_anam,defer_rate,false_negative_deferred,accepted_subset_accuracy,accepted_subset_macro_f1
+val,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,351,0.6211,0.9404,0.9865,0.3789,21,0.9404,0.8911
+test,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,730,0.6,0.9635,0.9873,0.4,59,0.9635,0.9416
+hard_test,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,355,0.7268,0.7829,0.8571,0.2732,63,0.7829,0.6173
+blind_test,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,40,0.7,1.0,1.0,0.3,4,1.0,1.0
+entity_held_out,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,100,0.43,0.9767,1.0,0.57,15,0.9767,0.9626
+extended_eval,B1.1_tfidf_lr+B2.1_bge-m3_svc_selective,101,0.3465,0.7714,0.0,0.6535,0,0.7714,0.2177

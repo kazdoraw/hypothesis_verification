@@ -1,0 +1,2 @@
+text_preview,gold,predicted,primary_tag,confidence,margin,reason
+"мне бы экстренно попасть, очень сильно болит",booking,anamnesis,simple_symptom,0.7,0.0,rule:anamnesis:hits=2

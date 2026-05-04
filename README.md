@@ -1,335 +1,265 @@
-# DS Experiments: AI Dentist
+# Medical AI AGENT — Hypothesis Verification Experiments
 
-Экспериментальные notebooks для проверки гипотез проекта AI Dentist.
-Текущий контур включает направления D1, D2 и D4.
+> Прикладные эксперименты по выбору технических подходов для модульного медицинского AI-агента (стоматология). Три независимые гипотезы — D1, D2, D4 — каждая отвечает за свой контур обработки текстового обращения пациента.
 
-## Гипотезы
+**Languages / Языки:** [Русский](#русский) · [English](#english)
 
-### D1: Surface Classifier + Routing
+---
 
-**Цель:** Проверить, что поверхностный классификатор (rule-based + ML) может дополнить LLM для роутинга сообщений.
+## Русский
 
-### D2: State Machine + JSON-Schema Intake
+### 1. О проекте
 
-**Цель:** Проверить, что state machine с JSON Schema собирает анамнез полнее, чем свободный LLM-диалог.
+Этот репозиторий — набор исследовательских экспериментов, в которых проверяются ключевые архитектурные решения для медицинского AI-агента, обрабатывающего входящий текстовый поток в стоматологическую клинику (мессенджеры, виджет на сайте, социальные сети). Идея проекта — **модульная декомпозиция вместо монолитного LLM-вызова**: каждое направление обработки решает специализированный контур (классификатор, схема извлечения данных, retrieval-стек), и каждое такое решение принимается на основе явно сформулированной гипотезы и измерений.
 
-### D4: FAQ Retrieval / Search Strategies
+Сквозной исследовательский вопрос:
 
-**Цель:** Сравнить стратегии поиска FAQ-ответов и выбрать устойчивый
-пайплайн для интеграции в production-бота.
+> Можно ли заменить или ограничить дорогие LLM-вызовы лёгкими специализированными контурами без потери качества и клинической безопасности?
 
+Внутри проекта это раскладывается в три проверяемые гипотезы.
 
-## Структура проекта
+### 2. Эксперименты
 
-```
+| ID | Тема | Что проверяли | Ключевой результат | Документация |
+|----|------|---------------|--------------------|--------------|
+| **D1** | Маршрутизация обращений | Может ли лёгкий ML-классификатор (TF-IDF + LR / BGE-M3 + SVC) безопасно заменить часть LLM-роутинга простых обращений (`faq` / `booking` / `anamnesis` / `unsupported`) при сохранении медицинской recall на симптомах. | На синтетическом корпусе ~3.3K сообщений `SimpleRouter` принимает ~51% обращений с `accepted_accuracy = 0.963` и `accepted_recall_anamnesis = 0.993` на основном тесте. Сложные/неоднозначные кейсы корректно уходят в `defer`. | [d1/EXPERIMENT_D1.md](d1/EXPERIMENT_D1.md), [d1/README.md](d1/README.md) |
+| **D2** | Структурированный сбор анамнеза | Как степень структурированности JSON-схемы извлечения (фиксированная S1 / адаптивная S2 / свободная S3) влияет на точность последующей маршрутизации к специалисту. Стенд: «модель-врач ↔ модель-пациент ↔ независимая модель-судья». | На 10 клинических сценариях S1 даёт 6/10 верных маршрутизаций, S2 — 9/10, S3 — 10/10. Адаптивная схема S2 — наиболее рациональный кандидат для продакшена (баланс качества и стоимости токенов). | [d2/EXPERIMENT_D2.md](d2/EXPERIMENT_D2.md) |
+| **D4** | Поиск ответа в базе знаний клиники (RAG для FAQ) | Какая стратегия поиска и какое представление карточек знаний дают лучший компромисс «качество ответа / сложность» для модуля FAQ. Сравнивались 7 retrieval-стратегий и 3 представления чанков. | На полном валидационном наборе из 137 вопросов простой векторный поиск (`S3` поверх `C0`) — 134/137 корректных ответов или отказов (97.8%), 22/23 правильных врачей (95.7%), 62% обязательных фактов в ответе. Усложнения (гибрид, реранкер, обогащение чанков) **не дали** устойчивого выигрыша. | [d4/EXPERIMENT_D4.md](d4/EXPERIMENT_D4.md) |
+
+Каждая гипотеза проверена изолированно, но связана с одним продуктовым контуром: D1 решает «что делать с сообщением», D2 — «какие данные собрать перед маршрутизацией к специалисту», D4 — «как ответить на информационный запрос по конкретной клинике».
+
+### 3. Структура репозитория
+
+```text
 study/
-├── README.md                           # Этот файл
-├── requirements.txt                    # Python зависимости
+├── README.md                  ← этот файл
+├── requirements.txt           ← общие зависимости проекта
 │
-├── D1_surface_classifier_routing.ipynb  # Эксперимент D1
-├── D2_state_machine_intake.ipynb        # Эксперимент D2
-├── D4_faq_search_comparison.ipynb       # Эксперимент D4
+├── d1/                        ← Эксперимент D1: маршрутизация обращений
+│   ├── EXPERIMENT_D1.md       ← полное описание эксперимента
+│   ├── README.md              ← операционное руководство
+│   ├── D1_domain_router_v6.ipynb
+│   ├── baselines/             ← модели и роутеры (B0..B2.5, SelectiveRouter,
+│   │                            B4HybridRouter, SimpleRouter, ComplexityGate)
+│   ├── scripts/               ← runners (train, eval, sweep, latency, plots)
+│   ├── data/                  ← синтетические splits (train/val/test/hard/blind/...)
+│   ├── results/               ← CSV/JSON метрики, PNG-фигуры
+│   ├── prompts/, ontology/, tests/
+│   └── requirements.txt
 │
-├── configs/
-│   ├── together_config.yaml            # Конфигурация LLM (Together AI)
-│   └── label_map.json                  # Маппинг меток классов
+├── d2/                        ← Эксперимент D2: схема сбора анамнеза
+│   ├── EXPERIMENT_D2.md
+│   ├── run.py                 ← CLI-оркестратор
+│   ├── schemas.py             ← S1 / S2 / S3 (независимая переменная)
+│   ├── doctor.py, patient.py, judge.py, session.py
+│   ├── cases.py               ← 10 клинических сценариев + reference_routing
+│   ├── prompts/               ← doctor, patient, judge, routing_infer
+│   └── results/               ← диалоги (case_*.json), оценки судьи, отчёты, фигуры
 │
-├── data/
-│   ├── d1_messages.csv                 # Датасет для D1 (120 сообщений)
-│   └── d2_cases.jsonl                  # Датасет для D2 (30 кейсов)
-│
-├── models/                             # Сохранённые ML модели
-│
-├── outputs/                            # Результаты экспериментов
-│   ├── figures/                        # Графики (PNG)
-│   ├── tables/                         # Метрики (CSV)
-│   ├── diagrams/                       # Диаграммы (SVG/PNG)
-│   └── reports/                        # Отчёты (MD)
-│
-├── d4/                                 # Материалы и стратегии D4
-│   ├── d4.md
-│   └── strategies/
-│
-└── utils/                              # Вспомогательные модули
-    ├── __init__.py
-    ├── llm.py                          # Together AI клиент
-    ├── data.py                         # Генерация синтетических данных
-    ├── metrics.py                      # Вычисление метрик
-    ├── schemas.py                      # JSON Schema для анамнеза
-    └── viz.py                          # Визуализации
+└── d4/                        ← Эксперимент D4: RAG для FAQ
+    ├── EXPERIMENT_D4.md
+    ├── notebooks/             ← d4_stage1_screening, d4_stage2a_representation
+    ├── strategies/            ← lexical, vector, hybrid, hybrid_rerank, tiered, ...
+    ├── pipeline/              ← chunker, enrichment, llm_runner, orchestrator
+    ├── analysis/              ← loaders, plots, reporting, significance, ...
+    ├── evaluation/            ← retrieval / deterministic / nli_checker / llm_judge
+    ├── data_gen/              ← генерация и парсинг базы знаний
+    ├── raw_data/kb/           ← база знаний клиники (прайс, врачи, рекомендации)
+    ├── outputs/runs/{run_id}/ ← версионированные результаты прогонов
+    ├── configs/, prompts/, tests/
+    └── requirements.txt
 ```
 
-## Установка
+### 4. Установка
 
-### 1. Создайте виртуальное окружение
-
-```bash
-cd study
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# или
-.venv\Scripts\activate     # Windows
-```
-
-### 2. Установите зависимости
+Требования: Python 3.12+ (рекомендуется 3.13), macOS arm64 / Linux x86_64.
 
 ```bash
+git clone https://github.com/kazdoraw/hypothesis_verification.git
+cd hypothesis_verification
+
+python3 -m venv .venv
+source .venv/bin/activate
+
 pip install -r requirements.txt
+# Для D1/D4 при необходимости можно установить локальные requirements:
+# pip install -r d1/requirements.txt
+# pip install -r d4/requirements.txt
 ```
 
-### 3. Настройте API ключ Together AI
-
-Добавьте ключ в `configs/together_config.yaml`:
-
-```yaml
-provider: together
-api_key_env: tgp_v1_YOUR_API_KEY_HERE  # Ваш ключ
-
-models:
-  router:
-    name: meta-llama/Llama-3.3-70B-Instruct-Turbo
-    temperature: 0.1
-    max_tokens: 256
-```
-
-Или через переменную окружения:
+Для экспериментов, которые делают вызовы внешних LLM (D2 целиком, D4 частично, D1 только при пересборке датасета), потребуется ключ OpenRouter:
 
 ```bash
-export TOGETHER_API_KEY=tgp_v1_YOUR_API_KEY_HERE
+export OPENROUTER_API_KEY=sk-or-...
 ```
 
-## Запуск экспериментов
+### 5. Воспроизведение
 
-### Jupyter Lab
+| Эксперимент | Точка входа | Что произойдёт |
+|-------------|-------------|----------------|
+| D1 | `jupyter notebook d1/D1_domain_router_v6.ipynb` или `python -m d1.scripts.run_baselines` | Тренировка 11 baseline-моделей, расчёт closed-set / selective / hybrid / SimpleRouter метрик, bootstrap CI, paired-тесты, генерация фигур. |
+| D2 | `python -m d2.run --cases all` | 10 кейсов × 3 схемы извлечения = 30 прогонов «врач ↔ пациент». `--judge` — оценка судьёй. `--report-only` — пересборка отчёта без LLM-вызовов. |
+| D4 | `jupyter notebook d4/notebooks/d4_stage1_screening.ipynb` или `d4_stage2a_representation.ipynb` | Можно перезапустить прогон LLM (`run_new`) или пересобрать аналитику и фигуры из ранее сохранённого `outputs/runs/{run_id}/` (`analyze_existing`). |
+
+Тесты:
 
 ```bash
-cd study
-jupyter lab
+python -m pytest d1/tests -q
+python -m pytest d4/tests -q
 ```
 
-Откройте нужный notebook:
-- `D1_surface_classifier_routing.ipynb` — эксперимент D1
-- `D2_state_machine_intake.ipynb` — эксперимент D2
-- `D4_faq_search_comparison.ipynb` — эксперимент D4
+> Бинарные артефакты (обученные модели `*.joblib`/`*.bin`, выгрузки прогонов `*.jsonl`, кэши обогащения) не хранятся в репозитории. Они автоматически пересобираются при запуске. CSV-метрики, JSON-отчёты и PNG-фигуры — закоммичены, чтобы результаты можно было просмотреть без выполнения кода.
+>
+> Сырая база знаний клиники (`d4/raw_data/kb/`: прайс, врачи, контакты, рекомендации в `.docx`) **не публикуется** в репозитории. Файл `d4/data/chunks_frozen.json` (уже разобранные чанки) остаётся под git и достаточен для режима `analyze_existing` в notebook'ах D4. Чтобы перезапустить retrieval с нуля, нужно подложить собственную `d4/raw_data/kb/` с такой же структурой (см. `d4/configs/experiment.yaml`).
 
-### Порядок выполнения ячеек
+### 6. Стек технологий
 
-1. **Setup** — импорты, seed, пути
-2. **Data** — загрузка/генерация данных
-3. **Baseline A** — LLM classification/dialog
-4. **Proposed B** — ML classifier / State Machine
-5. **Evaluation** — сравнение метрик
-6. **Visualization** — графики и таблицы
-7. **Export** — сохранение артефактов
+- **Python:** 3.12+
+- **Классические ML-модели:** scikit-learn (LogisticRegression, LinearSVC, GroupShuffleSplit), fastText (sub-word).
+- **Энкодеры (dense retrieval / классификация):** `BAAI/bge-m3`, `intfloat/multilingual-e5-small` через `sentence-transformers`.
+- **LLM-вызовы:** OpenRouter (Qwen3, Grok-4.1, GPT-5.x, Llama 3.3) — единый API для генерации, диалогов и судейства.
+- **Статистика:** bootstrap 95% CI (BCa), paired McNemar / paired bootstrap.
+- **Эксперименты и отчёты:** Jupyter, pandas, matplotlib, seaborn.
+- **Качество кода:** pytest, конфигурируемые pipeline-флаги, версионированные `outputs/runs/{run_id}/` с `config_snapshot.yaml` и `manifest.json`.
 
-## Notebooks
+### 7. Ограничения и оговорки
 
-### D1: Surface Classifier + Routing
+- Все три корпуса — синтетические или частично синтетические; результаты переносятся на реальный поток обращений только через отдельный пилот.
+- D1 и D2 проверяют только первое сообщение / однократный диалог; multi-turn-сценарии вне scope.
+- D4 проверен на базе знаний одной клиники (63 карточки, 137 вопросов); генерализация на другие клиники и медицинские домены требует отдельной валидации.
+- Бенчмарки латентности — micro-benchmark на CPU; production-SLA нужно мерить отдельно с учётом cold start, очередей и кэширования.
+- Эксперименты не доказывают коммерческой эффективности продукта — они обосновывают **архитектурный выбор** для модульного медицинского AI-агента.
 
-| Секция | Описание |
-|--------|----------|
-| Baseline A | LLM (Together AI) классифицирует intent напрямую |
-| Proposed B | Rule-based правила + TF-IDF + ML модели |
-| ML Models | LogisticRegression, LinearSVC, RandomForest |
-| Metrics | Accuracy, F1 (macro/weighted/per-class), Confusion Matrix |
-| Economics | LLM calls, tokens, cost estimation |
+### 8. Лицензия
 
-**Результаты сохраняются в:**
-- `outputs/figures/d1_*.png` — графики
-- `outputs/tables/d1_*.csv` — метрики
-- `outputs/reports/D1_summary.md` — отчёт
+Проект публикуется в исследовательских целях. Все клинические сценарии и сообщения являются синтетическими и не содержат персональных данных реальных пациентов.
 
-### D2: State Machine + Intake
+---
 
-| Секция | Описание |
-|--------|----------|
-| JSON Schema | Строгая схема с условными полями по типу жалобы |
-| State Machine | Отслеживает заполненные/пропущенные поля |
-| Baseline A | LLM свободно собирает анамнез |
-| Proposed B | State Machine направляет LLM |
-| Metrics | Completion rate, turns, expert sufficient rate |
+## English
 
-**Типы жалоб (complaint_type):**
-- `acute_pain` — острая боль
-- `chronic_pain` — хроническая боль
-- `esthetics` — эстетика
-- `ortho` — ортодонтия
-- `therapy` — терапия
+### 1. About the project
 
-**Результаты сохраняются в:**
-- `outputs/figures/d2_*.png` — графики
-- `outputs/tables/d2_*.csv` — метрики
-- `outputs/diagrams/d2_state_machine.*` — диаграмма
-- `outputs/reports/D2_summary.md` — отчёт
+This repository is a set of research experiments verifying key architectural choices for a medical AI agent that processes incoming text traffic for a dental clinic (messengers, web widget, social networks). The guiding idea is **modular decomposition instead of a monolithic LLM call**: each processing direction is handled by a specialized contour (classifier, extraction schema, retrieval stack), and every such decision is grounded in an explicit, measured hypothesis.
 
-### D4: FAQ Search / Retrieval
+Cross-cutting research question:
 
-| Секция | Описание |
-|--------|----------|
-| Dataset prep | Подготовка пар вопрос-ответ и сценариев валидации |
-| Strategy compare | Сравнение keyword, template и гибридных подходов |
-| Evaluation | Precision@K, Recall@K, F1 и ошибки ранжирования |
-| Reporting | Формирование отчётов в `outputs/reports` |
+> Can we replace or constrain expensive LLM calls with lightweight specialized contours without sacrificing quality or clinical safety?
 
-**Материалы D4:**
-- `d4/d4.md` — детальное описание эксперимента
-- `d4/strategies/` — реализации стратегий поиска
-- `outputs/reports/` — отчёты и дорожные карты по улучшениям
+The project breaks this question into three testable hypotheses.
 
-## Utils модули
+### 2. Experiments
 
-### llm.py
+| ID | Topic | What was tested | Headline result | Documentation |
+|----|-------|------------------|------------------|---------------|
+| **D1** | Intent / domain routing | Whether a lightweight ML classifier (TF-IDF + LR / BGE-M3 + SVC) can safely replace part of LLM-based routing for simple messages (`faq` / `booking` / `anamnesis` / `unsupported`) while preserving medical recall on symptoms. | On a synthetic corpus of ~3.3K messages, `SimpleRouter` accepts ~51% of incoming traffic with `accepted_accuracy = 0.963` and `accepted_recall_anamnesis = 0.993` on the main test set. Hard / ambiguous cases are correctly sent to `defer`. | [d1/EXPERIMENT_D1.md](d1/EXPERIMENT_D1.md), [d1/README.md](d1/README.md) |
+| **D2** | Structured intake schema | How the rigidity of the JSON extraction schema (fixed S1 / adaptive S2 / free S3) affects downstream specialist routing. Test bench: «doctor model ↔ patient model ↔ independent judge model». | Across 10 clinical scenarios S1 yields 6/10 correct routings, S2 — 9/10, S3 — 10/10. The adaptive schema S2 is the most rational production candidate (best balance of quality and token cost). | [d2/EXPERIMENT_D2.md](d2/EXPERIMENT_D2.md) |
+| **D4** | FAQ retrieval over the clinic's knowledge base | Which retrieval strategy and which chunk representation deliver the best «answer quality / system complexity» trade-off for the FAQ module. 7 retrieval strategies × 3 chunk representations were compared. | On a 137-question validation set, plain dense retrieval (`S3` over `C0`) wins: 134/137 correct answers or refusals (97.8%), 22/23 correct doctor mentions (95.7%), 62% of gold facts present in the answer. More complex variants (hybrid, reranker, chunk enrichment) did **not** show a stable gain. | [d4/EXPERIMENT_D4.md](d4/EXPERIMENT_D4.md) |
 
-```python
-from utils import TogetherLLM
+Each hypothesis is verified in isolation but ties into a single product flow: D1 decides «what to do with the message», D2 decides «which data to collect before specialist routing», D4 decides «how to answer informational queries about a specific clinic».
 
-llm = TogetherLLM()  # Автоматически загружает ключ из конфига
+### 3. Repository layout
 
-# D1: Классификация intent
-result = llm.classify_intent("Хочу записаться на приём")
-# {'intent': 'booking', 'confidence': 0.9, 'tokens_used': 196}
-
-# D2: Сбор анамнеза
-result = llm.collect_anamnesis_free(case, history)
-# {'response': '...', 'extracted_fields': {...}, 'tokens_used': 512}
+```text
+study/
+├── README.md                  ← this file
+├── requirements.txt           ← shared project dependencies
+│
+├── d1/                        ← Experiment D1: intent routing
+│   ├── EXPERIMENT_D1.md       ← full experiment write-up
+│   ├── README.md              ← operational guide
+│   ├── D1_domain_router_v6.ipynb
+│   ├── baselines/             ← models and routers (B0..B2.5, SelectiveRouter,
+│   │                            B4HybridRouter, SimpleRouter, ComplexityGate)
+│   ├── scripts/               ← runners (train, eval, sweep, latency, plots)
+│   ├── data/                  ← synthetic splits (train/val/test/hard/blind/...)
+│   ├── results/               ← CSV/JSON metrics, PNG figures
+│   ├── prompts/, ontology/, tests/
+│   └── requirements.txt
+│
+├── d2/                        ← Experiment D2: intake schema
+│   ├── EXPERIMENT_D2.md
+│   ├── run.py                 ← CLI orchestrator
+│   ├── schemas.py             ← S1 / S2 / S3 (the independent variable)
+│   ├── doctor.py, patient.py, judge.py, session.py
+│   ├── cases.py               ← 10 clinical scenarios + reference_routing
+│   ├── prompts/               ← doctor, patient, judge, routing_infer
+│   └── results/               ← dialogs (case_*.json), judge scores, reports, figures
+│
+└── d4/                        ← Experiment D4: FAQ RAG
+    ├── EXPERIMENT_D4.md
+    ├── notebooks/             ← d4_stage1_screening, d4_stage2a_representation
+    ├── strategies/            ← lexical, vector, hybrid, hybrid_rerank, tiered, ...
+    ├── pipeline/              ← chunker, enrichment, llm_runner, orchestrator
+    ├── analysis/              ← loaders, plots, reporting, significance, ...
+    ├── evaluation/            ← retrieval / deterministic / nli_checker / llm_judge
+    ├── data_gen/              ← knowledge-base generation and parsing
+    ├── raw_data/kb/           ← clinic knowledge base (price list, doctors, aftercare)
+    ├── outputs/runs/{run_id}/ ← versioned per-run results
+    ├── configs/, prompts/, tests/
+    └── requirements.txt
 ```
 
-### data.py
+### 4. Installation
 
-```python
-from utils import load_or_generate_d1, load_or_generate_d2
+Requirements: Python 3.12+ (3.13 recommended), macOS arm64 / Linux x86_64.
 
-# Загрузить или сгенерировать D1 датасет
-df = load_or_generate_d1("data/d1_messages.csv", n=120)
-
-# Загрузить или сгенерировать D2 кейсы
-cases = load_or_generate_d2("data/d2_cases.jsonl", n=30)
-```
-
-### metrics.py
-
-```python
-from utils import compute_classification_metrics, compute_intake_metrics
-
-# D1 метрики
-metrics = compute_classification_metrics(y_true, y_pred, labels)
-
-# D2 метрики
-metrics = compute_intake_metrics(results_a, results_b)
-```
-
-### viz.py
-
-```python
-from utils import plot_confusion_matrix, plot_f1_by_class
-
-# Confusion matrix
-plot_confusion_matrix(y_true, y_pred, labels, save_path="outputs/figures/cm.png")
-
-# F1 по классам
-plot_f1_by_class(metrics, save_path="outputs/figures/f1.png")
-```
-
-### schemas.py
-
-```python
-from utils.schemas import INTAKE_SCHEMA, validate_intake, get_required_fields
-
-# Получить обязательные поля для типа жалобы
-required = get_required_fields("acute_pain")
-# ['complaint_type', 'complaint_text', 'pain_intensity', 'pain_duration', ...]
-
-# Валидировать данные
-is_valid, errors = validate_intake(data)
-```
-
-## Синтетические данные
-
-Данные генерируются автоматически при первом запуске:
-
-- **d1_messages.csv** — 120 сообщений (по 20 на класс)
-- **d2_cases.jsonl** — 30 кейсов (по 6 на тип жалобы)
-
-Все записи помечены `source="synthetic"`.
-
-## LLM Provider
-
-Используется **Together AI** с моделью `meta-llama/Llama-3.3-70B-Instruct-Turbo`.
-
-Конфигурация в `configs/together_config.yaml`:
-
-```yaml
-models:
-  router:           # Для D1 классификации
-    name: meta-llama/Llama-3.3-70B-Instruct-Turbo
-    temperature: 0.1
-    max_tokens: 256
-  
-  dialog:           # Для D2 диалогов
-    name: meta-llama/Llama-3.3-70B-Instruct-Turbo
-    temperature: 0.3
-    max_tokens: 512
-  
-  fast:             # Быстрая модель для тестов
-    name: meta-llama/Llama-3.2-3B-Instruct-Turbo
-    temperature: 0.1
-    max_tokens: 128
-```
-
-## Ожидаемые результаты
-
-### D1
-
-| Метрика | Baseline A (LLM) | Proposed B (ML) | Цель |
-|---------|------------------|-----------------|------|
-| F1 (macro) | ~0.75-0.80 | >= 0.85 | >= 0.85 |
-| LLM calls | 1 per msg | 0 | -100% |
-| Tokens | ~200 per msg | 0 | -100% |
-
-### D2
-
-| Метрика | Baseline A (Free) | Proposed B (SM) | Цель |
-|---------|-------------------|-----------------|------|
-| Required completion | 60-70% | >= 90% | >= 90% |
-| Avg turns | ~5 | ~6-7 | +1-2 |
-| Expert sufficient | ~50% | >= 70% | >= 70% |
-
-## Troubleshooting
-
-### API key not found
-
-```
-Warning: No API key found. Falling back to simulator.
-```
-
-**Решение:** Добавьте ключ в `configs/together_config.yaml` или установите переменную окружения `TOGETHER_API_KEY`.
-
-### Import errors
-
-```
-ModuleNotFoundError: No module named 'sklearn'
-```
-
-**Решение:** Установите зависимости:
 ```bash
+git clone https://github.com/kazdoraw/hypothesis_verification.git
+cd hypothesis_verification
+
+python3 -m venv .venv
+source .venv/bin/activate
+
 pip install -r requirements.txt
+# For D1 / D4 you can additionally install local requirements:
+# pip install -r d1/requirements.txt
+# pip install -r d4/requirements.txt
 ```
 
-### Graphviz not found
+Experiments that call external LLMs (D2 fully, D4 partially, D1 only when regenerating the dataset) require an OpenRouter key:
 
-```
-ExecutableNotFound: failed to execute 'dot'
-```
-
-**Решение:** Установите Graphviz:
 ```bash
-# macOS
-brew install graphviz
-
-# Ubuntu
-sudo apt install graphviz
-
-# Windows
-choco install graphviz
+export OPENROUTER_API_KEY=sk-or-...
 ```
 
+### 5. Reproduction
+
+| Experiment | Entry point | What happens |
+|------------|-------------|--------------|
+| D1 | `jupyter notebook d1/D1_domain_router_v6.ipynb` or `python -m d1.scripts.run_baselines` | Trains 11 baseline models, computes closed-set / selective / hybrid / SimpleRouter metrics, bootstrap CIs, paired tests and renders all figures. |
+| D2 | `python -m d2.run --cases all` | 10 cases × 3 schemas = 30 doctor-patient dialogs. `--judge` runs the judge model. `--report-only` rebuilds reports without any LLM calls. |
+| D4 | `jupyter notebook d4/notebooks/d4_stage1_screening.ipynb` or `d4_stage2a_representation.ipynb` | Either rerun the LLM (`run_new`) or rebuild analytics and figures from a previously saved `outputs/runs/{run_id}/` (`analyze_existing`). |
+
+Tests:
+
+```bash
+python -m pytest d1/tests -q
+python -m pytest d4/tests -q
+```
+
+> Binary artifacts (trained models `*.joblib`/`*.bin`, per-run LLM dumps `*.jsonl`, enrichment caches) are **not** stored in the repository. They are regenerated on demand. CSV metrics, JSON reports and PNG figures **are** committed so that results can be inspected without rerunning anything.
+>
+> The raw clinic knowledge base (`d4/raw_data/kb/`: price list, doctors, contacts, aftercare `.docx`) is **not published** in the repository. The `d4/data/chunks_frozen.json` file (pre-built chunks) is committed and is sufficient for the `analyze_existing` mode in the D4 notebooks. To rerun retrieval from scratch, drop your own `d4/raw_data/kb/` with the same layout (see `d4/configs/experiment.yaml`).
+
+### 6. Tech stack
+
+- **Python:** 3.12+
+- **Classical ML:** scikit-learn (LogisticRegression, LinearSVC, GroupShuffleSplit), fastText (sub-word).
+- **Encoders (dense retrieval / classification):** `BAAI/bge-m3`, `intfloat/multilingual-e5-small` via `sentence-transformers`.
+- **LLM calls:** OpenRouter (Qwen3, Grok-4.1, GPT-5.x, Llama 3.3) — single API for generation, dialog and judging.
+- **Statistics:** bootstrap 95% CI (BCa), paired McNemar / paired bootstrap.
+- **Experiment plumbing:** Jupyter, pandas, matplotlib, seaborn.
+- **Quality:** pytest, configurable pipeline flags, versioned `outputs/runs/{run_id}/` with `config_snapshot.yaml` and `manifest.json`.
+
+### 7. Caveats and limitations
+
+- All three corpora are synthetic or partially synthetic; results transfer to real traffic only through a dedicated pilot.
+- D1 and D2 only address the first message / single dialog; multi-turn scenarios are out of scope.
+- D4 was validated on the knowledge base of a single clinic (63 cards, 137 questions); generalization to other clinics and medical domains requires separate validation.
+- Latency benchmarks are CPU micro-benchmarks; production SLAs must be measured separately, accounting for cold start, queues and caching.
+- The experiments do not prove commercial viability of any product — they justify **architectural choices** for a modular medical AI agent.
+
+### 8. License
+
+Published for research purposes. All clinical scenarios and messages are synthetic and contain no personal data of real patients.

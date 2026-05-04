@@ -1,0 +1,7 @@
+eval_set,id,text,true,pred_sparse,pred_dense,error_type,urgency,subtype,source,seed_id,sparse_error,dense_error,sparse_dense_disagree
+blind_test,blind_004,"поставили пломбу неделю назад и теперь на горячее реагирует, это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,human_blind,,False,True,True
+blind_test,blind_012,"думаю про импланты, но боюсь, это же операция",anamnesis,faq,faq,anamnesis_to_faq,normal,treatment_interest,human_blind,,True,True,False
+blind_test,blind_012,"думаю про импланты, но боюсь, это же операция",anamnesis,faq,faq,both_wrong_disagreement,normal,treatment_interest,human_blind,,True,True,False
+blind_test,blind_023,а карту рассрочки прямо у вас оформляют?,faq,unsupported,faq,generic_error,normal,clinic_info,human_blind,,True,False,True
+blind_test,blind_032,"мне бы экстренно попасть, очень сильно болит",booking,anamnesis,anamnesis,both_wrong_disagreement,urgent,new_appointment,human_blind,,True,True,False
+blind_test,blind_035,а вы можете такси вызвать?,unsupported,faq,faq,both_wrong_disagreement,normal,offtopic,human_blind,,True,True,False

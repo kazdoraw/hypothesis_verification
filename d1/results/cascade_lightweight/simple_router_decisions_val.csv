@@ -1,0 +1,352 @@
+text_preview,gold,predicted,action,reason,is_rule_accept,is_complexity_defer,is_tag_policy_defer,confidence,margin,correct,primary_tag,active_tags
+Болит зуб,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+Болит от сладкого,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+Ребёнок жалуется на боль при еде,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9899,0.982,True,simple_symptom,simple_symptom
+Дёсны отёкшие и красные,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.998,0.9962,True,unclassified,
+Онемение губы после лечения,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9658,0.9358,True,unclassified,
+Выпала пломба,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Треснул зуб,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Промежутки между зубами увеличились,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9999,0.9998,True,unclassified,
+Хочу герметизацию фиссур ребёнку,anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.7879,0.5804,False,unclassified,
+Интересует костная пластика,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9996,0.9993,True,unclassified,
+Есть беспроцентная рассрочка?,faq,faq,accept,general_confident,False,False,False,0.8684,0.7753,True,simple_faq,simple_faq
+Сколько стоит КТ?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+Стоимость пломбы,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_faq
+Есть парковка?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+С какого возраста берёте детей?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+Есть седация?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Какие формы оплаты?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+Есть детский стоматолог?,faq,faq,accept,general_confident,False,False,False,0.9997,0.9995,True,unclassified,
+Сколько длится чистка?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+Анестезия общая или местная?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+Как долго действует анестезия?,faq,faq,accept,general_confident,False,False,False,0.8635,0.7286,True,unclassified,
+Есть свободное время на завтра?,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+Хочу перенести запись,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+"Можно на обед, около часу?",booking,booking,accept,general_confident,False,False,False,0.9952,0.9925,True,unclassified,
+Не буду приходить,booking,booking,defer,low_confidence,False,False,False,0.535,0.1678,False,unclassified,
+"Не нужно, отмените",booking,booking,accept,general_confident,False,False,False,0.9999,0.9999,True,unclassified,
+Убрать из расписания,booking,booking,accept,general_confident,False,False,False,0.6361,0.3321,True,unclassified,
+Удалите мою запись,booking,booking,accept,general_confident,False,False,False,0.9999,0.9997,True,simple_booking,simple_booking
+"Не приду, извините",booking,booking,accept,general_confident,False,False,False,0.6578,0.3718,True,unclassified,
+Отказ от записи,booking,booking,accept,general_confident,False,False,False,0.9748,0.9583,True,simple_booking,simple_booking
+Какая погода?,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Какой курс доллара?,unsupported,faq,accept,general_confident,False,False,False,0.9723,0.9449,False,unclassified,
+Нарисуй зуб,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Добрый день!,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+"Спасибо, пока",unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Спасибо за помощь,unsupported,unsupported,accept,general_confident,False,False,False,0.9981,0.9962,True,unclassified,
+Хочу пожаловаться на врача,unsupported,booking,accept,general_confident,False,False,False,0.9882,0.9771,False,unclassified,
+Долго ждал в очереди,unsupported,unsupported,accept,general_confident,False,False,False,0.9586,0.9185,True,unclassified,
+Очень довольна лечением,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.8383,0.6788,False,unclassified,
+Хочу написать жалобу,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9024,0.8347,False,unclassified,
+наращивание кости делаете,anamnesis,faq,accept,general_confident,False,False,False,0.9786,0.9645,False,unclassified,
+косту нарастить можно,anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.8855,0.8385,False,unclassified,
+интересует нарощ кости,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9996,0.9992,True,unclassified,
+потерял передний зуб кости нет для импланта надо наращивание что скажете,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9629,0.9268,True,unclassified,
+у жены десна ушла кость оголилась читала про наращивание кости у вас делают тако,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9578,0.9186,True,simple_symptom,simple_symptom
+сверху жевательный удалили кость тонкая хочу имплант интересует нарощ кости,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9988,0.9978,True,unclassified,
+давно без зуба кость усохла нарастить хочу подскажите про вашу процедуру,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9909,0.9869,True,unclassified,
+сделайте наращивание кости,anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.726,0.5656,False,unclassified,
+нужно нарастить кость зубную,anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.4313,0.1247,False,unclassified,
+пломба вылетела,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+отвалилась пломба чё,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9721,0.9449,True,unclassified,
+ел орехи вчера пломба выскочила дырка теперь огромная болит,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9997,0.9994,True,simple_symptom,simple_symptom
+у сына 4 года пломба выпала после шоколадки плачет не унимается,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+неделю назад ставили пломба отвалилась чую нерв открытый страшно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9866,0.978,True,unclassified,
+на работе грыз семечки пломба слетела некогда ехать срочно,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+выпала пломба из заднего зуба,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9993,0.9986,True,unclassified,
+пломба отвалилась побаливает немного,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9924,0.986,True,unclassified,
+нужна помощь с выпавшей пломбой,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.996,0.9928,True,unclassified,
+ребенку фисуры запечатать,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7764,0.5838,True,unclassified,
+герметизация щелей дите,anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.5383,0.2904,False,unclassified,
+фишуры ребенку герметик,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7764,0.5838,True,unclassified,
+дочке 6 лет жевательные зубки бороздки глубокие герметизацию фиссур хочу сделать,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9704,0.9591,True,unclassified,
+сыну 7 лет прорезались 6ки фисуры видно надо запечатать чтоб не болело потом,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8622,0.7866,True,simple_symptom,simple_symptom
+внучке 5 лет мама начиталась про кариес в бороздках герметизация фиссур нужна ср,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8383,0.6995,True,unclassified,
+мальчишке упал с качелей зуб чуток поцарапал фиссурную герметизацию делали раньш,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9975,0.996,True,unclassified,
+нужна герметизация фиссур ребенку,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9902,0.9845,True,unclassified,
+хочу запечатать фисуры у дочки,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9997,0.9995,True,unclassified,
+герметизация бороздок сыну интересует,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9967,0.9953,True,unclassified,
+на обед можно?,booking,unsupported,defer,sparse_dense_disagree,False,False,False,0.444,0.0097,False,unclassified,
+перенеси на час,booking,booking,accept,general_confident,False,False,False,0.9996,0.9992,True,unclassified,
+в обеденник?,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+утро занято работой на обед свободен запись туда перенесите,booking,booking,accept,general_confident,False,False,False,0.9967,0.9936,True,simple_booking,simple_booking
+ребёнку школа до обеда после часа могу на приём привести,booking,booking,accept,general_confident,False,False,False,0.9993,0.9989,True,simple_booking,simple_booking
+пенсионер утром в магазин хожу около часа дня дома подойду,booking,booking,accept,general_confident,False,False,False,0.7003,0.477,True,unclassified,
+боюсь зубы лечить но время на обед есть перенос туда,booking,booking,defer,low_confidence,False,False,False,0.5079,0.0236,False,unclassified,
+можно запись на обеденное время,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+подходит около часа дня?,booking,unsupported,defer,sparse_dense_disagree,False,False,False,0.7536,0.6233,False,unclassified,
+перенос на час подойдёт,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,unclassified,
+завтра место есть?,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,unclassified,
+на завтра свободно?,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+завтра чё есть?,booking,faq,accept,general_confident,False,False,False,0.9879,0.9812,False,unclassified,
+завтра утром свободно на приём работаю весь день,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+ребёнку 5 лет надо к вам завтра есть время если подойдёт,booking,booking,accept,general_confident,False,False,False,0.999,0.9984,True,unclassified,
+на выходные некогда завтра единственный шанс зписаться,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+муж завтра свободен хочет к стоматологу место найдётся ли,booking,booking,accept,general_confident,False,False,False,0.9933,0.9874,True,unclassified,
+можно на завтра к вам?,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+свободное время завтра есть?,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,simple_booking,simple_booking
+подскажите на завтра место?,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+не приду,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+отмена,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+не выйдет завтра,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+ребёнок заболел не сможем прийти завтра отмените запись,booking,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+самочувствие плохое не дойду до вас сегодня отмена,booking,booking,accept,general_confident,False,False,False,0.9856,0.9713,True,unclassified,
+на работе завал не успею отмените мой визит пожалуйста,booking,booking,accept,general_confident,False,False,False,0.9889,0.9785,True,unclassified,
+отмените запись на завтра,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+прошу отменить мой приём,booking,booking,accept,general_confident,False,False,False,0.9999,0.9998,True,simple_booking,simple_booking
+отмена,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+отмените срочно,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+заболела не смогу завтра к вам отмените мою запись на 15 число,booking,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+на работе задержка не успею в среду снимите меня с записи,booking,booking,accept,general_confident,False,False,False,0.9964,0.9945,True,simple_booking,simple_booking
+отмените мою запись,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+не нужно больше приём,booking,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+снимите с записи пожалуйста,booking,booking,accept,general_confident,False,False,False,0.9963,0.9926,True,simple_booking,simple_booking
+укол или общий сон,faq,faq,accept,general_confident,False,False,False,0.9994,0.9988,True,unclassified,
+местная анестезия или как,faq,faq,accept,general_confident,False,False,False,0.9998,0.9996,True,unclassified,
+заморозка зуба или общая чё,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9999,0.9999,False,unclassified,
+ребёнку 7 лет удаляют молочный какая анестезия общая или в десну чтоб не плакал,faq,,defer,tag_policy:simple_symptom,False,False,True,0.9973,0.9949,False,simple_symptom,simple_symptom
+начиталась в инете про общий наркоз страшно а вдруг местная лучше подскажите раз,faq,faq,accept,general_confident,False,False,False,0.797,0.646,True,unclassified,
+завтра пломбу ставить какая анестезия местная или общая не люблю когда иглой кол,faq,faq,accept,general_confident,False,False,False,0.9641,0.9305,True,unclassified,
+для чистки камня у вас укол в рот или можно общий чтоб не чувствовать ничего,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9959,0.9934,False,unclassified,
+какая анестезия местная или общая,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+при удалении какая анестезия укол или сон,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+скока доллар,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+доллар чё,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+курс бакса,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+сижу в очереди к зубному а доллар какой сейчас курс скажи,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.9147,0.8341,False,unclassified,
+привела дочку на приём курс доллара не подскажете сегодня,unsupported,booking,accept,general_confident,False,False,False,0.992,0.9841,False,simple_booking,simple_booking
+какой курс доллара сейчас,unsupported,faq,accept,general_confident,False,False,False,0.8641,0.7376,False,unclassified,
+подскажите курс доллара,unsupported,faq,accept,general_confident,False,False,False,0.96,0.9259,False,unclassified,
+зуб ноет чё,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+ребёнку 5 лет вчера упал с качелей теперь зуб ноет плачет не переставая,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9999,0.9999,True,simple_symptom,simple_symptom
+на работе вчера кофе горячий пил и зуб начал ныть весь вечер не спал,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.999,0.9985,True,unclassified,
+давно камень на зубах но сейчас задний зуб разболелся боюсь дырки,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.973,0.9465,True,simple_symptom,simple_symptom
+замёрз вчера на улице холодный ветер дул в зуб ноет жуть как,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9995,0.999,True,simple_symptom,simple_symptom
+зуб побаливает уже третий день,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,0.9999,True,unclassified,
+ноет нижний зуб,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+от сладкого ноет,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+сладкое ем стреляет,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+зуб болит от конфет,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+дочке 7 лет конфету съела зуб заныл от сладкого плачет помагите,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9998,0.9996,True,unclassified,
+вчера торт на днюху ел теперь от сладкого зуб ноет адски что делать,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9999,0.9999,True,simple_symptom,simple_symptom
+на работе шоколадку хапнул зуб начал ныть от сахара некогда болтаться,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9993,0.9988,True,simple_symptom,simple_symptom
+начиталась что дырка до нерва от сладкого стреляет боюсь срочно к вам,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+зуб реагирует на сладкое,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+побаливает от сахара зуб,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+ныт когда ем сладкое,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.813,0.7204,True,unclassified,
+ребёнок ноет когда жуёт,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9913,0.984,True,simple_symptom,simple_symptom
+сын болит при еде,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9987,0.9975,True,simple_symptom,simple_symptom
+дочке 4 года вчера конфету жевала и заплакала теперь отказывается есть твёрдое,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9415,0.8877,True,unclassified,
+сын 6 лет упал с качелей челюсть ушиблась теперь при еде плачет сильно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9999,0.9997,True,unclassified,
+ребёнку 3 годика после мороженого начал жаловаться на боль во рту когда кусает,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9079,0.8451,True,simple_symptom,simple_symptom
+внучка вчера яблоко грызла и заревела теперь яблоки и бутеры есть не хочет,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9202,0.8486,True,unclassified,
+у ребёнка зуб ноет при еде,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+дочь жалуется на боль когда ест,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7882,0.5833,True,simple_symptom,simple_symptom
+сын побаливает во рту жуя,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9826,0.9747,True,unclassified,
+десны опухли красные,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+у сына 6 лет десны красные опухли после конфет жрал вчера,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,0.9999,True,simple_symptom,simple_symptom
+на работе стресс ем фастфуд десны раздуло красные стали болят,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+курю 10 лет десны опухшие красные начал полоскать но хуже,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9976,0.9954,True,simple_symptom,simple_symptom
+читала в инете десны красные опухли страшно рак или что помагите,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.5888,0.1778,False,simple_symptom,simple_symptom
+десны красные и опухшие,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,simple_symptom,simple_symptom
+наблюдаю опухлость десен краснеют,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6472,0.4368,False,simple_symptom,simple_symptom
+губа онемела после пломбы,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.9985,0.997,False,unclassified,
+не чувствую губу чот после лечения,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.933,0.8691,True,unclassified,
+губа немеет после стоматолога,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9473,0.8979,True,unclassified,
+дочке 6 лет вчера пломбу ставили а сегодня верхняя губа онемела не шевелится,anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.8947,0.7942,False,unclassified,
+лечили корень вчера а теперь губа не чувствую уже сутки страшно что там,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9763,0.9532,True,unclassified,
+на работе пломбу делали губа нижняя онемела домой пришел а говорить неловко,anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.5291,0.1613,False,unclassified,
+после укола анестезии губа онемела не проходит читала в инете плохо кончается,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8045,0.6494,True,unclassified,
+губа онемела после лечения зуба,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9991,0.9981,True,unclassified,
+не чувствую верхнюю губу после пломбы,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.7194,0.4797,False,unclassified,
+треснул зуб,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+трещина в зубе,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+сыну 6 лет упал с качелей зуб треснул что теперь,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9962,0.993,True,unclassified,
+начиталась в инете про треснувший зуб нерв может умереть страшно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9937,0.9874,True,unclassified,
+курил кальян и зуб треснул мужику неловко идти к врачу,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9975,0.9957,True,unclassified,
+задний зуб треснул после яблока,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9997,0.9994,True,unclassified,
+зуб раскололся от мороженого,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+щели меж зубами шире стали,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9985,0.9978,True,unclassified,
+зубы чот разъехались,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+у дочки зазоры меж передними зубами увеличились ей 7 лет упала недавно может от ,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9994,0.999,True,unclassified,
+после беременности щели между зубами стали шире жую и забивается едой,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9989,0.9979,True,unclassified,
+на работе заметил промежутки меж зубов побольше раньше плотнее стояли курю много,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9852,0.972,True,simple_symptom,simple_symptom
+вчера чистил зубы увидел щели шире стали нервничаю читала в инете пародонтит,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9934,0.987,True,unclassified,
+увеличились промежутки между зубами,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,True,unclassified,
+зазоры между зубами побольше,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9999,0.9998,True,simple_symptom,simple_symptom
+есть рассрочка без процентов,faq,faq,accept,general_confident,False,False,False,0.9842,0.9701,True,simple_faq,simple_faq
+рассрочку без % делаете,faq,faq,accept,general_confident,False,False,False,0.9975,0.9954,True,unclassified,
+зарплата через неделю на лечение зубов нужна беспроцентная рассрочка у вас есть ,faq,,defer,tag_policy:simple_faq,False,False,True,0.7281,0.4984,False,simple_faq,simple_faq
+мужу имплант ставить дорого хочу в рассрочку без процентов можно ли у вас,faq,faq,accept,general_confident,False,False,False,0.9975,0.9963,True,simple_faq,simple_faq
+для ребёнка брекеты берём бабки сразу нет беспроцентная рассрочка подойдёт,faq,booking,defer,sparse_dense_disagree,False,False,False,0.4736,0.1827,False,simple_faq,simple_faq
+отбеливание планирую на свадьбу нужна рассрочка без переплаты есть,faq,faq,accept,general_confident,False,False,False,0.913,0.8532,True,unclassified,
+подскажите про беспроцентную рассрочку,faq,,defer,tag_policy:simple_faq,False,False,True,0.8745,0.7929,False,simple_faq,simple_faq
+есть ли у вас рассрочка без процентов,faq,faq,accept,general_confident,False,False,False,0.9999,0.9999,True,simple_faq,simple_faq
+скока кт,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+кт почём,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+цена кт?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_faq
+студент надо кт зубов срочно сессия скока выйдет у вас,faq,faq,accept,general_confident,False,False,False,0.9969,0.9944,True,unclassified,
+ребёнку 6 лет врач сказал кт челюсти сделать цена какая,faq,faq,accept,general_confident,False,False,False,0.9996,0.9993,True,simple_faq,simple_faq
+на работе имплант планирую сначала кт скока стоит процедура,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+курю много зубы проверить надо кт цена у вас какая примерно,faq,faq,accept,general_confident,False,False,False,1.0,0.9999,True,simple_faq,simple_faq
+подскажите стоимость кт,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+сколько кт челюсти,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+цена на кт зубов,faq,faq,accept,general_confident,False,False,False,0.9998,0.9996,True,simple_faq,simple_faq
+скока пломба,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+пломба почём,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребенку 5 лет дырку пломбой скока у вас стоит,faq,faq,accept,general_confident,False,False,False,0.9998,0.9997,True,unclassified,
+на передний зуб пломбу надо скока выйдет примерно в клинике,faq,faq,accept,general_confident,False,False,False,0.9999,0.9998,True,unclassified,
+мужу жевательный чинить пломбой цена какая у вас,faq,faq,accept,general_confident,False,False,False,0.9999,0.9998,True,simple_faq,simple_faq
+дочке вчера пломба слетела новая скока посчитайте,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9996,0.9992,False,unclassified,
+подскажите цену пломбы,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+сколько пломба стоит у вас,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+парковка есть?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+можно припарковать,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+парковочных мест много?,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.7399,0.545,False,unclassified,
+еду на машине с работы есть парковка у клиники или ходить далеко,faq,faq,accept,general_confident,False,False,False,0.9999,0.9997,True,unclassified,
+привезу ребенка на прием подскажите парковка бесплатная или как,faq,,defer,tag_policy:simple_booking,False,False,True,0.8572,0.7525,False,simple_booking,simple_booking
+завтра утром приеду авто полно машин будет парковаться негде,faq,booking,defer,sparse_dense_disagree,False,False,False,0.9712,0.952,False,unclassified,
+на такси жалко ехать из области скажите про парковку у вас,faq,faq,accept,general_confident,False,False,False,0.9101,0.8628,True,unclassified,
+есть парковка возле клиники?,faq,faq,accept,general_confident,False,False,False,0.92,0.8748,True,unclassified,
+подскажите про парковку,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.9167,0.859,False,unclassified,
+парковка у вас имеется,faq,faq,accept,general_confident,False,False,False,0.9929,0.9858,True,unclassified,
+с какого возраста детей берёте,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+детей с скока лет,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+мин возраст для детей,faq,faq,accept,general_confident,False,False,False,0.9751,0.9511,True,unclassified,
+у меня сыну годик можно привести с какого возраста малых берёте,faq,faq,accept,general_confident,False,False,False,0.9609,0.9259,True,unclassified,
+дочке 1.8 года читала в инете что не все берут с одного когда у вас,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.5203,0.0691,False,unclassified,
+внуку 2.5 хотим на профилактику а вы с какого года деток принимаете,faq,faq,accept,general_confident,False,False,False,0.9998,0.9997,True,unclassified,
+племяннику 10 мес интересует минималка по возрасту для приёма детей,faq,,defer,tag_policy:simple_booking,False,False,True,0.7416,0.5946,False,simple_booking,simple_booking
+какой минимальный возраст для детей,faq,faq,accept,general_confident,False,False,False,0.9997,0.9994,True,unclassified,
+принимаете детей с какого года,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+с какого возраста берут детишек,faq,faq,accept,general_confident,False,False,False,0.9994,0.999,True,unclassified,
+чё седация есть,faq,faq,accept,general_confident,False,False,False,0.9542,0.9084,True,unclassified,
+делаете седацию,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+у вас седация,faq,faq,accept,general_confident,False,False,False,0.9929,0.9859,True,unclassified,
+дочке 4 года зубы боится лечить седация у вас имеется,faq,faq,defer,sparse_dense_disagree,False,False,False,0.6712,0.343,False,unclassified,
+я паникерша от стоматологов седацию применяете для взрослых,faq,faq,accept,general_confident,False,False,False,0.7495,0.5224,True,unclassified,
+отцу 70 лет нервный перед пломбой седация нужна или нет,faq,faq,accept,general_confident,False,False,False,0.9398,0.901,True,unclassified,
+завтра на работу но зуб надо срочно седация спасёт ситуацию,faq,booking,defer,sparse_dense_disagree,False,False,False,0.9206,0.8544,False,unclassified,
+подскажите про седацию у вас,faq,faq,defer,sparse_dense_disagree,False,False,False,0.6022,0.312,False,unclassified,
+есть седация в клинике,faq,faq,accept,general_confident,False,False,False,0.9999,0.9998,True,unclassified,
+лечение под седацией делаете,faq,faq,accept,general_confident,False,False,False,0.9805,0.9611,True,unclassified,
+картой платите?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+налик берёте?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+оплата как?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнку пломбу ставить а бабушкины деньги наличкой только как у вас оплатить,faq,faq,accept,general_confident,False,False,False,0.9715,0.9435,True,unclassified,
+завтра на работу поеду зарплата на карту скатили оплатить приём как можно,faq,booking,defer,sparse_dense_disagree,False,False,False,0.9562,0.9139,False,simple_booking,simple_booking
+муж приедет из командировки наликом хочет расплатиться а картой тоже можно,faq,faq,accept,general_confident,False,False,False,0.8852,0.8163,True,unclassified,
+читала в отзывах что без карты никак а вдруг только наличкой переживаю заранее,faq,faq,defer,sparse_dense_disagree,False,False,False,0.8927,0.8388,False,unclassified,
+подскажите способы оплаты,faq,faq,accept,general_confident,False,False,False,0.962,0.9299,True,unclassified,
+как оплатить услуги,faq,faq,accept,general_confident,False,False,False,0.9999,0.9997,True,unclassified,
+наличными или безнал?,faq,faq,accept,general_confident,False,False,False,0.9999,0.9997,True,unclassified,
+детский стом есть,faq,faq,defer,sparse_dense_disagree,False,False,False,1.0,0.9999,False,unclassified,
+у вас детский дантист,faq,faq,accept,general_confident,False,False,False,0.9998,0.9996,True,unclassified,
+стом для детей чё,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9951,0.9903,False,unclassified,
+ребёнку 3 года пора к врачу есть детский стоматолог у вас,faq,faq,accept,general_confident,False,False,False,0.9019,0.8295,True,unclassified,
+сыну зубы растут боюсь обычным врачом есть специалист для детей,faq,faq,accept,general_confident,False,False,False,0.8786,0.7639,True,unclassified,
+внучке 7 лет школа началась нужен детский стом в вашей клинике,faq,faq,accept,general_confident,False,False,False,0.9952,0.9923,True,unclassified,
+дочке пломбу ставить а вдруг испугается есть детский врач по зубам,faq,faq,accept,general_confident,False,False,False,0.9976,0.9956,True,unclassified,
+подскажите есть детский стоматолог,faq,faq,accept,general_confident,False,False,False,0.9998,0.9996,True,unclassified,
+нужен детский специалист по зубам,faq,faq,accept,general_confident,False,False,False,0.9957,0.9932,True,unclassified,
+скока чистка длится,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+чистка чё по времени,faq,faq,accept,general_confident,False,False,False,0.8691,0.7708,True,unclassified,
+ребёнку чистку делать скока времени уйдёт на весь рот,faq,faq,accept,general_confident,False,False,False,0.9909,0.9858,True,unclassified,
+завтра с утра время мало чистка сколько займёт минут,faq,faq,accept,general_confident,False,False,False,0.9636,0.9278,True,simple_faq,simple_faq
+на обед перерыв чистка зубов влезет по времени или нет,faq,faq,accept,general_confident,False,False,False,0.9965,0.9937,True,unclassified,
+читала отзывы чистка у вас долго скока точно процедура,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+подскажите длительность чистки,faq,faq,accept,general_confident,False,False,False,0.9993,0.9988,True,unclassified,
+скока укол держится,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+анестезия долго работает?,faq,faq,accept,general_confident,False,False,False,1.0,0.9999,True,unclassified,
+после заморозки сколько не болит,faq,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+ребенку 6 лет завтра пломбу ставить скока после укола не будет чувствовать рот,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9855,0.9757,False,unclassified,
+вчера чистили зуб укол сделали до сих пор губа онемела когда отпустит,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.8123,0.7246,False,unclassified,
+на работе после лечения нельзя за руль сколько держится обезболивающий укол,faq,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+едем в отпуск завтра к вам на удаление скока анестезия будет действовать,faq,faq,accept,general_confident,False,False,False,0.8752,0.7531,True,unclassified,
+подскажите сколько действует анестезия после укола,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+как долго держится эффект от укола в зуб,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.98,0.9609,False,unclassified,
+перенести запись срочно,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+сдвинуть приём,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_booking
+запись на потом,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+завтра командировка перенести на след неделю пожалуйста,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+муж слег перенести мою запись на понедельник,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+можно перенести запись,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+хочу изменить время приёма,booking,booking,accept,general_confident,False,False,False,0.9999,0.9998,True,simple_booking,simple_booking
+подскажите как сдвинуть запись,booking,booking,accept,general_confident,False,False,False,0.9994,0.9988,True,simple_booking,simple_booking
+отменте запиь срочно,booking,booking,accept,general_confident,False,False,False,0.9977,0.9959,True,unclassified,
+ребёнку плохо не придём завтра на 10 утра отмените нас,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,unclassified,
+поезд опоздал на сутки не вышло приехать снимите меня,booking,booking,accept,general_confident,False,False,False,0.9999,0.9997,True,unclassified,
+пожалуйста отмените запись на завтра,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+нужно снять с расписания,booking,booking,defer,low_confidence,False,False,False,0.5705,0.3201,False,unclassified,
+отменить мой приём,booking,booking,accept,general_confident,False,False,False,0.9999,0.9998,True,simple_booking,simple_booking
+отмена записи,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_booking
+снимите запиь,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнку 6 лет заболел не пойдём завтра отмените нашу запись,booking,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+сам плохо себя чувствую не смогу прийти снимите визит на вторник,booking,booking,accept,general_confident,False,False,False,0.9957,0.9917,True,simple_booking,simple_booking
+дочка боится врача решила не идти отмените запись на утро,booking,booking,accept,general_confident,False,False,False,0.9998,0.9997,True,simple_booking,simple_booking
+прошу отменить запись,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,simple_booking,simple_booking
+нужно снять приём,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+не приду,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+не смогу,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнку плохо не придём завтра отмените нашу запись плиз,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+отмените запись на завтра пожалуйста,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+не выйдет прийти извините,booking,booking,accept,general_confident,False,False,False,0.9814,0.9666,True,simple_booking,simple_booking
+отмена,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+отмените меня,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнок температурит не придём завтра отмените запись,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+другая клиника ближе переносить не надо отмените мою,booking,booking,accept,general_confident,False,False,False,0.9805,0.9617,True,unclassified,
+хочу отменить запись,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+чё за погода,unsupported,unsupported,accept,general_confident,False,False,False,0.6952,0.3905,True,unclassified,
+погода как,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+дождь щас,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+выхожу из дома а дождь хлещет зонтик забыл какая на часик вперёд,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.4843,0.1582,False,unclassified,
+ребёнку 6 лет спрашивает какая погода можно в парк после обеда сходить,unsupported,booking,defer,sparse_dense_disagree,False,False,False,0.5636,0.3824,False,unclassified,
+на велике катался вчера солнце сегодня пасмурно чё за ерунда с погодой,unsupported,unsupported,defer,low_confidence,False,False,False,0.495,0.1251,False,unclassified,
+на работу бегу смотрю лужи везде прогноз какой на вечер дайте,unsupported,booking,defer,sparse_dense_disagree,False,False,False,0.9287,0.8873,False,unclassified,
+подскажите погоду сегодня,unsupported,unsupported,accept,general_confident,False,False,False,0.9384,0.8793,True,unclassified,
+какая сейчас погода в городе,unsupported,unsupported,accept,general_confident,False,False,False,0.9743,0.9544,True,unclassified,
+интересует прогноз на день,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9664,0.9351,False,unclassified,
+зубик нарисуй,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+нарис зуб чот,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,1.0,1.0,False,unclassified,
+картинку зуба кинь,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9996,0.9992,False,unclassified,
+сижу в очереди скучно нарисуй зубик смешной чтоб время прошло,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.9829,0.9743,False,unclassified,
+ребёнку 6 лет зубы болят покажи нарисованный зуб красивый чтоб не боялся,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9906,0.9834,False,simple_symptom,simple_symptom
+на работе перерыв нарисуй зуб с улыбкой для аватарки в чате,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.8301,0.6639,False,unclassified,
+вчера смотрел видео про зубы нарисуй такой здоровый зуб яркий,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9996,0.9993,False,unclassified,
+можешь нарисовать зуб,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9998,0.9996,False,unclassified,
+нарисуй картинку зубика,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.596,0.2824,False,unclassified,
+врач хам,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+стоматолог напортачил,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+водила дочку к вашему врачу а он ей кричал и зуб криво запломбировал ребёнок теп,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.7847,0.6194,False,unclassified,
+вчера был у врача на удалении камня он меня не дослушал сразу полез сверлить бол,unsupported,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor
+пришёл срочно зуб чинить врач опоздал на полчаса и сделал всё на коленке теперь ,unsupported,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor
+на работе был у вашего стоматолога он грубо обращался и пломбу поставил кривую ч,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.7276,0.5611,False,unclassified,
+не понравился врач,unsupported,unsupported,accept,general_confident,False,False,False,0.9569,0.9319,True,unclassified,
+жалоба на доктора,unsupported,booking,defer,sparse_dense_disagree,False,False,False,0.9087,0.8284,False,unclassified,
+долго ждал очереди,unsupported,unsupported,accept,general_confident,False,False,False,0.9967,0.9935,True,unclassified,
+очередь адская,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ждал час зря,unsupported,unsupported,accept,general_confident,False,False,False,0.9978,0.9964,True,unclassified,
+пришел с сыном 6 лет ждал 50 минут ребенок уже ноет и плачет,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9887,0.9809,False,simple_symptom,simple_symptom
+на работе перерыв взял а тут очередь на полчаса опоздал из за вас,unsupported,unsupported,defer,low_confidence,False,False,False,0.6249,0.2989,False,unclassified,
+старик я ноги болят стою в очереди час жду когда позовут,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.7353,0.5861,False,simple_symptom,simple_symptom
+с работы после смены пришел усталая а очередь огромная сижу нервничаю,unsupported,faq,defer,sparse_dense_disagree,False,False,False,0.513,0.1754,False,unclassified,
+очередь большая ждать долго,unsupported,,defer,tag_policy:simple_symptom,False,False,True,0.7552,0.5473,False,simple_symptom,simple_symptom
+ждал в очереди минут 45,unsupported,unsupported,accept,general_confident,False,False,False,0.9452,0.8958,True,unclassified,
+неудобно долго ожидать,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.7728,0.6356,False,unclassified,
+супер вылечили,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+классно всё,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+была вчера ставили пломбу на жевательный зуб ни капли боли осталась довольна,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9404,0.9086,False,simple_symptom,simple_symptom
+ребёнку 6 лет чистили камень с зубов он даже не пикнул теперь улыбается во весь ,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9881,0.9814,False,unclassified,
+приходил мужу дырку в зубе заделали быстро на работе теперь жуёт нормально спаси,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.8083,0.635,False,unclassified,
+давно боялась к стоматологу после старого опыта а тут вылечили передний зуб без ,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9189,0.8593,False,unclassified,
+лечение прошло отлично,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.5868,0.196,False,unclassified,
+всё понравилось в клинике,unsupported,faq,defer,sparse_dense_disagree,False,False,False,0.6897,0.3819,False,unclassified,
+хороший результат получила,unsupported,unsupported,accept,general_confident,False,False,False,0.9007,0.8365,True,unclassified,
+жалоба на врача,unsupported,booking,defer,sparse_dense_disagree,False,False,False,0.5051,0.068,False,unclassified,
+отстой полный,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ужас клиника,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+пришел вчера на удаление зуба ждал два часа врач даже не извинился,unsupported,unsupported,accept,general_confident,False,False,False,0.9029,0.8499,True,unclassified,
+мне пенсионеру сделали пломбу она вывалилась через неделю на что трачу пенсию,unsupported,unsupported,defer,sparse_dense_disagree,False,False,False,0.7024,0.5,False,unclassified,
+не понравился прием,unsupported,booking,accept,general_confident,False,False,False,0.9762,0.965,False,simple_booking,simple_booking
+хочу недовольство высказать,unsupported,anamnesis,accept,anamnesis_confident,False,False,False,0.9775,0.9559,False,unclassified,

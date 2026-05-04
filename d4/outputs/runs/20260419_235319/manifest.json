@@ -1,0 +1,27 @@
+{
+  "run_id": "20260419_235319",
+  "timestamp": "2026-04-19T20:30:00.099566+00:00",
+  "run_name": "full_dev",
+  "modes": [
+    "llm_enriched"
+  ],
+  "eval_set_path": "/Users/kazdoraw/developer/med-agent/study/d4/data/eval_set_dev_v2.yaml",
+  "representation_mode": "llm_enriched",
+  "command": "/Users/kazdoraw/developer/med-agent/study/d4/tests/mini_llm_run.py --run-id 20260419_235319 --representation llm_enriched --full-dev",
+  "config_snapshot_path": "",
+  "input_files": {
+    "chunks_frozen": "/Users/kazdoraw/developer/med-agent/study/d4/data/chunks_frozen.json",
+    "eval_set": "/Users/kazdoraw/developer/med-agent/study/d4/data/eval_set_dev_v2.yaml"
+  },
+  "output_files": {
+    "full_dev_llm_enriched.jsonl": "/Users/kazdoraw/developer/med-agent/study/d4/outputs/runs/20260419_235319/full_dev_llm_enriched.jsonl",
+    "full_dev_llm_enriched.report.json": "/Users/kazdoraw/developer/med-agent/study/d4/outputs/runs/20260419_235319/full_dev_llm_enriched.report.json"
+  },
+  "cache_files": {
+    "enrichment_contextual_c928f56819145e92.json": "/Users/kazdoraw/developer/med-agent/study/d4/outputs/enrichment_cache/enrichment_contextual_c928f56819145e92.json",
+    "enrichment_llm_enriched_c260ac707afb1ee1.json": "/Users/kazdoraw/developer/med-agent/study/d4/outputs/enrichment_cache/enrichment_llm_enriched_c260ac707afb1ee1.json"
+  },
+  "enrichment_prompt_version": "v2-classaware-strict64",
+  "enrichment_prompts_hash": "086d0a59",
+  "git_info": "main@f298801"
+}

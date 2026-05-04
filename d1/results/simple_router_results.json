@@ -1,0 +1,479 @@
+{
+  "simple_name": "SimpleRouter[ComplexityGate->B4]",
+  "hybrid_name": "B4HybridRouter",
+  "thresholds": {
+    "anamnesis_threshold": 0.48,
+    "faq_anamnesis_margin": 0.15,
+    "general_threshold": 0.63
+  },
+  "eval_sets": [
+    "val",
+    "test",
+    "hard_test",
+    "blind_test",
+    "entity_held_out",
+    "extended_eval"
+  ],
+  "results": {
+    "val": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 351,
+          "coverage": 0.4672,
+          "accepted_accuracy": 0.9451,
+          "accepted_recall_anamnesis": 0.9831,
+          "defer_rate": 0.5328,
+          "false_negative_deferred": 36,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "complexity:short_ambiguous": 48,
+            "tag_policy:simple_symptom": 14,
+            "low_confidence": 72,
+            "anamnesis_confident": 61,
+            "faq_anamnesis_borderline": 6,
+            "general_confident": 99,
+            "tag_policy:simple_booking": 2,
+            "sparse_dense_disagree": 32,
+            "rule:anamnesis:hits=2": 4,
+            "complexity:mixed_intent": 8,
+            "tag_policy:simple_faq": 5
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 0.9451,
+          "macro_f1": 0.8925,
+          "balanced_accuracy": 0.8653,
+          "recall_anamnesis": 0.9831,
+          "false_faq_for_anamnesis": 0.0169,
+          "n_samples": 164,
+          "anamnesis_precision": 0.8923,
+          "anamnesis_recall": 0.9831,
+          "anamnesis_f1": 0.9355,
+          "faq_precision": 0.9574,
+          "faq_recall": 0.9783,
+          "faq_f1": 0.9677,
+          "booking_precision": 1.0,
+          "booking_recall": 1.0,
+          "booking_f1": 1.0,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 0.5,
+          "unsupported_f1": 0.6667
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 351,
+          "coverage": 0.6268,
+          "accepted_accuracy": 0.9364,
+          "accepted_recall_anamnesis": 0.9867,
+          "defer_rate": 0.3732,
+          "false_negative_deferred": 20,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 80,
+            "low_confidence": 89,
+            "faq_anamnesis_borderline": 7,
+            "general_confident": 135,
+            "sparse_dense_disagree": 35,
+            "rule:anamnesis:hits=2": 5
+          }
+        }
+      }
+    },
+    "test": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 730,
+          "coverage": 0.5137,
+          "accepted_accuracy": 0.9627,
+          "accepted_recall_anamnesis": 0.9928,
+          "defer_rate": 0.4863,
+          "false_negative_deferred": 78,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "complexity:short_ambiguous": 79,
+            "anamnesis_confident": 131,
+            "sparse_dense_disagree": 57,
+            "tag_policy:simple_symptom": 11,
+            "faq_anamnesis_borderline": 18,
+            "low_confidence": 164,
+            "general_confident": 228,
+            "tag_policy:simple_faq": 11,
+            "complexity:mixed_intent": 9,
+            "tag_policy:simple_booking": 5,
+            "rule:booking:hits=3": 1,
+            "rule:anamnesis:hits=2": 15,
+            "complexity:booking_doctor_name": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 0.9627,
+          "macro_f1": 0.9238,
+          "balanced_accuracy": 0.9008,
+          "recall_anamnesis": 0.9928,
+          "false_faq_for_anamnesis": 0.0072,
+          "n_samples": 375,
+          "anamnesis_precision": 0.9384,
+          "anamnesis_recall": 0.9928,
+          "anamnesis_f1": 0.9648,
+          "faq_precision": 0.9619,
+          "faq_recall": 0.9619,
+          "faq_f1": 0.9619,
+          "booking_precision": 1.0,
+          "booking_recall": 0.982,
+          "booking_f1": 0.9909,
+          "unsupported_precision": 0.9333,
+          "unsupported_recall": 0.6667,
+          "unsupported_f1": 0.7778
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 730,
+          "coverage": 0.6041,
+          "accepted_accuracy": 0.9592,
+          "accepted_recall_anamnesis": 0.9873,
+          "defer_rate": 0.3959,
+          "false_negative_deferred": 58,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 150,
+            "sparse_dense_disagree": 65,
+            "rule:anamnesis:hits=2": 16,
+            "faq_anamnesis_borderline": 21,
+            "low_confidence": 203,
+            "general_confident": 274,
+            "rule:booking:hits=3": 1
+          }
+        }
+      }
+    },
+    "hard_test": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 355,
+          "coverage": 0.4676,
+          "accepted_accuracy": 0.8554,
+          "accepted_recall_anamnesis": 0.959,
+          "defer_rate": 0.5324,
+          "false_negative_deferred": 137,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "complexity:mixed_intent": 42,
+            "sparse_dense_disagree": 20,
+            "general_confident": 46,
+            "tag_policy:simple_booking": 11,
+            "rule:anamnesis:hits=2": 36,
+            "anamnesis_confident": 79,
+            "tag_policy:simple_symptom": 20,
+            "low_confidence": 40,
+            "complexity:short_ambiguous": 43,
+            "complexity:booking_doctor_name": 5,
+            "faq_anamnesis_borderline": 7,
+            "rule:anamnesis:hits=3": 5,
+            "tag_policy:simple_faq": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 0.8554,
+          "macro_f1": 0.6816,
+          "balanced_accuracy": 0.8104,
+          "recall_anamnesis": 0.959,
+          "false_faq_for_anamnesis": 0.0246,
+          "n_samples": 166,
+          "anamnesis_precision": 0.975,
+          "anamnesis_recall": 0.959,
+          "anamnesis_f1": 0.9669,
+          "faq_precision": 0.85,
+          "faq_recall": 0.4722,
+          "faq_f1": 0.6071,
+          "booking_precision": 0.3077,
+          "booking_recall": 1.0,
+          "booking_f1": 0.4706
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 355,
+          "coverage": 0.7493,
+          "accepted_accuracy": 0.7932,
+          "accepted_recall_anamnesis": 0.8768,
+          "defer_rate": 0.2507,
+          "false_negative_deferred": 56,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 83,
+            "sparse_dense_disagree": 27,
+            "rule:anamnesis:hits=2": 46,
+            "rule:anamnesis:hits=3": 6,
+            "anamnesis_confident": 131,
+            "low_confidence": 51,
+            "faq_anamnesis_borderline": 11
+          }
+        }
+      }
+    },
+    "blind_test": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 40,
+          "coverage": 0.575,
+          "accepted_accuracy": 0.9565,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.425,
+          "false_negative_deferred": 6,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 7,
+            "anamnesis_confident": 6,
+            "sparse_dense_disagree": 2,
+            "tag_policy:simple_symptom": 2,
+            "faq_anamnesis_borderline": 1,
+            "general_confident": 16,
+            "tag_policy:simple_booking": 2,
+            "rule:anamnesis:hits=2": 1,
+            "complexity:short_ambiguous": 3
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 0.9565,
+          "macro_f1": 0.9615,
+          "balanced_accuracy": 0.9643,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 23,
+          "anamnesis_precision": 0.8571,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 0.9231,
+          "faq_precision": 1.0,
+          "faq_recall": 1.0,
+          "faq_f1": 1.0,
+          "booking_precision": 1.0,
+          "booking_recall": 0.8571,
+          "booking_f1": 0.9231,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 1.0,
+          "unsupported_f1": 1.0
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 40,
+          "coverage": 0.725,
+          "accepted_accuracy": 0.9655,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.275,
+          "false_negative_deferred": 4,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 8,
+            "anamnesis_confident": 8,
+            "sparse_dense_disagree": 2,
+            "faq_anamnesis_borderline": 1,
+            "general_confident": 20,
+            "rule:anamnesis:hits=2": 1
+          }
+        }
+      }
+    },
+    "entity_held_out": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 100,
+          "coverage": 0.35,
+          "accepted_accuracy": 1.0,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.65,
+          "false_negative_deferred": 15,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "complexity:short_ambiguous": 17,
+            "sparse_dense_disagree": 16,
+            "anamnesis_confident": 14,
+            "general_confident": 21,
+            "low_confidence": 27,
+            "complexity:booking_doctor_name": 1,
+            "faq_anamnesis_borderline": 1,
+            "tag_policy:simple_faq": 2,
+            "complexity:mixed_intent": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 35,
+          "anamnesis_precision": 1.0,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 1.0,
+          "faq_precision": 1.0,
+          "faq_recall": 1.0,
+          "faq_f1": 1.0,
+          "booking_precision": 1.0,
+          "booking_recall": 1.0,
+          "booking_f1": 1.0
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 100,
+          "coverage": 0.43,
+          "accepted_accuracy": 0.9767,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.57,
+          "false_negative_deferred": 15,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 38,
+            "sparse_dense_disagree": 17,
+            "anamnesis_confident": 14,
+            "general_confident": 29,
+            "faq_anamnesis_borderline": 2
+          }
+        }
+      }
+    },
+    "extended_eval": {
+      "simple": {
+        "selective": {
+          "router_name": "SimpleRouter[ComplexityGate->B4]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 101,
+          "coverage": 0.2574,
+          "accepted_accuracy": 0.8077,
+          "accepted_recall_anamnesis": 0.0,
+          "defer_rate": 0.7426,
+          "false_negative_deferred": 0,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 25,
+            "low_confidence": 38,
+            "sparse_dense_disagree": 18,
+            "complexity:short_ambiguous": 11,
+            "tag_policy:simple_symptom": 3,
+            "anamnesis_confident": 1,
+            "faq_anamnesis_borderline": 3,
+            "tag_policy:simple_faq": 1,
+            "complexity:mixed_intent": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "SimpleRouter[ComplexityGate->B4]_accepted_only",
+          "accuracy": 0.8077,
+          "macro_f1": 0.2234,
+          "balanced_accuracy": 0.8077,
+          "recall_anamnesis": 0.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 26,
+          "anamnesis_precision": 0.0,
+          "anamnesis_recall": 0.0,
+          "anamnesis_f1": 0.0,
+          "faq_precision": 1.0,
+          "faq_recall": 0.8077,
+          "faq_f1": 0.8936,
+          "booking_precision": 0.0,
+          "booking_recall": 0.0,
+          "booking_f1": 0.0,
+          "unsupported_precision": 0.0,
+          "unsupported_recall": 0.0,
+          "unsupported_f1": 0.0
+        }
+      },
+      "hybrid": {
+        "selective": {
+          "router_name": "B4HybridRouter",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 101,
+          "coverage": 0.3465,
+          "accepted_accuracy": 0.7714,
+          "accepted_recall_anamnesis": 0.0,
+          "defer_rate": 0.6535,
+          "false_negative_deferred": 0,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 33,
+            "low_confidence": 42,
+            "sparse_dense_disagree": 20,
+            "anamnesis_confident": 2,
+            "faq_anamnesis_borderline": 4
+          }
+        }
+      }
+    }
+  }
+}

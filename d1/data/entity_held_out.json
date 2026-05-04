@@ -1,0 +1,29 @@
+{
+  "doctor_names": [
+    "демин",
+    "конновск"
+  ],
+  "services": [
+    "вкладк",
+    "синус-лифтинг",
+    "элайнер"
+  ],
+  "specializations": [
+    "гнатолог",
+    "пародонтолог"
+  ],
+  "entity_seed_ids": [
+    "seed_078",
+    "seed_100",
+    "seed_101",
+    "seed_118",
+    "seed_172",
+    "seed_174",
+    "seed_176",
+    "seed_177",
+    "seed_181",
+    "seed_251"
+  ],
+  "total_samples": 100,
+  "total_seeds": 10
+}

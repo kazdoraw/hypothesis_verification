@@ -1,0 +1,12 @@
+,,,FN_deferred,FN_deferred,FN_deferred,accepted_accuracy,accepted_accuracy,accepted_accuracy,accepted_recall_anam,accepted_recall_anam,accepted_recall_anam,coverage,coverage,coverage
+config,,,aggressive_0.43_0.55,baseline_0.55_0.70,moderate_0.48_0.63,aggressive_0.43_0.55,baseline_0.55_0.70,moderate_0.48_0.63,aggressive_0.43_0.55,baseline_0.55_0.70,moderate_0.48_0.63,aggressive_0.43_0.55,baseline_0.55_0.70,moderate_0.48_0.63
+eval_set,router,with_complexity_gate,,,,,,,,,,,,
+hard_test,hybrid,False,39,75,56,0.7801,0.8291,0.7932,0.8591,0.913,0.8768,0.8197,0.6592,0.7493
+hard_test,hybrid,True,129,143,137,0.8324,0.8627,0.8554,0.9385,0.9569,0.959,0.5042,0.431,0.4676
+hard_test,selective,False,43,87,63,0.7666,0.8182,0.7829,0.838,0.8895,0.8571,0.8085,0.6197,0.7268
+test,hybrid,False,42,77,58,0.9444,0.967,0.9592,0.977,0.9928,0.9873,0.7151,0.4986,0.6041
+test,hybrid,True,65,93,78,0.9452,0.9684,0.9627,0.9801,1.0,0.9928,0.6,0.4329,0.5137
+test,selective,False,42,78,59,0.9481,0.9723,0.9635,0.977,0.9928,0.9873,0.7123,0.4945,0.6
+val,hybrid,False,14,34,20,0.9255,0.9382,0.9364,0.9753,1.0,0.9867,0.7265,0.5071,0.6268
+val,hybrid,True,32,45,36,0.9358,0.9556,0.9451,0.9683,1.0,0.9831,0.5328,0.3846,0.4672
+val,selective,False,14,35,21,0.9291,0.9432,0.9404,0.9753,1.0,0.9865,0.7236,0.5014,0.6211

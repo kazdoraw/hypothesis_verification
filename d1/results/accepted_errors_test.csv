@@ -1,0 +1,15 @@
+text_preview,gold,predicted,primary_tag,confidence,margin,reason
+Хочу на имплантацию,booking,anamnesis,unclassified,0.6172,0.4126,anamnesis_confident
+Сколько будет 2+2?,unsupported,faq,simple_faq,0.8463,0.737,general_confident
+2+2 скока?,unsupported,faq,unclassified,0.8922,0.8092,general_confident
+2+2 это сколько выходит,unsupported,faq,simple_faq,0.9066,0.8619,general_confident
+делаете брекеты на зубы,anamnesis,faq,unclassified,0.6477,0.3251,general_confident
+расскажите о докторах клиники,faq,unsupported,unclassified,0.7365,0.5154,general_confident
+после вырвал зуб нельзя чё,faq,anamnesis,unclassified,0.576,0.3216,anamnesis_confident
+что нельзя после удаления зуба,faq,anamnesis,unclassified,0.5209,0.1823,anamnesis_confident
+свадьба скоро отбеливаю зубы скажите нужна ли диета сразу после,faq,anamnesis,unclassified,0.554,0.2275,anamnesis_confident
+имплант хочу поставить,booking,anamnesis,unclassified,0.6216,0.32,anamnesis_confident
+шутку плз чот,unsupported,anamnesis,unclassified,0.5397,0.3074,anamnesis_confident
+мужа водила пломбу поставили а она на следующий день выпала деньги на ветер,unsupported,anamnesis,unclassified,0.7,0.0,rule:anamnesis:hits=2
+дочке 6 лет поставили пломбу а она на следующий день выпала зря потратили время,unsupported,anamnesis,unclassified,0.7,0.0,rule:anamnesis:hits=2
+заплатили кучу денег за чистку а зубы все равно желтые,unsupported,anamnesis,unclassified,0.5195,0.2789,anamnesis_confident

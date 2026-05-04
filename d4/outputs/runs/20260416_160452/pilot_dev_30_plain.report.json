@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "run_id": "20260416_160452",
+    "run_name": "pilot_dev_30",
+    "representation_mode": "plain",
+    "timestamp": "2026-04-16T12:07:11.186933+00:00",
+    "n_samples": 30,
+    "n_results": 150,
+    "n_errors": 0,
+    "elapsed_s": 101.0,
+    "results_jsonl": "/Users/kazdoraw/developer/med-agent/study/d4/outputs/runs/20260416_160452/pilot_dev_30_plain.jsonl"
+  },
+  "quality": {
+    "B0": {
+      "n": 30,
+      "answerable_true": 28,
+      "avg_confidence": 0.517,
+      "avg_latency_ms": 3.0
+    },
+    "S1": {
+      "n": 30,
+      "answerable_true": 28,
+      "avg_confidence": 0.927,
+      "avg_latency_ms": 3055.0
+    },
+    "S2": {
+      "n": 30,
+      "answerable_true": 23,
+      "avg_confidence": 0.79,
+      "avg_latency_ms": 1963.0
+    },
+    "S3": {
+      "n": 30,
+      "answerable_true": 26,
+      "avg_confidence": 0.883,
+      "avg_latency_ms": 2331.0
+    },
+    "S4": {
+      "n": 30,
+      "answerable_true": 25,
+      "avg_confidence": 0.893,
+      "avg_latency_ms": 2059.0
+    }
+  },
+  "retrieval": {
+    "S2": {
+      "hit_rate": 0.7692,
+      "mean_recall": 0.6635,
+      "mrr": 0.6519,
+      "gold_in_context_rate": 0.5769,
+      "n_samples": 26.0
+    },
+    "S4": {
+      "hit_rate": 0.8846,
+      "mean_recall": 0.8109,
+      "mrr": 0.8397,
+      "gold_in_context_rate": 0.6923,
+      "n_samples": 26.0
+    },
+    "S3": {
+      "hit_rate": 0.9231,
+      "mean_recall": 0.8333,
+      "mrr": 0.859,
+      "gold_in_context_rate": 0.6923,
+      "n_samples": 26.0
+    }
+  },
+  "deterministic": {
+    "B0": {
+      "n": 30,
+      "answerability_correct": 26,
+      "doctor_match": 2,
+      "doctor_total": 8,
+      "avg_fmr": 0.2372,
+      "fmr_annotated": 26,
+      "unsupported_claims": 0,
+      "total_claims": 66
+    },
+    "S1": {
+      "n": 30,
+      "answerability_correct": 28,
+      "doctor_match": 8,
+      "doctor_total": 8,
+      "avg_fmr": 0.6667,
+      "fmr_annotated": 26,
+      "unsupported_claims": 0,
+      "total_claims": 81
+    },
+    "S2": {
+      "n": 30,
+      "answerability_correct": 27,
+      "doctor_match": 5,
+      "doctor_total": 8,
+      "avg_fmr": 0.4551,
+      "fmr_annotated": 26,
+      "unsupported_claims": 0,
+      "total_claims": 59
+    },
+    "S3": {
+      "n": 30,
+      "answerability_correct": 30,
+      "doctor_match": 8,
+      "doctor_total": 8,
+      "avg_fmr": 0.6667,
+      "fmr_annotated": 26,
+      "unsupported_claims": 0,
+      "total_claims": 62
+    },
+    "S4": {
+      "n": 30,
+      "answerability_correct": 29,
+      "doctor_match": 7,
+      "doctor_total": 8,
+      "avg_fmr": 0.5897,
+      "fmr_annotated": 26,
+      "unsupported_claims": 0,
+      "total_claims": 57
+    }
+  },
+  "rank_analysis": {
+    "q_0105": {
+      "S2": 0.0,
+      "S4": 1.0,
+      "S3": 1.0
+    },
+    "q_0111": {
+      "S2": 0.0,
+      "S3": 0.3333,
+      "S4": 0.0
+    },
+    "q_0100": {
+      "S2": 0.0,
+      "S3": 0.0,
+      "S4": 0.0
+    },
+    "q_0009": {
+      "S2": 1.0,
+      "S4": 1.0,
+      "S3": 1.0
+    },
+    "q_0130": {
+      "S2": 0.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0013": {
+      "S2": 0.0,
+      "S3": 0.0,
+      "S4": 0.0
+    },
+    "q_0126": {
+      "S2": 0.5,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0036": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0039": {
+      "S2": 1.0,
+      "S3": 0.5,
+      "S4": 1.0
+    },
+    "q_0145": {
+      "S2": 0.5,
+      "S4": 1.0,
+      "S3": 1.0
+    },
+    "q_0158": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0137": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0228": {
+      "S2": 0.0,
+      "S4": 0.5,
+      "S3": 0.5
+    },
+    "q_0225": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0068": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0073": {
+      "S2": 1.0,
+      "S4": 1.0,
+      "S3": 1.0
+    },
+    "q_0066": {
+      "S3": 1.0,
+      "S2": 1.0,
+      "S4": 1.0
+    },
+    "q_0202": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0194": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0204": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0057": {
+      "S2": 0.25,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_0059": {
+      "S2": 1.0,
+      "S4": 1.0,
+      "S3": 1.0
+    },
+    "q_ac_02": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_ac_06": {
+      "S2": 0.2,
+      "S3": 1.0,
+      "S4": 0.3333
+    },
+    "q_ac_16": {
+      "S2": 0.5,
+      "S3": 1.0,
+      "S4": 1.0
+    },
+    "q_ac_15": {
+      "S2": 1.0,
+      "S3": 1.0,
+      "S4": 1.0
+    }
+  }
+}

@@ -39,7 +39,3 @@ JUDGE_MODEL = "openai/gpt-5.4-mini"
 MAX_TOKENS_JUDGE = 2000
 TEMPERATURE_JUDGE = 0.1
 ROUTING_MATCH_THRESHOLD = 5  # specialist/service/exam score >= этого = routing_match
-
-# --- Метрики ---
-EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
-SEMANTIC_THRESHOLD = 0.70

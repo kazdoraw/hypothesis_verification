@@ -1,0 +1,25 @@
+text_preview,gold,predicted,primary_tag,confidence,margin,reason
+"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,faq,simple_faq,0.8567,0.7822,general_confident
+"Хочу отбеливание и чистку, записаться можно?",anamnesis,booking,simple_booking,0.788,0.6923,general_confident
+"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,faq,simple_faq,0.8492,0.7836,general_confident
+"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,faq,simple_faq,0.8293,0.7007,general_confident
+Хочу на приём к Демину,faq,booking,simple_booking,0.8434,0.7744,general_confident
+Что делать если болит после удаления?,faq,anamnesis,simple_symptom,0.7,0.0,rule:anamnesis:hits=2
+Нормально ли что болит после пломбы?,faq,anamnesis,simple_symptom,0.7,0.0,rule:anamnesis:hits=2
+Может ли десна кровоточить от чистки?,faq,anamnesis,simple_symptom,0.7172,0.5146,anamnesis_confident
+когда к петрову можно записаться,faq,booking,simple_booking,0.9581,0.9434,general_confident
+Запиши к Ивановой на эту неделю,faq,booking,simple_booking,0.8526,0.777,general_confident
+к козлову на понедельник запишитесь,faq,booking,simple_booking,0.9217,0.8901,general_confident
+запиши к новожилову срочно но не сегодня,faq,booking,simple_booking,0.8125,0.6787,general_confident
+к баранову на вечер можно ли,faq,booking,unclassified,0.6373,0.4399,general_confident
+михайлов когда свободен для записи,faq,booking,simple_booking,0.813,0.7366,general_confident
+записаться к степанову на след неделю,faq,booking,simple_booking,0.9435,0.9147,general_confident
+к петрову можно завтра записаться,faq,booking,simple_booking,0.9772,0.9682,general_confident
+к козловой на вторник слот есть,faq,booking,unclassified,0.6838,0.5668,general_confident
+помогите записаться к поповой срочно,faq,booking,simple_booking,0.9026,0.8627,general_confident
+Морозов на завтра есть место?,faq,booking,unclassified,0.7006,0.5397,general_confident
+запись к новожилову на вечер,faq,booking,simple_booking,0.8739,0.8203,general_confident
+к григорьевой можно зписаться?,faq,booking,unclassified,0.6621,0.5104,general_confident
+к степанову на 20 число меня запишите,faq,booking,simple_booking,0.9215,0.8926,general_confident
+запишите ребенка к егорову,faq,booking,simple_booking,0.8494,0.7793,general_confident
+дырка в переднем зубе можно записаться в пятницу,anamnesis,booking,simple_booking,0.8337,0.7047,general_confident

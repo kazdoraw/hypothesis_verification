@@ -1,0 +1,352 @@
+id,text,route_domain,subtype,explicit_booking,urgency,is_offtopic,specialization_hint,feedback_flag,faq_category,style,source,seed_id
+seed_001,Болит зуб,anamnesis,symptom,False,normal,False,,False,,,seed,seed_001
+seed_025,Болит от сладкого,anamnesis,symptom,False,normal,False,,False,,,seed,seed_025
+seed_028,Ребёнок жалуется на боль при еде,anamnesis,symptom,False,normal,False,,False,,,seed,seed_028
+seed_030,Дёсны отёкшие и красные,anamnesis,symptom,False,normal,False,,False,,,seed,seed_030
+seed_035,Онемение губы после лечения,anamnesis,symptom,False,normal,False,,False,,,seed,seed_035
+seed_036,Выпала пломба,anamnesis,complaint,False,normal,False,,False,,,seed,seed_036
+seed_039,Треснул зуб,anamnesis,complaint,False,normal,False,,False,,,seed,seed_039
+seed_053,Промежутки между зубами увеличились,anamnesis,complaint,False,normal,False,,False,,,seed,seed_053
+seed_087,Хочу герметизацию фиссур ребёнку,anamnesis,treatment_interest,False,normal,False,,False,,,seed,seed_087
+seed_095,Интересует костная пластика,anamnesis,treatment_interest,False,normal,False,,False,,,seed,seed_095
+seed_115,Есть беспроцентная рассрочка?,faq,price,False,normal,False,,False,,,seed,seed_115
+seed_117,Сколько стоит КТ?,faq,price,False,normal,False,,False,,,seed,seed_117
+seed_121,Стоимость пломбы,faq,price,False,normal,False,,False,,,seed,seed_121
+seed_138,Есть парковка?,faq,clinic_info,False,normal,False,,False,,,seed,seed_138
+seed_142,С какого возраста берёте детей?,faq,clinic_info,False,normal,False,,False,,,seed,seed_142
+seed_146,Есть седация?,faq,clinic_info,False,normal,False,,False,,,seed,seed_146
+seed_149,Какие формы оплаты?,faq,clinic_info,False,normal,False,,False,,,seed,seed_149
+seed_169,Есть детский стоматолог?,faq,doctor_info,False,normal,False,,False,,,seed,seed_169
+seed_197,Сколько длится чистка?,faq,procedure_info,False,normal,False,,False,,,seed,seed_197
+seed_203,Анестезия общая или местная?,faq,procedure_info,False,normal,False,,False,,,seed,seed_203
+seed_223,Как долго действует анестезия?,faq,procedure_info,False,normal,False,,False,,,seed,seed_223
+seed_229,Есть свободное время на завтра?,booking,new_appointment,True,normal,False,,False,,,seed,seed_229
+seed_258,Хочу перенести запись,booking,reschedule,True,normal,False,,False,,,seed,seed_258
+seed_282,"Можно на обед, около часу?",booking,reschedule,True,normal,False,,False,,,seed,seed_282
+seed_292,Не буду приходить,booking,cancel,False,normal,False,,False,,,seed,seed_292
+seed_299,"Не нужно, отмените",booking,cancel,False,normal,False,,False,,,seed,seed_299
+seed_301,Убрать из расписания,booking,cancel,False,normal,False,,False,,,seed,seed_301
+seed_306,Удалите мою запись,booking,cancel,False,normal,False,,False,,,seed,seed_306
+seed_307,"Не приду, извините",booking,cancel,False,normal,False,,False,,,seed,seed_307
+seed_309,Отказ от записи,booking,cancel,False,normal,False,,False,,,seed,seed_309
+seed_316,Какая погода?,unsupported,offtopic,False,normal,True,,False,,,seed,seed_316
+seed_329,Какой курс доллара?,unsupported,offtopic,False,normal,True,,False,,,seed,seed_329
+seed_333,Нарисуй зуб,unsupported,offtopic,False,normal,True,,False,,,seed,seed_333
+seed_347,Добрый день!,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_347
+seed_362,"Спасибо, пока",unsupported,farewell_only,False,normal,False,,False,,,seed,seed_362
+seed_367,Спасибо за помощь,unsupported,farewell_only,False,normal,False,,False,,,seed,seed_367
+seed_398,Хочу пожаловаться на врача,unsupported,feedback,False,normal,False,,True,,,seed,seed_398
+seed_399,Долго ждал в очереди,unsupported,feedback,False,normal,False,,True,,,seed,seed_399
+seed_402,Очень довольна лечением,unsupported,feedback,False,normal,False,,True,,,seed,seed_402
+seed_410,Хочу написать жалобу,unsupported,feedback,False,normal,False,,True,,,seed,seed_410
+var_seed_095_d05d90,наращивание кости делаете,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_095
+var_seed_095_41fb82,косту нарастить можно,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_095
+var_seed_095_35578a,интересует нарощ кости,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_095
+var_seed_095_649486,потерял передний зуб кости нет для импланта надо наращивание что скажете,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_095
+var_seed_095_4d88a6,у жены десна ушла кость оголилась читала про наращивание кости у вас делают такое,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_095
+var_seed_095_0529ec,сверху жевательный удалили кость тонкая хочу имплант интересует нарощ кости,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_095
+var_seed_095_6d671f,давно без зуба кость усохла нарастить хочу подскажите про вашу процедуру,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_095
+var_seed_095_aa2a75,сделайте наращивание кости,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_095
+var_seed_095_4ab154,нужно нарастить кость зубную,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_095
+var_seed_036_6d4416,пломба вылетела,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_036
+var_seed_036_b50be6,отвалилась пломба чё,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_036
+var_seed_036_2c16aa,ел орехи вчера пломба выскочила дырка теперь огромная болит,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_036
+var_seed_036_eb6d35,у сына 4 года пломба выпала после шоколадки плачет не унимается,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_036
+var_seed_036_35183e,неделю назад ставили пломба отвалилась чую нерв открытый страшно,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_036
+var_seed_036_c5ccf7,на работе грыз семечки пломба слетела некогда ехать срочно,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_036
+var_seed_036_fa0a23,выпала пломба из заднего зуба,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_036
+var_seed_036_9eef00,пломба отвалилась побаливает немного,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_036
+var_seed_036_693bef,нужна помощь с выпавшей пломбой,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_036
+var_seed_087_355f3d,ребенку фисуры запечатать,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_087
+var_seed_087_69505f,герметизация щелей дите,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_087
+var_seed_087_743304,фишуры ребенку герметик,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_087
+var_seed_087_ec8a3e,дочке 6 лет жевательные зубки бороздки глубокие герметизацию фиссур хочу сделать,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_087
+var_seed_087_c1e242,сыну 7 лет прорезались 6ки фисуры видно надо запечатать чтоб не болело потом,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_087
+var_seed_087_1a6872,внучке 5 лет мама начиталась про кариес в бороздках герметизация фиссур нужна срочно,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_087
+var_seed_087_5c562c,мальчишке упал с качелей зуб чуток поцарапал фиссурную герметизацию делали раньше хочу снова,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_087
+var_seed_087_307895,нужна герметизация фиссур ребенку,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_087
+var_seed_087_89ae89,хочу запечатать фисуры у дочки,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_087
+var_seed_087_716dc2,герметизация бороздок сыну интересует,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_087
+var_seed_282_d5b9e4,на обед можно?,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_282
+var_seed_282_eaa69f,перенеси на час,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_282
+var_seed_282_032b92,в обеденник?,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_282
+var_seed_282_be32e5,утро занято работой на обед свободен запись туда перенесите,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_282
+var_seed_282_748822,ребёнку школа до обеда после часа могу на приём привести,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_282
+var_seed_282_bf984a,пенсионер утром в магазин хожу около часа дня дома подойду,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_282
+var_seed_282_632aea,боюсь зубы лечить но время на обед есть перенос туда,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_282
+var_seed_282_489d58,можно запись на обеденное время,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_282
+var_seed_282_6d35f5,подходит около часа дня?,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_282
+var_seed_282_2b8656,перенос на час подойдёт,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_282
+var_seed_229_bcf995,завтра место есть?,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_229
+var_seed_229_bfe09f,на завтра свободно?,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_229
+var_seed_229_9f8399,завтра чё есть?,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_229
+var_seed_229_3a7080,завтра утром свободно на приём работаю весь день,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_229
+var_seed_229_fc155e,ребёнку 5 лет надо к вам завтра есть время если подойдёт,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_229
+var_seed_229_91774f,на выходные некогда завтра единственный шанс зписаться,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_229
+var_seed_229_3ae856,муж завтра свободен хочет к стоматологу место найдётся ли,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_229
+var_seed_229_070eb0,можно на завтра к вам?,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_229
+var_seed_229_175c09,свободное время завтра есть?,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_229
+var_seed_229_fbb760,подскажите на завтра место?,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_229
+var_seed_292_476ea9,не приду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_292
+var_seed_292_cdb3f9,отмена,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_292
+var_seed_292_7a9047,не выйдет завтра,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_292
+var_seed_292_7580fe,ребёнок заболел не сможем прийти завтра отмените запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_292
+var_seed_292_217072,самочувствие плохое не дойду до вас сегодня отмена,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_292
+var_seed_292_ead571,на работе завал не успею отмените мой визит пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_292
+var_seed_292_78a6c9,отмените запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_292
+var_seed_292_6a0127,прошу отменить мой приём,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_292
+var_seed_299_195f30,отмена,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_299
+var_seed_299_16c8c9,отмените срочно,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_299
+var_seed_299_52c515,заболела не смогу завтра к вам отмените мою запись на 15 число,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_299
+var_seed_299_d4b85c,на работе задержка не успею в среду снимите меня с записи,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_299
+var_seed_299_8da25d,отмените мою запись,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_299
+var_seed_299_7e57a2,не нужно больше приём,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_299
+var_seed_299_94b1d8,снимите с записи пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_299
+var_seed_203_bd5d15,укол или общий сон,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_203
+var_seed_203_00c99d,местная анестезия или как,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_203
+var_seed_203_318c1b,заморозка зуба или общая чё,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_203
+var_seed_203_54271e,ребёнку 7 лет удаляют молочный какая анестезия общая или в десну чтоб не плакал,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_203
+var_seed_203_583faa,начиталась в инете про общий наркоз страшно а вдруг местная лучше подскажите разницу,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_203
+var_seed_203_3ad8d1,завтра пломбу ставить какая анестезия местная или общая не люблю когда иглой колют,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_203
+var_seed_203_1e0f37,для чистки камня у вас укол в рот или можно общий чтоб не чувствовать ничего,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_203
+var_seed_203_c9e51d,какая анестезия местная или общая,faq,procedure_info,False,normal,False,,False,,normal,grok_variation,seed_203
+var_seed_203_1f5e78,при удалении какая анестезия укол или сон,faq,procedure_info,False,normal,False,,False,,normal,grok_variation,seed_203
+var_seed_329_ae6615,скока доллар,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_329
+var_seed_329_44116a,доллар чё,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_329
+var_seed_329_895836,курс бакса,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_329
+var_seed_329_017e95,сижу в очереди к зубному а доллар какой сейчас курс скажи,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_329
+var_seed_329_5dd712,привела дочку на приём курс доллара не подскажете сегодня,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_329
+var_seed_329_46d090,какой курс доллара сейчас,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_329
+var_seed_329_8baa9e,подскажите курс доллара,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_329
+var_seed_001_4c3e44,зуб ноет чё,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_001
+var_seed_001_909383,ребёнку 5 лет вчера упал с качелей теперь зуб ноет плачет не переставая,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_001
+var_seed_001_59c49c,на работе вчера кофе горячий пил и зуб начал ныть весь вечер не спал,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_001
+var_seed_001_d5dc0b,давно камень на зубах но сейчас задний зуб разболелся боюсь дырки,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_001
+var_seed_001_d7f7cf,замёрз вчера на улице холодный ветер дул в зуб ноет жуть как,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_001
+var_seed_001_b2648e,зуб побаливает уже третий день,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_001
+var_seed_001_5bb023,ноет нижний зуб,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_001
+var_seed_025_e8d2ce,от сладкого ноет,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_025
+var_seed_025_d9589c,сладкое ем стреляет,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_025
+var_seed_025_b5baa1,зуб болит от конфет,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_025
+var_seed_025_9f4106,дочке 7 лет конфету съела зуб заныл от сладкого плачет помагите,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_025
+var_seed_025_b243ad,вчера торт на днюху ел теперь от сладкого зуб ноет адски что делать,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_025
+var_seed_025_ec49a3,на работе шоколадку хапнул зуб начал ныть от сахара некогда болтаться,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_025
+var_seed_025_274e1a,начиталась что дырка до нерва от сладкого стреляет боюсь срочно к вам,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_025
+var_seed_025_54f70d,зуб реагирует на сладкое,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_025
+var_seed_025_5d1dbd,побаливает от сахара зуб,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_025
+var_seed_025_230207,ныт когда ем сладкое,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_025
+var_seed_028_9977f5,ребёнок ноет когда жуёт,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_028
+var_seed_028_9b5856,сын болит при еде,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_028
+var_seed_028_164796,дочке 4 года вчера конфету жевала и заплакала теперь отказывается есть твёрдое,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_028
+var_seed_028_320e0f,сын 6 лет упал с качелей челюсть ушиблась теперь при еде плачет сильно,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_028
+var_seed_028_a2b5ec,ребёнку 3 годика после мороженого начал жаловаться на боль во рту когда кусает,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_028
+var_seed_028_0a9b7c,внучка вчера яблоко грызла и заревела теперь яблоки и бутеры есть не хочет,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_028
+var_seed_028_adbbc5,у ребёнка зуб ноет при еде,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_028
+var_seed_028_8683f5,дочь жалуется на боль когда ест,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_028
+var_seed_028_3a7d0c,сын побаливает во рту жуя,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_028
+var_seed_030_18e0f7,десны опухли красные,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_030
+var_seed_030_6aecbf,у сына 6 лет десны красные опухли после конфет жрал вчера,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_030
+var_seed_030_51d846,на работе стресс ем фастфуд десны раздуло красные стали болят,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_030
+var_seed_030_f1f09c,курю 10 лет десны опухшие красные начал полоскать но хуже,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_030
+var_seed_030_f22b8b,читала в инете десны красные опухли страшно рак или что помагите,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_030
+var_seed_030_e0d01c,десны красные и опухшие,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_030
+var_seed_030_11144a,наблюдаю опухлость десен краснеют,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_030
+var_seed_035_045bd9,губа онемела после пломбы,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_035
+var_seed_035_39c925,не чувствую губу чот после лечения,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_035
+var_seed_035_be20c0,губа немеет после стоматолога,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_035
+var_seed_035_121fbb,дочке 6 лет вчера пломбу ставили а сегодня верхняя губа онемела не шевелится,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_035
+var_seed_035_5aab70,лечили корень вчера а теперь губа не чувствую уже сутки страшно что там,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_035
+var_seed_035_a2eee7,на работе пломбу делали губа нижняя онемела домой пришел а говорить неловко,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_035
+var_seed_035_2eb739,после укола анестезии губа онемела не проходит читала в инете плохо кончается,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_035
+var_seed_035_cfaa49,губа онемела после лечения зуба,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_035
+var_seed_035_682bd8,не чувствую верхнюю губу после пломбы,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_035
+var_seed_039_9774e7,треснул зуб,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_039
+var_seed_039_7b02b7,трещина в зубе,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_039
+var_seed_039_776a2d,сыну 6 лет упал с качелей зуб треснул что теперь,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_039
+var_seed_039_3788de,начиталась в инете про треснувший зуб нерв может умереть страшно,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_039
+var_seed_039_d404cf,курил кальян и зуб треснул мужику неловко идти к врачу,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_039
+var_seed_039_9bd59a,задний зуб треснул после яблока,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_039
+var_seed_039_99ad62,зуб раскололся от мороженого,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_039
+var_seed_053_76dad1,щели меж зубами шире стали,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_053
+var_seed_053_07a2fd,зубы чот разъехались,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_053
+var_seed_053_f2d910,у дочки зазоры меж передними зубами увеличились ей 7 лет упала недавно может от этого,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_053
+var_seed_053_58d343,после беременности щели между зубами стали шире жую и забивается едой,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_053
+var_seed_053_7b469e,на работе заметил промежутки меж зубов побольше раньше плотнее стояли курю много,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_053
+var_seed_053_876a21,вчера чистил зубы увидел щели шире стали нервничаю читала в инете пародонтит,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_053
+var_seed_053_1396df,увеличились промежутки между зубами,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_053
+var_seed_053_9daf0a,зазоры между зубами побольше,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_053
+var_seed_115_1351c8,есть рассрочка без процентов,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_115
+var_seed_115_529a20,рассрочку без % делаете,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_115
+var_seed_115_cdfa0d,зарплата через неделю на лечение зубов нужна беспроцентная рассрочка у вас есть такая,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_115
+var_seed_115_1046bb,мужу имплант ставить дорого хочу в рассрочку без процентов можно ли у вас,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_115
+var_seed_115_229c72,для ребёнка брекеты берём бабки сразу нет беспроцентная рассрочка подойдёт,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_115
+var_seed_115_3c2b88,отбеливание планирую на свадьбу нужна рассрочка без переплаты есть,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_115
+var_seed_115_881862,подскажите про беспроцентную рассрочку,faq,price,False,normal,False,,False,,normal,grok_variation,seed_115
+var_seed_115_27da87,есть ли у вас рассрочка без процентов,faq,price,False,normal,False,,False,,normal,grok_variation,seed_115
+var_seed_117_9f03f5,скока кт,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_117
+var_seed_117_179a0c,кт почём,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_117
+var_seed_117_57c48b,цена кт?,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_117
+var_seed_117_33a098,студент надо кт зубов срочно сессия скока выйдет у вас,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_117
+var_seed_117_c07e88,ребёнку 6 лет врач сказал кт челюсти сделать цена какая,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_117
+var_seed_117_c5aa55,на работе имплант планирую сначала кт скока стоит процедура,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_117
+var_seed_117_ca5417,курю много зубы проверить надо кт цена у вас какая примерно,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_117
+var_seed_117_573c81,подскажите стоимость кт,faq,price,False,normal,False,,False,,normal,grok_variation,seed_117
+var_seed_117_a8816a,сколько кт челюсти,faq,price,False,normal,False,,False,,normal,grok_variation,seed_117
+var_seed_117_4deb77,цена на кт зубов,faq,price,False,normal,False,,False,,normal,grok_variation,seed_117
+var_seed_121_8fbc6f,скока пломба,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_121
+var_seed_121_0b82eb,пломба почём,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_121
+var_seed_121_278505,ребенку 5 лет дырку пломбой скока у вас стоит,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_121
+var_seed_121_b5bbd1,на передний зуб пломбу надо скока выйдет примерно в клинике,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_121
+var_seed_121_df1605,мужу жевательный чинить пломбой цена какая у вас,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_121
+var_seed_121_ec383a,дочке вчера пломба слетела новая скока посчитайте,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_121
+var_seed_121_8297e0,подскажите цену пломбы,faq,price,False,normal,False,,False,,normal,grok_variation,seed_121
+var_seed_121_238a29,сколько пломба стоит у вас,faq,price,False,normal,False,,False,,normal,grok_variation,seed_121
+var_seed_138_0c4950,парковка есть?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_138
+var_seed_138_81d43f,можно припарковать,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_138
+var_seed_138_911f86,парковочных мест много?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_138
+var_seed_138_05cf15,еду на машине с работы есть парковка у клиники или ходить далеко,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_138
+var_seed_138_58b224,привезу ребенка на прием подскажите парковка бесплатная или как,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_138
+var_seed_138_143a90,завтра утром приеду авто полно машин будет парковаться негде,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_138
+var_seed_138_5829cf,на такси жалко ехать из области скажите про парковку у вас,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_138
+var_seed_138_0de4d4,есть парковка возле клиники?,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_138
+var_seed_138_091ec3,подскажите про парковку,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_138
+var_seed_138_c31b27,парковка у вас имеется,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_138
+var_seed_142_2b9fc9,с какого возраста детей берёте,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_142
+var_seed_142_9f8a22,детей с скока лет,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_142
+var_seed_142_5c2928,мин возраст для детей,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_142
+var_seed_142_c11543,у меня сыну годик можно привести с какого возраста малых берёте,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_142
+var_seed_142_0e8653,дочке 1.8 года читала в инете что не все берут с одного когда у вас,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_142
+var_seed_142_b92768,внуку 2.5 хотим на профилактику а вы с какого года деток принимаете,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_142
+var_seed_142_bec732,племяннику 10 мес интересует минималка по возрасту для приёма детей,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_142
+var_seed_142_1c83db,какой минимальный возраст для детей,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_142
+var_seed_142_b06e84,принимаете детей с какого года,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_142
+var_seed_142_836fce,с какого возраста берут детишек,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_142
+var_seed_146_51ff25,чё седация есть,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_146
+var_seed_146_3d80c1,делаете седацию,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_146
+var_seed_146_aa17b5,у вас седация,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_146
+var_seed_146_95ff70,дочке 4 года зубы боится лечить седация у вас имеется,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_146
+var_seed_146_f12a8c,я паникерша от стоматологов седацию применяете для взрослых,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_146
+var_seed_146_f82bad,отцу 70 лет нервный перед пломбой седация нужна или нет,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_146
+var_seed_146_ec61d0,завтра на работу но зуб надо срочно седация спасёт ситуацию,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_146
+var_seed_146_604633,подскажите про седацию у вас,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_146
+var_seed_146_570da6,есть седация в клинике,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_146
+var_seed_146_d129f4,лечение под седацией делаете,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_146
+var_seed_149_822b6f,картой платите?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_149
+var_seed_149_2830f6,налик берёте?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_149
+var_seed_149_cc031a,оплата как?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_149
+var_seed_149_51d200,ребёнку пломбу ставить а бабушкины деньги наличкой только как у вас оплатить,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_149
+var_seed_149_91fe0d,завтра на работу поеду зарплата на карту скатили оплатить приём как можно,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_149
+var_seed_149_fb0b03,муж приедет из командировки наликом хочет расплатиться а картой тоже можно,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_149
+var_seed_149_fb923f,читала в отзывах что без карты никак а вдруг только наличкой переживаю заранее,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_149
+var_seed_149_44f44a,подскажите способы оплаты,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_149
+var_seed_149_403d3c,как оплатить услуги,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_149
+var_seed_149_38876a,наличными или безнал?,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_149
+var_seed_169_d7c853,детский стом есть,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_169
+var_seed_169_84224f,у вас детский дантист,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_169
+var_seed_169_35188d,стом для детей чё,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_169
+var_seed_169_ae2beb,ребёнку 3 года пора к врачу есть детский стоматолог у вас,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_169
+var_seed_169_94345f,сыну зубы растут боюсь обычным врачом есть специалист для детей,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_169
+var_seed_169_5ec5c3,внучке 7 лет школа началась нужен детский стом в вашей клинике,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_169
+var_seed_169_3945bb,дочке пломбу ставить а вдруг испугается есть детский врач по зубам,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_169
+var_seed_169_0c1f38,подскажите есть детский стоматолог,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_169
+var_seed_169_f8e409,нужен детский специалист по зубам,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_169
+var_seed_197_94994e,скока чистка длится,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_197
+var_seed_197_868a27,чистка чё по времени,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_197
+var_seed_197_751f5e,ребёнку чистку делать скока времени уйдёт на весь рот,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_197
+var_seed_197_48cded,завтра с утра время мало чистка сколько займёт минут,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_197
+var_seed_197_4c1a58,на обед перерыв чистка зубов влезет по времени или нет,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_197
+var_seed_197_683885,читала отзывы чистка у вас долго скока точно процедура,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_197
+var_seed_197_df093b,подскажите длительность чистки,faq,procedure_info,False,normal,False,,False,,normal,grok_variation,seed_197
+var_seed_223_2cf35d,скока укол держится,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_223
+var_seed_223_d1e77e,анестезия долго работает?,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_223
+var_seed_223_0e9442,после заморозки сколько не болит,faq,procedure_info,False,normal,False,,False,,hurried,grok_variation,seed_223
+var_seed_223_819d3d,ребенку 6 лет завтра пломбу ставить скока после укола не будет чувствовать рот,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_223
+var_seed_223_063a9f,вчера чистили зуб укол сделали до сих пор губа онемела когда отпустит,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_223
+var_seed_223_af2997,на работе после лечения нельзя за руль сколько держится обезболивающий укол,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_223
+var_seed_223_2c1d7c,едем в отпуск завтра к вам на удаление скока анестезия будет действовать,faq,procedure_info,False,normal,False,,False,,contextual,grok_variation,seed_223
+var_seed_223_fc2142,подскажите сколько действует анестезия после укола,faq,procedure_info,False,normal,False,,False,,normal,grok_variation,seed_223
+var_seed_223_e0ca2b,как долго держится эффект от укола в зуб,faq,procedure_info,False,normal,False,,False,,normal,grok_variation,seed_223
+var_seed_258_c491ee,перенести запись срочно,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_258
+var_seed_258_04119a,сдвинуть приём,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_258
+var_seed_258_cf4036,запись на потом,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_258
+var_seed_258_f197ac,завтра командировка перенести на след неделю пожалуйста,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_258
+var_seed_258_91b0ab,муж слег перенести мою запись на понедельник,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_258
+var_seed_258_4fad39,можно перенести запись,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_258
+var_seed_258_6103fd,хочу изменить время приёма,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_258
+var_seed_258_175e67,подскажите как сдвинуть запись,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_258
+var_seed_301_d6b037,отменте запиь срочно,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_301
+var_seed_301_548681,ребёнку плохо не придём завтра на 10 утра отмените нас,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_301
+var_seed_301_efbd2f,поезд опоздал на сутки не вышло приехать снимите меня,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_301
+var_seed_301_85017c,пожалуйста отмените запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_301
+var_seed_301_a1845b,нужно снять с расписания,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_301
+var_seed_301_65f275,отменить мой приём,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_301
+var_seed_306_27f08f,отмена записи,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_306
+var_seed_306_e0df0c,снимите запиь,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_306
+var_seed_306_b743fa,ребёнку 6 лет заболел не пойдём завтра отмените нашу запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_306
+var_seed_306_0c2a7f,сам плохо себя чувствую не смогу прийти снимите визит на вторник,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_306
+var_seed_306_47c60a,дочка боится врача решила не идти отмените запись на утро,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_306
+var_seed_306_92318c,прошу отменить запись,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_306
+var_seed_306_427747,нужно снять приём,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_306
+var_seed_307_864663,не приду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_307
+var_seed_307_a8fe08,не смогу,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_307
+var_seed_307_9fa487,ребёнку плохо не придём завтра отмените нашу запись плиз,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_307
+var_seed_307_e03858,отмените запись на завтра пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_307
+var_seed_307_7b6e62,не выйдет прийти извините,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_307
+var_seed_309_9bf75c,отмена,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_309
+var_seed_309_e2ff79,отмените меня,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_309
+var_seed_309_530030,ребёнок температурит не придём завтра отмените запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_309
+var_seed_309_d29054,другая клиника ближе переносить не надо отмените мою,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_309
+var_seed_309_781451,хочу отменить запись,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_309
+var_seed_316_a63810,чё за погода,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_316
+var_seed_316_3eacb0,погода как,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_316
+var_seed_316_23622f,дождь щас,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_316
+var_seed_316_67ee0a,выхожу из дома а дождь хлещет зонтик забыл какая на часик вперёд,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_316
+var_seed_316_9b4d77,ребёнку 6 лет спрашивает какая погода можно в парк после обеда сходить,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_316
+var_seed_316_4796a2,на велике катался вчера солнце сегодня пасмурно чё за ерунда с погодой,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_316
+var_seed_316_012d93,на работу бегу смотрю лужи везде прогноз какой на вечер дайте,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_316
+var_seed_316_dbec55,подскажите погоду сегодня,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_316
+var_seed_316_b08fa7,какая сейчас погода в городе,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_316
+var_seed_316_fa2925,интересует прогноз на день,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_316
+var_seed_333_523c3e,зубик нарисуй,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_333
+var_seed_333_2f7847,нарис зуб чот,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_333
+var_seed_333_08c6e9,картинку зуба кинь,unsupported,offtopic,False,normal,True,,False,,hurried,grok_variation,seed_333
+var_seed_333_a66086,сижу в очереди скучно нарисуй зубик смешной чтоб время прошло,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_333
+var_seed_333_7915c7,ребёнку 6 лет зубы болят покажи нарисованный зуб красивый чтоб не боялся,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_333
+var_seed_333_8fc11f,на работе перерыв нарисуй зуб с улыбкой для аватарки в чате,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_333
+var_seed_333_0c6b73,вчера смотрел видео про зубы нарисуй такой здоровый зуб яркий,unsupported,offtopic,False,normal,True,,False,,contextual,grok_variation,seed_333
+var_seed_333_1626b8,можешь нарисовать зуб,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_333
+var_seed_333_85c292,нарисуй картинку зубика,unsupported,offtopic,False,normal,True,,False,,normal,grok_variation,seed_333
+var_seed_398_3f4660,врач хам,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_398
+var_seed_398_24f9f2,стоматолог напортачил,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_398
+var_seed_398_4b1637,водила дочку к вашему врачу а он ей кричал и зуб криво запломбировал ребёнок теперь боится,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_398
+var_seed_398_10d837,вчера был у врача на удалении камня он меня не дослушал сразу полез сверлить больно было и неряшливо,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_398
+var_seed_398_d33a5c,пришёл срочно зуб чинить врач опоздал на полчаса и сделал всё на коленке теперь опять болит,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_398
+var_seed_398_73d58d,на работе был у вашего стоматолога он грубо обращался и пломбу поставил кривую чот стыдно,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_398
+var_seed_398_abb25a,не понравился врач,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_398
+var_seed_398_f62f7c,жалоба на доктора,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_398
+var_seed_399_9d3d3f,долго ждал очереди,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_399
+var_seed_399_b944ab,очередь адская,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_399
+var_seed_399_d1a2c6,ждал час зря,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_399
+var_seed_399_8fdc1c,пришел с сыном 6 лет ждал 50 минут ребенок уже ноет и плачет,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_399
+var_seed_399_e7b5af,на работе перерыв взял а тут очередь на полчаса опоздал из за вас,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_399
+var_seed_399_c00592,старик я ноги болят стою в очереди час жду когда позовут,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_399
+var_seed_399_876162,с работы после смены пришел усталая а очередь огромная сижу нервничаю,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_399
+var_seed_399_40f494,очередь большая ждать долго,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_399
+var_seed_399_78f9f1,ждал в очереди минут 45,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_399
+var_seed_399_4c0f74,неудобно долго ожидать,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_399
+var_seed_402_a3bec6,супер вылечили,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_402
+var_seed_402_d6f279,классно всё,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_402
+var_seed_402_05ce4c,была вчера ставили пломбу на жевательный зуб ни капли боли осталась довольна,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_402
+var_seed_402_15192d,ребёнку 6 лет чистили камень с зубов он даже не пикнул теперь улыбается во весь рот,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_402
+var_seed_402_3a7878,приходил мужу дырку в зубе заделали быстро на работе теперь жуёт нормально спасибо,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_402
+var_seed_402_29bcb1,давно боялась к стоматологу после старого опыта а тут вылечили передний зуб без нервов идеально,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_402
+var_seed_402_995717,лечение прошло отлично,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_402
+var_seed_402_cb03f8,всё понравилось в клинике,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_402
+var_seed_402_d59ea6,хороший результат получила,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_402
+var_seed_410_2d8f59,жалоба на врача,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_410
+var_seed_410_fba042,отстой полный,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_410
+var_seed_410_7b8cbe,ужас клиника,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_410
+var_seed_410_de8b81,пришел вчера на удаление зуба ждал два часа врач даже не извинился,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_410
+var_seed_410_550a6b,мне пенсионеру сделали пломбу она вывалилась через неделю на что трачу пенсию,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_410
+var_seed_410_3d313c,не понравился прием,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_410
+var_seed_410_6d2c57,хочу недовольство высказать,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_410

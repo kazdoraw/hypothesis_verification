@@ -20,14 +20,44 @@ from typing import Any
 
 import httpx
 import yaml
-from openai import OpenAI
 
-from d4.models import Difficulty, EvalSample
+from d4.config import GenerationConfig
+from d4.models import Difficulty, EvalSample, KBChunk
 
 logger = logging.getLogger(__name__)
 
 # Путь к prompt для генерации вариаций
 _VARIATION_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "query_variation.md"
+
+_SURNAME_STEM_LEN = 4
+
+# ---------------------------------------------------------------------------
+# Резолвер врача по фамилии (перенесён из gold_map.py, Фаза 3.1)
+# ---------------------------------------------------------------------------
+
+
+def _resolve_doctor_by_surname(
+    query: str,
+    doctors: list[dict[str, Any]],
+) -> list[str]:
+    """Поиск врача по фамилии в тексте запроса.
+
+    Стемминг первых N символов фамилии — устойчив к русским падежам.
+    Пример: «Ермакова» → stem «Ерма» → match doctor_1 (Ермаков).
+    """
+    query_words = [w.lower() for w in re.findall(r"[А-ЯЁа-яё]+", query)]
+    matches: list[str] = []
+
+    for doc in doctors:
+        surname = doc.get("full_name", "").split()[0]
+        if len(surname) < _SURNAME_STEM_LEN:
+            continue
+        stem = surname[:_SURNAME_STEM_LEN].lower()
+        if any(w.startswith(stem) and len(w) >= _SURNAME_STEM_LEN for w in query_words):
+            matches.append(f"doctor_{doc['id']}")
+
+    return matches
+
 
 # ---------------------------------------------------------------------------
 # Загрузка таксономии
@@ -93,7 +123,6 @@ def generate_sample_templates(
         for sub_name, sub_data in subtypes.items():
             examples = sub_data.get("examples", [])
             expected_spec = sub_data.get("expected_specialization")
-            expected_fields = sub_data.get("expected_fields", [])
 
             for example in examples:
                 counter += 1
@@ -103,10 +132,10 @@ def generate_sample_templates(
                     category=cat_name,
                     subtype=sub_name,
                     answerable=answerable,
-                    expected_answer="",  # заполняется экспертом
+                    expected_answer="",
                     expected_specialization=expected_spec,
                     difficulty=Difficulty.EASY if answerable else Difficulty.MEDIUM,
-                    notes=f"seed example; fields: {expected_fields}" if expected_fields else "seed example",
+                    notes="seed example",
                 )
                 samples.append(sample)
 
@@ -128,10 +157,31 @@ def save_eval_set(samples: list[EvalSample], output_path: str | Path) -> None:
 
 
 def load_eval_set(eval_set_path: str | Path) -> list[EvalSample]:
-    """Загрузка eval set из YAML."""
+    """Загрузка eval set из YAML (backward-compatible).
+
+    Автоматически мигрирует:
+    - gold_chunk_ids: list[str] → list[list[str]]
+    - gold_facts: list[str] → list[GoldFact] (fact_type="text")
+    """
+    from d4.models import GoldFact
+
     with open(eval_set_path, encoding="utf-8") as f:
         data = yaml.safe_load(f)
-    return [EvalSample(**item) for item in data]
+    samples = []
+    for item in data:
+        raw_gold = item.get("gold_chunk_ids", [])
+        if raw_gold and isinstance(raw_gold[0], str):
+            item["gold_chunk_ids"] = [raw_gold]
+
+        raw_facts = item.get("gold_facts", [])
+        if raw_facts and isinstance(raw_facts[0], str):
+            item["gold_facts"] = [
+                {"fact_type": "text", "canonical_value": f}
+                for f in raw_facts
+            ]
+
+        samples.append(EvalSample(**item))
+    return samples
 
 
 # ---------------------------------------------------------------------------
@@ -141,18 +191,38 @@ def load_eval_set(eval_set_path: str | Path) -> list[EvalSample]:
 
 def deduplicate_queries(
     samples: list[EvalSample],
-    model_name: str,
-    threshold: float = 0.85,
+    model_name: str | None = None,
+    threshold: float | None = None,
+    *,
+    config: GenerationConfig | None = None,
 ) -> list[EvalSample]:
     """Удаление дубликатов по cosine similarity между запросами.
 
     Args:
         samples: список запросов для дедупликации
-        model_name: имя embedding модели (из experiment.yaml → embedding.model)
-        threshold: порог cosine similarity для дубликата
+        model_name: имя embedding модели (приоритет над config)
+        threshold: порог cosine similarity (приоритет над config)
+        config: GenerationConfig — versioned параметры из generation_config.yaml
 
+    Приоритет: явные аргументы > config > hardcoded defaults.
     Требует sentence-transformers. Если не установлен — возвращает без изменений.
     """
+    effective_model = model_name
+    effective_threshold = threshold
+
+    if config is not None:
+        if effective_model is None:
+            effective_model = config.dedup.model
+        if effective_threshold is None:
+            effective_threshold = config.dedup.threshold
+
+    if effective_model is None:
+        raise ValueError(
+            "model_name обязателен: передайте явно или через config (generation_config.yaml)"
+        )
+    if effective_threshold is None:
+        effective_threshold = 0.85
+
     if len(samples) <= 1:
         return samples
 
@@ -163,19 +233,17 @@ def deduplicate_queries(
         print("WARN: sentence-transformers не установлен, дедупликация пропущена")
         return samples
 
-    model = SentenceTransformer(model_name)
+    model = SentenceTransformer(effective_model)
     queries = [s.query for s in samples]
     embeddings = model.encode(queries, normalize_embeddings=True)
 
-    # Cosine similarity матрица (нормализованные → dot product)
     sim_matrix = np.dot(embeddings, embeddings.T)
 
-    # Жадный отбор: оставляем sample, если нет уже отобранного с similarity >= threshold
     keep_indices: list[int] = []
     for i in range(len(samples)):
         is_duplicate = False
         for j in keep_indices:
-            if sim_matrix[i][j] >= threshold:
+            if sim_matrix[i][j] >= effective_threshold:
                 is_duplicate = True
                 break
         if not is_duplicate:
@@ -183,7 +251,8 @@ def deduplicate_queries(
 
     removed = len(samples) - len(keep_indices)
     if removed > 0:
-        print(f"Дедупликация: удалено {removed} дубликатов (threshold={threshold})")
+        print(f"Дедупликация: удалено {removed} дубликатов "
+              f"(model={effective_model}, threshold={effective_threshold})")
 
     return [samples[i] for i in keep_indices]
 
@@ -304,6 +373,8 @@ def _generate_variations_for_sample(
         logger.warning("LLM ошибка для %s: %s", sample.sample_id, exc)
         return []
 
+    family_id = sample.seed_family_id or sample.sample_id
+
     results: list[EvalSample] = []
     for var in variations:
         new_sample = EvalSample(
@@ -319,6 +390,7 @@ def _generate_variations_for_sample(
             expected_service=sample.expected_service,
             difficulty=Difficulty.MEDIUM,
             notes=f"llm_variation of {sample.sample_id}; style: {var['style']}",
+            seed_family_id=family_id,
         )
         results.append(new_sample)
     return results
@@ -351,6 +423,8 @@ def generate_llm_variations(
     Returns:
         список новых EvalSample (без ID — назначаются позже)
     """
+    from openai import OpenAI
+
     client = OpenAI(
         base_url=api_url,
         api_key=api_key,
@@ -405,7 +479,7 @@ def populate_annotations(
     циркулярность: эталоны не захардкожены автором эксперимента.
 
     Стратегия:
-    - doctor_lookup: определяем expected_doctor детерминированно из KB
+    - doctor_info/by_surname: определяем expected_doctor детерминированно из KB
     - out_of_scope: фиксированный текст отказа (не зависит от KB фактов)
     - остальные категории: expected_answer остаётся пустым → заполняется LLM
 
@@ -416,19 +490,14 @@ def populate_annotations(
     Returns:
         тот же список samples с заполненными метаданными
     """
-    from d4.evaluation.gold_map import (
-        _resolve_doctor_by_surname,
-    )
-
     doc_by_id = {f"doctor_{d['id']}": d for d in doctors}
 
     for sample in samples:
-        if sample.category == "doctor_lookup":
-            if sample.subtype != "by_specialization_list":
-                chunk_ids = _resolve_doctor_by_surname(sample.query, doctors)
-                if chunk_ids and chunk_ids[0] in doc_by_id:
-                    doc = doc_by_id[chunk_ids[0]]
-                    sample.expected_doctor = doc["full_name"]
+        if sample.category == "doctor_info" and sample.subtype == "by_surname":
+            chunk_ids = _resolve_doctor_by_surname(sample.query, doctors)
+            if chunk_ids and chunk_ids[0] in doc_by_id:
+                doc = doc_by_id[chunk_ids[0]]
+                sample.expected_doctor = doc["full_name"]
 
         elif sample.category == "out_of_scope":
             sample.expected_answer = (
@@ -458,10 +527,28 @@ def _load_reference_prompt() -> str:
 def _build_reference_user_message(
     sample: EvalSample,
     kb_text: str,
+    chunks: list[KBChunk] | None = None,
 ) -> str:
-    """Формирование user message для reference LLM."""
+    """Формирование user message для reference LLM.
+
+    Если chunks переданы — собирает контекст ТОЛЬКО из gold chunks
+    (устранение Bias 3: reference answers != S1 full context).
+    Иначе — используется kb_text целиком (legacy-режим).
+    """
+    if chunks and sample.gold_chunk_ids:
+        chunk_map = {c.id: c for c in chunks}
+        gold_ids: set[str] = set()
+        for alt in sample.gold_chunk_ids:
+            gold_ids.update(alt)
+        gold_chunks = [chunk_map[cid] for cid in gold_ids if cid in chunk_map]
+        context = "\n\n".join(
+            f"[{c.id}] {c.title}\n{c.content}" for c in gold_chunks
+        )
+    else:
+        context = kb_text
+
     return (
-        f"## База знаний клиники\n\n{kb_text}\n\n"
+        f"## База знаний (релевантные фрагменты)\n\n{context}\n\n"
         f"---\n\n"
         f"## Запрос пациента\n\n{sample.query}\n\n"
         f"## Метаданные\n"
@@ -493,13 +580,18 @@ def _generate_reference_for_sample(
     kb_text: str,
     temperature: float,
     max_tokens: int,
+    chunks: list[KBChunk] | None = None,
 ) -> str:
     """Генерация эталонного ответа для одного сэмпла через reference LLM.
+
+    Args:
+        chunks: если переданы, reference answer строится по gold chunks,
+                а не по полной KB (устранение Bias 3)
 
     Returns:
         текст эталонного ответа (строка)
     """
-    user_message = _build_reference_user_message(sample, kb_text)
+    user_message = _build_reference_user_message(sample, kb_text, chunks)
     try:
         response = client.chat.completions.create(
             model=model,
@@ -531,6 +623,7 @@ def generate_reference_answers(
     max_tokens: int = 1024,
     max_workers: int = 8,
     timeout_sec: float = 90.0,
+    chunks: list[KBChunk] | None = None,
 ) -> list[EvalSample]:
     """Генерация expected_answer для всех answerable сэмплов через reference LLM.
 
@@ -543,7 +636,7 @@ def generate_reference_answers(
 
     Args:
         samples: список EvalSample (in-place модификация expected_answer)
-        kb_text: полный текст KB (все chunks, сериализованные)
+        kb_text: полный текст KB (fallback если chunks не передан)
         api_url: URL OpenRouter API
         api_key: API ключ
         model: модель reference LLM (напр. openai/gpt-5.4-mini)
@@ -551,10 +644,13 @@ def generate_reference_answers(
         max_tokens: лимит токенов на ответ
         max_workers: параллельных потоков
         timeout_sec: таймаут на один запрос
+        chunks: KB chunks для сборки gold-only контекста (устранение Bias 3)
 
     Returns:
         тот же список samples с заполненными expected_answer
     """
+    from openai import OpenAI
+
     client = OpenAI(
         base_url=api_url,
         api_key=api_key,
@@ -571,14 +667,15 @@ def generate_reference_answers(
     done = 0
     filled = 0
     start = time.perf_counter()
-    print(f"  reference answers: {total} сэмплов, {max_workers} потоков")
+    mode = "gold-context" if chunks else "full-KB"
+    print(f"  reference answers ({mode}): {total} сэмплов, {max_workers} потоков")
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {
             executor.submit(
                 _generate_reference_for_sample,
                 client, model, system_prompt, sample,
-                kb_text, temperature, max_tokens,
+                kb_text, temperature, max_tokens, chunks,
             ): sample
             for sample in answerable_samples
         }
@@ -611,13 +708,13 @@ def generate_reference_answers(
 
 def apply_gold_chunk_ids(
     samples: list[EvalSample],
-    gold_map: dict[str, list[str]],
+    gold_map: dict[str, list[list[str]]],
 ) -> list[EvalSample]:
     """Записывает gold_chunk_ids из gold_map в каждый EvalSample.
 
     Args:
         samples: список EvalSample (in-place модификация)
-        gold_map: {sample_id: [gold_chunk_ids]} из build_gold_map()
+        gold_map: {sample_id: [[alt1], [alt2], ...]} multi-gold
 
     Returns:
         тот же список samples с заполненными gold_chunk_ids
@@ -630,3 +727,188 @@ def apply_gold_chunk_ids(
             applied += 1
     print(f"  gold_chunk_ids: заполнено у {applied}/{len(samples)} сэмплов")
     return samples
+
+
+# ---------------------------------------------------------------------------
+# Dev/test split (Bias 7: held-out test set)
+# ---------------------------------------------------------------------------
+
+
+def _infer_seed_family(sample: EvalSample, *, group_field: str = "seed_family_id") -> str:
+    """Определяет group ID: явное поле (по group_field) → из notes → sample_id.
+
+    Поддерживает два формата notes:
+    - v1: "llm_variation of seed_0003; style: typo" → "seed_0003"
+    - v2: "llm_variation of q_0003"                 → "q_0003"
+    """
+    value = getattr(sample, group_field, "")
+    if value:
+        return value
+    m = re.search(r"llm_variation of ((?:seed_|q_)\w+)", sample.notes)
+    if m:
+        return m.group(1)
+    return sample.sample_id
+
+
+def split_eval_set(
+    samples: list[EvalSample],
+    test_ratio: float | None = None,
+    seed: int | None = None,
+    *,
+    config: GenerationConfig | None = None,
+) -> tuple[list[EvalSample], list[EvalSample]]:
+    """Group-stratified split: seed + вариации = одна группа, баланс по category.
+
+    Все вариации одного seed попадают целиком в dev ИЛИ в test (не разделяются),
+    предотвращая data leakage. Баланс по category обеспечивается вручную
+    через группировку по (family, category).
+
+    Из config.split используются ВСЕ поля:
+    - method: только "group_stratified" (ValueError при другом)
+    - group_field: поле EvalSample для определения группы ("seed_family_id")
+    - test_ratio, seed: числовые параметры split
+
+    Args:
+        samples: полный eval set
+        test_ratio: доля test set (приоритет над config, default 0.3)
+        seed: random seed (приоритет над config, default 42)
+        config: GenerationConfig — versioned параметры из generation_config.yaml
+
+    Returns:
+        (dev_samples, test_samples)
+    """
+    import random
+    from collections import Counter, defaultdict
+
+    effective_ratio = test_ratio
+    effective_seed = seed
+    group_field = "seed_family_id"
+
+    if config is not None:
+        if config.split.method != "group_stratified":
+            raise ValueError(
+                f"split.method='{config.split.method}' не поддерживается. "
+                f"Единственный реализованный метод: 'group_stratified'."
+            )
+        group_field = config.split.group_field
+        if effective_ratio is None:
+            effective_ratio = config.split.test_ratio
+        if effective_seed is None:
+            effective_seed = config.split.seed
+
+    if effective_ratio is None:
+        effective_ratio = 0.3
+    if effective_seed is None:
+        effective_seed = 42
+
+    rng = random.Random(effective_seed)
+
+    families: dict[str, list[EvalSample]] = defaultdict(list)
+    for s in samples:
+        fid = _infer_seed_family(s, group_field=group_field)
+        families[fid].append(s)
+
+    family_cat: dict[str, str] = {}
+    for fid, members in families.items():
+        cats = Counter(m.category for m in members)
+        family_cat[fid] = cats.most_common(1)[0][0]
+
+    cat_families: dict[str, list[str]] = defaultdict(list)
+    for fid, cat in family_cat.items():
+        cat_families[cat].append(fid)
+
+    test_families: set[str] = set()
+    for cat, fids in cat_families.items():
+        rng.shuffle(fids)
+        n_test = max(1, round(len(fids) * effective_ratio))
+        if n_test >= len(fids):
+            n_test = max(0, len(fids) - 1)
+        test_families.update(fids[:n_test])
+
+    dev_samples = [s for s in samples if _infer_seed_family(s, group_field=group_field) not in test_families]
+    test_samples = [s for s in samples if _infer_seed_family(s, group_field=group_field) in test_families]
+
+    if not test_samples:
+        logger.warning("Eval set слишком мал для group split, всё в dev")
+        return list(samples), []
+
+    dev_cats = Counter(s.category for s in dev_samples)
+    test_cats = Counter(s.category for s in test_samples)
+    n_families = len(families)
+    n_test_families = len(test_families)
+
+    print(f"Group-stratified split: dev={len(dev_samples)}, test={len(test_samples)} "
+          f"(ratio={len(test_samples)/len(samples):.1%})")
+    print(f"  groups: {n_families} families, {n_test_families} in test")
+    print(f"  dev categories:  {dict(sorted(dev_cats.items()))}")
+    print(f"  test categories: {dict(sorted(test_cats.items()))}")
+
+    return dev_samples, test_samples
+
+
+# ---------------------------------------------------------------------------
+# Валидация intent вариаций (Bias 5)
+# ---------------------------------------------------------------------------
+
+
+def validate_variation_intent(
+    seed: EvalSample,
+    variation: EvalSample,
+    api_url: str,
+    api_key: str,
+    model: str,
+    timeout_sec: float = 30.0,
+) -> bool:
+    """Проверяет сохранение intent между seed и вариацией через LLM.
+
+    Вариации с изменённым intent отбрасываются, не переразмечиваются.
+
+    Args:
+        seed: оригинальный seed-запрос
+        variation: LLM-сгенерированная вариация
+        api_url: URL OpenRouter API
+        api_key: API ключ
+        model: lightweight judge model
+        timeout_sec: таймаут
+
+    Returns:
+        True если intent сохранён, False если изменился
+    """
+    from openai import OpenAI
+
+    client = OpenAI(
+        base_url=api_url,
+        api_key=api_key,
+        timeout=httpx.Timeout(timeout_sec, connect=10.0),
+    )
+
+    system_msg = (
+        "Ты — классификатор интентов для стоматологической клиники. "
+        "Тебе дадут два запроса пациента. Определи, одинаковый ли у них intent "
+        "(какую информацию хочет получить пациент). "
+        "Ответь ТОЛЬКО одним словом: same или shifted."
+    )
+    user_msg = (
+        f"Запрос A: \"{seed.query}\"\n"
+        f"Запрос B: \"{variation.query}\"\n"
+        f"Категория A: {seed.category}/{seed.subtype}"
+    )
+
+    try:
+        response = client.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": system_msg},
+                {"role": "user", "content": user_msg},
+            ],
+            temperature=0.0,
+            max_tokens=10,
+        )
+        answer = (response.choices[0].message.content or "").strip().lower()
+        return "same" in answer
+    except Exception as exc:
+        logger.warning(
+            "Intent validation ошибка для %s→%s: %s",
+            seed.sample_id, variation.query[:40], exc,
+        )
+        return True  # при ошибке API сохраняем вариацию (conservative)

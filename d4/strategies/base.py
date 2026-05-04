@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from abc import ABC, abstractmethod
 
-from d4.models import FAQAnswer, KBChunk, RetrievalResult
+from d4.models import KBChunk, RetrievalResult
 
 
 class BaseContextStrategy(ABC):

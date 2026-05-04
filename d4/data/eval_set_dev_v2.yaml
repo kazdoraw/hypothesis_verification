@@ -1,0 +1,3955 @@
+- sample_id: q_0001
+  query: Где вы находитесь?
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Семейная клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Будем
+    рады видеть вас ежедневно с 08:00 до 20:00. Если вам нужно уточнить маршрут или записаться, вы можете позвонить нам по
+    телефонам: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''address'', ''city'']'
+  seed_family_id: q_0001
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0002
+  query: Подскажите адрес
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Семейная клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''address'', ''city'']'
+  seed_family_id: q_0002
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0004
+  query: Адрес клиники скиньте
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Адрес нашей клиники: Россия, г. Ульяновск, ул. Рябикова, 56. Если вам удобно, также можем подсказать телефоны
+    для записи: +7 (842) 231-45-55 и +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''address'', ''city'']'
+  seed_family_id: q_0004
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0005
+  query: До скольки работаете?
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» работает ежедневно с 08:00 до 20:00.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''schedule_text'']'
+  seed_family_id: q_0005
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0007
+  query: В субботу работаете?
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Клиника работает ежедневно с 08:00 до 20:00, поэтому в субботу мы тоже принимаем пациентов.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''schedule_text'']'
+  seed_family_id: q_0007
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0008
+  query: Во сколько открываетесь?
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» в Ульяновске работает ежедневно с 08:00 до 20:00.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''schedule_text'']'
+  seed_family_id: q_0008
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0009
+  query: Какой телефон?
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Телефоны семейной клиники «Клевер»: +7 (842) 231-45-55 и +7 (927) 831-45-55. Если вам удобно,
+    также можете написать нам на email: klever_dent@mail.ru.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''phones'']'
+  seed_family_id: q_0009
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0010
+  query: Как позвонить?
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Вы можете связаться с нами по телефонам: +7 (842) 231-45-55 и +7 (927) 831-45-55. Также вы можете написать
+    на email: klever_dent@mail.ru. Будем рады помочь вам!'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''phones'']'
+  seed_family_id: q_0010
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0011
+  query: Номер для записи скиньте
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Для записи вы можете позвонить в семейную клинику «Клевер» по телефонам: +7 (842) 231-45-55
+    или +7 (927) 831-45-55. Мы работаем ежедневно с 08:00 до 20:00. Также вы можете написать на почту: klever_dent@mail.ru.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''phones'']'
+  seed_family_id: q_0011
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0012
+  query: Можно под наркозом?
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: Да, у нас доступно лечение во сне (dental sleep). Также для снятия страха перед лечением у детей и взрослых
+    применяется седация закисью азота + кислород. Если вам нужен именно такой формат лечения, мы подберём подходящий вариант
+    на приёме. Дополнительно сообщаем, что у детей доступна седация при лечении и при удалении зубов. Информация о наркозе
+    в базе знаний отсутствует.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''sedation'']'
+  seed_family_id: q_0012
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0013
+  query: Боюсь стоматологов
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Добрый день! В нашей клинике для снятия страха перед лечением у детей и взрослых доступна седация: лечение
+    во сне (dental sleep), а также седация закисью азота + кислород. Если вы хотите, мы подберем для вас подходящий вариант
+    и расскажем подробнее на приеме. Также сообщаем, что прием ведется ежедневно с 08:00 до 20:00 по адресу: Россия, г. Ульяновск,
+    ул. Рябикова, 56. Телефоны для записи: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''sedation'']'
+  seed_family_id: q_0013
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0019
+  query: С какого возраста?
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: Добрый день! В нашей семейной клинике «Клевер» приём детей ведётся с первого зуба. Также у нас в штате
+    3 детских стоматолога.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''children_info'']'
+  seed_family_id: q_0019
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0020
+  query: Ребёнку 3 года, примете?
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: 'Да, конечно, мы принимаем детей с первого зуба. У нас в клинике ведут приём 3 детских стоматолога. Если
+    хотите, вы можете записаться на удобное время по телефонам: +7 (842) 231-45-55 или +7 (927) 831-45-55. Мы находимся по
+    адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Работаем ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''children_info'']'
+  seed_family_id: q_0020
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0021
+  query: Есть лицензия?
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Да, у нашей клиники есть лицензии. Вы можете посмотреть выписку из реестра лицензий на странице: https://dentklever.ru/licenses/.
+    Дата выписки — 2024-02-22.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''licenses'', ''documents'']'
+  seed_family_id: q_0021
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0022
+  query: Какие документы нужны?
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Для пациентов у нас доступны следующие документы: договор на оказание стоматологических
+    услуг, согласие на обработку персональных данных, ИДС — информированное добровольное согласие, ИДС РОДИТЕЛЬ — информированное
+    добровольное согласие, ИС на проведение анестезиологического пособия, положение о гарантийном сроке и сроке службы в ООО
+    «Клевер», анкета здоровья (детская), анкета здоровья (взрослые). Все документы размещены на сайте: https://dentklever.ru/documents/.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''licenses'', ''documents'']'
+  seed_family_id: q_0022
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0023
+  query: Что с собой брать на приём?
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: Информация отсутствует в базе знаний.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''licenses'', ''documents'']'
+  seed_family_id: q_0023
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0026
+  query: Молгачева у вас принимает?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Да, у нас принимает врач-детский стоматолог Молгачева Оксана Александровна. Стаж работы — 23 года. Если
+    хотите, я могу также подсказать, по каким вопросам она ведёт приём.
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0026
+  gold_chunk_ids:
+  - - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+- sample_id: q_0027
+  query: Абраамян работает в клинике?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Да, у нас ведёт приём врач-терапевт Абраамян Андела Корюновна. Она работает в направлении терапевтической
+    стоматологии, стаж — 17 лет.
+  expected_doctor: Абраамян Андела Корюновна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0027
+  gold_chunk_ids:
+  - - doctor_6
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Абраамян Андела Корюновна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Терапевтическая стоматология
+    label: специализация
+- sample_id: q_0032
+  query: Кто такой Булатов?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Булатов Руслан Тальгатович — врач-ортопед (Ортопедическая стоматология), стаж 25 лет. Он занимается протезированием
+    на зубах и имплантах, протезированием челюсти, протезированием при стираемости и ортопедическим восстановлением. К нему
+    можно обратиться, если у вас слетела коронка, нужно восстановить зуб коронкой, отсутствуют зубы, нечем жевать, натирает
+    протез, есть дискомфорт под коронкой, не нравится внешний вид зубов, нужно снять коронки или есть повышенная стираемость
+    зубов.
+  expected_doctor: Булатов Руслан Тальгатович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0032
+  gold_chunk_ids:
+  - - doctor_7
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Булатов Руслан Тальгатович
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+- sample_id: q_0034
+  query: Кто такая Сотникова?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Сотникова Анна Юрьевна — врач-хирург (Хирургическая стоматология), стаж 14 лет. Она ведет случаи: ретенированные
+    зубы мудрости любой сложности, разрушенность зубов любой сложности, пластика губы, блефаропластика, сверхкомплектные зубы,
+    верхнечелюстной синусит, врожденные расщелины губы и неба, выступающее ухо, гемангиома, доброкачественные новообразования,
+    атерома шеи и лица, периостит, альвеолит, эпулис, свищ, флюс. Обращаться к ней можно, если у вас: чувствую припухлость
+    щеки, хочу удалить разрушенный зуб, у меня шатается зуб, у меня болит ВЧ/НЧ, у меня воспалилась и отекла десна в области
+    зуба, у меня болит зуб мудрости, мне натирает щеку с левой/правой стороны, хочу удалить зуб мудрости для дальнейшей установки
+    брекет-системы, обнаружила шарик на десне, у меня затрудненое дыхание, беспокоят периодические кровотечения из носа, у
+    меня торчат уши, заметил образование на лице, ощущаю образование в ротовой полости, у меня гнойные выделения из носа,
+    храплю во сне, у меня щелкает челюсть, у меня мешки под глазами, беспокоит свисающая кожа над глазом. Методы диагностики:
+    КТ.'
+  expected_doctor: Сотникова Анна Юрьевна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0034
+  gold_chunk_ids:
+  - - doctor_21
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Сотникова Анна Юрьевна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+- sample_id: q_0035
+  query: Какой стаж у Филькина?
+  category: doctor_info
+  subtype: experience_query
+  answerable: true
+  expected_answer: Филькин Вадим Сергеевич — врач-хирург (Хирургическая стоматология), стаж 20 лет. Если хотите, я также могу
+    подсказать, с какими жалобами и клиническими случаями он работает.
+  expected_doctor: Филькин Вадим Сергеевич
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0035
+  gold_chunk_ids:
+  - - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Филькин Вадим Сергеевич
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+  - fact_type: text
+    canonical_value: '20'
+    label: стаж (лет)
+- sample_id: q_0036
+  query: Кто у вас ортодонт?
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ортодонты: Ермаков Александр Владимирович — врач-ортодонт, стаж 7 лет; Живора
+    Инна Григорьевна — врач-ортодонт, стаж 4 лет; Окружнова Виктория Валерьевна — врач-ортодонт, стаж 4 лет. Если хотите,
+    я также могу помочь с записью к специалисту.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0036
+  gold_chunk_ids:
+  - - doctor_1
+    - doctor_10
+    - doctor_18
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортодонтия
+    label: специализация
+  - fact_type: fio
+    canonical_value: Ермаков
+    label: 'врач: Ермаков Александр Владимирович'
+  - fact_type: fio
+    canonical_value: Живора
+    label: 'врач: Живора Инна Григорьевна'
+  - fact_type: fio
+    canonical_value: Окружнова
+    label: 'врач: Окружнова Виктория Валерьевна'
+- sample_id: q_0038
+  query: Какие ортопеды есть?
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике есть следующие врачи-ортопеды:
+
+
+    - Булатов Руслан Тальгатович — врач-ортопед (Ортопедическая стоматология), стаж 25 лет.
+
+    - Куприянов Илья Александрович — врач-ортопед (Ортопедическая стоматология), стаж 4 лет.
+
+
+    Оба врача занимаются протезированием на зубах и имплантах, протезированием челюсти, протезированием при стираемости и
+    ортопедическим восстановлением.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0038
+  gold_chunk_ids:
+  - - doctor_7
+    - doctor_13
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Булатов
+    label: 'врач: Булатов Руслан Тальгатович'
+  - fact_type: fio
+    canonical_value: Куприянов
+    label: 'врач: Куприянов Илья Александрович'
+- sample_id: q_0039
+  query: Список детских стоматологов
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ведут прием детские стоматологи:
+
+
+    1. Молгачева Оксана Александровна — врач-детский стоматолог, стаж 23 года.
+
+    2. Емелина Татьяна Евгеньевна — врач-детский стоматолог, стаж 6 лет.
+
+    3. Конновская Алена Евгеньевна — врач-детский стоматолог, стаж 3 года.
+
+
+    Детский прием доступен с первого зуба.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0039
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Конновская
+    label: 'врач: Конновская Алена Евгеньевна'
+  - fact_type: fio
+    canonical_value: Емелина
+    label: 'врач: Емелина Татьяна Евгеньевна'
+  - fact_type: fio
+    canonical_value: Молгачева
+    label: 'врач: Молгачева Оксана Александровна'
+- sample_id: q_0057
+  query: Кто из хирургов самый опытный?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Среди хирургов клиники «Клевер» самым опытным врачом является Заволжский Александр Михайлович
+    — врач-хирург (Хирургическая стоматология), стаж 41 год.
+
+
+    Также в штате клиники работают другие хирурги: Лисин Валерий Константинович — стаж 39 лет, Батылин Александр Александрович
+    — 17 лет, Сотникова Анна Юрьевна — 14 лет, Никифоров Дмитрий Олегович — 10 лет, Филькин Вадим Сергеевич — 20 лет, Демин
+    Евгений Дмитриевич — 3 года, Мигачёв Алексей Сергеевич — 4 года.
+
+
+    Если хотите, я могу также подсказать, к кому из хирургов лучше обратиться по вашей проблеме.'
+  expected_doctor: Заволжский Александр Михайлович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0057
+  gold_chunk_ids:
+  - - doctor_2
+    - doctor_4
+    - doctor_5
+    - doctor_11
+    - doctor_14
+    - doctor_17
+    - doctor_21
+    - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Заволжский Александр Михайлович
+    label: самый опытный хирург
+  - fact_type: text
+    canonical_value: '41'
+    label: стаж (лет)
+- sample_id: q_0058
+  query: Есть ли детский стоматолог с опытом >10 лет?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Да, у нас в клинике есть детский стоматолог с опытом более 10 лет: Молгачева Оксана Александровна — врач-детский
+    стоматолог, стаж 23 года. Также в штате есть другие детские стоматологи: Емелина Татьяна Евгеньевна — стаж 6 лет и Конновская
+    Алена Евгеньевна — стаж 3 года.'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0058
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: детский стоматолог
+  - fact_type: text
+    canonical_value: '23'
+    label: стаж (лет)
+- sample_id: q_0059
+  query: Какой терапевт с наибольшим стажем?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'С радостью подскажу: среди врачей-терапевтов с наибольшим стажем в нашей клинике — Васильева Елена Владимировна,
+    врач-терапевт (Терапевтическая стоматология), стаж 39 лет.
+
+
+    Также в штате есть другие терапевты: Абраамян Андела Корюновна — стаж 17 лет, Сибгатулина Екатерина Михайловна — стаж
+    11 лет, Сорокина Регина Вячеславовна — стаж 7 лет, Морозова Наталья Александровна — стаж 2 года, Золин Павел Евгеньевич
+    — стаж 1 год.'
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0059
+  gold_chunk_ids:
+  - - doctor_6
+    - doctor_8
+    - doctor_12
+    - doctor_16
+    - doctor_19
+    - doctor_20
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Васильева Елена Владимировна
+    label: терапевт с наибольшим стажем
+  - fact_type: text
+    canonical_value: '39'
+    label: стаж (лет)
+- sample_id: q_0066
+  query: Цена удаления зуба мудрости
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость удаления зуба мудрости в нашей клинике зависит от сложности операции: удаление
+    8-го зуба (простая операция) — от 4 900 ₽, удаление 8-го зуба (сложная операция) — от 6 900 ₽. Также при необходимости
+    может потребоваться анестезия: местная анестезия (1 картридж) — от 590 ₽, проводниковая анестезия — от 490 ₽, аппликационная
+    анестезия — от 220 ₽, аэрозольная анестезия — от 290 ₽. Приём ведётся по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.
+    Мы работаем ежедневно с 08:00 до 20:00. Для записи вы можете позвонить по телефонам: +7 (842) 231-45-55 или +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0066
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0067
+  query: Почём удаление?
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Уточните, пожалуйста, удаление чего именно вас интересует: зуба, зуба мудрости, импланта
+    или удаление в рамках челюстно-лицевой хирургии. В нашей базе есть такие цены: удаление постоянного зуба — от 6 000 ₽,
+    удаление 8-го зуба (простая операция) — от 4 900 ₽, удаление 8-го зуба (сложная операция) — от 6 900 ₽, удаление импланта,
+    трансплантата — от 5 000 ₽. Также в челюстно-лицевой хирургии есть, например, удаление атеромы — от 7 000 ₽, удаление
+    доброкачественных новообразований мягких тканей — от 6 500 ₽, удаление боковых кист шеи — от 25 000 ₽. Если подскажете,
+    что именно нужно удалить, я сориентирую вас точнее.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0067
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0068
+  query: Стоимость виниров
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике «Клевер» стоимость винира — от 17 500 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0068
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '17500'
+    label: 'Винир: от 17 500 ₽'
+- sample_id: q_0069
+  query: Сколько стоят брекеты?
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике стоимость брекет-систем начинается от 45 000 ₽ за брекет-систему 2х4. Также
+    доступны следующие варианты:
+
+    - Damon Q (самолигирующаяся металлическая система, 1 челюсть) — от 70 000 ₽
+
+    - Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов) — от 85 000 ₽
+
+    - Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов) — от 140 000 ₽
+
+
+    Дополнительно в прайсе есть услуги по ортодонтии, связанные с брекетами: фиксация нового брекета — от 5 000 ₽, фиксация
+    нового брекета Дэймон Клир — от 9 000 ₽, снятие и постановка коронки или кольца, снятие брекетов + полировка зубов — от
+    3 500 ₽, а также фиксация брекетов с помощью каппы (непрямым методом) — от 5 000 ₽. Если хотите, мы можем помочь подобрать
+    подходящий вариант после консультации врача-ортодонта.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0069
+  gold_chunk_ids:
+  - - price_orthodontics_p1
+    - price_orthodontics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice): от 5 000 ₽'
+  - fact_type: price
+    canonical_value: '9000'
+    label: 'Брекет-системы: фиксация нового брекета Дэймон Клир: от 9 000 ₽'
+  - fact_type: price
+    canonical_value: '45000'
+    label: 'Брекет-система 2х4: от 45 000 ₽'
+  - fact_type: price
+    canonical_value: '85000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов): от 85 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '3500'
+    label: 'Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов: от 3 500 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Фиксация брекетов с помощью каппы (непрямым методом): от 5 000 ₽'
+- sample_id: q_0070
+  query: Прайс на протезирование
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике доступно протезирование, коронки, виниры и съемные протезы. Вот основные
+    цены:
+
+
+    - Винир — от 17 500 ₽
+
+    - Съемный нейлоновый протез — от 30 000 ₽
+
+    - Бюгельный протез — от 50 000 ₽
+
+    - Съемный протез на металле «Квадротти» (верх без неба) — от 32 000 ₽
+
+    - Полный съемный протез — от 26 000 ₽
+
+    - Временная композитная коронка (прямой метод) — от 2 850 ₽
+
+    - Временная пластмассовая коронка (лаборатория) — от 4 200 ₽
+
+    - Временная металлопластмассовая коронка (облицовка с напылением) — от 10 000 ₽
+
+    - Коронка из диоксида циркония (боковая) — от 17 000 ₽
+
+    - Коронка из диоксида циркония (фронтальная) — от 18 000 ₽
+
+    - Коронка из металлокерамики (боковая) — от 16 000 ₽
+
+    - Коронка из металлокерамики (фронтальная) — от 17 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (боковая) — от 18 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (фронтальная) — от 19 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (акриловый протез) — от 60 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке) — от 400 000 ₽
+
+    - Коронка на имплантате (диоксид циркония) — от 20 000 ₽
+
+    - Коронка на имплантате (металлокерамика) — от 16 000 ₽
+
+    - Временная коронка на имплантате — от 10 000 ₽
+
+    - Восстановление зуба пломбировочными материалами с внутриканальным штифтом — от 11 900 ₽
+
+
+    Также по протезированию у нас есть врачи-ортопеды: Булатов Руслан Тальгатович, стаж 25 лет, и Куприянов Илья Александрович,
+    стаж 4 года.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0070
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '30000'
+    label: 'Съемный нейлоновый протез: от 30 000 ₽'
+  - fact_type: price
+    canonical_value: '50000'
+    label: 'Бюгельный протез: от 50 000 ₽'
+  - fact_type: price
+    canonical_value: '32000'
+    label: 'Съемный протез на металле ''Квадротти'' (верх без неба): от 32 000 ₽'
+  - fact_type: price
+    canonical_value: '26000'
+    label: 'Полный съемный протез: от 26 000 ₽'
+  - fact_type: price
+    canonical_value: '60000'
+    label: 'Протезирование на 4 или 6 имплантатах (акриловый протез): от 60 000 ₽'
+  - fact_type: price
+    canonical_value: '400000'
+    label: 'Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке): от 400 000 ₽'
+- sample_id: q_0071
+  query: Цены на детскую стоматологию
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике «Клевер» для детской стоматологии доступны следующие услуги и цены:
+
+
+    - Прием (осмотр, консультация) врача-стоматолога детского первичный — от 500 ₽
+
+    - Прием (осмотр, консультация) врача-стоматолога детского повторный — от 300 ₽
+
+    - Адаптационный прием (детский стоматолог, 60 мин) — от 1 500 ₽
+
+    - Герметизация фиссур 1 зуб — от 1 600 ₽
+
+    - Профессиональная гигиена полости рта (дети) — от 2 500 ₽
+
+    - Фторирование (вся полость рта) — от 2 500 ₽
+
+    - Восстановление зуба пломбой (метод Айкон) — от 4 000 ₽
+
+    - Лечение кариеса молочного зуба с постановкой пломбы — от 4 050 ₽
+
+    - Лечение периодонтита одноканального молочного зуба 1 этап — от 3 800 ₽
+
+    - Лечение периодонтита многоканального молочного зуба 1 этап — от 4 350 ₽
+
+    - Лечение пульпита одноканального молочного зуба 1 этап — от 3 800 ₽
+
+    - Лечение пульпита многоканального молочного зуба 1 этап — от 4 350 ₽
+
+    - Коронка стальная боковая — от 7 000 ₽
+
+    - Коронка эстетическая — от 10 000 ₽
+
+
+    Также у нас есть седация для детей:
+
+    - Анестезиологическое пособие – седация закисью азота при лечении 1 час — от 4 000 ₽
+
+    - Анестезиологическое пособие – седация закисью азота при удалении зубов до 30 мин — от 3 000 ₽
+
+    - Анестезиологическое пособие – седация при лечении 1 час (дети) — от 10 900 ₽
+
+    - Анестезиологическое пособие – седация до 30 мин (дети) — от 5 000 ₽
+
+
+    Если хотите, я также могу подсказать цены по конкретной детской услуге.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0071
+  gold_chunk_ids:
+  - - price_children_therapy
+  gold_facts:
+  - fact_type: text
+    canonical_value: children therapy
+    label: категория прайса
+- sample_id: q_0073
+  query: Цена осмотра ребёнка
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике «Клевер» прием (осмотр, консультация) врача-стоматолога детского первичный
+    стоит от 500 ₽. Также доступен адаптационный прием у детского стоматолога на 60 минут — от 1 500 ₽, а повторный прием
+    врача-стоматолога детского — от 300 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0073
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+    - price_children_therapy
+  gold_facts:
+  - fact_type: price
+    canonical_value: '500'
+    label: первичный приём детского стоматолога
+  - fact_type: text
+    canonical_value: детский
+    label: специализация
+- sample_id: q_0074
+  query: Первичный осмотр платный?
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, первичный осмотр в нашей клинике платный. Стоимость первичного приема зависит от специалиста:
+    например, прием врача-стоматолога терапевта — от 390 ₽, врача-стоматолога детского — от 500 ₽, врача-стоматолога хирурга
+    — от 500 ₽, врача-ортодонта — от 1 000 ₽, врача-имплантолога — от 1 000 ₽, врача-пародонтолога — от 700 ₽, врача-стоматолога
+    ортопеда — от 500 ₽, врача-челюстно-лицевого хирурга — от 2 000 ₽, врача-оториноларинголога — от 2 500 ₽, врача-анестезиолога-реаниматолога
+    — от 1 000 ₽, гигиениста стоматологического — от 300 ₽, зубного врача — от 390 ₽. Также есть профилактический прием с
+    выдачей справки о санации — от 500 ₽ и прием врача-стоматолога – консилиум первичный — от 1 500 ₽. Если хотите, я могу
+    подсказать стоимость приема нужного вам специалиста.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0074
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '300'
+    label: приём гигиениста (минимальная цена)
+  - fact_type: price
+    canonical_value: '390'
+    label: приём стоматолога-терапевта
+- sample_id: q_0075
+  query: Что дешевле — металлокерамика или цирконий?
+  category: pricing
+  subtype: price_comparison
+  answerable: true
+  expected_answer: "Здравствуйте! По прайс-листу нашей клиники дешевле металлокерамика. \n\nПо стоимости:\n- Коронка из металлокерамики\
+    \ (боковая) — от 16 000 ₽;\n- Коронка из металлокерамики (фронтальная) — от 17 000 ₽.\n\nДля сравнения:\n- Коронка из\
+    \ диоксида циркония (боковая) — от 17 000 ₽;\n- Коронка из диоксида циркония (фронтальная) — от 18 000 ₽;\n- Цельнокерамическая\
+    \ коронка из диоксида циркония (боковая) — от 18 000 ₽;\n- Цельнокерамическая коронка из диоксида циркония (фронтальная)\
+    \ — от 19 000 ₽.\n\nЕсли хотите, мы также можем подобрать для вас подходящий вариант протезирования на консультации."
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0075
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '16000'
+    label: 'Коронка из металлокерамики (боковая): от 16 000 ₽'
+  - fact_type: price
+    canonical_value: '17000'
+    label: 'Коронка из металлокерамики (фронтальная): от 17 000 ₽'
+  - fact_type: price
+    canonical_value: '18000'
+    label: 'Цельнокерамическая коронка из диоксида циркония (боковая): от 18 000 ₽'
+  - fact_type: price
+    canonical_value: '19000'
+    label: 'Цельнокерамическая коронка из диоксида циркония (фронтальная): от 19 000 ₽'
+  - fact_type: price
+    canonical_value: '16000'
+    label: 'Коронка на имплантате (металлокерамика): от 16 000 ₽'
+- sample_id: q_0078
+  query: Есть акции?
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0078
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0079
+  query: Скидка пенсионерам?
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0079
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0080
+  query: Есть программа лояльности?
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0080
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0082
+  query: Запишите к Петрову
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0082
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0083
+  query: Принимает ли у вас Козлова?
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0083
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0084
+  query: Где ближайшая аптека?
+  category: out_of_scope
+  subtype: wrong_domain
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0084
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0086
+  query: А вы зрение проверяете?
+  category: out_of_scope
+  subtype: wrong_domain
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0086
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0094
+  query: Во сколько закрываетесь
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» работает ежедневно с 08:00 до 20:00. Будем рады помочь вам в удобное
+    время.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0005; style: casual'
+  seed_family_id: q_0005
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0095
+  query: Я после работы иду до скольки вы работаете сегодня боюсь опоздать можно успеть
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: 'Здравствуйте! Сегодня мы работаем ежедневно с 08:00 до 20:00, поэтому вы успеете прийти после работы.
+    Адрес клиники: Россия, г. Ульяновск, ул. Рябикова, 56. Если потребуется, вы также можете связаться с нами по телефонам:
+    +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0005; style: indirect'
+  seed_family_id: q_0005
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0096
+  query: Я в Ульяновске но не знаю где ваша клиника Клевер подскажите адрес боюсь не найти
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Семейная клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Если
+    вам будет удобно, вы также можете позвонить нам по телефонам: +7 (842) 231-45-55 или +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0001; style: indirect'
+  seed_family_id: q_0001
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0097
+  query: где клиника
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Семейная клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0002; style: casual'
+  seed_family_id: q_0002
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0098
+  query: не найду вас я в другом конце города подскажите адрес чтобы не опоздать на прием
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Наша клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Будем
+    рады видеть вас на приёме и просим заранее спланировать время, чтобы не опоздать.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0002; style: indirect'
+  seed_family_id: q_0002
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0099
+  query: Скока открываетесь?
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» работает ежедневно с 08:00 до 20:00.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0008; style: casual'
+  seed_family_id: q_0008
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0100
+  query: во скока отрываетесь
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» работает ежедневно с 08:00 до 20:00.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0008; style: typo'
+  seed_family_id: q_0008
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0101
+  query: хочу утром приехать к вам лечить зуб но боюсь не успеть во сколько открываетесь скажите пожалуйста срочно
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: 'Здравствуйте! Семейная клиника «Клевер» в Ульяновске работает ежедневно с 08:00 до 20:00. Вы можете приехать
+    утром с 08:00. Если нужно, наши телефоны: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0008; style: indirect'
+  seed_family_id: q_0008
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0102
+  query: адрес клиники
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: 'Здравствуйте! Адрес Семейной клиники «Клевер»: Россия, г. Ульяновск, ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0004; style: casual'
+  seed_family_id: q_0004
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ульяновск
+    label: город
+  - fact_type: address
+    canonical_value: ул. Рябикова, 56
+    label: адрес клиники
+- sample_id: q_0103
+  query: Зуб разболелся вчера не спал толком какой ваш номер чтобы срочно позвонить в клинику
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Для срочной связи с клиникой «Клевер» вы можете позвонить по телефонам: +7 (842) 231-45-55
+    или +7 (927) 831-45-55. Мы работаем ежедневно с 08:00 до 20:00. Если боль усиливается, пожалуйста, свяжитесь с нами как
+    можно скорее.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0009; style: indirect'
+  seed_family_id: q_0009
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0104
+  query: какой номер телфона
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Телефоны семейной клиники «Клевер»: +7 (842) 231-45-55 и +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0009; style: typo'
+  seed_family_id: q_0009
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0105
+  query: зуб ноет надо срочно записаться как позвонить в клинику номер дайте переживаю что поздно будет
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Чтобы срочно записаться, вы можете позвонить в семейную клинику «Клевер» по телефонам: +7
+    (842) 231-45-55 или +7 (927) 831-45-55. Клиника находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Мы работаем
+    ежедневно с 08:00 до 20:00. Понимаем ваше беспокойство, пожалуйста, не откладывайте обращение — позвоните нам как можно
+    скорее.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0010; style: indirect'
+  seed_family_id: q_0010
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0106
+  query: суббота?
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: 'Здравствуйте! Клиника «Клевер» работает ежедневно с 08:00 до 20:00, поэтому в субботу мы тоже открыты
+    в обычном режиме. Наш адрес: Россия, г. Ульяновск, ул. Рябикова, 56. Телефоны для связи: +7 (842) 231-45-55, +7 (927)
+    831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0007; style: casual'
+  seed_family_id: q_0007
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0107
+  query: мне срочно зуб болит а в субботу вы работаете вдруг пропущу прием переживаю что закрыто
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: 'Здравствуйте! Клиника работает ежедневно с 08:00 до 20:00, в том числе в субботу. Если вам нужно уточнить
+    запись или срочно связаться с нами, позвоните по телефонам: +7 (842) 231-45-55 или +7 (927) 831-45-55. Мы находимся по
+    адресу: Россия, г. Ульяновск, ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0007; style: typo'
+  seed_family_id: q_0007
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0108
+  query: а в субботу открыты
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Да, клиника «Клевер» работает ежедневно с 08:00 до 20:00, в том числе в субботу.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0007; style: indirect'
+  seed_family_id: q_0007
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0111
+  query: Наркоз можно?
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Да, у нас в клинике доступны варианты седации: лечение во сне (dental sleep), а также седация закисью
+    азота и кислородом — это помогает снять страх перед лечением у детей и взрослых.
+
+
+    Для детей доступны услуги седации закисью азота при лечении и при удалении зубов, а также седация при лечении и удалении
+    во сне. Для взрослых также доступна седация закисью азота при лечении.
+
+
+    Если потребуется, мы подскажем подходящий вариант на консультации. Приём ведём ежедневно с 08:00 до 20:00 по адресу: Россия,
+    г. Ульяновск, ул. Рябикова, 56. Телефоны клиники: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0012; style: casual'
+  seed_family_id: q_0012
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0112
+  query: можно под наркзом?
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Да, в нашей клинике доступно лечение во сне (dental sleep) — это седация, а также седация закисью азота
+    + кислород, чтобы снять страх перед лечением у детей и взрослых. Также в прайсе указано анестезиологическое пособие: седация
+    закисью азота при лечении 1 час — от 4 000 ₽ для детей и от 7 500 ₽ для взрослых; при удалении зубов до 30 минут — от
+    3 000 ₽ для детей. Если вам нужна именно седация/лечение во сне, мы готовы подобрать подходящий вариант на приёме.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0012; style: typo'
+  seed_family_id: q_0012
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0113
+  query: боюсь боли, лечение под наркозом возможно у вас?
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, у нас возможно лечение во сне (dental sleep). Также для снятия страха перед лечением
+    у детей и взрослых применяется седация закисью азота + кислород. Если вам нужно, мы также можем предложить анестезию и
+    обезболивание по прайсу клиники. Для уточнения подходящего варианта лечения и записи, пожалуйста, свяжитесь с нами по
+    телефону: +7 (842) 231-45-55 или +7 (927) 831-45-55. Клиника находится по адресу: Россия, г. Ульяновск, ул. Рябикова,
+    56. Режим работы: ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0012; style: indirect'
+  seed_family_id: q_0012
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0114
+  query: боюс стомотологов
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей семейной клинике «Клевер» для пациентов, которые боятся лечения, доступны варианты
+    седации: лечение во сне (dental sleep), а также седация закисью азота + кислород — это помогает снять страх перед лечением
+    у детей и взрослых.
+
+
+    По прайсу у нас есть:
+
+    - седация закисью азота при лечении 1 час для детей — от 4 000 ₽;
+
+    - седация закисью азота при удалении зуба до 30 мин для детей — от 3 000 ₽;
+
+    - седация закисью азота при лечении 1 час для взрослых — от 7 500 ₽;
+
+    - седация при лечении 1 час для детей — от 10 900 ₽;
+
+    - седация до 30 мин для детей — от 5 000 ₽.
+
+
+    Мы работаем ежедневно с 08:00 до 20:00. Наш адрес: Россия, г. Ульяновск, ул. Рябикова, 56. Телефоны: +7 (842) 231-45-55,
+    +7 (927) 831-45-55. Если хотите, вы можете записаться на консультацию, и администратор поможет подобрать максимально комфортный
+    вариант лечения.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0013; style: typo'
+  seed_family_id: q_0013
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0115
+  query: очень боюсь стоматологов с детства паника накатывает при мысли о лечении есть ли у вас успокоение газом или уколом
+    чтоб не страшно было
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, в нашей семейной клинике «Клевер» доступны варианты для снижения страха перед лечением:
+    седация закисью азота + кислород, а также лечение во сне (dental sleep). Это подходит для детей и взрослых.
+
+
+    Также у нас есть местная анестезия, если требуется обезболивание уколом. По прайсу доступны: местная анестезия (1 картридж)
+    — от 590 ₽, проводниковая анестезия — от 490 ₽, аппликационная анестезия — от 220 ₽, аэрозольная анестезия — от 290 ₽.
+
+
+    Если вам нужно лечение с седацией, для детей в прайсе указано: седация закисью азота при лечении 1 час — от 4 000 ₽, при
+    удалении зуба до 30 мин — от 3 000 ₽. Для взрослых: седация закисью азота при лечении 1 час — от 7 500 ₽.
+
+
+    Мы работаем ежедневно с 08:00 до 20:00 и находимся по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Телефоны клиники:
+    +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0013; style: indirect'
+  seed_family_id: q_0013
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0123
+  query: номер скинь
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Номера телефона клиники «Клевер»: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0011; style: typo'
+  seed_family_id: q_0011
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0124
+  query: 3г ребёнка примете
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: Да, уважаемый пациент, мы принимаем детей с первого зуба. В клинике «Клевер» ведут приём 3 детских стоматолога.
+    Если вашему ребёнку 3 года, вы можете записаться на приём.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0020; style: casual'
+  seed_family_id: q_0020
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0125
+  query: Сыну 3 года зуб заболел вдруг страшно боюсь что не возьмёте маленького можно ли записаться
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, конечно, мы принимаем детей с первого зуба, в том числе и малышей 3 лет. У нас в штате
+    3 детских стоматолога.
+
+
+    Для вашего сына можно записаться на приём к врачу-детскому стоматологу. В клинике ведут приём:
+
+    - Конновская Алена Евгеньевна — стаж 3 года;
+
+    - Емелина Татьяна Евгеньевна — стаж 6 лет;
+
+    - Молгачева Оксана Александровна — стаж 23 года.
+
+
+    Записаться можно в Семейную клинику «Клевер» по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.
+
+    Телефоны: +7 (842) 231-45-55, +7 (927) 831-45-55.
+
+
+    Клиника работает ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0020; style: typo'
+  seed_family_id: q_0020
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0126
+  query: Моему малышу 3 годика зубик ноет первый визит переживаю примут ли таких крох
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, в нашей семейной клинике «Клевер» принимают детей с первого зуба, поэтому вашего малыша
+    3 лет мы тоже обязательно примем. В клинике работают 3 детских стоматолога. Первый приём (осмотр, консультация) врача-стоматолога
+    детского стоит от 500 ₽, также есть адаптационный приём детского стоматолога на 60 минут — от 1 500 ₽. Если у ребёнка
+    ноет зуб, у нас ведут приём детские стоматологи: Конновская Алена Евгеньевна, Емелина Татьяна Евгеньевна и Молгачева Оксана
+    Александровна. Мы находимся по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Телефоны клиники: +7 (842) 231-45-55, +7
+    (927) 831-45-55. Режим работы: ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0020; style: indirect'
+  seed_family_id: q_0020
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0127
+  query: С какого возраста детей берёте?
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике приём детей ведётся с первого зуба. Также у нас в штате работают 3 детских
+    стоматолога.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0019; style: casual'
+  seed_family_id: q_0019
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0128
+  query: скока лет с какого
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: 'Здравствуйте! Приём детей в нашей клинике ведётся с первого зуба. В штате работают 3 детских стоматолога:
+    Конновская Алена Евгеньевна — стаж 3 года, Емелина Татьяна Евгеньевна — стаж 6 лет, Молгачева Оксана Александровна — стаж
+    23 года.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0019; style: typo'
+  seed_family_id: q_0019
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0129
+  query: ребёнку 2 года с какого возраста можно к вам на приём боюсь что рано возьмут ли
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: Здравствуйте! Да, мы принимаем детей с первого зуба. В клинике работают 3 детских стоматолога. Если хотите,
+    мы подберём для вашего ребёнка подходящего специалиста и запишем на приём.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0019; style: indirect'
+  seed_family_id: q_0019
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0130
+  query: доки какие?
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Для пациентов у нас доступны следующие документы: договор на оказание стоматологических
+    услуг, согласие на обработку персональных данных, ИДС — информированное добровольное согласие, ИДС РОДИТЕЛЬ — информированное
+    добровольное согласие, ИС на проведение анестезиологического пособия, положение о гарантийном сроке и сроке службы в ООО
+    «Клевер», анкета здоровья (детская) и анкета здоровья (взрослые).
+
+
+    С документами можно ознакомиться на сайте: https://dentklever.ru/documents/.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0022; style: casual'
+  seed_family_id: q_0022
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0131
+  query: впервые иду в клевр какие документы захватить а то вдруг не запишут переживаю
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Для пациентов у нас на сайте доступны следующие документы: договор на оказание стоматологических
+    услуг, согласие на обработку персональных данных, ИДС — информированное добровольное согласие, ИДС РОДИТЕЛЬ, ИС на проведение
+    анестезиологического пособия, положение о гарантийном сроке и сроке службы в ООО «Клевер», анкета здоровья (детская) и
+    анкета здоровья (взрослые). Ознакомиться с ними можно здесь: https://dentklever.ru/documents/. Если вы идёте впервые,
+    вы можете заранее посмотреть и при необходимости заполнить документы с этой страницы. Если у вас останутся вопросы, мы
+    с радостью подскажем по телефону клиники: +7 (842) 231-45-55, +7 (927) 831-45-55. Клиника находится по адресу: Россия,
+    г. Ульяновск, ул. Рябикова, 56 и работает ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0022; style: indirect'
+  seed_family_id: q_0022
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0133
+  query: есть линцензия у вас
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, у нашей клиники есть лицензии. Выписка из реестра лицензий размещена на сайте: https://dentklever.ru/licenses/
+    (дата выписки: 2024-02-22).'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0021; style: typo'
+  seed_family_id: q_0021
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0134
+  query: у вас лицензия на работу есть я переживаю вдруг без нее лечат опасно
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Да, у нас есть лицензии на медицинскую деятельность. Информация о лицензиях размещена на сайте клиники:
+    https://dentklever.ru/licenses/. В доступной базе указано, что это выписка из реестра лицензий от 2024-02-22. Если хотите,
+    вы также можете ознакомиться с документами для пациентов на странице: https://dentklever.ru/documents/.
+
+
+    Адрес клиники: Россия, г. Ульяновск, ул. Рябикова, 56.
+
+    Телефоны: +7 (842) 231-45-55, +7 (927) 831-45-55.
+
+    Режим работы: ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0021; style: indirect'
+  seed_family_id: q_0021
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0135
+  query: Первый раз иду к вам что взять с собой на приём паспорт страховку переживаю вдруг не примут
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Для первичного приёма у нас вы можете взять с собой паспорт и, если есть, страховку. Также
+    на сайте клиники доступны документы для пациентов: договор на оказание стоматологических услуг, согласие на обработку
+    персональных данных, ИДС, ИДС РОДИТЕЛЬ, ИС на проведение анестезиологического пособия, положение о гарантийном сроке и
+    сроке службы, анкета здоровья для детей и взрослых. Если у вас останутся вопросы перед визитом, мы всегда готовы помочь.
+    Клиника «Клевер» находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Мы работаем ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0023; style: indirect'
+  seed_family_id: q_0023
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0136
+  query: молгачева принемает?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Да, конечно. Молгачева Оксана Александровна принимает в нашей клинике как врач-детский стоматолог. Стаж
+    работы — 23 года. Если хотите, я подскажу, по каким вопросам к ней можно обратиться: кариес, пульпит, налет на зубах,
+    художественная реставрация, периодонтит и скол зуба. Также доктор работает с жалобами у детей на боль от горячего/холодного/при
+    жевании, отколовшийся зуб или пломбу, черные дырочки на зубах, налет, крошение зубов, шишку возле зуба, легкий отек десны,
+    сломанный передний зуб и ноющую боль в зубе. Диагностика — прицельный снимок.'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0026; style: typo'
+  seed_family_id: q_0026
+  gold_chunk_ids:
+  - - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+- sample_id: q_0137
+  query: Слышал про Молгачеву она у вас принимает мне срочно зуб ноет уже неделю боюсь осложнений
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, в нашей клинике принимает Молгачева Оксана Александровна — врач-детский стоматолог,
+    стаж 23 года. Она занимается лечением кариеса, пульпита, налёта на зубах, художественной реставрацией, периодонтитом и
+    сколом зуба. Если у ребёнка ноет зуб, также подходят жалобы: боль от горячего/холодного/при жевании, откололся зуб или
+    пломба, появились чёрные дырочки, налёт на зубах, крошится зуб, шишка возле зуба, лёгкий отёк десны возле зуба, сломан
+    передний зуб, ноющая боль в зубе. Для диагностики у неё используется прицельный снимок.
+
+
+    Если вам нужна срочная помощь, вы можете записаться на приём в клинику по адресу: Россия, г. Ульяновск, ул. Рябикова,
+    56. Мы работаем ежедневно с 08:00 до 20:00. Телефоны для записи: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0026; style: indirect'
+  seed_family_id: q_0026
+  gold_chunk_ids:
+  - - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+- sample_id: q_0143
+  query: Абраамян у вас?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Да, у нас принимает врач-терапевт Абраамян Андела Корюновна. Стаж — 17 лет. Специализация — терапевтическая
+    стоматология.
+  expected_doctor: Абраамян Андела Корюновна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0027; style: casual'
+  seed_family_id: q_0027
+  gold_chunk_ids:
+  - - doctor_6
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Абраамян Андела Корюновна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Терапевтическая стоматология
+    label: специализация
+- sample_id: q_0144
+  query: Абраамян раблотает?
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Да, у нас ведёт приём Абраамян Андела Корюновна — врач-терапевт (Терапевтическая стоматология), стаж 17
+    лет. Если вам нужна консультация по лечению кариеса, пульпита, налёта/камня на зубах, художественной реставрации, периодонтита,
+    подвижности зубов, сколу зуба или гингивиту, будем рады помочь вам на приёме.
+  expected_doctor: Абраамян Андела Корюновна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0027; style: typo'
+  seed_family_id: q_0027
+  gold_chunk_ids:
+  - - doctor_6
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Абраамян Андела Корюновна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Терапевтическая стоматология
+    label: специализация
+- sample_id: q_0145
+  query: Мне Абраамяна посоветовали он в вашей клинике работает я боюсь что уже уволился подскажите срочно
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Да, конечно, подскажем. В нашей клинике работает врач-терапевт Абраамян Андела Корюновна, стаж 17 лет.
+    Специализация — терапевтическая стоматология. Если вам нужно срочно записаться, вы можете связаться с нами по телефонам:
+    +7 (842) 231-45-55 или +7 (927) 831-45-55. Мы работаем ежедневно с 08:00 до 20:00.'
+  expected_doctor: Абраамян Андела Корюновна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0027; style: indirect'
+  seed_family_id: q_0027
+  gold_chunk_ids:
+  - - doctor_6
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Абраамян Андела Корюновна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Терапевтическая стоматология
+    label: специализация
+- sample_id: q_0152
+  query: ортодонт кто
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ведут прием врачи-ортодонты:
+
+
+    1. Ермаков Александр Владимирович — врач-ортодонт, стаж 7 лет.
+
+    2. Живора Инна Григорьевна — врач-ортодонт, стаж 4 лет.
+
+    3. Окружнова Виктория Валерьевна — врач-ортодонт, стаж 4 лет.
+
+
+    Если хотите, я могу также подсказать, кто из ортодонтов принимает по вашему случаю.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0036; style: casual'
+  seed_family_id: q_0036
+  gold_chunk_ids:
+  - - doctor_1
+    - doctor_10
+    - doctor_18
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортодонтия
+    label: специализация
+  - fact_type: fio
+    canonical_value: Ермаков
+    label: 'врач: Ермаков Александр Владимирович'
+  - fact_type: fio
+    canonical_value: Живора
+    label: 'врач: Живора Инна Григорьевна'
+  - fact_type: fio
+    canonical_value: Окружнова
+    label: 'врач: Окружнова Виктория Валерьевна'
+- sample_id: q_0153
+  query: нужен ортодонт у меня прикус кривой давно мучаюсь кто у вас есть такой врач
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! У нас в клинике ведут приём врачи-ортодонты, которые занимаются неправильным прикусом, скученностью
+    и неровными зубами:
+
+
+    1. Ермаков Александр Владимирович — врач-ортодонт, стаж 7 лет.
+
+    2. Окружнова Виктория Валерьевна — врач-ортодонт, стаж 4 лет.
+
+    3. Живора Инна Григорьевна — врач-ортодонт, стаж 4 лет.
+
+
+    Для вашего случая — прикуса — подойдёт ортодонт. Если хотите, мы можем помочь подобрать врача и записать вас на первичный
+    приём.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0036; style: indirect'
+  seed_family_id: q_0036
+  gold_chunk_ids:
+  - - doctor_1
+    - doctor_10
+    - doctor_18
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортодонтия
+    label: специализация
+  - fact_type: fio
+    canonical_value: Ермаков
+    label: 'врач: Ермаков Александр Владимирович'
+  - fact_type: fio
+    canonical_value: Живора
+    label: 'врач: Живора Инна Григорьевна'
+  - fact_type: fio
+    canonical_value: Окружнова
+    label: 'врач: Окружнова Виктория Валерьевна'
+- sample_id: q_0156
+  query: Кто такой булатов
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Здравствуйте! Булатов Руслан Тальгатович — врач-ортопед (Ортопедическая стоматология), стаж 25 лет. Ведёт
+    лечение и протезирование на зубах и имплантах, протезирование челюсти, протезирование при стираемости и ортопедическое
+    восстановление. Обращайтесь, если у вас слетела коронка, нужно восстановить зуб коронкой, отсутствуют зубы, не чем жевать,
+    натирает протез, есть дискомфорт под коронкой, не нравится внешний вид зубов, нужно снять коронки или беспокоит повышенная
+    стираемость зубов. Диагностика: оттиски, сканирование.'
+  expected_doctor: Булатов Руслан Тальгатович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0032; style: typo'
+  seed_family_id: q_0032
+  gold_chunk_ids:
+  - - doctor_7
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Булатов Руслан Тальгатович
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+- sample_id: q_0157
+  query: Мне булатова посоветовали кто он у вас работает опытный ли зубы лечит хорошо я нервничаю
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике работает врач-ортопед Булатов Руслан Тальгатович, стаж работы — 25 лет.
+    Его специализация — ортопедическая стоматология. Он занимается протезированием на зубах и имплантах, протезированием челюсти,
+    протезированием при стираемости и ортопедическим восстановлением. Пациенты обращаются к нему, если слетела коронка, нужно
+    восстановить зуб коронкой, отсутствуют зубы, не хватает возможности нормально жевать, натирает протез, есть дискомфорт
+    под коронкой, не нравится внешний вид зубов, нужно снять коронки или при повышенной стираемости зубов.
+
+
+    Если вы переживаете, это нормально — мы постараемся сделать всё максимально комфортно для вас. Могу также подсказать про
+    приём и подготовку к нему.'
+  expected_doctor: Булатов Руслан Тальгатович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0032; style: indirect'
+  seed_family_id: q_0032
+  gold_chunk_ids:
+  - - doctor_7
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Булатов Руслан Тальгатович
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+- sample_id: q_0158
+  query: стаж филькина скока
+  category: doctor_info
+  subtype: experience_query
+  answerable: true
+  expected_answer: Филькин Вадим Сергеевич — врач-хирург (хирургическая стоматология), стаж 20 лет.
+  expected_doctor: Филькин Вадим Сергеевич
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0035; style: typo'
+  seed_family_id: q_0035
+  gold_chunk_ids:
+  - - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Филькин Вадим Сергеевич
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+  - fact_type: text
+    canonical_value: '20'
+    label: стаж (лет)
+- sample_id: q_0159
+  query: хочу к филькину но переживаю какой у него стаж вдруг мало опыта с зубами напортачит
+  category: doctor_info
+  subtype: experience_query
+  answerable: true
+  expected_answer: Здравствуйте! Филькин Вадим Сергеевич — врач-хирург (Хирургическая стоматология), стаж 20 лет. Если хотите,
+    я также могу помочь с записью к нему на прием.
+  expected_doctor: Филькин Вадим Сергеевич
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0035; style: indirect'
+  seed_family_id: q_0035
+  gold_chunk_ids:
+  - - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Филькин Вадим Сергеевич
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+  - fact_type: text
+    canonical_value: '20'
+    label: стаж (лет)
+- sample_id: q_0160
+  query: Кто ортопеды у вас
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике врачи-ортопеды по направлению «Ортопедическая стоматология» — это:
+
+
+    1. Булатов Руслан Тальгатович — врач-ортопед, стаж 25 лет.
+
+    2. Куприянов Илья Александрович — врач-ортопед, стаж 4 лет.
+
+
+    Если хотите, я также могу подсказать, с какими вопросами к ним можно обратиться.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0038; style: casual'
+  seed_family_id: q_0038
+  gold_chunk_ids:
+  - - doctor_7
+    - doctor_13
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Булатов
+    label: 'врач: Булатов Руслан Тальгатович'
+  - fact_type: fio
+    canonical_value: Куприянов
+    label: 'врач: Куприянов Илья Александрович'
+- sample_id: q_0161
+  query: ортопеды каки
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ведут прием врачи-ортопеды: Булатов Руслан Тальгатович — стаж 25 лет; Куприянов
+    Илья Александрович — стаж 4 года.
+
+
+    Если хотите, я могу также подсказать, с какими вопросами к ним можно обратиться и стоимость первичного приема.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0038; style: typo'
+  seed_family_id: q_0038
+  gold_chunk_ids:
+  - - doctor_7
+    - doctor_13
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Булатов
+    label: 'врач: Булатов Руслан Тальгатович'
+  - fact_type: fio
+    canonical_value: Куприянов
+    label: 'врач: Куприянов Илья Александрович'
+- sample_id: q_0162
+  query: Мне срочно к ортопеду, какие врачи есть по ортопедии в клинике боюсь затянется
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике по ортопедической стоматологии ведут прием следующие врачи:
+
+
+    1. Булатов Руслан Тальгатович — врач-ортопед, стаж 25 лет.
+
+    2. Куприянов Илья Александрович — врач-ортопед, стаж 4 лет.
+
+
+    Прием (осмотр, консультация) врача-стоматолога ортопеда первичный — от 500 ₽.
+
+
+    Если вы хотите, я могу помочь с записью к ортопеду.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0038; style: indirect'
+  seed_family_id: q_0038
+  gold_chunk_ids:
+  - - doctor_7
+    - doctor_13
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортопедическая стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Булатов
+    label: 'врач: Булатов Руслан Тальгатович'
+  - fact_type: fio
+    canonical_value: Куприянов
+    label: 'врач: Куприянов Илья Александрович'
+- sample_id: q_0163
+  query: Сотниква к-то такая
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Информация отсутствует в базе знаний.
+  expected_doctor: Сотникова Анна Юрьевна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0034; style: typo'
+  seed_family_id: q_0034
+  gold_chunk_ids:
+  - - doctor_21
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Сотникова Анна Юрьевна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+- sample_id: q_0164
+  query: Расскажите кто Сотникова у вас работает я слышал про неё
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике работает Сотникова Анна Юрьевна — врач-хирург (хирургическая стоматология),
+    стаж 14 лет. Она принимает пациентов с такими состояниями, как ретенированные зубы мудрости любой сложности, разрушенность
+    зубов любой сложности, пластика губы, блефаропластика, сверхкомплектные зубы, верхнечелюстной синусит, врожденные расщелины
+    губы и неба, выступающее ухо, гемангиома, доброкачественные новообразования, атерома шеи и лица, периостит, альвеолит,
+    эпулис, свищ и флюс. Также к ней обращаются с жалобами на припухлость щеки, боль в ВЧ/НЧ, шатающийся зуб, боль в зубе
+    мудрости, воспаление и отек десны в области зуба, натирание щеки, необходимость удаления зуба мудрости для дальнейшей
+    установки брекет-системы, шарик на десне, затрудненное дыхание, периодические кровотечения из носа, торчащие уши, образование
+    на лице, образование в ротовой полости, гнойные выделения из носа, храп во сне, щелчки в челюсти, мешки под глазами и
+    свисающую кожу над глазом.
+  expected_doctor: Сотникова Анна Юрьевна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0034; style: indirect'
+  seed_family_id: q_0034
+  gold_chunk_ids:
+  - - doctor_21
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Сотникова Анна Юрьевна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+- sample_id: q_0165
+  query: ребенку зубы лечить надо список детских стоматологов есть боюсь обычного врача
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике детей принимают с первого зуба. У нас в штате 3 детских стоматолога. Это:
+
+    - Оксана Александровна Молгачева — врач-детский стоматолог, стаж 23 года;
+
+    - Екатерина Евгеньевна Емелина — врач-детский стоматолог, стаж 6 лет;
+
+    - Алена Евгеньевна Конновская — врач-детский стоматолог, стаж 3 года.
+
+
+    Если вы боитесь обычного врача, детские стоматологи как раз занимаются лечением детей и принимают маленьких пациентов.
+    Также у нас доступен адаптационный прием для ребенка — 60 минут, стоимость от 1 500 ₽. Для детей проводятся лечение кариеса,
+    пульпита, периодонтита, художественная реставрация, лечение скола зуба, а также профессиональная гигиена, герметизация
+    фиссур и фторирование.
+
+
+    Записаться можно по телефонам клиники: +7 (842) 231-45-55, +7 (927) 831-45-55. Мы находимся по адресу: Россия, г. Ульяновск,
+    ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0039; style: indirect'
+  seed_family_id: q_0039
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Конновская
+    label: 'врач: Конновская Алена Евгеньевна'
+  - fact_type: fio
+    canonical_value: Емелина
+    label: 'врач: Емелина Татьяна Евгеньевна'
+  - fact_type: fio
+    canonical_value: Молгачева
+    label: 'врач: Молгачева Оксана Александровна'
+- sample_id: q_0194
+  query: ребенку 4 года зубы лечить надо нужен детский стоматолог с большим опытом понад 10 лет чтоб не боялся есть ли
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, у нас ведут приём детские стоматологи, и клиника принимает детей с первого зуба.
+
+
+    Из детских стоматологов со стажем более 10 лет у нас есть:
+
+    - Молгачева Оксана Александровна — врач-детский стоматолог, стаж 23 года.
+
+
+    Также в клинике работают детские стоматологи:
+
+    - Конновская Алена Евгеньевна — стаж 3 года;
+
+    - Емелина Татьяна Евгеньевна — стаж 6 лет.
+
+
+    Для детей доступны услуги лечения зубов, в том числе лечение кариеса молочного зуба с постановкой пломбы, лечение пульпита
+    и периодонтита молочных зубов, а также профессиональная гигиена, фторирование и герметизация фиссур.
+
+
+    Если ребёнку нужно лечение без страха, у нас также есть седация: закись азота + кислород для снятия страха перед лечением
+    у детей и взрослых, а также лечение во сне (dental sleep).'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0058; style: indirect'
+  seed_family_id: q_0058
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: детский стоматолог
+  - fact_type: text
+    canonical_value: '23'
+    label: стаж (лет)
+- sample_id: q_0202
+  query: какой терапефт с наибольшим стажем
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Среди врачей-терапевтов клиники «Клевер» наибольший стаж у Васильевой Елены Владимировны
+    — врач-терапевт (Терапевтическая стоматология), стаж 39 лет.
+
+
+    Также в штате есть другие терапевты: Абраамян Андела Корюновна — стаж 17 лет, Сибгатулина Екатерина Михайловна — стаж
+    11 лет, Сорокина Регина Вячеславовна — стаж 7 лет, Морозова Наталья Александровна — стаж 2 года, Золин Павел Евгеньевич
+    — стаж 1 год.'
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0059; style: typo'
+  seed_family_id: q_0059
+  gold_chunk_ids:
+  - - doctor_6
+    - doctor_8
+    - doctor_12
+    - doctor_16
+    - doctor_19
+    - doctor_20
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Васильева Елена Владимировна
+    label: терапевт с наибольшим стажем
+  - fact_type: text
+    canonical_value: '39'
+    label: стаж (лет)
+- sample_id: q_0203
+  query: мне нужен надежный терапевт переживаю за зубы кто у вас с самым большим стажем работы чтобы не ошибиться
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Если вам нужен надежный терапевт, у нас в клинике работают врачи-терапевты со следующим
+    стажем:
+
+
+    - Васильева Елена Владимировна — врач-терапевт, стаж 39 лет
+
+    - Абраамян Андела Корюновна — врач-терапевт, стаж 17 лет
+
+    - Сибгатулина Екатерина Михайловна — врач-терапевт, стаж 11 лет
+
+    - Сорокина Регина Вячеславовна — врач-терапевт, стаж 7 лет
+
+    - Морозова Наталья Александровна — врач-терапевт, стаж 2 года
+
+    - Золин Павел Евгеньевич — врач-терапевт, стаж 1 год
+
+
+    Самый большой стаж у Васильевой Елены Владимировны — 39 лет. Она ведет терапевтический прием, занимается лечением кариеса,
+    пульпита, периодонтита, художественной реставрацией, лечением скола зуба, налета/камня на зубах и гингивита, а также работает
+    с жалобами на боль от горячего/холодного, при накусывании, кровоточивость десен, неприятный запах изо рта, воспаление
+    десен и другие подобные проблемы.
+
+
+    Если хотите, мы подскажем запись к этому специалисту или подберем врача под вашу конкретную жалобу.'
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0059; style: indirect'
+  seed_family_id: q_0059
+  gold_chunk_ids:
+  - - doctor_6
+    - doctor_8
+    - doctor_12
+    - doctor_16
+    - doctor_19
+    - doctor_20
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Васильева Елена Владимировна
+    label: терапевт с наибольшим стажем
+  - fact_type: text
+    canonical_value: '39'
+    label: стаж (лет)
+- sample_id: q_0204
+  query: Скажите кто хирург с большим стажем у вас я волнуюсь
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике хирургическая стоматология представлена несколькими врачами, и среди хирургов
+    с наибольшим стажем у нас:
+
+
+    - Заволжский Александр Михайлович — стаж 41 год
+
+    - Лисин Валерий Константинович — стаж 39 лет
+
+    - Батылин Александр Александрович — стаж 17 лет
+
+    - Сотникова Анна Юрьевна — стаж 14 лет
+
+    - Никифоров Дмитрий Олегович — стаж 10 лет
+
+    - Филькин Вадим Сергеевич — стаж 20 лет
+
+    - Демин Евгений Дмитриевич — стаж 3 года
+
+    - Мигачёв Алексей Сергеевич — стаж 4 года
+
+
+    Если хотите, я также могу подсказать, кто из хирургов принимает по вашему запросу или по конкретной проблеме.'
+  expected_doctor: Заволжский Александр Михайлович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0057; style: indirect'
+  seed_family_id: q_0057
+  gold_chunk_ids:
+  - - doctor_2
+    - doctor_4
+    - doctor_5
+    - doctor_11
+    - doctor_14
+    - doctor_17
+    - doctor_21
+    - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Заволжский Александр Михайлович
+    label: самый опытный хирург
+  - fact_type: text
+    canonical_value: '41'
+    label: стаж (лет)
+- sample_id: q_0208
+  query: Скока брекеты?
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость брекет-систем в нашей клинике «Клевер» начинается от 45 000 ₽: брекет-система
+    2х4 — от 45 000 ₽, Damon Q (самолигирующаяся металлическая система, 1 челюсть) — от 70 000 ₽, самолигирующаяся керамическая
+    брекет-система Дэймон Клир (6 брекетов) — от 85 000 ₽, (10 брекетов) — от 140 000 ₽. Также у нас есть отдельные услуги
+    по фиксации и коррекции брекетов: фиксация нового брекета — от 5 000 ₽, фиксация нового брекета Дэймон Клир — от 9 000
+    ₽, а также другие ортодонтические услуги по прайсу. Если хотите, я могу также подсказать стоимость консультации ортодонта:
+    первичный приём врача-ортодонта — от 1 000 ₽.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0070; style: casual'
+  seed_family_id: q_0070
+  gold_chunk_ids:
+  - - price_orthodontics_p1
+    - price_orthodontics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice): от 5 000 ₽'
+  - fact_type: price
+    canonical_value: '9000'
+    label: 'Брекет-системы: фиксация нового брекета Дэймон Клир: от 9 000 ₽'
+  - fact_type: price
+    canonical_value: '45000'
+    label: 'Брекет-система 2х4: от 45 000 ₽'
+  - fact_type: price
+    canonical_value: '85000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов): от 85 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '3500'
+    label: 'Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов: от 3 500 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Фиксация брекетов с помощью каппы (непрямым методом): от 5 000 ₽'
+- sample_id: q_0209
+  query: Думаю ставить брекеты ребенку, а сколько они у вас стоят, не дорого ли это будет для семьи?
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! У нас доступно ортодонтическое лечение, в том числе брекет-системы. По прайсу:
+
+    - брекет-система 2х4 — от 45 000 ₽;
+
+    - Damon Q (самолигирующаяся металлическая система, 1 челюсть) — от 70 000 ₽;
+
+    - самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов) — от 85 000 ₽;
+
+    - самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов) — от 140 000 ₽.
+
+
+    Также у нас есть первичный прием врача-ортодонта — от 1 000 ₽, а при необходимости может быть выполнена диагностика будущего
+    результата ортодонтического лечения: исследование на диагностических моделях челюстей — от 4 200 ₽, компьютерная диагностика
+    (Сетап) — от 20 000 ₽, внутриротовое сканирование — от 3 900 ₽.
+
+
+    Для удобства пациентов доступна беспроцентная рассрочка на 6 и 10 месяцев. Если хотите, мы можем записать вас и ребенка
+    на консультацию к врачу-ортодонту, чтобы подобрать подходящий вариант лечения.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0070; style: indirect'
+  seed_family_id: q_0070
+  gold_chunk_ids:
+  - - price_orthodontics_p1
+    - price_orthodontics_p2
+    - price_children_therapy
+  gold_facts:
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice): от 5 000 ₽'
+  - fact_type: price
+    canonical_value: '9000'
+    label: 'Брекет-системы: фиксация нового брекета Дэймон Клир: от 9 000 ₽'
+  - fact_type: price
+    canonical_value: '45000'
+    label: 'Брекет-система 2х4: от 45 000 ₽'
+  - fact_type: price
+    canonical_value: '85000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов): от 85 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '3500'
+    label: 'Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов: от 3 500 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Фиксация брекетов с помощью каппы (непрямым методом): от 5 000 ₽'
+- sample_id: q_0215
+  query: скока удалить зуб мудрости
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Удаление 8-го зуба у нас стоит: простая операция — от 4 900 ₽, сложная операция — от 6 900
+    ₽. Также первичный приём врача-стоматолога хирурга — от 500 ₽. Если зуб мудрости требует удаления перед дальнейшей установкой
+    брекет-системы, вам подойдёт консультация хирурга.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0067; style: casual'
+  seed_family_id: q_0067
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+- sample_id: q_0216
+  query: цена удаления зуба мудроси
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике удаление зуба мудрости стоит:
+
+    - Удаление 8-го зуба (простая операция) — от 4 900 ₽
+
+    - Удаление 8-го зуба (сложная операция) — от 6 900 ₽
+
+
+    Если потребуется, также можем предложить консультацию врача-стоматолога хирурга первичный — от 500 ₽.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0067; style: typo'
+  seed_family_id: q_0067
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0217
+  query: удаление скока
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Информация отсутствует в базе знаний.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0068; style: casual'
+  seed_family_id: q_0068
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0218
+  query: скока устой удаление
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость удаления зуба в нашей клинике зависит от вида удаления:
+
+    - удаление постоянного зуба — от 6 000 ₽;
+
+    - удаление 8-го зуба (простая операция) — от 4 900 ₽;
+
+    - удаление 8-го зуба (сложная операция) — от 6 900 ₽.
+
+
+    Если вам нужно удаление импланта или трансплантата, стоимость — от 5 000 ₽. При необходимости вы можете записаться на
+    первичный приём к врачу-хирургу-стоматологу, он стоит от 500 ₽.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0068; style: typo'
+  seed_family_id: q_0068
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0219
+  query: зуб шатается надо удалять а сколько это стоит у вас боюсь дорого выйдет
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! У нас удаление зуба проводится по прайс-листу «Хирургия, удаление зубов»: удаление постоянного
+    зуба — от 6 000 ₽. Если речь идёт об удалении 8-го зуба, то стоимость составляет от 4 900 ₽ за простую операцию и от 6
+    900 ₽ за сложную операцию. Также на первичный приём врача-стоматолога хирурга стоимость составляет от 500 ₽. Если хотите,
+    мы подскажем, какой именно вариант вам подойдёт после осмотра.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0068; style: indirect'
+  seed_family_id: q_0068
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+- sample_id: q_0220
+  query: имплант скока?
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость имплантации в нашей клинике начинается от 35 000 ₽ за установку имплантата Дентиум.
+    Также доступны: установка имплантата Штрауманн — от 65 000 ₽, установка имплантатов «Все на 4» (Дентиум, Корея) — от 140
+    000 ₽, установка имплантатов «Все на 6» (Дентиум, Корея) — от 250 000 ₽. Если потребуется, могу также подсказать цены
+    на костную пластику, синус-лифтинг и коронки на имплантатах.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0066; style: casual'
+  seed_family_id: q_0066
+  gold_chunk_ids:
+  - - price_implantation
+  gold_facts:
+  - fact_type: price
+    canonical_value: '8000'
+    label: 'Установка миниимплантата ортодонтического: от 8 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Установка имплантатов Все на 4 (Дентиум, Корея): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '250000'
+    label: 'Установка имплантатов Все на 6 (Дентиум, Корея): от 250 000 ₽'
+  - fact_type: price
+    canonical_value: '35000'
+    label: 'Установка имплантата Дентиум: от 35 000 ₽'
+  - fact_type: price
+    canonical_value: '65000'
+    label: 'Установка имплантата Штрауманн: от 65 000 ₽'
+- sample_id: q_0221
+  query: Сколко импалант стоит у вас
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике установка имплантатов стоит от 35 000 ₽ за имплантат Дентиум и от 65 000
+    ₽ за имплантат Штрауманн. Также доступны варианты: установка имплантатов «Все на 4» (Дентиум, Корея) — от 140 000 ₽ и
+    «Все на 6» (Дентиум, Корея) — от 250 000 ₽. Если вам нужно, я также могу подсказать цены на костную пластику и синус-лифтинг.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0066; style: typo'
+  seed_family_id: q_0066
+  gold_chunk_ids:
+  - - price_implantation
+  gold_facts:
+  - fact_type: price
+    canonical_value: '35000'
+    label: 'Установка имплантата Дентиум: от 35 000 ₽'
+  - fact_type: price
+    canonical_value: '65000'
+    label: 'Установка имплантата Штрауманн: от 65 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Установка имплантатов Все на 4 (Дентиум, Корея): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '250000'
+    label: 'Установка имплантатов Все на 6 (Дентиум, Корея): от 250 000 ₽'
+- sample_id: q_0222
+  query: Удалили зуб вчера теперь имплант нужен а скока он стоит боюсь что дорого не потяну подскажите
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Подскажем по стоимости имплантации в нашей клинике. Стоимость установки имплантатов начинается
+    от 35 000 ₽ за имплантат Дентиум. Также есть вариант установки имплантата Штрауманн — от 65 000 ₽. Если вам требуется
+    более комплексное восстановление, доступны варианты: установка имплантатов «Все на 4» (Дентиум, Корея) — от 140 000 ₽
+    и «Все на 6» (Дентиум, Корея) — от 250 000 ₽.\n\nЕсли после удаления зуба нужна подготовка, в прайсе также указаны: костная
+    пластика челюстно-лицевой области (1 сложность, без материала) — от 17 000 ₽, остеопластика лунки (без материала) — от
+    7 000 ₽, открытый/закрытый синус-лифтинг — от 22 000 ₽.\n\nПриём (осмотр, консультация) врача-имплантолога первичный —
+    от 1 000 ₽. Будем рады помочь вам подобрать подходящий вариант по показаниям и бюджету.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0066; style: indirect'
+  seed_family_id: q_0066
+  gold_chunk_ids:
+  - - price_implantation
+  gold_facts:
+  - fact_type: price
+    canonical_value: '8000'
+    label: 'Установка миниимплантата ортодонтического: от 8 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Установка имплантатов Все на 4 (Дентиум, Корея): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '250000'
+    label: 'Установка имплантатов Все на 6 (Дентиум, Корея): от 250 000 ₽'
+  - fact_type: price
+    canonical_value: '35000'
+    label: 'Установка имплантата Дентиум: от 35 000 ₽'
+  - fact_type: price
+    canonical_value: '65000'
+    label: 'Установка имплантата Штрауманн: от 65 000 ₽'
+- sample_id: q_0223
+  query: скока протезирование
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике стоимость протезирования зависит от вида конструкции. Вот цены из прайс-листа:
+
+
+    - Винир — от 17 500 ₽
+
+    - Съемный нейлоновый протез — от 30 000 ₽
+
+    - Бюгельный протез — от 50 000 ₽
+
+    - Съемный протез на металле «Квадротти» (верх без неба) — от 32 000 ₽
+
+    - Полный съемный протез — от 26 000 ₽
+
+    - Временная композитная коронка (прямой метод) — от 2 850 ₽
+
+    - Временная пластмассовая коронка (лаборатория) — от 4 200 ₽
+
+    - Временная металлопластмассовая коронка (облицовка с напылением) — от 10 000 ₽
+
+    - Коронка из диоксида циркония (боковая) — от 17 000 ₽
+
+    - Коронка из диоксида циркония (фронтальная) — от 18 000 ₽
+
+    - Коронка из металлокерамики (боковая) — от 16 000 ₽
+
+    - Коронка из металлокерамики (фронтальная) — от 17 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (боковая) — от 18 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (фронтальная) — от 19 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (акриловый протез) — от 60 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке) — от 400 000 ₽
+
+    - Коронка на имплантате (диоксид циркония) — от 20 000 ₽
+
+    - Коронка на имплантате (металлокерамика) — от 16 000 ₽
+
+    - Временная коронка на имплантате — от 10 000 ₽
+
+    - Восстановление зуба пломбировочными материалами с внутриканальным штифтом — от 11 900 ₽
+
+
+    Если хотите, я могу также подсказать, какой вариант протезирования подойдет в вашей ситуации.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0071; style: typo'
+  seed_family_id: q_0071
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '30000'
+    label: 'Съемный нейлоновый протез: от 30 000 ₽'
+  - fact_type: price
+    canonical_value: '50000'
+    label: 'Бюгельный протез: от 50 000 ₽'
+  - fact_type: price
+    canonical_value: '32000'
+    label: 'Съемный протез на металле ''Квадротти'' (верх без неба): от 32 000 ₽'
+  - fact_type: price
+    canonical_value: '26000'
+    label: 'Полный съемный протез: от 26 000 ₽'
+  - fact_type: price
+    canonical_value: '60000'
+    label: 'Протезирование на 4 или 6 имплантатах (акриловый протез): от 60 000 ₽'
+  - fact_type: price
+    canonical_value: '400000'
+    label: 'Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке): от 400 000 ₽'
+- sample_id: q_0224
+  query: нужны цены на протезирование зубов мне несколько потерял боюсь дорого выйдет
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: 'Здравствуйте! Подскажем цены на протезирование зубов в нашей клинике.
+
+
+    По прайсу доступны следующие варианты:
+
+    - Винир — от 17 500 ₽
+
+    - Съемный нейлоновый протез — от 30 000 ₽
+
+    - Бюгельный протез — от 50 000 ₽
+
+    - Съемный протез на металле «Квадротти» (верх без неба) — от 32 000 ₽
+
+    - Полный съемный протез — от 26 000 ₽
+
+    - Временная композитная коронка (прямой метод) — от 2 850 ₽
+
+    - Временная пластмассовая коронка (лаборатория) — от 4 200 ₽
+
+    - Временная металлопластмассовая коронка (облицовка с напылением) — от 10 000 ₽
+
+    - Коронка из диоксида циркония (боковая) — от 17 000 ₽
+
+    - Коронка из диоксида циркония (фронтальная) — от 18 000 ₽
+
+    - Коронка из металлокерамики (боковая) — от 16 000 ₽
+
+    - Коронка из металлокерамики (фронтальная) — от 17 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (боковая) — от 18 000 ₽
+
+    - Цельнокерамическая коронка из диоксида циркония (фронтальная) — от 19 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (акриловый протез) — от 60 000 ₽
+
+    - Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке) — от 400 000 ₽
+
+    - Коронка на имплантате (диоксид циркония) — от 20 000 ₽
+
+    - Коронка на имплантате (металлокерамика) — от 16 000 ₽
+
+    - Временная коронка на имплантате — от 10 000 ₽
+
+    - Восстановление зуба пломбировочными материалами с внутриканальным штифтом — от 11 900 ₽
+
+
+    Также у нас есть первичная консультация врача-ортопеда — от 500 ₽.
+
+
+    Если нужно, мы также можем подобрать вариант протезирования по вашей ситуации: отсутствует один зуб, несколько зубов или
+    требуется протез на имплантах.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0071; style: indirect'
+  seed_family_id: q_0071
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '30000'
+    label: 'Съемный нейлоновый протез: от 30 000 ₽'
+  - fact_type: price
+    canonical_value: '50000'
+    label: 'Бюгельный протез: от 50 000 ₽'
+  - fact_type: price
+    canonical_value: '32000'
+    label: 'Съемный протез на металле ''Квадротти'' (верх без неба): от 32 000 ₽'
+  - fact_type: price
+    canonical_value: '26000'
+    label: 'Полный съемный протез: от 26 000 ₽'
+  - fact_type: price
+    canonical_value: '60000'
+    label: 'Протезирование на 4 или 6 имплантатах (акриловый протез): от 60 000 ₽'
+  - fact_type: price
+    canonical_value: '400000'
+    label: 'Протезирование на 4 или 6 имплантатах (коронки из диоксида циркония на титановом балке): от 400 000 ₽'
+- sample_id: q_0225
+  query: виниры скока
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! Стоимость винира в нашей клинике — от 17 500 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0069; style: casual'
+  seed_family_id: q_0069
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '17500'
+    label: 'Винир: от 17 500 ₽'
+- sample_id: q_0226
+  query: думаю виниры ставить зубы неровные а цена какая у вас боюсь дорого выйдет
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! Подскажите, пожалуйста, по винирам у нас есть позиция «Винир» — от 17 500 ₽ за зуб. Если
+    вам также нужна консультация врача, первичный прием (осмотр, консультация) врача-стоматолога ортопеда стоит от 500 ₽.
+    При необходимости врач уже на приеме сориентирует по плану лечения и итоговой стоимости в вашем случае.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0069; style: indirect'
+  seed_family_id: q_0069
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '17500'
+    label: 'Винир: от 17 500 ₽'
+- sample_id: q_0227
+  query: Сколько осмотр ребёнка
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! Прием (осмотр, консультация) врача-стоматолога детского первичный стоит от 500 ₽. Также есть
+    адаптационный прием детского стоматолога на 60 минут — от 1 500 ₽, а повторный прием — от 300 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0074; style: casual'
+  seed_family_id: q_0074
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+    - price_children_therapy
+  gold_facts:
+  - fact_type: price
+    canonical_value: '500'
+    label: первичный приём детского стоматолога
+  - fact_type: text
+    canonical_value: детский
+    label: специализация
+- sample_id: q_0228
+  query: Малышу зубы проверить надо срочно первый раз сколько это будет стоить у вас боюсь дорого
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Подскажем: у нас есть прием детского стоматолога с первого зуба, клиника принимает детей.
+    Первичный прием (осмотр, консультация) врача-стоматолога детского — от 500 ₽. Также доступен адаптационный прием детского
+    стоматолога на 60 минут — от 1 500 ₽. Если нужно, можем записать малыша на ближайшее время.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0074; style: typo'
+  seed_family_id: q_0074
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '500'
+    label: первичный приём детского стоматолога
+  - fact_type: text
+    canonical_value: детский стоматолог
+    label: специализация
+- sample_id: q_0234
+  query: скока конслтуация
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость первичного приема (осмотра, консультации) зависит от специалиста:
+
+    - врача-стоматолога терапевта — от 390 ₽;
+
+    - зубного врача — от 390 ₽;
+
+    - гигиениста стоматологического — от 300 ₽;
+
+    - врача-стоматолога детского — от 500 ₽;
+
+    - врача-стоматолога ортопеда — от 500 ₽;
+
+    - врача-стоматолога хирурга — от 500 ₽;
+
+    - врача-пародонтолога — от 700 ₽;
+
+    - врача-ортодонта — от 1 000 ₽;
+
+    - врача-имплантолога — от 1 000 ₽;
+
+    - врача-анестезиолога-реаниматолога — от 1 000 ₽;
+
+    - врача-челюстно-лицевого хирурга — от 2 000 ₽;
+
+    - врача-оториноларинголога — от 2 500 ₽.
+
+
+    Также в клинике есть повторные консультации по указанным направлениям. Если хотите, я могу подсказать стоимость приема
+    нужного вам врача.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0073; style: typo'
+  seed_family_id: q_0073
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '390'
+    label: приём стоматолога-терапевта
+  - fact_type: price
+    canonical_value: '300'
+    label: приём гигиениста
+- sample_id: q_0235
+  query: переживаю за деньги скажите сколько стоит просто посмотреть у врача на консультации
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость первичного приема (осмотра, консультации) зависит от специалиста. В нашей клинике
+    цены такие:
+
+    - врача-стоматолога терапевта — от 390 ₽;
+
+    - зубного врача — от 390 ₽;
+
+    - гигиениста стоматологического — от 300 ₽;
+
+    - врача-стоматолога ортопеда — от 500 ₽;
+
+    - врача-стоматолога хирурга — от 500 ₽;
+
+    - врача-стоматолога детского — от 500 ₽;
+
+    - врача-пародонтолога — от 700 ₽;
+
+    - врача-ортодонта — от 1 000 ₽;
+
+    - врача-имплантолога — от 1 000 ₽;
+
+    - врача-анестезиолога-реаниматолога — от 1 000 ₽;
+
+    - врача-челюстно-лицевого хирурга — от 2 000 ₽;
+
+    - врача-оториноларинголога — от 2 500 ₽.
+
+
+    Если нужен повторный прием, по некоторым специалистам также есть отдельные цены. Если хотите, я подскажу стоимость консультации
+    именно нужного врача.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0073; style: indirect'
+  seed_family_id: q_0073
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-ортодонта первичный: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '500'
+    label: 'Прием (осмотр, консультация) врача-стоматолога детского первичный: от 500 ₽'
+  - fact_type: price
+    canonical_value: '1500'
+    label: 'Адаптационный прием (детский стоматолог, 60 мин): от 1 500 ₽'
+  - fact_type: price
+    canonical_value: '390'
+    label: 'Прием (осмотр, консультация) зубного врача: от 390 ₽'
+  - fact_type: price
+    canonical_value: '390'
+    label: 'Прием (осмотр, консультация) врача-стоматолога терапевта: от 390 ₽'
+  - fact_type: price
+    canonical_value: '2000'
+    label: 'Прием (осмотр, консультация) врача-челюстно-лицевого хирурга первичный: от 2 000 ₽'
+  - fact_type: price
+    canonical_value: '300'
+    label: 'Прием (осмотр, консультация) гигиениста стоматологического первичный: от 300 ₽'
+  - fact_type: price
+    canonical_value: '700'
+    label: 'Прием (осмотр, консультация) врача-пародонтолога первичный: от 700 ₽'
+  - fact_type: price
+    canonical_value: '500'
+    label: 'Прием (осмотр, консультация) врача-стоматолога ортопеда первичный: от 500 ₽'
+  - fact_type: price
+    canonical_value: '500'
+    label: 'Прием (осмотр, консультация) врача-стоматолога хирурга первичный: от 500 ₽'
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-имплантолога первичный: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '500'
+    label: 'Профилактический прием с выдачей справки о санации: от 500 ₽'
+  - fact_type: price
+    canonical_value: '1500'
+    label: 'Прием (осмотр, консультация) врача-стоматолога – консилиум первичный: от 1 500 ₽'
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-анестезиолога-реаниматолога первичный: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '2500'
+    label: 'Прием (осмотр, консультация) врача-оториноларинголога первичный: от 2 500 ₽'
+  - fact_type: price
+    canonical_value: '2200'
+    label: 'Прием (осмотр, консультация) врача-оториноларинголога повторный: от 2 200 ₽'
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-ортодонта повторный: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-стоматолога повторный – консилиум: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '1000'
+    label: 'Прием (осмотр, консультация) врача-челюстно-лицевого хирурга повторный: от 1 000 ₽'
+  - fact_type: price
+    canonical_value: '300'
+    label: 'Прием (осмотр, консультация) врача-стоматолога детского повторный: от 300 ₽'
+  - fact_type: price
+    canonical_value: '400'
+    label: 'Прием (осмотр, консультация) врача-пародонтолога повторный: от 400 ₽'
+- sample_id: q_0236
+  query: Ребята я хочу брекеты поставить неровные зубы мучают керамические красивее но правда ли они дороже металлических
+    боюсь денег не хватит
+  category: pricing
+  subtype: price_comparison
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, керамические брекет-системы в нашей клинике действительно дороже металлических.
+
+
+    По прайсу:
+
+    - брекет-система Damon Q (самолигирующаяся металлическая система, 1 челюсть) — от 70 000 ₽;
+
+    - самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов) — от 85 000 ₽;
+
+    - самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов) — от 140 000 ₽.
+
+
+    Если вам нужно выравнивание неровных зубов, у нас ведут прием врачи-ортодонты: Ермаков Александр Владимирович, Живора
+    Инна Григорьевна и Окружнова Виктория Валерьевна. Для вас доступен первичный прием врача-ортодонта — от 1 000 ₽.
+
+
+    Также у нас доступна беспроцентная рассрочка на 6 и 10 месяцев.
+
+
+    Если хотите, мы можем помочь подобрать вариант лечения и брекет-систему с учетом вашего бюджета.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0078; style: indirect'
+  seed_family_id: q_0078
+  gold_chunk_ids:
+  - - price_orthodontics_p1
+    - price_orthodontics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: повторная фиксация ортодонтической единицы без стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '1200'
+    label: 'Коррекция: фиксация одной ортодонтической единицы с учетом стоимости брекета: от 1 200 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Брекет-системы: фиксация нового брекета (Damon Q, Experience Metal, MiniDiamond, Inspire Ice): от 5 000 ₽'
+  - fact_type: price
+    canonical_value: '9000'
+    label: 'Брекет-системы: фиксация нового брекета Дэймон Клир: от 9 000 ₽'
+  - fact_type: price
+    canonical_value: '45000'
+    label: 'Брекет-система 2х4: от 45 000 ₽'
+  - fact_type: price
+    canonical_value: '85000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (6 брекетов): от 85 000 ₽'
+  - fact_type: price
+    canonical_value: '140000'
+    label: 'Самолигирующаяся керамическая брекет-система Дэймон Клир (10 брекетов): от 140 000 ₽'
+  - fact_type: price
+    canonical_value: '3500'
+    label: 'Снятие и постановка коронки или кольца, снятие брекетов + полировка зубов: от 3 500 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Фиксация брекетов с помощью каппы (непрямым методом): от 5 000 ₽'
+- sample_id: q_0237
+  query: осмтр платный?
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Да, уважаемый пациент, в нашей клинике платный первичный прием (осмотр, консультация) специалистов. По
+    прайсу: прием (осмотр, консультация) врача-стоматолога терапевта — от 390 ₽, врача-стоматолога хирурга — от 500 ₽, врача-стоматолога
+    ортопеда — от 500 ₽, врача-стоматолога детского — от 500 ₽, врача-ортодонта — от 1 000 ₽, врача-пародонтолога — от 700
+    ₽, врача-имплантолога — от 1 000 ₽, врача-оториноларинголога — от 2 500 ₽, врача-челюстно-лицевого хирурга — от 2 000
+    ₽, врача-анестезиолога-реаниматолога — от 1 000 ₽, гигиениста стоматологического — от 300 ₽, зубного врача — от 390 ₽.
+    Также доступен профилактический прием с выдачей справки о санации — от 500 ₽. '
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0075; style: typo'
+  seed_family_id: q_0075
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '300'
+    label: приём гигиениста (минимальная цена)
+  - fact_type: price
+    canonical_value: '390'
+    label: приём стоматолога-терапевта
+- sample_id: q_0238
+  query: Слышал первичный осмотр платный у вас я без работы переживаю вдруг не потяну сколько выйдет
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, у нас платный первичный прием. Стоимость зависит от специалиста: например, прием (осмотр,
+    консультация) врача-стоматолога терапевта — от 390 ₽, врача-стоматолога детского первичный — от 500 ₽, врача-стоматолога
+    хирурга первичный — от 500 ₽, врача-стоматолога ортопеда первичный — от 500 ₽, врача-ортодонта первичный — от 1 000 ₽,
+    врача-имплантолога первичный — от 1 000 ₽, врача-пародонтолога первичный — от 700 ₽, врача-анестезиолога-реаниматолога
+    первичный — от 1 000 ₽, врача-челюстно-лицевого хирурга первичный — от 2 000 ₽, врача-оториноларинголога первичный — от
+    2 500 ₽, гигиениста стоматологического первичный — от 300 ₽, зубного врача — от 390 ₽. Также доступен профилактический
+    прием с выдачей справки о санации — от 500 ₽.
+
+
+    Если для вас сейчас важно уложиться в бюджет, мы можем подобрать подходящий первичный прием по минимальной стоимости.
+    Для записи и уточнения вы можете связаться с нами по телефону +7 (842) 231-45-55 или +7 (927) 831-45-55. Мы работаем ежедневно
+    с 08:00 до 20:00, адрес клиники: Россия, г. Ульяновск, ул. Рябикова, 56.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0075; style: indirect'
+  seed_family_id: q_0075
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '300'
+    label: приём гигиениста (минимальная цена)
+  - fact_type: price
+    canonical_value: '390'
+    label: приём стоматолога-терапевта
+- sample_id: q_0239
+  query: нужны деньги сэкономить на зубах есть ли акции сейчас скидки какие то переживаю дорого будет
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0079; style: indirect'
+  seed_family_id: q_0079
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0242
+  query: зпшитесь к петрову
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0083; style: typo'
+  seed_family_id: q_0083
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0243
+  query: нужно срочно к петрову попасть боюсь зуб сломается запишете когда можно
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0083; style: indirect'
+  seed_family_id: q_0083
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0244
+  query: скдка пенсам
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0080; style: typo'
+  seed_family_id: q_0080
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0245
+  query: я пенсионерка пенсия маленькая лечить зубы надо скидку для нас есть переживаю что дорого
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0080; style: indirect'
+  seed_family_id: q_0080
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0246
+  query: иванов рабтает?
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0082; style: typo'
+  seed_family_id: q_0082
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0247
+  query: Скажите работает ли у вас Иванов я к нему хотел но вдруг его нет и что тогда
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0082; style: indirect'
+  seed_family_id: q_0082
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0261
+  query: козлова принимает
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0084; style: typo'
+  seed_family_id: q_0084
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0262
+  query: Слышал про Козлову она у вас ведет прием мне срочно надо к ней она еще работает?
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните: +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0084; style: indirect'
+  seed_family_id: q_0084
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_ac_02
+  query: Что нельзя делать после удаления зуба?
+  category: aftercare
+  subtype: post_surgery
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_02
+  gold_chunk_ids:
+  - - aftercare_post_extraction
+  gold_facts:
+  - fact_type: text
+    canonical_value: не полоскать
+    label: запрет полоскания раны
+  - fact_type: text
+    canonical_value: горячая пища
+    label: запрет горячей/жёсткой пищи
+  - fact_type: text
+    canonical_value: физические нагрузки
+    label: запрет физических нагрузок
+- sample_id: q_ac_03
+  query: Какие лекарства пить после имплантации?
+  category: aftercare
+  subtype: post_surgery
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_03
+  gold_chunk_ids:
+  - - aftercare_post_implantation
+  gold_facts:
+  - fact_type: text
+    canonical_value: антибиотик
+    label: антибиотик после имплантации
+  - fact_type: text
+    canonical_value: амоксиклав
+    label: конкретный препарат
+- sample_id: q_ac_05
+  query: Ребёнку лечили зубы под наркозом, что теперь?
+  category: aftercare
+  subtype: post_surgery
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_05
+  gold_chunk_ids:
+  - - aftercare_post_anesthesia
+  gold_facts:
+  - fact_type: text
+    canonical_value: 10-30 минут
+    label: время восстановления сознания
+  - fact_type: text
+    canonical_value: до 37,5
+    label: субфебрильная температура норма
+  - fact_type: text
+    canonical_value: жидкая пища
+    label: питание после наркоза
+- sample_id: q_ac_06
+  query: Как ухаживать за коронками?
+  category: aftercare
+  subtype: post_prosthetics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_06
+  gold_chunk_ids:
+  - - aftercare_post_prosthetics_fixed
+  gold_facts:
+  - fact_type: text
+    canonical_value: два раза в день
+    label: частота чистки зубов
+  - fact_type: text
+    canonical_value: флосс
+    label: средство межзубной гигиены
+  - fact_type: text
+    canonical_value: твёрдые продукты
+    label: запрет жевания твёрдого
+- sample_id: q_ac_08
+  query: Чем чистить несъёмный протез?
+  category: aftercare
+  subtype: post_prosthetics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_08
+  gold_chunk_ids:
+  - - aftercare_post_prosthetics_fixed
+  gold_facts:
+  - fact_type: text
+    canonical_value: зубная нить
+    label: средство гигиены
+- sample_id: q_ac_09
+  query: Что делать после профессиональной чистки зубов?
+  category: aftercare
+  subtype: post_prosthetics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_09
+  gold_chunk_ids:
+  - - aftercare_post_hygiene
+  gold_facts:
+  - fact_type: text
+    canonical_value: щетка
+    label: замена щётки
+  - fact_type: text
+    canonical_value: чувствительность
+    label: возможная реакция
+- sample_id: q_ac_12
+  query: Поставили брекеты, больно, это нормально?
+  category: aftercare
+  subtype: post_orthodontics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_12
+  gold_chunk_ids:
+  - - aftercare_post_orthodontics
+  gold_facts:
+  - fact_type: text
+    canonical_value: дискомфорт
+    label: нормальная реакция
+  - fact_type: text
+    canonical_value: 3-7 дней
+    label: срок привыкания
+- sample_id: q_ac_13
+  query: Что делать если отклеился брекет?
+  category: aftercare
+  subtype: post_orthodontics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_13
+  gold_chunk_ids:
+  - - aftercare_post_orthodontics
+  gold_facts:
+  - fact_type: text
+    canonical_value: обратиться к врачу
+    label: действие при отклеивании
+- sample_id: q_ac_14
+  query: После удаления зуба кровь не останавливается, что делать?
+  category: aftercare
+  subtype: alarm_symptoms
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_14
+  gold_chunk_ids:
+  - - aftercare_post_extraction
+  gold_facts:
+  - fact_type: text
+    canonical_value: марлевый тампон
+    label: первая помощь при кровотечении
+- sample_id: q_ac_15
+  query: Температура после имплантации, это нормально?
+  category: aftercare
+  subtype: alarm_symptoms
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_15
+  gold_chunk_ids:
+  - - aftercare_post_implantation
+  - - aftercare_post_anesthesia
+  gold_facts:
+  - fact_type: text
+    canonical_value: до 37,5
+    label: субфебрильная температура норма
+  - fact_type: text
+    canonical_value: первые сутки
+    label: продолжительность нормальной температуры
+- sample_id: q_ac_16
+  query: Сильный отёк после синус-лифтинга, когда пройдёт?
+  category: aftercare
+  subtype: alarm_symptoms
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_16
+  gold_chunk_ids:
+  - - aftercare_post_sinus_lift
+  gold_facts:
+  - fact_type: text
+    canonical_value: нормой
+    label: отёк является нормой
+  - fact_type: text
+    canonical_value: третий день
+    label: пик отёка
+  - fact_type: text
+    canonical_value: спадать
+    label: динамика отёка

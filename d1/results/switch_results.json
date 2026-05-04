@@ -1,0 +1,436 @@
+{
+  "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+  "results": {
+    "switch_test": [
+      {
+        "baseline": "B0_rules @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.68,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 7,
+            "total": 11,
+            "accuracy": 0.6364
+          },
+          "faq->booking": {
+            "correct": 7,
+            "total": 10,
+            "accuracy": 0.7
+          },
+          "booking->anamnesis": {
+            "correct": 6,
+            "total": 9,
+            "accuracy": 0.6667
+          },
+          "booking->faq": {
+            "correct": 4,
+            "total": 7,
+            "accuracy": 0.5714
+          },
+          "anamnesis->booking": {
+            "correct": 5,
+            "total": 6,
+            "accuracy": 0.8333
+          },
+          "faq->anamnesis": {
+            "correct": 5,
+            "total": 7,
+            "accuracy": 0.7143
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.02
+      },
+      {
+        "baseline": "B1_tfidf_svc @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.96,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 11,
+            "total": 11,
+            "accuracy": 1.0
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.04
+      },
+      {
+        "baseline": "B1.1_tfidf_lr @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.92,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9091
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 5,
+            "total": 7,
+            "accuracy": 0.7143
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.03
+      },
+      {
+        "baseline": "B1.2_tfidf_lr_tuned @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.92,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9091
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 5,
+            "total": 7,
+            "accuracy": 0.7143
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.04
+      },
+      {
+        "baseline": "B1.3_fasttext @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.96,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 11,
+            "total": 11,
+            "accuracy": 1.0
+          },
+          "faq->booking": {
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.03
+      },
+      {
+        "baseline": "B2_bge-m3_linear @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.92,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9091
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 5,
+            "total": 7,
+            "accuracy": 0.7143
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 3.36
+      },
+      {
+        "baseline": "B2.1_bge-m3_svc @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.96,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 11,
+            "total": 11,
+            "accuracy": 1.0
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 6,
+            "total": 7,
+            "accuracy": 0.8571
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 2.83
+      },
+      {
+        "baseline": "B2.2_bge-m3_centroid @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.8,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 6,
+            "total": 11,
+            "accuracy": 0.5455
+          },
+          "faq->booking": {
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 4,
+            "total": 7,
+            "accuracy": 0.5714
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 2.81
+      },
+      {
+        "baseline": "B2.3_bge-m3_linear_tuned @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.92,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 10,
+            "total": 11,
+            "accuracy": 0.9091
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 5,
+            "total": 7,
+            "accuracy": 0.7143
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 2.81
+      },
+      {
+        "baseline": "B2.4_e5-small_linear @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.86,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 9,
+            "total": 11,
+            "accuracy": 0.8182
+          },
+          "faq->booking": {
+            "correct": 9,
+            "total": 10,
+            "accuracy": 0.9
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 4,
+            "total": 7,
+            "accuracy": 0.5714
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.7
+      },
+      {
+        "baseline": "B2.5_e5-small_svc @ switch_test",
+        "n_samples": 50,
+        "route_accuracy": 0.98,
+        "per_transition": {
+          "anamnesis->faq": {
+            "correct": 11,
+            "total": 11,
+            "accuracy": 1.0
+          },
+          "faq->booking": {
+            "correct": 10,
+            "total": 10,
+            "accuracy": 1.0
+          },
+          "booking->anamnesis": {
+            "correct": 8,
+            "total": 9,
+            "accuracy": 0.8889
+          },
+          "booking->faq": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          },
+          "anamnesis->booking": {
+            "correct": 6,
+            "total": 6,
+            "accuracy": 1.0
+          },
+          "faq->anamnesis": {
+            "correct": 7,
+            "total": 7,
+            "accuracy": 1.0
+          }
+        },
+        "interpretation_warning": "Text-only stress test. NOT a switch detector. NOT comparable to context-aware routing. Router receives only `text` (no `active_domain`). Metric answers: 'On phrases that happen to be X->Y transitions, how often does router classify the new domain Y?' — it does NOT answer 'is this a switch?' because there is no non-switch control set.",
+        "latency_ms": 0.4
+      }
+    ]
+  }
+}

@@ -1,0 +1,571 @@
+{
+  "hybrid_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+  "selective_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+  "thresholds": {
+    "anamnesis_threshold": 0.48,
+    "faq_anamnesis_margin": 0.15,
+    "general_threshold": 0.63
+  },
+  "eval_sets": [
+    "val",
+    "test",
+    "hard_test",
+    "blind_test",
+    "entity_held_out",
+    "extended_eval"
+  ],
+  "results": {
+    "val": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 351,
+          "coverage": 0.6268,
+          "accepted_accuracy": 0.9364,
+          "accepted_recall_anamnesis": 0.9867,
+          "defer_rate": 0.3732,
+          "false_negative_deferred": 20,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 80,
+            "low_confidence": 89,
+            "faq_anamnesis_borderline": 7,
+            "general_confident": 135,
+            "sparse_dense_disagree": 35,
+            "rule:anamnesis:hits=2": 5
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.9364,
+          "macro_f1": 0.885,
+          "balanced_accuracy": 0.8621,
+          "recall_anamnesis": 0.9867,
+          "false_faq_for_anamnesis": 0.0133,
+          "n_samples": 220,
+          "anamnesis_precision": 0.8706,
+          "anamnesis_recall": 0.9867,
+          "anamnesis_f1": 0.925,
+          "faq_precision": 0.9524,
+          "faq_recall": 0.9836,
+          "faq_f1": 0.9677,
+          "booking_precision": 1.0,
+          "booking_recall": 1.0,
+          "booking_f1": 1.0,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 0.4783,
+          "unsupported_f1": 0.6471
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 351,
+          "coverage": 0.6211,
+          "accepted_accuracy": 0.9404,
+          "accepted_recall_anamnesis": 0.9865,
+          "defer_rate": 0.3789,
+          "false_negative_deferred": 21,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 83,
+            "low_confidence": 90,
+            "faq_anamnesis_borderline": 7,
+            "general_confident": 135,
+            "sparse_dense_disagree": 36
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 0.9404,
+          "macro_f1": 0.8911,
+          "balanced_accuracy": 0.8675,
+          "recall_anamnesis": 0.9865,
+          "false_faq_for_anamnesis": 0.0135,
+          "n_samples": 218,
+          "anamnesis_precision": 0.8795,
+          "anamnesis_recall": 0.9865,
+          "anamnesis_f1": 0.9299,
+          "faq_precision": 0.9524,
+          "faq_recall": 0.9836,
+          "faq_f1": 0.9677,
+          "booking_precision": 1.0,
+          "booking_recall": 1.0,
+          "booking_f1": 1.0,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 0.5,
+          "unsupported_f1": 0.6667
+        }
+      }
+    },
+    "test": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 730,
+          "coverage": 0.6041,
+          "accepted_accuracy": 0.9592,
+          "accepted_recall_anamnesis": 0.9873,
+          "defer_rate": 0.3959,
+          "false_negative_deferred": 58,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 150,
+            "sparse_dense_disagree": 65,
+            "rule:anamnesis:hits=2": 16,
+            "faq_anamnesis_borderline": 21,
+            "low_confidence": 203,
+            "general_confident": 274,
+            "rule:booking:hits=3": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.9592,
+          "macro_f1": 0.9317,
+          "balanced_accuracy": 0.912,
+          "recall_anamnesis": 0.9873,
+          "false_faq_for_anamnesis": 0.0127,
+          "n_samples": 441,
+          "anamnesis_precision": 0.9398,
+          "anamnesis_recall": 0.9873,
+          "anamnesis_f1": 0.963,
+          "faq_precision": 0.9444,
+          "faq_recall": 0.9597,
+          "faq_f1": 0.952,
+          "booking_precision": 1.0,
+          "booking_recall": 0.9769,
+          "booking_f1": 0.9883,
+          "unsupported_precision": 0.9545,
+          "unsupported_recall": 0.7241,
+          "unsupported_f1": 0.8235
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 730,
+          "coverage": 0.6,
+          "accepted_accuracy": 0.9635,
+          "accepted_recall_anamnesis": 0.9873,
+          "defer_rate": 0.4,
+          "false_negative_deferred": 59,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "anamnesis_confident": 163,
+            "sparse_dense_disagree": 67,
+            "faq_anamnesis_borderline": 21,
+            "low_confidence": 204,
+            "general_confident": 275
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 0.9635,
+          "macro_f1": 0.9416,
+          "balanced_accuracy": 0.9254,
+          "recall_anamnesis": 0.9873,
+          "false_faq_for_anamnesis": 0.0127,
+          "n_samples": 438,
+          "anamnesis_precision": 0.9509,
+          "anamnesis_recall": 0.9873,
+          "anamnesis_f1": 0.9688,
+          "faq_precision": 0.9444,
+          "faq_recall": 0.9597,
+          "faq_f1": 0.952,
+          "booking_precision": 1.0,
+          "booking_recall": 0.9769,
+          "booking_f1": 0.9883,
+          "unsupported_precision": 0.9545,
+          "unsupported_recall": 0.7778,
+          "unsupported_f1": 0.8571
+        }
+      }
+    },
+    "hard_test": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 355,
+          "coverage": 0.7493,
+          "accepted_accuracy": 0.7932,
+          "accepted_recall_anamnesis": 0.8768,
+          "defer_rate": 0.2507,
+          "false_negative_deferred": 56,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 83,
+            "sparse_dense_disagree": 27,
+            "rule:anamnesis:hits=2": 46,
+            "rule:anamnesis:hits=3": 6,
+            "anamnesis_confident": 131,
+            "low_confidence": 51,
+            "faq_anamnesis_borderline": 11
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.7932,
+          "macro_f1": 0.6175,
+          "balanced_accuracy": 0.6963,
+          "recall_anamnesis": 0.8768,
+          "false_faq_for_anamnesis": 0.064,
+          "n_samples": 266,
+          "anamnesis_precision": 0.9727,
+          "anamnesis_recall": 0.8768,
+          "anamnesis_f1": 0.9223,
+          "faq_precision": 0.6061,
+          "faq_recall": 0.4082,
+          "faq_f1": 0.4878,
+          "booking_precision": 0.2449,
+          "booking_recall": 1.0,
+          "booking_f1": 0.3934,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 0.5,
+          "unsupported_f1": 0.6667
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 355,
+          "coverage": 0.7268,
+          "accepted_accuracy": 0.7829,
+          "accepted_recall_anamnesis": 0.8571,
+          "defer_rate": 0.2732,
+          "false_negative_deferred": 63,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 87,
+            "sparse_dense_disagree": 30,
+            "anamnesis_confident": 171,
+            "faq_anamnesis_borderline": 13,
+            "low_confidence": 54
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 0.7829,
+          "macro_f1": 0.6173,
+          "balanced_accuracy": 0.6987,
+          "recall_anamnesis": 0.8571,
+          "false_faq_for_anamnesis": 0.0714,
+          "n_samples": 258,
+          "anamnesis_precision": 0.9825,
+          "anamnesis_recall": 0.8571,
+          "anamnesis_f1": 0.9155,
+          "faq_precision": 0.6,
+          "faq_recall": 0.4375,
+          "faq_f1": 0.506,
+          "booking_precision": 0.2353,
+          "booking_recall": 1.0,
+          "booking_f1": 0.381,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 0.5,
+          "unsupported_f1": 0.6667
+        }
+      }
+    },
+    "blind_test": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 40,
+          "coverage": 0.725,
+          "accepted_accuracy": 0.9655,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.275,
+          "false_negative_deferred": 4,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 8,
+            "anamnesis_confident": 8,
+            "sparse_dense_disagree": 2,
+            "faq_anamnesis_borderline": 1,
+            "general_confident": 20,
+            "rule:anamnesis:hits=2": 1
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.9655,
+          "macro_f1": 0.9686,
+          "balanced_accuracy": 0.9688,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 29,
+          "anamnesis_precision": 0.8889,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 0.9412,
+          "faq_precision": 1.0,
+          "faq_recall": 1.0,
+          "faq_f1": 1.0,
+          "booking_precision": 1.0,
+          "booking_recall": 0.875,
+          "booking_f1": 0.9333,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 1.0,
+          "unsupported_f1": 1.0
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 40,
+          "coverage": 0.7,
+          "accepted_accuracy": 1.0,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.3,
+          "false_negative_deferred": 4,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 9,
+            "anamnesis_confident": 8,
+            "sparse_dense_disagree": 2,
+            "faq_anamnesis_borderline": 1,
+            "general_confident": 20
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 28,
+          "anamnesis_precision": 1.0,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 1.0,
+          "faq_precision": 1.0,
+          "faq_recall": 1.0,
+          "faq_f1": 1.0,
+          "booking_precision": 1.0,
+          "booking_recall": 1.0,
+          "booking_f1": 1.0,
+          "unsupported_precision": 1.0,
+          "unsupported_recall": 1.0,
+          "unsupported_f1": 1.0
+        }
+      }
+    },
+    "entity_held_out": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 100,
+          "coverage": 0.43,
+          "accepted_accuracy": 0.9767,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.57,
+          "false_negative_deferred": 15,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 38,
+            "sparse_dense_disagree": 17,
+            "anamnesis_confident": 14,
+            "general_confident": 29,
+            "faq_anamnesis_borderline": 2
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.9767,
+          "macro_f1": 0.9626,
+          "balanced_accuracy": 0.9444,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 43,
+          "anamnesis_precision": 1.0,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 1.0,
+          "faq_precision": 0.9583,
+          "faq_recall": 1.0,
+          "faq_f1": 0.9787,
+          "booking_precision": 1.0,
+          "booking_recall": 0.8333,
+          "booking_f1": 0.9091
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 100,
+          "coverage": 0.43,
+          "accepted_accuracy": 0.9767,
+          "accepted_recall_anamnesis": 1.0,
+          "defer_rate": 0.57,
+          "false_negative_deferred": 15,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "low_confidence": 38,
+            "sparse_dense_disagree": 17,
+            "anamnesis_confident": 14,
+            "general_confident": 29,
+            "faq_anamnesis_borderline": 2
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 0.9767,
+          "macro_f1": 0.9626,
+          "balanced_accuracy": 0.9444,
+          "recall_anamnesis": 1.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 43,
+          "anamnesis_precision": 1.0,
+          "anamnesis_recall": 1.0,
+          "anamnesis_f1": 1.0,
+          "faq_precision": 0.9583,
+          "faq_recall": 1.0,
+          "faq_f1": 0.9787,
+          "booking_precision": 1.0,
+          "booking_recall": 0.8333,
+          "booking_f1": 0.9091
+        }
+      }
+    },
+    "extended_eval": {
+      "hybrid": {
+        "selective": {
+          "router_name": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 101,
+          "coverage": 0.3465,
+          "accepted_accuracy": 0.7714,
+          "accepted_recall_anamnesis": 0.0,
+          "defer_rate": 0.6535,
+          "false_negative_deferred": 0,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 33,
+            "low_confidence": 42,
+            "sparse_dense_disagree": 20,
+            "anamnesis_confident": 2,
+            "faq_anamnesis_borderline": 4
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B4_hybrid[B1.1_tfidf_lr+B2.1_bge-m3_svc]_accepted_only",
+          "accuracy": 0.7714,
+          "macro_f1": 0.2177,
+          "balanced_accuracy": 0.7714,
+          "recall_anamnesis": 0.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 35,
+          "anamnesis_precision": 0.0,
+          "anamnesis_recall": 0.0,
+          "anamnesis_f1": 0.0,
+          "faq_precision": 1.0,
+          "faq_recall": 0.7714,
+          "faq_f1": 0.871,
+          "booking_precision": 0.0,
+          "booking_recall": 0.0,
+          "booking_f1": 0.0,
+          "unsupported_precision": 0.0,
+          "unsupported_recall": 0.0,
+          "unsupported_f1": 0.0
+        }
+      },
+      "selective": {
+        "selective": {
+          "router_name": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective",
+          "thresholds": {
+            "anamnesis_threshold": 0.48,
+            "faq_anamnesis_margin": 0.15,
+            "general_threshold": 0.63
+          },
+          "n_samples": 101,
+          "coverage": 0.3465,
+          "accepted_accuracy": 0.7714,
+          "accepted_recall_anamnesis": 0.0,
+          "defer_rate": 0.6535,
+          "false_negative_deferred": 0,
+          "safety_on_accepted": null,
+          "reasons_breakdown": {
+            "general_confident": 33,
+            "low_confidence": 42,
+            "sparse_dense_disagree": 20,
+            "anamnesis_confident": 2,
+            "faq_anamnesis_borderline": 4
+          }
+        },
+        "accepted_only_metrics": {
+          "baseline": "B1.1_tfidf_lr+B2.1_bge-m3_svc_selective_accepted_only",
+          "accuracy": 0.7714,
+          "macro_f1": 0.2177,
+          "balanced_accuracy": 0.7714,
+          "recall_anamnesis": 0.0,
+          "false_faq_for_anamnesis": 0.0,
+          "n_samples": 35,
+          "anamnesis_precision": 0.0,
+          "anamnesis_recall": 0.0,
+          "anamnesis_f1": 0.0,
+          "faq_precision": 1.0,
+          "faq_recall": 0.7714,
+          "faq_f1": 0.871,
+          "booking_precision": 0.0,
+          "booking_recall": 0.0,
+          "booking_f1": 0.0,
+          "unsupported_precision": 0.0,
+          "unsupported_recall": 0.0,
+          "unsupported_f1": 0.0
+        }
+      }
+    }
+  }
+}

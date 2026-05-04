@@ -1,0 +1,11 @@
+tag,n,accepted,deferred,coverage,accepted_accuracy
+_all,355,266,89,0.7493,0.7932
+booking_doctor_name,5,5,0,1.0,0.0
+mixed_intent,42,32,10,0.7619,0.5312
+short_ambiguous,43,31,12,0.7209,0.9677
+simple_booking,43,34,9,0.7907,0.3824
+simple_faq,8,7,1,0.875,0.4286
+simple_symptom,128,114,14,0.8906,0.9561
+symptom_booking,23,17,6,0.7391,0.3529
+symptom_doctor,5,4,1,0.8,0.75
+symptom_price,20,16,4,0.8,0.6875

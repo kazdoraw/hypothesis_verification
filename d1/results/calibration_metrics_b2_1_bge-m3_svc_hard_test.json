@@ -1,0 +1,16 @@
+{
+  "baseline": "B2.1 BGE-M3+SVC",
+  "eval_set": "hard_test",
+  "n_samples": 355,
+  "ece_n_bins": 10,
+  "ece": 0.170291,
+  "brier_ovr": {
+    "per_class": {
+      "anamnesis": 0.188804,
+      "booking": 0.119777,
+      "faq": 0.196792,
+      "unsupported": 0.018984
+    },
+    "macro": 0.131089
+  }
+}

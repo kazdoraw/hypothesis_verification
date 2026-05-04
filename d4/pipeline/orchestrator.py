@@ -15,7 +15,6 @@ Checkpoint каждые N запросов.
 
 from __future__ import annotations
 
-import json
 import os
 import tempfile
 import threading
@@ -33,7 +32,6 @@ from d4.models import (
 )
 from d4.pipeline.llm_runner import LLMRunner
 from d4.strategies.base import BaseContextStrategy
-from d4.strategies.keyword_template import KeywordTemplateStrategy
 
 # ---------------------------------------------------------------------------
 # Нормализация ответа
@@ -75,6 +73,11 @@ class Orchestrator:
         self.strategies = {s.strategy_id: s for s in strategies}
         self.llm_runner = llm_runner
         self.chunks = chunks
+
+        # Инжекция LLMRunner в стратегии, которым он нужен (S5 TieredStrategy)
+        for strategy in strategies:
+            if hasattr(strategy, "set_llm_runner"):
+                strategy.set_llm_runner(llm_runner)
         self.checkpoint_every = checkpoint_every
         self.max_workers = max_workers
         self.output_path = Path(output_path)
@@ -88,24 +91,28 @@ class Orchestrator:
     ) -> StrategyResult:
         """Обработка одного запроса одной стратегией.
 
-        Возвращает StrategyResult с inline-метриками.
+        Для стратегий с answer_directly (S5, B0): НЕ вызываем select_context()
+        отдельно — стратегия сама решает, какой retrieval использовать.
+        DirectAnswerResult содержит полный accounting (tokens, retrieval, route).
         """
         strategy_id = StrategyID(strategy.strategy_id)
 
-        # Шаг 3: формирование контекста
-        retrieval = strategy.select_context(sample.query, self.chunks)
+        route_taken = ""
 
-        # Шаг 4: вызов LLM или template
-        if isinstance(strategy, KeywordTemplateStrategy):
-            # B0: прямой ответ без LLM
-            start = time.perf_counter()
-            answer = strategy.answer_directly(sample.query, self.chunks)
-            latency_ms = (time.perf_counter() - start) * 1000
-            tokens_prompt = 0
-            tokens_completion = 0
-            error = None
+        conf_debug = None
+
+        if hasattr(strategy, "answer_directly"):
+            result = strategy.answer_directly(sample.query, self.chunks)
+            answer = result.answer
+            retrieval = result.retrieval
+            latency_ms = result.latency_ms
+            tokens_prompt = result.tokens_prompt
+            tokens_completion = result.tokens_completion
+            route_taken = result.route_taken
+            error = result.error
+            conf_debug = result.confidence_debug or None
         else:
-            # S1-S4: единый LLM вызов
+            retrieval = strategy.select_context(sample.query, self.chunks)
             llm_result = self.llm_runner.run(sample.query, retrieval.context_text)
             answer = llm_result["answer"]
             latency_ms = llm_result["latency_ms"]
@@ -113,10 +120,8 @@ class Orchestrator:
             tokens_completion = llm_result["tokens_completion"]
             error = llm_result["error"]
 
-        # Шаг 6: нормализация
         answer = _normalize_answer(answer)
 
-        # Шаг 7: inline-метрики
         return StrategyResult(
             sample_id=sample.sample_id,
             strategy_id=strategy_id,
@@ -126,7 +131,9 @@ class Orchestrator:
             tokens_prompt=tokens_prompt,
             tokens_completion=tokens_completion,
             context_length=retrieval.context_token_count,
+            route_taken=route_taken,
             error=error,
+            confidence_debug=conf_debug,
         )
 
     def run_all(
@@ -179,7 +186,7 @@ class Orchestrator:
         done = 0
         start_time = time.perf_counter()
 
-        print(f"  запуск: {total} задач, {self.max_workers} потоков")
+        print(f"  запуск: {total} задач, {self.max_workers} потоков", flush=True)
 
         try:
             with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
@@ -193,31 +200,46 @@ class Orchestrator:
                         result = future.result()
                     except Exception as exc:
                         sample, strategy = futures[future]
-                        print(f"  ОШИБКА {sample.sample_id}:{strategy.strategy_id}: {exc}")
+                        print(
+                            f"  ✗ {sample.sample_id}:{strategy.strategy_id} — {exc}",
+                            flush=True,
+                        )
                         continue
 
                     with self._lock:
                         results.append(result)
                         done += 1
 
+                        elapsed = time.perf_counter() - start_time
+                        rate = done / elapsed if elapsed > 0 else 0
+                        eta_sec = (total - done) / rate if rate > 0 else 0
+                        err_mark = "✗" if result.error else "✓"
+                        route_mark = f" [{result.route_taken}]" if result.route_taken else ""
+                        print(
+                            f"  {err_mark} {done}/{total} "
+                            f"{result.strategy_id.value}:{result.sample_id}"
+                            f" {result.latency_ms:.0f}ms"
+                            f"{route_mark}"
+                            f" (ETA {eta_sec:.0f}s)",
+                            flush=True,
+                        )
+
                         if done % self.checkpoint_every == 0:
                             self._save_checkpoint(base_results + results)
-                            elapsed = time.perf_counter() - start_time
-                            rate = done / elapsed if elapsed > 0 else 0
-                            eta_sec = (total - done) / rate if rate > 0 else 0
                             print(
-                                f"  checkpoint: {done}/{total} "
-                                f"({rate:.1f} req/s, ETA {eta_sec:.0f}s)"
+                                f"  💾 checkpoint: {done}/{total} "
+                                f"({rate:.1f} req/s)",
+                                flush=True,
                             )
 
         except KeyboardInterrupt:
-            print(f"\n  Прерывание! Сохраняю checkpoint ({len(results)} новых)...")
+            print(f"\n  Прерывание! Сохраняю checkpoint ({len(results)} новых)...", flush=True)
         finally:
             if results:
                 with self._lock:
                     self._save_checkpoint(base_results + results)
             elapsed = time.perf_counter() - start_time
-            print(f"Готово: {done}/{total} за {elapsed:.1f}s")
+            print(f"\nГотово: {done}/{total} за {elapsed:.1f}s", flush=True)
 
         return results
 

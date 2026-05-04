@@ -29,10 +29,14 @@ class VectorStrategy(BaseContextStrategy):
         model_name: str,
         device: str,
         top_k: int = 5,
+        model_revision: str | None = None,
+        local_files_only: bool = False,
     ) -> None:
         self.top_k = top_k
         self.model_name = model_name
         self.device = device
+        self._model_revision = model_revision
+        self._local_files_only = local_files_only
         self._model: Optional[object] = None
         self._chunk_embeddings: Optional[np.ndarray] = None
         self._chunk_ids: list[str] = []
@@ -41,7 +45,13 @@ class VectorStrategy(BaseContextStrategy):
         """Ленивая загрузка embedding модели."""
         if self._model is None:
             from sentence_transformers import SentenceTransformer
-            self._model = SentenceTransformer(self.model_name, device=self.device)
+            kwargs: dict = {
+                "device": self.device,
+                "local_files_only": self._local_files_only,
+            }
+            if self._model_revision:
+                kwargs["revision"] = self._model_revision
+            self._model = SentenceTransformer(self.model_name, **kwargs)
         return self._model
 
     def precompute_embeddings(self, chunks: list[KBChunk]) -> None:
@@ -50,7 +60,7 @@ class VectorStrategy(BaseContextStrategy):
         Вызывается один раз перед прогоном всех запросов.
         """
         model = self._get_model()
-        texts = [f"{c.title}\n{c.content}" for c in chunks]
+        texts = [c.embedding_text for c in chunks]
         self._chunk_embeddings = model.encode(texts, normalize_embeddings=True)
         self._chunk_ids = [c.id for c in chunks]
 

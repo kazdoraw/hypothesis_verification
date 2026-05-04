@@ -30,5 +30,8 @@ seaborn>=0.13
 jupyter>=1.0
 ipywidgets>=8.0
 
+# Aftercare document parsing
+python-docx>=1.1
+
 # Tokenization (Qwen3.5 AutoTokenizer для подсчёта токенов)
 transformers>=4.51

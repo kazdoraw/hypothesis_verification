@@ -189,7 +189,7 @@ seeds:
   - {id: seed_162, text: "Нужно ли направление?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
   - {id: seed_163, text: "Куда жаловаться?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
   - {id: seed_164, text: "Есть вай-фай в клинике?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
-  - {id: seed_165, text: "Сколько детских стоматологов?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}
+  - {id: seed_165, text: "Сколько детских стоматологов?", route_domain: faq, subtype: doctor_info, explicit_booking: false, urgency: normal}  # audit: clinic_info → doctor_info
 
   # =========================================================================
   # FAQ — doctor_info (30 seeds)
@@ -278,14 +278,14 @@ seeds:
   - {id: seed_239, text: "Нужна запись к детскому стоматологу", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "детский стоматолог"}
   - {id: seed_240, text: "Запишите на удаление", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
   - {id: seed_241, text: "Хочу на приём в понедельник", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
-  - {id: seed_242, text: "Можно ли записаться онлайн?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_242, text: "Можно ли записаться онлайн?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}  # audit: booking → faq (вопрос о наличии онлайн-записи)
   - {id: seed_243, text: "Запишите двоих — меня и мужа", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
   - {id: seed_244, text: "Есть утренние часы?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
   - {id: seed_245, text: "Запишите на вечер после 18", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
   - {id: seed_246, text: "Хочу на имплантацию", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
   - {id: seed_247, text: "Нужна срочная запись", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent}
   - {id: seed_248, text: "Экстренный приём есть?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent}
-  - {id: seed_249, text: "Записываете первичных?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: seed_249, text: "Записываете первичных?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}  # audit: booking → faq (вопрос о политике клиники)
   - {id: seed_250, text: "Запишите к Ермакову", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "ортодонт"}
   - {id: seed_251, text: "Хочу записаться к Конновской", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal, specialization_hint: "детский стоматолог"}
   - {id: seed_252, text: "Запишите на ближайшее время", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
@@ -401,7 +401,7 @@ seeds:
   - {id: seed_346, text: "Здравствуйте!", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
   - {id: seed_347, text: "Добрый день!", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
   - {id: seed_348, text: "Привет, есть кто?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
-  - {id: seed_349, text: "Здравствуйте, это стоматология?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
+  - {id: seed_349, text: "Здравствуйте, это стоматология?", route_domain: faq, subtype: clinic_info, explicit_booking: false, urgency: normal}  # greeting + intent → faq (greeting_with_intent_rule)
   - {id: seed_350, text: "Вы работаете?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
   - {id: seed_351, text: "Можно?", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
   - {id: seed_352, text: "Здрасте", route_domain: unsupported, subtype: greeting_only, explicit_booking: false, urgency: normal}
@@ -477,6 +477,6 @@ seeds:
   - {id: seed_410, text: "Хочу написать жалобу", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
   - {id: seed_411, text: "Потеряли мою карту", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
   - {id: seed_412, text: "Прекрасные специалисты", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
-  - {id: seed_413, text: "После вашего лечения стало хуже", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
+  - {id: seed_413, text: "После вашего лечения стало хуже", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: normal, feedback_flag: true}  # post-treatment complaint → anamnesis (mixed_intent_rule)
   - {id: seed_414, text: "Очень уютная клиника", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}
   - {id: seed_415, text: "Напишу на вас в Росздравнадзор", route_domain: unsupported, subtype: feedback, explicit_booking: false, urgency: normal, feedback_flag: true}

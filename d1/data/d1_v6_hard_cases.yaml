@@ -90,6 +90,18 @@ hard_cases:
   - {id: hard_058, text: "Малышу 2 года, упал, зуб выбит", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
   - {id: hard_059, text: "Нагноение после имплантации, щека горит", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
   - {id: hard_060, text: "Потерял сознание от боли", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061a, text: "Зуб сломался пополам, нерв торчит", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061b, text: "У ребёнка после падения зуб вдавился в десну", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061c, text: "Третий день температура 38, десна чёрная", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061d, text: "Швы после операции разошлись, кровит сильно", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061e, text: "Онемела половина лица после удаления, уже сутки", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061f, text: "Коронка слетела, проглотил, что делать?", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061g, text: "После анестезии губа распухла и не чувствую", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061h, text: "Сильная боль в челюсти, отдаёт в ухо и висок", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061i, text: "Абсцесс на десне, гной течёт, лихорадка", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061j, text: "Ударили в челюсть, зубы шатаются, рот не закрывается", route_domain: anamnesis, subtype: complaint, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061k, text: "Брекет отклеился и впился в щёку, кровь идёт", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
+  - {id: hard_061l, text: "Имплант выпал, из лунки идёт кровь", route_domain: anamnesis, subtype: symptom, explicit_booking: false, urgency: urgent, source: manual_hard}
 
   # =========================================================================
   # 4. INTENT SWITCH — пары для switch_test
@@ -200,3 +212,1604 @@ hard_cases:
   - {id: hard_113, text: "Можно ли курить после удаления зуба?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "post-procedure info"}
   - {id: hard_114, text: "Нужна ли анестезия при чистке?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "procedure info"}
   - {id: hard_115, text: "Какой имплант лучше — корейский или немецкий?", route_domain: faq, subtype: procedure_info, explicit_booking: false, urgency: normal, source: manual_hard, notes: "product comparison"}
+
+  # =========================================================================
+  # 10. ANAMNESIS FAQ CONFUSION — audited candidate pool
+  # =========================================================================
+  - id: hard_116
+    text: у меня зуб ноет на холодное это нормально?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_001
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7282
+      nearest_hard_id: hard_027
+      max_sim_to_seed: 0.6623
+  - id: hard_117
+    text: Почему десна кровит после чистки зубов?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_002
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7479
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.7515
+  - id: hard_118
+    text: После пломбы зуб зудит внутри, что это может быть?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_003
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.713
+      nearest_hard_id: hard_103
+      max_sim_to_seed: 0.6615
+  - id: hard_119
+    text: Щека опухла вчера после лечения, это само пройдет?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_004
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6874
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.6366
+  - id: hard_120
+    text: нерв зуба ноет ночью это от кариеса?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_005
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6506
+      nearest_hard_id: hard_011
+      max_sim_to_seed: 0.6756
+  - id: hard_121
+    text: У меня темнеет дырка в переднем зубе, почему так?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_006
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7606
+      nearest_hard_id: hard_010
+      max_sim_to_seed: 0.7316
+  - id: hard_122
+    text: Жевательный зуб сильно болит, больно жевать, что делать?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_007
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7204
+      nearest_hard_id: hard_086
+      max_sim_to_seed: 0.7336
+  - id: hard_123
+    text: Десна отекла после полоскания, это нормально?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_008
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7013
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.6282
+  - id: hard_124
+    text: Десна кровит, когда ем яблоко, это нормально?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_009
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.596
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.6183
+  - id: hard_125
+    text: У меня второй день флюс на десне, болит очень сильно.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_010
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7636
+      nearest_hard_id: switch_003
+      max_sim_to_seed: 0.6495
+  - id: hard_126
+    text: после съема камня зуб чувствительный стал почему
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_011
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6607
+      nearest_hard_id: hard_023
+      max_sim_to_seed: 0.6791
+  - id: hard_127
+    text: У ребенка зуб ноет после сладкого, это может быть кариес?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_012
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.683
+      nearest_hard_id: hard_011
+      max_sim_to_seed: 0.6357
+  - id: hard_128
+    text: После пломбы на жевательном зубе болит щека изнутри.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_013
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7283
+      nearest_hard_id: hard_103
+      max_sim_to_seed: 0.6505
+  - id: hard_129
+    text: У меня камень на зубах, десна чешется и кровит.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_014
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6679
+      nearest_hard_id: switch_003
+      max_sim_to_seed: 0.7687
+  - id: hard_130
+    text: зуб треснул вчера от ореха сильно болит
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_015
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6541
+      nearest_hard_id: hard_086
+      max_sim_to_seed: 0.6893
+  - id: hard_131
+    text: десна гноится под зубом это пройдет?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_016
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.64
+      nearest_hard_id: hard_063
+      max_sim_to_seed: 0.648
+  - id: hard_132
+    text: После удаления зуба десна болит очень сильно.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_017
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7362
+      nearest_hard_id: switch_003
+      max_sim_to_seed: 0.7354
+  - id: hard_133
+    text: Передний зуб шатается после удара на футболе, что делать?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_018
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7467
+      nearest_hard_id: hard_061j
+      max_sim_to_seed: 0.8075
+  - id: hard_134
+    text: Под старой пломбой ноет зуб, что это может быть?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_019
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7719
+      nearest_hard_id: hard_011
+      max_sim_to_seed: 0.6754
+  - id: hard_135
+    text: После чистки десна каждый раз кровит, это нормально?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_020
+      scenario: anamnesis_faq_confusion
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7757
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.7303
+
+  # =========================================================================
+  # 11. POST-TREATMENT COMPLICATIONS — audited candidate pool
+  # =========================================================================
+  - id: hard_136
+    text: после пломбы зуб ноет сильно и щека опухла
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_021
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7802
+      nearest_hard_id: hard_011
+      max_sim_to_seed: 0.6686
+  - id: hard_137
+    text: Удалили зуб вчера, сегодня температура 38 и гной из десны.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_022
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7921
+      nearest_hard_id: hard_061c
+      max_sim_to_seed: 0.6775
+  - id: hard_138
+    text: После чистки каналов лицо распухло и болит очень сильно.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_023
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.722
+      nearest_hard_id: hard_022
+      max_sim_to_seed: 0.7238
+  - id: hard_139
+    text: После удаления зуба мудрости появился флюс, поднялась температура.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_024
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6473
+      nearest_hard_id: hard_101
+      max_sim_to_seed: 0.6377
+  - id: hard_140
+    text: Пломбу поставили, ночью зуб разболелся и поднялась температура.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_025
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6559
+      nearest_hard_id: hard_062
+      max_sim_to_seed: 0.677
+  - id: hard_141
+    text: После лечения корня щека раздулась, температура 39.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_026
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6297
+      nearest_hard_id: hard_059
+      max_sim_to_seed: 0.6141
+  - id: hard_142
+    text: Ребенку поставили пломбу, десна опухла, плачет от боли.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_027
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6902
+      nearest_hard_id: hard_061b
+      max_sim_to_seed: 0.6573
+  - id: hard_143
+    text: после импланта боль усилилась и отек на пол-лица
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_028
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.703
+      nearest_hard_id: hard_061e
+      max_sim_to_seed: 0.6437
+  - id: hard_144
+    text: После чистки зубов все болит и температура 38.2.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_029
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6865
+      nearest_hard_id: hard_062
+      max_sim_to_seed: 0.7137
+  - id: hard_145
+    text: После протезирования десна воспалилась горит внутри
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_030
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6845
+      nearest_hard_id: hard_059
+      max_sim_to_seed: 0.6349
+  - id: hard_146
+    text: установили коронку а щека припухла и ноет сильно
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_031
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6896
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.6469
+  - id: hard_147
+    text: Удаляли нерв вчера, сегодня флюс и температура 37.8.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_032
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6309
+      nearest_hard_id: hard_061c
+      max_sim_to_seed: 0.716
+  - id: hard_148
+    text: После пломбирования болит без остановки, отек растет.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_033
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6727
+      nearest_hard_id: hard_103
+      max_sim_to_seed: 0.6112
+  - id: hard_149
+    text: После лечения дома щека вздулась и поднялась температура.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_034
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6627
+      nearest_hard_id: hard_013
+      max_sim_to_seed: 0.6981
+  - id: hard_150
+    text: после удаления опухоль на десне и 38.5 не сплю
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_035
+      scenario: post_treatment_complications
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6469
+      nearest_hard_id: hard_061g
+      max_sim_to_seed: 0.6678
+
+  # =========================================================================
+  # 12. MIXED PAIN + PRICE/BOOKING — audited candidate pool
+  # =========================================================================
+  - id: hard_151
+    text: Зуб сильно ноет, сколько стоит пломба?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_036
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7457
+      nearest_hard_id: hard_011
+      max_sim_to_seed: 0.6644
+  - id: hard_152
+    text: Щека опухла, когда можно записаться?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_037
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7485
+      nearest_hard_id: hard_013
+      max_sim_to_seed: 0.6885
+  - id: hard_153
+    text: дырка в зубе большая, цена лечения?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_038
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7564
+      nearest_hard_id: hard_001
+      max_sim_to_seed: 0.6936
+  - id: hard_154
+    text: Нерв оголился и болит, можно записаться на завтра?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_039
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7102
+      nearest_hard_id: hard_099
+      max_sim_to_seed: 0.6471
+  - id: hard_155
+    text: хочу имплант но корень сломан
+    route_domain: anamnesis
+    subtype: treatment_interest
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_040
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7322
+      nearest_hard_id: hard_026
+      max_sim_to_seed: 0.7538
+  - id: hard_156
+    text: Камень на зубах и десна чешется, сколько стоит чистка?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_041
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6677
+      nearest_hard_id: hard_088
+      max_sim_to_seed: 0.7288
+  - id: hard_157
+    text: жевательный зуб трещит, можно ли срочно к врачу и цена?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_042
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6962
+      nearest_hard_id: hard_007
+      max_sim_to_seed: 0.637
+  - id: hard_158
+    text: Пломба вчера выпала, запишите меня на прием.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_043
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.8245
+      nearest_hard_id: hard_003
+      max_sim_to_seed: 0.7523
+  - id: hard_159
+    text: Передний зуб шатается, сколько стоит фиксация?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_044
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6812
+      nearest_hard_id: hard_061j
+      max_sim_to_seed: 0.764
+  - id: hard_160
+    text: хочу виниры но десна болит
+    route_domain: anamnesis
+    subtype: treatment_interest
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_045
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7881
+      nearest_hard_id: switch_013
+      max_sim_to_seed: 0.7638
+  - id: hard_161
+    text: Зуб кровит, когда можно прийти и сколько это стоит?
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_046
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6183
+      nearest_hard_id: hard_004
+      max_sim_to_seed: 0.5758
+  - id: hard_162
+    text: Флюс раздуло, сколько стоит прием у стоматолога?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_047
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6666
+      nearest_hard_id: hard_001
+      max_sim_to_seed: 0.6762
+  - id: hard_163
+    text: Болит челюсть, запишите меня, пожалуйста.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_048
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7543
+      nearest_hard_id: hard_099
+      max_sim_to_seed: 0.6924
+  - id: hard_164
+    text: отбеливание надо но зуб ноет
+    route_domain: anamnesis
+    subtype: treatment_interest
+    urgency: normal
+    source: grok_audited
+    provenance:
+      candidate_id: cand_049
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7875
+      nearest_hard_id: hard_023
+      max_sim_to_seed: 0.7429
+  - id: hard_165
+    text: Дупло в зубе, сколько будет стоить пломба и когда можно прийти?
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_050
+      scenario: mixed_pain_price_booking
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6943
+      nearest_hard_id: hard_001
+      max_sim_to_seed: 0.7407
+
+  # =========================================================================
+  # 13. VAGUE SHORT URGENT — audited candidate pool
+  # =========================================================================
+  - id: hard_166
+    text: Флюс растет.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_052
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.4821
+      nearest_hard_id: switch_014
+      max_sim_to_seed: 0.4761
+  - id: hard_167
+    text: Десна сильно кровит.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_053
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7361
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.7904
+  - id: hard_168
+    text: Нерв оголился.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_055
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7461
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.8692
+  - id: hard_169
+    text: Из десны потек гной.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_056
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7379
+      nearest_hard_id: hard_061a
+      max_sim_to_seed: 0.6645
+  - id: hard_170
+    text: рот не открыть
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_057
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.5994
+      nearest_hard_id: hard_053
+      max_sim_to_seed: 0.6376
+  - id: hard_171
+    text: Зуб шатается.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_058
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7407
+      nearest_hard_id: hard_054
+      max_sim_to_seed: 0.7476
+  - id: hard_172
+    text: Опухоль на десне выросла.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_061
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.8089
+      nearest_hard_id: hard_047
+      max_sim_to_seed: 0.8202
+  - id: hard_173
+    text: Зуб сломался.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_062
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6701
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.6912
+  - id: hard_174
+    text: Зуб ноет жутко.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_064
+      scenario: vague_short_urgent
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6693
+      nearest_hard_id: hard_099
+      max_sim_to_seed: 0.7391
+
+  # =========================================================================
+  # 14. PEDIATRIC TRAUMA — audited candidate pool
+  # =========================================================================
+  - id: hard_175
+    text: сын 4 года упал с качелей зуб шатается сильно
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_065
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6996
+      nearest_hard_id: hard_036
+      max_sim_to_seed: 0.6654
+  - id: hard_176
+    text: дочке 6 лет стукнулась о стол щека опухла и десна кровит
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_066
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7767
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.8114
+  - id: hard_177
+    text: Малышу 2 года, налетел на угол, кровь идет изо рта.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_067
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6517
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.6432
+  - id: hard_178
+    text: ребёнок 5 лет с самоката зуб треснул болит жевать
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_068
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.706
+      nearest_hard_id: hard_058
+      max_sim_to_seed: 0.66
+  - id: hard_179
+    text: внуку 3 года упал во дворе передний зуб шатается
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_069
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6742
+      nearest_hard_id: hard_093
+      max_sim_to_seed: 0.7089
+  - id: hard_180
+    text: девочка 7 лет ударилась челюстью десна разорвана срочно
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_070
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7464
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.7702
+  - id: hard_181
+    text: Пацану 8 лет в драке сломали зуб, челюсть ноет.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_071
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6329
+      nearest_hard_id: hard_061j
+      max_sim_to_seed: 0.555
+  - id: hard_182
+    text: Ребенок 4 года с горки выбил зуб, помогите.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_072
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7053
+      nearest_hard_id: hard_061j
+      max_sim_to_seed: 0.6872
+  - id: hard_183
+    text: сынок 5 лет бегал налетел на дверь губа разбита зуб болит
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_073
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.72
+      nearest_hard_id: hard_058
+      max_sim_to_seed: 0.6865
+  - id: hard_184
+    text: Мальчику 3 года ударили игрушкой по зубам, зуб шатается, плачет.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_074
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7066
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.697
+  - id: hard_185
+    text: Дочке 6 лет, упала с велосипеда, в челюсти хруст.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_075
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7214
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.7383
+  - id: hard_186
+    text: ребят ребенок 9 лет на турнике зуб сломал десна в крови
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_076
+      scenario: pediatric_trauma
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.61
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.6307
+
+  # =========================================================================
+  # 15. ALLERGY / BLEEDING / SWELLING — audited candidate pool
+  # =========================================================================
+  - id: hard_187
+    text: После укола опухли губы, не проходит.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_077
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6824
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.6445
+  - id: hard_188
+    text: После вчерашнего лечения сильно кровит десна.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_078
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6924
+      nearest_hard_id: hard_061g
+      max_sim_to_seed: 0.6115
+  - id: hard_189
+    text: отек на щеке огромный после лечения
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_079
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7149
+      nearest_hard_id: switch_003
+      max_sim_to_seed: 0.7241
+  - id: hard_190
+    text: Помогите, аллергия на анестезию, сыпь по лицу.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_080
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6495
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.6426
+  - id: hard_191
+    text: Кровь из лунки хлещет третий час
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_081
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.613
+      nearest_hard_id: hard_052
+      max_sim_to_seed: 0.5805
+  - id: hard_192
+    text: губа распухла как колбаса от укола
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_082
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.7204
+      nearest_hard_id: hard_056
+      max_sim_to_seed: 0.5412
+  - id: hard_193
+    text: Аллергия на обезболивающее, зудит во рту.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_083
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7493
+      nearest_hard_id: hard_061g
+      max_sim_to_seed: 0.6858
+  - id: hard_194
+    text: десна кровит не перестает после чистки
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_084
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.5957
+      nearest_hard_id: hard_052
+      max_sim_to_seed: 0.6613
+  - id: hard_195
+    text: Щека опухла до глаза срочно
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_audited
+    provenance:
+      candidate_id: cand_085
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.8117
+      nearest_hard_id: hard_105
+      max_sim_to_seed: 0.7331
+  - id: hard_196
+    text: После анестезии аллергия, лицо покраснело.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_086
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7521
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.7576
+  - id: hard_197
+    text: Кровотечение после удаления не останавливается.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_087
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.8156
+      nearest_hard_id: hard_052
+      max_sim_to_seed: 0.6072
+  - id: hard_198
+    text: Сильный отек на пол-лица.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_088
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7821
+      nearest_hard_id: hard_048
+      max_sim_to_seed: 0.8532
+  - id: hard_199
+    text: Аллергия на препарат, во рту ужасно чешется.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_089
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6398
+      nearest_hard_id: hard_049
+      max_sim_to_seed: 0.5723
+  - id: hard_200
+    text: Кровь из десны течет уже несколько часов.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_090
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.5863
+      nearest_hard_id: hard_052
+      max_sim_to_seed: 0.6202
+  - id: hard_201
+    text: У ребенка после укола в десну вырос отек.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_091
+      scenario: allergy_bleeding_swelling
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7484
+      nearest_hard_id: hard_056
+      max_sim_to_seed: 0.6514
+
+  # =========================================================================
+  # 16. SWITCH ADDITIONAL — audited candidate pool
+  # =========================================================================
+  - id: switch_031
+    text: Блин, зуб ноет, жевать не могу.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    active_domain: faq
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_092
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6603
+      nearest_hard_id: hard_061b
+      max_sim_to_seed: 0.6771
+  - id: switch_032
+    text: Сколько стоит поставить пломбу?
+    route_domain: faq
+    subtype: price
+    urgency: normal
+    active_domain: anamnesis
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_093
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7099
+      nearest_hard_id: hard_027
+      max_sim_to_seed: 0.7189
+  - id: switch_033
+    text: перенести на вечер можно
+    route_domain: booking
+    subtype: reschedule
+    urgency: normal
+    active_domain: anamnesis
+    source: grok_audited
+    provenance:
+      candidate_id: cand_094
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: accept
+      max_sim_to_hard: 0.6338
+      nearest_hard_id: switch_001
+      max_sim_to_seed: 0.6917
+  - id: switch_034
+    text: Флюс на щеке вырос.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    active_domain: booking
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_095
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7062
+      nearest_hard_id: hard_097
+      max_sim_to_seed: 0.874
+  - id: switch_035
+    text: Какой врач у вас занимается имплантами?
+    route_domain: faq
+    subtype: doctor_info
+    urgency: normal
+    active_domain: booking
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_096
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7258
+      nearest_hard_id: switch_019
+      max_sim_to_seed: 0.7958
+  - id: switch_036
+    text: Запишите меня на утро, пожалуйста.
+    route_domain: booking
+    subtype: new_appointment
+    urgency: normal
+    active_domain: faq
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_097
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6384
+      nearest_hard_id: hard_092
+      max_sim_to_seed: 0.7657
+  - id: switch_037
+    text: На зубах появился камень, десна чешется.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: normal
+    active_domain: faq
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_098
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6775
+      nearest_hard_id: switch_021
+      max_sim_to_seed: 0.7437
+  - id: switch_038
+    text: Отменяю завтрашнюю запись.
+    route_domain: booking
+    subtype: cancel
+    urgency: normal
+    active_domain: anamnesis
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_099
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6454
+      nearest_hard_id: hard_048
+      max_sim_to_seed: 0.7496
+  - id: switch_039
+    text: Нерв оголился, боль адская.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    active_domain: booking
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_100
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7889
+      nearest_hard_id: hard_094
+      max_sim_to_seed: 0.8551
+  - id: switch_040
+    text: Вы вечером работаете или нет?
+    route_domain: faq
+    subtype: clinic_info
+    urgency: normal
+    active_domain: anamnesis
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_101
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6696
+      nearest_hard_id: hard_060
+      max_sim_to_seed: 0.6021
+  - id: switch_041
+    text: Дайте запись на среду, пожалуйста.
+    route_domain: booking
+    subtype: new_appointment
+    urgency: normal
+    active_domain: faq
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_102
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6818
+      nearest_hard_id: switch_011
+      max_sim_to_seed: 0.7196
+  - id: switch_042
+    text: Мальчику 7 лет, треснул зуб.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: urgent
+    active_domain: booking
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_103
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7753
+      nearest_hard_id: switch_021
+      max_sim_to_seed: 0.8354
+  - id: switch_043
+    text: Сколько стоит отбеливание?
+    route_domain: faq
+    subtype: price
+    urgency: normal
+    active_domain: anamnesis
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_104
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.7096
+      nearest_hard_id: hard_051
+      max_sim_to_seed: 0.7196
+  - id: switch_044
+    text: Перенесите запись на понедельник, пожалуйста.
+    route_domain: booking
+    subtype: reschedule
+    urgency: normal
+    active_domain: faq
+    source: grok_rewritten
+    notes: операционная срочность не равна clinical urgency
+    provenance:
+      candidate_id: cand_105
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.5614
+      nearest_hard_id: hard_012
+      max_sim_to_seed: 0.6791
+  - id: switch_045
+    text: В жевательном зубе выросла дырка.
+    route_domain: anamnesis
+    subtype: complaint
+    urgency: normal
+    active_domain: booking
+    source: grok_rewritten
+    provenance:
+      candidate_id: cand_106
+      scenario: switch_additional
+      generator: x-ai/grok-4.1-fast
+      prompt_file: d1/prompts/d1_hard_case_candidates.md
+      audit_decision: rewrite
+      max_sim_to_hard: 0.6408
+      nearest_hard_id: hard_099
+      max_sim_to_seed: 0.8117
+  - id: switch_046
+    text: Кстати, сколько стоит снимок?
+    route_domain: faq
+    subtype: price
+    urgency: normal
+    active_domain: booking
+    source: manual_hard
+    notes: ручной top-up switch_test до целевого размера; booking -> faq
+  - id: switch_047
+    text: Подождите, зуб начал пульсировать и отдаёт в висок.
+    route_domain: anamnesis
+    subtype: symptom
+    urgency: urgent
+    active_domain: faq
+    source: manual_hard
+    notes: ручной top-up switch_test до целевого размера; faq -> anamnesis
+  - id: switch_048
+    text: Тогда запишите меня к хирургу на ближайшее время.
+    route_domain: booking
+    subtype: new_appointment
+    explicit_booking: true
+    urgency: normal
+    specialization_hint: хирург
+    active_domain: anamnesis
+    source: manual_hard
+    notes: ручной top-up switch_test до целевого размера; anamnesis -> booking
+  - id: switch_049
+    text: А врач Конновская принимает детей?
+    route_domain: faq
+    subtype: doctor_info
+    urgency: normal
+    active_domain: booking
+    source: manual_hard
+    notes: ручной top-up switch_test до целевого размера; booking -> faq
+  - id: switch_050
+    text: Нет, отмените запись, я пока подумаю.
+    route_domain: booking
+    subtype: cancel
+    urgency: normal
+    active_domain: faq
+    source: manual_hard
+    notes: ручной top-up switch_test до целевого размера; faq -> booking

@@ -1,0 +1,853 @@
+- sample_id: q_0105
+  query: зуб ноет надо срочно записаться как позвонить в клинику номер дайте переживаю
+    что поздно будет
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Чтобы срочно записаться, вы можете позвонить в семейную
+    клинику «Клевер» по телефонам: +7 (842) 231-45-55 или +7 (927) 831-45-55. Клиника
+    находится по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Мы работаем ежедневно
+    с 08:00 до 20:00. Понимаем ваше беспокойство, пожалуйста, не откладывайте обращение
+    — позвоните нам как можно скорее.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0010; style: indirect'
+  seed_family_id: q_0010
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0111
+  query: Наркоз можно?
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Да, у нас в клинике доступны варианты седации: лечение во сне
+    (dental sleep), а также седация закисью азота и кислородом — это помогает снять
+    страх перед лечением у детей и взрослых.
+
+
+    Для детей доступны услуги седации закисью азота при лечении и при удалении зубов,
+    а также седация при лечении и удалении во сне. Для взрослых также доступна седация
+    закисью азота при лечении.
+
+
+    Если потребуется, мы подскажем подходящий вариант на консультации. Приём ведём
+    ежедневно с 08:00 до 20:00 по адресу: Россия, г. Ульяновск, ул. Рябикова, 56.
+    Телефоны клиники: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0012; style: casual'
+  seed_family_id: q_0012
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0100
+  query: во скока отрываетесь
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: Здравствуйте! Семейная клиника «Клевер» работает ежедневно с 08:00
+    до 20:00.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0008; style: typo'
+  seed_family_id: q_0008
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: ежедневно с 08:00 до 20:00
+    label: график работы
+- sample_id: q_0009
+  query: Какой телефон?
+  category: clinic_info
+  subtype: phone_contact
+  answerable: true
+  expected_answer: 'Здравствуйте! Телефоны семейной клиники «Клевер»: +7 (842) 231-45-55
+    и +7 (927) 831-45-55. Если вам удобно, также можете написать нам на email: klever_dent@mail.ru.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''phones'']'
+  seed_family_id: q_0009
+  gold_chunk_ids:
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: +7 (842) 231-45-55
+    label: телефон клиники
+  - fact_type: phone
+    canonical_value: +7 (927) 831-45-55
+    label: телефон клиники
+- sample_id: q_0130
+  query: доки какие?
+  category: clinic_info
+  subtype: licenses_documents
+  answerable: true
+  expected_answer: 'Здравствуйте! Для пациентов у нас доступны следующие документы:
+    договор на оказание стоматологических услуг, согласие на обработку персональных
+    данных, ИДС — информированное добровольное согласие, ИДС РОДИТЕЛЬ — информированное
+    добровольное согласие, ИС на проведение анестезиологического пособия, положение
+    о гарантийном сроке и сроке службы в ООО «Клевер», анкета здоровья (детская) и
+    анкета здоровья (взрослые).
+
+
+    С документами можно ознакомиться на сайте: https://dentklever.ru/documents/.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0022; style: casual'
+  seed_family_id: q_0022
+  gold_chunk_ids:
+  - - clinic_licenses
+    - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: лицензия
+    label: наличие лицензии
+  - fact_type: text
+    canonical_value: договор
+    label: наличие договора
+- sample_id: q_0013
+  query: Боюсь стоматологов
+  category: clinic_info
+  subtype: sedation_options
+  answerable: true
+  expected_answer: 'Добрый день! В нашей клинике для снятия страха перед лечением
+    у детей и взрослых доступна седация: лечение во сне (dental sleep), а также седация
+    закисью азота + кислород. Если вы хотите, мы подберем для вас подходящий вариант
+    и расскажем подробнее на приеме. Также сообщаем, что прием ведется ежедневно с
+    08:00 до 20:00 по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Телефоны для
+    записи: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''sedation'']'
+  seed_family_id: q_0013
+  gold_chunk_ids:
+  - - clinic_patient_comfort_and_safety
+  gold_facts:
+  - fact_type: text
+    canonical_value: лечение во сне
+    label: седация
+  - fact_type: text
+    canonical_value: закись азота
+    label: закись азота
+- sample_id: q_0126
+  query: Моему малышу 3 годика зубик ноет первый визит переживаю примут ли таких крох
+  category: clinic_info
+  subtype: children_accepted
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, в нашей семейной клинике «Клевер» принимают
+    детей с первого зуба, поэтому вашего малыша 3 лет мы тоже обязательно примем.
+    В клинике работают 3 детских стоматолога. Первый приём (осмотр, консультация)
+    врача-стоматолога детского стоит от 500 ₽, также есть адаптационный приём детского
+    стоматолога на 60 минут — от 1 500 ₽. Если у ребёнка ноет зуб, у нас ведут приём
+    детские стоматологи: Конновская Алена Евгеньевна, Емелина Татьяна Евгеньевна и
+    Молгачева Оксана Александровна. Мы находимся по адресу: Россия, г. Ульяновск,
+    ул. Рябикова, 56. Телефоны клиники: +7 (842) 231-45-55, +7 (927) 831-45-55. Режим
+    работы: ежедневно с 08:00 до 20:00.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0020; style: indirect'
+  seed_family_id: q_0020
+  gold_chunk_ids:
+  - - clinic_children_info
+  gold_facts:
+  - fact_type: text
+    canonical_value: принимают детей
+    label: приём детей
+  - fact_type: text
+    canonical_value: с первого зуба
+    label: минимальный возраст
+- sample_id: q_0036
+  query: Кто у вас ортодонт?
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ортодонты: Ермаков Александр Владимирович
+    — врач-ортодонт, стаж 7 лет; Живора Инна Григорьевна — врач-ортодонт, стаж 4 лет;
+    Окружнова Виктория Валерьевна — врач-ортодонт, стаж 4 лет. Если хотите, я также
+    могу помочь с записью к специалисту.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0036
+  gold_chunk_ids:
+  - - doctor_1
+    - doctor_10
+    - doctor_18
+  gold_facts:
+  - fact_type: text
+    canonical_value: Ортодонтия
+    label: специализация
+  - fact_type: fio
+    canonical_value: Ермаков
+    label: 'врач: Ермаков Александр Владимирович'
+  - fact_type: fio
+    canonical_value: Живора
+    label: 'врач: Живора Инна Григорьевна'
+  - fact_type: fio
+    canonical_value: Окружнова
+    label: 'врач: Окружнова Виктория Валерьевна'
+- sample_id: q_0039
+  query: Список детских стоматологов
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике ведут прием детские стоматологи:
+
+
+    1. Молгачева Оксана Александровна — врач-детский стоматолог, стаж 23 года.
+
+    2. Емелина Татьяна Евгеньевна — врач-детский стоматолог, стаж 6 лет.
+
+    3. Конновская Алена Евгеньевна — врач-детский стоматолог, стаж 3 года.
+
+
+    Детский прием доступен с первого зуба.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0039
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+  - fact_type: fio
+    canonical_value: Конновская
+    label: 'врач: Конновская Алена Евгеньевна'
+  - fact_type: fio
+    canonical_value: Емелина
+    label: 'врач: Емелина Татьяна Евгеньевна'
+  - fact_type: fio
+    canonical_value: Молгачева
+    label: 'врач: Молгачева Оксана Александровна'
+- sample_id: q_0145
+  query: Мне Абраамяна посоветовали он в вашей клинике работает я боюсь что уже уволился
+    подскажите срочно
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Да, конечно, подскажем. В нашей клинике работает врач-терапевт
+    Абраамян Андела Корюновна, стаж 17 лет. Специализация — терапевтическая стоматология.
+    Если вам нужно срочно записаться, вы можете связаться с нами по телефонам: +7
+    (842) 231-45-55 или +7 (927) 831-45-55. Мы работаем ежедневно с 08:00 до 20:00.'
+  expected_doctor: Абраамян Андела Корюновна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0027; style: indirect'
+  seed_family_id: q_0027
+  gold_chunk_ids:
+  - - doctor_6
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Абраамян Андела Корюновна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Терапевтическая стоматология
+    label: специализация
+- sample_id: q_0158
+  query: стаж филькина скока
+  category: doctor_info
+  subtype: experience_query
+  answerable: true
+  expected_answer: Филькин Вадим Сергеевич — врач-хирург (хирургическая стоматология),
+    стаж 20 лет.
+  expected_doctor: Филькин Вадим Сергеевич
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0035; style: typo'
+  seed_family_id: q_0035
+  gold_chunk_ids:
+  - - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Филькин Вадим Сергеевич
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Хирургическая стоматология
+    label: специализация
+  - fact_type: text
+    canonical_value: '20'
+    label: стаж (лет)
+- sample_id: q_0137
+  query: Слышал про Молгачеву она у вас принимает мне срочно зуб ноет уже неделю боюсь
+    осложнений
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, в нашей клинике принимает Молгачева Оксана Александровна
+    — врач-детский стоматолог, стаж 23 года. Она занимается лечением кариеса, пульпита,
+    налёта на зубах, художественной реставрацией, периодонтитом и сколом зуба. Если
+    у ребёнка ноет зуб, также подходят жалобы: боль от горячего/холодного/при жевании,
+    откололся зуб или пломба, появились чёрные дырочки, налёт на зубах, крошится зуб,
+    шишка возле зуба, лёгкий отёк десны возле зуба, сломан передний зуб, ноющая боль
+    в зубе. Для диагностики у неё используется прицельный снимок.
+
+
+    Если вам нужна срочная помощь, вы можете записаться на приём в клинику по адресу:
+    Россия, г. Ульяновск, ул. Рябикова, 56. Мы работаем ежедневно с 08:00 до 20:00.
+    Телефоны для записи: +7 (842) 231-45-55, +7 (927) 831-45-55.'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0026; style: indirect'
+  seed_family_id: q_0026
+  gold_chunk_ids:
+  - - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: ФИО врача
+  - fact_type: text
+    canonical_value: Детская стоматология
+    label: специализация
+- sample_id: q_0228
+  query: Малышу зубы проверить надо срочно первый раз сколько это будет стоить у вас
+    боюсь дорого
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Подскажем: у нас есть прием детского стоматолога
+    с первого зуба, клиника принимает детей. Первичный прием (осмотр, консультация)
+    врача-стоматолога детского — от 500 ₽. Также доступен адаптационный прием детского
+    стоматолога на 60 минут — от 1 500 ₽. Если нужно, можем записать малыша на ближайшее
+    время.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0074; style: typo'
+  seed_family_id: q_0074
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: price
+    canonical_value: '500'
+    label: первичный приём детского стоматолога
+  - fact_type: text
+    canonical_value: детский стоматолог
+    label: специализация
+- sample_id: q_0225
+  query: виниры скока
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! Стоимость винира в нашей клинике — от 17 500 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0069; style: casual'
+  seed_family_id: q_0069
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '17500'
+    label: 'Винир: от 17 500 ₽'
+- sample_id: q_0068
+  query: Стоимость виниров
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике «Клевер» стоимость винира — от 17
+    500 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0068
+  gold_chunk_ids:
+  - - price_prosthetics_p1
+    - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: '17500'
+    label: 'Винир: от 17 500 ₽'
+- sample_id: q_0073
+  query: Цена осмотра ребёнка
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: Здравствуйте! В нашей клинике «Клевер» прием (осмотр, консультация)
+    врача-стоматолога детского первичный стоит от 500 ₽. Также доступен адаптационный
+    прием у детского стоматолога на 60 минут — от 1 500 ₽, а повторный прием врача-стоматолога
+    детского — от 300 ₽.
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0073
+  gold_chunk_ids:
+  - - price_primary_appointment_consultations
+    - price_children_therapy
+  gold_facts:
+  - fact_type: price
+    canonical_value: '500'
+    label: первичный приём детского стоматолога
+  - fact_type: text
+    canonical_value: детский
+    label: специализация
+- sample_id: q_0066
+  query: Цена удаления зуба мудрости
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: 'Здравствуйте! Стоимость удаления зуба мудрости в нашей клинике
+    зависит от сложности операции: удаление 8-го зуба (простая операция) — от 4 900
+    ₽, удаление 8-го зуба (сложная операция) — от 6 900 ₽. Также при необходимости
+    может потребоваться анестезия: местная анестезия (1 картридж) — от 590 ₽, проводниковая
+    анестезия — от 490 ₽, аппликационная анестезия — от 220 ₽, аэрозольная анестезия
+    — от 290 ₽. Приём ведётся по адресу: Россия, г. Ульяновск, ул. Рябикова, 56. Мы
+    работаем ежедневно с 08:00 до 20:00. Для записи вы можете позвонить по телефонам:
+    +7 (842) 231-45-55 или +7 (927) 831-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: 'seed example; fields: [''price'']'
+  seed_family_id: q_0066
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: '6000'
+    label: 'Удаление постоянного зуба: от 6 000 ₽'
+  - fact_type: price
+    canonical_value: '4900'
+    label: 'Удаление 8-го зуба (простая операция): от 4 900 ₽'
+  - fact_type: price
+    canonical_value: '6900'
+    label: 'Удаление 8-го зуба (сложная операция): от 6 900 ₽'
+  - fact_type: price
+    canonical_value: '5000'
+    label: 'Удаление импланта, трансплантата: от 5 000 ₽'
+- sample_id: q_0202
+  query: какой терапефт с наибольшим стажем
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Среди врачей-терапевтов клиники «Клевер» наибольший
+    стаж у Васильевой Елены Владимировны — врач-терапевт (Терапевтическая стоматология),
+    стаж 39 лет.
+
+
+    Также в штате есть другие терапевты: Абраамян Андела Корюновна — стаж 17 лет,
+    Сибгатулина Екатерина Михайловна — стаж 11 лет, Сорокина Регина Вячеславовна —
+    стаж 7 лет, Морозова Наталья Александровна — стаж 2 года, Золин Павел Евгеньевич
+    — стаж 1 год.'
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0059; style: typo'
+  seed_family_id: q_0059
+  gold_chunk_ids:
+  - - doctor_6
+    - doctor_8
+    - doctor_12
+    - doctor_16
+    - doctor_19
+    - doctor_20
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Васильева Елена Владимировна
+    label: терапевт с наибольшим стажем
+  - fact_type: text
+    canonical_value: '39'
+    label: стаж (лет)
+- sample_id: q_0194
+  query: ребенку 4 года зубы лечить надо нужен детский стоматолог с большим опытом
+    понад 10 лет чтоб не боялся есть ли
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Да, у нас ведут приём детские стоматологи, и клиника
+    принимает детей с первого зуба.
+
+
+    Из детских стоматологов со стажем более 10 лет у нас есть:
+
+    - Молгачева Оксана Александровна — врач-детский стоматолог, стаж 23 года.
+
+
+    Также в клинике работают детские стоматологи:
+
+    - Конновская Алена Евгеньевна — стаж 3 года;
+
+    - Емелина Татьяна Евгеньевна — стаж 6 лет.
+
+
+    Для детей доступны услуги лечения зубов, в том числе лечение кариеса молочного
+    зуба с постановкой пломбы, лечение пульпита и периодонтита молочных зубов, а также
+    профессиональная гигиена, фторирование и герметизация фиссур.
+
+
+    Если ребёнку нужно лечение без страха, у нас также есть седация: закись азота
+    + кислород для снятия страха перед лечением у детей и взрослых, а также лечение
+    во сне (dental sleep).'
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0058; style: indirect'
+  seed_family_id: q_0058
+  gold_chunk_ids:
+  - - doctor_3
+    - doctor_9
+    - doctor_15
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Молгачева Оксана Александровна
+    label: детский стоматолог
+  - fact_type: text
+    canonical_value: '23'
+    label: стаж (лет)
+- sample_id: q_0204
+  query: Скажите кто хирург с большим стажем у вас я волнуюсь
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! В нашей клинике хирургическая стоматология представлена
+    несколькими врачами, и среди хирургов с наибольшим стажем у нас:
+
+
+    - Заволжский Александр Михайлович — стаж 41 год
+
+    - Лисин Валерий Константинович — стаж 39 лет
+
+    - Батылин Александр Александрович — стаж 17 лет
+
+    - Сотникова Анна Юрьевна — стаж 14 лет
+
+    - Никифоров Дмитрий Олегович — стаж 10 лет
+
+    - Филькин Вадим Сергеевич — стаж 20 лет
+
+    - Демин Евгений Дмитриевич — стаж 3 года
+
+    - Мигачёв Алексей Сергеевич — стаж 4 года
+
+
+    Если хотите, я также могу подсказать, кто из хирургов принимает по вашему запросу
+    или по конкретной проблеме.'
+  expected_doctor: Заволжский Александр Михайлович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0057; style: indirect'
+  seed_family_id: q_0057
+  gold_chunk_ids:
+  - - doctor_2
+    - doctor_4
+    - doctor_5
+    - doctor_11
+    - doctor_14
+    - doctor_17
+    - doctor_21
+    - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Заволжский Александр Михайлович
+    label: самый опытный хирург
+  - fact_type: text
+    canonical_value: '41'
+    label: стаж (лет)
+- sample_id: q_0057
+  query: Кто из хирургов самый опытный?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'Здравствуйте! Среди хирургов клиники «Клевер» самым опытным врачом
+    является Заволжский Александр Михайлович — врач-хирург (Хирургическая стоматология),
+    стаж 41 год.
+
+
+    Также в штате клиники работают другие хирурги: Лисин Валерий Константинович —
+    стаж 39 лет, Батылин Александр Александрович — 17 лет, Сотникова Анна Юрьевна
+    — 14 лет, Никифоров Дмитрий Олегович — 10 лет, Филькин Вадим Сергеевич — 20 лет,
+    Демин Евгений Дмитриевич — 3 года, Мигачёв Алексей Сергеевич — 4 года.
+
+
+    Если хотите, я могу также подсказать, к кому из хирургов лучше обратиться по вашей
+    проблеме.'
+  expected_doctor: Заволжский Александр Михайлович
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0057
+  gold_chunk_ids:
+  - - doctor_2
+    - doctor_4
+    - doctor_5
+    - doctor_11
+    - doctor_14
+    - doctor_17
+    - doctor_21
+    - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Заволжский Александр Михайлович
+    label: самый опытный хирург
+  - fact_type: text
+    canonical_value: '41'
+    label: стаж (лет)
+- sample_id: q_0059
+  query: Какой терапевт с наибольшим стажем?
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: 'С радостью подскажу: среди врачей-терапевтов с наибольшим стажем
+    в нашей клинике — Васильева Елена Владимировна, врач-терапевт (Терапевтическая
+    стоматология), стаж 39 лет.
+
+
+    Также в штате есть другие терапевты: Абраамян Андела Корюновна — стаж 17 лет,
+    Сибгатулина Екатерина Михайловна — стаж 11 лет, Сорокина Регина Вячеславовна —
+    стаж 7 лет, Морозова Наталья Александровна — стаж 2 года, Золин Павел Евгеньевич
+    — стаж 1 год.'
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_0059
+  gold_chunk_ids:
+  - - doctor_6
+    - doctor_8
+    - doctor_12
+    - doctor_16
+    - doctor_19
+    - doctor_20
+  gold_facts:
+  - fact_type: fio
+    canonical_value: Васильева Елена Владимировна
+    label: терапевт с наибольшим стажем
+  - fact_type: text
+    canonical_value: '39'
+    label: стаж (лет)
+- sample_id: q_0078
+  query: Есть акции?
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните:
+    +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0078
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0246
+  query: иванов рабтает?
+  category: out_of_scope
+  subtype: unknown_entity
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните:
+    +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0082; style: typo'
+  seed_family_id: q_0082
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0086
+  query: А вы зрение проверяете?
+  category: out_of_scope
+  subtype: wrong_domain
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните:
+    +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_0086
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_0239
+  query: нужны деньги сэкономить на зубах есть ли акции сейчас скидки какие то переживаю
+    дорого будет
+  category: out_of_scope
+  subtype: promotions
+  answerable: false
+  expected_answer: 'К сожалению, я не могу ответить на этот вопрос. Пожалуйста, позвоните:
+    +7 (842) 231-45-55.'
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: 'llm_variation of seed_0079; style: indirect'
+  seed_family_id: q_0079
+  gold_chunk_ids: []
+  gold_facts: []
+- sample_id: q_ac_02
+  query: Что нельзя делать после удаления зуба?
+  category: aftercare
+  subtype: post_surgery
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_02
+  gold_chunk_ids:
+  - - aftercare_post_extraction
+  gold_facts:
+  - fact_type: text
+    canonical_value: не полоскать
+    label: запрет полоскания раны
+  - fact_type: text
+    canonical_value: горячая пища
+    label: запрет горячей/жёсткой пищи
+  - fact_type: text
+    canonical_value: физические нагрузки
+    label: запрет физических нагрузок
+- sample_id: q_ac_06
+  query: Как ухаживать за коронками?
+  category: aftercare
+  subtype: post_prosthetics
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: seed example
+  seed_family_id: q_ac_06
+  gold_chunk_ids:
+  - - aftercare_post_prosthetics_fixed
+  gold_facts:
+  - fact_type: text
+    canonical_value: два раза в день
+    label: частота чистки зубов
+  - fact_type: text
+    canonical_value: флосс
+    label: средство межзубной гигиены
+  - fact_type: text
+    canonical_value: твёрдые продукты
+    label: запрет жевания твёрдого
+- sample_id: q_ac_16
+  query: Сильный отёк после синус-лифтинга, когда пройдёт?
+  category: aftercare
+  subtype: alarm_symptoms
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_16
+  gold_chunk_ids:
+  - - aftercare_post_sinus_lift
+  gold_facts:
+  - fact_type: text
+    canonical_value: нормой
+    label: отёк является нормой
+  - fact_type: text
+    canonical_value: третий день
+    label: пик отёка
+  - fact_type: text
+    canonical_value: спадать
+    label: динамика отёка
+- sample_id: q_ac_15
+  query: Температура после имплантации, это нормально?
+  category: aftercare
+  subtype: alarm_symptoms
+  answerable: true
+  expected_answer: ''
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: seed example
+  seed_family_id: q_ac_15
+  gold_chunk_ids:
+  - - aftercare_post_implantation
+  - - aftercare_post_anesthesia
+  gold_facts:
+  - fact_type: text
+    canonical_value: до 37,5
+    label: субфебрильная температура норма
+  - fact_type: text
+    canonical_value: первые сутки
+    label: продолжительность нормальной температуры

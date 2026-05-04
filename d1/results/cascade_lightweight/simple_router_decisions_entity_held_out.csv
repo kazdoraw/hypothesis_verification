@@ -1,0 +1,101 @@
+text_preview,gold,predicted,action,reason,is_rule_accept,is_complexity_defer,is_tag_policy_defer,confidence,margin,correct,primary_tag,active_tags
+Хочу элайнеры,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Нужно поставить вкладку,anamnesis,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4249,0.0005,False,unclassified,
+Интересует синус-лифтинг,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,0.9999,True,unclassified,
+Цена элайнеров?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_faq
+Демин ещё работает у вас?,faq,faq,accept,general_confident,False,False,False,0.9988,0.998,True,unclassified,
+Есть ли пародонтолог?,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+Конновская принимает?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Какая специализация у Демина?,faq,faq,accept,general_confident,False,False,False,0.9694,0.9491,True,unclassified,
+Есть врач-гнатолог?,faq,faq,accept,general_confident,False,False,False,0.925,0.8683,True,unclassified,
+Хочу записаться к Конновской,booking,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+гнатолог есть,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+гнатолог чё,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнку кривой прикус нужен гнатолог есть у вас кто с детьми работает,faq,faq,accept,general_confident,False,False,False,0.9988,0.9977,True,unclassified,
+на работе челюсть щёлкает читал нужен гнатолог такой доктор у вас имеется,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.5349,0.0977,False,unclassified,
+давно думаю про прикус гнатолог поможет у вас есть специалист такой,faq,faq,defer,sparse_dense_disagree,False,False,False,0.7418,0.5115,False,unclassified,
+мужу посоветовали гнатолога вы такого врача держите или к кому идти,faq,faq,accept,general_confident,False,False,False,0.9979,0.9964,True,unclassified,
+подскажите есть гнатолог,faq,faq,accept,general_confident,False,False,False,0.9726,0.9482,True,unclassified,
+работает гнатолог у вас,faq,faq,accept,general_confident,False,False,False,0.9429,0.8917,True,unclassified,
+нужны элайнеры,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+эллайнеры ставите,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+дочке 10 лет зубы торчат хочу элайнеры вместо брекетов чтоб незаметно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9764,0.9616,True,unclassified,
+на работе стесняюсь улыбаться зубы неровные элайнеры подойдут мне,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9959,0.9925,True,unclassified,
+начиталась про элайнеры отзывы хорошие но боюсь боли хочу попробовать,anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.3777,0.0126,False,simple_symptom,simple_symptom
+с фото в инсте все ровные зубы решил элайнеры сделать для себя,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8525,0.7071,True,unclassified,
+интересуют элайнеры,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+вкладку надо срочно,anamnesis,booking,accept,general_confident,False,False,False,0.9974,0.9951,False,unclassified,
+хочу вкладку ставить,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7847,0.581,True,unclassified,
+вкладка нужна чё,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9989,0.9983,True,unclassified,
+пломба большая треснула зуб крошится вчера орехом ударил теперь вкладку хочу,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9998,0.9997,True,simple_symptom,simple_symptom
+на жевательном зубе дырка огромная врач раньше говорил вкладку ставить а я тянул,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.8897,0.7948,False,unclassified,
+давно пломба старая держится на соплях надо нормальную вкладку поставить чтоб не,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.832,0.7259,True,simple_symptom,simple_symptom
+кусок зуба откололся от конфеты твердой теперь боюсь жевать хочу вкладку аккурат,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9993,0.9987,True,unclassified,
+подскажите про вкладку на зуб,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.999,0.9983,True,unclassified,
+интересует поставить вкладку,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9995,0.9991,True,unclassified,
+делаете синус лифтинг,anamnesis,faq,accept,general_confident,False,False,False,0.9025,0.8264,False,unclassified,
+синус лифтинг чё,anamnesis,faq,defer,low_confidence,False,False,False,0.5326,0.1847,False,unclassified,
+нужен синуслифтинг,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+врач сказал синус лифтинг перед имплантом наверху надо расскажи как проходит,anamnesis,faq,accept,general_confident,False,False,False,0.7042,0.4603,False,unclassified,
+верхняя челюсть кости мало для импланта синус лифтинг поможет или нет,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.9306,0.8654,False,unclassified,
+читал в инете про синус лифтинг для зубов сверху планирую ставить импланты,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9562,0.9134,True,unclassified,
+друг делал синуслифтинг теперь жуёт нормально у вас такая процедура есть,anamnesis,faq,accept,general_confident,False,False,False,0.9217,0.8827,False,unclassified,
+подскажите про синус лифтинг,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8703,0.7849,True,unclassified,
+синус-лифтинг интересует,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,1.0,0.9999,True,unclassified,
+хочу узнать синуслифтинг,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9507,0.9049,True,unclassified,
+скока элайнеры,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+элайнеры цена чё,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+почём элайнеры,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+сыну 14 лет кривые зубы элайнеры лучше брекетов скока комплект стоит,faq,faq,accept,general_confident,False,False,False,0.9989,0.9983,True,unclassified,
+вчера увидела рекламу элайнеров для взрослых но не знаю цену у вас какая примерн,faq,faq,accept,general_confident,False,False,False,0.9981,0.9965,True,simple_faq,simple_faq
+на работе заметили кривизну хочу элайнеры поставить посоветуйте цену за курс,faq,faq,accept,general_confident,False,False,False,0.9747,0.9643,True,simple_faq,simple_faq
+друг сделал элайнеры теперь я думаю скока у вас полный комплект выйдет деньгами,faq,faq,accept,general_confident,False,False,False,0.9992,0.9984,True,unclassified,
+сколько стоят элайнеры,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,simple_faq,simple_faq
+демин ещё есть?,faq,faq,accept,general_confident,False,False,False,0.9963,0.9935,True,unclassified,
+демин работает?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+у вас демин?,faq,faq,accept,general_confident,False,False,False,0.9929,0.9859,True,unclassified,
+лечилась у демина год назад понравилось демин щас принимает у вас?,faq,faq,accept,general_confident,False,False,False,0.9167,0.8487,True,unclassified,
+ребёнку ставили у демина всё ок теперь опять нужен демин ещё работает?,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.6214,0.4658,False,unclassified,
+слышал демин ушёл правда ли демин продолжает у вас работать?,faq,faq,accept,general_confident,False,False,False,0.9975,0.995,True,unclassified,
+на работе посоветовали демина раньше был у вас демин не сменил клинику?,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.4385,0.0103,False,unclassified,
+демин ещё принимает у вас,faq,faq,accept,general_confident,False,False,False,0.9391,0.8867,True,unclassified,
+работает ли демин в вашей клинике,faq,faq,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+доктор демин у вас ещё?,faq,faq,accept,general_confident,False,False,False,0.8101,0.6204,True,unclassified,
+пародонтолог есть,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+у вас паронтолог,faq,faq,accept,general_confident,False,False,False,0.9929,0.9859,True,unclassified,
+чё пародонтолог имеется,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.8613,0.7334,False,unclassified,
+друг сказал идти к пародонтологу в вашу клинику такой доктор работает,faq,faq,accept,general_confident,False,False,False,0.8649,0.7679,True,unclassified,
+для мамы нужен специалист пародонтолог у вас есть такой врач или нет,faq,faq,accept,general_confident,False,False,False,0.9997,0.9996,True,unclassified,
+на работе коллега хвалил вашего пародонтолога правда он есть,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9738,0.9592,False,unclassified,
+слышала про лечение десен у вас пародонтолог принимает пациентов,faq,faq,accept,general_confident,False,False,False,0.9766,0.9561,True,unclassified,
+есть пародонтолог у вас,faq,faq,accept,general_confident,False,False,False,0.9417,0.8843,True,unclassified,
+работает пародонтолог,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+подскажите про пародонтолога,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.9167,0.859,False,unclassified,
+коновская принимает,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+конновская есть,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+к конновской можно,faq,booking,accept,general_confident,False,False,False,0.9958,0.9919,False,unclassified,
+раньше ходила к конновской она ещё у вас работает,faq,faq,accept,general_confident,False,False,False,0.9787,0.9649,True,unclassified,
+муж хочет только к конновской она принимает по вечерам,faq,booking,defer,low_confidence,False,False,False,0.5805,0.1875,False,unclassified,
+дочке понравилась конновская ведёт она приём сейчас,faq,booking,defer,sparse_dense_disagree,False,False,False,0.8963,0.8128,False,simple_booking,simple_booking
+на работе слышал про конновскую у вас она есть,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9685,0.94,False,unclassified,
+конновская ведёт приём,faq,booking,defer,sparse_dense_disagree,False,False,False,0.9987,0.9975,False,simple_booking,simple_booking
+конновская работает у вас,faq,faq,accept,general_confident,False,False,False,0.9444,0.8945,True,unclassified,
+принимает ли коновская,faq,faq,accept,general_confident,False,False,False,0.9999,0.9997,True,unclassified,
+демин чё спец,faq,unsupported,accept,general_confident,False,False,False,0.8658,0.7431,False,unclassified,
+какой демин врач,faq,faq,accept,general_confident,False,False,False,0.9518,0.9035,True,unclassified,
+ребёнку зубы лечить демин детский берёт или только взрослых,faq,faq,accept,general_confident,False,False,False,0.9994,0.999,True,unclassified,
+муж хочет к демину а мы не знаем чем он занимается подскажите,faq,faq,accept,general_confident,False,False,False,0.7957,0.6435,True,unclassified,
+читала отзывы про демина какая у него специализация точно,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9513,0.9185,False,unclassified,
+на работе посоветовали демина интересно на каких зубах он спец,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.6214,0.3366,False,unclassified,
+подскажите чем занимается демин,faq,faq,accept,general_confident,False,False,False,0.9361,0.894,True,unclassified,
+какая у демина специализация,faq,faq,accept,general_confident,False,False,False,0.9909,0.9832,True,unclassified,
+демин какой профиль,faq,faq,defer,sparse_dense_disagree,False,False,False,0.9723,0.9449,False,unclassified,
+зписаться к конновской,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+к конновской срочно,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,unclassified,
+конновская есть?,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+на работе только вечером могу к конновской запишитесь пожалуйста на завтра,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,simple_booking,simple_booking
+ребёнку 7 лет зуб ноет хочу к конновской записать на эту неделю,booking,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+в понедельник утром к конновской есть место? вчера пломбу потерял,booking,booking,defer,sparse_dense_disagree,False,False,False,0.7919,0.6755,False,unclassified,
+можно записаться к конновской,booking,booking,accept,general_confident,False,False,False,1.0,0.9999,True,simple_booking,simple_booking
+хочу к конновской на приём,booking,booking,accept,general_confident,False,False,False,1.0,1.0,True,simple_booking,simple_booking
+подскажите время к конновской,booking,booking,accept,general_confident,False,False,False,0.8089,0.618,True,unclassified,

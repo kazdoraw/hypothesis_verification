@@ -1,0 +1,7 @@
+eval_set,n,hybrid_coverage,selective_coverage,delta_coverage,hybrid_accepted_acc,selective_accepted_acc,delta_accepted_acc,hybrid_recall_anam,selective_recall_anam,hybrid_FN_deferred,selective_FN_deferred,rule_accept_count
+val,351,0.6268,0.6211,0.0057,0.9364,0.9404,-0.004,0.9867,0.9865,20,21,5
+test,730,0.6041,0.6,0.0041,0.9592,0.9635,-0.0043,0.9873,0.9873,58,59,17
+hard_test,355,0.7493,0.7268,0.0225,0.7932,0.7829,0.0103,0.8768,0.8571,56,63,52
+blind_test,40,0.725,0.7,0.025,0.9655,1.0,-0.0345,1.0,1.0,4,4,1
+entity_held_out,100,0.43,0.43,0.0,0.9767,0.9767,0.0,1.0,1.0,15,15,0
+extended_eval,101,0.3465,0.3465,0.0,0.7714,0.7714,0.0,0.0,0.0,0,0,0

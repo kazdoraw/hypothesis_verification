@@ -1,0 +1,16 @@
+{
+  "baseline": "B1.1 TF-IDF+LR",
+  "eval_set": "test",
+  "n_samples": 730,
+  "ece_n_bins": 10,
+  "ece": 0.220106,
+  "brier_ovr": {
+    "per_class": {
+      "anamnesis": 0.074859,
+      "booking": 0.030975,
+      "faq": 0.095407,
+      "unsupported": 0.063232
+    },
+    "macro": 0.066118
+  }
+}

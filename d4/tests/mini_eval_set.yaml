@@ -1,11 +1,10 @@
 # Mini eval set: representative samples для smoke-тестов
-# Распределение: 2 factoid, 2 doctor_lookup, 2 complaint_routing,
-#                1 reasoning, 2 pricing, 2 out_of_scope
-# Источник: подвыборка из data/eval_set.yaml (seed examples)
+# Формат gold_chunk_ids: multi-gold list[list[str]] (Фаза 3.1)
+# Распределение: 2 clinic_info, 2 doctor_info, 1 reasoning, 2 pricing, 1 aftercare, 2 out_of_scope
 
 - sample_id: q_0001
   query: Где вы находитесь?
-  category: factoid
+  category: clinic_info
   subtype: address_location
   answerable: true
   expected_answer: ""
@@ -14,13 +13,18 @@
   expected_branch: null
   expected_service: null
   difficulty: 1
-  notes: "smoke: factoid address"
+  notes: "smoke: clinic_info address"
   gold_chunk_ids:
-  - clinic_location
+  - - clinic_location
+  gold_facts:
+  - fact_type: address
+    canonical_value: "Ульяновск"
+  - fact_type: address
+    canonical_value: "Рябикова, 56"
 
 - sample_id: q_0005
   query: Какой телефон?
-  category: factoid
+  category: clinic_info
   subtype: phone_contact
   answerable: true
   expected_answer: ""
@@ -29,83 +33,54 @@
   expected_branch: null
   expected_service: null
   difficulty: 1
-  notes: "smoke: factoid phone"
+  notes: "smoke: clinic_info phone"
   gold_chunk_ids:
-  - clinic_contacts
+  - - clinic_contacts
+  gold_facts:
+  - fact_type: phone
+    canonical_value: "+7 (842) 231-45-55"
 
 - sample_id: q_0015
   query: Ермаков у вас работает?
-  category: doctor_lookup
-  subtype: by_surname_nominative
+  category: doctor_info
+  subtype: by_surname
   answerable: true
   expected_answer: ""
   expected_doctor: Ермаков Александр Владимирович
-  expected_specialization: null
+  expected_specialization: Ортодонтия
   expected_branch: null
   expected_service: null
   difficulty: 1
   notes: "smoke: doctor by surname"
   gold_chunk_ids:
-  - doctor_1
+  - - doctor_1
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Ермаков Александр Владимирович"
+  - fact_type: text
+    canonical_value: "ортодонт"
 
 - sample_id: q_0016
   query: Есть доктор Батылин?
-  category: doctor_lookup
-  subtype: by_surname_nominative
+  category: doctor_info
+  subtype: by_surname
   answerable: true
   expected_answer: ""
   expected_doctor: Батылин Александр Александрович
-  expected_specialization: null
+  expected_specialization: Хирургическая стоматология
   expected_branch: null
   expected_service: null
   difficulty: 1
   notes: "smoke: doctor by surname"
   gold_chunk_ids:
-  - doctor_2
-
-- sample_id: q_0029
-  query: Болит зуб мудрости
-  category: complaint_routing
-  subtype: surgical
-  answerable: true
-  expected_answer: ""
-  expected_doctor: null
-  expected_specialization: Хирургическая стоматология
-  expected_branch: null
-  expected_service: null
-  difficulty: 1
-  notes: "smoke: complaint routing"
-  gold_chunk_ids:
-  - doctor_2
-  - doctor_4
-  - doctor_5
-  - doctor_11
-  - doctor_14
-  - doctor_17
-  - doctor_21
-  - doctor_22
-
-- sample_id: q_0030
-  query: Хочу имплант
-  category: complaint_routing
-  subtype: surgical
-  answerable: true
-  expected_answer: ""
-  expected_doctor: null
-  expected_specialization: Хирургическая стоматология
-  expected_branch: null
-  expected_service: null
-  difficulty: 1
-  notes: "smoke: complaint routing"
-  gold_chunk_ids:
-  - doctor_2
-  - doctor_4
-  - doctor_5
-  - doctor_11
-  - doctor_14
-  - doctor_17
-  - doctor_21
-  - doctor_22
+  - - doctor_4
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Батылин Александр Александрович"
+  - fact_type: text
+    canonical_value: "хирург"
+  - fact_type: text
+    canonical_value: "17"
 
 - sample_id: q_0039
   query: Кто из хирургов самый опытный?
@@ -120,14 +95,19 @@
   difficulty: 1
   notes: "smoke: reasoning"
   gold_chunk_ids:
-  - doctor_2
-  - doctor_4
-  - doctor_5
-  - doctor_11
-  - doctor_14
-  - doctor_17
-  - doctor_21
-  - doctor_22
+  - - doctor_2
+    - doctor_4
+    - doctor_5
+    - doctor_11
+    - doctor_14
+    - doctor_17
+    - doctor_21
+    - doctor_22
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Заволжский Александр Михайлович"
+  - fact_type: text
+    canonical_value: "41"
 
 - sample_id: q_price_01
   query: Сколько стоит имплант?
@@ -142,7 +122,12 @@
   difficulty: 1
   notes: "smoke: pricing specific"
   gold_chunk_ids:
-    - price_implantation
+  - - price_implantation
+  gold_facts:
+  - fact_type: price
+    canonical_value: "от 35 000 ₽"
+  - fact_type: text
+    canonical_value: "Дентиум"
 
 - sample_id: q_price_02
   query: Прайс на протезирование
@@ -157,13 +142,38 @@
   difficulty: 1
   notes: "smoke: pricing category"
   gold_chunk_ids:
-    - price_prosthetics_p1
+  - - price_prosthetics_p1
     - price_prosthetics_p2
+  gold_facts:
+  - fact_type: price
+    canonical_value: "от 17 500 ₽"
+  - fact_type: text
+    canonical_value: "винир"
+
+- sample_id: q_ac_01
+  query: Что нельзя делать после удаления зуба?
+  category: aftercare
+  subtype: post_surgery
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "smoke: aftercare post_surgery (taxonomy-aligned)"
+  gold_chunk_ids:
+  - - aftercare_post_extraction
+  gold_facts:
+  - fact_type: text
+    canonical_value: "лед к щеке"
+  - fact_type: text
+    canonical_value: "не полоскать"
 
 - sample_id: q_0048
   query: Работает ли у вас Иванов?
   category: out_of_scope
-  subtype: unknown_doctor
+  subtype: unknown_entity
   answerable: false
   expected_answer: ""
   expected_doctor: null
@@ -171,8 +181,9 @@
   expected_branch: null
   expected_service: null
   difficulty: 2
-  notes: "smoke: out_of_scope unknown_doctor"
+  notes: "smoke: out_of_scope unknown_entity"
   gold_chunk_ids: []
+  gold_facts: []
 
 - sample_id: q_0050
   query: Где ближайшая аптека?
@@ -187,3 +198,4 @@
   difficulty: 2
   notes: "smoke: out_of_scope wrong_domain"
   gold_chunk_ids: []
+  gold_facts: []

@@ -1,0 +1,8 @@
+primary_tag,n,n_accept,n_defer_complexity,n_defer_tag_policy,n_defer_ml,accepted_accuracy,accepted_recall_anamnesis
+booking_doctor_name,5,0,5,0,0,0.0,0.0
+mixed_intent,42,0,42,0,0,0.0,0.0
+short_ambiguous,43,0,43,0,0,0.0,0.0
+simple_booking,42,27,0,7,8,0.4074,0.0
+simple_faq,7,7,0,0,0,0.2857,0.0
+simple_symptom,111,98,0,5,8,0.9694,1.0
+unclassified,105,84,0,0,21,0.8214,0.9434

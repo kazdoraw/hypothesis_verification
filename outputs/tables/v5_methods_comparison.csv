@@ -1,7 +1,0 @@
-,accuracy,f1_macro
-TF-IDF + LR (L1),0.9634,0.9654
-TF-IDF + LR (L2),0.9511,0.9526
-GridSearchCV SVC (L1),0.9828,0.9824
-GridSearchCV SVC (L2),0.9589,0.96
-Embedding (rubert-tiny2),0.9389,0.9368
-Каскад,0.5533,0.191

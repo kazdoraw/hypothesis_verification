@@ -1,0 +1,252 @@
+# Hard eval set: adversarial / edge-case samples для stress-тестов
+# Цель: проверить robustness стратегий на опечатках, косвенных формулировках,
+# ambiguous запросах и tricky out-of-scope. НЕ smoke, а discriminative power.
+# 12 samples, difficulty 2-3
+
+# === CLINIC_INFO: опечатки + косвенные ===
+
+- sample_id: q_hard_01
+  query: "адрес скиньте плз"
+  category: clinic_info
+  subtype: address_location
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "hard: сленг, без вопросительного знака, 'плз'"
+  gold_chunk_ids:
+  - - clinic_location
+  gold_facts:
+  - fact_type: address
+    canonical_value: "Ульяновск"
+  - fact_type: address
+    canonical_value: "Рябикова, 56"
+
+- sample_id: q_hard_02
+  query: "а вы в выходные работаите?"
+  category: clinic_info
+  subtype: working_hours
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "hard: опечатка 'работаите', косвенная форма 'а вы'"
+  gold_chunk_ids:
+  - - clinic_working_hours
+  gold_facts:
+  - fact_type: schedule
+    canonical_value: "ежедневно с 08:00 до 20:00"
+
+# === DOCTOR_INFO: опечатки в фамилии ===
+
+- sample_id: q_hard_03
+  query: "ермоков у вас рабтает?"
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: ""
+  expected_doctor: Ермаков Александр Владимирович
+  expected_specialization: Ортодонтия
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: опечатка в фамилии 'ермоков' + 'рабтает'"
+  gold_chunk_ids:
+  - - doctor_1
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Ермаков Александр Владимирович"
+  - fact_type: text
+    canonical_value: "ортодонт"
+
+- sample_id: q_hard_04
+  query: "Какой стаж у вашего самого опытного терапевта?"
+  category: doctor_info
+  subtype: experience_query
+  answerable: true
+  expected_answer: ""
+  expected_doctor: Васильева Елена Владимировна
+  expected_specialization: Терапевтическая стоматология
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "hard: требует сравнения стажа среди терапевтов (Васильева 39 лет)"
+  gold_chunk_ids:
+  - - doctor_8
+    - doctor_6
+    - doctor_19
+    - doctor_20
+    - doctor_16
+    - doctor_12
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Васильева Елена Владимировна"
+  - fact_type: text
+    canonical_value: "39"
+
+# === PRICING: ambiguous + косвенная ===
+
+- sample_id: q_hard_05
+  query: "скока стоит удалить зуб мудрасти"
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: опечатки 'скока', 'мудрасти', разговорный стиль"
+  gold_chunk_ids:
+  - - price_adult_surgery_removals
+  gold_facts:
+  - fact_type: price
+    canonical_value: "от 6 900 ₽"
+  - fact_type: text
+    canonical_value: "8-го зуба"
+
+- sample_id: q_hard_06
+  query: "Мне бы зуб вставить чтоб навсегда — почём?"
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: косвенная формулировка имплантации, разговорный"
+  gold_chunk_ids:
+  - - price_implantation
+  gold_facts:
+  - fact_type: price
+    canonical_value: "от 35 000 ₽"
+  - fact_type: text
+    canonical_value: "имплант"
+
+# === REASONING: multi-fact cross-domain ===
+
+- sample_id: q_hard_07
+  query: "Есть ли у вас детский стоматолог с опытом больше 10 лет и сколько стоит приём?"
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: Молгачева Оксана Александровна
+  expected_specialization: Детская стоматология
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: reasoning cross-domain (doctor + pricing), фильтр по стажу"
+  gold_chunk_ids:
+  - - doctor_15
+    - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Молгачева Оксана Александровна"
+  - fact_type: text
+    canonical_value: "23"
+  - fact_type: price
+    canonical_value: "от 1 000 ₽"
+
+- sample_id: q_hard_08
+  query: "После имплантации какие лекарства пить и сколько дней?"
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "hard: reasoning aftercare+detail, конкретные препараты и сроки"
+  gold_chunk_ids:
+  - - aftercare_post_implantation
+  gold_facts:
+  - fact_type: text
+    canonical_value: "антибиотик"
+  - fact_type: text
+    canonical_value: "5 дней"
+  - fact_type: text
+    canonical_value: "Нимесил"
+
+# === AFTERCARE: detail + edge ===
+
+- sample_id: q_hard_09
+  query: "у ребенка брекеты поставили, он жалуется что больно и натирает — что делать?"
+  category: aftercare
+  subtype: post_orthodontics
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "hard: aftercare с эмоциональным контекстом, 'натирает'"
+  gold_chunk_ids:
+  - - aftercare_post_orthodontics
+  gold_facts:
+  - fact_type: text
+    canonical_value: "защитный воск"
+  - fact_type: text
+    canonical_value: "3-7 дней"
+
+- sample_id: q_hard_10
+  query: "поставили коронку, а она шатается — это нормально?"
+  category: aftercare
+  subtype: post_prosthetics
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: aftercare edge case, коронка шатается — KB говорит обратиться к врачу"
+  gold_chunk_ids:
+  - - aftercare_post_prosthetics_fixed
+  gold_facts:
+  - fact_type: text
+    canonical_value: "обратиться к врачу"
+
+# === OUT_OF_SCOPE: tricky (выглядит как in-scope) ===
+
+- sample_id: q_hard_11
+  query: "Могу я по полису ОМС к вам?"
+  category: out_of_scope
+  subtype: missing_info
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: tricky OOS — звучит как вопрос о клинике, но ОМС/страхование нет в KB"
+  gold_chunk_ids: []
+  gold_facts: []
+
+- sample_id: q_hard_12
+  query: "а рентген бесплатно делают?"
+  category: out_of_scope
+  subtype: missing_info
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "hard: tricky OOS — 'бесплатно' нет в KB, рентген есть в прайсе, но бесплатности нет"
+  gold_chunk_ids: []
+  gold_facts: []

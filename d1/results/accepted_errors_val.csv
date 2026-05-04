@@ -1,0 +1,10 @@
+text_preview,gold,predicted,primary_tag,confidence,margin,reason
+Какой курс доллара?,unsupported,faq,unclassified,0.6546,0.3711,general_confident
+наращивание кости делаете,anamnesis,faq,unclassified,0.6947,0.4945,general_confident
+вчера чистили зуб укол сделали до сих пор губа онемела когда отпустит,faq,anamnesis,unclassified,0.6224,0.424,anamnesis_confident
+интересует прогноз на день,unsupported,anamnesis,unclassified,0.8262,0.7585,anamnesis_confident
+нарис зуб чот,unsupported,anamnesis,unclassified,0.7638,0.6475,anamnesis_confident
+картинку зуба кинь,unsupported,anamnesis,unclassified,0.5009,0.2628,anamnesis_confident
+вчера смотрел видео про зубы нарисуй такой здоровый зуб яркий,unsupported,anamnesis,unclassified,0.6189,0.4005,anamnesis_confident
+ребёнку 6 лет чистили камень с зубов он даже не пикнул теперь улыбается во весь ,unsupported,anamnesis,unclassified,0.8207,0.7387,anamnesis_confident
+давно боялась к стоматологу после старого опыта а тут вылечили передний зуб без ,unsupported,anamnesis,unclassified,0.5869,0.338,anamnesis_confident

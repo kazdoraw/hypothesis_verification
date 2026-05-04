@@ -1,0 +1,18 @@
+{
+  "classes_": [
+    "anamnesis",
+    "booking",
+    "faq",
+    "unsupported"
+  ],
+  "params": {
+    "dim": 100,
+    "epoch": 25,
+    "lr": 0.5,
+    "wordNgrams": 2,
+    "minCount": 1,
+    "thread": 1
+  },
+  "train_size": 2606,
+  "train_time_ms": 315.87862499873154
+}

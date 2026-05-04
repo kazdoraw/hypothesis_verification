@@ -1,0 +1,41 @@
+text_preview,gold,predicted,action,reason,is_rule_accept,confidence,margin,correct
+"у меня тут что-то вылезло на десне, белое такое",anamnesis,anamnesis,defer,low_confidence,False,0.3563,0.0464,False
+"слушайте, второй день не могу нормально жевать правой стороной",anamnesis,anamnesis,accept,anamnesis_confident,False,0.5347,0.3515,True
+"у сына зуб молочный уже месяц шатается, но сам не выпадает",anamnesis,anamnesis,accept,anamnesis_confident,False,0.7741,0.6881,True
+"поставили пломбу неделю назад и теперь на горячее реагирует, это нормально?",anamnesis,anamnesis,defer,sparse_dense_disagree,False,0.4378,0.1937,False
+"хочу сделать зубы покрасивее, может виниры или ещё что",anamnesis,anamnesis,accept,anamnesis_confident,False,0.8026,0.7229,True
+мне тут вырвали зуб позавчера и до сих пор кровит немного,anamnesis,anamnesis,accept,anamnesis_confident,False,0.6586,0.5042,True
+"ночью проснулась от боли, вся правая сторона лица как огнём горит",anamnesis,anamnesis,accept,anamnesis_confident,False,0.6019,0.4161,True
+"передний зуб потемнел после удара, это серьёзно?",anamnesis,anamnesis,accept,anamnesis_confident,False,0.7328,0.6151,True
+"хотела бы на чистку, давно не была, зубы жёлтые стали",anamnesis,anamnesis,accept,anamnesis_confident,False,0.5873,0.4126,True
+"у дочки 4 года передние зубы чернеют, что делать?",anamnesis,anamnesis,accept,anamnesis_confident,False,0.7027,0.5271,True
+"коронка старая, под ней что-то попахивает",anamnesis,anamnesis,defer,low_confidence,False,0.4192,0.0264,False
+"думаю про импланты, но боюсь, это же операция",anamnesis,faq,defer,faq_anamnesis_borderline,False,0.4538,0.1292,False
+а консультация у вас платная или бесплатная?,faq,faq,accept,general_confident,False,0.6932,0.5142,True
+"скажите, в выходные кто-нибудь принимает?",faq,faq,accept,general_confident,False,0.8169,0.7324,True
+"мне интересно, кто из ваших врачей занимается детьми",faq,faq,accept,general_confident,False,0.6815,0.5463,True
+чистка ультразвуком и air flow это одно и то же или разное?,faq,faq,defer,low_confidence,False,0.5824,0.4045,False
+"а если рассрочку оформить, какой процент?",faq,faq,defer,low_confidence,False,0.5047,0.1531,False
+"подскажите ваш точный адрес, навигатор не находит",faq,faq,accept,general_confident,False,0.7072,0.59,True
+после имплантации сколько нельзя есть твёрдое?,faq,faq,accept,general_confident,False,0.8738,0.7939,True
+а седация это типа наркоз или нет? страшно немного,faq,faq,defer,low_confidence,False,0.6116,0.4112,False
+примерно сколько выйдет за два импланта на нижнюю челюсть?,faq,faq,accept,general_confident,False,0.804,0.6574,True
+у вас есть кто-то специализируется именно на пародонтите?,faq,faq,accept,general_confident,False,0.7372,0.6109,True
+а карту рассрочки прямо у вас оформляют?,faq,unsupported,defer,sparse_dense_disagree,False,0.6241,0.366,False
+сколько обычно длится приём у ортодонта первый раз?,faq,faq,accept,general_confident,False,0.6694,0.4827,True
+можно на следующую среду к кому-нибудь записаться?,booking,booking,accept,general_confident,False,0.9345,0.906,True
+"мне бы перенести, я в командировке буду на той неделе",booking,booking,accept,general_confident,False,0.8556,0.7912,True
+"всё, я не приду, отменяйте пожалуйста завтрашнее",booking,booking,accept,general_confident,False,0.872,0.7905,True
+"запишите нас с мужем, желательно друг за другом",booking,booking,accept,general_confident,False,0.7485,0.655,True
+"а можно перенести на попозже, часов на 5-6?",booking,booking,accept,general_confident,False,0.9335,0.9018,True
+есть что-нибудь свободное на эту пятницу утром?,booking,booking,accept,general_confident,False,0.8665,0.8114,True
+"передумала, отмените пока, потом перезапишусь",booking,booking,accept,general_confident,False,0.8646,0.7807,True
+"мне бы экстренно попасть, очень сильно болит",booking,anamnesis,accept,rule:anamnesis:hits=2,True,0.7,0.0,False
+привет!,unsupported,unsupported,accept,general_confident,False,0.846,0.7915,True
+"ладно спасибо, буду думать",unsupported,unsupported,accept,general_confident,False,0.8359,0.7799,True
+а вы можете такси вызвать?,unsupported,faq,defer,low_confidence,False,0.5319,0.3099,False
+ммм,unsupported,unsupported,defer,low_confidence,False,0.4233,0.1928,False
+"вообще ужас, жду полчаса уже",unsupported,unsupported,defer,low_confidence,False,0.6194,0.4504,False
+а,unsupported,unsupported,accept,general_confident,False,0.6854,0.5246,True
+ну ок пока,unsupported,unsupported,accept,general_confident,False,0.8381,0.7612,True
+ты настоящий врач или бот?,unsupported,unsupported,accept,general_confident,False,0.6603,0.3886,True

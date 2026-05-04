@@ -1,0 +1,51 @@
+id,text,route_domain,subtype,explicit_booking,urgency,is_offtopic,specialization_hint,feedback_flag,faq_category,style,source,seed_id,active_domain
+switch_001,Сколько стоит?,faq,price,,,,,,,,manual_hard,,anamnesis
+switch_002,Запишите меня,booking,new_appointment,True,,,,,,,manual_hard,,faq
+switch_003,А вообще у меня ещё десна болит,anamnesis,symptom,,,,,,,,manual_hard,,booking
+switch_004,"Подождите, а где вы находитесь?",faq,clinic_info,,,,,,,,manual_hard,,booking
+switch_005,"Ладно, запишите тогда",booking,new_appointment,True,,,,,,,manual_hard,,anamnesis
+switch_006,"Нет, я хочу спросить про цены",faq,price,,,,,,,,manual_hard,,booking
+switch_007,У меня ещё вопрос — кто делает имплантацию?,faq,doctor_info,,,,,,,,manual_hard,,anamnesis
+switch_008,"Забудьте, у меня просто болит зуб",anamnesis,symptom,,,,,,,,manual_hard,,faq
+switch_009,"Отмените запись, я передумал",booking,cancel,,,,,,,,manual_hard,,anamnesis
+switch_010,А ещё у ребёнка кривые зубы,anamnesis,complaint,,,,,,,,manual_hard,,faq
+switch_011,"Кстати, работаете в воскресенье?",faq,clinic_info,,,,,,,,manual_hard,,anamnesis
+switch_012,Хочу на чистку записаться,booking,new_appointment,True,,,,,,,manual_hard,,faq
+switch_013,"Нет, мне нужно не это. У меня болит десна",anamnesis,symptom,,,,,,,,manual_hard,,booking
+switch_014,Ещё вопрос: есть рассрочка?,faq,price,,,,,,,,manual_hard,,anamnesis
+switch_015,Перенесите мне запись,booking,reschedule,True,,,,,,,manual_hard,,faq
+switch_016,"Стоп, а зуб-то болит уже неделю",anamnesis,symptom,,,,,,,,manual_hard,,booking
+switch_017,А какой телефон клиники?,faq,clinic_info,,,,,,,,manual_hard,,booking
+switch_018,"Ладно, тогда запишите к ортодонту",booking,new_appointment,True,,,,,,,manual_hard,,faq
+switch_019,"Подождите, у меня ещё щека опухла",anamnesis,symptom,,normal,,,,,,manual_hard,,faq
+switch_020,"Хорошо, а сколько стоит имплант?",faq,price,,,,,,,,manual_hard,,anamnesis
+switch_021,"Всё, запишите меня на завтра",booking,new_appointment,True,,,,,,,manual_hard,,anamnesis
+switch_022,"Нет, не надо записывать. Просто скажите цену",faq,price,,,,,,,,manual_hard,,booking
+switch_023,"Так, а у меня ещё пломба выпала",anamnesis,complaint,,,,,,,,manual_hard,,booking
+switch_024,"Подождите, есть ли парковка?",faq,clinic_info,,,,,,,,manual_hard,,anamnesis
+switch_025,Записываюсь на чистку,booking,new_appointment,True,,,,,,,manual_hard,,faq
+switch_026,"Минутку, десна вокруг импланта красная",anamnesis,symptom,,,,,,,,manual_hard,,faq
+switch_027,"А, и ещё — вы по ДМС работаете?",faq,price,,,,,,,,manual_hard,,anamnesis
+switch_028,"Хватит вопросов, записывайте!",booking,new_appointment,True,,,,,,,manual_hard,,faq
+switch_029,"Ой, я забыла сказать — ребёнок тоже болеет",anamnesis,symptom,,,,,,,,manual_hard,,booking
+switch_030,А скидки для пенсионеров есть?,faq,price,,,,,,,,manual_hard,,anamnesis
+switch_031,"Блин, зуб ноет, жевать не могу.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,,faq
+switch_032,Сколько стоит поставить пломбу?,faq,price,,normal,,,,,,grok_rewritten,,anamnesis
+switch_033,перенести на вечер можно,booking,reschedule,,normal,,,,,,grok_audited,,anamnesis
+switch_034,Флюс на щеке вырос.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,,booking
+switch_035,Какой врач у вас занимается имплантами?,faq,doctor_info,,normal,,,,,,grok_rewritten,,booking
+switch_036,"Запишите меня на утро, пожалуйста.",booking,new_appointment,,normal,,,,,,grok_rewritten,,faq
+switch_037,"На зубах появился камень, десна чешется.",anamnesis,symptom,,normal,,,,,,grok_rewritten,,faq
+switch_038,Отменяю завтрашнюю запись.,booking,cancel,,normal,,,,,,grok_rewritten,,anamnesis
+switch_039,"Нерв оголился, боль адская.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,,booking
+switch_040,Вы вечером работаете или нет?,faq,clinic_info,,normal,,,,,,grok_rewritten,,anamnesis
+switch_041,"Дайте запись на среду, пожалуйста.",booking,new_appointment,,normal,,,,,,grok_rewritten,,faq
+switch_042,"Мальчику 7 лет, треснул зуб.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,,booking
+switch_043,Сколько стоит отбеливание?,faq,price,,normal,,,,,,grok_rewritten,,anamnesis
+switch_044,"Перенесите запись на понедельник, пожалуйста.",booking,reschedule,,normal,,,,,,grok_rewritten,,faq
+switch_045,В жевательном зубе выросла дырка.,anamnesis,complaint,,normal,,,,,,grok_rewritten,,booking
+switch_046,"Кстати, сколько стоит снимок?",faq,price,,normal,,,,,,manual_hard,,booking
+switch_047,"Подождите, зуб начал пульсировать и отдаёт в висок.",anamnesis,symptom,,urgent,,,,,,manual_hard,,faq
+switch_048,Тогда запишите меня к хирургу на ближайшее время.,booking,new_appointment,True,normal,,хирург,,,,manual_hard,,anamnesis
+switch_049,А врач Конновская принимает детей?,faq,doctor_info,,normal,,,,,,manual_hard,,booking
+switch_050,"Нет, отмените запись, я пока подумаю.",booking,cancel,,normal,,,,,,manual_hard,,faq

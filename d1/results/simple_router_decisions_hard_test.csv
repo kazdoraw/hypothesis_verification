@@ -1,0 +1,356 @@
+text_preview,gold,predicted,action,reason,is_rule_accept,is_complexity_defer,is_tag_policy_defer,confidence,margin,correct,primary_tag,active_tags
+"У меня болит зуб, сколько стоит лечение?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+"Десна кровоточит, можно записаться?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+"Выпала пломба, когда можно прийти?",anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.3248,0.0077,False,simple_booking,simple_booking
+"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,faq,accept,general_confident,False,False,False,0.8567,0.7822,False,simple_faq,simple_faq
+"Болит зуб мудрости, есть ли у вас хирург?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor
+"Нужна чистка, какие цены и когда свободно?",anamnesis,,defer,tag_policy:simple_booking,False,False,True,0.6321,0.4178,False,simple_booking,simple_booking
+"Откололся зуб, больно жевать, запишите срочно",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+"Хочу имплант, но десна болит. Это нормально?",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Коронка шатается и болит, сколько будет замена?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+"Нужны виниры, но передний зуб потемнел",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9328,0.9061,True,unclassified,
+"Ноет зуб после пломбы, это гарантийный случай?",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Хочу отбеливание и чистку, записаться можно?",anamnesis,booking,accept,general_confident,False,False,False,0.788,0.6923,False,simple_booking,simple_booking
+"Опухла щека и температура, когда примете?",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6675,0.5448,False,simple_symptom,simple_symptom
+"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,faq,accept,general_confident,False,False,False,0.8492,0.7836,False,simple_faq,simple_faq
+"Зуб шатается, есть ли у вас пародонтолог?",anamnesis,faq,defer,low_confidence,False,False,False,0.6293,0.371,False,unclassified,
+"Выпал штифт, больно, запишите к хирургу",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking;symptom_doctor
+"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,faq,accept,general_confident,False,False,False,0.8293,0.7007,False,simple_faq,simple_faq
+"Хочу исправить прикус, у меня ещё кривые зубы",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8516,0.7723,True,unclassified,
+"Нужна профчистка и осмотр, есть свободное время?",anamnesis,booking,defer,sparse_dense_disagree,False,False,False,0.6212,0.4497,False,simple_booking,simple_booking
+"Кровоточат дёсны, до скольки работаете?",anamnesis,faq,defer,low_confidence,False,False,False,0.5725,0.374,False,simple_symptom,simple_symptom
+"Пломба потемнела, хочу виниры и записаться",anamnesis,,defer,tag_policy:simple_booking,False,False,True,0.5973,0.2686,False,simple_booking,simple_booking
+"Болит после лечения каналов, это нормально?",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Хочу отбеливание, но зубы чувствительные",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+"Нужна коронка и чистка, запишите на одну дату",anamnesis,,defer,tag_policy:simple_booking,False,False,True,0.6723,0.4541,False,simple_booking,simple_booking
+"Сломался ретейнер, болит, как быть?",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Мне нужен имплант, десна отёкла вокруг штифта",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7113,0.4914,True,simple_symptom,simple_symptom
+"Зуб ноет от сладкого, плюс хочу чистку",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Ребёнку больно, есть детский стоматолог?",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6937,0.5782,False,simple_symptom,simple_symptom
+"Хочу элайнеры, у меня скученность зубов",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.4906,0.2701,True,unclassified,
+"Протез давит десну, хочу на импланты перейти",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+Врач,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Лечение,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Записать,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_booking
+Зуб,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Цена,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_faq
+Больно,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+Помогите,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Срочно,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Чистка,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Отмена,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Перенос,booking,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Вопрос,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Импланты,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Адрес,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Снимок,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+"Сильное кровотечение, не останавливается",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.729,0.6065,True,simple_symptom,simple_symptom
+"Ребёнку очень плохо, температура 39",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.3961,0.1345,False,unclassified,
+"Выбили зуб, кровь идёт",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7086,0.576,True,simple_symptom,simple_symptom
+"Сильный отёк, не могу глотать",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4753,0.2418,False,unclassified,
+"Острая боль, таблетки не помогают",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4266,0.0806,False,simple_symptom,simple_symptom
+"Ребёнок упал, зуб шатается, кровь",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+Аллергическая реакция после анестезии,anamnesis,faq,defer,low_confidence,False,False,False,0.61,0.4239,False,unclassified,
+"Гной из десны, температура, отёк",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7856,0.7022,True,simple_symptom,simple_symptom
+Челюсть не открывается совсем,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8545,0.7811,True,unclassified,
+"Беременна, зуб болит невыносимо",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+Кровь не останавливается уже час,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6533,0.516,False,simple_symptom,simple_symptom
+"Отёк горла после удаления, задыхаюсь",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+"Малышу 2 года, упал, зуб выбит",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5582,0.367,True,unclassified,
+"Нагноение после имплантации, щека горит",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6652,0.4282,True,unclassified,
+Потерял сознание от боли,anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.3661,0.013,False,simple_symptom,simple_symptom
+"Зуб сломался пополам, нерв торчит",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7506,0.6293,True,unclassified,
+У ребёнка после падения зуб вдавился в десну,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8659,0.7991,True,simple_symptom,simple_symptom
+"Третий день температура 38, десна чёрная",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8205,0.7446,True,simple_symptom,simple_symptom
+"Швы после операции разошлись, кровит сильно",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6472,0.474,False,simple_symptom,simple_symptom
+"Онемела половина лица после удаления, уже сутки",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.3806,0.0445,False,unclassified,
+"Коронка слетела, проглотил, что делать?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6127,0.3686,True,unclassified,
+После анестезии губа распухла и не чувствую,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6866,0.561,True,unclassified,
+"Сильная боль в челюсти, отдаёт в ухо и висок",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8936,0.8472,True,simple_symptom,simple_symptom
+"Абсцесс на десне, гной течёт, лихорадка",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Ударили в челюсть, зубы шатаются, рот не закрывается",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9422,0.9044,True,unclassified,
+"Брекет отклеился и впился в щёку, кровь идёт",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Имплант выпал, из лунки идёт кровь",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Классная клиника, хочу записаться ещё раз",booking,booking,defer,low_confidence,False,False,False,0.5048,0.2113,False,simple_booking,simple_booking
+"Плохой врач, зуб болит после лечения",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor
+"Спасибо за лечение, но десна ноет",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.5533,0.2559,False,simple_symptom,simple_symptom
+Довольна результатом,unsupported,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+"Плохо обслужили, хочу жаловаться",unsupported,unsupported,defer,low_confidence,False,False,False,0.337,0.0426,False,unclassified,
+Запишите к ортодонту на четверг,booking,booking,accept,general_confident,False,False,False,0.9372,0.9116,True,simple_booking,simple_booking
+Нужна запись к хирургу-имплантологу,booking,booking,defer,low_confidence,False,False,False,0.5582,0.352,False,simple_booking,simple_booking
+"Хочу к пародонтологу, когда свободно?",booking,,defer,tag_policy:simple_booking,False,False,True,0.7106,0.6027,False,simple_booking,simple_booking
+Записать ребёнка к детскому стоматологу,booking,booking,accept,general_confident,False,False,False,0.8108,0.6864,True,simple_booking,simple_booking
+На ортопедический приём запишите,booking,booking,accept,general_confident,False,False,False,0.9007,0.8556,True,simple_booking,simple_booking
+Нужна консультация терапевта-стоматолога,booking,faq,defer,sparse_dense_disagree,False,False,False,0.6134,0.4511,False,unclassified,
+Запишите к гнатологу,booking,booking,accept,general_confident,False,False,False,0.934,0.9011,True,simple_booking,simple_booking
+Хочу записаться к эндодонтисту,booking,booking,accept,general_confident,False,False,False,0.9294,0.8987,True,simple_booking,simple_booking
+Запись к анестезиологу,booking,,defer,tag_policy:simple_booking,False,False,True,0.6791,0.4888,False,simple_booking,simple_booking
+Нужен приём у стоматолога-хирурга,booking,faq,defer,low_confidence,False,False,False,0.4436,0.0489,False,simple_booking,simple_booking
+Хочу к Батылину,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.3168,0.0758,False,unclassified,
+Запишите к Ермакову,faq,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+Хочу на приём к Демину,faq,booking,accept,general_confident,False,False,False,0.8434,0.7744,False,simple_booking,simple_booking
+Мне нужна Конновская,faq,anamnesis,defer,low_confidence,False,False,False,0.4601,0.2177,False,unclassified,
+Есть ли у вас доктор Иванов?,faq,faq,accept,general_confident,False,False,False,0.8125,0.6741,True,unclassified,
+К Петрову запишите на пятницу,faq,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+"Хочу к тому врачу, который делал мне коронку",faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4315,0.2212,False,unclassified,
+Запишите к детскому врачу Конновской,faq,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+Ермаков свободен завтра?,faq,booking,defer,low_confidence,False,False,False,0.5577,0.2693,False,unclassified,
+Есть Сидорова? Запишите к ней,faq,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+"Привет, болит зуб",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.585,0.2552,False,simple_symptom,simple_symptom
+"Здравствуйте, хочу записаться",booking,booking,defer,low_confidence,False,False,False,0.6154,0.3594,False,simple_booking,simple_booking
+"Добрый день, сколько стоит чистка?",faq,faq,accept,general_confident,False,False,False,0.8815,0.8122,True,simple_faq,simple_faq
+Привет! Где вы находитесь?,faq,faq,defer,sparse_dense_disagree,False,False,False,0.5368,0.2086,False,unclassified,
+"Здравствуйте, хочу брекеты",anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.4414,0.1889,False,unclassified,
+"Доброе утро, запишите к ортодонту",booking,booking,accept,general_confident,False,False,False,0.8149,0.6924,True,simple_booking,simple_booking
+"Привет, кто у вас лечит дёсны?",faq,faq,defer,low_confidence,False,False,False,0.6004,0.291,False,unclassified,
+"Алло, у ребёнка откололся зуб",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6586,0.497,True,unclassified,
+"Добрый вечер, отмените мою запись",booking,booking,accept,general_confident,False,False,False,0.971,0.9554,True,simple_booking,simple_booking
+"Здрасте, сколько стоит имплант?",faq,faq,accept,general_confident,False,False,False,0.9246,0.8838,True,simple_faq,simple_faq
+"Привет, выпала пломба, что делать?",anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.3517,0.0465,False,unclassified,
+"Здравствуйте, перенесите запись",booking,booking,accept,general_confident,False,False,False,0.7968,0.6567,True,simple_booking,simple_booking
+"Добрый день, работает ли Ермаков?",faq,faq,accept,general_confident,False,False,False,0.7515,0.5978,True,unclassified,
+"Привет, срочно болит, запишите сегодня",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+"Алло, есть рассрочка?",faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.6122,0.3948,False,unclassified,
+Что делать если болит после удаления?,faq,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,False,simple_symptom,simple_symptom
+Какие обезболивающие можно после имплантации?,faq,,defer,tag_policy:simple_symptom,False,False,True,0.8682,0.7856,False,simple_symptom,simple_symptom
+Нормально ли что болит после пломбы?,faq,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,False,simple_symptom,simple_symptom
+Через сколько проходит боль после удаления?,faq,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+Может ли десна кровоточить от чистки?,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.7172,0.5146,False,simple_symptom,simple_symptom
+Можно ли лечить зубы при беременности?,faq,faq,accept,general_confident,False,False,False,0.7989,0.6848,True,unclassified,
+Какие риски у имплантации при диабете?,faq,faq,accept,general_confident,False,False,False,0.8913,0.8381,True,unclassified,
+Как понять что нужна коронка а не пломба?,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.3993,0.0077,False,unclassified,
+Чем отличается имплант от моста?,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.4657,0.0925,False,unclassified,
+Вредно ли отбеливание для эмали?,faq,faq,accept,general_confident,False,False,False,0.794,0.7031,True,unclassified,
+Как ухаживать за имплантом?,faq,faq,accept,general_confident,False,False,False,0.7812,0.6716,True,unclassified,
+Со скольки лет можно ставить брекеты?,faq,faq,accept,general_confident,False,False,False,0.925,0.894,True,unclassified,
+Можно ли курить после удаления зуба?,faq,faq,accept,general_confident,False,False,False,0.6788,0.4938,True,unclassified,
+Нужна ли анестезия при чистке?,faq,faq,accept,general_confident,False,False,False,0.6855,0.5254,True,unclassified,
+Какой имплант лучше — корейский или немецкий?,faq,faq,accept,general_confident,False,False,False,0.8082,0.684,True,unclassified,
+у меня зуб ноет на холодное это нормально?,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6773,0.5425,False,simple_symptom,simple_symptom
+Почему десна кровит после чистки зубов?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.889,0.8058,True,simple_symptom,simple_symptom
+"После пломбы зуб зудит внутри, что это может быть?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5817,0.2638,True,unclassified,
+"Щека опухла вчера после лечения, это само пройдет?",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+нерв зуба ноет ночью это от кариеса?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7842,0.6729,True,simple_symptom,simple_symptom
+"У меня темнеет дырка в переднем зубе, почему так?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7143,0.5992,True,unclassified,
+"Жевательный зуб сильно болит, больно жевать, что делать?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8885,0.8183,True,simple_symptom,simple_symptom
+"Десна отекла после полоскания, это нормально?",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.646,0.4877,False,simple_symptom,simple_symptom
+"Десна кровит, когда ем яблоко, это нормально?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.734,0.6224,True,simple_symptom,simple_symptom
+"У меня второй день флюс на десне, болит очень сильно.",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+после съема камня зуб чувствительный стал почему,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.796,0.6854,True,unclassified,
+"У ребенка зуб ноет после сладкого, это может быть кариес?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7315,0.5934,True,simple_symptom,simple_symptom
+После пломбы на жевательном зубе болит щека изнутри.,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"У меня камень на зубах, десна чешется и кровит.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9527,0.9304,True,simple_symptom,simple_symptom
+зуб треснул вчера от ореха сильно болит,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.881,0.8036,True,simple_symptom,simple_symptom
+десна гноится под зубом это пройдет?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7129,0.5335,True,simple_symptom,simple_symptom
+После удаления зуба десна болит очень сильно.,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Передний зуб шатается после удара на футболе, что делать?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8314,0.7354,True,simple_symptom,simple_symptom
+"Под старой пломбой ноет зуб, что это может быть?",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4563,0.0809,False,simple_symptom,simple_symptom
+"После чистки десна каждый раз кровит, это нормально?",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7151,0.5287,True,simple_symptom,simple_symptom
+после пломбы зуб ноет сильно и щека опухла,anamnesis,anamnesis,accept,rule:anamnesis:hits=3,True,False,False,0.8,0.0,True,simple_symptom,simple_symptom
+"Удалили зуб вчера, сегодня температура 38 и гной из десны.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7784,0.6746,True,simple_symptom,simple_symptom
+После чистки каналов лицо распухло и болит очень сильно.,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"После удаления зуба мудрости появился флюс, поднялась температура.",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Пломбу поставили, ночью зуб разболелся и поднялась температура.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.762,0.6554,True,simple_symptom,simple_symptom
+"После лечения корня щека раздулась, температура 39.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8058,0.7175,True,unclassified,
+"Ребенку поставили пломбу, десна опухла, плачет от боли.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8066,0.7183,True,simple_symptom,simple_symptom
+после импланта боль усилилась и отек на пол-лица,anamnesis,anamnesis,accept,rule:anamnesis:hits=3,True,False,False,0.8,0.0,True,simple_symptom,simple_symptom
+После чистки зубов все болит и температура 38.2.,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+После протезирования десна воспалилась горит внутри,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8439,0.7328,True,simple_symptom,simple_symptom
+установили коронку а щека припухла и ноет сильно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8845,0.8231,True,simple_symptom,simple_symptom
+"Удаляли нерв вчера, сегодня флюс и температура 37.8.",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4768,0.1954,False,simple_symptom,simple_symptom
+"После пломбирования болит без остановки, отек растет.",anamnesis,anamnesis,accept,rule:anamnesis:hits=3,True,False,False,0.8,0.0,True,simple_symptom,simple_symptom
+После лечения дома щека вздулась и поднялась температура.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.724,0.6193,True,unclassified,
+после удаления опухоль на десне и 38.5 не сплю,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Зуб сильно ноет, сколько стоит пломба?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+"Щека опухла, когда можно записаться?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+"дырка в зубе большая, цена лечения?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+"Нерв оголился и болит, можно записаться на завтра?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+хочу имплант но корень сломан,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+"Камень на зубах и десна чешется, сколько стоит чистка?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+"жевательный зуб трещит, можно ли срочно к врачу и цена?",anamnesis,faq,defer,low_confidence,False,False,False,0.4678,0.2097,False,simple_faq,simple_faq
+"Пломба вчера выпала, запишите меня на прием.",anamnesis,,defer,tag_policy:simple_booking,False,False,True,0.7,0.0,False,simple_booking,simple_booking
+"Передний зуб шатается, сколько стоит фиксация?",anamnesis,,defer,tag_policy:simple_faq,False,False,True,0.6433,0.3356,False,simple_faq,simple_faq
+хочу виниры но десна болит,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Зуб кровит, когда можно прийти и сколько это стоит?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking;symptom_price
+"Флюс раздуло, сколько стоит прием у стоматолога?",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking;symptom_price
+"Болит челюсть, запишите меня, пожалуйста.",anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+отбеливание надо но зуб ноет,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.761,0.602,True,simple_symptom,simple_symptom
+"Дупло в зубе, сколько будет стоить пломба и когда можно прийти?",anamnesis,,defer,tag_policy:simple_booking,False,False,True,0.8067,0.7281,False,simple_booking,simple_booking
+Флюс растет.,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+Десна сильно кровит.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9505,0.931,True,simple_symptom,simple_symptom
+Нерв оголился.,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Из десны потек гной.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8303,0.7558,True,simple_symptom,simple_symptom
+рот не открыть,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6818,0.5105,True,unclassified,
+Зуб шатается.,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Опухоль на десне выросла.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.837,0.7657,True,simple_symptom,simple_symptom
+Зуб сломался.,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Зуб ноет жутко.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9469,0.9254,True,simple_symptom,simple_symptom
+сын 4 года упал с качелей зуб шатается сильно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8898,0.8391,True,unclassified,
+дочке 6 лет стукнулась о стол щека опухла и десна кровит,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9407,0.9162,True,simple_symptom,simple_symptom
+"Малышу 2 года, налетел на угол, кровь идет изо рта.",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6735,0.517,False,simple_symptom,simple_symptom
+ребёнок 5 лет с самоката зуб треснул болит жевать,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7705,0.6779,True,simple_symptom,simple_symptom
+внуку 3 года упал во дворе передний зуб шатается,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8694,0.8156,True,unclassified,
+девочка 7 лет ударилась челюстью десна разорвана срочно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9068,0.8688,True,simple_symptom,simple_symptom
+"Пацану 8 лет в драке сломали зуб, челюсть ноет.",anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"Ребенок 4 года с горки выбил зуб, помогите.",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.3722,0.0986,False,unclassified,
+сынок 5 лет бегал налетел на дверь губа разбита зуб болит,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8012,0.7176,True,simple_symptom,simple_symptom
+"Мальчику 3 года ударили игрушкой по зубам, зуб шатается, плачет.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7529,0.6285,True,unclassified,
+"Дочке 6 лет, упала с велосипеда, в челюсти хруст.",anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6318,0.4311,True,unclassified,
+ребят ребенок 9 лет на турнике зуб сломал десна в крови,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8453,0.7847,True,simple_symptom,simple_symptom
+"После укола опухли губы, не проходит.",anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6263,0.4439,False,simple_symptom,simple_symptom
+После вчерашнего лечения сильно кровит десна.,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9089,0.8595,True,simple_symptom,simple_symptom
+отек на щеке огромный после лечения,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+"Помогите, аллергия на анестезию, сыпь по лицу.",anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.4752,0.2739,False,unclassified,
+Кровь из лунки хлещет третий час,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6867,0.5397,False,simple_symptom,simple_symptom
+губа распухла как колбаса от укола,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4681,0.1871,False,unclassified,
+"Аллергия на обезболивающее, зудит во рту.",anamnesis,anamnesis,defer,low_confidence,False,False,False,0.3307,0.0137,False,simple_symptom,simple_symptom
+десна кровит не перестает после чистки,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8947,0.8425,True,simple_symptom,simple_symptom
+Щека опухла до глаза срочно,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+"После анестезии аллергия, лицо покраснело.",anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.4349,0.186,False,unclassified,
+Кровотечение после удаления не останавливается.,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.5969,0.3277,False,simple_symptom,simple_symptom
+Сильный отек на пол-лица.,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4758,0.2132,False,unclassified,
+"Аллергия на препарат, во рту ужасно чешется.",anamnesis,unsupported,defer,sparse_dense_disagree,False,False,False,0.4247,0.1948,False,unclassified,
+Кровь из десны течет уже несколько часов.,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+У ребенка после укола в десну вырос отек.,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6959,0.5388,False,simple_symptom,simple_symptom
+ПОСЛЕ УДАЛЕНИЯ ДЕСНА КРОВИТ 2 ДНЯ НОРМАЛЬНО?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8205,0.7261,True,simple_symptom,simple_symptom
+после чистки зубы чувствит к холоду так надо?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7879,0.6787,True,unclassified,
+пломбу поставили щека распирает это ок,anamnesis,faq,defer,faq_anamnesis_borderline,False,False,False,0.3507,0.0332,False,unclassified,
+после импланта температура держится норма ли,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.687,0.4757,True,unclassified,
+каналы чистили челюсть ноет 5 дней должно быть?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7237,0.5167,True,simple_symptom,simple_symptom
+кронку надели язык онемел это нормально,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5261,0.3275,True,unclassified,
+после отбеливания десны белые норма?,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6019,0.2985,False,simple_symptom,simple_symptom
+зуб мудрости удалили дыра болит при еде ок ли,anamnesis,faq,defer,faq_anamnesis_borderline,False,False,False,0.4416,0.0266,False,simple_symptom,simple_symptom
+пломба свежая а зуб стучит от сладкого это норма,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5957,0.4091,True,unclassified,
+после анестезии губа дергается так и должно?,anamnesis,faq,defer,faq_anamnesis_borderline,False,False,False,0.4303,0.0565,False,unclassified,
+протез поставили прикус хреновый нормально ли,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5887,0.3526,True,unclassified,
+удалили нерв десна опухла норма после 3 дней,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.817,0.7077,True,simple_symptom,simple_symptom
+после полировки зубы ноют на жаре это окей,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5164,0.1916,True,unclassified,
+имплант вкрутили щека горячая должна так быть?,anamnesis,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4592,0.0565,False,unclassified,
+пломбу менять стали язык прикусил больно норма,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.5736,0.3993,False,simple_symptom,simple_symptom
+после удаления флюса челюсть ноет норма ли,anamnesis,anamnesis,accept,rule:anamnesis:hits=3,True,False,False,0.8,0.0,True,simple_symptom,simple_symptom
+коронку поставили вкус металла во рту ок?,anamnesis,faq,defer,faq_anamnesis_borderline,False,False,False,0.4118,0.0847,False,unclassified,
+чистили камень десны чешутся это нормально,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.843,0.7656,True,simple_symptom,simple_symptom
+после штифта зуб трещит при жевании должно?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7568,0.6258,True,unclassified,
+это нормально что после пломбы ноет зуб уже неделю,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+Десна кровит после удаления зуба норма или нет?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8728,0.7795,True,simple_symptom,simple_symptom
+после чистки зубы болят от горячего это ок,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+щека опухла после лечения каналов должна так быть?,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+Коронку поставили а жую давит внутри странно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6526,0.4891,True,unclassified,
+температура 37 после импланта нормально держится,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.789,0.6619,True,unclassified,
+белый налет на десне после удаления это норма,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6801,0.4915,False,simple_symptom,simple_symptom
+зуб шатается после пломбы что за ерунда,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+онемение щеки осталось после анестезии долго,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.4836,0.2208,False,unclassified,
+флюс опять надулся через день после визита,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.5728,0.3926,False,simple_symptom,simple_symptom
+дырка увеличилась после пломбы нормально ли,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7131,0.5427,True,unclassified,
+челюсть ноет после протеза жевать неудобно,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9685,0.9503,True,simple_symptom,simple_symptom
+после отбеливания зубы чувствительные к сладкому,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.7992,0.6705,True,unclassified,
+язык онемел после сверления зуба это ок,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5389,0.3219,True,unclassified,
+слюни текут после новой пломбы странно,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4321,0.1103,False,unclassified,
+запах из рта после чистки не пропал норма?,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5144,0.3179,True,unclassified,
+голова болит после долгой процедуры у дантиста,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4078,0.0435,False,simple_symptom,simple_symptom
+ухо стреляет после лечения жевательного зуба,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,unclassified,
+шея затекла после коронки поставили вчера,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.6342,0.4506,True,unclassified,
+кожа на лице чешется после визита к стоматологу,anamnesis,faq,defer,sparse_dense_disagree,False,False,False,0.4047,0.0552,False,unclassified,
+когда к петрову можно записаться,faq,booking,accept,general_confident,False,False,False,0.9581,0.9434,False,simple_booking,simple_booking
+Запиши к Ивановой на эту неделю,faq,booking,accept,general_confident,False,False,False,0.8526,0.777,False,simple_booking,simple_booking
+сидоров андрей петрович свободен завтра?,faq,booking,defer,low_confidence,False,False,False,0.4696,0.2297,False,unclassified,
+Василевская принимает по вечерам?,faq,faq,accept,general_confident,False,False,False,0.6334,0.4809,True,unclassified,
+к козлову на понедельник запишитесь,faq,booking,accept,general_confident,False,False,False,0.9217,0.8901,False,simple_booking,simple_booking
+Смирнова елена вальевна когда есть окно,faq,faq,defer,low_confidence,False,False,False,0.4446,0.1773,False,unclassified,
+попов свободен сегодня после обеда,faq,booking,defer,low_confidence,False,False,False,0.4696,0.1617,False,unclassified,
+Морозова принимает по утрам?,faq,faq,defer,low_confidence,False,False,False,0.6031,0.442,False,unclassified,
+запиши к новожилову срочно но не сегодня,faq,booking,accept,general_confident,False,False,False,0.8125,0.6787,False,simple_booking,simple_booking
+Николаев Сергей Иванович график какой,faq,faq,accept,general_confident,False,False,False,0.723,0.5503,True,unclassified,
+к светлановой можно на 15 число,faq,booking,defer,low_confidence,False,False,False,0.4395,0.1656,False,unclassified,
+Волков павел анатольевич принимает детей,faq,faq,accept,general_confident,False,False,False,0.7905,0.6914,True,unclassified,
+орлова мария свободна в пятницу,faq,,defer,tag_policy:simple_booking,False,False,True,0.6505,0.4944,False,simple_booking,simple_booking
+Запись к Григорьеву на завтра утро,faq,,defer,complexity:booking_doctor_name,False,True,False,0.0,0.0,False,booking_doctor_name,booking_doctor_name
+леонтьева анна сергеевна когда выходной,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.3477,0.121,False,unclassified,
+к баранову на вечер можно ли,faq,booking,accept,general_confident,False,False,False,0.6373,0.4399,False,unclassified,
+Федорова Ольга Петровна принимает в субботу?,faq,faq,accept,general_confident,False,False,False,0.6425,0.4669,True,unclassified,
+михайлов когда свободен для записи,faq,booking,accept,general_confident,False,False,False,0.813,0.7366,False,simple_booking,simple_booking
+записаться к степанову на след неделю,faq,booking,accept,general_confident,False,False,False,0.9435,0.9147,False,simple_booking,simple_booking
+к петрову можно завтра записаться,faq,booking,accept,general_confident,False,False,False,0.9772,0.9682,False,simple_booking,simple_booking
+Свободно ли у Ивановой на этой неделе?,faq,,defer,tag_policy:simple_booking,False,False,True,0.7229,0.5947,False,simple_booking,simple_booking
+запиши к сидорову андрею петровичу,faq,,defer,tag_policy:simple_booking,False,False,True,0.6688,0.4787,False,simple_booking,simple_booking
+к козловой на вторник слот есть,faq,booking,accept,general_confident,False,False,False,0.6838,0.5668,False,unclassified,
+Смирнов свободен после 18?,faq,booking,defer,sparse_dense_disagree,False,False,False,0.4142,0.2144,False,unclassified,
+помогите записаться к поповой срочно,faq,booking,accept,general_confident,False,False,False,0.9026,0.8627,False,simple_booking,simple_booking
+кузнецова юлия викторовна когда принемает,faq,faq,defer,low_confidence,False,False,False,0.4676,0.2545,False,unclassified,
+Морозов на завтра есть место?,faq,booking,accept,general_confident,False,False,False,0.7006,0.5397,False,unclassified,
+запись к новожилову на вечер,faq,booking,accept,general_confident,False,False,False,0.8739,0.8203,False,simple_booking,simple_booking
+к григорьевой можно зписаться?,faq,booking,accept,general_confident,False,False,False,0.6621,0.5104,False,unclassified,
+ЛЕЧУ К ВАСИЛЬЕВУЙ ЧТО СКАЗАЛ?,faq,faq,defer,sparse_dense_disagree,False,False,False,0.5079,0.2096,False,unclassified,
+свободные дни у орловой покажите,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.3661,0.0756,False,simple_booking,simple_booking
+к степанову на 20 число меня запишите,faq,booking,accept,general_confident,False,False,False,0.9215,0.8926,False,simple_booking,simple_booking
+Павлова принимает детей?,faq,faq,accept,general_confident,False,False,False,0.8384,0.7696,True,unclassified,
+к беловой анне сергеевне слоты,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.506,0.3247,False,unclassified,
+завтра к романова свободна?,faq,,defer,tag_policy:simple_booking,False,False,True,0.7295,0.597,False,simple_booking,simple_booking
+запишите ребенка к егорову,faq,booking,accept,general_confident,False,False,False,0.8494,0.7793,False,simple_booking,simple_booking
+к лебедевой на утро пятницы,faq,booking,defer,low_confidence,False,False,False,0.5429,0.344,False,unclassified,
+ЧТО У ФЕДОРОВОЙ ГРАФИК?,faq,faq,defer,low_confidence,False,False,False,0.398,0.0214,False,unclassified,
+зуб ноет скоко запишитесь на завтра,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+Щека опухла срочно врача и цена вырывания,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor;symptom_price
+дырка в переднем зубе можно записаться в пятницу,anamnesis,booking,accept,general_confident,False,False,False,0.8337,0.7047,False,simple_booking,simple_booking
+флюс на десне запишусь сегодня утром,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+ноет жевательный зуб сколько стоит почистить и когда свободно,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking;symptom_price
+ребенку 7 лет зуб разболелся срочно прием,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+вчера ударился зуб кровит цена лечения,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+Болит сильно внутри зуба запишитесь на вечер,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+скоко вылечить зуб с дыркой и на когда запись,anamnesis,faq,defer,low_confidence,False,False,False,0.3862,0.0903,False,simple_booking,simple_booking
+опухла щека от зуба можно срочно к вам,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+зубак ноет третий день цена пломбы,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+треснул зуб грызя орех запишитесь завтра,anamnesis,booking,defer,low_confidence,False,False,False,0.6261,0.4073,False,simple_booking,simple_booking
+помагите зуб болит скока стоит удалить,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.7085,0.5108,False,simple_symptom,simple_symptom
+флюс у мамы срочно время приема,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+дырка большая ноет тихо на понедельник запись,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+зубы кровоточат после еды цена осмотра,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+подростку зуб сломался можно вечером,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.5367,0.2893,True,unclassified,
+болит десна сильно и опухло срочно пломбировать,anamnesis,anamnesis,accept,rule:anamnesis:hits=3,True,False,False,0.8,0.0,True,simple_symptom,simple_symptom
+сколько чистка зуба который ноет,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+бабушке зуб разболелся запишитесь на утро,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+зуб ноет уже неделю скока удалить,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4743,0.1184,False,simple_symptom,simple_symptom
+дырка в зубе болит запишитесь меня на завтра,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+помогите зуб с корнем ноет цена какая,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+ребенку 7 лет зуб разболелся можно на вечер,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4196,0.0659,False,simple_symptom,simple_symptom
+флюс на зубе скока стоит лечить срочно,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+ночью зуб заболел запишусь к вам завтра,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+опухла десна после яблока сколько пломба,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+зубы кровоточат надо срочно к врачу цена,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor;symptom_price
+ноет передний зуб запишитесь на понедельник,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+мне 60 лет зуб сломался скока вылечить,anamnesis,faq,defer,low_confidence,False,False,False,0.6178,0.3024,False,unclassified,
+флюс раздуло щеку бежать к вам можно,anamnesis,anamnesis,defer,low_confidence,False,False,False,0.4372,0.2386,False,simple_symptom,simple_symptom
+болит жевательный зуб после супа записаться,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+дочке зуб ноет третий день срочно цена,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+удар в зуб вчера болит скока удаление,anamnesis,faq,defer,low_confidence,False,False,False,0.61,0.348,False,simple_symptom,simple_symptom
+десна гноится зуб ноет запишусь на среду,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+зуб с дыркой ноет не сплю срочно,anamnesis,anamnesis,accept,rule:anamnesis:hits=2,True,False,False,0.7,0.0,True,simple_symptom,simple_symptom
+после ореха зуб заболел цена лечения,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_price
+отцу болит корень зуба можно завтра утром,anamnesis,booking,defer,low_confidence,False,False,False,0.5356,0.1398,False,simple_symptom,simple_symptom
+щека в пол лица флюс запишитесь меня,anamnesis,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_booking
+КРОВЬ ИЗ ДЕСНЫ,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.9379,0.9042,True,simple_symptom,simple_symptom
+ноет жеватель,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+боль пронзает,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+дырка растет,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+десна болитт,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+ОПУХЛО ВСЕ,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+пульсирует сильно,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+сломала зуб,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+жжение десны,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+кровоточит дырка,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+боль в корне,anamnesis,,defer,tag_policy:simple_symptom,False,False,True,0.6606,0.506,False,simple_symptom,simple_symptom
+флюз прорвало,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+зуби крошатся,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+болит сильно,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+КРОВЬ ТЕЧЁТ,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+флюс опух,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+гной из зуба,anamnesis,anamnesis,accept,anamnesis_confident,False,False,False,0.8278,0.7563,True,simple_symptom,simple_symptom
+боль ночью,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+дырка большая,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+рот горитт,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+язык онемел,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+челюсть дергается,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+десна кровит,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+нёбо болит,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom
+вкус гнилой,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+опухоль выросла,anamnesis,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_symptom

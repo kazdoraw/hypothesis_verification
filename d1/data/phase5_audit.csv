@@ -1,0 +1,579 @@
+candidate_id,scenario,text,route_domain,subtype,urgency,ml_predicted_label,ml_predicted_conf,ml_gold_conf,audit_decision,audit_reason
+p5_001,simple_faq_clean,сколько вставка штифта,faq,price,normal,faq,0.7517,0.7517,accept,ml_agrees
+p5_002,simple_faq_clean,стоимость удаления камня,faq,price,normal,faq,0.8889,0.8889,accept,ml_agrees
+p5_003,simple_faq_clean,СКОЛЬКО ИМПЛАНТ,faq,price,normal,faq,0.9458,0.9458,accept,ml_agrees
+p5_004,simple_faq_clean,замена пломбы скока,faq,price,normal,faq,0.8882,0.8882,accept,ml_agrees
+p5_005,simple_faq_clean,до скольки в пятницу,faq,schedule,normal,faq,0.7015,0.7015,accept,ml_agrees
+p5_006,simple_faq_clean,открыто ли воскресенье,faq,schedule,normal,faq,0.6346,0.6346,accept,ml_agrees
+p5_007,simple_faq_clean,время работы будни,faq,schedule,normal,faq,0.5472,0.5472,accept,ml_agrees
+p5_008,simple_faq_clean,какие часы приема,faq,schedule,normal,faq,0.4656,0.4656,accept,ml_agrees
+p5_009,simple_faq_clean,обеденный перерыв когда,faq,schedule,normal,booking,0.425,0.2461,accept,ml_weak_can_learn
+p5_010,simple_faq_clean,выходные дни график,faq,schedule,normal,faq,0.5277,0.5277,accept,ml_agrees
+p5_011,simple_faq_clean,адрес клиники точный,faq,location,normal,faq,0.8092,0.8092,accept,ml_agrees
+p5_012,simple_faq_clean,как доехать автобусом,faq,location,normal,faq,0.6191,0.6191,accept,ml_agrees
+p5_013,simple_faq_clean,где находитесь метро,faq,location,normal,faq,0.6722,0.6722,accept,ml_agrees
+p5_014,simple_faq_clean,улица и дом клиники,faq,location,normal,faq,0.5454,0.5454,accept,ml_agrees
+p5_015,simple_faq_clean,на карте покажите,faq,location,normal,unsupported,0.5142,0.3391,accept,ml_weak_can_learn
+p5_016,simple_faq_clean,район где стоите,faq,location,normal,faq,0.4958,0.4958,accept,ml_agrees
+p5_017,simple_faq_clean,гарантия на лечение сколько,faq,general,normal,faq,0.8758,0.8758,accept,ml_agrees
+p5_018,simple_faq_clean,Какие пломбы используете?,faq,general,normal,faq,0.7672,0.7672,accept,ml_agrees
+p5_019,simple_faq_clean,подготовка к импланту,faq,general,normal,faq,0.5097,0.5097,accept,ml_agrees
+p5_020,simple_faq_clean,виды отбеливания какие,faq,general,normal,faq,0.8395,0.8395,accept,ml_agrees
+p5_021,simple_faq_clean,оборудование какое новое,faq,general,normal,faq,0.6323,0.6323,accept,ml_agrees
+p5_022,simple_faq_clean,протезы съемные есть,faq,general,normal,anamnesis,0.5036,0.3801,accept,ml_weak_can_learn
+p5_023,simple_faq_clean,анестезия безболезненная,faq,general,normal,faq,0.5531,0.5531,accept,ml_agrees
+p5_024,simple_faq_clean,сколько сеансов чистка,faq,general,normal,faq,0.8947,0.8947,accept,ml_agrees
+p5_025,simple_faq_clean,рентген на месте делают,faq,general,normal,faq,0.7114,0.7114,accept,ml_agrees
+p5_026,simple_faq_clean,пломбировка каналов цена,faq,price,normal,faq,0.7861,0.7861,accept,ml_agrees
+p5_027,simple_faq_clean,керамические коронки сколько,faq,price,normal,faq,0.8266,0.8266,accept,ml_agrees
+p5_028,simple_faq_clean,съемный протез цена,faq,price,normal,faq,0.7727,0.7727,accept,ml_agrees
+p5_029,simple_faq_clean,металлокерамика зуба цена,faq,price,normal,faq,0.7272,0.7272,accept,ml_agrees
+p5_030,simple_faq_clean,гигиена полости рта скока,faq,price,normal,faq,0.8132,0.8132,accept,ml_agrees
+p5_031,simple_faq_clean,акции на лечение есть,faq,price,normal,faq,0.6737,0.6737,accept,ml_agrees
+p5_032,simple_faq_clean,понедельник с какого часа,faq,schedule,normal,booking,0.5343,0.2803,accept,ml_weak_can_learn
+p5_033,simple_faq_clean,летний график работы,faq,schedule,normal,faq,0.5659,0.5659,accept,ml_agrees
+p5_034,simple_faq_clean,закрыто ли в жару,faq,schedule,normal,faq,0.4241,0.4241,accept,ml_agrees
+p5_035,simple_faq_clean,дети с какого возраста,faq,schedule,normal,faq,0.7876,0.7876,accept,ml_agrees
+p5_036,simple_faq_clean,ночь накануне открыты,faq,schedule,normal,anamnesis,0.4494,0.1447,accept,ml_weak_can_learn
+p5_037,simple_faq_clean,кабинеты по скольку работают,faq,schedule,normal,faq,0.8715,0.8715,accept,ml_agrees
+p5_038,simple_faq_clean,маршрут от центра,faq,location,normal,faq,0.6361,0.6361,accept,ml_agrees
+p5_039,simple_faq_clean,телефон для ориентира,faq,location,normal,booking,0.3356,0.2472,accept,ml_weak_can_learn
+p5_040,simple_faq_clean,ближайший остановка какая,faq,location,normal,unsupported,0.6158,0.2478,accept,ml_weak_can_learn
+p5_041,simple_faq_clean,вход с какой стороны,faq,location,normal,faq,0.6775,0.6775,accept,ml_agrees
+p5_042,simple_faq_clean,фото фасада покажите,faq,location,normal,unsupported,0.4332,0.2354,accept,ml_weak_can_learn
+p5_043,simple_faq_clean,район спальный или центр,faq,location,normal,faq,0.4826,0.4826,accept,ml_agrees
+p5_044,simple_faq_clean,навигатор ведет точно,faq,location,normal,unsupported,0.429,0.3166,accept,ml_weak_can_learn
+p5_045,simple_faq_clean,синий забор или красный,faq,location,normal,faq,0.4081,0.4081,accept,ml_agrees
+p5_046,simple_faq_clean,костные импланты ставят,faq,general,normal,faq,0.462,0.462,accept,ml_agrees
+p5_047,simple_faq_clean,после пломбы что нельзя,faq,general,normal,faq,0.5931,0.5931,accept,ml_agrees
+p5_048,simple_faq_clean,виниры какие материалы,faq,general,normal,faq,0.625,0.625,accept,ml_agrees
+p5_049,simple_faq_clean,рентген цифровой или пленка,faq,general,normal,faq,0.8333,0.8333,accept,ml_agrees
+p5_050,simple_faq_clean,детская стоматология услуги,faq,general,normal,faq,0.7885,0.7885,accept,ml_agrees
+p5_051,simple_faq_clean,гарантия на отбеливание,faq,general,normal,faq,0.6934,0.6934,accept,ml_agrees
+p5_052,simple_faq_clean,процедура установки брекетов,faq,general,normal,faq,0.7524,0.7524,accept,ml_agrees
+p5_053,simple_faq_clean,сколько держится пломба,faq,general,normal,faq,0.708,0.708,accept,ml_agrees
+p5_054,simple_faq_clean,терапевт или хирург нужен,faq,general,normal,faq,0.6862,0.6862,accept,ml_agrees
+p5_055,simple_faq_clean,цена на мостовидный протез,faq,price,normal,faq,0.7284,0.7284,accept,ml_agrees
+p5_056,simple_faq_clean,удаление зуба скока стоит,faq,price,normal,faq,0.9484,0.9484,accept,ml_agrees
+p5_057,simple_faq_clean,зубной налет чистка цена,faq,price,normal,faq,0.6217,0.6217,accept,ml_agrees
+p5_058,simple_faq_clean,среда вечерний прием,faq,schedule,normal,booking,0.5949,0.1428,accept,ml_weak_can_learn
+p5_059,simple_faq_clean,зимой график меняется,faq,schedule,normal,booking,0.3792,0.2709,accept,ml_weak_can_learn
+p5_060,simple_faq_clean,открытие в 8 утра,faq,schedule,normal,anamnesis,0.3104,0.2901,accept,ml_weak_can_learn
+p5_061,simple_faq_clean,троллейбусом номер какой,faq,location,normal,faq,0.6256,0.6256,accept,ml_agrees
+p5_062,simple_faq_clean,парковка бесплатная ли,faq,location,normal,faq,0.5797,0.5797,accept,ml_agrees
+p5_063,simple_faq_clean,как найти вход в подвал,faq,location,normal,faq,0.6432,0.6432,accept,ml_agrees
+p5_064,simple_faq_clean,от метро 5 минут пешком,faq,location,normal,unsupported,0.4583,0.2449,accept,ml_weak_can_learn
+p5_065,simple_faq_clean,Работаете ли после 20:00?,faq,schedule,normal,faq,0.733,0.733,accept,ml_agrees
+p5_066,simple_faq_clean,Сколько пломбирование?,faq,price,normal,faq,0.8748,0.8748,accept,ml_agrees
+p5_067,simple_faq_clean,До какого времени в пятницу?,faq,schedule,normal,faq,0.5181,0.5181,accept,ml_agrees
+p5_068,simple_faq_clean,Перерыв на обед есть?,faq,schedule,normal,booking,0.3516,0.325,accept,ml_weak_can_learn
+p5_069,simple_faq_clean,Ближайший метро к вам?,faq,location,normal,faq,0.5289,0.5289,accept,ml_agrees
+p5_070,simple_faq_clean,Рабочие дни недели?,faq,schedule,normal,faq,0.5281,0.5281,accept,ml_agrees
+p5_071,simple_faq_clean,Скока ультразвук чистка?,faq,price,normal,faq,0.8473,0.8473,accept,ml_agrees
+p5_072,simple_faq_clean,Открытие в понедельник во сколько?,faq,schedule,normal,faq,0.7574,0.7574,accept,ml_agrees
+p5_073,simple_faq_clean,Точный адрес с индексом?,faq,location,normal,faq,0.6812,0.6812,accept,ml_agrees
+p5_074,simple_faq_clean,Гарантия на пломбы сколько?,faq,general,normal,faq,0.8753,0.8753,accept,ml_agrees
+p5_075,simple_faq_clean,Какие услуги предлагаете?,faq,general,normal,faq,0.6122,0.6122,accept,ml_agrees
+p5_076,simple_faq_clean,Подготовка к импланту нужна?,faq,general,normal,faq,0.6663,0.6663,accept,ml_agrees
+p5_077,simple_faq_clean,Сколько стоит коронка?,faq,price,normal,faq,0.9347,0.9347,accept,ml_agrees
+p5_078,simple_faq_clean,Закрытие в праздники?,faq,schedule,normal,faq,0.6682,0.6682,accept,ml_agrees
+p5_079,simple_faq_clean,Ваш телефон для справок?,faq,general,normal,faq,0.5637,0.5637,accept,ml_agrees
+p5_080,simple_faq_clean,Какие акции сейчас?,faq,price,normal,faq,0.6622,0.6622,accept,ml_agrees
+p5_081,simple_faq_clean,Прием в обеденное время?,faq,schedule,normal,booking,0.4616,0.3257,accept,ml_weak_can_learn
+p5_082,simple_faq_clean,Какой вход в клинику?,faq,location,normal,faq,0.8374,0.8374,accept,ml_agrees
+p5_083,simple_faq_clean,Сколько консультация?,faq,price,normal,faq,0.7715,0.7715,accept,ml_agrees
+p5_084,simple_faq_clean,График на декабрь?,faq,schedule,normal,faq,0.3822,0.3822,accept,ml_agrees
+p5_085,simple_faq_clean,Скока рентген?,faq,price,normal,faq,0.9522,0.9522,accept,ml_agrees
+p5_086,simple_faq_clean,Работаете допоздна?,faq,schedule,normal,faq,0.4115,0.4115,accept,ml_agrees
+p5_087,simple_faq_clean,Гарантия на протезы?,faq,general,normal,faq,0.6941,0.6941,accept,ml_agrees
+p5_088,simple_faq_clean,Цены на детей?,faq,price,normal,faq,0.8664,0.8664,accept,ml_agrees
+p5_089,simple_faq_clean,Понедельник с обеда?,faq,schedule,normal,booking,0.5947,0.1384,accept,ml_weak_can_learn
+p5_090,simple_faq_clean,Рядом с каким магазином?,faq,location,normal,unsupported,0.6847,0.2456,accept,ml_weak_can_learn
+p5_091,simple_faq_clean,Выходной в четверг?,faq,schedule,normal,faq,0.4487,0.4487,accept,ml_agrees
+p5_092,simple_faq_clean,Автобусом как до вас?,faq,location,normal,faq,0.6005,0.6005,accept,ml_agrees
+p5_093,simple_faq_clean,Подготовка к чистке?,faq,general,normal,faq,0.5026,0.5026,accept,ml_agrees
+p5_094,simple_faq_clean,Закрыто 8 марта?,faq,schedule,normal,faq,0.6292,0.6292,accept,ml_agrees
+p5_095,simple_faq_clean,Фото клиники можно?,faq,location,normal,faq,0.6342,0.6342,accept,ml_agrees
+p5_096,simple_faq_clean,Какие врачи есть?,faq,general,normal,faq,0.8291,0.8291,accept,ml_agrees
+p5_097,simple_faq_clean,Сколько стоит мост?,faq,price,normal,faq,0.9631,0.9631,accept,ml_agrees
+p5_098,simple_faq_clean,От метро сколько минут?,faq,location,normal,faq,0.6567,0.6567,accept,ml_agrees
+p5_099,simple_faq_clean,Скока съемный протез?,faq,price,normal,faq,0.8448,0.8448,accept,ml_agrees
+p5_100,simple_faq_clean,Лето график меняется?,faq,schedule,normal,faq,0.4837,0.4837,accept,ml_agrees
+p5_101,simple_faq_clean,Табличка на входе есть?,faq,location,normal,faq,0.5099,0.5099,accept,ml_agrees
+p5_102,simple_faq_clean,Виды чистки?,faq,general,normal,faq,0.6936,0.6936,accept,ml_agrees
+p5_103,simple_faq_clean,Цены обновили?,faq,price,normal,faq,0.752,0.752,accept,ml_agrees
+p5_104,simple_faq_clean,С 12 до 14 прием?,faq,schedule,normal,faq,0.4891,0.4891,accept,ml_agrees
+p5_105,simple_faq_clean,Яндекс карты ссылка?,faq,location,normal,faq,0.4761,0.4761,accept,ml_agrees
+p5_106,simple_faq_clean,Сколько сеанс отбеливания?,faq,price,normal,faq,0.9098,0.9098,accept,ml_agrees
+p5_107,simple_faq_clean,Пятница вечером открыто?,faq,schedule,normal,faq,0.4129,0.4129,accept,ml_agrees
+p5_108,simple_faq_clean,Лифт в здании?,faq,location,normal,faq,0.5006,0.5006,accept,ml_agrees
+p5_109,simple_faq_clean,Какие сертификаты?,faq,general,normal,faq,0.5943,0.5943,accept,ml_agrees
+p5_110,simple_faq_clean,Пломба световая скока?,faq,price,normal,faq,0.7634,0.7634,accept,ml_agrees
+p5_111,simple_faq_clean,Зимой короче часы?,faq,schedule,normal,faq,0.3173,0.3173,accept,ml_agrees
+p5_112,simple_faq_clean,Парковка под окнами?,faq,location,normal,faq,0.4796,0.4796,accept,ml_agrees
+p5_113,simple_faq_clean,Подготовка к протезу?,faq,general,normal,faq,0.5196,0.5196,accept,ml_agrees
+p5_114,simple_faq_clean,Удаление мудрости цена?,faq,price,normal,faq,0.9248,0.9248,accept,ml_agrees
+p5_115,simple_faq_clean,Суббота полдня?,faq,schedule,normal,unsupported,0.3263,0.2998,accept,ml_weak_can_learn
+p5_116,simple_faq_clean,Второй этаж клиника?,faq,location,normal,faq,0.5633,0.5633,accept,ml_agrees
+p5_117,simple_faq_clean,Акции на чистку?,faq,price,normal,faq,0.5185,0.5185,accept,ml_agrees
+p5_118,simple_faq_clean,Новый год график?,faq,schedule,normal,faq,0.5347,0.5347,accept,ml_agrees
+p5_119,simple_faq_clean,Трамвай до вас ходит?,faq,location,normal,faq,0.6399,0.6399,accept,ml_agrees
+p5_120,simple_faq_clean,Какие аппараты используете?,faq,general,normal,faq,0.6084,0.6084,accept,ml_agrees
+p5_121,simple_booking_clean,Можно к стоматологу в субботу?,booking,new_appointment,normal,faq,0.6227,0.3303,accept,ml_weak_can_learn
+p5_122,simple_booking_clean,на 15 число свободно?,booking,new_appointment,normal,booking,0.6947,0.6947,accept,ml_agrees
+p5_123,simple_booking_clean,ЗПИСАТЬСЯ К ВРАЧУ,booking,new_appointment,normal,booking,0.7714,0.7714,accept,ml_agrees
+p5_124,simple_booking_clean,для ребенка на вечерок,booking,new_appointment,normal,booking,0.3563,0.3563,accept,ml_agrees
+p5_125,simple_booking_clean,хочу к терапевту утром,booking,new_appointment,normal,booking,0.6637,0.6637,accept,ml_agrees
+p5_126,simple_booking_clean,можно на 11 утра?,booking,new_appointment,normal,booking,0.7602,0.7602,accept,ml_agrees
+p5_127,simple_booking_clean,Запиши жену на понедельник,booking,new_appointment,normal,booking,0.9166,0.9166,accept,ml_agrees
+p5_128,simple_booking_clean,для мамы на утро,booking,new_appointment,normal,unsupported,0.3549,0.2872,accept,ml_weak_can_learn
+p5_129,simple_booking_clean,хочу попасть в пятницу,booking,new_appointment,normal,booking,0.765,0.765,accept,ml_agrees
+p5_130,simple_booking_clean,Запись на 20 число,booking,new_appointment,normal,booking,0.8643,0.8643,accept,ml_agrees
+p5_131,simple_booking_clean,можно ребенку после обеда,booking,new_appointment,normal,booking,0.432,0.432,accept,ml_agrees
+p5_132,simple_booking_clean,ХОЧУ НА ПРИЕМ СЕГОДНЯ,booking,new_appointment,normal,booking,0.7432,0.7432,accept,ml_agrees
+p5_133,simple_booking_clean,для мужа на вечер,booking,new_appointment,normal,booking,0.391,0.391,accept,ml_agrees
+p5_134,simple_booking_clean,свободно ли в 14:00,booking,new_appointment,normal,booking,0.6267,0.6267,accept,ml_agrees
+p5_135,simple_booking_clean,на пятницу после 16,booking,new_appointment,normal,booking,0.6264,0.6264,accept,ml_agrees
+p5_136,simple_booking_clean,сдвиньте мою запись позже,booking,reschedule,normal,booking,0.965,0.965,accept,ml_agrees
+p5_137,simple_booking_clean,Мою запись сдвинуть на 17,booking,reschedule,normal,booking,0.914,0.914,accept,ml_agrees
+p5_138,simple_booking_clean,измени дату приема,booking,reschedule,normal,booking,0.6576,0.6576,accept,ml_agrees
+p5_139,simple_booking_clean,сдвиг на утро вторника,booking,reschedule,normal,booking,0.8367,0.8367,accept,ml_agrees
+p5_140,simple_booking_clean,мою на вечерок перекиньте,booking,reschedule,normal,booking,0.7877,0.7877,accept,ml_agrees
+p5_141,simple_booking_clean,Изменить на 10 число,booking,reschedule,normal,booking,0.74,0.74,accept,ml_agrees
+p5_142,simple_booking_clean,Можно позже сделать?,booking,reschedule,normal,booking,0.7129,0.7129,accept,ml_agrees
+p5_143,simple_booking_clean,сдвиг по времени,booking,reschedule,normal,booking,0.6878,0.6878,accept,ml_agrees
+p5_144,simple_booking_clean,Перенос на 15:00,booking,reschedule,normal,booking,0.8816,0.8816,accept,ml_agrees
+p5_145,simple_booking_clean,снимаю запись на среду,booking,cancel,normal,booking,0.8983,0.8983,accept,ml_agrees
+p5_146,simple_booking_clean,Не приду в пятницу,booking,cancel,normal,booking,0.8341,0.8341,accept,ml_agrees
+p5_147,simple_booking_clean,Отмена на 14:00,booking,cancel,normal,booking,0.8973,0.8973,accept,ml_agrees
+p5_148,simple_booking_clean,Отменить на понедельник,booking,cancel,normal,booking,0.9457,0.9457,accept,ml_agrees
+p5_149,simple_booking_clean,снять прием вечером,booking,cancel,normal,booking,0.5928,0.5928,accept,ml_agrees
+p5_150,simple_booking_clean,Не нужно на завтра,booking,cancel,normal,booking,0.9045,0.9045,accept,ml_agrees
+p5_151,simple_booking_clean,СНИМАЮ НА СУББОТУ,booking,cancel,normal,booking,0.5877,0.5877,accept,ml_agrees
+p5_152,simple_booking_clean,отмените на 20 число,booking,cancel,normal,booking,0.9083,0.9083,accept,ml_agrees
+p5_153,simple_booking_clean,моя запись не актуальна,booking,cancel,normal,booking,0.8189,0.8189,accept,ml_agrees
+p5_154,simple_booking_clean,убрать из графика,booking,cancel,normal,booking,0.3726,0.3726,accept,ml_agrees
+p5_155,simple_booking_clean,не пойду к врачу завтра,booking,cancel,normal,booking,0.7839,0.7839,accept,ml_agrees
+p5_156,simple_booking_clean,снимите на четверг,booking,cancel,normal,booking,0.7491,0.7491,accept,ml_agrees
+p5_157,simple_booking_clean,запись на пятницу убрать,booking,cancel,normal,booking,0.8891,0.8891,accept,ml_agrees
+p5_158,simple_booking_clean,НЕТ ВРЕМЕНИ НА СРЕДУ,booking,cancel,normal,booking,0.6043,0.6043,accept,ml_agrees
+p5_159,simple_booking_clean,отмена для жены,booking,cancel,normal,booking,0.6725,0.6725,accept,ml_agrees
+p5_160,simple_booking_clean,снять на вечер,booking,cancel,normal,booking,0.6439,0.6439,accept,ml_agrees
+p5_161,simple_booking_clean,запишись меня на вечер пятницы,booking,new_appointment,normal,booking,0.9529,0.9529,accept,ml_agrees
+p5_162,simple_booking_clean,Хочу к врачу на следующей неделе,booking,new_appointment,normal,booking,0.8242,0.8242,accept,ml_agrees
+p5_163,simple_booking_clean,зпитесь ребенка утром,booking,new_appointment,normal,booking,0.5321,0.5321,accept,ml_agrees
+p5_164,simple_booking_clean,на прием свободно ли,booking,new_appointment,normal,booking,0.5568,0.5568,accept,ml_agrees
+p5_165,simple_booking_clean,сдвинуть запись жены,booking,reschedule,normal,booking,0.881,0.881,accept,ml_agrees
+p5_166,simple_booking_clean,снимаю на 16 часов,booking,cancel,normal,booking,0.5581,0.5581,accept,ml_agrees
+p5_167,simple_booking_clean,можно на среду к стоматологу,booking,new_appointment,normal,booking,0.6489,0.6489,accept,ml_agrees
+p5_168,simple_booking_clean,запись на прием завтра,booking,new_appointment,normal,booking,0.9634,0.9634,accept,ml_agrees
+p5_169,simple_booking_clean,подскажите когда можно записаться,booking,new_appointment,normal,booking,0.9101,0.9101,accept,ml_agrees
+p5_170,simple_booking_clean,нужно место на пятницу,booking,new_appointment,normal,booking,0.8972,0.8972,accept,ml_agrees
+p5_171,simple_booking_clean,запишите ребенка на вечер,booking,new_appointment,normal,booking,0.9295,0.9295,accept,ml_agrees
+p5_172,simple_booking_clean,хочу к стоматологу на следующей неделе,booking,new_appointment,normal,booking,0.8442,0.8442,accept,ml_agrees
+p5_173,simple_booking_clean,запись на удаление камня,booking,new_appointment,normal,booking,0.7749,0.7749,accept,ml_agrees
+p5_174,simple_booking_clean,мне нужно записаться срочно но не сейчас,booking,new_appointment,normal,booking,0.941,0.941,accept,ml_agrees
+p5_175,simple_booking_clean,хочу прием в субботу,booking,new_appointment,normal,booking,0.6988,0.6988,accept,ml_agrees
+p5_176,simple_booking_clean,для мамы запись сделайте,booking,new_appointment,normal,booking,0.832,0.832,accept,ml_agrees
+p5_177,simple_booking_clean,Перенесите на 16 число,booking,reschedule,normal,booking,0.915,0.915,accept,ml_agrees
+p5_178,simple_booking_clean,неудобно в это время поменяйте,booking,reschedule,normal,booking,0.7928,0.7928,accept,ml_agrees
+p5_179,simple_booking_clean,меня на 14:00 переставьте,booking,reschedule,normal,booking,0.8332,0.8332,accept,ml_agrees
+p5_180,simple_booking_clean,снимите меня с 10 утра,booking,cancel,normal,booking,0.8367,0.8367,accept,ml_agrees
+p5_181,simple_booking_clean,отменяю визит в пятницу,booking,cancel,normal,booking,0.8684,0.8684,accept,ml_agrees
+p5_182,simple_booking_clean,не нужно больше запись удалите,booking,cancel,normal,booking,0.8231,0.8231,accept,ml_agrees
+p5_183,simple_booking_clean,Отменить на 15 число,booking,cancel,normal,booking,0.9068,0.9068,accept,ml_agrees
+p5_184,simple_booking_clean,вычеркните меня из графика,booking,cancel,normal,booking,0.4815,0.4815,accept,ml_agrees
+p5_185,simple_booking_clean,стоматологу на завтра место,booking,new_appointment,normal,booking,0.8397,0.8397,accept,ml_agrees
+p5_186,simple_booking_clean,ребенку прием запишите,booking,new_appointment,normal,booking,0.8485,0.8485,accept,ml_agrees
+p5_187,simple_booking_clean,на выходные можно?,booking,new_appointment,normal,booking,0.4169,0.4169,accept,ml_agrees
+p5_188,simple_booking_clean,отложу прием на неделю,booking,reschedule,normal,booking,0.7448,0.7448,accept,ml_agrees
+p5_189,simple_booking_clean,мне на 12 перенести,booking,reschedule,normal,booking,0.9363,0.9363,accept,ml_agrees
+p5_190,simple_booking_clean,снимите запись ребенка,booking,cancel,normal,booking,0.8061,0.8061,accept,ml_agrees
+p5_191,simple_booking_clean,не приду в субботу отмените,booking,cancel,normal,booking,0.9508,0.9508,accept,ml_agrees
+p5_192,simple_booking_clean,удалить мою очередь,booking,cancel,normal,booking,0.4832,0.4832,accept,ml_agrees
+p5_193,simple_booking_clean,к стоматологу утром,booking,new_appointment,normal,booking,0.656,0.656,accept,ml_agrees
+p5_194,simple_booking_clean,место на осмотр есть,booking,new_appointment,normal,booking,0.7229,0.7229,accept,ml_agrees
+p5_195,simple_booking_clean,для жены запишете,booking,new_appointment,normal,booking,0.6324,0.6324,accept,ml_agrees
+p5_196,simple_booking_clean,вычеркнуть из списка,booking,cancel,normal,booking,0.4939,0.4939,accept,ml_agrees
+p5_197,simple_booking_clean,не нужен прием снимите,booking,cancel,normal,booking,0.708,0.708,accept,ml_agrees
+p5_198,simple_booking_clean,запись к доктору,booking,new_appointment,normal,booking,0.7282,0.7282,accept,ml_agrees
+p5_199,simple_booking_clean,утренний слот свободен,booking,new_appointment,normal,booking,0.7873,0.7873,accept,ml_agrees
+p5_200,simple_booking_clean,папе нужно записаться,booking,new_appointment,normal,booking,0.9322,0.9322,accept,ml_agrees
+p5_201,simple_booking_clean,перенос на 17е,booking,reschedule,normal,booking,0.8824,0.8824,accept,ml_agrees
+p5_202,simple_booking_clean,уберите меня на завтра,booking,cancel,normal,booking,0.8632,0.8632,accept,ml_agrees
+p5_203,simple_booking_clean,отменяю на вечер,booking,cancel,normal,booking,0.885,0.885,accept,ml_agrees
+p5_204,simple_booking_clean,зписать на пятницу,booking,new_appointment,normal,booking,0.8913,0.8913,accept,ml_agrees
+p5_205,simple_booking_clean,стоматология запись,booking,new_appointment,normal,booking,0.6721,0.6721,accept,ml_agrees
+p5_206,simple_booking_clean,на лечение запишитесь,booking,new_appointment,normal,booking,0.9186,0.9186,accept,ml_agrees
+p5_207,simple_booking_clean,не иду отмените очередь,booking,cancel,normal,booking,0.8996,0.8996,accept,ml_agrees
+p5_208,simple_booking_clean,снимите с графика,booking,cancel,normal,faq,0.4778,0.2459,accept,ml_weak_can_learn
+p5_209,simple_symptom_clean,десна ноет уже третий день,anamnesis,symptom,normal,anamnesis,0.8943,0.8943,accept,ml_agrees
+p5_210,simple_symptom_clean,Зуб реагирует на горячую еду,anamnesis,symptom,normal,anamnesis,0.6921,0.6921,accept,ml_agrees
+p5_211,simple_symptom_clean,Щека припухла после вчерашнего,anamnesis,symptom,normal,anamnesis,0.8009,0.8009,accept,ml_agrees
+p5_212,simple_symptom_clean,Болит когда жую хлеб,anamnesis,complaint,normal,anamnesis,0.6609,0.6609,accept,ml_agrees
+p5_213,simple_symptom_clean,эмаль стирается на передних,anamnesis,symptom,normal,anamnesis,0.7358,0.7358,accept,ml_agrees
+p5_214,simple_symptom_clean,десны красные и чешутся,anamnesis,symptom,normal,anamnesis,0.8958,0.8958,accept,ml_agrees
+p5_215,simple_symptom_clean,После яблока зуб заныл,anamnesis,symptom,normal,anamnesis,0.8355,0.8355,accept,ml_agrees
+p5_216,simple_symptom_clean,язык прикусываю больно,anamnesis,complaint,normal,anamnesis,0.7126,0.7126,accept,ml_agrees
+p5_217,simple_symptom_clean,десна отекла слегка,anamnesis,symptom,normal,anamnesis,0.8573,0.8573,accept,ml_agrees
+p5_218,simple_symptom_clean,Зубы чувствительны к сладкому,anamnesis,symptom,normal,anamnesis,0.7623,0.7623,accept,ml_agrees
+p5_219,simple_symptom_clean,корень зуба ломит,anamnesis,symptom,normal,anamnesis,0.8569,0.8569,accept,ml_agrees
+p5_220,simple_symptom_clean,щека тянет когда открываю рот,anamnesis,complaint,normal,anamnesis,0.7878,0.7878,accept,ml_agrees
+p5_221,simple_symptom_clean,кровь из десны утром,anamnesis,symptom,urgent,anamnesis,0.8939,0.8939,accept,ml_agrees
+p5_222,simple_symptom_clean,температура щека горячая,anamnesis,complaint,urgent,anamnesis,0.5151,0.5151,accept,ml_agrees
+p5_223,simple_symptom_clean,ноет жевательный зуб,anamnesis,symptom,normal,anamnesis,0.9523,0.9523,accept,ml_agrees
+p5_224,simple_symptom_clean,боль пульсирует в зубе,anamnesis,complaint,normal,anamnesis,0.8262,0.8262,accept,ml_agrees
+p5_225,simple_symptom_clean,реагирует на холодный воздух,anamnesis,symptom,normal,anamnesis,0.6702,0.6702,accept,ml_agrees
+p5_226,simple_symptom_clean,десна болит при нажатии,anamnesis,symptom,normal,anamnesis,0.836,0.836,accept,ml_agrees
+p5_227,simple_symptom_clean,устал от зубной боли,anamnesis,complaint,normal,anamnesis,0.5386,0.5386,accept,ml_agrees
+p5_228,simple_symptom_clean,флюс надувается,anamnesis,symptom,urgent,anamnesis,0.7757,0.7757,accept,ml_agrees
+p5_229,simple_symptom_clean,чувствую дискомфорт в деснах,anamnesis,symptom,normal,anamnesis,0.774,0.774,accept,ml_agrees
+p5_230,simple_symptom_clean,больно глотать слюну,anamnesis,complaint,normal,anamnesis,0.6362,0.6362,accept,ml_agrees
+p5_231,simple_symptom_clean,кровоточит десна еле чищу,anamnesis,symptom,urgent,anamnesis,0.7912,0.7912,accept,ml_agrees
+p5_232,simple_symptom_clean,нижняя челюсть ноет,anamnesis,symptom,normal,anamnesis,0.9647,0.9647,accept,ml_agrees
+p5_233,simple_symptom_clean,зубы болят от кислого,anamnesis,symptom,normal,anamnesis,0.792,0.792,accept,ml_agrees
+p5_234,simple_symptom_clean,отек под языком,anamnesis,complaint,normal,anamnesis,0.62,0.62,accept,ml_agrees
+p5_235,simple_symptom_clean,температура поднялась от зуба,anamnesis,symptom,urgent,anamnesis,0.7749,0.7749,accept,ml_agrees
+p5_236,simple_symptom_clean,дырка черная в боку,anamnesis,symptom,normal,anamnesis,0.786,0.786,accept,ml_agrees
+p5_237,simple_symptom_clean,десны отступают от зубов,anamnesis,symptom,normal,anamnesis,0.9192,0.9192,accept,ml_agrees
+p5_238,simple_symptom_clean,боль простреливает в ухо,anamnesis,complaint,normal,anamnesis,0.7367,0.7367,accept,ml_agrees
+p5_239,simple_symptom_clean,щека болит внутри,anamnesis,complaint,normal,anamnesis,0.8592,0.8592,accept,ml_agrees
+p5_240,simple_symptom_clean,кровь мешает есть,anamnesis,symptom,urgent,anamnesis,0.7581,0.7581,accept,ml_agrees
+p5_241,simple_symptom_clean,ноет после еды сладкой,anamnesis,symptom,normal,anamnesis,0.767,0.767,accept,ml_agrees
+p5_242,simple_symptom_clean,десна гноится чуть,anamnesis,complaint,urgent,anamnesis,0.8948,0.8948,accept,ml_agrees
+p5_243,simple_symptom_clean,челюсть клинит иногда,anamnesis,symptom,normal,anamnesis,0.7755,0.7755,accept,ml_agrees
+p5_244,simple_symptom_clean,зуб чувствительный стал,anamnesis,symptom,normal,anamnesis,0.8162,0.8162,accept,ml_agrees
+p5_245,simple_symptom_clean,раздражает постоянная боль,anamnesis,complaint,normal,anamnesis,0.5892,0.5892,accept,ml_agrees
+p5_246,simple_symptom_clean,температура и зуб ноет,anamnesis,symptom,urgent,anamnesis,0.8595,0.8595,accept,ml_agrees
+p5_247,simple_symptom_clean,дырка в молочном зубе,anamnesis,symptom,normal,anamnesis,0.8287,0.8287,accept,ml_agrees
+p5_248,simple_symptom_clean,десны зудят ночью,anamnesis,complaint,normal,anamnesis,0.9186,0.9186,accept,ml_agrees
+p5_249,simple_symptom_clean,боль от верхнего зуба,anamnesis,symptom,normal,anamnesis,0.7362,0.7362,accept,ml_agrees
+p5_250,simple_symptom_clean,кровит когда чищу сильно,anamnesis,symptom,urgent,anamnesis,0.7452,0.7452,accept,ml_agrees
+p5_251,simple_symptom_clean,щека тянет и болит,anamnesis,complaint,normal,anamnesis,0.7554,0.7554,accept,ml_agrees
+p5_252,simple_symptom_clean,зубы желтеют быстро,anamnesis,symptom,normal,anamnesis,0.7205,0.7205,accept,ml_agrees
+p5_253,simple_symptom_clean,пульсация в десне,anamnesis,symptom,normal,anamnesis,0.805,0.805,accept,ml_agrees
+p5_254,simple_symptom_clean,устала терпеть ноющую боль,anamnesis,complaint,normal,anamnesis,0.5855,0.5855,accept,ml_agrees
+p5_255,simple_symptom_clean,отек десны вырос,anamnesis,symptom,normal,anamnesis,0.8106,0.8106,accept,ml_agrees
+p5_256,simple_symptom_clean,больно кусать твердое,anamnesis,complaint,normal,anamnesis,0.6761,0.6761,accept,ml_agrees
+p5_257,simple_symptom_clean,кровь из зуба капает,anamnesis,symptom,urgent,anamnesis,0.9278,0.9278,accept,ml_agrees
+p5_258,simple_symptom_clean,десна воспалена красная,anamnesis,symptom,normal,anamnesis,0.793,0.793,accept,ml_agrees
+p5_259,simple_symptom_clean,температура от флюса,anamnesis,symptom,urgent,anamnesis,0.4268,0.4268,accept,ml_agrees
+p5_260,simple_symptom_clean,ноет весь ряд зубов,anamnesis,complaint,normal,anamnesis,0.8903,0.8903,accept,ml_agrees
+p5_261,simple_symptom_clean,десны болят при еде,anamnesis,symptom,normal,anamnesis,0.7774,0.7774,accept,ml_agrees
+p5_262,simple_symptom_clean,боль отдаёт в голову,anamnesis,complaint,normal,anamnesis,0.6503,0.6503,accept,ml_agrees
+p5_263,simple_symptom_clean,кровоточит сильно десна,anamnesis,symptom,urgent,anamnesis,0.9111,0.9111,accept,ml_agrees
+p5_264,simple_symptom_clean,зуб ноет от вчера,anamnesis,symptom,normal,anamnesis,0.9018,0.9018,accept,ml_agrees
+p5_265,simple_symptom_clean,щека горячая опухшая,anamnesis,complaint,urgent,anamnesis,0.7543,0.7543,accept,ml_agrees
+p5_266,simple_symptom_clean,эмаль тонкая трескалась,anamnesis,symptom,normal,anamnesis,0.6106,0.6106,accept,ml_agrees
+p5_267,simple_symptom_clean,пульсирует корень,anamnesis,symptom,normal,anamnesis,0.7081,0.7081,accept,ml_agrees
+p5_268,simple_symptom_clean,больно дышать холодным,anamnesis,complaint,normal,anamnesis,0.7138,0.7138,accept,ml_agrees
+p5_269,simple_symptom_clean,десна кровит утром кофе,anamnesis,symptom,urgent,anamnesis,0.8547,0.8547,accept,ml_agrees
+p5_270,simple_symptom_clean,зубы ноют от усталости,anamnesis,symptom,normal,anamnesis,0.8465,0.8465,accept,ml_agrees
+p5_271,simple_symptom_clean,отек челюсти небольшой,anamnesis,symptom,normal,anamnesis,0.7928,0.7928,accept,ml_agrees
+p5_272,simple_symptom_clean,не могу есть нормально,anamnesis,complaint,normal,anamnesis,0.5095,0.5095,accept,ml_agrees
+p5_273,simple_symptom_clean,температура щека жжёт,anamnesis,symptom,urgent,anamnesis,0.7168,0.7168,accept,ml_agrees
+p5_274,simple_symptom_clean,дырка болит надавить,anamnesis,complaint,normal,anamnesis,0.8007,0.8007,accept,ml_agrees
+p5_275,simple_symptom_clean,десны чувствительные стали,anamnesis,symptom,normal,anamnesis,0.7839,0.7839,accept,ml_agrees
+p5_276,simple_symptom_clean,Зуб ноет уже третий день подряд,anamnesis,complaint,normal,anamnesis,0.8444,0.8444,accept,ml_agrees
+p5_277,simple_symptom_clean,щука опухла чуток после вчерашнего,anamnesis,symptom,normal,anamnesis,0.7537,0.7537,accept,ml_agrees
+p5_278,simple_symptom_clean,зубик реагирует на холодную воду,anamnesis,symptom,normal,anamnesis,0.7303,0.7303,accept,ml_agrees
+p5_279,simple_symptom_clean,Десны чешутся и красные стали,anamnesis,symptom,normal,anamnesis,0.8606,0.8606,accept,ml_agrees
+p5_280,simple_symptom_clean,ноет корень зуба при наклоне,anamnesis,complaint,normal,anamnesis,0.906,0.906,accept,ml_agrees
+p5_281,simple_symptom_clean,флюс на десне выскочил вчера,anamnesis,symptom,urgent,anamnesis,0.7842,0.7842,accept,ml_agrees
+p5_282,simple_symptom_clean,боль в зубе усиливается вечером,anamnesis,complaint,normal,anamnesis,0.8149,0.8149,accept,ml_agrees
+p5_283,simple_symptom_clean,чувствую дырку в переднем зубе,anamnesis,symptom,normal,anamnesis,0.8591,0.8591,accept,ml_agrees
+p5_284,simple_symptom_clean,Ребенку 7 лет зуб болит сильно,anamnesis,complaint,urgent,anamnesis,0.8666,0.8666,accept,ml_agrees
+p5_285,simple_symptom_clean,десна отекла под нижним зубом,anamnesis,symptom,normal,anamnesis,0.9075,0.9075,accept,ml_agrees
+p5_286,simple_symptom_clean,постоянно тянет щеку изнутри,anamnesis,complaint,normal,anamnesis,0.766,0.766,accept,ml_agrees
+p5_287,simple_symptom_clean,Болит когда на него нажимаю,anamnesis,complaint,normal,anamnesis,0.5293,0.5293,accept,ml_agrees
+p5_288,simple_symptom_clean,жевательный зуб заболел внезапно,anamnesis,complaint,normal,anamnesis,0.8731,0.8731,accept,ml_agrees
+p5_289,simple_symptom_clean,Щека припухла после удара,anamnesis,symptom,normal,anamnesis,0.8381,0.8381,accept,ml_agrees
+p5_290,simple_symptom_clean,устал от этой боли в десне,anamnesis,complaint,normal,anamnesis,0.5995,0.5995,accept,ml_agrees
+p5_291,simple_symptom_clean,опухоль на десне растет,anamnesis,complaint,urgent,anamnesis,0.8543,0.8543,accept,ml_agrees
+p5_292,simple_symptom_clean,больно чистить зубы теперь,anamnesis,symptom,normal,anamnesis,0.8366,0.8366,accept,ml_agrees
+p5_293,simple_symptom_clean,Дырка большая в зубе появилась,anamnesis,complaint,normal,anamnesis,0.8795,0.8795,accept,ml_agrees
+p5_294,simple_symptom_clean,кровит десна без причины,anamnesis,symptom,urgent,anamnesis,0.8124,0.8124,accept,ml_agrees
+p5_295,simple_symptom_clean,зубы ноют от мороженого,anamnesis,symptom,normal,anamnesis,0.8257,0.8257,accept,ml_agrees
+p5_296,simple_symptom_clean,десна воспалилась сильно,anamnesis,complaint,urgent,anamnesis,0.8653,0.8653,accept,ml_agrees
+p5_297,simple_symptom_clean,чувствительность к теплу выросла,anamnesis,symptom,normal,anamnesis,0.6698,0.6698,accept,ml_agrees
+p5_298,simple_symptom_clean,ноет верхний зуб справа,anamnesis,complaint,normal,anamnesis,0.8687,0.8687,accept,ml_agrees
+p5_299,simple_symptom_clean,гнилостный привкус во рту,anamnesis,symptom,normal,anamnesis,0.55,0.55,accept,ml_agrees
+p5_300,simple_symptom_clean,Болит десна у молочного зуба,anamnesis,complaint,normal,anamnesis,0.8769,0.8769,accept,ml_agrees
+p5_301,simple_symptom_clean,зуб пульсирует при ходьбе,anamnesis,symptom,normal,anamnesis,0.7452,0.7452,accept,ml_agrees
+p5_302,simple_symptom_clean,кровь с десны капает,anamnesis,symptom,urgent,anamnesis,0.9323,0.9323,accept,ml_agrees
+p5_303,simple_symptom_clean,реагирует на соленое сильно,anamnesis,symptom,normal,anamnesis,0.6871,0.6871,accept,ml_agrees
+p5_304,simple_symptom_clean,устала терпеть эту зубную боль,anamnesis,complaint,normal,anamnesis,0.6006,0.6006,accept,ml_agrees
+p5_305,simple_symptom_clean,Десна болит и чешется,anamnesis,symptom,normal,anamnesis,0.8759,0.8759,accept,ml_agrees
+p5_306,simple_symptom_clean,зуб ноет после чая горячего,anamnesis,complaint,normal,anamnesis,0.8572,0.8572,accept,ml_agrees
+p5_307,simple_symptom_clean,прострелило зуб вчера вечером,anamnesis,complaint,normal,anamnesis,0.7284,0.7284,accept,ml_agrees
+p5_308,simple_symptom_clean,дырка в зубе углубилась,anamnesis,symptom,normal,anamnesis,0.8867,0.8867,accept,ml_agrees
+p5_309,simple_symptom_clean,больно глотать из-за десны,anamnesis,complaint,normal,anamnesis,0.7624,0.7624,accept,ml_agrees
+p5_310,simple_symptom_clean,щука тянет и ноет,anamnesis,symptom,normal,anamnesis,0.6686,0.6686,accept,ml_agrees
+p5_311,simple_symptom_clean,кровоточивость десен усилилась,anamnesis,symptom,urgent,anamnesis,0.8222,0.8222,accept,ml_agrees
+p5_312,simple_symptom_clean,зуб чувствителен к давлению,anamnesis,symptom,normal,anamnesis,0.7285,0.7285,accept,ml_agrees
+p5_313,simple_symptom_clean,флюс прорвало гноем,anamnesis,complaint,urgent,anamnesis,0.7385,0.7385,accept,ml_agrees
+p5_314,simple_symptom_clean,ноет зубик у ребенка ночью,anamnesis,complaint,normal,anamnesis,0.8581,0.8581,accept,ml_agrees
+p5_315,simple_symptom_clean,десны краснеют и болят,anamnesis,symptom,normal,anamnesis,0.8503,0.8503,accept,ml_agrees
+p5_316,simple_symptom_clean,запах из зуба плохой,anamnesis,symptom,normal,anamnesis,0.7094,0.7094,accept,ml_agrees
+p5_317,simple_symptom_clean,опухло под зубом сильно,anamnesis,complaint,urgent,anamnesis,0.8822,0.8822,accept,ml_agrees
+p5_318,simple_symptom_clean,реагирует на сладкий сок,anamnesis,symptom,normal,anamnesis,0.5327,0.5327,accept,ml_agrees
+p5_319,simple_symptom_clean,десна ноет постоянно,anamnesis,complaint,normal,anamnesis,0.894,0.894,accept,ml_agrees
+p5_320,simple_symptom_clean,зубы болят при вдохе,anamnesis,complaint,normal,anamnesis,0.7446,0.7446,accept,ml_agrees
+p5_321,simple_symptom_clean,щека увеличилась в размере,anamnesis,symptom,normal,anamnesis,0.734,0.734,accept,ml_agrees
+p5_322,simple_symptom_clean,больно трогать десну,anamnesis,complaint,normal,anamnesis,0.7378,0.7378,accept,ml_agrees
+p5_323,simple_symptom_clean,дырка чёрная в зубе видна,anamnesis,symptom,normal,anamnesis,0.8994,0.8994,accept,ml_agrees
+p5_324,simple_symptom_clean,пульсирует десна у корня,anamnesis,complaint,normal,anamnesis,0.8934,0.8934,accept,ml_agrees
+p5_325,simple_symptom_clean,чувствую нагноение внутри,anamnesis,symptom,urgent,anamnesis,0.6941,0.6941,accept,ml_agrees
+p5_326,simple_symptom_clean,зуб реагирует на ветерок,anamnesis,symptom,normal,anamnesis,0.7679,0.7679,accept,ml_agrees
+p5_327,simple_symptom_clean,надоело от этой боли в щеке,anamnesis,complaint,normal,anamnesis,0.5916,0.5916,accept,ml_agrees
+p5_328,simple_symptom_clean,десна отекает по вечерам,anamnesis,symptom,normal,anamnesis,0.7892,0.7892,accept,ml_agrees
+p5_329,simple_symptom_clean,кровит после каждого приема пищи,anamnesis,symptom,urgent,anamnesis,0.6508,0.6508,accept,ml_agrees
+p5_330,simple_symptom_clean,ноет нижний ряд зубов,anamnesis,complaint,normal,anamnesis,0.938,0.938,accept,ml_agrees
+p5_331,simple_symptom_clean,боль простреляет в челюсть,anamnesis,symptom,normal,anamnesis,0.9272,0.9272,accept,ml_agrees
+p5_332,simple_symptom_clean,ребенок плачет из-за зуба,anamnesis,complaint,normal,anamnesis,0.7149,0.7149,accept,ml_agrees
+p5_333,simple_symptom_clean,опухоль на десне не спадает,anamnesis,symptom,normal,anamnesis,0.841,0.841,accept,ml_agrees
+p5_334,simple_symptom_clean,зубик чувствительный к кислому,anamnesis,symptom,normal,anamnesis,0.639,0.639,accept,ml_agrees
+p5_335,simple_symptom_clean,ужасно болит при жевании,anamnesis,complaint,normal,anamnesis,0.7366,0.7366,accept,ml_agrees
+p5_336,simple_symptom_clean,десны зудят и саднят,anamnesis,complaint,normal,anamnesis,0.8467,0.8467,accept,ml_agrees
+p5_337,entity_held_out_simple,есть брекеты металлические?,faq,general,normal,faq,0.8172,0.8172,accept,ml_agrees
+p5_338,entity_held_out_simple,чистка ультразвуком делаете?,faq,general,normal,faq,0.6148,0.6148,accept,ml_agrees
+p5_339,entity_held_out_simple,Есть ли лазерное отбеливание?,faq,general,normal,faq,0.5605,0.5605,accept,ml_agrees
+p5_340,entity_held_out_simple,лечение каналов под микроскопом возможно?,faq,general,normal,faq,0.5702,0.5702,accept,ml_agrees
+p5_341,entity_held_out_simple,фибры ставите?,faq,general,normal,faq,0.5805,0.5805,accept,ml_agrees
+p5_342,entity_held_out_simple,сколько панорамный снимок,faq,general,normal,faq,0.8653,0.8653,accept,ml_agrees
+p5_343,entity_held_out_simple,есть услуга установки штифтов,faq,general,normal,faq,0.5394,0.5394,accept,ml_agrees
+p5_344,entity_held_out_simple,Скока брекеты сапфировые?,faq,general,normal,faq,0.9058,0.9058,accept,ml_agrees
+p5_345,entity_held_out_simple,воздушная абразия есть у вас,faq,general,normal,faq,0.559,0.559,accept,ml_agrees
+p5_346,entity_held_out_simple,профессиональная чистка сколько,faq,general,normal,faq,0.7035,0.7035,accept,ml_agrees
+p5_347,entity_held_out_simple,делаете мостовидные протезы?,faq,general,normal,faq,0.5341,0.5341,accept,ml_agrees
+p5_348,entity_held_out_simple,сколько стоит реставрация зуба,faq,general,normal,faq,0.832,0.832,accept,ml_agrees
+p5_349,entity_held_out_simple,Есть ли несъемные протезы?,faq,general,normal,faq,0.6407,0.6407,accept,ml_agrees
+p5_350,entity_held_out_simple,керамические вкладки ставят?,faq,general,normal,faq,0.7109,0.7109,accept,ml_agrees
+p5_351,entity_held_out_simple,скока элайнеры,faq,general,normal,faq,0.8543,0.8543,accept,ml_agrees
+p5_352,entity_held_out_simple,лечение пародонтита делаете,faq,general,normal,faq,0.5676,0.5676,accept,ml_agrees
+p5_353,entity_held_out_simple,векторная чистка есть?,faq,general,normal,faq,0.6693,0.6693,accept,ml_agrees
+p5_354,entity_held_out_simple,сколько адгезивные мосты,faq,general,normal,faq,0.8192,0.8192,accept,ml_agrees
+p5_355,entity_held_out_simple,делаете ли отбеливание капами,faq,general,normal,faq,0.6247,0.6247,accept,ml_agrees
+p5_356,entity_held_out_simple,есть бюгельные протезы,faq,general,normal,faq,0.4591,0.4591,accept,ml_agrees
+p5_357,entity_held_out_simple,Сколько стоит пломба световая,faq,general,normal,faq,0.8682,0.8682,accept,ml_agrees
+p5_358,entity_held_out_simple,терапия корневых каналов под лупой?,faq,general,normal,anamnesis,0.4595,0.4135,accept,ml_weak_can_learn
+p5_359,entity_held_out_simple,скока стоит трейнеры для прикуса,faq,general,normal,faq,0.8386,0.8386,accept,ml_agrees
+p5_360,entity_held_out_simple,лазерное лечение десен делаете,faq,general,normal,anamnesis,0.6278,0.317,accept,ml_weak_can_learn
+p5_361,entity_held_out_simple,сколько циркониевые коронки,faq,general,normal,faq,0.667,0.667,accept,ml_agrees
+p5_362,entity_held_out_simple,Делаете ли селективное шлифование?,faq,general,normal,faq,0.6694,0.6694,accept,ml_agrees
+p5_363,entity_held_out_simple,гибкие протезы ставите,faq,general,normal,faq,0.5198,0.5198,accept,ml_agrees
+p5_364,entity_held_out_simple,скока кт челюсти,faq,general,normal,faq,0.5728,0.5728,accept,ml_agrees
+p5_365,entity_held_out_simple,есть миобрейсы,faq,general,normal,faq,0.5299,0.5299,accept,ml_agrees
+p5_366,entity_held_out_simple,лечение гингивита возможно,faq,general,normal,faq,0.6562,0.6562,accept,ml_agrees
+p5_367,entity_held_out_simple,сколько стоит композитные виниры,faq,general,normal,faq,0.8235,0.8235,accept,ml_agrees
+p5_368,entity_held_out_simple,делаете установку диастемных плакеток?,faq,general,normal,faq,0.7211,0.7211,accept,ml_agrees
+p5_369,entity_held_out_simple,акриловые протезы есть у вас,faq,general,normal,faq,0.6457,0.6457,accept,ml_agrees
+p5_370,entity_held_out_simple,Скока стоит фиссурная пломба,faq,general,normal,faq,0.8755,0.8755,accept,ml_agrees
+p5_371,entity_held_out_simple,эндодонтия машинными файлами?,faq,general,normal,faq,0.5658,0.5658,accept,ml_agrees
+p5_372,entity_held_out_simple,есть услуга реминирализации эмали,faq,general,normal,faq,0.6868,0.6868,accept,ml_agrees
+p5_373,entity_held_out_simple,сколько брекеты лингвальные,faq,general,normal,faq,0.8972,0.8972,accept,ml_agrees
+p5_374,entity_held_out_simple,пластика уздечки делаете,faq,general,normal,anamnesis,0.5979,0.3297,accept,ml_weak_can_learn
+p5_375,entity_held_out_simple,керамические брекеты ставят?,faq,general,normal,faq,0.849,0.849,accept,ml_agrees
+p5_376,entity_held_out_simple,есть озонирование каналов,faq,general,normal,anamnesis,0.5486,0.3508,accept,ml_weak_can_learn
+p5_377,entity_held_out_simple,делаете ли ретенционные аппараты,faq,general,normal,faq,0.7318,0.7318,accept,ml_agrees
+p5_378,entity_held_out_simple,металлокерамика коронки скока,faq,general,normal,faq,0.6525,0.6525,accept,ml_agrees
+p5_379,entity_held_out_simple,есть лазерное вапоризаторное отбеливание?,faq,general,normal,faq,0.4804,0.4804,accept,ml_agrees
+p5_380,entity_held_out_simple,лечение гиперчувствительности зубов,faq,general,normal,anamnesis,0.5944,0.3119,accept,ml_weak_can_learn
+p5_381,entity_held_out_simple,Сколько стоит артроскопия ВНЧС,faq,general,normal,faq,0.9075,0.9075,accept,ml_agrees
+p5_382,entity_held_out_simple,делаете установку мини-имплантов,faq,general,normal,faq,0.5847,0.5847,accept,ml_agrees
+p5_383,entity_held_out_simple,скока аппараты функциональной окклюзии,faq,general,normal,faq,0.629,0.629,accept,ml_agrees
+p5_384,entity_held_out_simple,есть услуга установки телескопических коронок,faq,general,normal,faq,0.5663,0.5663,accept,ml_agrees
+p5_385,entity_held_out_simple,процедура установки кнопочных замков для протезов?,faq,general,normal,faq,0.6963,0.6963,accept,ml_agrees
+p5_386,entity_held_out_simple,сколько стоит шлифовка зубов,faq,general,normal,faq,0.877,0.877,accept,ml_agrees
+p5_387,entity_held_out_simple,сколько протезирование на имплантах?,faq,general,normal,faq,0.9114,0.9114,accept,ml_agrees
+p5_388,entity_held_out_simple,устанавливаете брекеты сапфировые?,faq,general,normal,faq,0.7775,0.7775,accept,ml_agrees
+p5_389,entity_held_out_simple,возможна чистка ультразвуком?,faq,general,normal,faq,0.6627,0.6627,accept,ml_agrees
+p5_390,entity_held_out_simple,делаете съемные протезы акриловые?,faq,general,normal,faq,0.602,0.602,accept,ml_agrees
+p5_391,entity_held_out_simple,профилактика для детей есть?,faq,general,normal,faq,0.7401,0.7401,accept,ml_agrees
+p5_392,entity_held_out_simple,удаление зубов мудрости под наркозом?,faq,general,normal,faq,0.7325,0.7325,accept,ml_agrees
+p5_393,entity_held_out_simple,элайнеры прозрачные делаете?,faq,general,normal,faq,0.5015,0.5015,accept,ml_agrees
+p5_394,entity_held_out_simple,пломбы светоотверждаемые ставят?,faq,general,normal,faq,0.5807,0.5807,accept,ml_agrees
+p5_395,entity_held_out_simple,резекция корня возможна?,faq,general,normal,faq,0.4867,0.4867,accept,ml_agrees
+p5_396,entity_held_out_simple,мостовидные мосты на зубы?,faq,general,normal,anamnesis,0.5472,0.3365,accept,ml_weak_can_learn
+p5_397,entity_held_out_simple,герметизация фиссур у вас?,faq,general,normal,faq,0.58,0.58,accept,ml_agrees
+p5_398,entity_held_out_simple,лингвальные брекеты ставите?,faq,general,normal,faq,0.7609,0.7609,accept,ml_agrees
+p5_399,entity_held_out_simple,фторирование эмали делают?,faq,general,normal,faq,0.4884,0.4884,accept,ml_agrees
+p5_400,entity_held_out_simple,адгезивные мосты возможны?,faq,general,normal,faq,0.6371,0.6371,accept,ml_agrees
+p5_401,entity_held_out_simple,сколько одноэтапные импланты?,faq,general,normal,faq,0.8889,0.8889,accept,ml_agrees
+p5_402,entity_held_out_simple,пломбирование временное есть?,faq,general,normal,faq,0.7375,0.7375,accept,ml_agrees
+p5_403,entity_held_out_simple,кэпинг перед имплантами?,faq,general,normal,faq,0.6593,0.6593,accept,ml_agrees
+p5_404,entity_held_out_simple,самолигирующие брекеты?,faq,general,normal,faq,0.6866,0.6866,accept,ml_agrees
+p5_405,entity_held_out_simple,серебрение зубов детям?,faq,general,normal,faq,0.5444,0.5444,accept,ml_agrees
+p5_406,entity_held_out_simple,артроскопия челюсти есть?,faq,general,normal,faq,0.5285,0.5285,accept,ml_agrees
+p5_407,entity_held_out_simple,реконструкция десны?,faq,general,normal,anamnesis,0.4917,0.3438,accept,ml_weak_can_learn
+p5_408,entity_held_out_simple,миниимпланты ставят?,faq,general,normal,faq,0.7182,0.7182,accept,ml_agrees
+p5_409,entity_held_out_simple,шлифовка для брекетов?,faq,general,normal,faq,0.7326,0.7326,accept,ml_agrees
+p5_410,entity_held_out_simple,У вас есть услуга установки коронок из циркония?,faq,general,normal,faq,0.6975,0.6975,accept,ml_agrees
+p5_411,entity_held_out_simple,возможно лечение пародонтита?,faq,general,normal,faq,0.6744,0.6744,accept,ml_agrees
+p5_412,entity_held_out_simple,металлокерамика на зубы?,faq,general,normal,anamnesis,0.4652,0.3956,accept,ml_weak_can_learn
+p5_413,entity_held_out_simple,аппликации кальция делают?,faq,general,normal,faq,0.5125,0.5125,accept,ml_agrees
+p5_414,entity_held_out_simple,дискотомия челюсти?,faq,general,normal,anamnesis,0.613,0.2693,accept,ml_weak_can_learn
+p5_415,entity_held_out_simple,гибкие протезы есть?,faq,general,normal,faq,0.7163,0.7163,accept,ml_agrees
+p5_416,entity_held_out_simple,активированное отбеливание?,faq,general,normal,faq,0.4432,0.4432,accept,ml_agrees
+p5_417,entity_held_out_simple,пластика уздечки языка?,faq,general,normal,anamnesis,0.6248,0.2008,accept,ml_weak_can_learn
+p5_418,entity_held_out_simple,скобы на зубы ставите?,faq,general,normal,faq,0.6066,0.6066,accept,ml_agrees
+p5_419,entity_held_out_simple,делаете ли реставрацию композитами?,faq,general,normal,faq,0.6583,0.6583,accept,ml_agrees
+p5_420,entity_held_out_simple,есть ли услуга трейнеров для челюсти?,faq,general,normal,faq,0.6462,0.6462,accept,ml_agrees
+p5_421,entity_held_out_simple,подгонка капы ночной?,faq,general,normal,anamnesis,0.5214,0.2605,accept,ml_weak_can_learn
+p5_422,entity_held_out_simple,иммобилизация зуба?,faq,general,normal,faq,0.549,0.549,accept,ml_agrees
+p5_423,entity_held_out_simple,оксид циркония коронки?,faq,general,normal,faq,0.4756,0.4756,accept,ml_agrees
+p5_424,entity_held_out_simple,магнитные замки на протезы?,faq,general,normal,faq,0.4862,0.4862,accept,ml_agrees
+p5_425,entity_held_out_simple,фибровые штифты ставят?,faq,general,normal,faq,0.5479,0.5479,accept,ml_agrees
+p5_426,entity_held_out_simple,миотерапия для детей?,faq,general,normal,faq,0.7566,0.7566,accept,ml_agrees
+p5_427,entity_held_out_simple,телемикроскопия есть?,faq,general,normal,faq,0.67,0.67,accept,ml_agrees
+p5_428,entity_held_out_simple,кальцификация каналов?,faq,general,normal,anamnesis,0.4395,0.4193,accept,ml_weak_can_learn
+p5_429,entity_held_out_simple,телескопические коронки?,faq,general,normal,faq,0.5442,0.5442,accept,ml_agrees
+p5_430,entity_held_out_simple,суперэластичные дуги для брекетов?,faq,general,normal,faq,0.6895,0.6895,accept,ml_agrees
+p5_431,entity_held_out_simple,пародонтальный скейлинг?,faq,general,normal,faq,0.5869,0.5869,accept,ml_agrees
+p5_432,entity_held_out_simple,обточка под коронку?,faq,general,normal,anamnesis,0.4797,0.4039,accept,ml_weak_can_learn
+p5_433,entity_held_out_simple,штифтование корневых каналов?,faq,general,normal,anamnesis,0.6622,0.2596,accept,ml_weak_can_learn
+p5_434,entity_held_out_simple,есть ли услуга установки кнопочных замков?,faq,general,normal,faq,0.7498,0.7498,accept,ml_agrees
+p5_435,entity_held_out_simple,клампы на протез?,faq,general,normal,faq,0.447,0.447,accept,ml_agrees
+p5_436,entity_held_out_simple,реминирализация эмали?,faq,general,normal,faq,0.5445,0.5445,accept,ml_agrees
+p5_437,faq_vs_anamnesis_borderline,ПОСЛЕ УДАЛЕНИЯ ДЕСНА КРОВИТ 2 ДНЯ НОРМАЛЬНО?,anamnesis,complaint,normal,anamnesis,0.591,0.591,accept,ml_agrees
+p5_438,faq_vs_anamnesis_borderline,после чистки зубы чувствит к холоду так надо?,anamnesis,symptom,normal,anamnesis,0.6511,0.6511,accept,ml_agrees
+p5_439,faq_vs_anamnesis_borderline,пломбу поставили щека распирает это ок,anamnesis,complaint,normal,anamnesis,0.4274,0.4274,accept,ml_agrees
+p5_440,faq_vs_anamnesis_borderline,после импланта температура держится норма ли,anamnesis,symptom,normal,faq,0.5291,0.3796,accept,ml_weak_can_learn
+p5_441,faq_vs_anamnesis_borderline,каналы чистили челюсть ноет 5 дней должно быть?,anamnesis,complaint,normal,anamnesis,0.7335,0.7335,accept,ml_agrees
+p5_442,faq_vs_anamnesis_borderline,кронку надели язык онемел это нормально,anamnesis,symptom,normal,anamnesis,0.6531,0.6531,accept,ml_agrees
+p5_443,faq_vs_anamnesis_borderline,после отбеливания десны белые норма?,anamnesis,complaint,normal,faq,0.4943,0.4427,accept,ml_weak_can_learn
+p5_444,faq_vs_anamnesis_borderline,зуб мудрости удалили дыра болит при еде ок ли,anamnesis,symptom,normal,faq,0.4887,0.399,accept,ml_weak_can_learn
+p5_445,faq_vs_anamnesis_borderline,пломба свежая а зуб стучит от сладкого это норма,anamnesis,complaint,normal,anamnesis,0.4584,0.4584,accept,ml_agrees
+p5_446,faq_vs_anamnesis_borderline,после анестезии губа дергается так и должно?,anamnesis,symptom,normal,anamnesis,0.4918,0.4918,accept,ml_agrees
+p5_447,faq_vs_anamnesis_borderline,протез поставили прикус хреновый нормально ли,anamnesis,complaint,normal,anamnesis,0.5577,0.5577,accept,ml_agrees
+p5_448,faq_vs_anamnesis_borderline,удалили нерв десна опухла норма после 3 дней,anamnesis,symptom,normal,anamnesis,0.5708,0.5708,accept,ml_agrees
+p5_449,faq_vs_anamnesis_borderline,после полировки зубы ноют на жаре это окей,anamnesis,complaint,normal,anamnesis,0.6699,0.6699,accept,ml_agrees
+p5_450,faq_vs_anamnesis_borderline,имплант вкрутили щека горячая должна так быть?,anamnesis,symptom,normal,faq,0.5111,0.3933,accept,ml_weak_can_learn
+p5_451,faq_vs_anamnesis_borderline,пломбу менять стали язык прикусил больно норма,anamnesis,complaint,normal,anamnesis,0.5366,0.5366,accept,ml_agrees
+p5_452,faq_vs_anamnesis_borderline,после удаления флюса челюсть ноет норма ли,anamnesis,symptom,normal,anamnesis,0.8145,0.8145,accept,ml_agrees
+p5_453,faq_vs_anamnesis_borderline,коронку поставили вкус металла во рту ок?,anamnesis,complaint,normal,faq,0.4275,0.4015,accept,ml_weak_can_learn
+p5_454,faq_vs_anamnesis_borderline,чистили камень десны чешутся это нормально,anamnesis,symptom,normal,anamnesis,0.7871,0.7871,accept,ml_agrees
+p5_455,faq_vs_anamnesis_borderline,после штифта зуб трещит при жевании должно?,anamnesis,complaint,normal,anamnesis,0.7007,0.7007,accept,ml_agrees
+p5_456,faq_vs_anamnesis_borderline,это нормально что после пломбы ноет зуб уже неделю,anamnesis,symptom,normal,anamnesis,0.6695,0.6695,accept,ml_agrees
+p5_457,faq_vs_anamnesis_borderline,Десна кровит после удаления зуба норма или нет?,anamnesis,complaint,normal,anamnesis,0.5552,0.5552,accept,ml_agrees
+p5_458,faq_vs_anamnesis_borderline,после чистки зубы болят от горячего это ок,anamnesis,symptom,normal,anamnesis,0.4564,0.4564,accept,ml_agrees
+p5_459,faq_vs_anamnesis_borderline,щека опухла после лечения каналов должна так быть?,anamnesis,symptom,normal,anamnesis,0.7983,0.7983,accept,ml_agrees
+p5_460,faq_vs_anamnesis_borderline,Коронку поставили а жую давит внутри странно,anamnesis,complaint,normal,anamnesis,0.7783,0.7783,accept,ml_agrees
+p5_461,faq_vs_anamnesis_borderline,температура 37 после импланта нормально держится,anamnesis,symptom,normal,anamnesis,0.4558,0.4558,accept,ml_agrees
+p5_462,faq_vs_anamnesis_borderline,белый налет на десне после удаления это норма,anamnesis,symptom,normal,anamnesis,0.5336,0.5336,accept,ml_agrees
+p5_463,faq_vs_anamnesis_borderline,зуб шатается после пломбы что за ерунда,anamnesis,complaint,normal,anamnesis,0.7631,0.7631,accept,ml_agrees
+p5_464,faq_vs_anamnesis_borderline,онемение щеки осталось после анестезии долго,anamnesis,symptom,normal,anamnesis,0.5649,0.5649,accept,ml_agrees
+p5_465,faq_vs_anamnesis_borderline,флюс опять надулся через день после визита,anamnesis,complaint,normal,anamnesis,0.5518,0.5518,accept,ml_agrees
+p5_466,faq_vs_anamnesis_borderline,дырка увеличилась после пломбы нормально ли,anamnesis,symptom,normal,anamnesis,0.5593,0.5593,accept,ml_agrees
+p5_467,faq_vs_anamnesis_borderline,челюсть ноет после протеза жевать неудобно,anamnesis,complaint,normal,anamnesis,0.9671,0.9671,accept,ml_agrees
+p5_468,faq_vs_anamnesis_borderline,после отбеливания зубы чувствительные к сладкому,anamnesis,symptom,normal,anamnesis,0.7281,0.7281,accept,ml_agrees
+p5_469,faq_vs_anamnesis_borderline,язык онемел после сверления зуба это ок,anamnesis,symptom,normal,anamnesis,0.6993,0.6993,accept,ml_agrees
+p5_470,faq_vs_anamnesis_borderline,слюни текут после новой пломбы странно,anamnesis,complaint,normal,anamnesis,0.4452,0.4452,accept,ml_agrees
+p5_471,faq_vs_anamnesis_borderline,запах из рта после чистки не пропал норма?,anamnesis,symptom,normal,faq,0.4242,0.3679,accept,ml_weak_can_learn
+p5_472,faq_vs_anamnesis_borderline,голова болит после долгой процедуры у дантиста,anamnesis,complaint,normal,anamnesis,0.5427,0.5427,accept,ml_agrees
+p5_473,faq_vs_anamnesis_borderline,ухо стреляет после лечения жевательного зуба,anamnesis,symptom,normal,anamnesis,0.9158,0.9158,accept,ml_agrees
+p5_474,faq_vs_anamnesis_borderline,шея затекла после коронки поставили вчера,anamnesis,complaint,normal,anamnesis,0.7902,0.7902,accept,ml_agrees
+p5_475,faq_vs_anamnesis_borderline,кожа на лице чешется после визита к стоматологу,anamnesis,symptom,normal,anamnesis,0.4829,0.4829,accept,ml_agrees
+p5_476,doctor_name_stress,когда к петрову можно записаться,faq,doctor_info,normal,booking,0.8907,0.0935,accept,hard_ml_disagree(booking@0.89)
+p5_477,doctor_name_stress,Запиши к Ивановой на эту неделю,faq,doctor_info,normal,booking,0.9015,0.024,accept,hard_ml_disagree(booking@0.90)
+p5_478,doctor_name_stress,сидоров андрей петрович свободен завтра?,faq,doctor_info,normal,booking,0.4957,0.2515,accept,ml_weak_can_learn
+p5_479,doctor_name_stress,Василевская принимает по вечерам?,faq,doctor_info,normal,faq,0.632,0.632,accept,ml_agrees
+p5_480,doctor_name_stress,к козлову на понедельник запишитесь,faq,doctor_info,normal,booking,0.9357,0.0334,accept,hard_ml_disagree(booking@0.94)
+p5_481,doctor_name_stress,Смирнова елена вальевна когда есть окно,faq,doctor_info,normal,faq,0.3368,0.3368,accept,ml_agrees
+p5_482,doctor_name_stress,попов свободен сегодня после обеда,faq,doctor_info,normal,booking,0.5049,0.1104,accept,ml_weak_can_learn
+p5_483,doctor_name_stress,Морозова принимает по утрам?,faq,doctor_info,normal,faq,0.5807,0.5807,accept,ml_agrees
+p5_484,doctor_name_stress,запиши к новожилову срочно но не сегодня,faq,doctor_info,normal,booking,0.875,0.0428,accept,hard_ml_disagree(booking@0.88)
+p5_485,doctor_name_stress,Николаев Сергей Иванович график какой,faq,doctor_info,normal,faq,0.6764,0.6764,accept,ml_agrees
+p5_486,doctor_name_stress,к светлановой можно на 15 число,faq,doctor_info,normal,booking,0.5443,0.1878,accept,ml_weak_can_learn
+p5_487,doctor_name_stress,Волков павел анатольевич принимает детей,faq,doctor_info,normal,faq,0.828,0.828,accept,ml_agrees
+p5_488,doctor_name_stress,орлова мария свободна в пятницу,faq,doctor_info,normal,booking,0.7156,0.1124,accept,hard_ml_disagree(booking@0.72)
+p5_489,doctor_name_stress,Запись к Григорьеву на завтра утро,faq,doctor_info,normal,booking,0.9533,0.009,accept,hard_ml_disagree(booking@0.95)
+p5_490,doctor_name_stress,леонтьева анна сергеевна когда выходной,faq,doctor_info,normal,booking,0.5005,0.2262,accept,ml_weak_can_learn
+p5_491,doctor_name_stress,к баранову на вечер можно ли,faq,doctor_info,normal,booking,0.6664,0.1851,accept,ml_weak_can_learn
+p5_492,doctor_name_stress,Федорова Ольга Петровна принимает в субботу?,faq,doctor_info,normal,faq,0.7059,0.7059,accept,ml_agrees
+p5_493,doctor_name_stress,михайлов когда свободен для записи,faq,doctor_info,normal,booking,0.7912,0.1177,accept,hard_ml_disagree(booking@0.79)
+p5_494,doctor_name_stress,записаться к степанову на след неделю,faq,doctor_info,normal,booking,0.9478,0.0218,accept,hard_ml_disagree(booking@0.95)
+p5_495,doctor_name_stress,к петрову можно завтра записаться,faq,doctor_info,normal,booking,0.9655,0.0236,accept,hard_ml_disagree(booking@0.97)
+p5_496,doctor_name_stress,Свободно ли у Ивановой на этой неделе?,faq,doctor_info,normal,booking,0.7075,0.191,accept,hard_ml_disagree(booking@0.71)
+p5_497,doctor_name_stress,запиши к сидорову андрею петровичу,faq,doctor_info,normal,booking,0.7249,0.0378,accept,hard_ml_disagree(booking@0.72)
+p5_498,doctor_name_stress,к козловой на вторник слот есть,faq,doctor_info,normal,booking,0.7542,0.1132,accept,hard_ml_disagree(booking@0.75)
+p5_499,doctor_name_stress,Смирнов свободен после 18?,faq,doctor_info,normal,faq,0.5265,0.5265,accept,ml_agrees
+p5_500,doctor_name_stress,помогите записаться к поповой срочно,faq,doctor_info,normal,booking,0.9323,0.0191,accept,hard_ml_disagree(booking@0.93)
+p5_501,doctor_name_stress,кузнецова юлия викторовна когда принемает,faq,doctor_info,normal,faq,0.5725,0.5725,accept,ml_agrees
+p5_502,doctor_name_stress,Морозов на завтра есть место?,faq,doctor_info,normal,booking,0.721,0.1864,accept,hard_ml_disagree(booking@0.72)
+p5_503,doctor_name_stress,запись к новожилову на вечер,faq,doctor_info,normal,booking,0.9005,0.0174,accept,hard_ml_disagree(booking@0.90)
+p5_504,doctor_name_stress,к григорьевой можно зписаться?,faq,doctor_info,normal,booking,0.6294,0.2404,accept,ml_weak_can_learn
+p5_505,doctor_name_stress,ЛЕЧУ К ВАСИЛЬЕВУЙ ЧТО СКАЗАЛ?,faq,doctor_info,normal,unsupported,0.5175,0.3642,accept,ml_weak_can_learn
+p5_506,doctor_name_stress,свободные дни у орловой покажите,faq,doctor_info,normal,booking,0.5523,0.101,accept,ml_weak_can_learn
+p5_507,doctor_name_stress,к степанову на 20 число меня запишите,faq,doctor_info,normal,booking,0.9111,0.0216,accept,hard_ml_disagree(booking@0.91)
+p5_508,doctor_name_stress,Павлова принимает детей?,faq,doctor_info,normal,faq,0.8474,0.8474,accept,ml_agrees
+p5_509,doctor_name_stress,к беловой анне сергеевне слоты,faq,doctor_info,normal,unsupported,0.3853,0.3812,accept,ml_weak_can_learn
+p5_510,doctor_name_stress,завтра к романова свободна?,faq,doctor_info,normal,booking,0.708,0.1652,accept,hard_ml_disagree(booking@0.71)
+p5_511,doctor_name_stress,запишите ребенка к егорову,faq,doctor_info,normal,booking,0.8434,0.0669,accept,hard_ml_disagree(booking@0.84)
+p5_512,doctor_name_stress,к лебедевой на утро пятницы,faq,doctor_info,normal,booking,0.6823,0.0462,accept,ml_weak_can_learn
+p5_513,doctor_name_stress,ЧТО У ФЕДОРОВОЙ ГРАФИК?,faq,doctor_info,normal,faq,0.5732,0.5732,accept,ml_agrees
+p5_514,mixed_intent_new,зуб ноет скоко запишитесь на завтра,anamnesis,complaint,normal,booking,0.8852,0.05,accept,hard_ml_disagree(booking@0.89)
+p5_515,mixed_intent_new,Щека опухла срочно врача и цена вырывания,anamnesis,complaint,urgent,faq,0.7101,0.1662,accept,hard_ml_disagree(faq@0.71)
+p5_516,mixed_intent_new,дырка в переднем зубе можно записаться в пятницу,anamnesis,complaint,normal,booking,0.8644,0.0969,accept,hard_ml_disagree(booking@0.86)
+p5_517,mixed_intent_new,флюс на десне запишусь сегодня утром,anamnesis,complaint,urgent,booking,0.6543,0.2642,accept,ml_weak_can_learn
+p5_518,mixed_intent_new,ноет жевательный зуб сколько стоит почистить и когда свободно,anamnesis,complaint,normal,faq,0.671,0.25,accept,ml_weak_can_learn
+p5_519,mixed_intent_new,ребенку 7 лет зуб разболелся срочно прием,anamnesis,complaint,urgent,anamnesis,0.6049,0.6049,accept,ml_agrees
+p5_520,mixed_intent_new,вчера ударился зуб кровит цена лечения,anamnesis,complaint,normal,faq,0.553,0.3939,accept,ml_weak_can_learn
+p5_521,mixed_intent_new,Болит сильно внутри зуба запишитесь на вечер,anamnesis,complaint,urgent,booking,0.6427,0.3112,accept,ml_weak_can_learn
+p5_522,mixed_intent_new,скоко вылечить зуб с дыркой и на когда запись,anamnesis,complaint,normal,faq,0.644,0.1303,accept,ml_weak_can_learn
+p5_523,mixed_intent_new,опухла щека от зуба можно срочно к вам,anamnesis,complaint,urgent,anamnesis,0.6484,0.6484,accept,ml_agrees
+p5_524,mixed_intent_new,зубак ноет третий день цена пломбы,anamnesis,complaint,normal,faq,0.5753,0.3561,accept,ml_weak_can_learn
+p5_525,mixed_intent_new,треснул зуб грызя орех запишитесь завтра,anamnesis,complaint,urgent,booking,0.7423,0.1623,accept,hard_ml_disagree(booking@0.74)
+p5_526,mixed_intent_new,помагите зуб болит скока стоит удалить,anamnesis,complaint,normal,faq,0.7866,0.156,accept,hard_ml_disagree(faq@0.79)
+p5_527,mixed_intent_new,флюс у мамы срочно время приема,anamnesis,complaint,urgent,booking,0.5458,0.0734,accept,ml_weak_can_learn
+p5_528,mixed_intent_new,дырка большая ноет тихо на понедельник запись,anamnesis,complaint,normal,booking,0.5677,0.2254,accept,ml_weak_can_learn
+p5_529,mixed_intent_new,зубы кровоточат после еды цена осмотра,anamnesis,complaint,urgent,faq,0.5727,0.338,accept,ml_weak_can_learn
+p5_530,mixed_intent_new,подростку зуб сломался можно вечером,anamnesis,complaint,normal,anamnesis,0.7006,0.7006,accept,ml_agrees
+p5_531,mixed_intent_new,болит десна сильно и опухло срочно пломбировать,anamnesis,complaint,urgent,anamnesis,0.8442,0.8442,accept,ml_agrees
+p5_532,mixed_intent_new,сколько чистка зуба который ноет,anamnesis,complaint,normal,faq,0.6567,0.2965,accept,ml_weak_can_learn
+p5_533,mixed_intent_new,бабушке зуб разболелся запишитесь на утро,anamnesis,complaint,urgent,booking,0.7749,0.1324,accept,hard_ml_disagree(booking@0.77)
+p5_534,mixed_intent_new,зуб ноет уже неделю скока удалить,anamnesis,complaint,normal,anamnesis,0.5501,0.5501,accept,ml_agrees
+p5_535,mixed_intent_new,дырка в зубе болит запишитесь меня на завтра,anamnesis,complaint,urgent,booking,0.8745,0.088,accept,hard_ml_disagree(booking@0.87)
+p5_536,mixed_intent_new,помогите зуб с корнем ноет цена какая,anamnesis,complaint,normal,faq,0.5265,0.4057,accept,ml_weak_can_learn
+p5_537,mixed_intent_new,ребенку 7 лет зуб разболелся можно на вечер,anamnesis,complaint,urgent,anamnesis,0.5041,0.5041,accept,ml_agrees
+p5_538,mixed_intent_new,флюс на зубе скока стоит лечить срочно,anamnesis,complaint,urgent,faq,0.7885,0.1644,accept,hard_ml_disagree(faq@0.79)
+p5_539,mixed_intent_new,ночью зуб заболел запишусь к вам завтра,anamnesis,complaint,normal,booking,0.7966,0.1096,accept,hard_ml_disagree(booking@0.80)
+p5_540,mixed_intent_new,опухла десна после яблока сколько пломба,anamnesis,complaint,normal,faq,0.5149,0.4523,accept,ml_weak_can_learn
+p5_541,mixed_intent_new,зубы кровоточат надо срочно к врачу цена,anamnesis,complaint,urgent,faq,0.6086,0.2414,accept,ml_weak_can_learn
+p5_542,mixed_intent_new,ноет передний зуб запишитесь на понедельник,anamnesis,complaint,normal,booking,0.8227,0.1519,accept,hard_ml_disagree(booking@0.82)
+p5_543,mixed_intent_new,мне 60 лет зуб сломался скока вылечить,anamnesis,complaint,normal,faq,0.6619,0.2968,accept,ml_weak_can_learn
+p5_544,mixed_intent_new,флюс раздуло щеку бежать к вам можно,anamnesis,complaint,urgent,anamnesis,0.5244,0.5244,accept,ml_agrees
+p5_545,mixed_intent_new,болит жевательный зуб после супа записаться,anamnesis,complaint,normal,anamnesis,0.5762,0.5762,accept,ml_agrees
+p5_546,mixed_intent_new,дочке зуб ноет третий день срочно цена,anamnesis,complaint,urgent,anamnesis,0.4714,0.4714,accept,ml_agrees
+p5_547,mixed_intent_new,удар в зуб вчера болит скока удаление,anamnesis,complaint,urgent,faq,0.6228,0.2872,accept,ml_weak_can_learn
+p5_548,mixed_intent_new,десна гноится зуб ноет запишусь на среду,anamnesis,complaint,normal,booking,0.5434,0.4179,accept,ml_weak_can_learn
+p5_549,mixed_intent_new,зуб с дыркой ноет не сплю срочно,anamnesis,complaint,urgent,anamnesis,0.8274,0.8274,accept,ml_agrees
+p5_550,mixed_intent_new,после ореха зуб заболел цена лечения,anamnesis,complaint,normal,faq,0.6513,0.2774,accept,ml_weak_can_learn
+p5_551,mixed_intent_new,отцу болит корень зуба можно завтра утром,anamnesis,complaint,normal,booking,0.4801,0.3947,accept,ml_weak_can_learn
+p5_552,mixed_intent_new,щека в пол лица флюс запишитесь меня,anamnesis,complaint,urgent,anamnesis,0.5156,0.5156,accept,ml_agrees
+p5_553,short_ambiguous_new,КРОВЬ ИЗ ДЕСНЫ,anamnesis,symptom,urgent,anamnesis,0.7382,0.7382,accept,ml_agrees
+p5_554,short_ambiguous_new,ноет жеватель,anamnesis,symptom,urgent,anamnesis,0.9175,0.9175,accept,ml_agrees
+p5_555,short_ambiguous_new,боль пронзает,anamnesis,symptom,urgent,anamnesis,0.76,0.76,accept,ml_agrees
+p5_556,short_ambiguous_new,дырка растет,anamnesis,symptom,urgent,anamnesis,0.6897,0.6897,accept,ml_agrees
+p5_557,short_ambiguous_new,десна болитт,anamnesis,symptom,urgent,anamnesis,0.8865,0.8865,accept,ml_agrees
+p5_558,short_ambiguous_new,ОПУХЛО ВСЕ,anamnesis,symptom,urgent,anamnesis,0.4895,0.4895,accept,ml_agrees
+p5_559,short_ambiguous_new,пульсирует сильно,anamnesis,symptom,urgent,anamnesis,0.673,0.673,accept,ml_agrees
+p5_560,short_ambiguous_new,сломала зуб,anamnesis,symptom,urgent,anamnesis,0.8467,0.8467,accept,ml_agrees
+p5_561,short_ambiguous_new,жжение десны,anamnesis,symptom,urgent,anamnesis,0.8095,0.8095,accept,ml_agrees
+p5_562,short_ambiguous_new,кровоточит дырка,anamnesis,symptom,urgent,anamnesis,0.8269,0.8269,accept,ml_agrees
+p5_563,short_ambiguous_new,боль в корне,anamnesis,symptom,urgent,anamnesis,0.7382,0.7382,accept,ml_agrees
+p5_564,short_ambiguous_new,флюз прорвало,anamnesis,symptom,urgent,anamnesis,0.7252,0.7252,accept,ml_agrees
+p5_565,short_ambiguous_new,зуби крошатся,anamnesis,symptom,urgent,anamnesis,0.8685,0.8685,accept,ml_agrees
+p5_566,short_ambiguous_new,болит сильно,anamnesis,symptom,urgent,anamnesis,0.7281,0.7281,accept,ml_agrees
+p5_567,short_ambiguous_new,КРОВЬ ТЕЧЁТ,anamnesis,symptom,urgent,anamnesis,0.6227,0.6227,accept,ml_agrees
+p5_568,short_ambiguous_new,флюс опух,anamnesis,symptom,urgent,anamnesis,0.7519,0.7519,accept,ml_agrees
+p5_569,short_ambiguous_new,гной из зуба,anamnesis,symptom,urgent,anamnesis,0.8341,0.8341,accept,ml_agrees
+p5_570,short_ambiguous_new,боль ночью,anamnesis,symptom,urgent,anamnesis,0.7352,0.7352,accept,ml_agrees
+p5_571,short_ambiguous_new,дырка большая,anamnesis,symptom,urgent,anamnesis,0.5408,0.5408,accept,ml_agrees
+p5_572,short_ambiguous_new,рот горитт,anamnesis,symptom,urgent,anamnesis,0.596,0.596,accept,ml_agrees
+p5_573,short_ambiguous_new,язык онемел,anamnesis,symptom,urgent,unsupported,0.4422,0.4147,accept,ml_weak_can_learn
+p5_574,short_ambiguous_new,челюсть дергается,anamnesis,symptom,urgent,anamnesis,0.9341,0.9341,accept,ml_agrees
+p5_575,short_ambiguous_new,десна кровит,anamnesis,symptom,urgent,anamnesis,0.9115,0.9115,accept,ml_agrees
+p5_576,short_ambiguous_new,нёбо болит,anamnesis,symptom,urgent,anamnesis,0.6747,0.6747,accept,ml_agrees
+p5_577,short_ambiguous_new,вкус гнилой,anamnesis,symptom,urgent,unsupported,0.5127,0.357,accept,ml_weak_can_learn
+p5_578,short_ambiguous_new,опухоль выросла,anamnesis,symptom,urgent,anamnesis,0.7554,0.7554,accept,ml_agrees

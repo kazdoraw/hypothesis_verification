@@ -1,0 +1,102 @@
+text_preview,gold,predicted,action,reason,is_rule_accept,is_complexity_defer,is_tag_policy_defer,confidence,margin,correct,primary_tag,active_tags
+Принимаете по ДМС?,faq,faq,accept,general_confident,False,False,False,0.7715,0.6754,True,unclassified,
+Есть налоговый вычет за лечение?,faq,faq,defer,low_confidence,False,False,False,0.6255,0.4656,False,unclassified,
+Даёте справку для налоговой?,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.3228,0.0066,False,unclassified,
+Есть программа лояльности?,faq,faq,defer,low_confidence,False,False,False,0.5071,0.299,False,unclassified,
+Акции есть?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+Кто ваш лучший ортодонт?,faq,faq,defer,low_confidence,False,False,False,0.597,0.34,False,unclassified,
+Кто самый опытный врач?,faq,faq,defer,low_confidence,False,False,False,0.5343,0.1718,False,unclassified,
+У кого больше всего отзывов?,faq,,defer,tag_policy:simple_symptom,False,False,True,0.7444,0.6219,False,simple_symptom,simple_symptom
+Хочу к женщине-стоматологу,faq,booking,defer,low_confidence,False,False,False,0.5605,0.3778,False,unclassified,
+Можно ли записаться онлайн?,faq,booking,accept,general_confident,False,False,False,0.8813,0.8147,False,simple_booking,simple_booking
+Записываете первичных?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous;simple_booking
+кто опытней всех,faq,faq,defer,low_confidence,False,False,False,0.4779,0.0755,False,unclassified,
+лучший доктор у вас,faq,unsupported,accept,general_confident,False,False,False,0.6541,0.3875,False,unclassified,
+ребёнку 5 лет зубки болеть начал к кому опытному детскому,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4046,0.1349,False,simple_symptom,simple_symptom
+муж зуб боится лечить посоветуйте самого опытного стоматолога,faq,faq,accept,general_confident,False,False,False,0.6352,0.4772,True,unclassified,
+давно не чистили зубы на работе некогда кто с большим стажем,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.432,0.1739,False,simple_symptom,simple_symptom
+свадьба скоро идеальные зубы нужны к вашему топовому врачу,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.3867,0.0092,False,unclassified,
+посоветуйте опытного врача,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.4675,0.1112,False,unclassified,
+кто у вас с большим стажем,faq,faq,defer,low_confidence,False,False,False,0.4654,0.0274,False,simple_symptom,simple_symptom
+самый опытный стоматолог какой,faq,faq,accept,general_confident,False,False,False,0.7217,0.5659,True,unclassified,
+справку налоговую даете,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4321,0.1929,False,unclassified,
+даёте бумагу для налоговой,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.295,0.0198,False,unclassified,
+лечила зубы у вас чистку делала нужна справка для налогового вычета дадите,faq,anamnesis,accept,anamnesis_confident,False,False,False,0.5647,0.2415,False,unclassified,
+пенсионер я пломбу поставили теперь для налоговой справочка нужна выписываете та,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4118,0.0818,False,unclassified,
+отбеливание делал вчера дорого вышло справку для налоговой оформите пожалуйста,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.2896,0.0031,False,unclassified,
+имплант вставлял у вас для вычета в налоговой нужна ваша справка даёте,faq,faq,defer,low_confidence,False,False,False,0.5184,0.1949,False,unclassified,
+можно ли у вас взять справку для налоговой,faq,faq,defer,low_confidence,False,False,False,0.5252,0.3297,False,unclassified,
+выдаёте справки для налоговой вычета,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.3247,0.006,False,unclassified,
+нужна справка в налоговую от клиники есть,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.4021,0.0787,False,unclassified,
+дмс принимаете?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+по дмс можно?,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.3968,0.1265,False,unclassified,
+дмс есть?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+у меня дмс от работы принимаете такие полисы или нет,faq,faq,accept,general_confident,False,False,False,0.7382,0.5906,True,unclassified,
+ребёнку зубы лечить по дмс подойдёт у вас или только наличкой,faq,faq,accept,general_confident,False,False,False,0.68,0.5348,True,unclassified,
+на пенсии дмс дали интересно принимаете вы их для осмотра,faq,faq,defer,low_confidence,False,False,False,0.5333,0.3652,False,unclassified,
+мужа отправляют по дмс к вам чё нужно принести полис,faq,faq,defer,low_confidence,False,False,False,0.3232,0.0232,False,unclassified,
+принимаете дмс полисы?,faq,faq,accept,general_confident,False,False,False,0.7331,0.6282,True,unclassified,
+работает дмс у вас?,faq,faq,accept,general_confident,False,False,False,0.6577,0.4199,True,unclassified,
+вычет за лечение зубов есть,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.4257,0.0196,False,unclassified,
+налоговый вычет дают,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.3371,0.0144,False,unclassified,
+возврат налога за пломбы,faq,faq,accept,general_confident,False,False,False,0.6624,0.5018,True,unclassified,
+лечила дочку зубы платно можно ли вычет получить за лечение в клинике,faq,faq,accept,general_confident,False,False,False,0.6698,0.5031,True,unclassified,
+мужу имплант ставили дорого а вычет налоговый за такое положен или нет,faq,faq,defer,low_confidence,False,False,False,0.6267,0.4469,False,unclassified,
+в прошлом месяце чистку делал слышал про возврат налогов подскажите как,faq,faq,defer,low_confidence,False,False,False,0.5457,0.3711,False,unclassified,
+отбеливание делала у вас а налоговый вычет за косметику дают,faq,faq,defer,low_confidence,False,False,False,0.5744,0.3429,False,unclassified,
+подскажите про вычет за лечение,faq,faq,defer,low_confidence,False,False,False,0.513,0.2833,False,unclassified,
+налоговый возврат за зубы возможен,faq,faq,defer,low_confidence,False,False,False,0.5132,0.1792,False,unclassified,
+есть ли вычет на услуги стоматолога,faq,faq,accept,general_confident,False,False,False,0.7161,0.5656,True,unclassified,
+програма лояльности есть,faq,faq,defer,faq_anamnesis_borderline,False,False,False,0.3837,0.1285,False,unclassified,
+лояльность программа?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+дисконт для своих есть,faq,faq,defer,low_confidence,False,False,False,0.5491,0.3877,False,unclassified,
+дочке 6 лет часто чистку делаем есть ли программа лояльности чтоб дешевле выходи,faq,faq,accept,general_confident,False,False,False,0.6553,0.496,True,unclassified,
+пенсионер я каждый месяц прихожу зубы лечить программа лояльности у вас какая,faq,faq,defer,low_confidence,False,False,False,0.6101,0.4065,False,unclassified,
+на работе коллеги хвалят вашу лояльность а у вас правда есть такая программа,faq,faq,defer,sparse_dense_disagree,False,False,False,0.54,0.2889,False,unclassified,
+семья большая все зубы болят есть программа лояльности для постоянных клиентов,faq,,defer,tag_policy:simple_symptom,False,False,True,0.5835,0.3275,False,simple_symptom,simple_symptom
+подскажите про программу лояльности,faq,faq,defer,low_confidence,False,False,False,0.3835,0.1241,False,unclassified,
+есть ли лояльность у вас,faq,faq,accept,general_confident,False,False,False,0.7306,0.6111,True,unclassified,
+акции чё есть,faq,faq,defer,low_confidence,False,False,False,0.4955,0.1717,False,unclassified,
+скока акции,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+скидки имеются,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+женюсь скоро отбеливание надо акции на него у вас есть сейчас,faq,faq,accept,general_confident,False,False,False,0.684,0.5616,True,unclassified,
+ребенку 6 лет чистка зубов акции на детскую какая цена,faq,,defer,tag_policy:simple_faq,False,False,True,0.7293,0.5557,False,simple_faq,simple_faq
+пенсионер скидки для нас на камень с зубов какие акции действуют,faq,faq,defer,low_confidence,False,False,False,0.6,0.358,False,unclassified,
+на работе весь день акции на вечерний осмотр есть подскажите,faq,booking,defer,sparse_dense_disagree,False,False,False,0.4167,0.0878,False,unclassified,
+какие акции сейчас,faq,faq,accept,general_confident,False,False,False,0.6956,0.4727,True,unclassified,
+подскажите про акции,faq,faq,defer,low_confidence,False,False,False,0.4992,0.2273,False,unclassified,
+есть акции на чистку,faq,faq,defer,low_confidence,False,False,False,0.5635,0.3888,False,unclassified,
+лучший ортодонт кто,faq,faq,defer,low_confidence,False,False,False,0.4566,0.1211,False,unclassified,
+ортодонт лучший у вас,faq,faq,defer,low_confidence,False,False,False,0.4588,0.1527,False,unclassified,
+дочке 12 лет брекеты нужны кто у вас лучший ортодонт сделает красиво,faq,faq,accept,general_confident,False,False,False,0.6721,0.518,True,unclassified,
+на работе посоветовали к ортодонту кто у вас самый опытный по ровным зубам,faq,faq,defer,low_confidence,False,False,False,0.586,0.3922,False,unclassified,
+читала отзывы про брекеты ваш лучший ортодонт какой чтобы не ошибиться,faq,faq,accept,general_confident,False,False,False,0.6592,0.4525,True,unclassified,
+жене для улыбки ортодонт нужен посоветуйте лучшего у вас в клинике,faq,faq,defer,low_confidence,False,False,False,0.5857,0.3823,False,unclassified,
+кто лучший ортодонт у вас,faq,faq,defer,low_confidence,False,False,False,0.5823,0.2938,False,unclassified,
+кто лидер по отзывам,faq,unsupported,accept,general_confident,False,False,False,0.7259,0.5185,False,unclassified,
+у кого отзивов топ,faq,unsupported,defer,low_confidence,False,False,False,0.4854,0.2418,False,unclassified,
+больше отзывов чьих,faq,,defer,tag_policy:simple_symptom,False,False,True,0.7475,0.6169,False,simple_symptom,simple_symptom
+на сайте у вас отзывы читала у какого доктора их больше всего хочу понять кто оп,faq,unsupported,defer,sparse_dense_disagree,False,False,False,0.4792,0.1371,False,simple_symptom,simple_symptom
+ребёнку 7 лет вести к стоматологу с отзывами кучей у вас кто такой самый популяр,faq,faq,defer,low_confidence,False,False,False,0.5007,0.1668,False,unclassified,
+муж боится зубных врачей подскажите кто у вас с наибольшим количеством отзывов ч,faq,,defer,complexity:mixed_intent,False,True,False,0.0,0.0,False,mixed_intent,mixed_intent;symptom_doctor
+на работе коллеги хвалят клинику а кто доктор с рекордными отзывами посоветуйте ,faq,unsupported,defer,low_confidence,False,False,False,0.5765,0.2076,False,unclassified,
+кто из стоматологов у вас больше отзывов имеет,faq,faq,defer,low_confidence,False,False,False,0.5364,0.1874,False,simple_symptom,simple_symptom
+подскажите врача с максимумом отзывов,faq,unsupported,defer,low_confidence,False,False,False,0.4709,0.1231,False,unclassified,
+есть женщина стоматолог,faq,faq,defer,low_confidence,False,False,False,0.6177,0.3926,False,unclassified,
+к даме врачу можно,faq,booking,defer,low_confidence,False,False,False,0.4795,0.2071,False,unclassified,
+ребёнку 5 лет боюсь мужиков врачей есть женщина стоматолог,faq,faq,accept,general_confident,False,False,False,0.6823,0.5103,True,unclassified,
+мужа отправляю к вам предпочитает даму у вас такая есть,faq,faq,defer,low_confidence,False,False,False,0.4389,0.1406,False,unclassified,
+на работе все хвалят женщин стоматологов делаете у себя,faq,faq,defer,sparse_dense_disagree,False,False,False,0.4795,0.2193,False,unclassified,
+старая к тетке ходила теперь хочу к молодой женщине есть ли,faq,anamnesis,defer,sparse_dense_disagree,False,False,False,0.348,0.087,False,unclassified,
+есть женщины стоматологи у вас,faq,faq,accept,general_confident,False,False,False,0.7733,0.6836,True,unclassified,
+подскажите про женщин врачей,faq,faq,defer,sparse_dense_disagree,False,False,False,0.5755,0.3803,False,unclassified,
+можно онлайн?,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+берёте новичков,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+первичных принимаете,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+первых берёте,faq,,defer,complexity:short_ambiguous,False,True,False,0.0,0.0,False,short_ambiguous,short_ambiguous
+ребёнку первый раз к стоматологу берёте ли таких маленьких первичных,faq,faq,accept,general_confident,False,False,False,0.6882,0.5704,True,unclassified,
+никогда не лечился в платных клиниках у вас первичку принимаете,faq,faq,accept,general_confident,False,False,False,0.7426,0.6427,True,unclassified,
+переехал в город нужен стоматолог берёте ли первичных пациентов,faq,faq,defer,low_confidence,False,False,False,0.6175,0.4648,False,unclassified,
+можно к вам на первый приём,faq,booking,accept,general_confident,False,False,False,0.8252,0.7358,False,simple_booking,simple_booking
+принимаете первичных пациентов,faq,faq,accept,general_confident,False,False,False,0.6647,0.5204,True,unclassified,
+берёте ли первых посетителей,faq,faq,defer,low_confidence,False,False,False,0.5509,0.3626,False,unclassified,

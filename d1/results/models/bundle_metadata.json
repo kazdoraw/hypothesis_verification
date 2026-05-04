@@ -1,0 +1,214 @@
+{
+  "B0_rules": {
+    "cache_key": {
+      "params_hash": "44136fa355b3678a",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:05.824209+00:00",
+    "fit_time_ms": 0.0,
+    "train_size": 2606
+  },
+  "B1_tfidf_svc": {
+    "cache_key": {
+      "params_hash": "999ce6b0253c26c7",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:06.072570+00:00",
+    "fit_time_ms": 180.6,
+    "train_size": 2606,
+    "summary": {
+      "head_type": "svc",
+      "analyzer": "char_wb",
+      "ngram_range": [
+        2,
+        5
+      ],
+      "max_features": 50000,
+      "n_features": 13649,
+      "train_time_ms": 180.6
+    }
+  },
+  "B1.1_tfidf_lr": {
+    "cache_key": {
+      "params_hash": "6be0e03256268992",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:06.401809+00:00",
+    "fit_time_ms": 191.6,
+    "train_size": 2606,
+    "summary": {
+      "head_type": "logistic",
+      "analyzer": "char_wb",
+      "ngram_range": [
+        2,
+        5
+      ],
+      "max_features": 50000,
+      "n_features": 13649,
+      "train_time_ms": 191.6
+    }
+  },
+  "B1.2_tfidf_lr_tuned": {
+    "cache_key": {
+      "params_hash": "c1b15661bf6e7a2c",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:06.826850+00:00",
+    "fit_time_ms": 284.3,
+    "train_size": 2606,
+    "summary": {
+      "head_type": "logistic",
+      "analyzer": "char_wb",
+      "ngram_range": [
+        2,
+        6
+      ],
+      "max_features": 50000,
+      "n_features": 30113,
+      "train_time_ms": 284.3
+    }
+  },
+  "B2_bge-m3_linear": {
+    "cache_key": {
+      "params_hash": "857310e812a7b9fa",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:15.815918+00:00",
+    "fit_time_ms": 8985.8,
+    "train_size": 2606,
+    "summary": {
+      "model": "BAAI/bge-m3",
+      "head_type": "linear",
+      "embedding_dim": 1024,
+      "train_time_ms": 6630.1
+    }
+  },
+  "B2.1_bge-m3_svc": {
+    "cache_key": {
+      "params_hash": "999ce6b0253c26c7",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:24.471224+00:00",
+    "fit_time_ms": 8652.6,
+    "train_size": 2606,
+    "summary": {
+      "model": "BAAI/bge-m3",
+      "head_type": "svc",
+      "embedding_dim": 1024,
+      "train_time_ms": 6769.2
+    }
+  },
+  "B2.2_bge-m3_centroid": {
+    "cache_key": {
+      "params_hash": "488c9f6adaaff4a6",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:33.170699+00:00",
+    "fit_time_ms": 8697.7,
+    "train_size": 2606,
+    "summary": {
+      "model": "BAAI/bge-m3",
+      "head_type": "centroid",
+      "embedding_dim": 1024,
+      "train_time_ms": 6228.0
+    }
+  },
+  "B1.3_fasttext": {
+    "cache_key": {
+      "params_hash": "44136fa355b3678a",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:49.321230+00:00",
+    "fit_time_ms": 331.6,
+    "train_size": 2606,
+    "summary": {
+      "model": "fasttext",
+      "dim": 100,
+      "epoch": 25,
+      "lr": 0.5,
+      "wordNgrams": 2,
+      "minCount": 1,
+      "thread": 1,
+      "train_time_ms": 315.9,
+      "train_size": 2606
+    }
+  },
+  "B2.3_bge-m3_linear_tuned": {
+    "cache_key": {
+      "params_hash": "1f5b69d9e59c065c",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:42.457585+00:00",
+    "fit_time_ms": 9284.6,
+    "train_size": 2606,
+    "summary": {
+      "model": "BAAI/bge-m3",
+      "head_type": "linear",
+      "embedding_dim": 1024,
+      "train_time_ms": 6322.4
+    }
+  },
+  "B2.4_e5-small_linear": {
+    "cache_key": {
+      "params_hash": "23b0c449aa7f48ae",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:46.226516+00:00",
+    "fit_time_ms": 3766.1,
+    "train_size": 2606,
+    "summary": {
+      "model": "intfloat/multilingual-e5-small",
+      "head_type": "linear",
+      "embedding_dim": 384,
+      "train_time_ms": 1421.8
+    }
+  },
+  "B2.5_e5-small_svc": {
+    "cache_key": {
+      "params_hash": "c023165d62f5a675",
+      "dataset_hash": "a46013489804b634",
+      "code_hash": "dfb9ce45b143016b",
+      "env_hash": "6a06229bfb2401d7",
+      "schema_hash": "bd02073f879cab63"
+    },
+    "saved_at": "2026-05-01T13:47:48.358301+00:00",
+    "fit_time_ms": 2129.7,
+    "train_size": 2606,
+    "summary": {
+      "model": "intfloat/multilingual-e5-small",
+      "head_type": "svc",
+      "embedding_dim": 384,
+      "train_time_ms": 1210.8
+    }
+  }
+}

@@ -1,0 +1,12 @@
+eval_set,baseline,n_samples,route_accuracy,latency_ms,acc__anamnesis->booking,acc__anamnesis->faq,acc__booking->anamnesis,acc__booking->faq,acc__faq->anamnesis,acc__faq->booking
+switch_test,B0_rules @ switch_test,50,0.68,0.02,0.8333,0.6364,0.6667,0.5714,0.7143,0.7
+switch_test,B1_tfidf_svc @ switch_test,50,0.96,0.04,1.0,1.0,0.8889,0.8571,1.0,1.0
+switch_test,B1.1_tfidf_lr @ switch_test,50,0.92,0.03,1.0,0.9091,0.8889,0.7143,1.0,1.0
+switch_test,B1.2_tfidf_lr_tuned @ switch_test,50,0.92,0.04,1.0,0.9091,0.8889,0.7143,1.0,1.0
+switch_test,B1.3_fasttext @ switch_test,50,0.96,0.03,1.0,1.0,0.8889,1.0,1.0,0.9
+switch_test,B2_bge-m3_linear @ switch_test,50,0.92,3.36,1.0,0.9091,0.8889,0.7143,1.0,1.0
+switch_test,B2.1_bge-m3_svc @ switch_test,50,0.96,2.83,1.0,1.0,0.8889,0.8571,1.0,1.0
+switch_test,B2.2_bge-m3_centroid @ switch_test,50,0.8,2.81,1.0,0.5455,0.8889,0.5714,1.0,0.9
+switch_test,B2.3_bge-m3_linear_tuned @ switch_test,50,0.92,2.81,1.0,0.9091,0.8889,0.7143,1.0,1.0
+switch_test,B2.4_e5-small_linear @ switch_test,50,0.86,0.7,1.0,0.8182,0.8889,0.5714,1.0,0.9
+switch_test,B2.5_e5-small_svc @ switch_test,50,0.98,0.4,1.0,1.0,0.8889,1.0,1.0,1.0

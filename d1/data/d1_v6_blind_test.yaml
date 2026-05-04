@@ -1,0 +1,55 @@
+# D1 v6 Blind Test — 40 human-written сообщений
+#
+# Назначение: независимый тест, НЕ генерированный LLM, без пересечений с seeds.
+# Стиль: разговорный русский, как в реальном чате стоматологической клиники.
+# Никакие из этих текстов не должны попадать в train/val.
+
+blind_test:
+
+  # --- ANAMNESIS (12) ---
+  - {id: blind_001, text: "у меня тут что-то вылезло на десне, белое такое", route_domain: anamnesis, subtype: symptom, urgency: normal}
+  - {id: blind_002, text: "слушайте, второй день не могу нормально жевать правой стороной", route_domain: anamnesis, subtype: symptom, urgency: normal}
+  - {id: blind_003, text: "у сына зуб молочный уже месяц шатается, но сам не выпадает", route_domain: anamnesis, subtype: complaint, urgency: normal}
+  - {id: blind_004, text: "поставили пломбу неделю назад и теперь на горячее реагирует, это нормально?", route_domain: anamnesis, subtype: symptom, urgency: normal}
+  - {id: blind_005, text: "хочу сделать зубы покрасивее, может виниры или ещё что", route_domain: anamnesis, subtype: treatment_interest, urgency: normal}
+  - {id: blind_006, text: "мне тут вырвали зуб позавчера и до сих пор кровит немного", route_domain: anamnesis, subtype: symptom, urgency: urgent}
+  - {id: blind_007, text: "ночью проснулась от боли, вся правая сторона лица как огнём горит", route_domain: anamnesis, subtype: symptom, urgency: urgent}
+  - {id: blind_008, text: "передний зуб потемнел после удара, это серьёзно?", route_domain: anamnesis, subtype: complaint, urgency: normal}
+  - {id: blind_009, text: "хотела бы на чистку, давно не была, зубы жёлтые стали", route_domain: anamnesis, subtype: treatment_interest, urgency: normal}
+  - {id: blind_010, text: "у дочки 4 года передние зубы чернеют, что делать?", route_domain: anamnesis, subtype: complaint, urgency: normal}
+  - {id: blind_011, text: "коронка старая, под ней что-то попахивает", route_domain: anamnesis, subtype: symptom, urgency: normal}
+  - {id: blind_012, text: "думаю про импланты, но боюсь, это же операция", route_domain: anamnesis, subtype: treatment_interest, urgency: normal}
+
+  # --- FAQ (12) ---
+  - {id: blind_013, text: "а консультация у вас платная или бесплатная?", route_domain: faq, subtype: price, urgency: normal}
+  - {id: blind_014, text: "скажите, в выходные кто-нибудь принимает?", route_domain: faq, subtype: clinic_info, urgency: normal}
+  - {id: blind_015, text: "мне интересно, кто из ваших врачей занимается детьми", route_domain: faq, subtype: doctor_info, urgency: normal}
+  - {id: blind_016, text: "чистка ультразвуком и air flow это одно и то же или разное?", route_domain: faq, subtype: procedure_info, urgency: normal}
+  - {id: blind_017, text: "а если рассрочку оформить, какой процент?", route_domain: faq, subtype: price, urgency: normal}
+  - {id: blind_018, text: "подскажите ваш точный адрес, навигатор не находит", route_domain: faq, subtype: clinic_info, urgency: normal}
+  - {id: blind_019, text: "после имплантации сколько нельзя есть твёрдое?", route_domain: faq, subtype: procedure_info, urgency: normal}
+  - {id: blind_020, text: "а седация это типа наркоз или нет? страшно немного", route_domain: faq, subtype: procedure_info, urgency: normal}
+  - {id: blind_021, text: "примерно сколько выйдет за два импланта на нижнюю челюсть?", route_domain: faq, subtype: price, urgency: normal}
+  - {id: blind_022, text: "у вас есть кто-то специализируется именно на пародонтите?", route_domain: faq, subtype: doctor_info, urgency: normal}
+  - {id: blind_023, text: "а карту рассрочки прямо у вас оформляют?", route_domain: faq, subtype: clinic_info, urgency: normal}
+  - {id: blind_024, text: "сколько обычно длится приём у ортодонта первый раз?", route_domain: faq, subtype: procedure_info, urgency: normal}
+
+  # --- BOOKING (8) ---
+  - {id: blind_025, text: "можно на следующую среду к кому-нибудь записаться?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: blind_026, text: "мне бы перенести, я в командировке буду на той неделе", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: blind_027, text: "всё, я не приду, отменяйте пожалуйста завтрашнее", route_domain: booking, subtype: cancel, urgency: normal}
+  - {id: blind_028, text: "запишите нас с мужем, желательно друг за другом", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: blind_029, text: "а можно перенести на попозже, часов на 5-6?", route_domain: booking, subtype: reschedule, explicit_booking: true, urgency: normal}
+  - {id: blind_030, text: "есть что-нибудь свободное на эту пятницу утром?", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: normal}
+  - {id: blind_031, text: "передумала, отмените пока, потом перезапишусь", route_domain: booking, subtype: cancel, urgency: normal}
+  - {id: blind_032, text: "мне бы экстренно попасть, очень сильно болит", route_domain: booking, subtype: new_appointment, explicit_booking: true, urgency: urgent}
+
+  # --- UNSUPPORTED (8) ---
+  - {id: blind_033, text: "привет!", route_domain: unsupported, subtype: greeting_only, urgency: normal}
+  - {id: blind_034, text: "ладно спасибо, буду думать", route_domain: unsupported, subtype: farewell_only, urgency: normal}
+  - {id: blind_035, text: "а вы можете такси вызвать?", route_domain: unsupported, subtype: offtopic, is_offtopic: true, urgency: normal}
+  - {id: blind_036, text: "ммм", route_domain: unsupported, subtype: unclear_short, urgency: normal}
+  - {id: blind_037, text: "вообще ужас, жду полчаса уже", route_domain: unsupported, subtype: feedback, feedback_flag: true, urgency: normal}
+  - {id: blind_038, text: "а", route_domain: unsupported, subtype: unclear_short, urgency: normal}
+  - {id: blind_039, text: "ну ок пока", route_domain: unsupported, subtype: farewell_only, urgency: normal}
+  - {id: blind_040, text: "ты настоящий врач или бот?", route_domain: unsupported, subtype: offtopic, is_offtopic: true, urgency: normal}

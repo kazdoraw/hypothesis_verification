@@ -1,0 +1,166 @@
+{
+  "safety_set": [
+    {
+      "baseline": "B0_rules @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.7471,
+      "recall_urgent": 0.7471,
+      "false_faq_for_anamnesis": 0.0,
+      "false_negative_urgent": 22,
+      "misrouted_to": {
+        "unsupported": 22
+      },
+      "latency_ms": 0.03
+    },
+    {
+      "baseline": "B1_tfidf_svc @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.8736,
+      "recall_urgent": 0.8736,
+      "false_faq_for_anamnesis": 0.0805,
+      "false_negative_urgent": 11,
+      "misrouted_to": {
+        "booking": 2,
+        "faq": 7,
+        "unsupported": 2
+      },
+      "latency_ms": 0.04
+    },
+    {
+      "baseline": "B1.1_tfidf_lr @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9195,
+      "recall_urgent": 0.9195,
+      "false_faq_for_anamnesis": 0.046,
+      "false_negative_urgent": 7,
+      "misrouted_to": {
+        "faq": 4,
+        "unsupported": 2,
+        "booking": 1
+      },
+      "latency_ms": 0.03
+    },
+    {
+      "baseline": "B1.2_tfidf_lr_tuned @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.908,
+      "recall_urgent": 0.908,
+      "false_faq_for_anamnesis": 0.046,
+      "false_negative_urgent": 8,
+      "misrouted_to": {
+        "unsupported": 3,
+        "faq": 4,
+        "booking": 1
+      },
+      "latency_ms": 0.04
+    },
+    {
+      "baseline": "B1.3_fasttext @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9195,
+      "recall_urgent": 0.9195,
+      "false_faq_for_anamnesis": 0.0345,
+      "false_negative_urgent": 7,
+      "misrouted_to": {
+        "booking": 3,
+        "unsupported": 1,
+        "faq": 3
+      },
+      "latency_ms": 0.0
+    },
+    {
+      "baseline": "B2_bge-m3_linear @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9195,
+      "recall_urgent": 0.9195,
+      "false_faq_for_anamnesis": 0.046,
+      "false_negative_urgent": 7,
+      "misrouted_to": {
+        "faq": 4,
+        "unsupported": 2,
+        "booking": 1
+      },
+      "latency_ms": 3.45
+    },
+    {
+      "baseline": "B2.1_bge-m3_svc @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9425,
+      "recall_urgent": 0.9425,
+      "false_faq_for_anamnesis": 0.046,
+      "false_negative_urgent": 5,
+      "misrouted_to": {
+        "faq": 4,
+        "booking": 1
+      },
+      "latency_ms": 3.13
+    },
+    {
+      "baseline": "B2.2_bge-m3_centroid @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.931,
+      "recall_urgent": 0.931,
+      "false_faq_for_anamnesis": 0.023,
+      "false_negative_urgent": 6,
+      "misrouted_to": {
+        "faq": 2,
+        "unsupported": 3,
+        "booking": 1
+      },
+      "latency_ms": 3.1
+    },
+    {
+      "baseline": "B2.3_bge-m3_linear_tuned @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9425,
+      "recall_urgent": 0.9425,
+      "false_faq_for_anamnesis": 0.023,
+      "false_negative_urgent": 5,
+      "misrouted_to": {
+        "faq": 2,
+        "unsupported": 2,
+        "booking": 1
+      },
+      "latency_ms": 3.11
+    },
+    {
+      "baseline": "B2.4_e5-small_linear @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.8966,
+      "recall_urgent": 0.8966,
+      "false_faq_for_anamnesis": 0.0345,
+      "false_negative_urgent": 9,
+      "misrouted_to": {
+        "faq": 3,
+        "unsupported": 5,
+        "booking": 1
+      },
+      "latency_ms": 0.66
+    },
+    {
+      "baseline": "B2.5_e5-small_svc @ safety_set",
+      "n_samples": 87,
+      "n_urgent": 87,
+      "recall_anamnesis": 0.9425,
+      "recall_urgent": 0.9425,
+      "false_faq_for_anamnesis": 0.0345,
+      "false_negative_urgent": 5,
+      "misrouted_to": {
+        "faq": 3,
+        "booking": 1,
+        "unsupported": 1
+      },
+      "latency_ms": 0.41
+    }
+  ]
+}

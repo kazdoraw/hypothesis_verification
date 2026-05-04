@@ -1,0 +1,210 @@
+# D4v2 Experiment Configuration — Stage 1: Screening of Retrieval Mechanics
+# Knowledge Access Benchmark для AI DENTIST
+
+experiment:
+  name: "D4v2_knowledge_access_benchmark"
+  version: 2
+  stage: 1
+  seed: 42
+  description: >
+    Stage 1: screening of retrieval mechanics. Контролируемый single-clinic benchmark,
+    определяющий, оправдывается ли дополнительная сложность retrieval-стратегий
+    при текущем объёме KB. Core inferential: S1, S2, S3, S4. Experimental branches:
+    S4r, S5 (descriptive only, не в core inference). Descriptive baseline: B0.
+
+# LLM (единый для S1-S4, S4r, S5)
+llm:
+  provider: "openrouter"
+  api_url: "https://openrouter.ai/api/v1"
+  model: "Qwen/Qwen3-Next-80B-A3B-Instruct"
+  temperature: 0.1
+  top_p: 1.0
+  max_tokens: 1024
+
+# Judge LLM (вторичный слой оценки)
+judge:
+  provider: "openrouter"
+  api_url: "https://openrouter.ai/api/v1"
+  model: "openai/gpt-5.4-mini"
+  temperature: 0.0
+  max_tokens: 1024
+
+# Embedding (для S3, S4, S4r) — revision pinned для воспроизводимости
+embedding:
+  model: "BAAI/bge-m3"
+  revision: "5617a9f61b028005a4858fdac845db406aefb181"  # pinned 2026-03-16
+  device: "mps"
+  similarity_method: "cosine"
+  top_k: 5
+
+# Cross-encoder reranking (для S4r, S5) — revision pinned
+reranking:
+  model: "BAAI/bge-reranker-base"
+  revision: "2cfc18c9415c912f9d8155881c133215df768a70"  # pinned 2025-04-21
+  device: "mps"
+  top_k_retrieve: 20
+  top_k_rerank: 7
+
+# Tokenizer (для chunker.py token counting) — revision pinned
+tokenizer:
+  model: "Qwen/Qwen3.5-35B-A3B"
+  revision: "ec2d4ece1ffb563322cbee9a48fe0e3fcbce0307"  # pinned 2026-03-30
+
+# HuggingFace Hub — загрузка моделей строго из кеша
+hub:
+  local_files_only: true
+
+# --- Stage 2: Chunk Representation (retrieval-side only) ---
+representation:
+  mode: "plain"               # plain (C0) | contextual (C1) | llm_enriched (C2)
+  c2_prompt_temperature: 0.0  # temperature для C2 LLM-enrichment
+  c2_prompt_max_tokens: 64    # max_tokens для C2 LLM-enrichment (strict: 2 строки)
+
+# --- Стратегии: разделены на core / experimental / descriptive ---
+
+# Core strategies (inferential comparison, paired tests)
+core_strategies:
+  - id: "S1"
+    name: "Full Context"
+    description: "Вся KB целиком в prompt, детерминированная сериализация"
+    uses_llm: true
+    uses_embedding: false
+    uses_lexical: false
+
+  - id: "S2"
+    name: "Lexical Retrieval"
+    description: "Keyword/BM25/FTS → top-k retrieval units"
+    uses_llm: true
+    uses_embedding: false
+    uses_lexical: true
+
+  - id: "S3"
+    name: "Vector Retrieval"
+    description: "Embedding similarity → top-k, без lexical rerank"
+    uses_llm: true
+    uses_embedding: true
+    uses_lexical: false
+
+  - id: "S4"
+    name: "Hybrid Retrieval"
+    description: "Lexical + Vector (RRF), без reranking"
+    uses_llm: true
+    uses_embedding: true
+    uses_lexical: true
+
+# Experimental branches (runnable, но descriptive only — не в core inference)
+experimental_branches:
+  - id: "S4r"
+    name: "Hybrid + Reranking"
+    description: "Research branch: hybrid top-20 → cross-encoder → top-k. Не в core inference."
+    uses_llm: true
+    uses_embedding: true
+    uses_lexical: true
+    status: "research"
+
+  - id: "S5"
+    name: "Tiered (B0 → S4r)"
+    description: "Research branch: каскад B0 → S4r+LLM. Не в core inference."
+    uses_llm: true
+    uses_embedding: true
+    uses_lexical: true
+    status: "research"
+
+# Descriptive baseline (accuracy floor, не inferential competitor)
+descriptive_baseline:
+  - id: "B0"
+    name: "Keyword + Template"
+    description: "Descriptive non-LLM baseline: keyword matching + templates для clinic FAQ, pricing, doctor lookup"
+    uses_llm: false
+    uses_embedding: false
+    uses_lexical: true
+
+# Eval set
+eval_set:
+  target_size: 120
+  min_size: 100
+  max_size: 150
+  manual_ratio_min: 0.30
+  min_per_category: 8
+  deduplication_threshold: 0.85
+  required_classes:
+    - "clinic_info"
+    - "doctor_info"
+    - "pricing"
+    - "aftercare"
+    - "reasoning"
+    - "out_of_scope"
+
+# KB data
+kb:
+  sources:
+    - "data/kb/clinic_info.yaml"
+    - "data/kb/doctors.yaml"
+    - "data/kb/dentklever_prices.csv"
+    - "data/kb/aftercare_recommendations.yaml"
+  chunking:
+    method: "logical"
+    expected_units: [55, 75]  # +aftercare чанки
+
+# KB scale experiment (core strategies only, S1 = reference with feasibility policy)
+kb_scale:
+  enabled: false
+  method: "nested_distractor_expansion"
+  sizes_tokens: [15000, 50000]
+  labels: ["15K", "50K"]
+  strategies: ["S2", "S3", "S4"]
+
+# S5 tiered policy (experimental branch, не core)
+s5_policy:
+  status: "experimental"
+  confidence_threshold: 0.70
+  allowed_match_types: ["topic_keyword", "price_query", "doctor_query"]
+  allow_aftercare_direct: false
+  allow_multifact_direct: false
+  doctor_requires_exact_entity: true
+
+# S1 feasibility policy for scale experiment
+s1_policy:
+  enabled_in_small_kb: true
+  enabled_in_scale_live: true
+  max_live_scale_points: 1
+  max_context_tokens: 32000
+  max_prompt_cost_usd: 0.10
+  when_infeasible: "analytical_only"
+
+# Statistical analysis
+statistics:
+  primary_endpoint: "fact_match_rate"
+  secondary_endpoint: "faithfulness"
+  bootstrap_n_resamples: 10000
+  confidence_level: 0.95
+  significance_alpha: 0.05
+  multiple_comparison_correction: "holm"
+  # Core paired comparisons (inferential)
+  core_comparisons:
+    - ["S1", "S2"]
+    - ["S1", "S3"]
+    - ["S1", "S4"]
+    - ["S2", "S3"]
+    - ["S3", "S4"]
+  # Research diagnostics (descriptive only, не inferential)
+  research_diagnostics:
+    - ["S4", "S4r"]   # rerank lift assessment
+    - ["S4r", "S5"]   # policy cascade diagnostic
+  scale_comparisons:
+    - ["S2", "S3"]
+    - ["S2", "S4"]
+    - ["S3", "S4"]
+
+# Evaluation layers
+evaluation:
+  manual_validation_min: 30
+  manual_validation_max: 50
+  judge_correlation_subset: 30
+
+# Rate limiting & parallelism
+rate_limit:
+  max_workers: 8
+  request_timeout_sec: 90
+  max_retries: 3
+  checkpoint_every_n: 25

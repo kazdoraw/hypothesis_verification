@@ -1,3 +1,0 @@
-level,accuracy,macro_f1,weighted_f1,target_macro_f1,status
-L1,0.9739,0.9732,0.9740,0.85,PASS
-L2,0.9628,0.9632,0.9632,0.90,PASS

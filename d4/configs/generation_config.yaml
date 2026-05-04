@@ -1,0 +1,21 @@
+# Versioned artifact: параметры генерации и подготовки eval set.
+# Всё, что влияет на состав eval set, должно быть воспроизводимо.
+# НЕ менять после freeze (Фаза 6.1).
+
+# Дедупликация запросов (Bias 4: другая модель, не retrieval bge-m3)
+dedup:
+  model: "intfloat/multilingual-e5-base"
+  threshold: 0.85
+
+# LLM-валидация intent вариаций (Bias 5)
+variation:
+  intent_validation_model: "openai/gpt-4.1-mini"
+  temperature: 0.0
+  max_tokens: 10
+
+# Group-stratified dev/test split (Bias 7)
+split:
+  method: "group_stratified"
+  group_field: "seed_family_id"
+  test_ratio: 0.3
+  seed: 42

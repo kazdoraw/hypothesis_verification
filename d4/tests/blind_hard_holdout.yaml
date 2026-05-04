@@ -1,0 +1,216 @@
+# blind_hard_holdout.yaml — held-out samples для independent sanity-check.
+# НЕ использовались ни в mini_eval_set, ни в mini_eval_set_hard, ни в tuning.
+# Статус: blind — prompt/guard правки НЕ тюнились по этим кейсам.
+# 11 samples: 2 clinic_info, 2 pricing, 2 doctor_info, 2 reasoning, 1 aftercare, 2 OOS.
+
+# === CLINIC_INFO ===
+
+- sample_id: q_blind_01
+  query: "У вас есть рассрочка на лечение?"
+  category: clinic_info
+  subtype: financing
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: прямой запрос, clinic_financing"
+  gold_chunk_ids:
+  - - clinic_financing
+  gold_facts:
+  - fact_type: text
+    canonical_value: "беспроцентная рассрочка"
+
+- sample_id: q_blind_02
+  query: "какие документы нужны чтобы записаться?"
+  category: clinic_info
+  subtype: documents
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "blind holdout: косвенная формулировка, clinic_documents"
+  gold_chunk_ids:
+  - - clinic_documents
+  gold_facts:
+  - fact_type: text
+    canonical_value: "договор на оказание стоматологических услуг"
+
+# === PRICING ===
+
+- sample_id: q_blind_03
+  query: "Сколько стоит полечить зуб под микроскопом?"
+  category: pricing
+  subtype: specific_service
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "blind holdout: разговорная формулировка, price_treatment_under_microscope"
+  gold_chunk_ids:
+  - - price_treatment_under_microscope
+  gold_facts:
+  - fact_type: price
+    canonical_value: "7500"
+
+- sample_id: q_blind_04
+  query: "Прайс на детскую стоматологию покажите"
+  category: pricing
+  subtype: category_overview
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: прямой запрос прайса, price_children_therapy"
+  gold_chunk_ids:
+  - - price_children_therapy
+  gold_facts:
+  - fact_type: price
+    canonical_value: "1600"
+
+# === DOCTOR_INFO ===
+
+- sample_id: q_blind_05
+  query: "Булатов у вас какой специальности?"
+  category: doctor_info
+  subtype: by_surname
+  answerable: true
+  expected_answer: ""
+  expected_doctor: "Булатов Руслан Тальгатович"
+  expected_specialization: "Ортопедическая стоматология"
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: запрос по фамилии, doctor_7"
+  gold_chunk_ids:
+  - - doctor_7
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Булатов Руслан Тальгатович"
+  - fact_type: text
+    canonical_value: "ортопедическая стоматология"
+
+- sample_id: q_blind_06
+  query: "Есть ли у вас ортопед?"
+  category: doctor_info
+  subtype: by_specialization
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: "Ортопедическая стоматология"
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: запрос по специализации, doctor_7 + doctor_13"
+  gold_chunk_ids:
+  - - doctor_7
+  - - doctor_13
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Булатов Руслан Тальгатович"
+
+# === REASONING (multi-fact) ===
+
+- sample_id: q_blind_07
+  query: "Какой ортопед опытнее и сколько стоит консультация?"
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: "Булатов Руслан Тальгатович"
+  expected_specialization: "Ортопедическая стоматология"
+  expected_branch: null
+  expected_service: null
+  difficulty: 3
+  notes: "blind holdout: multi-fact doctor+price, requires comparison + pricing"
+  gold_chunk_ids:
+  - - doctor_7
+    - price_primary_appointment_consultations
+  - - doctor_13
+    - price_primary_appointment_consultations
+  gold_facts:
+  - fact_type: fio
+    canonical_value: "Булатов Руслан Тальгатович"
+  - fact_type: text
+    canonical_value: "стаж 25 лет"
+
+- sample_id: q_blind_08
+  query: "После синус-лифтинга какие антибиотики пить?"
+  category: reasoning
+  subtype: multi_fact
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "blind holdout: aftercare + specific medication, aftercare_post_sinus_lift"
+  gold_chunk_ids:
+  - - aftercare_post_sinus_lift
+  gold_facts:
+  - fact_type: text
+    canonical_value: "амоксиклав"
+
+# === AFTERCARE ===
+
+- sample_id: q_blind_09
+  query: "После чистки зубов появилась чувствительность, это нормально?"
+  category: aftercare
+  subtype: post_hygiene
+  answerable: true
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: aftercare_post_hygiene"
+  gold_chunk_ids:
+  - - aftercare_post_hygiene
+  gold_facts:
+  - fact_type: text
+    canonical_value: "повышенной чувствительности"
+
+# === OUT_OF_SCOPE ===
+
+- sample_id: q_blind_10
+  query: "У вас есть ночной приём?"
+  category: out_of_scope
+  subtype: missing_info
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 2
+  notes: "blind holdout: missing_info — ночной приём не подтверждён в KB"
+  gold_chunk_ids: []
+  gold_facts: []
+
+- sample_id: q_blind_11
+  query: "Вы лечите животных?"
+  category: out_of_scope
+  subtype: wrong_domain
+  answerable: false
+  expected_answer: ""
+  expected_doctor: null
+  expected_specialization: null
+  expected_branch: null
+  expected_service: null
+  difficulty: 1
+  notes: "blind holdout: wrong_domain — ветеринария не в KB"
+  gold_chunk_ids: []
+  gold_facts: []

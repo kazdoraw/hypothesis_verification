@@ -1,0 +1,101 @@
+id,text,route_domain,subtype,explicit_booking,urgency,is_offtopic,specialization_hint,feedback_flag,faq_category,style,source,seed_id
+seed_078,Хочу элайнеры,anamnesis,treatment_interest,False,normal,False,,False,,,seed,seed_078
+seed_100,Нужно поставить вкладку,anamnesis,treatment_interest,False,normal,False,,False,,,seed,seed_100
+seed_101,Интересует синус-лифтинг,anamnesis,treatment_interest,False,normal,False,,False,,,seed,seed_101
+seed_118,Цена элайнеров?,faq,price,False,normal,False,,False,,,seed,seed_118
+seed_172,Демин ещё работает у вас?,faq,doctor_info,False,normal,False,,False,,,seed,seed_172
+seed_174,Есть ли пародонтолог?,faq,doctor_info,False,normal,False,,False,,,seed,seed_174
+seed_176,Конновская принимает?,faq,doctor_info,False,normal,False,,False,,,seed,seed_176
+seed_177,Какая специализация у Демина?,faq,doctor_info,False,normal,False,,False,,,seed,seed_177
+seed_181,Есть врач-гнатолог?,faq,doctor_info,False,normal,False,,False,,,seed,seed_181
+seed_251,Хочу записаться к Конновской,booking,new_appointment,True,normal,False,детский стоматолог,False,,,seed,seed_251
+var_seed_181_dc23bb,гнатолог есть,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_181
+var_seed_181_74e58e,гнатолог чё,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_181
+var_seed_181_21da95,ребёнку кривой прикус нужен гнатолог есть у вас кто с детьми работает,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_181
+var_seed_181_b74923,на работе челюсть щёлкает читал нужен гнатолог такой доктор у вас имеется,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_181
+var_seed_181_1dc09b,давно думаю про прикус гнатолог поможет у вас есть специалист такой,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_181
+var_seed_181_678a93,мужу посоветовали гнатолога вы такого врача держите или к кому идти,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_181
+var_seed_181_96ca77,подскажите есть гнатолог,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_181
+var_seed_181_acf458,работает гнатолог у вас,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_181
+var_seed_078_08b041,нужны элайнеры,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_078
+var_seed_078_5c2e7b,эллайнеры ставите,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_078
+var_seed_078_fd4102,дочке 10 лет зубы торчат хочу элайнеры вместо брекетов чтоб незаметно,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_078
+var_seed_078_6ec7f3,на работе стесняюсь улыбаться зубы неровные элайнеры подойдут мне,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_078
+var_seed_078_debf82,начиталась про элайнеры отзывы хорошие но боюсь боли хочу попробовать,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_078
+var_seed_078_a0384d,с фото в инсте все ровные зубы решил элайнеры сделать для себя,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_078
+var_seed_078_aa2113,интересуют элайнеры,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_078
+var_seed_100_ba8b55,вкладку надо срочно,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_100
+var_seed_100_5145ab,хочу вкладку ставить,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_100
+var_seed_100_cfd93f,вкладка нужна чё,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_100
+var_seed_100_11027f,пломба большая треснула зуб крошится вчера орехом ударил теперь вкладку хочу,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_100
+var_seed_100_60606b,на жевательном зубе дырка огромная врач раньше говорил вкладку ставить а я тянул,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_100
+var_seed_100_98d6c6,давно пломба старая держится на соплях надо нормальную вкладку поставить чтоб не болело,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_100
+var_seed_100_bc82eb,кусок зуба откололся от конфеты твердой теперь боюсь жевать хочу вкладку аккуратную,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_100
+var_seed_100_f75a86,подскажите про вкладку на зуб,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_100
+var_seed_100_887784,интересует поставить вкладку,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_100
+var_seed_101_52ba8d,делаете синус лифтинг,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_101
+var_seed_101_570a1a,синус лифтинг чё,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_101
+var_seed_101_94f9e5,нужен синуслифтинг,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_101
+var_seed_101_0f6304,врач сказал синус лифтинг перед имплантом наверху надо расскажи как проходит,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_101
+var_seed_101_372546,верхняя челюсть кости мало для импланта синус лифтинг поможет или нет,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_101
+var_seed_101_f6a7d1,читал в инете про синус лифтинг для зубов сверху планирую ставить импланты,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_101
+var_seed_101_dde8f0,друг делал синуслифтинг теперь жуёт нормально у вас такая процедура есть,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_101
+var_seed_101_5aa3b0,подскажите про синус лифтинг,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_101
+var_seed_101_509304,синус-лифтинг интересует,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_101
+var_seed_101_077a5f,хочу узнать синуслифтинг,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_101
+var_seed_118_230f14,скока элайнеры,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_118
+var_seed_118_7f1de1,элайнеры цена чё,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_118
+var_seed_118_4ff423,почём элайнеры,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_118
+var_seed_118_823866,сыну 14 лет кривые зубы элайнеры лучше брекетов скока комплект стоит,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_118
+var_seed_118_b502ff,вчера увидела рекламу элайнеров для взрослых но не знаю цену у вас какая примерно,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_118
+var_seed_118_3654c7,на работе заметили кривизну хочу элайнеры поставить посоветуйте цену за курс,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_118
+var_seed_118_56c858,друг сделал элайнеры теперь я думаю скока у вас полный комплект выйдет деньгами,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_118
+var_seed_118_2200ac,сколько стоят элайнеры,faq,price,False,normal,False,,False,,normal,grok_variation,seed_118
+var_seed_172_6d1082,демин ещё есть?,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_172
+var_seed_172_38b636,демин работает?,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_172
+var_seed_172_54e240,у вас демин?,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_172
+var_seed_172_a5d821,лечилась у демина год назад понравилось демин щас принимает у вас?,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_172
+var_seed_172_191651,ребёнку ставили у демина всё ок теперь опять нужен демин ещё работает?,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_172
+var_seed_172_b6284b,слышал демин ушёл правда ли демин продолжает у вас работать?,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_172
+var_seed_172_abfcd0,на работе посоветовали демина раньше был у вас демин не сменил клинику?,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_172
+var_seed_172_55ace0,демин ещё принимает у вас,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_172
+var_seed_172_391775,работает ли демин в вашей клинике,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_172
+var_seed_172_b2c7cb,доктор демин у вас ещё?,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_172
+var_seed_174_7de821,пародонтолог есть,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_174
+var_seed_174_52326a,у вас паронтолог,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_174
+var_seed_174_644d39,чё пародонтолог имеется,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_174
+var_seed_174_f46789,друг сказал идти к пародонтологу в вашу клинику такой доктор работает,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_174
+var_seed_174_18a481,для мамы нужен специалист пародонтолог у вас есть такой врач или нет,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_174
+var_seed_174_32188e,на работе коллега хвалил вашего пародонтолога правда он есть,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_174
+var_seed_174_672af6,слышала про лечение десен у вас пародонтолог принимает пациентов,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_174
+var_seed_174_312a66,есть пародонтолог у вас,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_174
+var_seed_174_94473a,работает пародонтолог,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_174
+var_seed_174_70dc1d,подскажите про пародонтолога,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_174
+var_seed_176_e3c0fe,коновская принимает,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_176
+var_seed_176_6c51d1,конновская есть,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_176
+var_seed_176_86722b,к конновской можно,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_176
+var_seed_176_26ec57,раньше ходила к конновской она ещё у вас работает,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_176
+var_seed_176_ebb095,муж хочет только к конновской она принимает по вечерам,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_176
+var_seed_176_ae0e79,дочке понравилась конновская ведёт она приём сейчас,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_176
+var_seed_176_efe8f2,на работе слышал про конновскую у вас она есть,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_176
+var_seed_176_219089,конновская ведёт приём,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_176
+var_seed_176_308377,конновская работает у вас,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_176
+var_seed_176_c3e54f,принимает ли коновская,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_176
+var_seed_177_fcb7f1,демин чё спец,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_177
+var_seed_177_3056fa,какой демин врач,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_177
+var_seed_177_53d634,ребёнку зубы лечить демин детский берёт или только взрослых,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_177
+var_seed_177_e74b07,муж хочет к демину а мы не знаем чем он занимается подскажите,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_177
+var_seed_177_1929bc,читала отзывы про демина какая у него специализация точно,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_177
+var_seed_177_c8c7e4,на работе посоветовали демина интересно на каких зубах он спец,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_177
+var_seed_177_4a7377,подскажите чем занимается демин,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_177
+var_seed_177_e983aa,какая у демина специализация,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_177
+var_seed_177_aba542,демин какой профиль,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_177
+var_seed_251_52d7a5,зписаться к конновской,booking,new_appointment,True,normal,False,детский стоматолог,False,,hurried,grok_variation,seed_251
+var_seed_251_b125ca,к конновской срочно,booking,new_appointment,True,normal,False,детский стоматолог,False,,hurried,grok_variation,seed_251
+var_seed_251_7a2629,конновская есть?,booking,new_appointment,True,normal,False,детский стоматолог,False,,hurried,grok_variation,seed_251
+var_seed_251_85139a,на работе только вечером могу к конновской запишитесь пожалуйста на завтра,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_251
+var_seed_251_3037cd,ребёнку 7 лет зуб ноет хочу к конновской записать на эту неделю,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_251
+var_seed_251_b8605e,в понедельник утром к конновской есть место? вчера пломбу потерял,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_251
+var_seed_251_206ad3,можно записаться к конновской,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_251
+var_seed_251_97493c,хочу к конновской на приём,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_251
+var_seed_251_d9d046,подскажите время к конновской,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_251

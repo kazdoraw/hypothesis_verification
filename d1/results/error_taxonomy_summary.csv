@@ -1,0 +1,20 @@
+eval_set,error_type,count,pct_of_errors,example_text
+blind_test,both_wrong_disagreement,3,0.6,"думаю про импланты, но боюсь, это же операция"
+blind_test,generic_error,2,0.4,"поставили пломбу неделю назад и теперь на горячее реагирует, это нормально?"
+blind_test,anamnesis_to_faq,1,0.2,"думаю про импланты, но боюсь, это же операция"
+hard_test,both_wrong_disagreement,93,0.6549,"У меня болит зуб, сколько стоит лечение?"
+hard_test,anamnesis_to_faq,39,0.2746,"У меня болит зуб, сколько стоит лечение?"
+hard_test,specialization_confusion,38,0.2676,Хочу к Батылину
+hard_test,generic_error,29,0.2042,"Хочу имплант, но десна болит. Это нормально?"
+hard_test,anamnesis_to_booking,24,0.169,"Десна кровоточит, можно записаться?"
+hard_test,vague_short_error,13,0.0915,Лечение
+hard_test,faq_to_anamnesis,6,0.0423,Хочу к Батылину
+hard_test,post_treatment_ambiguity,3,0.0211,Что делать если болит после удаления?
+test,vague_short_error,45,0.36,Временная пломба вылетела
+test,both_wrong_disagreement,44,0.352,Расскажите про ваших врачей
+test,generic_error,33,0.264,Неприятный запах изо рта
+test,anamnesis_to_faq,22,0.176,Временная пломба вылетела
+test,specialization_confusion,19,0.152,Расскажите про ваших врачей
+test,faq_to_anamnesis,13,0.104,Прайс на виниры
+test,post_treatment_ambiguity,9,0.072,мужу вчера имплант воткнули когда приживется чтоб не болтался
+test,anamnesis_to_booking,1,0.008,вкладку надо срочно

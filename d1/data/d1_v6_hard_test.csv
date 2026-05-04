@@ -1,0 +1,356 @@
+id,text,route_domain,subtype,explicit_booking,urgency,is_offtopic,specialization_hint,feedback_flag,faq_category,style,source,seed_id
+hard_001,"У меня болит зуб, сколько стоит лечение?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_002,"Десна кровоточит, можно записаться?",anamnesis,symptom,True,normal,,,,,,manual_hard,
+hard_003,"Выпала пломба, когда можно прийти?",anamnesis,complaint,True,normal,,,,,,manual_hard,
+hard_004,"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,treatment_interest,True,normal,,,,,,manual_hard,
+hard_005,"Болит зуб мудрости, есть ли у вас хирург?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_006,"Нужна чистка, какие цены и когда свободно?",anamnesis,treatment_interest,True,normal,,,,,,manual_hard,
+hard_007,"Откололся зуб, больно жевать, запишите срочно",anamnesis,complaint,True,urgent,,,,,,manual_hard,
+hard_008,"Хочу имплант, но десна болит. Это нормально?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_009,"Коронка шатается и болит, сколько будет замена?",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_010,"Нужны виниры, но передний зуб потемнел",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_011,"Ноет зуб после пломбы, это гарантийный случай?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_012,"Хочу отбеливание и чистку, записаться можно?",anamnesis,treatment_interest,True,normal,,,,,,manual_hard,
+hard_013,"Опухла щека и температура, когда примете?",anamnesis,symptom,True,urgent,,,,,,manual_hard,
+hard_014,"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_015,"Зуб шатается, есть ли у вас пародонтолог?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_016,"Выпал штифт, больно, запишите к хирургу",anamnesis,complaint,True,normal,,,,,,manual_hard,
+hard_017,"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_018,"Хочу исправить прикус, у меня ещё кривые зубы",anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_019,"Нужна профчистка и осмотр, есть свободное время?",anamnesis,treatment_interest,True,normal,,,,,,manual_hard,
+hard_020,"Кровоточат дёсны, до скольки работаете?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_021,"Пломба потемнела, хочу виниры и записаться",anamnesis,complaint,True,normal,,,,,,manual_hard,
+hard_022,"Болит после лечения каналов, это нормально?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_023,"Хочу отбеливание, но зубы чувствительные",anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_024,"Нужна коронка и чистка, запишите на одну дату",anamnesis,treatment_interest,True,normal,,,,,,manual_hard,
+hard_025,"Сломался ретейнер, болит, как быть?",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_026,"Мне нужен имплант, десна отёкла вокруг штифта",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_027,"Зуб ноет от сладкого, плюс хочу чистку",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_028,"Ребёнку больно, есть детский стоматолог?",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_029,"Хочу элайнеры, у меня скученность зубов",anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_030,"Протез давит десну, хочу на импланты перейти",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_031,Врач,unsupported,unclear_short,False,normal,,,,,,manual_hard,
+hard_032,Лечение,unsupported,unclear_short,False,normal,,,,,,manual_hard,
+hard_033,Записать,booking,new_appointment,True,normal,,,,,,manual_hard,
+hard_034,Зуб,unsupported,unclear_short,False,normal,,,,,,manual_hard,
+hard_035,Цена,faq,price,False,normal,,,,,,manual_hard,
+hard_036,Больно,anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_037,Помогите,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_038,Срочно,booking,new_appointment,True,urgent,,,,,,manual_hard,
+hard_039,Чистка,anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_040,Отмена,booking,cancel,False,normal,,,,,,manual_hard,
+hard_041,Перенос,booking,reschedule,True,normal,,,,,,manual_hard,
+hard_042,Вопрос,unsupported,unclear_short,False,normal,,,,,,manual_hard,
+hard_043,Импланты,anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_044,Адрес,faq,clinic_info,False,normal,,,,,,manual_hard,
+hard_045,Снимок,anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_046,"Сильное кровотечение, не останавливается",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_047,"Ребёнку очень плохо, температура 39",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_048,"Выбили зуб, кровь идёт",anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_049,"Сильный отёк, не могу глотать",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_050,"Острая боль, таблетки не помогают",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_051,"Ребёнок упал, зуб шатается, кровь",anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_052,Аллергическая реакция после анестезии,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_053,"Гной из десны, температура, отёк",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_054,Челюсть не открывается совсем,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_055,"Беременна, зуб болит невыносимо",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_056,Кровь не останавливается уже час,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_057,"Отёк горла после удаления, задыхаюсь",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_058,"Малышу 2 года, упал, зуб выбит",anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_059,"Нагноение после имплантации, щека горит",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_060,Потерял сознание от боли,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061a,"Зуб сломался пополам, нерв торчит",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061b,У ребёнка после падения зуб вдавился в десну,anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_061c,"Третий день температура 38, десна чёрная",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061d,"Швы после операции разошлись, кровит сильно",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061e,"Онемела половина лица после удаления, уже сутки",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061f,"Коронка слетела, проглотил, что делать?",anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_061g,После анестезии губа распухла и не чувствую,anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061h,"Сильная боль в челюсти, отдаёт в ухо и висок",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061i,"Абсцесс на десне, гной течёт, лихорадка",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061j,"Ударили в челюсть, зубы шатаются, рот не закрывается",anamnesis,complaint,False,urgent,,,,,,manual_hard,
+hard_061k,"Брекет отклеился и впился в щёку, кровь идёт",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061l,"Имплант выпал, из лунки идёт кровь",anamnesis,symptom,False,urgent,,,,,,manual_hard,
+hard_061,"Классная клиника, хочу записаться ещё раз",booking,new_appointment,True,normal,,,True,,,manual_hard,
+hard_062,"Плохой врач, зуб болит после лечения",anamnesis,symptom,False,normal,,,True,,,manual_hard,
+hard_063,"Спасибо за лечение, но десна ноет",anamnesis,symptom,False,normal,,,True,,,manual_hard,
+hard_064,Довольна результатом,unsupported,feedback,False,normal,,,True,,,manual_hard,
+hard_065,"Плохо обслужили, хочу жаловаться",unsupported,feedback,False,normal,,,True,,,manual_hard,
+hard_066,Запишите к ортодонту на четверг,booking,new_appointment,True,normal,,ортодонт,,,,manual_hard,
+hard_067,Нужна запись к хирургу-имплантологу,booking,new_appointment,True,normal,,хирург,,,,manual_hard,
+hard_068,"Хочу к пародонтологу, когда свободно?",booking,new_appointment,True,normal,,пародонтолог,,,,manual_hard,
+hard_069,Записать ребёнка к детскому стоматологу,booking,new_appointment,True,normal,,детский стоматолог,,,,manual_hard,
+hard_070,На ортопедический приём запишите,booking,new_appointment,True,normal,,ортопед,,,,manual_hard,
+hard_071,Нужна консультация терапевта-стоматолога,booking,new_appointment,True,normal,,терапевт,,,,manual_hard,
+hard_072,Запишите к гнатологу,booking,new_appointment,True,normal,,гнатолог,,,,manual_hard,
+hard_073,Хочу записаться к эндодонтисту,booking,new_appointment,True,normal,,эндодонтист,,,,manual_hard,
+hard_074,Запись к анестезиологу,booking,new_appointment,True,normal,,анестезиолог,,,,manual_hard,
+hard_075,Нужен приём у стоматолога-хирурга,booking,new_appointment,True,normal,,хирург,,,,manual_hard,
+hard_076,Хочу к Батылину,faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_077,Запишите к Ермакову,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_078,Хочу на приём к Демину,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_079,Мне нужна Конновская,faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_080,Есть ли у вас доктор Иванов?,faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_081,К Петрову запишите на пятницу,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_082,"Хочу к тому врачу, который делал мне коронку",faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_083,Запишите к детскому врачу Конновской,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_084,Ермаков свободен завтра?,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_085,Есть Сидорова? Запишите к ней,faq,doctor_info,True,normal,,,,,,manual_hard,
+hard_086,"Привет, болит зуб",anamnesis,symptom,False,normal,,,,,,manual_hard,
+hard_087,"Здравствуйте, хочу записаться",booking,new_appointment,True,normal,,,,,,manual_hard,
+hard_088,"Добрый день, сколько стоит чистка?",faq,price,False,normal,,,,,,manual_hard,
+hard_089,Привет! Где вы находитесь?,faq,clinic_info,False,normal,,,,,,manual_hard,
+hard_090,"Здравствуйте, хочу брекеты",anamnesis,treatment_interest,False,normal,,,,,,manual_hard,
+hard_091,"Доброе утро, запишите к ортодонту",booking,new_appointment,True,normal,,ортодонт,,,,manual_hard,
+hard_092,"Привет, кто у вас лечит дёсны?",faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_093,"Алло, у ребёнка откололся зуб",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_094,"Добрый вечер, отмените мою запись",booking,cancel,False,normal,,,,,,manual_hard,
+hard_095,"Здрасте, сколько стоит имплант?",faq,price,False,normal,,,,,,manual_hard,
+hard_096,"Привет, выпала пломба, что делать?",anamnesis,complaint,False,normal,,,,,,manual_hard,
+hard_097,"Здравствуйте, перенесите запись",booking,reschedule,True,normal,,,,,,manual_hard,
+hard_098,"Добрый день, работает ли Ермаков?",faq,doctor_info,False,normal,,,,,,manual_hard,
+hard_099,"Привет, срочно болит, запишите сегодня",anamnesis,symptom,True,urgent,,,,,,manual_hard,
+hard_100,"Алло, есть рассрочка?",faq,price,False,normal,,,,,,manual_hard,
+hard_101,Что делать если болит после удаления?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_102,Какие обезболивающие можно после имплантации?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_103,Нормально ли что болит после пломбы?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_104,Через сколько проходит боль после удаления?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_105,Может ли десна кровоточить от чистки?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_106,Можно ли лечить зубы при беременности?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_107,Какие риски у имплантации при диабете?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_108,Как понять что нужна коронка а не пломба?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_109,Чем отличается имплант от моста?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_110,Вредно ли отбеливание для эмали?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_111,Как ухаживать за имплантом?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_112,Со скольки лет можно ставить брекеты?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_113,Можно ли курить после удаления зуба?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_114,Нужна ли анестезия при чистке?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_115,Какой имплант лучше — корейский или немецкий?,faq,procedure_info,False,normal,,,,,,manual_hard,
+hard_116,у меня зуб ноет на холодное это нормально?,anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_117,Почему десна кровит после чистки зубов?,anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_118,"После пломбы зуб зудит внутри, что это может быть?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_119,"Щека опухла вчера после лечения, это само пройдет?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_120,нерв зуба ноет ночью это от кариеса?,anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_121,"У меня темнеет дырка в переднем зубе, почему так?",anamnesis,complaint,,normal,,,,,,grok_rewritten,
+hard_122,"Жевательный зуб сильно болит, больно жевать, что делать?",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_123,"Десна отекла после полоскания, это нормально?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_124,"Десна кровит, когда ем яблоко, это нормально?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_125,"У меня второй день флюс на десне, болит очень сильно.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_126,после съема камня зуб чувствительный стал почему,anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_127,"У ребенка зуб ноет после сладкого, это может быть кариес?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_128,После пломбы на жевательном зубе болит щека изнутри.,anamnesis,complaint,,normal,,,,,,grok_rewritten,
+hard_129,"У меня камень на зубах, десна чешется и кровит.",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_130,зуб треснул вчера от ореха сильно болит,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_131,десна гноится под зубом это пройдет?,anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_132,После удаления зуба десна болит очень сильно.,anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_133,"Передний зуб шатается после удара на футболе, что делать?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_134,"Под старой пломбой ноет зуб, что это может быть?",anamnesis,complaint,,normal,,,,,,grok_rewritten,
+hard_135,"После чистки десна каждый раз кровит, это нормально?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_136,после пломбы зуб ноет сильно и щека опухла,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_137,"Удалили зуб вчера, сегодня температура 38 и гной из десны.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_138,После чистки каналов лицо распухло и болит очень сильно.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_139,"После удаления зуба мудрости появился флюс, поднялась температура.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_140,"Пломбу поставили, ночью зуб разболелся и поднялась температура.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_141,"После лечения корня щека раздулась, температура 39.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_142,"Ребенку поставили пломбу, десна опухла, плачет от боли.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_143,после импланта боль усилилась и отек на пол-лица,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_144,После чистки зубов все болит и температура 38.2.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_145,После протезирования десна воспалилась горит внутри,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_146,установили коронку а щека припухла и ноет сильно,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_147,"Удаляли нерв вчера, сегодня флюс и температура 37.8.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_148,"После пломбирования болит без остановки, отек растет.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_149,После лечения дома щека вздулась и поднялась температура.,anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_150,после удаления опухоль на десне и 38.5 не сплю,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_151,"Зуб сильно ноет, сколько стоит пломба?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_152,"Щека опухла, когда можно записаться?",anamnesis,complaint,,normal,,,,,,grok_audited,
+hard_153,"дырка в зубе большая, цена лечения?",anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_154,"Нерв оголился и болит, можно записаться на завтра?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_155,хочу имплант но корень сломан,anamnesis,treatment_interest,,normal,,,,,,grok_audited,
+hard_156,"Камень на зубах и десна чешется, сколько стоит чистка?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_157,"жевательный зуб трещит, можно ли срочно к врачу и цена?",anamnesis,symptom,,normal,,,,,,grok_audited,
+hard_158,"Пломба вчера выпала, запишите меня на прием.",anamnesis,complaint,,normal,,,,,,grok_rewritten,
+hard_159,"Передний зуб шатается, сколько стоит фиксация?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_160,хочу виниры но десна болит,anamnesis,treatment_interest,,normal,,,,,,grok_audited,
+hard_161,"Зуб кровит, когда можно прийти и сколько это стоит?",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_162,"Флюс раздуло, сколько стоит прием у стоматолога?",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_163,"Болит челюсть, запишите меня, пожалуйста.",anamnesis,symptom,,normal,,,,,,grok_rewritten,
+hard_164,отбеливание надо но зуб ноет,anamnesis,treatment_interest,,normal,,,,,,grok_audited,
+hard_165,"Дупло в зубе, сколько будет стоить пломба и когда можно прийти?",anamnesis,complaint,,normal,,,,,,grok_rewritten,
+hard_166,Флюс растет.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_167,Десна сильно кровит.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_168,Нерв оголился.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_169,Из десны потек гной.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_170,рот не открыть,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_171,Зуб шатается.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_172,Опухоль на десне выросла.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_173,Зуб сломался.,anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_174,Зуб ноет жутко.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_175,сын 4 года упал с качелей зуб шатается сильно,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_176,дочке 6 лет стукнулась о стол щека опухла и десна кровит,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_177,"Малышу 2 года, налетел на угол, кровь идет изо рта.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_178,ребёнок 5 лет с самоката зуб треснул болит жевать,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_179,внуку 3 года упал во дворе передний зуб шатается,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_180,девочка 7 лет ударилась челюстью десна разорвана срочно,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_181,"Пацану 8 лет в драке сломали зуб, челюсть ноет.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_182,"Ребенок 4 года с горки выбил зуб, помогите.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_183,сынок 5 лет бегал налетел на дверь губа разбита зуб болит,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_184,"Мальчику 3 года ударили игрушкой по зубам, зуб шатается, плачет.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_185,"Дочке 6 лет, упала с велосипеда, в челюсти хруст.",anamnesis,complaint,,urgent,,,,,,grok_rewritten,
+hard_186,ребят ребенок 9 лет на турнике зуб сломал десна в крови,anamnesis,complaint,,urgent,,,,,,grok_audited,
+hard_187,"После укола опухли губы, не проходит.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_188,После вчерашнего лечения сильно кровит десна.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_189,отек на щеке огромный после лечения,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_190,"Помогите, аллергия на анестезию, сыпь по лицу.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_191,Кровь из лунки хлещет третий час,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_192,губа распухла как колбаса от укола,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_193,"Аллергия на обезболивающее, зудит во рту.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_194,десна кровит не перестает после чистки,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_195,Щека опухла до глаза срочно,anamnesis,symptom,,urgent,,,,,,grok_audited,
+hard_196,"После анестезии аллергия, лицо покраснело.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_197,Кровотечение после удаления не останавливается.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_198,Сильный отек на пол-лица.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_199,"Аллергия на препарат, во рту ужасно чешется.",anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_200,Кровь из десны течет уже несколько часов.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+hard_201,У ребенка после укола в десну вырос отек.,anamnesis,symptom,,urgent,,,,,,grok_rewritten,
+p5_437,ПОСЛЕ УДАЛЕНИЯ ДЕСНА КРОВИТ 2 ДНЯ НОРМАЛЬНО?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_438,после чистки зубы чувствит к холоду так надо?,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_439,пломбу поставили щека распирает это ок,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_440,после импланта температура держится норма ли,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_441,каналы чистили челюсть ноет 5 дней должно быть?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_442,кронку надели язык онемел это нормально,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_443,после отбеливания десны белые норма?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_444,зуб мудрости удалили дыра болит при еде ок ли,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_445,пломба свежая а зуб стучит от сладкого это норма,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_446,после анестезии губа дергается так и должно?,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_447,протез поставили прикус хреновый нормально ли,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_448,удалили нерв десна опухла норма после 3 дней,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_449,после полировки зубы ноют на жаре это окей,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_450,имплант вкрутили щека горячая должна так быть?,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_451,пломбу менять стали язык прикусил больно норма,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_452,после удаления флюса челюсть ноет норма ли,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_453,коронку поставили вкус металла во рту ок?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_454,чистили камень десны чешутся это нормально,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_455,после штифта зуб трещит при жевании должно?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_456,это нормально что после пломбы ноет зуб уже неделю,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_457,Десна кровит после удаления зуба норма или нет?,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_458,после чистки зубы болят от горячего это ок,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_459,щека опухла после лечения каналов должна так быть?,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_460,Коронку поставили а жую давит внутри странно,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_461,температура 37 после импланта нормально держится,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_462,белый налет на десне после удаления это норма,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_463,зуб шатается после пломбы что за ерунда,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_464,онемение щеки осталось после анестезии долго,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_465,флюс опять надулся через день после визита,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_466,дырка увеличилась после пломбы нормально ли,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_467,челюсть ноет после протеза жевать неудобно,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_468,после отбеливания зубы чувствительные к сладкому,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_469,язык онемел после сверления зуба это ок,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_470,слюни текут после новой пломбы странно,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_471,запах из рта после чистки не пропал норма?,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_472,голова болит после долгой процедуры у дантиста,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_473,ухо стреляет после лечения жевательного зуба,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_474,шея затекла после коронки поставили вчера,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_475,кожа на лице чешется после визита к стоматологу,anamnesis,symptom,False,normal,0.0,,False,,,grok_phase5_audited,faq_vs_anamnesis_borderline
+p5_476,когда к петрову можно записаться,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_477,Запиши к Ивановой на эту неделю,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_478,сидоров андрей петрович свободен завтра?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_479,Василевская принимает по вечерам?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_480,к козлову на понедельник запишитесь,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_481,Смирнова елена вальевна когда есть окно,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_482,попов свободен сегодня после обеда,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_483,Морозова принимает по утрам?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_484,запиши к новожилову срочно но не сегодня,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_485,Николаев Сергей Иванович график какой,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_486,к светлановой можно на 15 число,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_487,Волков павел анатольевич принимает детей,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_488,орлова мария свободна в пятницу,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_489,Запись к Григорьеву на завтра утро,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_490,леонтьева анна сергеевна когда выходной,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_491,к баранову на вечер можно ли,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_492,Федорова Ольга Петровна принимает в субботу?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_493,михайлов когда свободен для записи,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_494,записаться к степанову на след неделю,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_495,к петрову можно завтра записаться,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_496,Свободно ли у Ивановой на этой неделе?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_497,запиши к сидорову андрею петровичу,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_498,к козловой на вторник слот есть,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_499,Смирнов свободен после 18?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_500,помогите записаться к поповой срочно,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_501,кузнецова юлия викторовна когда принемает,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_502,Морозов на завтра есть место?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_503,запись к новожилову на вечер,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_504,к григорьевой можно зписаться?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_505,ЛЕЧУ К ВАСИЛЬЕВУЙ ЧТО СКАЗАЛ?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_506,свободные дни у орловой покажите,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_507,к степанову на 20 число меня запишите,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_508,Павлова принимает детей?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_509,к беловой анне сергеевне слоты,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_510,завтра к романова свободна?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_511,запишите ребенка к егорову,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_512,к лебедевой на утро пятницы,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_513,ЧТО У ФЕДОРОВОЙ ГРАФИК?,faq,doctor_info,False,normal,0.0,,False,,,grok_phase5_audited,doctor_name_stress
+p5_514,зуб ноет скоко запишитесь на завтра,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_515,Щека опухла срочно врача и цена вырывания,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_516,дырка в переднем зубе можно записаться в пятницу,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_517,флюс на десне запишусь сегодня утром,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_518,ноет жевательный зуб сколько стоит почистить и когда свободно,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_519,ребенку 7 лет зуб разболелся срочно прием,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_520,вчера ударился зуб кровит цена лечения,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_521,Болит сильно внутри зуба запишитесь на вечер,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_522,скоко вылечить зуб с дыркой и на когда запись,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_523,опухла щека от зуба можно срочно к вам,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_524,зубак ноет третий день цена пломбы,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_525,треснул зуб грызя орех запишитесь завтра,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_526,помагите зуб болит скока стоит удалить,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_527,флюс у мамы срочно время приема,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_528,дырка большая ноет тихо на понедельник запись,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_529,зубы кровоточат после еды цена осмотра,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_530,подростку зуб сломался можно вечером,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_531,болит десна сильно и опухло срочно пломбировать,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_532,сколько чистка зуба который ноет,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_533,бабушке зуб разболелся запишитесь на утро,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_534,зуб ноет уже неделю скока удалить,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_535,дырка в зубе болит запишитесь меня на завтра,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_536,помогите зуб с корнем ноет цена какая,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_537,ребенку 7 лет зуб разболелся можно на вечер,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_538,флюс на зубе скока стоит лечить срочно,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_539,ночью зуб заболел запишусь к вам завтра,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_540,опухла десна после яблока сколько пломба,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_541,зубы кровоточат надо срочно к врачу цена,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_542,ноет передний зуб запишитесь на понедельник,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_543,мне 60 лет зуб сломался скока вылечить,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_544,флюс раздуло щеку бежать к вам можно,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_545,болит жевательный зуб после супа записаться,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_546,дочке зуб ноет третий день срочно цена,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_547,удар в зуб вчера болит скока удаление,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_548,десна гноится зуб ноет запишусь на среду,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_549,зуб с дыркой ноет не сплю срочно,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_550,после ореха зуб заболел цена лечения,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_551,отцу болит корень зуба можно завтра утром,anamnesis,complaint,False,normal,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_552,щека в пол лица флюс запишитесь меня,anamnesis,complaint,False,urgent,0.0,,False,,,grok_phase5_audited,mixed_intent_new
+p5_553,КРОВЬ ИЗ ДЕСНЫ,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_554,ноет жеватель,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_555,боль пронзает,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_556,дырка растет,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_557,десна болитт,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_558,ОПУХЛО ВСЕ,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_559,пульсирует сильно,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_560,сломала зуб,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_561,жжение десны,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_562,кровоточит дырка,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_563,боль в корне,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_564,флюз прорвало,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_565,зуби крошатся,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_566,болит сильно,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_567,КРОВЬ ТЕЧЁТ,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_568,флюс опух,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_569,гной из зуба,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_570,боль ночью,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_571,дырка большая,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_572,рот горитт,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_573,язык онемел,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_574,челюсть дергается,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_575,десна кровит,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_576,нёбо болит,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_577,вкус гнилой,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
+p5_578,опухоль выросла,anamnesis,symptom,False,urgent,0.0,,False,,,grok_phase5_audited,short_ambiguous_new
