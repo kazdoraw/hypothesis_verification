@@ -1,12 +1,6 @@
-baseline,n_samples,n_urgent,recall_anamnesis,recall_urgent,false_faq_for_anamnesis,false_negative_urgent,misrouted_to,latency_ms,eval_set
-B0_rules @ safety_set,87,87,0.7471,0.7471,0.0,22,{'unsupported': 22},0.03,safety_set
-B1_tfidf_svc @ safety_set,87,87,0.8736,0.8736,0.0805,11,"{'booking': 2, 'faq': 7, 'unsupported': 2}",0.04,safety_set
-B1.1_tfidf_lr @ safety_set,87,87,0.9195,0.9195,0.046,7,"{'faq': 4, 'unsupported': 2, 'booking': 1}",0.03,safety_set
-B1.2_tfidf_lr_tuned @ safety_set,87,87,0.908,0.908,0.046,8,"{'unsupported': 3, 'faq': 4, 'booking': 1}",0.04,safety_set
-B1.3_fasttext @ safety_set,87,87,0.9195,0.9195,0.0345,7,"{'booking': 3, 'unsupported': 1, 'faq': 3}",0.0,safety_set
-B2_bge-m3_linear @ safety_set,87,87,0.9195,0.9195,0.046,7,"{'faq': 4, 'unsupported': 2, 'booking': 1}",3.45,safety_set
-B2.1_bge-m3_svc @ safety_set,87,87,0.9425,0.9425,0.046,5,"{'faq': 4, 'booking': 1}",3.13,safety_set
-B2.2_bge-m3_centroid @ safety_set,87,87,0.931,0.931,0.023,6,"{'faq': 2, 'unsupported': 3, 'booking': 1}",3.1,safety_set
-B2.3_bge-m3_linear_tuned @ safety_set,87,87,0.9425,0.9425,0.023,5,"{'faq': 2, 'unsupported': 2, 'booking': 1}",3.11,safety_set
-B2.4_e5-small_linear @ safety_set,87,87,0.8966,0.8966,0.0345,9,"{'faq': 3, 'unsupported': 5, 'booking': 1}",0.66,safety_set
-B2.5_e5-small_svc @ safety_set,87,87,0.9425,0.9425,0.0345,5,"{'faq': 3, 'booking': 1, 'unsupported': 1}",0.41,safety_set
+baseline,n_samples,n_urgent,recall_urgent,false_faq_for_anamnesis,false_negative_urgent,misrouted_to,latency_ms,eval_set
+B0_rules @ safety_set,87,87,0.7471,0.0,22,{'unsupported': 22},0.02,safety_set
+B1.1_tfidf_lr @ safety_set,87,87,0.9195,0.0575,7,"{'faq': 5, 'booking': 1, 'unsupported': 1}",0.03,safety_set
+B1.3_fasttext @ safety_set,87,87,0.8506,0.0575,13,"{'booking': 6, 'unsupported': 2, 'faq': 5}",0.0,safety_set
+B2.1_bge-m3_svc @ safety_set,87,87,0.931,0.0345,6,"{'booking': 2, 'faq': 3, 'unsupported': 1}",3.29,safety_set
+B2.5_e5-small_svc @ safety_set,87,87,0.9195,0.0345,7,"{'faq': 3, 'unsupported': 2, 'booking': 2}",0.6,safety_set

@@ -272,7 +272,7 @@ def orchestration_env(
     monkeypatch.setattr(run_baselines, "DATA_DIR", tmp_path)
 
     # Mock train_bundle — возвращает фиксированный список моделей.
-    mock_models = ["B0_rules", "B1_tfidf_svc"]
+    mock_models = ["B0_rules", "B1.1_tfidf_lr"]
     monkeypatch.setattr(
         run_baselines, "train_bundle",
         lambda names, use_cache: _mock_bundle(mock_models),

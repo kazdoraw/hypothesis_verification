@@ -149,16 +149,10 @@ domains:
           - "Долго ждал в очереди"
           - "Рекомендую вашу клинику"
 
-# Пороги уверенности для каскадной маршрутизации
-confidence_thresholds:
-  high: 0.90
-  medium: 0.70
-  low: 0.50
-
 # Правила приоритета (из production router.py settings.py domain_priority)
 routing_rules:
   domain_priority: ["anamnesis", "faq", "booking"]
-  mixed_intent_rule: "При смешанном интенте (жалоба + вопрос) → anamnesis"
+  mixed_intent_rule: "Closed-set эксперимент: смешанный интент классифицируется одним top-1 классом"
   greeting_with_intent_rule: "Приветствие + интент → по интенту (НЕ unsupported)"
-  doctor_surname_rule: "Упоминание фамилии врача → faq (для verification)"
+  doctor_surname_rule: "Future work: эвристики по фамилии врача не применялись в D1 v6 closed-set"
   urgent_rule: "Признаки ургентности → anamnesis + urgency=urgent"

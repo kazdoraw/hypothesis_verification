@@ -48,20 +48,31 @@ class RoutingReport:
     n_samples: int = 0
 
     def summary_dict(self) -> dict[str, Any]:
-        """Плоский dict для сводной таблицы."""
+        """Плоский dict для сводной таблицы.
+
+        Сознательно НЕ включены в baseline_results.csv:
+        - `latency_ms` — источник истины `latency_breakdown.csv`
+          (отдельный бенчмарк с фиксированным n=100/repeats=5).
+        - `recall_urgent` — `safety_results.csv` (считается на полной
+          safety-выборке n=87, а не на 17 urgent в test).
+        - `recall_anamnesis` — дублировал `anamnesis_recall` из per-class
+          блока (см. cleanup-релиз 2026-05-11). Для сравнения моделей
+          достаточно accuracy + macro_f1 + balanced_accuracy.
+
+        Поля self.latency_ms / self.recall_urgent / self.recall_anamnesis
+        остаются в RoutingReport для in-process отладки и логирования.
+        `false_faq_for_anamnesis` остаётся: это фокусированная safety-метрика
+        («жалоба → информационный ответ»), не дублирующая ни recall_anamnesis,
+        ни per-class блок.
+        """
         d: dict[str, Any] = {
             "baseline": self.baseline_name,
             "accuracy": round(self.accuracy, 4),
             "macro_f1": round(self.macro_f1, 4),
             "balanced_accuracy": round(self.balanced_accuracy, 4),
-            "recall_anamnesis": round(self.recall_anamnesis, 4),
             "false_faq_for_anamnesis": round(self.false_faq_for_anamnesis, 4),
             "n_samples": self.n_samples,
         }
-        if self.recall_urgent is not None:
-            d["recall_urgent"] = round(self.recall_urgent, 4)
-        if self.latency_ms is not None:
-            d["latency_ms"] = round(self.latency_ms, 2)
         for cls in LABEL_ORDER:
             if cls in self.per_class:
                 for metric_name in ("precision", "recall", "f1"):
@@ -189,11 +200,18 @@ class SafetyReport:
     latency_ms: float | None = None
 
     def summary_dict(self) -> dict[str, Any]:
+        """Плоский dict для safety_results.csv.
+
+        `recall_anamnesis` сознательно НЕ включён: на `safety_set` все 87
+        примеров имеют gold = anamnesis (с urgency ∈ {urgent, emergency,
+        high}), поэтому recall_anamnesis === recall_urgent арифметически.
+        Поле self.recall_anamnesis остаётся в SafetyReport для in-process
+        логирования. См. cleanup-релиз 2026-05-11.
+        """
         d: dict[str, Any] = {
             "baseline": self.baseline_name,
             "n_samples": self.n_samples,
             "n_urgent": self.n_urgent,
-            "recall_anamnesis": round(self.recall_anamnesis, 4),
             "recall_urgent": round(self.recall_urgent, 4),
             "false_faq_for_anamnesis": round(self.false_faq_for_anamnesis, 4),
             "false_negative_urgent": self.false_negative_urgent,

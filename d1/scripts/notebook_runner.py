@@ -6,9 +6,8 @@
 системный `python3` из `PATH`.
 
 Порядок шагов фиксирован: каждый последующий читает артефакты предыдущего
-из `d1/results/`. Шаги, которые не входят в основной pipeline (latency,
-lightweight cascade, learning curves, error taxonomy), управляются отдельными
-RUN_* флагами в notebook.
+из `d1/results/` (closed-set baselines, latency, calibration, stats,
+taxonomy, learning curves, figures).
 """
 
 from __future__ import annotations
@@ -19,14 +18,13 @@ from pathlib import Path
 
 # Основной pipeline D1 (порядок имеет значение).
 PIPELINE_STEPS: tuple[str, ...] = (
-    "d1.scripts.run_baselines",          # обучение и оценка всех baselines
-    "d1.scripts.analyze_confidence",     # калибровка confidence + Pareto
-    "d1.scripts.evaluate_selective",     # selective router metrics
-    "d1.scripts.evaluate_hybrid",        # hybrid (rules + selective ML)
-    "d1.scripts.threshold_sweep",        # подбор thresholds для hybrid
-    "d1.scripts.evaluate_simple_router", # production cascade simple router
-    "d1.scripts.run_statistical_tests",  # bootstrap CI + paired tests
-    "d1.scripts.plot_results",           # генерация всех figures
+    "d1.scripts.run_baselines",
+    "d1.scripts.benchmark_latency",
+    "d1.scripts.analyze_confidence",
+    "d1.scripts.run_statistical_tests",
+    "d1.scripts.error_taxonomy",
+    "d1.scripts.learning_curves",
+    "d1.scripts.plot_results",
 )
 
 
@@ -58,4 +56,12 @@ def run_d1_pipeline(steps: tuple[str, ...] | list[str] | None = None) -> None:
     print(f"\n✓ D1 pipeline complete. Артефакты: {study_root / 'd1' / 'results'}")
 
 
-__all__ = ["run_d1_pipeline", "PIPELINE_STEPS"]
+def main() -> None:
+    run_d1_pipeline()
+
+
+if __name__ == "__main__":
+    main()
+
+
+__all__ = ["run_d1_pipeline", "PIPELINE_STEPS", "main"]

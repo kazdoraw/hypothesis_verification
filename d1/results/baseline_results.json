@@ -2,826 +2,361 @@
   "test": [
     {
       "baseline": "B0_rules @ test",
-      "accuracy": 0.3986,
-      "macro_f1": 0.4279,
-      "balanced_accuracy": 0.4869,
-      "recall_anamnesis": 0.2963,
-      "false_faq_for_anamnesis": 0.0046,
-      "n_samples": 730,
-      "recall_urgent": 0.9412,
-      "latency_ms": 0.03,
+      "accuracy": 0.3907,
+      "macro_f1": 0.4213,
+      "balanced_accuracy": 0.4819,
+      "false_faq_for_anamnesis": 0.0047,
+      "n_samples": 709,
       "anamnesis_precision": 0.5714,
-      "anamnesis_recall": 0.2963,
-      "anamnesis_f1": 0.3902,
-      "faq_precision": 0.9851,
-      "faq_recall": 0.2578,
-      "faq_f1": 0.4087,
-      "booking_precision": 0.96,
-      "booking_recall": 0.4364,
-      "booking_f1": 0.6,
-      "unsupported_precision": 0.187,
-      "unsupported_recall": 0.957,
-      "unsupported_f1": 0.3128,
+      "anamnesis_recall": 0.2977,
+      "anamnesis_f1": 0.3914,
+      "faq_precision": 0.9848,
+      "faq_recall": 0.2569,
+      "faq_f1": 0.4075,
+      "booking_precision": 0.9552,
+      "booking_recall": 0.4183,
+      "booking_f1": 0.5818,
+      "unsupported_precision": 0.181,
+      "unsupported_recall": 0.9545,
+      "unsupported_f1": 0.3043,
       "confusion": [
         [
           64,
           1,
           0,
-          151
+          150
         ],
         [
           19,
-          66,
+          65,
           3,
-          168
+          166
         ],
         [
           25,
           0,
-          72,
-          68
+          64,
+          64
         ],
         [
           4,
           0,
           0,
-          89
+          84
         ]
       ],
       "per_class": {
         "anamnesis": {
           "precision": 0.5714285714285714,
-          "recall": 0.2962962962962963,
-          "f1": 0.3902439024390244,
-          "support": 216
+          "recall": 0.29767441860465116,
+          "f1": 0.39143730886850153,
+          "support": 215
         },
         "faq": {
-          "precision": 0.9850746268656716,
-          "recall": 0.2578125,
-          "f1": 0.4086687306501548,
-          "support": 256
+          "precision": 0.9848484848484849,
+          "recall": 0.25691699604743085,
+          "f1": 0.40752351097178685,
+          "support": 253
         },
         "booking": {
-          "precision": 0.96,
-          "recall": 0.43636363636363634,
-          "f1": 0.6,
-          "support": 165
+          "precision": 0.9552238805970149,
+          "recall": 0.41830065359477125,
+          "f1": 0.5818181818181818,
+          "support": 153
         },
         "unsupported": {
-          "precision": 0.1869747899159664,
-          "recall": 0.956989247311828,
-          "f1": 0.31282952548330406,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B1_tfidf_svc @ test",
-      "accuracy": 0.8726,
-      "macro_f1": 0.8561,
-      "balanced_accuracy": 0.8385,
-      "recall_anamnesis": 0.838,
-      "false_faq_for_anamnesis": 0.1481,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.9188,
-      "anamnesis_recall": 0.838,
-      "anamnesis_f1": 0.8765,
-      "faq_precision": 0.7888,
-      "faq_recall": 0.9336,
-      "faq_f1": 0.8551,
-      "booking_precision": 0.9639,
-      "booking_recall": 0.9697,
-      "booking_f1": 0.9668,
-      "unsupported_precision": 0.8906,
-      "unsupported_recall": 0.6129,
-      "unsupported_f1": 0.7261,
-      "confusion": [
-        [
-          181,
-          32,
-          2,
-          1
-        ],
-        [
-          9,
-          239,
-          2,
-          6
-        ],
-        [
-          2,
-          3,
-          160,
-          0
-        ],
-        [
-          5,
-          29,
-          2,
-          57
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9187817258883249,
-          "recall": 0.8379629629629629,
-          "f1": 0.8765133171912833,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.7887788778877888,
-          "recall": 0.93359375,
-          "f1": 0.855098389982111,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.963855421686747,
-          "recall": 0.9696969696969697,
-          "f1": 0.9667673716012085,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.890625,
-          "recall": 0.6129032258064516,
-          "f1": 0.7261146496815286,
-          "support": 93
+          "precision": 0.1810344827586207,
+          "recall": 0.9545454545454546,
+          "f1": 0.30434782608695654,
+          "support": 88
         }
       }
     },
     {
       "baseline": "B1.1_tfidf_lr @ test",
-      "accuracy": 0.8808,
-      "macro_f1": 0.8687,
-      "balanced_accuracy": 0.8629,
-      "recall_anamnesis": 0.8704,
-      "false_faq_for_anamnesis": 0.1019,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.891,
-      "anamnesis_recall": 0.8704,
-      "anamnesis_f1": 0.8806,
-      "faq_precision": 0.8487,
-      "faq_recall": 0.8984,
-      "faq_f1": 0.8729,
-      "booking_precision": 0.9632,
-      "booking_recall": 0.9515,
-      "booking_f1": 0.9573,
-      "unsupported_precision": 0.8,
-      "unsupported_recall": 0.7312,
-      "unsupported_f1": 0.764,
+      "accuracy": 0.8632,
+      "macro_f1": 0.8398,
+      "balanced_accuracy": 0.8217,
+      "false_faq_for_anamnesis": 0.1023,
+      "n_samples": 709,
+      "anamnesis_precision": 0.8482,
+      "anamnesis_recall": 0.8837,
+      "anamnesis_f1": 0.8656,
+      "faq_precision": 0.8208,
+      "faq_recall": 0.9051,
+      "faq_f1": 0.8609,
+      "booking_precision": 0.9536,
+      "booking_recall": 0.9412,
+      "booking_f1": 0.9474,
+      "unsupported_precision": 0.8909,
+      "unsupported_recall": 0.5568,
+      "unsupported_f1": 0.6853,
       "confusion": [
         [
-          188,
+          190,
           22,
           1,
-          5
-        ],
-        [
-          13,
-          230,
-          2,
-          11
-        ],
-        [
-          2,
-          5,
-          157,
-          1
-        ],
-        [
-          8,
-          14,
-          3,
-          68
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8909952606635071,
-          "recall": 0.8703703703703703,
-          "f1": 0.8805620608899297,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.8487084870848709,
-          "recall": 0.8984375,
-          "f1": 0.872865275142315,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.9631901840490797,
-          "recall": 0.9515151515151515,
-          "f1": 0.9573170731707317,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.8,
-          "recall": 0.7311827956989247,
-          "f1": 0.7640449438202247,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B1.2_tfidf_lr_tuned @ test",
-      "accuracy": 0.8767,
-      "macro_f1": 0.8678,
-      "balanced_accuracy": 0.8655,
-      "recall_anamnesis": 0.8657,
-      "false_faq_for_anamnesis": 0.1065,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.8863,
-      "anamnesis_recall": 0.8657,
-      "anamnesis_f1": 0.8759,
-      "faq_precision": 0.8496,
-      "faq_recall": 0.8828,
-      "faq_f1": 0.8659,
-      "booking_precision": 0.9627,
-      "booking_recall": 0.9394,
-      "booking_f1": 0.9509,
-      "unsupported_precision": 0.7826,
-      "unsupported_recall": 0.7742,
-      "unsupported_f1": 0.7784,
-      "confusion": [
-        [
-          187,
-          23,
-          1,
-          5
-        ],
-        [
-          14,
-          226,
-          3,
-          13
-        ],
-        [
-          3,
-          5,
-          155,
           2
         ],
         [
-          7,
-          12,
-          2,
-          72
+          17,
+          229,
+          3,
+          4
+        ],
+        [
+          3,
+          6,
+          144,
+          0
+        ],
+        [
+          14,
+          22,
+          3,
+          49
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.8862559241706162,
-          "recall": 0.8657407407407407,
-          "f1": 0.8758782201405152,
-          "support": 216
+          "precision": 0.8482142857142857,
+          "recall": 0.8837209302325582,
+          "f1": 0.8656036446469249,
+          "support": 215
         },
         "faq": {
-          "precision": 0.849624060150376,
-          "recall": 0.8828125,
-          "f1": 0.8659003831417624,
-          "support": 256
+          "precision": 0.8207885304659498,
+          "recall": 0.9051383399209486,
+          "f1": 0.8609022556390977,
+          "support": 253
         },
         "booking": {
-          "precision": 0.9627329192546584,
-          "recall": 0.9393939393939394,
-          "f1": 0.950920245398773,
-          "support": 165
+          "precision": 0.9536423841059603,
+          "recall": 0.9411764705882353,
+          "f1": 0.9473684210526315,
+          "support": 153
         },
         "unsupported": {
-          "precision": 0.782608695652174,
-          "recall": 0.7741935483870968,
-          "f1": 0.7783783783783784,
-          "support": 93
+          "precision": 0.8909090909090909,
+          "recall": 0.5568181818181818,
+          "f1": 0.6853146853146853,
+          "support": 88
         }
       }
     },
     {
       "baseline": "B1.3_fasttext @ test",
-      "accuracy": 0.8411,
-      "macro_f1": 0.8174,
-      "balanced_accuracy": 0.8089,
-      "recall_anamnesis": 0.8657,
-      "false_faq_for_anamnesis": 0.0972,
-      "n_samples": 730,
-      "recall_urgent": 0.4706,
-      "latency_ms": 0.0,
-      "anamnesis_precision": 0.8348,
-      "anamnesis_recall": 0.8657,
-      "anamnesis_f1": 0.85,
-      "faq_precision": 0.8467,
-      "faq_recall": 0.8633,
-      "faq_f1": 0.8549,
-      "booking_precision": 0.858,
-      "booking_recall": 0.9152,
-      "booking_f1": 0.8856,
-      "unsupported_precision": 0.7971,
-      "unsupported_recall": 0.5914,
-      "unsupported_f1": 0.679,
-      "confusion": [
-        [
-          187,
-          21,
-          5,
-          3
-        ],
-        [
-          15,
-          221,
-          12,
-          8
-        ],
-        [
-          6,
-          5,
-          151,
-          3
-        ],
-        [
-          16,
-          14,
-          8,
-          55
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8348214285714286,
-          "recall": 0.8657407407407407,
-          "f1": 0.85,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.8467432950191571,
-          "recall": 0.86328125,
-          "f1": 0.8549323017408124,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.8579545454545454,
-          "recall": 0.9151515151515152,
-          "f1": 0.8856304985337243,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.7971014492753623,
-          "recall": 0.5913978494623656,
-          "f1": 0.6790123456790124,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B2_bge-m3_linear @ test",
-      "accuracy": 0.8753,
-      "macro_f1": 0.8694,
-      "balanced_accuracy": 0.8752,
-      "recall_anamnesis": 0.8611,
-      "false_faq_for_anamnesis": 0.0972,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 3.14,
-      "anamnesis_precision": 0.9208,
-      "anamnesis_recall": 0.8611,
-      "anamnesis_f1": 0.89,
-      "faq_precision": 0.8622,
-      "faq_recall": 0.8555,
-      "faq_f1": 0.8588,
-      "booking_precision": 0.8966,
-      "booking_recall": 0.9455,
-      "booking_f1": 0.9204,
-      "unsupported_precision": 0.78,
-      "unsupported_recall": 0.8387,
-      "unsupported_f1": 0.8083,
+      "accuracy": 0.8265,
+      "macro_f1": 0.8008,
+      "balanced_accuracy": 0.7964,
+      "false_faq_for_anamnesis": 0.0977,
+      "n_samples": 709,
+      "anamnesis_precision": 0.823,
+      "anamnesis_recall": 0.8651,
+      "anamnesis_f1": 0.8435,
+      "faq_precision": 0.8543,
+      "faq_recall": 0.834,
+      "faq_f1": 0.844,
+      "booking_precision": 0.8303,
+      "booking_recall": 0.8954,
+      "booking_f1": 0.8616,
+      "unsupported_precision": 0.7324,
+      "unsupported_recall": 0.5909,
+      "unsupported_f1": 0.6541,
       "confusion": [
         [
           186,
           21,
-          7,
-          2
-        ],
-        [
-          13,
-          219,
-          6,
-          18
-        ],
-        [
-          1,
-          6,
-          156,
-          2
-        ],
-        [
-          2,
-          8,
           5,
-          78
+          3
+        ],
+        [
+          14,
+          211,
+          15,
+          13
+        ],
+        [
+          9,
+          4,
+          137,
+          3
+        ],
+        [
+          17,
+          11,
+          8,
+          52
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9207920792079208,
-          "recall": 0.8611111111111112,
-          "f1": 0.8899521531100478,
-          "support": 216
+          "precision": 0.8230088495575221,
+          "recall": 0.8651162790697674,
+          "f1": 0.8435374149659864,
+          "support": 215
         },
         "faq": {
-          "precision": 0.8622047244094488,
-          "recall": 0.85546875,
-          "f1": 0.8588235294117647,
-          "support": 256
+          "precision": 0.854251012145749,
+          "recall": 0.83399209486166,
+          "f1": 0.844,
+          "support": 253
         },
         "booking": {
-          "precision": 0.896551724137931,
-          "recall": 0.9454545454545454,
-          "f1": 0.9203539823008849,
-          "support": 165
+          "precision": 0.8303030303030303,
+          "recall": 0.8954248366013072,
+          "f1": 0.8616352201257862,
+          "support": 153
         },
         "unsupported": {
-          "precision": 0.78,
-          "recall": 0.8387096774193549,
-          "f1": 0.8082901554404145,
-          "support": 93
+          "precision": 0.7323943661971831,
+          "recall": 0.5909090909090909,
+          "f1": 0.6540880503144654,
+          "support": 88
         }
       }
     },
     {
       "baseline": "B2.1_bge-m3_svc @ test",
-      "accuracy": 0.8877,
-      "macro_f1": 0.88,
-      "balanced_accuracy": 0.8739,
-      "recall_anamnesis": 0.8519,
-      "false_faq_for_anamnesis": 0.1065,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 2.68,
-      "anamnesis_precision": 0.9534,
-      "anamnesis_recall": 0.8519,
-      "anamnesis_f1": 0.8998,
-      "faq_precision": 0.8545,
-      "faq_recall": 0.918,
-      "faq_f1": 0.8851,
-      "booking_precision": 0.8674,
-      "booking_recall": 0.9515,
-      "booking_f1": 0.9075,
-      "unsupported_precision": 0.8889,
-      "unsupported_recall": 0.7742,
-      "unsupported_f1": 0.8276,
+      "accuracy": 0.8858,
+      "macro_f1": 0.8777,
+      "balanced_accuracy": 0.8732,
+      "false_faq_for_anamnesis": 0.0977,
+      "n_samples": 709,
+      "anamnesis_precision": 0.949,
+      "anamnesis_recall": 0.8651,
+      "anamnesis_f1": 0.9051,
+      "faq_precision": 0.8582,
+      "faq_recall": 0.9091,
+      "faq_f1": 0.8829,
+      "booking_precision": 0.8614,
+      "booking_recall": 0.9346,
+      "booking_f1": 0.8966,
+      "unsupported_precision": 0.8734,
+      "unsupported_recall": 0.7841,
+      "unsupported_f1": 0.8263,
       "confusion": [
         [
-          184,
-          23,
-          9,
+          186,
+          21,
+          8,
           0
         ],
         [
+          8,
+          230,
           7,
-          235,
-          6,
           8
         ],
         [
           2,
-          5,
-          157,
-          1
-        ],
-        [
-          0,
-          12,
-          9,
-          72
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9533678756476683,
-          "recall": 0.8518518518518519,
-          "f1": 0.8997555012224939,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.8545454545454545,
-          "recall": 0.91796875,
-          "f1": 0.8851224105461394,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.8674033149171271,
-          "recall": 0.9515151515151515,
-          "f1": 0.9075144508670521,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.8888888888888888,
-          "recall": 0.7741935483870968,
-          "f1": 0.8275862068965517,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B2.2_bge-m3_centroid @ test",
-      "accuracy": 0.7863,
-      "macro_f1": 0.7765,
-      "balanced_accuracy": 0.7924,
-      "recall_anamnesis": 0.7917,
-      "false_faq_for_anamnesis": 0.1481,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 2.8,
-      "anamnesis_precision": 0.8507,
-      "anamnesis_recall": 0.7917,
-      "anamnesis_f1": 0.8201,
-      "faq_precision": 0.7941,
-      "faq_recall": 0.7383,
-      "faq_f1": 0.7652,
-      "booking_precision": 0.8598,
-      "booking_recall": 0.8545,
-      "booking_f1": 0.8571,
-      "unsupported_precision": 0.5748,
-      "unsupported_recall": 0.7849,
-      "unsupported_f1": 0.6636,
-      "confusion": [
-        [
-          171,
-          32,
-          5,
-          8
-        ],
-        [
-          20,
-          189,
-          10,
-          37
-        ],
-        [
-          5,
-          10,
-          141,
-          9
-        ],
-        [
-          5,
-          7,
-          8,
-          73
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8507462686567164,
-          "recall": 0.7916666666666666,
-          "f1": 0.8201438848920863,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.7941176470588235,
-          "recall": 0.73828125,
-          "f1": 0.7651821862348178,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.8597560975609756,
-          "recall": 0.8545454545454545,
-          "f1": 0.8571428571428571,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.5748031496062992,
-          "recall": 0.7849462365591398,
-          "f1": 0.6636363636363637,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ test",
-      "accuracy": 0.8521,
-      "macro_f1": 0.8459,
-      "balanced_accuracy": 0.8589,
-      "recall_anamnesis": 0.8519,
-      "false_faq_for_anamnesis": 0.1065,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 2.72,
-      "anamnesis_precision": 0.8976,
-      "anamnesis_recall": 0.8519,
-      "anamnesis_f1": 0.8741,
-      "faq_precision": 0.8542,
-      "faq_recall": 0.8008,
-      "faq_f1": 0.8266,
-      "booking_precision": 0.8851,
-      "booking_recall": 0.9333,
-      "booking_f1": 0.9086,
-      "unsupported_precision": 0.7117,
-      "unsupported_recall": 0.8495,
-      "unsupported_f1": 0.7745,
-      "confusion": [
-        [
-          184,
-          23,
-          7,
+          6,
+          143,
           2
         ],
         [
-          17,
-          205,
-          8,
-          26
-        ],
-        [
-          2,
-          5,
-          154,
-          4
-        ],
-        [
-          2,
-          7,
-          5,
-          79
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8975609756097561,
-          "recall": 0.8518518518518519,
-          "f1": 0.8741092636579573,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.8541666666666666,
-          "recall": 0.80078125,
-          "f1": 0.8266129032258065,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.8850574712643678,
-          "recall": 0.9333333333333333,
-          "f1": 0.9085545722713865,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.7117117117117117,
-          "recall": 0.8494623655913979,
-          "f1": 0.7745098039215687,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ test",
-      "accuracy": 0.8123,
-      "macro_f1": 0.8031,
-      "balanced_accuracy": 0.8244,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.088,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 0.68,
-      "anamnesis_precision": 0.8571,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8451,
-      "faq_precision": 0.8559,
-      "faq_recall": 0.7422,
-      "faq_f1": 0.795,
-      "booking_precision": 0.8675,
-      "booking_recall": 0.8727,
-      "booking_f1": 0.8701,
-      "unsupported_precision": 0.5985,
-      "unsupported_recall": 0.8495,
-      "unsupported_f1": 0.7022,
-      "confusion": [
-        [
-          180,
-          19,
-          8,
-          9
-        ],
-        [
-          24,
-          190,
-          9,
-          33
-        ],
-        [
-          3,
-          7,
-          144,
-          11
-        ],
-        [
-          3,
-          6,
-          5,
-          79
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8571428571428571,
-          "recall": 0.8333333333333334,
-          "f1": 0.8450704225352113,
-          "support": 216
-        },
-        "faq": {
-          "precision": 0.8558558558558559,
-          "recall": 0.7421875,
-          "f1": 0.7949790794979079,
-          "support": 256
-        },
-        "booking": {
-          "precision": 0.8674698795180723,
-          "recall": 0.8727272727272727,
-          "f1": 0.8700906344410876,
-          "support": 165
-        },
-        "unsupported": {
-          "precision": 0.5984848484848485,
-          "recall": 0.8494623655913979,
-          "f1": 0.7022222222222222,
-          "support": 93
-        }
-      }
-    },
-    {
-      "baseline": "B2.5_e5-small_svc @ test",
-      "accuracy": 0.8425,
-      "macro_f1": 0.8318,
-      "balanced_accuracy": 0.8302,
-      "recall_anamnesis": 0.8565,
-      "false_faq_for_anamnesis": 0.1065,
-      "n_samples": 730,
-      "recall_urgent": 0.4118,
-      "latency_ms": 0.43,
-      "anamnesis_precision": 0.8894,
-      "anamnesis_recall": 0.8565,
-      "anamnesis_f1": 0.8726,
-      "faq_precision": 0.8213,
-      "faq_recall": 0.8438,
-      "faq_f1": 0.8324,
-      "booking_precision": 0.858,
-      "booking_recall": 0.8788,
-      "booking_f1": 0.8683,
-      "unsupported_precision": 0.7667,
-      "unsupported_recall": 0.7419,
-      "unsupported_f1": 0.7541,
-      "confusion": [
-        [
-          185,
-          23,
-          8,
-          0
-        ],
-        [
-          15,
-          216,
-          8,
-          17
-        ],
-        [
-          4,
-          12,
-          145,
-          4
-        ],
-        [
-          4,
-          12,
+          0,
+          11,
           8,
           69
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.8894230769230769,
-          "recall": 0.8564814814814815,
-          "f1": 0.8726415094339622,
-          "support": 216
+          "precision": 0.9489795918367347,
+          "recall": 0.8651162790697674,
+          "f1": 0.9051094890510949,
+          "support": 215
         },
         "faq": {
-          "precision": 0.8212927756653993,
-          "recall": 0.84375,
-          "f1": 0.8323699421965318,
-          "support": 256
+          "precision": 0.8582089552238806,
+          "recall": 0.9090909090909091,
+          "f1": 0.8829174664107485,
+          "support": 253
         },
         "booking": {
-          "precision": 0.8579881656804734,
-          "recall": 0.8787878787878788,
-          "f1": 0.8682634730538922,
-          "support": 165
+          "precision": 0.8614457831325302,
+          "recall": 0.934640522875817,
+          "f1": 0.896551724137931,
+          "support": 153
         },
         "unsupported": {
-          "precision": 0.7666666666666667,
-          "recall": 0.7419354838709677,
-          "f1": 0.7540983606557377,
-          "support": 93
+          "precision": 0.8734177215189873,
+          "recall": 0.7840909090909091,
+          "f1": 0.8263473053892215,
+          "support": 88
+        }
+      }
+    },
+    {
+      "baseline": "B2.5_e5-small_svc @ test",
+      "accuracy": 0.8533,
+      "macro_f1": 0.8446,
+      "balanced_accuracy": 0.845,
+      "false_faq_for_anamnesis": 0.0977,
+      "n_samples": 709,
+      "anamnesis_precision": 0.8779,
+      "anamnesis_recall": 0.8698,
+      "anamnesis_f1": 0.8738,
+      "faq_precision": 0.8452,
+      "faq_recall": 0.8419,
+      "faq_f1": 0.8436,
+      "booking_precision": 0.8726,
+      "booking_recall": 0.8954,
+      "booking_f1": 0.8839,
+      "unsupported_precision": 0.7816,
+      "unsupported_recall": 0.7727,
+      "unsupported_f1": 0.7771,
+      "confusion": [
+        [
+          187,
+          21,
+          6,
+          1
+        ],
+        [
+          20,
+          213,
+          6,
+          14
+        ],
+        [
+          3,
+          9,
+          137,
+          4
+        ],
+        [
+          3,
+          9,
+          8,
+          68
+        ]
+      ],
+      "per_class": {
+        "anamnesis": {
+          "precision": 0.8779342723004695,
+          "recall": 0.8697674418604651,
+          "f1": 0.8738317757009346,
+          "support": 215
+        },
+        "faq": {
+          "precision": 0.8452380952380952,
+          "recall": 0.841897233201581,
+          "f1": 0.8435643564356435,
+          "support": 253
+        },
+        "booking": {
+          "precision": 0.8726114649681529,
+          "recall": 0.8954248366013072,
+          "f1": 0.8838709677419355,
+          "support": 153
+        },
+        "unsupported": {
+          "precision": 0.7816091954022989,
+          "recall": 0.7727272727272727,
+          "f1": 0.7771428571428571,
+          "support": 88
         }
       }
     }
@@ -829,25 +364,23 @@
   "val": [
     {
       "baseline": "B0_rules @ val",
-      "accuracy": 0.4701,
-      "macro_f1": 0.4819,
-      "balanced_accuracy": 0.4974,
-      "recall_anamnesis": 0.4211,
+      "accuracy": 0.4818,
+      "macro_f1": 0.4881,
+      "balanced_accuracy": 0.4988,
       "false_faq_for_anamnesis": 0.0,
-      "n_samples": 351,
-      "latency_ms": 0.03,
+      "n_samples": 330,
       "anamnesis_precision": 0.7692,
       "anamnesis_recall": 0.4211,
       "anamnesis_f1": 0.5442,
       "faq_precision": 1.0,
-      "faq_recall": 0.3333,
-      "faq_f1": 0.5,
-      "booking_precision": 0.92,
-      "booking_recall": 0.3067,
-      "booking_f1": 0.46,
-      "unsupported_precision": 0.2743,
+      "faq_recall": 0.3364,
+      "faq_f1": 0.5034,
+      "booking_precision": 0.8947,
+      "booking_recall": 0.3091,
+      "booking_f1": 0.4595,
+      "unsupported_precision": 0.2928,
       "unsupported_recall": 0.9286,
-      "unsupported_f1": 0.4235,
+      "unsupported_f1": 0.4452,
       "confusion": [
         [
           40,
@@ -859,13 +392,13 @@
           5,
           37,
           1,
-          68
+          67
         ],
         [
           3,
           0,
-          23,
-          49
+          17,
+          35
         ],
         [
           4,
@@ -883,760 +416,308 @@
         },
         "faq": {
           "precision": 1.0,
-          "recall": 0.3333333333333333,
-          "f1": 0.5,
-          "support": 111
+          "recall": 0.33636363636363636,
+          "f1": 0.5034013605442177,
+          "support": 110
         },
         "booking": {
-          "precision": 0.92,
-          "recall": 0.30666666666666664,
-          "f1": 0.46,
-          "support": 75
+          "precision": 0.8947368421052632,
+          "recall": 0.3090909090909091,
+          "f1": 0.4594594594594595,
+          "support": 55
         },
         "unsupported": {
-          "precision": 0.2742616033755274,
+          "precision": 0.2927927927927928,
           "recall": 0.9285714285714286,
-          "f1": 0.4234527687296417,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B1_tfidf_svc @ val",
-      "accuracy": 0.8319,
-      "macro_f1": 0.8152,
-      "balanced_accuracy": 0.8138,
-      "recall_anamnesis": 0.8842,
-      "false_faq_for_anamnesis": 0.0842,
-      "n_samples": 351,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.8,
-      "anamnesis_recall": 0.8842,
-      "anamnesis_f1": 0.84,
-      "faq_precision": 0.808,
-      "faq_recall": 0.9099,
-      "faq_f1": 0.8559,
-      "booking_precision": 0.8765,
-      "booking_recall": 0.9467,
-      "booking_f1": 0.9103,
-      "unsupported_precision": 0.9,
-      "unsupported_recall": 0.5143,
-      "unsupported_f1": 0.6545,
-      "confusion": [
-        [
-          84,
-          8,
-          1,
-          2
-        ],
-        [
-          6,
-          101,
-          3,
-          1
-        ],
-        [
-          0,
-          3,
-          71,
-          1
-        ],
-        [
-          15,
-          13,
-          6,
-          36
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8,
-          "recall": 0.8842105263157894,
-          "f1": 0.84,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.808,
-          "recall": 0.9099099099099099,
-          "f1": 0.8559322033898306,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.8765432098765432,
-          "recall": 0.9466666666666667,
-          "f1": 0.9102564102564102,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.9,
-          "recall": 0.5142857142857142,
-          "f1": 0.6545454545454545,
+          "f1": 0.4452054794520548,
           "support": 70
         }
       }
     },
     {
       "baseline": "B1.1_tfidf_lr @ val",
-      "accuracy": 0.849,
-      "macro_f1": 0.8396,
-      "balanced_accuracy": 0.8352,
-      "recall_anamnesis": 0.8842,
-      "false_faq_for_anamnesis": 0.0947,
-      "n_samples": 351,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.785,
-      "anamnesis_recall": 0.8842,
-      "anamnesis_f1": 0.8317,
-      "faq_precision": 0.8417,
-      "faq_recall": 0.9099,
-      "faq_f1": 0.8745,
-      "booking_precision": 0.9221,
-      "booking_recall": 0.9467,
-      "booking_f1": 0.9342,
-      "unsupported_precision": 0.8936,
-      "unsupported_recall": 0.6,
-      "unsupported_f1": 0.7179,
+      "accuracy": 0.8182,
+      "macro_f1": 0.8016,
+      "balanced_accuracy": 0.8042,
+      "false_faq_for_anamnesis": 0.0842,
+      "n_samples": 330,
+      "anamnesis_precision": 0.7288,
+      "anamnesis_recall": 0.9053,
+      "anamnesis_f1": 0.8075,
+      "faq_precision": 0.8403,
+      "faq_recall": 0.9091,
+      "faq_f1": 0.8734,
+      "booking_precision": 0.8667,
+      "booking_recall": 0.9455,
+      "booking_f1": 0.9043,
+      "unsupported_precision": 0.9697,
+      "unsupported_recall": 0.4571,
+      "unsupported_f1": 0.6214,
       "confusion": [
         [
-          84,
-          9,
-          0,
-          2
+          86,
+          8,
+          1,
+          0
         ],
         [
-          5,
-          101,
-          3,
-          2
+          8,
+          100,
+          2,
+          0
         ],
         [
-          0,
-          3,
-          71,
+          1,
+          1,
+          52,
           1
         ],
         [
-          18,
-          7,
-          3,
-          42
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.7850467289719626,
-          "recall": 0.8842105263157894,
-          "f1": 0.8316831683168316,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.8416666666666667,
-          "recall": 0.9099099099099099,
-          "f1": 0.8744588744588745,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.922077922077922,
-          "recall": 0.9466666666666667,
-          "f1": 0.9342105263157895,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.8936170212765957,
-          "recall": 0.6,
-          "f1": 0.717948717948718,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B1.2_tfidf_lr_tuned @ val",
-      "accuracy": 0.849,
-      "macro_f1": 0.8394,
-      "balanced_accuracy": 0.8346,
-      "recall_anamnesis": 0.8737,
-      "false_faq_for_anamnesis": 0.1053,
-      "n_samples": 351,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.7685,
-      "anamnesis_recall": 0.8737,
-      "anamnesis_f1": 0.8177,
-      "faq_precision": 0.843,
-      "faq_recall": 0.9189,
-      "faq_f1": 0.8793,
-      "booking_precision": 0.9351,
-      "booking_recall": 0.96,
-      "booking_f1": 0.9474,
-      "unsupported_precision": 0.9111,
-      "unsupported_recall": 0.5857,
-      "unsupported_f1": 0.713,
-      "confusion": [
-        [
-          83,
+          23,
           10,
-          0,
-          2
-        ],
-        [
           5,
-          102,
-          3,
-          1
-        ],
-        [
-          0,
-          2,
-          72,
-          1
-        ],
-        [
-          20,
-          7,
-          2,
-          41
+          32
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.7685185185185185,
-          "recall": 0.8736842105263158,
-          "f1": 0.8177339901477833,
+          "precision": 0.7288135593220338,
+          "recall": 0.9052631578947369,
+          "f1": 0.8075117370892019,
           "support": 95
         },
         "faq": {
-          "precision": 0.8429752066115702,
-          "recall": 0.918918918918919,
-          "f1": 0.8793103448275862,
-          "support": 111
+          "precision": 0.8403361344537815,
+          "recall": 0.9090909090909091,
+          "f1": 0.8733624454148472,
+          "support": 110
         },
         "booking": {
-          "precision": 0.935064935064935,
-          "recall": 0.96,
-          "f1": 0.9473684210526315,
-          "support": 75
+          "precision": 0.8666666666666667,
+          "recall": 0.9454545454545454,
+          "f1": 0.9043478260869565,
+          "support": 55
         },
         "unsupported": {
-          "precision": 0.9111111111111111,
-          "recall": 0.5857142857142857,
-          "f1": 0.7130434782608696,
+          "precision": 0.9696969696969697,
+          "recall": 0.45714285714285713,
+          "f1": 0.6213592233009708,
           "support": 70
         }
       }
     },
     {
       "baseline": "B1.3_fasttext @ val",
-      "accuracy": 0.8091,
-      "macro_f1": 0.7815,
-      "balanced_accuracy": 0.7882,
-      "recall_anamnesis": 0.8947,
-      "false_faq_for_anamnesis": 0.0316,
-      "n_samples": 351,
-      "latency_ms": 0.06,
-      "anamnesis_precision": 0.7391,
-      "anamnesis_recall": 0.8947,
-      "anamnesis_f1": 0.8095,
-      "faq_precision": 0.875,
-      "faq_recall": 0.8829,
-      "faq_f1": 0.8789,
-      "booking_precision": 0.8256,
-      "booking_recall": 0.9467,
-      "booking_f1": 0.882,
-      "unsupported_precision": 0.7895,
-      "unsupported_recall": 0.4286,
-      "unsupported_f1": 0.5556,
+      "accuracy": 0.7848,
+      "macro_f1": 0.7619,
+      "balanced_accuracy": 0.7691,
+      "false_faq_for_anamnesis": 0.0421,
+      "n_samples": 330,
+      "anamnesis_precision": 0.7217,
+      "anamnesis_recall": 0.8737,
+      "anamnesis_f1": 0.7905,
+      "faq_precision": 0.8649,
+      "faq_recall": 0.8727,
+      "faq_f1": 0.8688,
+      "booking_precision": 0.75,
+      "booking_recall": 0.8727,
+      "booking_f1": 0.8067,
+      "unsupported_precision": 0.8,
+      "unsupported_recall": 0.4571,
+      "unsupported_f1": 0.5818,
       "confusion": [
         [
-          85,
-          3,
-          3,
-          4
-        ],
-        [
-          6,
-          98,
+          83,
+          4,
           5,
-          2
-        ],
-        [
-          1,
-          1,
-          71,
-          2
-        ],
-        [
-          23,
-          10,
-          7,
-          30
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.7391304347826086,
-          "recall": 0.8947368421052632,
-          "f1": 0.8095238095238095,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.875,
-          "recall": 0.8828828828828829,
-          "f1": 0.8789237668161435,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.8255813953488372,
-          "recall": 0.9466666666666667,
-          "f1": 0.8819875776397516,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.7894736842105263,
-          "recall": 0.42857142857142855,
-          "f1": 0.5555555555555556,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B2_bge-m3_linear @ val",
-      "accuracy": 0.8718,
-      "macro_f1": 0.8646,
-      "balanced_accuracy": 0.8683,
-      "recall_anamnesis": 0.9789,
-      "false_faq_for_anamnesis": 0.0211,
-      "n_samples": 351,
-      "latency_ms": 3.06,
-      "anamnesis_precision": 0.8378,
-      "anamnesis_recall": 0.9789,
-      "anamnesis_f1": 0.9029,
-      "faq_precision": 0.9381,
-      "faq_recall": 0.8198,
-      "faq_f1": 0.875,
-      "booking_precision": 0.8889,
-      "booking_recall": 0.96,
-      "booking_f1": 0.9231,
-      "unsupported_precision": 0.8065,
-      "unsupported_recall": 0.7143,
-      "unsupported_f1": 0.7576,
-      "confusion": [
-        [
-          93,
-          2,
-          0,
-          0
-        ],
-        [
-          5,
-          91,
-          6,
-          9
-        ],
-        [
-          0,
-          0,
-          72,
           3
         ],
         [
-          13,
+          8,
+          96,
           4,
-          3,
-          50
+          2
+        ],
+        [
+          2,
+          2,
+          48,
+          3
+        ],
+        [
+          22,
+          9,
+          7,
+          32
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.8378378378378378,
-          "recall": 0.9789473684210527,
-          "f1": 0.9029126213592233,
+          "precision": 0.7217391304347827,
+          "recall": 0.8736842105263158,
+          "f1": 0.7904761904761904,
           "support": 95
         },
         "faq": {
-          "precision": 0.9381443298969072,
-          "recall": 0.8198198198198198,
-          "f1": 0.875,
-          "support": 111
+          "precision": 0.8648648648648649,
+          "recall": 0.8727272727272727,
+          "f1": 0.8687782805429864,
+          "support": 110
         },
         "booking": {
-          "precision": 0.8888888888888888,
-          "recall": 0.96,
-          "f1": 0.9230769230769231,
-          "support": 75
+          "precision": 0.75,
+          "recall": 0.8727272727272727,
+          "f1": 0.8067226890756303,
+          "support": 55
         },
         "unsupported": {
-          "precision": 0.8064516129032258,
-          "recall": 0.7142857142857143,
-          "f1": 0.7575757575757576,
+          "precision": 0.8,
+          "recall": 0.45714285714285713,
+          "f1": 0.5818181818181818,
           "support": 70
         }
       }
     },
     {
       "baseline": "B2.1_bge-m3_svc @ val",
-      "accuracy": 0.8832,
-      "macro_f1": 0.8732,
-      "balanced_accuracy": 0.8701,
-      "recall_anamnesis": 0.9684,
-      "false_faq_for_anamnesis": 0.0316,
-      "n_samples": 351,
-      "latency_ms": 2.63,
-      "anamnesis_precision": 0.844,
-      "anamnesis_recall": 0.9684,
-      "anamnesis_f1": 0.902,
-      "faq_precision": 0.8707,
-      "faq_recall": 0.9099,
-      "faq_f1": 0.8899,
-      "booking_precision": 0.9012,
-      "booking_recall": 0.9733,
-      "booking_f1": 0.9359,
-      "unsupported_precision": 0.9778,
-      "unsupported_recall": 0.6286,
-      "unsupported_f1": 0.7652,
+      "accuracy": 0.8667,
+      "macro_f1": 0.86,
+      "balanced_accuracy": 0.8649,
+      "false_faq_for_anamnesis": 0.0105,
+      "n_samples": 330,
+      "anamnesis_precision": 0.8393,
+      "anamnesis_recall": 0.9895,
+      "anamnesis_f1": 0.9082,
+      "faq_precision": 0.8942,
+      "faq_recall": 0.8455,
+      "faq_f1": 0.8692,
+      "booking_precision": 0.8852,
+      "booking_recall": 0.9818,
+      "booking_f1": 0.931,
+      "unsupported_precision": 0.8491,
+      "unsupported_recall": 0.6429,
+      "unsupported_f1": 0.7317,
       "confusion": [
         [
-          92,
-          3,
+          94,
+          1,
           0,
           0
         ],
         [
-          4,
-          101,
           5,
-          1
+          93,
+          4,
+          8
         ],
         [
           0,
-          2,
-          73,
+          1,
+          54,
           0
         ],
         [
           13,
-          10,
-          3,
-          44
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8440366972477065,
-          "recall": 0.968421052631579,
-          "f1": 0.9019607843137255,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.8706896551724138,
-          "recall": 0.9099099099099099,
-          "f1": 0.8898678414096917,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.9012345679012346,
-          "recall": 0.9733333333333334,
-          "f1": 0.9358974358974359,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.9777777777777777,
-          "recall": 0.6285714285714286,
-          "f1": 0.7652173913043478,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B2.2_bge-m3_centroid @ val",
-      "accuracy": 0.7949,
-      "macro_f1": 0.7851,
-      "balanced_accuracy": 0.7884,
-      "recall_anamnesis": 0.9053,
-      "false_faq_for_anamnesis": 0.0947,
-      "n_samples": 351,
-      "latency_ms": 2.64,
-      "anamnesis_precision": 0.7748,
-      "anamnesis_recall": 0.9053,
-      "anamnesis_f1": 0.835,
-      "faq_precision": 0.84,
-      "faq_recall": 0.7568,
-      "faq_f1": 0.7962,
-      "booking_precision": 0.8961,
-      "booking_recall": 0.92,
-      "booking_f1": 0.9079,
-      "unsupported_precision": 0.6349,
-      "unsupported_recall": 0.5714,
-      "unsupported_f1": 0.6015,
-      "confusion": [
-        [
-          86,
           9,
-          0,
-          0
-        ],
-        [
-          7,
-          84,
           3,
-          17
-        ],
-        [
-          0,
-          0,
-          69,
-          6
-        ],
-        [
-          18,
-          7,
-          5,
-          40
+          45
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.7747747747747747,
-          "recall": 0.9052631578947369,
-          "f1": 0.8349514563106796,
+          "precision": 0.8392857142857143,
+          "recall": 0.9894736842105263,
+          "f1": 0.9082125603864735,
           "support": 95
         },
         "faq": {
-          "precision": 0.84,
-          "recall": 0.7567567567567568,
-          "f1": 0.7962085308056872,
-          "support": 111
+          "precision": 0.8942307692307693,
+          "recall": 0.8454545454545455,
+          "f1": 0.8691588785046729,
+          "support": 110
         },
         "booking": {
-          "precision": 0.8961038961038961,
-          "recall": 0.92,
-          "f1": 0.9078947368421053,
-          "support": 75
+          "precision": 0.8852459016393442,
+          "recall": 0.9818181818181818,
+          "f1": 0.9310344827586207,
+          "support": 55
         },
         "unsupported": {
-          "precision": 0.6349206349206349,
-          "recall": 0.5714285714285714,
-          "f1": 0.6015037593984962,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ val",
-      "accuracy": 0.8689,
-      "macro_f1": 0.8621,
-      "balanced_accuracy": 0.8643,
-      "recall_anamnesis": 0.9684,
-      "false_faq_for_anamnesis": 0.0316,
-      "n_samples": 351,
-      "latency_ms": 2.58,
-      "anamnesis_precision": 0.8214,
-      "anamnesis_recall": 0.9684,
-      "anamnesis_f1": 0.8889,
-      "faq_precision": 0.9293,
-      "faq_recall": 0.8288,
-      "faq_f1": 0.8762,
-      "booking_precision": 0.9114,
-      "booking_recall": 0.96,
-      "booking_f1": 0.9351,
-      "unsupported_precision": 0.8033,
-      "unsupported_recall": 0.7,
-      "unsupported_f1": 0.7481,
-      "confusion": [
-        [
-          92,
-          3,
-          0,
-          0
-        ],
-        [
-          5,
-          92,
-          5,
-          9
-        ],
-        [
-          0,
-          0,
-          72,
-          3
-        ],
-        [
-          15,
-          4,
-          2,
-          49
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8214285714285714,
-          "recall": 0.968421052631579,
-          "f1": 0.8888888888888888,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.9292929292929293,
-          "recall": 0.8288288288288288,
-          "f1": 0.8761904761904762,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.9113924050632911,
-          "recall": 0.96,
-          "f1": 0.935064935064935,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.8032786885245902,
-          "recall": 0.7,
-          "f1": 0.7480916030534351,
-          "support": 70
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ val",
-      "accuracy": 0.7949,
-      "macro_f1": 0.7857,
-      "balanced_accuracy": 0.7915,
-      "recall_anamnesis": 0.8947,
-      "false_faq_for_anamnesis": 0.0526,
-      "n_samples": 351,
-      "latency_ms": 0.64,
-      "anamnesis_precision": 0.7456,
-      "anamnesis_recall": 0.8947,
-      "anamnesis_f1": 0.8134,
-      "faq_precision": 0.8632,
-      "faq_recall": 0.7387,
-      "faq_f1": 0.7961,
-      "booking_precision": 0.8353,
-      "booking_recall": 0.9467,
-      "booking_f1": 0.8875,
-      "unsupported_precision": 0.7193,
-      "unsupported_recall": 0.5857,
-      "unsupported_f1": 0.6457,
-      "confusion": [
-        [
-          85,
-          5,
-          3,
-          2
-        ],
-        [
-          11,
-          82,
-          6,
-          12
-        ],
-        [
-          1,
-          1,
-          71,
-          2
-        ],
-        [
-          17,
-          7,
-          5,
-          41
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.7456140350877193,
-          "recall": 0.8947368421052632,
-          "f1": 0.8133971291866029,
-          "support": 95
-        },
-        "faq": {
-          "precision": 0.8631578947368421,
-          "recall": 0.7387387387387387,
-          "f1": 0.7961165048543689,
-          "support": 111
-        },
-        "booking": {
-          "precision": 0.8352941176470589,
-          "recall": 0.9466666666666667,
-          "f1": 0.8875,
-          "support": 75
-        },
-        "unsupported": {
-          "precision": 0.7192982456140351,
-          "recall": 0.5857142857142857,
-          "f1": 0.6456692913385826,
+          "precision": 0.8490566037735849,
+          "recall": 0.6428571428571429,
+          "f1": 0.7317073170731707,
           "support": 70
         }
       }
     },
     {
       "baseline": "B2.5_e5-small_svc @ val",
-      "accuracy": 0.8148,
-      "macro_f1": 0.7928,
-      "balanced_accuracy": 0.7944,
-      "recall_anamnesis": 0.9053,
-      "false_faq_for_anamnesis": 0.0737,
-      "n_samples": 351,
-      "latency_ms": 0.37,
-      "anamnesis_precision": 0.7611,
-      "anamnesis_recall": 0.9053,
-      "anamnesis_f1": 0.8269,
-      "faq_precision": 0.7967,
-      "faq_recall": 0.8829,
-      "faq_f1": 0.8376,
-      "booking_precision": 0.8875,
-      "booking_recall": 0.9467,
-      "booking_f1": 0.9161,
-      "unsupported_precision": 0.8857,
-      "unsupported_recall": 0.4429,
-      "unsupported_f1": 0.5905,
+      "accuracy": 0.803,
+      "macro_f1": 0.7886,
+      "balanced_accuracy": 0.7998,
+      "false_faq_for_anamnesis": 0.0526,
+      "n_samples": 330,
+      "anamnesis_precision": 0.7652,
+      "anamnesis_recall": 0.9263,
+      "anamnesis_f1": 0.8381,
+      "faq_precision": 0.8558,
+      "faq_recall": 0.8091,
+      "faq_f1": 0.8318,
+      "booking_precision": 0.803,
+      "booking_recall": 0.9636,
+      "booking_f1": 0.876,
+      "unsupported_precision": 0.7778,
+      "unsupported_recall": 0.5,
+      "unsupported_f1": 0.6087,
       "confusion": [
         [
-          86,
-          7,
-          1,
-          1
+          88,
+          5,
+          0,
+          2
         ],
         [
-          9,
-          98,
-          1,
-          3
+          10,
+          89,
+          4,
+          7
         ],
         [
           0,
-          4,
-          71,
-          0
+          1,
+          53,
+          1
         ],
         [
-          18,
-          14,
-          7,
-          31
+          17,
+          9,
+          9,
+          35
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.7610619469026548,
-          "recall": 0.9052631578947369,
-          "f1": 0.8269230769230769,
+          "precision": 0.7652173913043478,
+          "recall": 0.9263157894736842,
+          "f1": 0.8380952380952381,
           "support": 95
         },
         "faq": {
-          "precision": 0.7967479674796748,
-          "recall": 0.8828828828828829,
-          "f1": 0.8376068376068376,
-          "support": 111
+          "precision": 0.8557692307692307,
+          "recall": 0.8090909090909091,
+          "f1": 0.8317757009345794,
+          "support": 110
         },
         "booking": {
-          "precision": 0.8875,
-          "recall": 0.9466666666666667,
-          "f1": 0.9161290322580645,
-          "support": 75
+          "precision": 0.803030303030303,
+          "recall": 0.9636363636363636,
+          "f1": 0.8760330578512396,
+          "support": 55
         },
         "unsupported": {
-          "precision": 0.8857142857142857,
-          "recall": 0.44285714285714284,
-          "f1": 0.5904761904761905,
+          "precision": 0.7777777777777778,
+          "recall": 0.5,
+          "f1": 0.6086956521739131,
           "support": 70
         }
       }
@@ -1645,44 +726,41 @@
   "hard_test": [
     {
       "baseline": "B0_rules @ hard_test",
-      "accuracy": 0.5887,
-      "macro_f1": 0.379,
-      "balanced_accuracy": 0.5883,
-      "recall_anamnesis": 0.7143,
-      "false_faq_for_anamnesis": 0.027,
-      "n_samples": 355,
-      "recall_urgent": 0.7444,
-      "latency_ms": 0.02,
-      "anamnesis_precision": 0.9487,
-      "anamnesis_recall": 0.7143,
-      "anamnesis_f1": 0.815,
-      "faq_precision": 0.5333,
-      "faq_recall": 0.1127,
-      "faq_f1": 0.186,
-      "booking_precision": 0.3448,
-      "booking_recall": 0.5263,
-      "booking_f1": 0.4167,
-      "unsupported_precision": 0.0517,
+      "accuracy": 0.6569,
+      "macro_f1": 0.4652,
+      "balanced_accuracy": 0.6192,
+      "false_faq_for_anamnesis": 0.0325,
+      "n_samples": 204,
+      "anamnesis_precision": 0.9421,
+      "anamnesis_recall": 0.7403,
+      "anamnesis_f1": 0.8291,
+      "faq_precision": 0.4444,
+      "faq_recall": 0.1481,
+      "faq_f1": 0.2222,
+      "booking_precision": 0.6667,
+      "booking_recall": 0.5882,
+      "booking_f1": 0.625,
+      "unsupported_precision": 0.1017,
       "unsupported_recall": 1.0,
-      "unsupported_f1": 0.0984,
+      "unsupported_f1": 0.1846,
       "confusion": [
         [
-          185,
-          7,
+          114,
           5,
-          62
+          1,
+          34
         ],
         [
-          9,
-          8,
-          14,
-          40
+          6,
+          4,
+          4,
+          13
         ],
         [
           1,
           0,
           10,
-          8
+          6
         ],
         [
           0,
@@ -1693,295 +771,67 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9487179487179487,
-          "recall": 0.7142857142857143,
-          "f1": 0.8149779735682819,
-          "support": 259
+          "precision": 0.9421487603305785,
+          "recall": 0.7402597402597403,
+          "f1": 0.8290909090909091,
+          "support": 154
         },
         "faq": {
-          "precision": 0.5333333333333333,
-          "recall": 0.11267605633802817,
-          "f1": 0.18604651162790697,
-          "support": 71
+          "precision": 0.4444444444444444,
+          "recall": 0.14814814814814814,
+          "f1": 0.2222222222222222,
+          "support": 27
         },
         "booking": {
-          "precision": 0.3448275862068966,
-          "recall": 0.5263157894736842,
-          "f1": 0.4166666666666667,
-          "support": 19
+          "precision": 0.6666666666666666,
+          "recall": 0.5882352941176471,
+          "f1": 0.625,
+          "support": 17
         },
         "unsupported": {
-          "precision": 0.05172413793103448,
+          "precision": 0.1016949152542373,
           "recall": 1.0,
-          "f1": 0.09836065573770492,
-          "support": 6
-        }
-      }
-    },
-    {
-      "baseline": "B1_tfidf_svc @ hard_test",
-      "accuracy": 0.6479,
-      "macro_f1": 0.4988,
-      "balanced_accuracy": 0.6332,
-      "recall_anamnesis": 0.6873,
-      "false_faq_for_anamnesis": 0.1969,
-      "n_samples": 355,
-      "recall_urgent": 0.8271,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.9674,
-      "anamnesis_recall": 0.6873,
-      "anamnesis_f1": 0.8036,
-      "faq_precision": 0.3678,
-      "faq_recall": 0.4507,
-      "faq_f1": 0.4051,
-      "booking_precision": 0.2237,
-      "booking_recall": 0.8947,
-      "booking_f1": 0.3579,
-      "unsupported_precision": 0.375,
-      "unsupported_recall": 0.5,
-      "unsupported_f1": 0.4286,
-      "confusion": [
-        [
-          178,
-          51,
-          27,
-          3
-        ],
-        [
-          5,
-          32,
-          32,
-          2
-        ],
-        [
-          0,
-          2,
-          17,
-          0
-        ],
-        [
-          1,
-          2,
-          0,
-          3
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.967391304347826,
-          "recall": 0.6872586872586872,
-          "f1": 0.8036117381489842,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.367816091954023,
-          "recall": 0.4507042253521127,
-          "f1": 0.4050632911392405,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.2236842105263158,
-          "recall": 0.8947368421052632,
-          "f1": 0.35789473684210527,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.375,
-          "recall": 0.5,
-          "f1": 0.42857142857142855,
+          "f1": 0.18461538461538463,
           "support": 6
         }
       }
     },
     {
       "baseline": "B1.1_tfidf_lr @ hard_test",
-      "accuracy": 0.6873,
-      "macro_f1": 0.5283,
-      "balanced_accuracy": 0.6848,
-      "recall_anamnesis": 0.7413,
-      "false_faq_for_anamnesis": 0.1506,
-      "n_samples": 355,
-      "recall_urgent": 0.8647,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.9648,
-      "anamnesis_recall": 0.7413,
-      "anamnesis_f1": 0.8384,
-      "faq_precision": 0.4247,
-      "faq_recall": 0.4366,
-      "faq_f1": 0.4306,
-      "booking_precision": 0.2361,
-      "booking_recall": 0.8947,
-      "booking_f1": 0.3736,
-      "unsupported_precision": 0.3636,
-      "unsupported_recall": 0.6667,
-      "unsupported_f1": 0.4706,
-      "confusion": [
-        [
-          192,
-          39,
-          24,
-          4
-        ],
-        [
-          6,
-          31,
-          31,
-          3
-        ],
-        [
-          0,
-          2,
-          17,
-          0
-        ],
-        [
-          1,
-          1,
-          0,
-          4
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.964824120603015,
-          "recall": 0.7413127413127413,
-          "f1": 0.8384279475982532,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.4246575342465753,
-          "recall": 0.43661971830985913,
-          "f1": 0.4305555555555556,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.2361111111111111,
-          "recall": 0.8947368421052632,
-          "f1": 0.37362637362637363,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.36363636363636365,
-          "recall": 0.6666666666666666,
-          "f1": 0.47058823529411764,
-          "support": 6
-        }
-      }
-    },
-    {
-      "baseline": "B1.2_tfidf_lr_tuned @ hard_test",
-      "accuracy": 0.6873,
-      "macro_f1": 0.4965,
-      "balanced_accuracy": 0.6441,
-      "recall_anamnesis": 0.7452,
-      "false_faq_for_anamnesis": 0.139,
-      "n_samples": 355,
-      "recall_urgent": 0.8496,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.9602,
-      "anamnesis_recall": 0.7452,
-      "anamnesis_f1": 0.8391,
-      "faq_precision": 0.4429,
-      "faq_recall": 0.4366,
-      "faq_f1": 0.4397,
-      "booking_precision": 0.2361,
-      "booking_recall": 0.8947,
-      "booking_f1": 0.3736,
-      "unsupported_precision": 0.25,
+      "accuracy": 0.7353,
+      "macro_f1": 0.6102,
+      "balanced_accuracy": 0.6744,
+      "false_faq_for_anamnesis": 0.1623,
+      "n_samples": 204,
+      "anamnesis_precision": 0.9286,
+      "anamnesis_recall": 0.7597,
+      "anamnesis_f1": 0.8357,
+      "faq_precision": 0.3571,
+      "faq_recall": 0.5556,
+      "faq_f1": 0.4348,
+      "booking_precision": 0.4839,
+      "booking_recall": 0.8824,
+      "booking_f1": 0.625,
+      "unsupported_precision": 0.6,
       "unsupported_recall": 0.5,
-      "unsupported_f1": 0.3333,
+      "unsupported_f1": 0.5455,
       "confusion": [
         [
-          193,
-          36,
-          24,
-          6
+          117,
+          25,
+          11,
+          1
         ],
         [
           6,
-          31,
-          31,
-          3
+          15,
+          5,
+          1
         ],
         [
           0,
           2,
-          17,
-          0
-        ],
-        [
-          2,
-          1,
-          0,
-          3
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9601990049751243,
-          "recall": 0.7451737451737451,
-          "f1": 0.8391304347826087,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.44285714285714284,
-          "recall": 0.43661971830985913,
-          "f1": 0.4397163120567376,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.2361111111111111,
-          "recall": 0.8947368421052632,
-          "f1": 0.37362637362637363,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.25,
-          "recall": 0.5,
-          "f1": 0.3333333333333333,
-          "support": 6
-        }
-      }
-    },
-    {
-      "baseline": "B1.3_fasttext @ hard_test",
-      "accuracy": 0.6676,
-      "macro_f1": 0.4973,
-      "balanced_accuracy": 0.647,
-      "recall_anamnesis": 0.7181,
-      "false_faq_for_anamnesis": 0.1699,
-      "n_samples": 355,
-      "recall_urgent": 0.8195,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.949,
-      "anamnesis_recall": 0.7181,
-      "anamnesis_f1": 0.8176,
-      "faq_precision": 0.4054,
-      "faq_recall": 0.4225,
-      "faq_f1": 0.4138,
-      "booking_precision": 0.24,
-      "booking_recall": 0.9474,
-      "booking_f1": 0.383,
-      "unsupported_precision": 0.3,
-      "unsupported_recall": 0.5,
-      "unsupported_f1": 0.375,
-      "confusion": [
-        [
-          186,
-          44,
-          24,
-          5
-        ],
-        [
-          6,
-          30,
-          33,
-          2
-        ],
-        [
-          1,
-          0,
-          18,
+          15,
           0
         ],
         [
@@ -1993,145 +843,139 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9489795918367347,
-          "recall": 0.7181467181467182,
-          "f1": 0.8175824175824176,
-          "support": 259
+          "precision": 0.9285714285714286,
+          "recall": 0.7597402597402597,
+          "f1": 0.8357142857142857,
+          "support": 154
         },
         "faq": {
-          "precision": 0.40540540540540543,
-          "recall": 0.4225352112676056,
-          "f1": 0.41379310344827586,
-          "support": 71
+          "precision": 0.35714285714285715,
+          "recall": 0.5555555555555556,
+          "f1": 0.43478260869565216,
+          "support": 27
         },
         "booking": {
-          "precision": 0.24,
-          "recall": 0.9473684210526315,
-          "f1": 0.3829787234042553,
-          "support": 19
+          "precision": 0.4838709677419355,
+          "recall": 0.8823529411764706,
+          "f1": 0.625,
+          "support": 17
         },
         "unsupported": {
-          "precision": 0.3,
+          "precision": 0.6,
           "recall": 0.5,
-          "f1": 0.375,
+          "f1": 0.5454545454545454,
           "support": 6
         }
       }
     },
     {
-      "baseline": "B2_bge-m3_linear @ hard_test",
-      "accuracy": 0.6563,
-      "macro_f1": 0.4759,
-      "balanced_accuracy": 0.6428,
-      "recall_anamnesis": 0.7027,
-      "false_faq_for_anamnesis": 0.1892,
-      "n_samples": 355,
-      "recall_urgent": 0.8421,
-      "latency_ms": 3.09,
-      "anamnesis_precision": 0.9785,
-      "anamnesis_recall": 0.7027,
-      "anamnesis_f1": 0.818,
-      "faq_precision": 0.3882,
-      "faq_recall": 0.4648,
-      "faq_f1": 0.4231,
-      "booking_precision": 0.2121,
-      "booking_recall": 0.7368,
-      "booking_f1": 0.3294,
-      "unsupported_precision": 0.2222,
-      "unsupported_recall": 0.6667,
-      "unsupported_f1": 0.3333,
+      "baseline": "B1.3_fasttext @ hard_test",
+      "accuracy": 0.6961,
+      "macro_f1": 0.585,
+      "balanced_accuracy": 0.6898,
+      "false_faq_for_anamnesis": 0.2013,
+      "n_samples": 204,
+      "anamnesis_precision": 0.9381,
+      "anamnesis_recall": 0.6883,
+      "anamnesis_f1": 0.794,
+      "faq_precision": 0.3542,
+      "faq_recall": 0.6296,
+      "faq_f1": 0.4533,
+      "booking_precision": 0.4324,
+      "booking_recall": 0.9412,
+      "booking_f1": 0.5926,
+      "unsupported_precision": 0.5,
+      "unsupported_recall": 0.5,
+      "unsupported_f1": 0.5,
       "confusion": [
         [
-          182,
-          49,
-          19,
-          9
-        ],
-        [
-          2,
-          33,
-          33,
+          106,
+          31,
+          14,
           3
         ],
         [
-          1,
-          2,
-          14,
-          2
+          3,
+          17,
+          7,
+          0
         ],
         [
           1,
-          1,
           0,
-          4
+          16,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          3
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.978494623655914,
-          "recall": 0.7027027027027027,
-          "f1": 0.8179775280898877,
-          "support": 259
+          "precision": 0.9380530973451328,
+          "recall": 0.6883116883116883,
+          "f1": 0.7940074906367042,
+          "support": 154
         },
         "faq": {
-          "precision": 0.38823529411764707,
-          "recall": 0.4647887323943662,
-          "f1": 0.4230769230769231,
-          "support": 71
+          "precision": 0.3541666666666667,
+          "recall": 0.6296296296296297,
+          "f1": 0.4533333333333333,
+          "support": 27
         },
         "booking": {
-          "precision": 0.21212121212121213,
-          "recall": 0.7368421052631579,
-          "f1": 0.32941176470588235,
-          "support": 19
+          "precision": 0.43243243243243246,
+          "recall": 0.9411764705882353,
+          "f1": 0.5925925925925926,
+          "support": 17
         },
         "unsupported": {
-          "precision": 0.2222222222222222,
-          "recall": 0.6666666666666666,
-          "f1": 0.3333333333333333,
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
           "support": 6
         }
       }
     },
     {
       "baseline": "B2.1_bge-m3_svc @ hard_test",
-      "accuracy": 0.6507,
-      "macro_f1": 0.521,
-      "balanced_accuracy": 0.6703,
-      "recall_anamnesis": 0.6795,
-      "false_faq_for_anamnesis": 0.2278,
-      "n_samples": 355,
-      "recall_urgent": 0.8647,
-      "latency_ms": 2.72,
-      "anamnesis_precision": 0.9832,
-      "anamnesis_recall": 0.6795,
-      "anamnesis_f1": 0.8037,
-      "faq_precision": 0.3608,
-      "faq_recall": 0.493,
-      "faq_f1": 0.4167,
-      "booking_precision": 0.2319,
-      "booking_recall": 0.8421,
-      "booking_f1": 0.3636,
+      "accuracy": 0.7108,
+      "macro_f1": 0.5982,
+      "balanced_accuracy": 0.7238,
+      "false_faq_for_anamnesis": 0.2078,
+      "n_samples": 204,
+      "anamnesis_precision": 0.973,
+      "anamnesis_recall": 0.7013,
+      "anamnesis_f1": 0.8151,
+      "faq_precision": 0.3519,
+      "faq_recall": 0.7037,
+      "faq_f1": 0.4691,
+      "booking_precision": 0.4828,
+      "booking_recall": 0.8235,
+      "booking_f1": 0.6087,
       "unsupported_precision": 0.4,
       "unsupported_recall": 0.6667,
       "unsupported_f1": 0.5,
       "confusion": [
         [
-          176,
-          59,
-          20,
-          4
+          108,
+          32,
+          9,
+          5
         ],
         [
           1,
-          35,
-          33,
-          2
+          19,
+          6,
+          1
         ],
         [
           1,
           2,
-          16,
+          14,
           0
         ],
         [
@@ -2143,22 +987,22 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9832402234636871,
-          "recall": 0.6795366795366795,
-          "f1": 0.8036529680365296,
-          "support": 259
+          "precision": 0.972972972972973,
+          "recall": 0.7012987012987013,
+          "f1": 0.8150943396226416,
+          "support": 154
         },
         "faq": {
-          "precision": 0.36082474226804123,
-          "recall": 0.49295774647887325,
-          "f1": 0.4166666666666667,
-          "support": 71
+          "precision": 0.35185185185185186,
+          "recall": 0.7037037037037037,
+          "f1": 0.4691358024691358,
+          "support": 27
         },
         "booking": {
-          "precision": 0.2318840579710145,
-          "recall": 0.8421052631578947,
-          "f1": 0.36363636363636365,
-          "support": 19
+          "precision": 0.4827586206896552,
+          "recall": 0.8235294117647058,
+          "f1": 0.6086956521739131,
+          "support": 17
         },
         "unsupported": {
           "precision": 0.4,
@@ -2169,269 +1013,41 @@
       }
     },
     {
-      "baseline": "B2.2_bge-m3_centroid @ hard_test",
-      "accuracy": 0.7042,
-      "macro_f1": 0.4562,
-      "balanced_accuracy": 0.6143,
-      "recall_anamnesis": 0.8069,
-      "false_faq_for_anamnesis": 0.0965,
-      "n_samples": 355,
-      "recall_urgent": 0.8647,
-      "latency_ms": 2.7,
-      "anamnesis_precision": 0.9766,
-      "anamnesis_recall": 0.8069,
-      "anamnesis_f1": 0.8837,
-      "faq_precision": 0.4545,
-      "faq_recall": 0.3521,
-      "faq_f1": 0.3968,
-      "booking_precision": 0.2105,
-      "booking_recall": 0.6316,
-      "booking_f1": 0.3158,
-      "unsupported_precision": 0.1379,
-      "unsupported_recall": 0.6667,
-      "unsupported_f1": 0.2286,
-      "confusion": [
-        [
-          209,
-          25,
-          13,
-          12
-        ],
-        [
-          3,
-          25,
-          32,
-          11
-        ],
-        [
-          1,
-          4,
-          12,
-          2
-        ],
-        [
-          1,
-          1,
-          0,
-          4
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9766355140186916,
-          "recall": 0.806949806949807,
-          "f1": 0.8837209302325582,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.45454545454545453,
-          "recall": 0.352112676056338,
-          "f1": 0.3968253968253968,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.21052631578947367,
-          "recall": 0.631578947368421,
-          "f1": 0.3157894736842105,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.13793103448275862,
-          "recall": 0.6666666666666666,
-          "f1": 0.22857142857142856,
-          "support": 6
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ hard_test",
-      "accuracy": 0.6789,
-      "macro_f1": 0.4911,
-      "balanced_accuracy": 0.6627,
-      "recall_anamnesis": 0.7297,
-      "false_faq_for_anamnesis": 0.1699,
-      "n_samples": 355,
-      "recall_urgent": 0.8571,
-      "latency_ms": 2.72,
-      "anamnesis_precision": 0.9844,
-      "anamnesis_recall": 0.7297,
-      "anamnesis_f1": 0.8381,
-      "faq_precision": 0.4177,
-      "faq_recall": 0.4648,
-      "faq_f1": 0.44,
-      "booking_precision": 0.2273,
-      "booking_recall": 0.7895,
-      "booking_f1": 0.3529,
-      "unsupported_precision": 0.2222,
-      "unsupported_recall": 0.6667,
-      "unsupported_f1": 0.3333,
-      "confusion": [
-        [
-          189,
-          44,
-          18,
-          8
-        ],
-        [
-          1,
-          33,
-          33,
-          4
-        ],
-        [
-          1,
-          1,
-          15,
-          2
-        ],
-        [
-          1,
-          1,
-          0,
-          4
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.984375,
-          "recall": 0.7297297297297297,
-          "f1": 0.8381374722838137,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.4177215189873418,
-          "recall": 0.4647887323943662,
-          "f1": 0.44,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.22727272727272727,
-          "recall": 0.7894736842105263,
-          "f1": 0.35294117647058826,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.2222222222222222,
-          "recall": 0.6666666666666666,
-          "f1": 0.3333333333333333,
-          "support": 6
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ hard_test",
-      "accuracy": 0.6535,
-      "macro_f1": 0.4681,
-      "balanced_accuracy": 0.6748,
-      "recall_anamnesis": 0.7066,
-      "false_faq_for_anamnesis": 0.1969,
-      "n_samples": 355,
-      "recall_urgent": 0.8271,
-      "latency_ms": 0.54,
-      "anamnesis_precision": 0.9734,
-      "anamnesis_recall": 0.7066,
-      "anamnesis_f1": 0.8188,
-      "faq_precision": 0.3614,
-      "faq_recall": 0.4225,
-      "faq_f1": 0.3896,
-      "booking_precision": 0.2545,
-      "booking_recall": 0.7368,
-      "booking_f1": 0.3784,
-      "unsupported_precision": 0.1724,
-      "unsupported_recall": 0.8333,
-      "unsupported_f1": 0.2857,
-      "confusion": [
-        [
-          183,
-          51,
-          14,
-          11
-        ],
-        [
-          2,
-          30,
-          27,
-          12
-        ],
-        [
-          2,
-          2,
-          14,
-          1
-        ],
-        [
-          1,
-          0,
-          0,
-          5
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.973404255319149,
-          "recall": 0.7065637065637066,
-          "f1": 0.8187919463087249,
-          "support": 259
-        },
-        "faq": {
-          "precision": 0.3614457831325301,
-          "recall": 0.4225352112676056,
-          "f1": 0.38961038961038963,
-          "support": 71
-        },
-        "booking": {
-          "precision": 0.2545454545454545,
-          "recall": 0.7368421052631579,
-          "f1": 0.3783783783783784,
-          "support": 19
-        },
-        "unsupported": {
-          "precision": 0.1724137931034483,
-          "recall": 0.8333333333333334,
-          "f1": 0.2857142857142857,
-          "support": 6
-        }
-      }
-    },
-    {
       "baseline": "B2.5_e5-small_svc @ hard_test",
-      "accuracy": 0.6761,
-      "macro_f1": 0.5289,
-      "balanced_accuracy": 0.7055,
-      "recall_anamnesis": 0.7027,
-      "false_faq_for_anamnesis": 0.2201,
-      "n_samples": 355,
-      "recall_urgent": 0.8571,
-      "latency_ms": 0.36,
-      "anamnesis_precision": 0.9733,
-      "anamnesis_recall": 0.7027,
-      "anamnesis_f1": 0.8161,
-      "faq_precision": 0.398,
-      "faq_recall": 0.5493,
-      "faq_f1": 0.4615,
-      "booking_precision": 0.2593,
-      "booking_recall": 0.7368,
-      "booking_f1": 0.3836,
-      "unsupported_precision": 0.3125,
+      "accuracy": 0.7108,
+      "macro_f1": 0.5745,
+      "balanced_accuracy": 0.7071,
+      "false_faq_for_anamnesis": 0.1948,
+      "n_samples": 204,
+      "anamnesis_precision": 0.9576,
+      "anamnesis_recall": 0.7338,
+      "anamnesis_f1": 0.8309,
+      "faq_precision": 0.3191,
+      "faq_recall": 0.5556,
+      "faq_f1": 0.4054,
+      "booking_precision": 0.5,
+      "booking_recall": 0.7059,
+      "booking_f1": 0.5854,
+      "unsupported_precision": 0.3333,
       "unsupported_recall": 0.8333,
-      "unsupported_f1": 0.4545,
+      "unsupported_f1": 0.4762,
       "confusion": [
         [
-          182,
-          57,
+          113,
+          30,
+          7,
+          4
+        ],
+        [
+          2,
           15,
-          5
-        ],
-        [
-          2,
-          39,
-          25,
+          5,
           5
         ],
         [
           2,
           2,
-          14,
+          12,
           1
         ],
         [
@@ -2443,27 +1059,27 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9732620320855615,
-          "recall": 0.7027027027027027,
-          "f1": 0.8161434977578476,
-          "support": 259
+          "precision": 0.9576271186440678,
+          "recall": 0.7337662337662337,
+          "f1": 0.8308823529411765,
+          "support": 154
         },
         "faq": {
-          "precision": 0.3979591836734694,
-          "recall": 0.5492957746478874,
-          "f1": 0.46153846153846156,
-          "support": 71
+          "precision": 0.3191489361702128,
+          "recall": 0.5555555555555556,
+          "f1": 0.40540540540540543,
+          "support": 27
         },
         "booking": {
-          "precision": 0.25925925925925924,
-          "recall": 0.7368421052631579,
-          "f1": 0.3835616438356164,
-          "support": 19
+          "precision": 0.5,
+          "recall": 0.7058823529411765,
+          "f1": 0.5853658536585366,
+          "support": 17
         },
         "unsupported": {
-          "precision": 0.3125,
+          "precision": 0.3333333333333333,
           "recall": 0.8333333333333334,
-          "f1": 0.45454545454545453,
+          "f1": 0.47619047619047616,
           "support": 6
         }
       }
@@ -2472,14 +1088,11 @@
   "blind_test": [
     {
       "baseline": "B0_rules @ blind_test",
-      "accuracy": 0.475,
-      "macro_f1": 0.4911,
+      "accuracy": 0.4474,
+      "macro_f1": 0.4736,
       "balanced_accuracy": 0.5417,
-      "recall_anamnesis": 0.1667,
       "false_faq_for_anamnesis": 0.0,
-      "n_samples": 40,
-      "recall_urgent": 0.3333,
-      "latency_ms": 0.03,
+      "n_samples": 38,
       "anamnesis_precision": 0.5,
       "anamnesis_recall": 0.1667,
       "anamnesis_f1": 0.25,
@@ -2489,9 +1102,9 @@
       "booking_precision": 1.0,
       "booking_recall": 0.75,
       "booking_f1": 0.8571,
-      "unsupported_precision": 0.2963,
+      "unsupported_precision": 0.24,
       "unsupported_recall": 1.0,
-      "unsupported_f1": 0.4571,
+      "unsupported_f1": 0.3871,
       "confusion": [
         [
           2,
@@ -2515,7 +1128,7 @@
           0,
           0,
           0,
-          8
+          6
         ]
       ],
       "per_class": {
@@ -2538,35 +1151,32 @@
           "support": 8
         },
         "unsupported": {
-          "precision": 0.2962962962962963,
+          "precision": 0.24,
           "recall": 1.0,
-          "f1": 0.45714285714285713,
-          "support": 8
+          "f1": 0.3870967741935484,
+          "support": 6
         }
       }
     },
     {
-      "baseline": "B1_tfidf_svc @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9076,
-      "balanced_accuracy": 0.9062,
-      "recall_anamnesis": 0.8333,
+      "baseline": "B1.1_tfidf_lr @ blind_test",
+      "accuracy": 0.8684,
+      "macro_f1": 0.8706,
+      "balanced_accuracy": 0.8646,
       "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 0.6667,
-      "latency_ms": 0.06,
-      "anamnesis_precision": 1.0,
+      "n_samples": 38,
+      "anamnesis_precision": 0.9091,
       "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.9091,
+      "anamnesis_f1": 0.8696,
       "faq_precision": 0.7857,
       "faq_recall": 0.9167,
       "faq_f1": 0.8462,
       "booking_precision": 1.0,
-      "booking_recall": 1.0,
-      "booking_f1": 1.0,
-      "unsupported_precision": 0.875,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.875,
+      "booking_recall": 0.875,
+      "booking_f1": 0.9333,
+      "unsupported_precision": 0.8333,
+      "unsupported_recall": 0.8333,
+      "unsupported_f1": 0.8333,
       "confusion": [
         [
           10,
@@ -2581,23 +1191,23 @@
           1
         ],
         [
+          1,
           0,
-          0,
-          8,
+          7,
           0
         ],
         [
           0,
           1,
           0,
-          7
+          5
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 1.0,
+          "precision": 0.9090909090909091,
           "recall": 0.8333333333333334,
-          "f1": 0.9090909090909091,
+          "f1": 0.8695652173913043,
           "support": 12
         },
         "faq": {
@@ -2608,631 +1218,28 @@
         },
         "booking": {
           "precision": 1.0,
-          "recall": 1.0,
-          "f1": 1.0,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 0.875,
-          "recall": 0.875,
-          "f1": 0.875,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B1.1_tfidf_lr @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9012,
-      "balanced_accuracy": 0.8958,
-      "recall_anamnesis": 0.9167,
-      "false_faq_for_anamnesis": 0.0833,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.9167,
-      "anamnesis_recall": 0.9167,
-      "anamnesis_f1": 0.9167,
-      "faq_precision": 0.8462,
-      "faq_recall": 0.9167,
-      "faq_f1": 0.88,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 0.875,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.875,
-      "confusion": [
-        [
-          11,
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          11,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9166666666666666,
-          "recall": 0.9166666666666666,
-          "f1": 0.9166666666666666,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.8461538461538461,
-          "recall": 0.9166666666666666,
-          "f1": 0.88,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
           "recall": 0.875,
           "f1": 0.9333333333333333,
           "support": 8
         },
         "unsupported": {
-          "precision": 0.875,
-          "recall": 0.875,
-          "f1": 0.875,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B1.2_tfidf_lr_tuned @ blind_test",
-      "accuracy": 0.875,
-      "macro_f1": 0.8766,
-      "balanced_accuracy": 0.875,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.0833,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 0.06,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
-      "faq_precision": 0.8462,
-      "faq_recall": 0.9167,
-      "faq_f1": 0.88,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 0.7778,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.8235,
-      "confusion": [
-        [
-          10,
-          1,
-          0,
-          1
-        ],
-        [
-          0,
-          11,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
+          "precision": 0.8333333333333334,
           "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.8461538461538461,
-          "recall": 0.9166666666666666,
-          "f1": 0.88,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 0.7777777777777778,
-          "recall": 0.875,
-          "f1": 0.8235294117647058,
-          "support": 8
+          "f1": 0.8333333333333334,
+          "support": 6
         }
       }
     },
     {
       "baseline": "B1.3_fasttext @ blind_test",
-      "accuracy": 0.85,
-      "macro_f1": 0.8566,
-      "balanced_accuracy": 0.8542,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 0.05,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
-      "faq_precision": 0.7692,
-      "faq_recall": 0.8333,
-      "faq_f1": 0.8,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 0.7778,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.8235,
-      "confusion": [
-        [
-          10,
-          2,
-          0,
-          0
-        ],
-        [
-          0,
-          10,
-          0,
-          2
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.7692307692307693,
-          "recall": 0.8333333333333334,
-          "f1": 0.8,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 0.7777777777777778,
-          "recall": 0.875,
-          "f1": 0.8235294117647058,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2_bge-m3_linear @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9063,
-      "balanced_accuracy": 0.8958,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 3.97,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
-      "faq_precision": 0.8,
-      "faq_recall": 1.0,
-      "faq_f1": 0.8889,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 1.0,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.9333,
-      "confusion": [
-        [
-          10,
-          2,
-          0,
-          0
-        ],
-        [
-          0,
-          12,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.8,
-          "recall": 1.0,
-          "f1": 0.8888888888888888,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2.1_bge-m3_svc @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9063,
-      "balanced_accuracy": 0.8958,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 3.22,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
-      "faq_precision": 0.8,
-      "faq_recall": 1.0,
-      "faq_f1": 0.8889,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 1.0,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.9333,
-      "confusion": [
-        [
-          10,
-          2,
-          0,
-          0
-        ],
-        [
-          0,
-          12,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.8,
-          "recall": 1.0,
-          "f1": 0.8888888888888888,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2.2_bge-m3_centroid @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9006,
-      "balanced_accuracy": 0.9062,
-      "recall_anamnesis": 0.9167,
-      "false_faq_for_anamnesis": 0.0833,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 3.24,
-      "anamnesis_precision": 0.9167,
-      "anamnesis_recall": 0.9167,
-      "anamnesis_f1": 0.9167,
-      "faq_precision": 0.9091,
-      "faq_recall": 0.8333,
-      "faq_f1": 0.8696,
-      "booking_precision": 0.875,
-      "booking_recall": 0.875,
-      "booking_f1": 0.875,
-      "unsupported_precision": 0.8889,
-      "unsupported_recall": 1.0,
-      "unsupported_f1": 0.9412,
-      "confusion": [
-        [
-          11,
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          10,
-          1,
-          1
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          8
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9166666666666666,
-          "recall": 0.9166666666666666,
-          "f1": 0.9166666666666666,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "booking": {
-          "precision": 0.875,
-          "recall": 0.875,
-          "f1": 0.875,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 0.8888888888888888,
-          "recall": 1.0,
-          "f1": 0.9411764705882353,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ blind_test",
-      "accuracy": 0.9,
-      "macro_f1": 0.9063,
-      "balanced_accuracy": 0.8958,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 3.19,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
-      "faq_precision": 0.8,
-      "faq_recall": 1.0,
-      "faq_f1": 0.8889,
-      "booking_precision": 1.0,
-      "booking_recall": 0.875,
-      "booking_f1": 0.9333,
-      "unsupported_precision": 1.0,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.9333,
-      "confusion": [
-        [
-          10,
-          2,
-          0,
-          0
-        ],
-        [
-          0,
-          12,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          7,
-          0
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.8,
-          "recall": 1.0,
-          "f1": 0.8888888888888888,
-          "support": 12
-        },
-        "booking": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 1.0,
-          "recall": 0.875,
-          "f1": 0.9333333333333333,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ blind_test",
-      "accuracy": 0.85,
-      "macro_f1": 0.8519,
-      "balanced_accuracy": 0.8542,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 0.6667,
-      "latency_ms": 0.88,
-      "anamnesis_precision": 1.0,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.9091,
-      "faq_precision": 0.7692,
-      "faq_recall": 0.8333,
-      "faq_f1": 0.8,
-      "booking_precision": 0.875,
-      "booking_recall": 0.875,
-      "booking_f1": 0.875,
-      "unsupported_precision": 0.7778,
-      "unsupported_recall": 0.875,
-      "unsupported_f1": 0.8235,
-      "confusion": [
-        [
-          10,
-          2,
-          0,
-          0
-        ],
-        [
-          0,
-          10,
-          1,
-          1
-        ],
-        [
-          0,
-          0,
-          7,
-          1
-        ],
-        [
-          0,
-          1,
-          0,
-          7
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 1.0,
-          "recall": 0.8333333333333334,
-          "f1": 0.9090909090909091,
-          "support": 12
-        },
-        "faq": {
-          "precision": 0.7692307692307693,
-          "recall": 0.8333333333333334,
-          "f1": 0.8,
-          "support": 12
-        },
-        "booking": {
-          "precision": 0.875,
-          "recall": 0.875,
-          "f1": 0.875,
-          "support": 8
-        },
-        "unsupported": {
-          "precision": 0.7777777777777778,
-          "recall": 0.875,
-          "f1": 0.8235294117647058,
-          "support": 8
-        }
-      }
-    },
-    {
-      "baseline": "B2.5_e5-small_svc @ blind_test",
-      "accuracy": 0.875,
-      "macro_f1": 0.8793,
+      "accuracy": 0.8684,
+      "macro_f1": 0.8794,
       "balanced_accuracy": 0.8646,
-      "recall_anamnesis": 0.8333,
-      "false_faq_for_anamnesis": 0.1667,
-      "n_samples": 40,
-      "recall_urgent": 1.0,
-      "latency_ms": 0.47,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.8333,
-      "anamnesis_f1": 0.8696,
+      "false_faq_for_anamnesis": 0.25,
+      "n_samples": 38,
+      "anamnesis_precision": 0.9,
+      "anamnesis_recall": 0.75,
+      "anamnesis_f1": 0.8182,
       "faq_precision": 0.75,
       "faq_recall": 1.0,
       "faq_f1": 0.8571,
@@ -3240,12 +1247,12 @@
       "booking_recall": 0.875,
       "booking_f1": 0.9333,
       "unsupported_precision": 1.0,
-      "unsupported_recall": 0.75,
-      "unsupported_f1": 0.8571,
+      "unsupported_recall": 0.8333,
+      "unsupported_f1": 0.9091,
       "confusion": [
         [
-          10,
-          2,
+          9,
+          3,
           0,
           0
         ],
@@ -3263,16 +1270,16 @@
         ],
         [
           0,
-          2,
+          1,
           0,
-          6
+          5
         ]
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.8333333333333334,
-          "f1": 0.8695652173913043,
+          "precision": 0.9,
+          "recall": 0.75,
+          "f1": 0.8181818181818182,
           "support": 12
         },
         "faq": {
@@ -3289,9 +1296,153 @@
         },
         "unsupported": {
           "precision": 1.0,
-          "recall": 0.75,
-          "f1": 0.8571428571428571,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "support": 6
+        }
+      }
+    },
+    {
+      "baseline": "B2.1_bge-m3_svc @ blind_test",
+      "accuracy": 0.9474,
+      "macro_f1": 0.9472,
+      "balanced_accuracy": 0.9375,
+      "false_faq_for_anamnesis": 0.0833,
+      "n_samples": 38,
+      "anamnesis_precision": 1.0,
+      "anamnesis_recall": 0.9167,
+      "anamnesis_f1": 0.9565,
+      "faq_precision": 0.8571,
+      "faq_recall": 1.0,
+      "faq_f1": 0.9231,
+      "booking_precision": 1.0,
+      "booking_recall": 1.0,
+      "booking_f1": 1.0,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.8333,
+      "unsupported_f1": 0.9091,
+      "confusion": [
+        [
+          11,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          12,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          5
+        ]
+      ],
+      "per_class": {
+        "anamnesis": {
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1": 0.9565217391304348,
+          "support": 12
+        },
+        "faq": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.9230769230769231,
+          "support": 12
+        },
+        "booking": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
           "support": 8
+        },
+        "unsupported": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "support": 6
+        }
+      }
+    },
+    {
+      "baseline": "B2.5_e5-small_svc @ blind_test",
+      "accuracy": 0.8684,
+      "macro_f1": 0.875,
+      "balanced_accuracy": 0.8646,
+      "false_faq_for_anamnesis": 0.1667,
+      "n_samples": 38,
+      "anamnesis_precision": 0.9091,
+      "anamnesis_recall": 0.8333,
+      "anamnesis_f1": 0.8696,
+      "faq_precision": 0.7857,
+      "faq_recall": 0.9167,
+      "faq_f1": 0.8462,
+      "booking_precision": 0.875,
+      "booking_recall": 0.875,
+      "booking_f1": 0.875,
+      "unsupported_precision": 1.0,
+      "unsupported_recall": 0.8333,
+      "unsupported_f1": 0.9091,
+      "confusion": [
+        [
+          10,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          5
+        ]
+      ],
+      "per_class": {
+        "anamnesis": {
+          "precision": 0.9090909090909091,
+          "recall": 0.8333333333333334,
+          "f1": 0.8695652173913043,
+          "support": 12
+        },
+        "faq": {
+          "precision": 0.7857142857142857,
+          "recall": 0.9166666666666666,
+          "f1": 0.8461538461538461,
+          "support": 12
+        },
+        "booking": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "support": 8
+        },
+        "unsupported": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "support": 6
         }
       }
     }
@@ -3302,10 +1453,8 @@
       "accuracy": 0.16,
       "macro_f1": 0.2408,
       "balanced_accuracy": 0.217,
-      "recall_anamnesis": 0.1034,
       "false_faq_for_anamnesis": 0.0345,
       "n_samples": 100,
-      "latency_ms": 0.03,
       "anamnesis_precision": 0.6,
       "anamnesis_recall": 0.1034,
       "anamnesis_f1": 0.1765,
@@ -3372,112 +1521,36 @@
       }
     },
     {
-      "baseline": "B1_tfidf_svc @ entity_held_out",
-      "accuracy": 0.84,
-      "macro_f1": 0.6206,
-      "balanced_accuracy": 0.8304,
-      "recall_anamnesis": 0.6897,
-      "false_faq_for_anamnesis": 0.2759,
-      "n_samples": 100,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.6897,
-      "anamnesis_f1": 0.7843,
-      "faq_precision": 0.8594,
-      "faq_recall": 0.9016,
-      "faq_f1": 0.88,
-      "booking_precision": 0.75,
-      "booking_recall": 0.9,
-      "booking_f1": 0.8182,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          20,
-          8,
-          1,
-          0
-        ],
-        [
-          2,
-          55,
-          2,
-          2
-        ],
-        [
-          0,
-          1,
-          9,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.6896551724137931,
-          "f1": 0.7843137254901961,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.859375,
-          "recall": 0.9016393442622951,
-          "f1": 0.88,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.75,
-          "recall": 0.9,
-          "f1": 0.8181818181818182,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
       "baseline": "B1.1_tfidf_lr @ entity_held_out",
-      "accuracy": 0.83,
-      "macro_f1": 0.6214,
-      "balanced_accuracy": 0.8031,
-      "recall_anamnesis": 0.7241,
-      "false_faq_for_anamnesis": 0.2069,
+      "accuracy": 0.88,
+      "macro_f1": 0.6373,
+      "balanced_accuracy": 0.8425,
+      "false_faq_for_anamnesis": 0.1379,
       "n_samples": 100,
-      "latency_ms": 0.03,
-      "anamnesis_precision": 0.913,
-      "anamnesis_recall": 0.7241,
-      "anamnesis_f1": 0.8077,
-      "faq_precision": 0.871,
-      "faq_recall": 0.8852,
-      "faq_f1": 0.878,
-      "booking_precision": 0.8,
+      "anamnesis_precision": 0.9583,
+      "anamnesis_recall": 0.7931,
+      "anamnesis_f1": 0.8679,
+      "faq_precision": 0.9048,
+      "faq_recall": 0.9344,
+      "faq_f1": 0.9194,
+      "booking_precision": 0.7273,
       "booking_recall": 0.8,
-      "booking_f1": 0.8,
+      "booking_f1": 0.7619,
       "unsupported_precision": 0.0,
       "unsupported_recall": 0.0,
       "unsupported_f1": 0.0,
       "confusion": [
         [
-          21,
-          6,
+          23,
+          4,
           1,
           1
         ],
         [
-          2,
-          54,
           1,
-          4
+          57,
+          2,
+          1
         ],
         [
           0,
@@ -3494,95 +1567,21 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9130434782608695,
-          "recall": 0.7241379310344828,
-          "f1": 0.8076923076923077,
+          "precision": 0.9583333333333334,
+          "recall": 0.7931034482758621,
+          "f1": 0.8679245283018868,
           "support": 29
         },
         "faq": {
-          "precision": 0.8709677419354839,
-          "recall": 0.8852459016393442,
-          "f1": 0.8780487804878049,
+          "precision": 0.9047619047619048,
+          "recall": 0.9344262295081968,
+          "f1": 0.9193548387096774,
           "support": 61
         },
         "booking": {
-          "precision": 0.8,
+          "precision": 0.7272727272727273,
           "recall": 0.8,
-          "f1": 0.8,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B1.2_tfidf_lr_tuned @ entity_held_out",
-      "accuracy": 0.81,
-      "macro_f1": 0.6115,
-      "balanced_accuracy": 0.7862,
-      "recall_anamnesis": 0.6897,
-      "false_faq_for_anamnesis": 0.2414,
-      "n_samples": 100,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.9091,
-      "anamnesis_recall": 0.6897,
-      "anamnesis_f1": 0.7843,
-      "faq_precision": 0.8548,
-      "faq_recall": 0.8689,
-      "faq_f1": 0.8618,
-      "booking_precision": 0.8,
-      "booking_recall": 0.8,
-      "booking_f1": 0.8,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          20,
-          7,
-          1,
-          1
-        ],
-        [
-          2,
-          53,
-          1,
-          5
-        ],
-        [
-          0,
-          2,
-          8,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9090909090909091,
-          "recall": 0.6896551724137931,
-          "f1": 0.7843137254901961,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.8548387096774194,
-          "recall": 0.8688524590163934,
-          "f1": 0.8617886178861789,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.8,
-          "recall": 0.8,
-          "f1": 0.8,
+          "f1": 0.7619047619047619,
           "support": 10
         },
         "unsupported": {
@@ -3595,16 +1594,14 @@
     },
     {
       "baseline": "B1.3_fasttext @ entity_held_out",
-      "accuracy": 0.78,
-      "macro_f1": 0.5691,
-      "balanced_accuracy": 0.7698,
-      "recall_anamnesis": 0.6897,
+      "accuracy": 0.77,
+      "macro_f1": 0.563,
+      "balanced_accuracy": 0.7583,
       "false_faq_for_anamnesis": 0.2414,
       "n_samples": 100,
-      "latency_ms": 0.05,
-      "anamnesis_precision": 0.8696,
-      "anamnesis_recall": 0.6897,
-      "anamnesis_f1": 0.7692,
+      "anamnesis_precision": 0.8636,
+      "anamnesis_recall": 0.6552,
+      "anamnesis_f1": 0.7451,
       "faq_precision": 0.8621,
       "faq_recall": 0.8197,
       "faq_f1": 0.8403,
@@ -3616,10 +1613,10 @@
       "unsupported_f1": 0.0,
       "confusion": [
         [
-          20,
+          19,
           7,
           2,
-          0
+          1
         ],
         [
           2,
@@ -3642,9 +1639,9 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.8695652173913043,
-          "recall": 0.6896551724137931,
-          "f1": 0.7692307692307693,
+          "precision": 0.8636363636363636,
+          "recall": 0.6551724137931034,
+          "f1": 0.7450980392156863,
           "support": 29
         },
         "faq": {
@@ -3668,37 +1665,107 @@
       }
     },
     {
-      "baseline": "B2_bge-m3_linear @ entity_held_out",
-      "accuracy": 0.75,
-      "macro_f1": 0.5495,
-      "balanced_accuracy": 0.7692,
-      "recall_anamnesis": 0.6207,
-      "false_faq_for_anamnesis": 0.2414,
+      "baseline": "B2.1_bge-m3_svc @ entity_held_out",
+      "accuracy": 0.82,
+      "macro_f1": 0.5857,
+      "balanced_accuracy": 0.8195,
+      "false_faq_for_anamnesis": 0.2069,
       "n_samples": 100,
-      "latency_ms": 3.42,
-      "anamnesis_precision": 0.9,
-      "anamnesis_recall": 0.6207,
-      "anamnesis_f1": 0.7347,
-      "faq_precision": 0.8571,
-      "faq_recall": 0.7869,
-      "faq_f1": 0.8205,
-      "booking_precision": 0.5,
+      "anamnesis_precision": 0.9524,
+      "anamnesis_recall": 0.6897,
+      "anamnesis_f1": 0.8,
+      "faq_precision": 0.8833,
+      "faq_recall": 0.8689,
+      "faq_f1": 0.876,
+      "booking_precision": 0.5294,
       "booking_recall": 0.9,
-      "booking_f1": 0.6429,
+      "booking_f1": 0.6667,
       "unsupported_precision": 0.0,
       "unsupported_recall": 0.0,
       "unsupported_f1": 0.0,
       "confusion": [
         [
-          18,
-          7,
-          4,
+          20,
+          6,
+          3,
           0
         ],
         [
-          2,
-          48,
+          1,
+          53,
           5,
+          2
+        ],
+        [
+          0,
+          1,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "anamnesis": {
+          "precision": 0.9523809523809523,
+          "recall": 0.6896551724137931,
+          "f1": 0.8,
+          "support": 29
+        },
+        "faq": {
+          "precision": 0.8833333333333333,
+          "recall": 0.8688524590163934,
+          "f1": 0.8760330578512396,
+          "support": 61
+        },
+        "booking": {
+          "precision": 0.5294117647058824,
+          "recall": 0.9,
+          "f1": 0.6666666666666666,
+          "support": 10
+        },
+        "unsupported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    },
+    {
+      "baseline": "B2.5_e5-small_svc @ entity_held_out",
+      "accuracy": 0.71,
+      "macro_f1": 0.5458,
+      "balanced_accuracy": 0.7292,
+      "false_faq_for_anamnesis": 0.4138,
+      "n_samples": 100,
+      "anamnesis_precision": 0.6818,
+      "anamnesis_recall": 0.5172,
+      "anamnesis_f1": 0.5882,
+      "faq_precision": 0.7833,
+      "faq_recall": 0.7705,
+      "faq_f1": 0.7769,
+      "booking_precision": 0.75,
+      "booking_recall": 0.9,
+      "booking_f1": 0.8182,
+      "unsupported_precision": 0.0,
+      "unsupported_recall": 0.0,
+      "unsupported_f1": 0.0,
+      "confusion": [
+        [
+          15,
+          12,
+          2,
+          0
+        ],
+        [
+          7,
+          47,
+          1,
           6
         ],
         [
@@ -3716,391 +1783,21 @@
       ],
       "per_class": {
         "anamnesis": {
-          "precision": 0.9,
-          "recall": 0.6206896551724138,
-          "f1": 0.7346938775510204,
+          "precision": 0.6818181818181818,
+          "recall": 0.5172413793103449,
+          "f1": 0.5882352941176471,
           "support": 29
         },
         "faq": {
-          "precision": 0.8571428571428571,
-          "recall": 0.7868852459016393,
-          "f1": 0.8205128205128205,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.5,
-          "recall": 0.9,
-          "f1": 0.6428571428571429,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.1_bge-m3_svc @ entity_held_out",
-      "accuracy": 0.78,
-      "macro_f1": 0.5547,
-      "balanced_accuracy": 0.7796,
-      "recall_anamnesis": 0.5862,
-      "false_faq_for_anamnesis": 0.2759,
-      "n_samples": 100,
-      "latency_ms": 3.06,
-      "anamnesis_precision": 0.9444,
-      "anamnesis_recall": 0.5862,
-      "anamnesis_f1": 0.7234,
-      "faq_precision": 0.8525,
-      "faq_recall": 0.8525,
-      "faq_f1": 0.8525,
-      "booking_precision": 0.5,
-      "booking_recall": 0.9,
-      "booking_f1": 0.6429,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          17,
-          8,
-          4,
-          0
-        ],
-        [
-          1,
-          52,
-          5,
-          3
-        ],
-        [
-          0,
-          1,
-          9,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.9444444444444444,
-          "recall": 0.5862068965517241,
-          "f1": 0.723404255319149,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.8524590163934426,
-          "recall": 0.8524590163934426,
-          "f1": 0.8524590163934426,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.5,
-          "recall": 0.9,
-          "f1": 0.6428571428571429,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.2_bge-m3_centroid @ entity_held_out",
-      "accuracy": 0.54,
-      "macro_f1": 0.4228,
-      "balanced_accuracy": 0.5663,
-      "recall_anamnesis": 0.2759,
-      "false_faq_for_anamnesis": 0.5172,
-      "n_samples": 100,
-      "latency_ms": 3.07,
-      "anamnesis_precision": 0.6667,
-      "anamnesis_recall": 0.2759,
-      "anamnesis_f1": 0.3902,
-      "faq_precision": 0.7037,
-      "faq_recall": 0.623,
-      "faq_f1": 0.6609,
-      "booking_precision": 0.5333,
-      "booking_recall": 0.8,
-      "booking_f1": 0.64,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          8,
-          15,
-          4,
-          2
-        ],
-        [
-          3,
-          38,
-          3,
-          17
-        ],
-        [
-          1,
-          1,
-          8,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.6666666666666666,
-          "recall": 0.27586206896551724,
-          "f1": 0.3902439024390244,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.7037037037037037,
-          "recall": 0.6229508196721312,
-          "f1": 0.6608695652173913,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.5333333333333333,
-          "recall": 0.8,
-          "f1": 0.64,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ entity_held_out",
-      "accuracy": 0.67,
-      "macro_f1": 0.5168,
-      "balanced_accuracy": 0.7134,
-      "recall_anamnesis": 0.5517,
-      "false_faq_for_anamnesis": 0.3103,
-      "n_samples": 100,
-      "latency_ms": 3.04,
-      "anamnesis_precision": 0.8889,
-      "anamnesis_recall": 0.5517,
-      "anamnesis_f1": 0.6809,
-      "faq_precision": 0.8077,
-      "faq_recall": 0.6885,
-      "faq_f1": 0.7434,
-      "booking_precision": 0.5,
-      "booking_recall": 0.9,
-      "booking_f1": 0.6429,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          16,
-          9,
-          4,
-          0
-        ],
-        [
-          2,
-          42,
-          5,
-          12
-        ],
-        [
-          0,
-          1,
-          9,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8888888888888888,
-          "recall": 0.5517241379310345,
-          "f1": 0.6808510638297872,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.8076923076923077,
-          "recall": 0.6885245901639344,
-          "f1": 0.7433628318584071,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.5,
-          "recall": 0.9,
-          "f1": 0.6428571428571429,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ entity_held_out",
-      "accuracy": 0.58,
-      "macro_f1": 0.4762,
-      "balanced_accuracy": 0.6341,
-      "recall_anamnesis": 0.3793,
-      "false_faq_for_anamnesis": 0.3793,
-      "n_samples": 100,
-      "latency_ms": 0.72,
-      "anamnesis_precision": 0.7333,
-      "anamnesis_recall": 0.3793,
-      "anamnesis_f1": 0.5,
-      "faq_precision": 0.76,
-      "faq_recall": 0.623,
-      "faq_f1": 0.6847,
-      "booking_precision": 0.6,
-      "booking_recall": 0.9,
-      "booking_f1": 0.72,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          11,
-          11,
-          4,
-          3
-        ],
-        [
-          4,
-          38,
-          2,
-          17
-        ],
-        [
-          0,
-          1,
-          9,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.7333333333333333,
-          "recall": 0.3793103448275862,
-          "f1": 0.5,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.76,
-          "recall": 0.6229508196721312,
-          "f1": 0.6846846846846847,
-          "support": 61
-        },
-        "booking": {
-          "precision": 0.6,
-          "recall": 0.9,
-          "f1": 0.72,
-          "support": 10
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.5_e5-small_svc @ entity_held_out",
-      "accuracy": 0.68,
-      "macro_f1": 0.5094,
-      "balanced_accuracy": 0.6729,
-      "recall_anamnesis": 0.4483,
-      "false_faq_for_anamnesis": 0.4483,
-      "n_samples": 100,
-      "latency_ms": 0.43,
-      "anamnesis_precision": 0.8125,
-      "anamnesis_recall": 0.4483,
-      "anamnesis_f1": 0.5778,
-      "faq_precision": 0.7581,
-      "faq_recall": 0.7705,
-      "faq_f1": 0.7642,
-      "booking_precision": 0.6154,
-      "booking_recall": 0.8,
-      "booking_f1": 0.6957,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          13,
-          13,
-          3,
-          0
-        ],
-        [
-          3,
-          47,
-          2,
-          9
-        ],
-        [
-          0,
-          2,
-          8,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.8125,
-          "recall": 0.4482758620689655,
-          "f1": 0.5777777777777777,
-          "support": 29
-        },
-        "faq": {
-          "precision": 0.7580645161290323,
+          "precision": 0.7833333333333333,
           "recall": 0.7704918032786885,
-          "f1": 0.7642276422764228,
+          "f1": 0.7768595041322314,
           "support": 61
         },
         "booking": {
-          "precision": 0.6153846153846154,
-          "recall": 0.8,
-          "f1": 0.6956521739130435,
+          "precision": 0.75,
+          "recall": 0.9,
+          "f1": 0.8181818181818182,
           "support": 10
         },
         "unsupported": {
@@ -4118,10 +1815,8 @@
       "accuracy": 0.0891,
       "macro_f1": 0.0409,
       "balanced_accuracy": 0.0891,
-      "recall_anamnesis": 0.0,
       "false_faq_for_anamnesis": 0.0,
       "n_samples": 101,
-      "latency_ms": 0.03,
       "anamnesis_precision": 0.0,
       "anamnesis_recall": 0.0,
       "anamnesis_f1": 0.0,
@@ -4188,20 +1883,18 @@
       }
     },
     {
-      "baseline": "B1_tfidf_svc @ extended_eval",
-      "accuracy": 0.7822,
-      "macro_f1": 0.2194,
-      "balanced_accuracy": 0.7822,
-      "recall_anamnesis": 0.0,
+      "baseline": "B1.1_tfidf_lr @ extended_eval",
+      "accuracy": 0.7426,
+      "macro_f1": 0.2131,
+      "balanced_accuracy": 0.7426,
       "false_faq_for_anamnesis": 0.0,
       "n_samples": 101,
-      "latency_ms": 0.04,
       "anamnesis_precision": 0.0,
       "anamnesis_recall": 0.0,
       "anamnesis_f1": 0.0,
       "faq_precision": 1.0,
-      "faq_recall": 0.7822,
-      "faq_f1": 0.8778,
+      "faq_recall": 0.7426,
+      "faq_f1": 0.8523,
       "booking_precision": 0.0,
       "booking_recall": 0.0,
       "booking_f1": 0.0,
@@ -4216,10 +1909,10 @@
           0
         ],
         [
-          11,
-          79,
-          5,
-          6
+          14,
+          75,
+          7,
+          5
         ],
         [
           0,
@@ -4243,8 +1936,8 @@
         },
         "faq": {
           "precision": 1.0,
-          "recall": 0.7821782178217822,
-          "f1": 0.8777777777777778,
+          "recall": 0.7425742574257426,
+          "f1": 0.8522727272727273,
           "support": 101
         },
         "booking": {
@@ -4262,14 +1955,12 @@
       }
     },
     {
-      "baseline": "B1.1_tfidf_lr @ extended_eval",
+      "baseline": "B1.3_fasttext @ extended_eval",
       "accuracy": 0.703,
       "macro_f1": 0.2064,
       "balanced_accuracy": 0.703,
-      "recall_anamnesis": 0.0,
       "false_faq_for_anamnesis": 0.0,
       "n_samples": 101,
-      "latency_ms": 0.03,
       "anamnesis_precision": 0.0,
       "anamnesis_recall": 0.0,
       "anamnesis_f1": 0.0,
@@ -4290,10 +1981,10 @@
           0
         ],
         [
-          13,
+          12,
           71,
-          7,
-          10
+          9,
+          9
         ],
         [
           0,
@@ -4336,239 +2027,18 @@
       }
     },
     {
-      "baseline": "B1.2_tfidf_lr_tuned @ extended_eval",
-      "accuracy": 0.7129,
-      "macro_f1": 0.2081,
-      "balanced_accuracy": 0.7129,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.7129,
-      "faq_f1": 0.8324,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          10,
-          72,
-          8,
-          11
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.7128712871287128,
-          "f1": 0.8323699421965318,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B1.3_fasttext @ extended_eval",
-      "accuracy": 0.7327,
-      "macro_f1": 0.2114,
-      "balanced_accuracy": 0.7327,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 0.04,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.7327,
-      "faq_f1": 0.8457,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          11,
-          74,
-          7,
-          9
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.7326732673267327,
-          "f1": 0.8457142857142858,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2_bge-m3_linear @ extended_eval",
-      "accuracy": 0.7921,
-      "macro_f1": 0.221,
-      "balanced_accuracy": 0.7921,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 3.41,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.7921,
-      "faq_f1": 0.884,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          2,
-          80,
-          4,
-          15
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.7920792079207921,
-          "f1": 0.8839779005524862,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
       "baseline": "B2.1_bge-m3_svc @ extended_eval",
-      "accuracy": 0.8317,
-      "macro_f1": 0.3027,
-      "balanced_accuracy": 0.8317,
-      "recall_anamnesis": 0.0,
+      "accuracy": 0.7822,
+      "macro_f1": 0.2194,
+      "balanced_accuracy": 0.7822,
       "false_faq_for_anamnesis": 0.0,
       "n_samples": 101,
-      "latency_ms": 3.06,
+      "anamnesis_precision": 0.0,
+      "anamnesis_recall": 0.0,
+      "anamnesis_f1": 0.0,
       "faq_precision": 1.0,
-      "faq_recall": 0.8317,
-      "faq_f1": 0.9081,
+      "faq_recall": 0.7822,
+      "faq_f1": 0.8778,
       "booking_precision": 0.0,
       "booking_recall": 0.0,
       "booking_f1": 0.0,
@@ -4577,296 +2047,15 @@
       "unsupported_f1": 0.0,
       "confusion": [
         [
-          84,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          79,
           5,
-          12
-        ],
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.8316831683168316,
-          "f1": 0.9081081081081082,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.2_bge-m3_centroid @ extended_eval",
-      "accuracy": 0.5743,
-      "macro_f1": 0.1824,
-      "balanced_accuracy": 0.5743,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 3.04,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.5743,
-      "faq_f1": 0.7296,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          7,
-          58,
-          3,
-          33
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.5742574257425742,
-          "f1": 0.7295597484276729,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.3_bge-m3_linear_tuned @ extended_eval",
-      "accuracy": 0.7426,
-      "macro_f1": 0.2131,
-      "balanced_accuracy": 0.7426,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 3.13,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.7426,
-      "faq_f1": 0.8523,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          4,
-          75,
-          2,
-          20
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.7425742574257426,
-          "f1": 0.8522727272727273,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.4_e5-small_linear @ extended_eval",
-      "accuracy": 0.6436,
-      "macro_f1": 0.1958,
-      "balanced_accuracy": 0.6436,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 0.65,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.6436,
-      "faq_f1": 0.7831,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          2,
-          65,
-          10,
-          24
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          0,
-          0
-        ]
-      ],
-      "per_class": {
-        "anamnesis": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "faq": {
-          "precision": 1.0,
-          "recall": 0.6435643564356436,
-          "f1": 0.7831325301204819,
-          "support": 101
-        },
-        "booking": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        },
-        "unsupported": {
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0,
-          "support": 0
-        }
-      }
-    },
-    {
-      "baseline": "B2.5_e5-small_svc @ extended_eval",
-      "accuracy": 0.7426,
-      "macro_f1": 0.2131,
-      "balanced_accuracy": 0.7426,
-      "recall_anamnesis": 0.0,
-      "false_faq_for_anamnesis": 0.0,
-      "n_samples": 101,
-      "latency_ms": 0.42,
-      "anamnesis_precision": 0.0,
-      "anamnesis_recall": 0.0,
-      "anamnesis_f1": 0.0,
-      "faq_precision": 1.0,
-      "faq_recall": 0.7426,
-      "faq_f1": 0.8523,
-      "booking_precision": 0.0,
-      "booking_recall": 0.0,
-      "booking_f1": 0.0,
-      "unsupported_precision": 0.0,
-      "unsupported_recall": 0.0,
-      "unsupported_f1": 0.0,
-      "confusion": [
-        [
-          0,
-          0,
-          0,
-          0
-        ],
-        [
-          3,
-          75,
-          7,
           16
         ],
         [
@@ -4891,8 +2080,80 @@
         },
         "faq": {
           "precision": 1.0,
-          "recall": 0.7425742574257426,
-          "f1": 0.8522727272727273,
+          "recall": 0.7821782178217822,
+          "f1": 0.8777777777777778,
+          "support": 101
+        },
+        "booking": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "unsupported": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    },
+    {
+      "baseline": "B2.5_e5-small_svc @ extended_eval",
+      "accuracy": 0.7228,
+      "macro_f1": 0.2098,
+      "balanced_accuracy": 0.7228,
+      "false_faq_for_anamnesis": 0.0,
+      "n_samples": 101,
+      "anamnesis_precision": 0.0,
+      "anamnesis_recall": 0.0,
+      "anamnesis_f1": 0.0,
+      "faq_precision": 1.0,
+      "faq_recall": 0.7228,
+      "faq_f1": 0.8391,
+      "booking_precision": 0.0,
+      "booking_recall": 0.0,
+      "booking_f1": 0.0,
+      "unsupported_precision": 0.0,
+      "unsupported_recall": 0.0,
+      "unsupported_f1": 0.0,
+      "confusion": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          73,
+          10,
+          16
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "anamnesis": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "faq": {
+          "precision": 1.0,
+          "recall": 0.7227722772277227,
+          "f1": 0.8390804597701149,
           "support": 101
         },
         "booking": {

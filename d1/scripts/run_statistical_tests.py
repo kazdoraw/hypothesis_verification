@@ -2,14 +2,14 @@
 
 Pure статистика живёт в `d1.baselines.statistical_tests`. Этот скрипт:
 - загружает eval CSV;
-- получает predictions B1.1/B2.1 через `TrainedBundle`;
-- добавляет selective/hybrid decisions из trace CSV, если они есть;
+- получает predictions всех 5 baseline через `TrainedBundle`;
 - сохраняет `bootstrap_ci.csv` и `paired_tests.csv`.
 """
 
 from __future__ import annotations
 
 import argparse
+import itertools
 import logging
 from pathlib import Path
 from typing import Any
@@ -17,7 +17,6 @@ from typing import Any
 import pandas as pd
 
 from d1.baselines.statistical_tests import (
-    METRICS,
     family_bootstrap_ci_report,
     paired_family_bootstrap,
 )
@@ -27,15 +26,34 @@ from d1.config import DATA_DIR, DATASET_PREFIX, RESULTS_DIR
 logger = logging.getLogger(__name__)
 
 DEFAULT_EVAL_SETS = ["test", "hard_test", "safety_set"]
-SPARSE_NAME = "B1.1_tfidf_lr"
-DENSE_NAME = "B2.1_bge-m3_svc"
 
-PRED_COLS = {
-    SPARSE_NAME: "pred_b1_1",
-    DENSE_NAME: "pred_b2_1",
-    "SelectiveRouter": "pred_selective",
-    "B4_hybrid": "pred_b4_hybrid",
+PRED_COLS: dict[str, str] = {
+    "B0_rules": "pred_b0_rules",
+    "B1.1_tfidf_lr": "pred_b1_1",
+    "B1.3_fasttext": "pred_b1_3",
+    "B2.1_bge-m3_svc": "pred_b2_1",
+    "B2.5_e5-small_svc": "pred_b2_5",
 }
+
+# Маппинг eval_set → подмножество метрик. На safety_set оставляем только
+# recall_urgent: macro_f1 на one-class set — artefact (≈0.24 у всех моделей,
+# т.к. F1 для отсутствующих классов = 0).
+# На остальных eval-сетах используем только macro_f1: достаточно для
+# сравнения моделей, recall_urgent на test/hard_test малоинформативен
+# (test=17 urgent, hard_test=44 — CI пересекает 0). Per-class recall
+# (включая anamnesis_recall) живёт в baseline_results.json для диагностики
+# слабых классов; в статистические тесты не выносим.
+_METRIC_FILTER: dict[str, set[str]] = {
+    "safety_set": {"recall_urgent"},
+}
+_DEFAULT_METRIC_KEYS: set[str] = {"macro_f1"}
+
+
+def _allowed_metrics(eval_set: str) -> dict[str, Any]:
+    """Подмножество METRICS, релевантное для данного eval_set."""
+    from d1.baselines.statistical_tests import METRICS
+    keys = _METRIC_FILTER.get(eval_set, _DEFAULT_METRIC_KEYS)
+    return {k: METRICS[k] for k in keys if k in METRICS}
 
 
 def run_statistical_tests(
@@ -49,7 +67,8 @@ def run_statistical_tests(
     out_dir = out_dir or RESULTS_DIR
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    bundle = train_bundle(names=[SPARSE_NAME, DENSE_NAME], use_cache=True)
+    baseline_names = list(PRED_COLS.keys())
+    bundle = train_bundle(names=baseline_names, use_cache=True)
     ci_rows: list[dict[str, Any]] = []
     paired_rows: list[dict[str, Any]] = []
 
@@ -61,8 +80,9 @@ def run_statistical_tests(
             if pred_col in df.columns
         }
 
+        metrics_for_eval = _allowed_metrics(eval_set)
         for baseline, pred_col in available.items():
-            for metric_name, metric_fn in METRICS.items():
+            for metric_name, metric_fn in metrics_for_eval.items():
                 if metric_name == "recall_urgent" and not _has_urgent(df):
                     continue
                 ci_rows.append(family_bootstrap_ci_report(
@@ -80,7 +100,7 @@ def run_statistical_tests(
         for a, b in _paired_plan(available):
             col_a = available[a]
             col_b = available[b]
-            for metric_name, metric_fn in METRICS.items():
+            for metric_name, metric_fn in metrics_for_eval.items():
                 if metric_name == "recall_urgent" and not _has_urgent(df):
                     continue
                 result = paired_family_bootstrap(
@@ -91,13 +111,18 @@ def run_statistical_tests(
                     n_bootstrap=n_bootstrap,
                     rng_seed=rng_seed,
                 )
-                paired_rows.append({
+                row = {
                     "baseline_a": a,
                     "baseline_b": b,
                     "eval_set": eval_set,
                     "metric": metric_name,
                     **result,
-                })
+                }
+                # CI 95% не пересекает 0 → разница статистически значима.
+                row["significant"] = bool(
+                    row["delta_ci_low"] > 0 or row["delta_ci_high"] < 0
+                )
+                paired_rows.append(row)
 
     ci_df = pd.DataFrame(ci_rows)
     paired_df = pd.DataFrame(paired_rows)
@@ -127,37 +152,9 @@ def _prediction_frame(eval_set: str, bundle) -> pd.DataFrame:
         "urgency": split.get("urgency", pd.Series([""] * len(split))),
         "seed_id": split.get("seed_id", pd.Series([""] * len(split))),
     })
-    df[PRED_COLS[SPARSE_NAME]] = bundle.get(SPARSE_NAME).predict(texts)
-    df[PRED_COLS[DENSE_NAME]] = bundle.get(DENSE_NAME).predict(texts)
-
-    _attach_decision_trace(df, eval_set, "selective", PRED_COLS["SelectiveRouter"])
-    _attach_decision_trace(df, eval_set, "hybrid", PRED_COLS["B4_hybrid"])
+    for name, col in PRED_COLS.items():
+        df[col] = bundle.get(name).predict(texts)
     return df
-
-
-def _attach_decision_trace(
-    df: pd.DataFrame,
-    eval_set: str,
-    prefix: str,
-    pred_col: str,
-) -> None:
-    """Добавить selective/hybrid prediction trace, если CSV существует.
-
-    `defer` кодируется как `__defer__`: это не label, а abstain outcome.
-    Так full-outcome recall/F1 честно штрафует deferred clinical cases, не
-    маппя их в `anamnesis`.
-    """
-    path = RESULTS_DIR / f"{prefix}_decisions_{eval_set}.csv"
-    if not path.exists():
-        return
-    trace = pd.read_csv(path, dtype=str).fillna("")
-    if len(trace) != len(df):
-        logger.warning("Skip %s: len(trace)=%d != len(df)=%d", path, len(trace), len(df))
-        return
-    df[pred_col] = [
-        pred if action == "accept" else "__defer__"
-        for pred, action in zip(trace["predicted"], trace["action"])
-    ]
 
 
 def _load_split(eval_set: str) -> pd.DataFrame:
@@ -172,18 +169,9 @@ def _has_urgent(df: pd.DataFrame) -> bool:
 
 
 def _paired_plan(available: dict[str, str]) -> list[tuple[str, str]]:
-    """Пары из roadmap, только если обе колонки доступны.
-
-    `p_value_one_sided` проверяет направление A > B, поэтому B4 ставим слева
-    в сравнении с SelectiveRouter: это ровно гипотеза о приросте hybrid-policy.
-    """
-    candidates = [
-        (SPARSE_NAME, DENSE_NAME),
-        (SPARSE_NAME, "B4_hybrid"),
-        (DENSE_NAME, "B4_hybrid"),
-        ("B4_hybrid", "SelectiveRouter"),
-    ]
-    return [(a, b) for a, b in candidates if a in available and b in available]
+    """Все пары baseline'ов с доступными колонками (лексикографический порядок)."""
+    names = sorted(available.keys())
+    return [(a, b) for a, b in itertools.combinations(names, 2)]
 
 
 def main() -> None:

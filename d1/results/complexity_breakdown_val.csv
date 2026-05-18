@@ -1,7 +1,0 @@
-primary_tag,n,n_accept,n_defer_complexity,n_defer_tag_policy,n_defer_ml,accepted_accuracy,accepted_recall_anamnesis
-mixed_intent,8,0,8,0,0,0.0,0.0
-short_ambiguous,48,0,48,0,0,0.0,0.0
-simple_booking,37,29,0,2,6,1.0,0.0
-simple_faq,19,8,0,5,6,1.0,0.0
-simple_symptom,34,14,0,14,6,1.0,1.0
-unclassified,205,113,0,0,92,0.9204,0.9778

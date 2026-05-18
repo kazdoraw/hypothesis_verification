@@ -37,6 +37,17 @@ DEFAULT_EVAL_SETS = ["test", "hard_test", "safety_set"]
 DEFAULT_FRACTIONS = [0.10, 0.25, 0.50, 0.75, 1.00]
 DEFAULT_RANDOM_SEEDS = [11, 23, 37, 53, 71]
 
+# Маппинг eval_set → подмножество метрик. На safety_set — только
+# recall_urgent (macro_f1 на one-class set — artefact ≈0.24). На
+# test/hard_test — только macro_f1 (recall_urgent почти константа из-за
+# малого N_urgent в test/hard_test; recall_anamnesis убран после
+# cleanup-релиза 2026-05-11 как дубль anamnesis_recall из per-class блока).
+_LC_METRIC_FILTER: dict[str, set[str]] = {
+    "test": {"macro_f1"},
+    "hard_test": {"macro_f1"},
+    "safety_set": {"recall_urgent"},
+}
+
 
 def _sample_train_by_families(
     train_df: pd.DataFrame,
@@ -85,11 +96,18 @@ def _predict_frame(eval_df: pd.DataFrame, model: Any) -> pd.DataFrame:
     })
 
 
-def _evaluate_model(eval_df: pd.DataFrame, model: Any) -> dict[str, float]:
-    """Посчитать метрики learning-curve точки."""
+def _evaluate_model(eval_df: pd.DataFrame, model: Any, eval_set: str) -> dict[str, float]:
+    """Посчитать метрики learning-curve точки.
+
+    Возвращает только те метрики, которые информативны для данного eval_set
+    (см. `_LC_METRIC_FILTER`).
+    """
     frame = _predict_frame(eval_df, model)
+    allowed = _LC_METRIC_FILTER.get(eval_set, set(METRICS.keys()))
     values: dict[str, float] = {}
     for metric_name, metric_fn in METRICS.items():
+        if metric_name not in allowed:
+            continue
         if metric_name == "recall_urgent" and not frame["urgency"].isin(["urgent", "emergency", "high"]).any():
             continue
         values[metric_name] = float(metric_fn(frame, "pred"))
@@ -114,7 +132,7 @@ def plot_learning_curves(summary: pd.DataFrame) -> plt.Figure:
     """Построить learning curves: baseline × eval_set × metric."""
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
     eval_sets = [e for e in DEFAULT_EVAL_SETS if e in set(summary["eval_set"])]
-    metrics = [m for m in ["macro_f1", "recall_anamnesis", "recall_urgent"] if m in set(summary["metric"])]
+    metrics = [m for m in ["macro_f1", "recall_urgent"] if m in set(summary["metric"])]
     n_rows = len(metrics)
     n_cols = len(eval_sets)
     fig, axes = plt.subplots(
@@ -206,7 +224,7 @@ def run_learning_curves(
                 for baseline in DEFAULT_BASELINES:
                     model = bundle.get(baseline)
                     for eval_set, eval_df in eval_frames.items():
-                        values = _evaluate_model(eval_df, model)
+                        values = _evaluate_model(eval_df, model, eval_set)
                         for metric, value in values.items():
                             rows.append({
                                 "baseline": baseline,

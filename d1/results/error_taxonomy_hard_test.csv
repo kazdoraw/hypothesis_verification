@@ -1,246 +1,132 @@
 eval_set,id,text,true,pred_sparse,pred_dense,error_type,urgency,subtype,source,seed_id,sparse_error,dense_error,sparse_dense_disagree
 hard_test,hard_001,"У меня болит зуб, сколько стоит лечение?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_001,"У меня болит зуб, сколько стоит лечение?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,False
+hard_test,hard_001,"У меня болит зуб, сколько стоит лечение?",anamnesis,faq,faq,both_wrong,normal,symptom,manual_hard,,True,True,False
 hard_test,hard_002,"Десна кровоточит, можно записаться?",anamnesis,booking,faq,anamnesis_to_booking,normal,symptom,manual_hard,,True,True,True
-hard_test,hard_002,"Десна кровоточит, можно записаться?",anamnesis,booking,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,True
-hard_test,hard_003,"Выпала пломба, когда можно прийти?",anamnesis,booking,faq,anamnesis_to_booking,normal,complaint,manual_hard,,True,True,True
-hard_test,hard_003,"Выпала пломба, когда можно прийти?",anamnesis,booking,faq,both_wrong_disagreement,normal,complaint,manual_hard,,True,True,True
+hard_test,hard_002,"Десна кровоточит, можно записаться?",anamnesis,booking,faq,both_wrong,normal,symptom,manual_hard,,True,True,True
+hard_test,hard_002,"Десна кровоточит, можно записаться?",anamnesis,booking,faq,models_disagree_both_wrong,normal,symptom,manual_hard,,True,True,True
+hard_test,hard_003,"Выпала пломба, когда можно прийти?",anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,manual_hard,,True,True,False
+hard_test,hard_003,"Выпала пломба, когда можно прийти?",anamnesis,booking,booking,both_wrong,normal,complaint,manual_hard,,True,True,False
 hard_test,hard_004,"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,faq,faq,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,False
-hard_test,hard_004,"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,faq,faq,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_004,"Хочу брекеты, сколько это стоит и когда можно?",anamnesis,faq,faq,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
 hard_test,hard_005,"Болит зуб мудрости, есть ли у вас хирург?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_005,"Болит зуб мудрости, есть ли у вас хирург?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,False
+hard_test,hard_005,"Болит зуб мудрости, есть ли у вас хирург?",anamnesis,faq,faq,both_wrong,normal,symptom,manual_hard,,True,True,False
 hard_test,hard_006,"Нужна чистка, какие цены и когда свободно?",anamnesis,faq,faq,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,False
-hard_test,hard_006,"Нужна чистка, какие цены и когда свободно?",anamnesis,faq,faq,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_006,"Нужна чистка, какие цены и когда свободно?",anamnesis,faq,faq,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_007,"Откололся зуб, больно жевать, запишите срочно",anamnesis,anamnesis,booking,generic_error,urgent,complaint,manual_hard,,False,True,True
 hard_test,hard_008,"Хочу имплант, но десна болит. Это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,manual_hard,,False,True,True
 hard_test,hard_009,"Коронка шатается и болит, сколько будет замена?",anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,manual_hard,,True,True,False
-hard_test,hard_009,"Коронка шатается и болит, сколько будет замена?",anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,manual_hard,,True,True,False
+hard_test,hard_009,"Коронка шатается и болит, сколько будет замена?",anamnesis,faq,faq,both_wrong,normal,complaint,manual_hard,,True,True,False
 hard_test,hard_011,"Ноет зуб после пломбы, это гарантийный случай?",anamnesis,anamnesis,faq,generic_error,normal,symptom,manual_hard,,False,True,True
 hard_test,hard_012,"Хочу отбеливание и чистку, записаться можно?",anamnesis,booking,booking,anamnesis_to_booking,normal,treatment_interest,manual_hard,,True,True,False
-hard_test,hard_012,"Хочу отбеливание и чистку, записаться можно?",anamnesis,booking,booking,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_012,"Хочу отбеливание и чистку, записаться можно?",anamnesis,booking,booking,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
 hard_test,hard_013,"Опухла щека и температура, когда примете?",anamnesis,anamnesis,faq,generic_error,urgent,symptom,manual_hard,,False,True,True
 hard_test,hard_014,"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,faq,faq,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,False
-hard_test,hard_014,"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,faq,faq,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_014,"Ребёнку нужно удалить зуб, сколько стоит?",anamnesis,faq,faq,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
 hard_test,hard_015,"Зуб шатается, есть ли у вас пародонтолог?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_015,"Зуб шатается, есть ли у вас пародонтолог?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,False
+hard_test,hard_015,"Зуб шатается, есть ли у вас пародонтолог?",anamnesis,faq,faq,both_wrong,normal,symptom,manual_hard,,True,True,False
 hard_test,hard_016,"Выпал штифт, больно, запишите к хирургу",anamnesis,booking,anamnesis,anamnesis_to_booking,normal,complaint,manual_hard,,True,False,True
 hard_test,hard_017,"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,manual_hard,,True,True,False
-hard_test,hard_017,"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,manual_hard,,True,True,False
+hard_test,hard_017,"Треснул зуб, имплант нужен? сколько стоит?",anamnesis,faq,faq,both_wrong,normal,complaint,manual_hard,,True,True,False
 hard_test,hard_019,"Нужна профчистка и осмотр, есть свободное время?",anamnesis,booking,faq,anamnesis_to_booking,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_019,"Нужна профчистка и осмотр, есть свободное время?",anamnesis,booking,faq,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_019,"Нужна профчистка и осмотр, есть свободное время?",anamnesis,booking,faq,both_wrong,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_019,"Нужна профчистка и осмотр, есть свободное время?",anamnesis,booking,faq,models_disagree_both_wrong,normal,treatment_interest,manual_hard,,True,True,True
 hard_test,hard_020,"Кровоточат дёсны, до скольки работаете?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_020,"Кровоточат дёсны, до скольки работаете?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,False
+hard_test,hard_020,"Кровоточат дёсны, до скольки работаете?",anamnesis,faq,faq,both_wrong,normal,symptom,manual_hard,,True,True,False
 hard_test,hard_022,"Болит после лечения каналов, это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,manual_hard,,False,True,True
 hard_test,hard_024,"Нужна коронка и чистка, запишите на одну дату",anamnesis,booking,booking,anamnesis_to_booking,normal,treatment_interest,manual_hard,,True,True,False
-hard_test,hard_024,"Нужна коронка и чистка, запишите на одну дату",anamnesis,booking,booking,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_024,"Нужна коронка и чистка, запишите на одну дату",anamnesis,booking,booking,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
 hard_test,hard_025,"Сломался ретейнер, болит, как быть?",anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,manual_hard,,True,True,False
-hard_test,hard_025,"Сломался ретейнер, болит, как быть?",anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,manual_hard,,True,True,False
+hard_test,hard_025,"Сломался ретейнер, болит, как быть?",anamnesis,faq,faq,both_wrong,normal,complaint,manual_hard,,True,True,False
 hard_test,hard_028,"Ребёнку больно, есть детский стоматолог?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_028,"Ребёнку больно, есть детский стоматолог?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,manual_hard,,True,True,False
-hard_test,hard_032,Лечение,unsupported,faq,faq,vague_short_error,normal,unclear_short,manual_hard,,True,True,False
-hard_test,hard_032,Лечение,unsupported,faq,faq,both_wrong_disagreement,normal,unclear_short,manual_hard,,True,True,False
+hard_test,hard_028,"Ребёнку больно, есть детский стоматолог?",anamnesis,faq,faq,both_wrong,normal,symptom,manual_hard,,True,True,False
+hard_test,hard_032,Лечение,unsupported,anamnesis,faq,vague_short_error,normal,unclear_short,manual_hard,,True,True,True
+hard_test,hard_032,Лечение,unsupported,anamnesis,faq,both_wrong,normal,unclear_short,manual_hard,,True,True,True
+hard_test,hard_032,Лечение,unsupported,anamnesis,faq,models_disagree_both_wrong,normal,unclear_short,manual_hard,,True,True,True
 hard_test,hard_034,Зуб,unsupported,anamnesis,anamnesis,vague_short_error,normal,unclear_short,manual_hard,,True,True,False
-hard_test,hard_034,Зуб,unsupported,anamnesis,anamnesis,both_wrong_disagreement,normal,unclear_short,manual_hard,,True,True,False
-hard_test,hard_039,Чистка,anamnesis,faq,unsupported,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_039,Чистка,anamnesis,faq,unsupported,vague_short_error,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_039,Чистка,anamnesis,faq,unsupported,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_034,Зуб,unsupported,anamnesis,anamnesis,both_wrong,normal,unclear_short,manual_hard,,True,True,False
+hard_test,hard_036,Больно,anamnesis,anamnesis,unsupported,vague_short_error,normal,symptom,manual_hard,,False,True,True
+hard_test,hard_039,Чистка,anamnesis,anamnesis,unsupported,vague_short_error,normal,treatment_interest,manual_hard,,False,True,True
 hard_test,hard_041,Перенос,booking,booking,faq,vague_short_error,normal,reschedule,manual_hard,,False,True,True
 hard_test,hard_043,Импланты,anamnesis,faq,unsupported,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,True
 hard_test,hard_043,Импланты,anamnesis,faq,unsupported,vague_short_error,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_043,Импланты,anamnesis,faq,unsupported,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_043,Импланты,anamnesis,faq,unsupported,both_wrong,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_043,Импланты,anamnesis,faq,unsupported,models_disagree_both_wrong,normal,treatment_interest,manual_hard,,True,True,True
 hard_test,hard_045,Снимок,anamnesis,faq,unsupported,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,True
 hard_test,hard_045,Снимок,anamnesis,faq,unsupported,vague_short_error,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_045,Снимок,anamnesis,faq,unsupported,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_052,Аллергическая реакция после анестезии,anamnesis,faq,faq,anamnesis_to_faq,urgent,symptom,manual_hard,,True,True,False
-hard_test,hard_052,Аллергическая реакция после анестезии,anamnesis,faq,faq,both_wrong_disagreement,urgent,symptom,manual_hard,,True,True,False
-hard_test,hard_060,Потерял сознание от боли,anamnesis,unsupported,anamnesis,generic_error,urgent,symptom,manual_hard,,True,False,True
-hard_test,hard_071,Нужна консультация терапевта-стоматолога,booking,faq,anamnesis,both_wrong_disagreement,normal,new_appointment,manual_hard,,True,True,True
-hard_test,hard_075,Нужен приём у стоматолога-хирурга,booking,faq,faq,both_wrong_disagreement,normal,new_appointment,manual_hard,,True,True,False
+hard_test,hard_045,Снимок,anamnesis,faq,unsupported,both_wrong,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_045,Снимок,anamnesis,faq,unsupported,models_disagree_both_wrong,normal,treatment_interest,manual_hard,,True,True,True
+hard_test,hard_052,Аллергическая реакция после анестезии,anamnesis,faq,unsupported,anamnesis_to_faq,urgent,symptom,manual_hard,,True,True,True
+hard_test,hard_052,Аллергическая реакция после анестезии,anamnesis,faq,unsupported,both_wrong,urgent,symptom,manual_hard,,True,True,True
+hard_test,hard_052,Аллергическая реакция после анестезии,anamnesis,faq,unsupported,models_disagree_both_wrong,urgent,symptom,manual_hard,,True,True,True
+hard_test,hard_055,"Беременна, зуб болит невыносимо",anamnesis,faq,anamnesis,anamnesis_to_faq,urgent,symptom,manual_hard,,True,False,True
+hard_test,hard_065,"Плохо обслужили, хочу жаловаться",unsupported,anamnesis,unsupported,generic_error,normal,feedback,manual_hard,,True,False,True
+hard_test,hard_071,Нужна консультация терапевта-стоматолога,booking,faq,anamnesis,both_wrong,normal,new_appointment,manual_hard,,True,True,True
+hard_test,hard_071,Нужна консультация терапевта-стоматолога,booking,faq,anamnesis,models_disagree_both_wrong,normal,new_appointment,manual_hard,,True,True,True
+hard_test,hard_075,Нужен приём у стоматолога-хирурга,booking,faq,faq,both_wrong,normal,new_appointment,manual_hard,,True,True,False
 hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,faq_to_anamnesis,normal,doctor_info,manual_hard,,True,True,True
 hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,True
 hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,vague_short_error,normal,doctor_info,manual_hard,,True,True,True
-hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,True
-hard_test,hard_077,Запишите к Ермакову,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_077,Запишите к Ермакову,faq,booking,booking,vague_short_error,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_077,Запишите к Ермакову,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,True
+hard_test,hard_076,Хочу к Батылину,faq,anamnesis,booking,models_disagree_both_wrong,normal,doctor_info,manual_hard,,True,True,True
 hard_test,hard_078,Хочу на приём к Демину,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_078,Хочу на приём к Демину,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_078,Хочу на приём к Демину,faq,booking,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_079,Мне нужна Конновская,faq,anamnesis,anamnesis,faq_to_anamnesis,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_079,Мне нужна Конновская,faq,anamnesis,anamnesis,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_079,Мне нужна Конновская,faq,anamnesis,anamnesis,vague_short_error,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_079,Мне нужна Конновская,faq,anamnesis,anamnesis,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_079,Мне нужна Конновская,faq,anamnesis,anamnesis,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_081,К Петрову запишите на пятницу,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_081,К Петрову запишите на пятницу,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_081,К Петрову запишите на пятницу,faq,booking,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_082,"Хочу к тому врачу, который делал мне коронку",faq,anamnesis,faq,faq_to_anamnesis,normal,doctor_info,manual_hard,,True,False,True
 hard_test,hard_082,"Хочу к тому врачу, который делал мне коронку",faq,anamnesis,faq,specialization_confusion,normal,doctor_info,manual_hard,,True,False,True
 hard_test,hard_083,Запишите к детскому врачу Конновской,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_083,Запишите к детскому врачу Конновской,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_083,Запишите к детскому врачу Конновской,faq,booking,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_084,Ермаков свободен завтра?,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_084,Ермаков свободен завтра?,faq,booking,booking,vague_short_error,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_084,Ермаков свободен завтра?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_084,Ермаков свободен завтра?,faq,booking,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_085,Есть Сидорова? Запишите к ней,faq,booking,booking,specialization_confusion,normal,doctor_info,manual_hard,,True,True,False
-hard_test,hard_085,Есть Сидорова? Запишите к ней,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,manual_hard,,True,True,False
+hard_test,hard_085,Есть Сидорова? Запишите к ней,faq,booking,booking,both_wrong,normal,doctor_info,manual_hard,,True,True,False
 hard_test,hard_089,Привет! Где вы находитесь?,faq,faq,unsupported,generic_error,normal,clinic_info,manual_hard,,False,True,True
-hard_test,hard_090,"Здравствуйте, хочу брекеты",anamnesis,unsupported,faq,vague_short_error,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_090,"Здравствуйте, хочу брекеты",anamnesis,unsupported,faq,both_wrong_disagreement,normal,treatment_interest,manual_hard,,True,True,True
-hard_test,hard_096,"Привет, выпала пломба, что делать?",anamnesis,unsupported,faq,both_wrong_disagreement,normal,complaint,manual_hard,,True,True,True
+hard_test,hard_090,"Здравствуйте, хочу брекеты",anamnesis,faq,faq,anamnesis_to_faq,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_090,"Здравствуйте, хочу брекеты",anamnesis,faq,faq,vague_short_error,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_090,"Здравствуйте, хочу брекеты",anamnesis,faq,faq,both_wrong,normal,treatment_interest,manual_hard,,True,True,False
+hard_test,hard_096,"Привет, выпала пломба, что делать?",anamnesis,anamnesis,faq,generic_error,normal,complaint,manual_hard,,False,True,True
 hard_test,hard_099,"Привет, срочно болит, запишите сегодня",anamnesis,booking,booking,anamnesis_to_booking,urgent,symptom,manual_hard,,True,True,False
-hard_test,hard_099,"Привет, срочно болит, запишите сегодня",anamnesis,booking,booking,both_wrong_disagreement,urgent,symptom,manual_hard,,True,True,False
+hard_test,hard_099,"Привет, срочно болит, запишите сегодня",anamnesis,booking,booking,both_wrong,urgent,symptom,manual_hard,,True,True,False
 hard_test,hard_100,"Алло, есть рассрочка?",faq,unsupported,faq,vague_short_error,normal,price,manual_hard,,True,False,True
-hard_test,hard_101,Что делать если болит после удаления?,faq,anamnesis,faq,faq_to_anamnesis,normal,procedure_info,manual_hard,,True,False,True
-hard_test,hard_101,Что делать если болит после удаления?,faq,anamnesis,faq,post_treatment_ambiguity,normal,procedure_info,manual_hard,,True,False,True
 hard_test,hard_103,Нормально ли что болит после пломбы?,faq,anamnesis,faq,faq_to_anamnesis,normal,procedure_info,manual_hard,,True,False,True
 hard_test,hard_103,Нормально ли что болит после пломбы?,faq,anamnesis,faq,post_treatment_ambiguity,normal,procedure_info,manual_hard,,True,False,True
 hard_test,hard_105,Может ли десна кровоточить от чистки?,faq,anamnesis,faq,faq_to_anamnesis,normal,procedure_info,manual_hard,,True,False,True
 hard_test,hard_105,Может ли десна кровоточить от чистки?,faq,anamnesis,faq,post_treatment_ambiguity,normal,procedure_info,manual_hard,,True,False,True
+hard_test,hard_108,Как понять что нужна коронка а не пломба?,faq,anamnesis,faq,faq_to_anamnesis,normal,procedure_info,manual_hard,,True,False,True
+hard_test,hard_108,Как понять что нужна коронка а не пломба?,faq,anamnesis,faq,post_treatment_ambiguity,normal,procedure_info,manual_hard,,True,False,True
 hard_test,hard_118,"После пломбы зуб зудит внутри, что это может быть?",anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_rewritten,,False,True,True
+hard_test,hard_123,"Десна отекла после полоскания, это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_rewritten,,False,True,True
+hard_test,hard_124,"Десна кровит, когда ем яблоко, это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_rewritten,,False,True,True
 hard_test,hard_135,"После чистки десна каждый раз кровит, это нормально?",anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_rewritten,,False,True,True
 hard_test,hard_151,"Зуб сильно ноет, сколько стоит пломба?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,grok_rewritten,,True,True,False
-hard_test,hard_151,"Зуб сильно ноет, сколько стоит пломба?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,grok_rewritten,,True,True,False
+hard_test,hard_151,"Зуб сильно ноет, сколько стоит пломба?",anamnesis,faq,faq,both_wrong,normal,symptom,grok_rewritten,,True,True,False
 hard_test,hard_152,"Щека опухла, когда можно записаться?",anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_audited,,True,True,False
-hard_test,hard_152,"Щека опухла, когда можно записаться?",anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_audited,,True,True,False
+hard_test,hard_152,"Щека опухла, когда можно записаться?",anamnesis,booking,booking,both_wrong,normal,complaint,grok_audited,,True,True,False
 hard_test,hard_153,"дырка в зубе большая, цена лечения?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,grok_audited,,True,True,False
-hard_test,hard_153,"дырка в зубе большая, цена лечения?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,grok_audited,,True,True,False
+hard_test,hard_153,"дырка в зубе большая, цена лечения?",anamnesis,faq,faq,both_wrong,normal,symptom,grok_audited,,True,True,False
 hard_test,hard_154,"Нерв оголился и болит, можно записаться на завтра?",anamnesis,booking,booking,anamnesis_to_booking,normal,symptom,grok_rewritten,,True,True,False
-hard_test,hard_154,"Нерв оголился и болит, можно записаться на завтра?",anamnesis,booking,booking,both_wrong_disagreement,normal,symptom,grok_rewritten,,True,True,False
+hard_test,hard_154,"Нерв оголился и болит, можно записаться на завтра?",anamnesis,booking,booking,both_wrong,normal,symptom,grok_rewritten,,True,True,False
 hard_test,hard_156,"Камень на зубах и десна чешется, сколько стоит чистка?",anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_rewritten,,False,True,True
 hard_test,hard_157,"жевательный зуб трещит, можно ли срочно к врачу и цена?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,grok_audited,,True,True,False
-hard_test,hard_157,"жевательный зуб трещит, можно ли срочно к врачу и цена?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,grok_audited,,True,True,False
+hard_test,hard_157,"жевательный зуб трещит, можно ли срочно к врачу и цена?",anamnesis,faq,faq,both_wrong,normal,symptom,grok_audited,,True,True,False
 hard_test,hard_158,"Пломба вчера выпала, запишите меня на прием.",anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_rewritten,,True,True,False
-hard_test,hard_158,"Пломба вчера выпала, запишите меня на прием.",anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_rewritten,,True,True,False
+hard_test,hard_158,"Пломба вчера выпала, запишите меня на прием.",anamnesis,booking,booking,both_wrong,normal,complaint,grok_rewritten,,True,True,False
 hard_test,hard_159,"Передний зуб шатается, сколько стоит фиксация?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,grok_rewritten,,True,True,False
-hard_test,hard_159,"Передний зуб шатается, сколько стоит фиксация?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,grok_rewritten,,True,True,False
+hard_test,hard_159,"Передний зуб шатается, сколько стоит фиксация?",anamnesis,faq,faq,both_wrong,normal,symptom,grok_rewritten,,True,True,False
 hard_test,hard_161,"Зуб кровит, когда можно прийти и сколько это стоит?",anamnesis,faq,faq,anamnesis_to_faq,normal,symptom,grok_rewritten,,True,True,False
-hard_test,hard_161,"Зуб кровит, когда можно прийти и сколько это стоит?",anamnesis,faq,faq,both_wrong_disagreement,normal,symptom,grok_rewritten,,True,True,False
+hard_test,hard_161,"Зуб кровит, когда можно прийти и сколько это стоит?",anamnesis,faq,faq,both_wrong,normal,symptom,grok_rewritten,,True,True,False
 hard_test,hard_162,"Флюс раздуло, сколько стоит прием у стоматолога?",anamnesis,faq,faq,anamnesis_to_faq,urgent,complaint,grok_rewritten,,True,True,False
-hard_test,hard_162,"Флюс раздуло, сколько стоит прием у стоматолога?",anamnesis,faq,faq,both_wrong_disagreement,urgent,complaint,grok_rewritten,,True,True,False
+hard_test,hard_162,"Флюс раздуло, сколько стоит прием у стоматолога?",anamnesis,faq,faq,both_wrong,urgent,complaint,grok_rewritten,,True,True,False
 hard_test,hard_163,"Болит челюсть, запишите меня, пожалуйста.",anamnesis,booking,booking,anamnesis_to_booking,normal,symptom,grok_rewritten,,True,True,False
-hard_test,hard_163,"Болит челюсть, запишите меня, пожалуйста.",anamnesis,booking,booking,both_wrong_disagreement,normal,symptom,grok_rewritten,,True,True,False
+hard_test,hard_163,"Болит челюсть, запишите меня, пожалуйста.",anamnesis,booking,booking,both_wrong,normal,symptom,grok_rewritten,,True,True,False
 hard_test,hard_165,"Дупло в зубе, сколько будет стоить пломба и когда можно прийти?",anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_rewritten,,True,True,False
-hard_test,hard_165,"Дупло в зубе, сколько будет стоить пломба и когда можно прийти?",anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_rewritten,,True,True,False
+hard_test,hard_165,"Дупло в зубе, сколько будет стоить пломба и когда можно прийти?",anamnesis,faq,faq,both_wrong,normal,complaint,grok_rewritten,,True,True,False
 hard_test,hard_190,"Помогите, аллергия на анестезию, сыпь по лицу.",anamnesis,faq,anamnesis,anamnesis_to_faq,urgent,symptom,grok_rewritten,,True,False,True
 hard_test,hard_196,"После анестезии аллергия, лицо покраснело.",anamnesis,faq,anamnesis,anamnesis_to_faq,urgent,symptom,grok_rewritten,,True,False,True
 hard_test,hard_197,Кровотечение после удаления не останавливается.,anamnesis,anamnesis,faq,generic_error,urgent,symptom,grok_rewritten,,False,True,True
 hard_test,hard_199,"Аллергия на препарат, во рту ужасно чешется.",anamnesis,unsupported,anamnesis,generic_error,urgent,symptom,grok_rewritten,,True,False,True
-hard_test,p5_437,ПОСЛЕ УДАЛЕНИЯ ДЕСНА КРОВИТ 2 ДНЯ НОРМАЛЬНО?,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_439,пломбу поставили щека распирает это ок,anamnesis,faq,anamnesis,anamnesis_to_faq,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,True,False,True
-hard_test,p5_440,после импланта температура держится норма ли,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_443,после отбеливания десны белые норма?,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_444,зуб мудрости удалили дыра болит при еде ок ли,anamnesis,faq,anamnesis,anamnesis_to_faq,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,True,False,True
-hard_test,p5_446,после анестезии губа дергается так и должно?,anamnesis,faq,anamnesis,anamnesis_to_faq,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,True,False,True
-hard_test,p5_447,протез поставили прикус хреновый нормально ли,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_448,удалили нерв десна опухла норма после 3 дней,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_450,имплант вкрутили щека горячая должна так быть?,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_453,коронку поставили вкус металла во рту ок?,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,True,True,False
-hard_test,p5_453,коронку поставили вкус металла во рту ок?,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,True,True,False
-hard_test,p5_457,Десна кровит после удаления зуба норма или нет?,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_461,температура 37 после импланта нормально держится,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_462,белый налет на десне после удаления это норма,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_464,онемение щеки осталось после анестезии долго,anamnesis,faq,anamnesis,anamnesis_to_faq,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,True,False,True
-hard_test,p5_466,дырка увеличилась после пломбы нормально ли,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_471,запах из рта после чистки не пропал норма?,anamnesis,anamnesis,faq,generic_error,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,False,True,True
-hard_test,p5_475,кожа на лице чешется после визита к стоматологу,anamnesis,faq,anamnesis,anamnesis_to_faq,normal,symptom,grok_phase5_audited,faq_vs_anamnesis_borderline,True,False,True
-hard_test,p5_476,когда к петрову можно записаться,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_476,когда к петрову можно записаться,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_477,Запиши к Ивановой на эту неделю,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_477,Запиши к Ивановой на эту неделю,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_478,сидоров андрей петрович свободен завтра?,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_478,сидоров андрей петрович свободен завтра?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_480,к козлову на понедельник запишитесь,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_480,к козлову на понедельник запишитесь,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_482,попов свободен сегодня после обеда,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_482,попов свободен сегодня после обеда,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_484,запиши к новожилову срочно но не сегодня,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_484,запиши к новожилову срочно но не сегодня,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_486,к светлановой можно на 15 число,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_486,к светлановой можно на 15 число,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_488,орлова мария свободна в пятницу,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_488,орлова мария свободна в пятницу,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_489,Запись к Григорьеву на завтра утро,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_489,Запись к Григорьеву на завтра утро,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_490,леонтьева анна сергеевна когда выходной,faq,faq,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,False,True,True
-hard_test,p5_491,к баранову на вечер можно ли,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_491,к баранову на вечер можно ли,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_493,михайлов когда свободен для записи,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_493,михайлов когда свободен для записи,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_494,записаться к степанову на след неделю,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_494,записаться к степанову на след неделю,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_495,к петрову можно завтра записаться,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_495,к петрову можно завтра записаться,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_496,Свободно ли у Ивановой на этой неделе?,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_496,Свободно ли у Ивановой на этой неделе?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_497,запиши к сидорову андрею петровичу,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_497,запиши к сидорову андрею петровичу,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_498,к козловой на вторник слот есть,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_498,к козловой на вторник слот есть,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_499,Смирнов свободен после 18?,faq,booking,faq,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,False,True
-hard_test,p5_500,помогите записаться к поповой срочно,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_500,помогите записаться к поповой срочно,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_502,Морозов на завтра есть место?,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_502,Морозов на завтра есть место?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_503,запись к новожилову на вечер,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_503,запись к новожилову на вечер,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_504,к григорьевой можно зписаться?,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_504,к григорьевой можно зписаться?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_505,ЛЕЧУ К ВАСИЛЬЕВУЙ ЧТО СКАЗАЛ?,faq,faq,unsupported,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,False,True,True
-hard_test,p5_506,свободные дни у орловой покажите,faq,unsupported,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,True
-hard_test,p5_506,свободные дни у орловой покажите,faq,unsupported,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,True
-hard_test,p5_507,к степанову на 20 число меня запишите,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_507,к степанову на 20 число меня запишите,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_509,к беловой анне сергеевне слоты,faq,unsupported,faq,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,False,True
-hard_test,p5_510,завтра к романова свободна?,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_510,завтра к романова свободна?,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_511,запишите ребенка к егорову,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_511,запишите ребенка к егорову,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_512,к лебедевой на утро пятницы,faq,booking,booking,specialization_confusion,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_512,к лебедевой на утро пятницы,faq,booking,booking,both_wrong_disagreement,normal,doctor_info,grok_phase5_audited,doctor_name_stress,True,True,False
-hard_test,p5_514,зуб ноет скоко запишитесь на завтра,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_514,зуб ноет скоко запишитесь на завтра,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_515,Щека опухла срочно врача и цена вырывания,anamnesis,faq,faq,anamnesis_to_faq,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_515,Щека опухла срочно врача и цена вырывания,anamnesis,faq,faq,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_516,дырка в переднем зубе можно записаться в пятницу,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_516,дырка в переднем зубе можно записаться в пятницу,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_517,флюс на десне запишусь сегодня утром,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_517,флюс на десне запишусь сегодня утром,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_518,ноет жевательный зуб сколько стоит почистить и когда свободно,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_520,вчера ударился зуб кровит цена лечения,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_521,Болит сильно внутри зуба запишитесь на вечер,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_521,Болит сильно внутри зуба запишитесь на вечер,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_522,скоко вылечить зуб с дыркой и на когда запись,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_522,скоко вылечить зуб с дыркой и на когда запись,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_524,зубак ноет третий день цена пломбы,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_525,треснул зуб грызя орех запишитесь завтра,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_525,треснул зуб грызя орех запишитесь завтра,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_526,помагите зуб болит скока стоит удалить,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_526,помагите зуб болит скока стоит удалить,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_527,флюс у мамы срочно время приема,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_527,флюс у мамы срочно время приема,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_528,дырка большая ноет тихо на понедельник запись,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_528,дырка большая ноет тихо на понедельник запись,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_529,зубы кровоточат после еды цена осмотра,anamnesis,anamnesis,faq,generic_error,urgent,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_532,сколько чистка зуба который ноет,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_532,сколько чистка зуба который ноет,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_533,бабушке зуб разболелся запишитесь на утро,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_533,бабушке зуб разболелся запишитесь на утро,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_535,дырка в зубе болит запишитесь меня на завтра,anamnesis,booking,booking,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_535,дырка в зубе болит запишитесь меня на завтра,anamnesis,booking,booking,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_536,помогите зуб с корнем ноет цена какая,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_536,помогите зуб с корнем ноет цена какая,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_538,флюс на зубе скока стоит лечить срочно,anamnesis,faq,faq,anamnesis_to_faq,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_538,флюс на зубе скока стоит лечить срочно,anamnesis,faq,faq,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_539,ночью зуб заболел запишусь к вам завтра,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_539,ночью зуб заболел запишусь к вам завтра,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_540,опухла десна после яблока сколько пломба,anamnesis,anamnesis,faq,generic_error,normal,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_541,зубы кровоточат надо срочно к врачу цена,anamnesis,anamnesis,faq,generic_error,urgent,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_542,ноет передний зуб запишитесь на понедельник,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_542,ноет передний зуб запишитесь на понедельник,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_543,мне 60 лет зуб сломался скока вылечить,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_543,мне 60 лет зуб сломался скока вылечить,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_547,удар в зуб вчера болит скока удаление,anamnesis,faq,faq,anamnesis_to_faq,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_547,удар в зуб вчера болит скока удаление,anamnesis,faq,faq,both_wrong_disagreement,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_548,десна гноится зуб ноет запишусь на среду,anamnesis,anamnesis,booking,generic_error,normal,complaint,grok_phase5_audited,mixed_intent_new,False,True,True
-hard_test,p5_550,после ореха зуб заболел цена лечения,anamnesis,faq,faq,anamnesis_to_faq,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_550,после ореха зуб заболел цена лечения,anamnesis,faq,faq,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_551,отцу болит корень зуба можно завтра утром,anamnesis,booking,booking,anamnesis_to_booking,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_551,отцу болит корень зуба можно завтра утром,anamnesis,booking,booking,both_wrong_disagreement,normal,complaint,grok_phase5_audited,mixed_intent_new,True,True,False
-hard_test,p5_552,щека в пол лица флюс запишитесь меня,anamnesis,booking,anamnesis,anamnesis_to_booking,urgent,complaint,grok_phase5_audited,mixed_intent_new,True,False,True
-hard_test,p5_558,ОПУХЛО ВСЕ,anamnesis,anamnesis,unsupported,vague_short_error,urgent,symptom,grok_phase5_audited,short_ambiguous_new,False,True,True

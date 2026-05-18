@@ -1,9 +1,0 @@
-tag,n,n_accept,n_defer_complexity,n_defer_tag_policy,n_defer_ml,accepted_accuracy,accepted_recall_anamnesis
-mixed_intent,8,0,8,0,0,0.0,0.0
-short_ambiguous,48,0,48,0,0,0.0,0.0
-simple_booking,39,34,2,2,1,0.9412,0.0
-simple_faq,21,16,2,2,1,1.0,0.0
-simple_symptom,35,29,1,4,1,0.8966,1.0
-symptom_booking,4,0,4,0,0,0.0,0.0
-symptom_doctor,2,0,2,0,0,0.0,0.0
-symptom_price,2,0,2,0,0,0.0,0.0

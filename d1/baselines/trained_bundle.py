@@ -2,7 +2,7 @@
 
 Единственная точка обучения baseline'ов. Заменяет дублирование кода в
 `run_baselines.py`, `save_models.py`, `analyze_confidence.py` и всех будущих
-consumer'ах (selective, hybrid, bootstrap, learning_curves).
+consumer'ах (bootstrap, learning_curves, statistical tests).
 
 Архитектурные принципы:
 - **Один конфиг гиперпараметров**: `BASELINE_CONFIGS` — SSoT.
@@ -56,62 +56,21 @@ BASELINE_CONFIGS: dict[str, dict[str, Any]] = {
         "enabled": True,
     },
 
-    # B1 семейство: TF-IDF + classifier head.
-    "B1_tfidf_svc": {
-        "cls": B1TfidfClassifier,
-        "params": {"head_type": "svc"},
-        "enabled": True,
-    },
+    # B1.1: TF-IDF + LR (MVP closed-set baseline).
     "B1.1_tfidf_lr": {
         "cls": B1TfidfClassifier,
         "params": {"head_type": "logistic"},
         "enabled": True,
     },
-    "B1.2_tfidf_lr_tuned": {
-        "cls": B1TfidfClassifier,
-        "params": {
-            "head_type": "logistic",
-            "tfidf_params": {"ngram_range": (2, 6), "min_df": 1},
-            "head_params": {"C": 0.5},
-        },
-        "enabled": True,
-    },
 
-    # B2 семейство: encoder (BGE-M3 по умолчанию класса) + head.
-    "B2_bge-m3_linear": {
-        "cls": B2EmbeddingClassifier,
-        "params": {"head_type": "linear"},
-        "enabled": True,
-    },
+    # B2.1: BGE-M3 + SVC (quality benchmark).
     "B2.1_bge-m3_svc": {
         "cls": B2EmbeddingClassifier,
         "params": {"head_type": "svc"},
         "enabled": True,
     },
-    "B2.2_bge-m3_centroid": {
-        "cls": B2EmbeddingClassifier,
-        "params": {"head_type": "centroid"},
-        "enabled": True,
-    },
 
-    # B2.3: tuned bge-m3 (head_params в B2EmbeddingClassifier добавлены в Phase 3.1).
-    "B2.3_bge-m3_linear_tuned": {
-        "cls": B2EmbeddingClassifier,
-        "params": {"head_type": "linear", "head_params": {"C": 0.3}},
-        "enabled": True,
-    },
-
-    # Phase 3.2 (2026-05-01): lightweight dense candidates на multilingual-e5-small
-    # (~118M params vs bge-m3 568M — 5x легче, тот же e5 family).
-    # E5-prefix "query: " применяется автоматически в B2EmbeddingClassifier._encode.
-    "B2.4_e5-small_linear": {
-        "cls": B2EmbeddingClassifier,
-        "params": {
-            "model_name": "intfloat/multilingual-e5-small",
-            "head_type": "linear",
-        },
-        "enabled": True,
-    },
+    # B2.5: multilingual-e5-small + SVC (lightweight dense).
     "B2.5_e5-small_svc": {
         "cls": B2EmbeddingClassifier,
         "params": {
@@ -121,7 +80,7 @@ BASELINE_CONFIGS: dict[str, dict[str, Any]] = {
         "enabled": True,
     },
 
-    # Phase 3.3 (2026-05-01): fastText — ультра-лёгкий sparse-embedding кандидат.
+    # fastText — ультра-лёгкий sparse-embedding кандидат.
     # Сериализуется через explicit save/load (не joblib): см. ниже _save_to_cache.
     "B1.3_fasttext": {
         "cls": B1FastTextClassifier,
@@ -271,8 +230,8 @@ def _build_cache_key(name: str, csv_path: Path) -> CacheKey:
 class TrainedBundle:
     """Контейнер для обученных baseline'ов.
 
-    Консьюмеры (selective_router, b4_hybrid, bootstrap, learning_curves,
-    analyze_confidence) получают bundle через `train_bundle(...)` и
+    Консьюмеры (bootstrap, learning_curves, analyze_confidence,
+    run_statistical_tests) получают bundle через `train_bundle(...)` и
     обращаются к моделям через `bundle.get(name)`.
     """
 
@@ -585,6 +544,14 @@ def train_bundle(
         if hasattr(model, "get_params_summary"):
             extra["summary"] = model.get_params_summary()
         _save_to_cache(name, model, cache_dir, cache_key, extra)
+
+    # Удаляем из bundle_metadata.json записи по baseline'ам, не входящим в
+    # текущий прогон (после сужения BASELINE_CONFIGS остаются «хвосты»).
+    bundle_meta = _load_bundle_metadata(cache_dir)
+    for key in list(bundle_meta.keys()):
+        if key not in resolved:
+            del bundle_meta[key]
+    _save_bundle_metadata(cache_dir, bundle_meta)
 
     return bundle
 

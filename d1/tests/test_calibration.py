@@ -342,29 +342,15 @@ def test_reliability_png_via_calibration_display() -> None:
     )
 
 
-def test_pareto_candidates_only_on_val() -> None:
-    """Acceptance: Pareto candidates строятся ТОЛЬКО на val (overfitting guard).
-
-    Grep-проверка: в analyze_confidence.py есть условие `eval_set == "val"`
-    вокруг накопления pareto bundles и отсутствует прямой вызов
-    find_pareto_candidates внутри test/hard_test ветки.
-    """
-    src = _read_analyze_confidence_source()
-    # Накопление val bundles для Pareto выполняется под условием eval_set == "val"
-    assert 'eval_set == "val"' in src, (
-        "analyze_confidence.py должен ограничивать Pareto накопление eval_set == 'val'"
-    )
-    # find_pareto_candidates НЕ должен вызываться напрямую в analyze_confidence —
-    # только через save_val_pareto_candidates. Это защищает от случайного
-    # применения Pareto к test/hard_test.
-    # Разрешаем import; запрещаем прямой вызов find_pareto_candidates(...)
-    # вне save_val_pareto_candidates (который сам по имени *_val).
+def test_analyze_confidence_has_no_pareto_sweep() -> None:
+    """Pareto/threshold sweep для selective-policy удалён из analyze_confidence."""
     import re as _re
+
+    src = _read_analyze_confidence_source()
     direct_calls = _re.findall(r"find_pareto_candidates\s*\(", src)
-    # Ожидаем ровно один вызов — внутри save_val_pareto_candidates.
-    assert len(direct_calls) == 1, (
-        f"find_pareto_candidates должен вызываться только в "
-        f"save_val_pareto_candidates, найдено {len(direct_calls)} вызовов"
+    assert len(direct_calls) == 0, (
+        "analyze_confidence.py не должен вызывать find_pareto_candidates "
+        f"(policy-слой удалён), найдено {len(direct_calls)} вызовов"
     )
 
 
@@ -403,21 +389,15 @@ def test_save_calibration_artifacts_creates_files(tmp_path) -> None:
 
     paths = save_calibration_artifacts(bundle, "test_synthetic", results_dir=tmp_path)
 
-    # Все три файла созданы
-    assert paths["threshold_table"].exists()
+    # После cleanup-релиза threshold_table не пишется (relic
+    # selective-routing эпохи). Контракт — только reliability_table + metrics.
+    assert "threshold_table" not in paths
     assert paths["reliability_table"].exists()
     assert paths["metrics"].exists()
 
-    # JSON содержит обязательные ключи
     metrics = _json.loads(paths["metrics"].read_text(encoding="utf-8"))
     assert metrics["baseline"] == "TestModel"
     assert metrics["eval_set"] == "test_synthetic"
     assert "ece" in metrics
     assert "brier_ovr" in metrics
     assert set(metrics["brier_ovr"]["per_class"].keys()) == set(classes)
-
-    # Threshold table имеет контрактные колонки
-    tt = pd.read_csv(paths["threshold_table"])
-    for col in ["threshold", "coverage", "accepted_accuracy",
-                "overall_recall_anamnesis", "false_faq_for_anamnesis"]:
-        assert col in tt.columns

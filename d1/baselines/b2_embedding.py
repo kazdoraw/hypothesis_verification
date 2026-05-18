@@ -12,14 +12,25 @@ from __future__ import annotations
 
 import time
 import warnings
+from collections import Counter
 from typing import Any, Literal
 
 import numpy as np
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import NearestCentroid
-from sklearn.preprocessing import normalize
 from sklearn.svm import LinearSVC
+
+
+_DEFAULT_CALIBRATION_CV = 5
+
+
+def _adaptive_cv(labels: list[str], requested: int = _DEFAULT_CALIBRATION_CV) -> int:
+    """min(requested, count_smallest_class). Защищает smoke-тесты с micro-train."""
+    if not labels:
+        return 2
+    min_count = min(Counter(labels).values())
+    return max(2, min(requested, min_count))
 
 
 # Модели-кандидаты 
@@ -31,17 +42,18 @@ EMBEDDING_MODELS = {
 
 DEFAULT_MODEL = "BAAI/bge-m3"
 
+# NOTE: class_weight='balanced' убрано из дефолтов после аудита 2026-05-11.
+# При сильном дисбалансе train balanced снижает recall_anamnesis на
+# anamnesis-heavy eval-сетах. Включается через head_params при необходимости.
 _LOGISTIC_PARAMS: dict[str, Any] = {
     "C": 1.0,
     "max_iter": 2000,
-    "class_weight": "balanced",
     "solver": "lbfgs",
 }
 
 _SVC_PARAMS: dict[str, Any] = {
     "C": 1.0,
     "max_iter": 5000,
-    "class_weight": "balanced",
 }
 
 
@@ -115,8 +127,10 @@ class B2EmbeddingClassifier:
         """Encode текстов.
 
         Для e5 моделей добавляем prefix "query: " по рекомендации авторов.
-        Результат приводится к float64 + L2 re-normalize для максимальной
-        точности в sklearn matmul (bge-m3 возвращает float32).
+        sentence-transformers возвращает уже L2-нормированный float32 при
+        ``normalize_embeddings=True`` — повторная нормализация после
+        ``astype(float64)`` не нужна (она ничего не меняет, только тратит
+        время).
         """
         encoder = self._get_encoder()
         is_e5 = "e5" in self.model_name.lower()
@@ -131,10 +145,7 @@ class B2EmbeddingClassifier:
         )
         self.encode_time_ms = (time.perf_counter() - t0) * 1000
 
-        # float64 + L2 renorm: предотвращает overflow в sklearn matmul
-        embeddings = np.asarray(embeddings, dtype=np.float64)
-        embeddings = normalize(embeddings, norm="l2")
-        return embeddings
+        return np.asarray(embeddings, dtype=np.float64)
 
     def fit(self, texts: list[str], labels: list[str]) -> None:
         """Обучение: encode train → fit head."""
@@ -147,7 +158,7 @@ class B2EmbeddingClassifier:
         elif self.head_type == "svc":
             params = {**_SVC_PARAMS, **self.head_params}
             self._head = CalibratedClassifierCV(
-                LinearSVC(**params), cv=3, method="sigmoid",
+                LinearSVC(**params), cv=_adaptive_cv(labels), method="sigmoid",
             )
         else:
             self._head = NearestCentroid()

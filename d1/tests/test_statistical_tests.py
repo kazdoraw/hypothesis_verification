@@ -136,8 +136,11 @@ def test_run_statistical_tests_writes_csv(
     class _Bundle:
         def get(self, name: str):
             return {
+                "B0_rules": _Model(["anamnesis", "faq", "anamnesis", "booking"]),
                 "B1.1_tfidf_lr": _Model(["anamnesis", "faq", "faq", "booking"]),
+                "B1.3_fasttext": _Model(["faq", "faq", "anamnesis", "booking"]),
                 "B2.1_bge-m3_svc": _Model(["faq", "faq", "faq", "booking"]),
+                "B2.5_e5-small_svc": _Model(["booking", "faq", "faq", "booking"]),
             }[name]
 
     monkeypatch.setattr(rst, "DATA_DIR", tmp_path)
@@ -158,20 +161,21 @@ def test_run_statistical_tests_writes_csv(
     assert set(paired["rng_seed"]) == {9}
 
 
-def test_paired_plan_orients_b4_improvement() -> None:
+def test_paired_plan_all_pairs_of_five() -> None:
     from d1.scripts.run_statistical_tests import _paired_plan
 
     available = {
+        "B0_rules": "pred_b0_rules",
         "B1.1_tfidf_lr": "pred_b1_1",
+        "B1.3_fasttext": "pred_b1_3",
         "B2.1_bge-m3_svc": "pred_b2_1",
-        "SelectiveRouter": "pred_selective",
-        "B4_hybrid": "pred_b4_hybrid",
+        "B2.5_e5-small_svc": "pred_b2_5",
     }
 
     pairs = _paired_plan(available)
-
-    assert ("B4_hybrid", "SelectiveRouter") in pairs
-    assert ("SelectiveRouter", "B4_hybrid") not in pairs
+    assert len(pairs) == 10
+    assert pairs[0] == ("B0_rules", "B1.1_tfidf_lr")
+    assert ("B2.1_bge-m3_svc", "B2.5_e5-small_svc") in pairs
 
 
 def test_statistical_tests_has_no_direct_fit_calls() -> None:

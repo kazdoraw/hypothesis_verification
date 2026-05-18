@@ -221,11 +221,9 @@ seed_336,Привет,unsupported,greeting_only,False,normal,False,,False,,,seed
 seed_338,Здравствуйте,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_338
 seed_339,Доброе утро,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_339
 seed_340,Алло,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_340
-seed_341,Привет!,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_341
 seed_343,Здрасьте,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_343
 seed_344,Приветик,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_344
 seed_345,Хай,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_345
-seed_346,Здравствуйте!,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_346
 seed_348,"Привет, есть кто?",unsupported,greeting_only,False,normal,False,,False,,,seed,seed_348
 seed_349,"Здравствуйте, это стоматология?",faq,clinic_info,False,normal,False,,False,,,seed,seed_349
 seed_350,Вы работаете?,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_350
@@ -378,7 +376,6 @@ var_seed_257_93894f,завтра пара в универе весь день з
 var_seed_257_b15024,можно время изменить,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_257
 var_seed_257_d648c7,перенос на потом,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_257
 var_seed_257_5bde3e,другое время подскажите,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_257
-var_seed_305_220381,отмените запись,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_305
 var_seed_305_c1b8fd,ребёнку 5 лет болеет не пойдём завтра на приём отмените,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_305
 var_seed_305_360e33,уезжаю в другой город не смогу к вам прийти отменяйте запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_305
 var_seed_305_ab6862,нашёл клинику рядом не нужен ваш приём отмените пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_305
@@ -660,7 +657,6 @@ var_seed_047_133e6b,штифт выпал блин,anamnesis,complaint,False,nor
 var_seed_047_8659ab,вчера ел яблоко штифт из жевательного зуба вылетел дырка теперь огромная,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_047
 var_seed_047_30a28b,у дочки 6 лет штифт выпал после того как упала с качелей помагите,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_047
 var_seed_047_55e416,давно поставили штифт в корень а он выпал читала в инете страшно инфекция,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_047
-var_seed_047_02d2e1,выпал штифт из зуба,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_047
 var_seed_047_892214,штифт слетел что делать,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_047
 var_seed_049_598018,винир слетел,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_049
 var_seed_049_01d806,винир отклеился зуб,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_049
@@ -720,7 +716,6 @@ var_seed_058_89c24a,новый протез поставили а он выск�
 var_seed_058_8e9673,у мамы съёмная челюсть не держится уже год ем с ложки,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_058
 var_seed_058_4c5086,на работе ем обед протез выпадет коллеги ржут стыдоба,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_058
 var_seed_058_4f242f,давно ношу съёмный протез стал шататься вчера чуть не проглотил кусок,anamnesis,complaint,False,normal,False,,False,,contextual,grok_variation,seed_058
-var_seed_058_d63863,съёмный протез не держится,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_058
 var_seed_058_677020,протез съёмный выпадает,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_058
 var_seed_058_6949e2,не сидит съёмная челюсть,anamnesis,complaint,False,normal,False,,False,,normal,grok_variation,seed_058
 var_seed_060_cf9c7e,камень на зубах,anamnesis,complaint,False,normal,False,,False,,hurried,grok_variation,seed_060
@@ -799,7 +794,6 @@ var_seed_071_db22d2,подскажите про отбеливание зубо�
 var_seed_071_51a93f,интересует отбеливание у вас,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_071
 var_seed_072_196ce6,делаете импланты,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_072
 var_seed_072_0fff0a,имплант ставите,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_072
-var_seed_072_511a36,интересует имплантация,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_072
 var_seed_072_782467,выбили передний зуб на работе теперь пусто хочу имплант поставить чтоб нормально жевать,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_072
 var_seed_072_0d5b8a,у жены два зуба нет сзади жевательные интересует имплантация сколько времени уйдёт,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_072
 var_seed_072_0be96b,давно потерял зуб после удаления дырка бесит импланты у вас хорошие делали кому то,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_072
@@ -840,7 +834,6 @@ var_seed_077_865dc3,сын 12 лет челюсти криво сходятся 
 var_seed_077_8319d1,давно прикус неправильный жую с одной стороны надо исправить а то хуже будет,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_077
 var_seed_077_b6ebcc,улыбаюсь в зеркало прикус портит вид интересно исправить брекетами или как,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_077
 var_seed_077_91d8c6,на работе замечают речь из за прикуса хочу поставить брекеты исправить,anamnesis,treatment_interest,False,normal,False,,False,,contextual,grok_variation,seed_077
-var_seed_077_c355b6,интересует исправление прикуса,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_077
 var_seed_077_253745,как исправить прикус у вас,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_077
 var_seed_077_b4d1ea,хочу прикус поправить,anamnesis,treatment_interest,False,normal,False,,False,,normal,grok_variation,seed_077
 var_seed_079_e83799,нужен мост на нижний ряд,anamnesis,treatment_interest,False,normal,False,,False,,hurried,grok_variation,seed_079
@@ -1104,7 +1097,6 @@ var_seed_125_a7183d,дочке ставить пломбу укол от бол�
 var_seed_125_423a2e,на работу завтра анестезия при лечении входит в общую цену или доплата,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_125
 var_seed_125_06e6b3,начиталась в инете что уколы дорого у вас входит в стоимость пломбы,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_125
 var_seed_125_6d9074,мужу боится боли скажите входит ли заморозка в цену лечения зуба,faq,price,False,normal,False,,False,,contextual,grok_variation,seed_125
-var_seed_125_5b7fb7,анестезия входит в стоимость?,faq,price,False,normal,False,,False,,normal,grok_variation,seed_125
 var_seed_125_7aab1b,укол от боли в цену включен,faq,price,False,normal,False,,False,,normal,grok_variation,seed_125
 var_seed_125_50825c,заморозка входит в общую стоимость,faq,price,False,normal,False,,False,,normal,grok_variation,seed_125
 var_seed_127_c6a16e,прайс скиньте,faq,price,False,normal,False,,False,,hurried,grok_variation,seed_127
@@ -1164,8 +1156,6 @@ var_seed_139_39730f,гду вы,faq,clinic_info,False,normal,False,,False,,hurri
 var_seed_139_6395f9,на машине еду нужен точный адрес для навигатора,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_139
 var_seed_139_8dcae6,приехала из другого района где ваша клиника найти,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_139
 var_seed_139_e1f388,маме отправляю адрес она с ребёнком куда ехать,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_139
-var_seed_139_1cb0c8,подскажите адрес клиники,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_139
-var_seed_139_f84aaa,где вы находитесь,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_139
 var_seed_139_45b80f,точный адрес какой,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_139
 var_seed_140_110484,до скока пашете,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_140
 var_seed_140_b60b1b,скока закрываетесь,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_140
@@ -1242,7 +1232,6 @@ var_seed_156_48fd2c,на работе коллега хвалил похожую
 var_seed_156_89707e,переехал недавно как ваша клиника официально называется для карты,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_156
 var_seed_156_ecbf20,подскажите название вашей клиники,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_156
 var_seed_156_c4cd0a,как называется стоматология у вас,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_156
-var_seed_157_61ea70,вы на рябикова,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_157
 var_seed_157_c6b350,рябикова ваша улица,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_157
 var_seed_157_f78292,клиника рябикова,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_157
 var_seed_157_d9a469,подруга сказала вы на рябикова живу рядом подтвердите чтоб не ошибиться,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_157
@@ -1556,7 +1545,6 @@ var_seed_226_7c1203,свободно есть,booking,new_appointment,True,norma
 var_seed_226_b516a9,ребёнку 5 лет к стоматологу записать на вечер школа мешает,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_226
 var_seed_226_a23311,с завтрашнего дня зубы болтать некогда надо срочно записаться,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_226
 var_seed_226_034588,на свадьбу через неделю чистку зубов хочу успеть запишите,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_226
-var_seed_226_870ac0,можно записаться на приём,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_226
 var_seed_226_72ba58,подскажите как на осмотр,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_226
 var_seed_226_dc449d,хочу визит назначить,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_226
 var_seed_227_a00270,есть свободное?,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_227
@@ -1590,7 +1578,6 @@ var_seed_232_91f3c4,к стоматологу срочно,booking,new_appointme
 var_seed_232_8c7ad2,ребёнку 7 лет первый зуб нужно к стоматологу запишите на эту неделю если есть место,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_232
 var_seed_232_5e570d,работаю допоздна могу только в субботу запишитесь меня пожалуйста на утро,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_232
 var_seed_232_1ee0fd,муж боится зубных врачей но надо запишите его на вечерний приём на след неделе,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_232
-var_seed_232_b3ac7d,можно записаться на приём,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_232
 var_seed_232_5dea63,хочу к стоматологу зписаться,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_232
 var_seed_232_b2c1ea,подскажите есть свободное время,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_232
 var_seed_233_bf0e55,есть свободное на неделе,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_233
@@ -1611,8 +1598,6 @@ var_seed_234_bec2f6,внуку 5 лет на выходных свободны �
 var_seed_234_fc871b,мальчишке моему 8 лет после садика некогда запишитесь на субботу,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_234
 var_seed_234_9c98f3,как записать ребёнка к вам,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_234
 var_seed_234_d03bca,нужно место для малыша на этой неделе,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_234
-var_seed_235_e426d5,запиши на приём,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_235
-var_seed_235_454ab5,хочу записаться,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_235
 var_seed_235_e65128,ребёнку 6 лет первый раз к стоматологу запишите на утро,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_235
 var_seed_235_5a92f1,старик я по утрам хожу запишите на осмотр пожалста,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_235
 var_seed_235_ba15ca,как записаться на приём,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_235
@@ -1630,7 +1615,6 @@ var_seed_239_e34508,зписать к детскму срочно,booking,new_ap
 var_seed_239_f7fc8b,сыну 4 года надо к детскому стоматологу на этой неделе запишите,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_239
 var_seed_239_16b771,внучке 7 лет зубки осмотреть к детскому доктору когда место есть,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_239
 var_seed_239_701427,мальчишке 5 лет на профилактику к детскому запишите в пятницу,booking,new_appointment,True,normal,False,детский стоматолог,False,,contextual,grok_variation,seed_239
-var_seed_239_2e8e0f,нужна запись к детскому стоматологу,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_239
 var_seed_239_3c255a,можно к детскому врачу записаться,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_239
 var_seed_239_9cb65b,хочу ребенку к детскому на приём,booking,new_appointment,True,normal,False,детский стоматолог,False,,normal,grok_variation,seed_239
 var_seed_240_62ae98,зписаться на удаление,booking,new_appointment,True,normal,False,,False,,hurried,grok_variation,seed_240
@@ -1825,7 +1809,6 @@ var_seed_276_7821c1,вечер вместо утра,booking,reschedule,True,nor
 var_seed_276_628251,ребёнку на утро записали а в школу надо можно на вечер перенести,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_276
 var_seed_276_c95c33,завтра на 10 утра но пробки будут давайте на вечер сдвинем,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_276
 var_seed_276_721d12,записался утром но заболел сын надо с ним остаться на вечер перенесите,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_276
-var_seed_276_862dba,можно перенести на вечер,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_276
 var_seed_277_07e6a1,тока суббота могу,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_277
 var_seed_277_dafe88,суббота перенос,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_277
 var_seed_277_2c966a,запись на вторник но работаю допоздна перенести на субботу плиз,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_277
@@ -1881,31 +1864,25 @@ var_seed_285_388114,записан на завтра но на работе ср
 var_seed_285_2d5ce7,ребёнку было на 10 утра но врач сказал перенести на неделю позже,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_285
 var_seed_285_5a8226,мне на среду назначили а там поезд опаздывает смените на четверг,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_285
 var_seed_285_dbb4bd,запись на пятницу но заболела мама нужно срочно поменять время,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_285
-var_seed_285_5b4d30,можно время записи изменить,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_285
 var_seed_285_6f4a4a,нужно перенести мой приём,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_285
 var_seed_286_ac8bfa,отмена записи,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_286
 var_seed_286_5080c7,снимите меня чот,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_286
 var_seed_286_2c28fc,заболела не смогу в среду отмените мою запись плиз,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_286
 var_seed_286_112338,ребёнку 6 лет температурит не придём завтра снимите нас,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_286
 var_seed_286_bbc0d6,уехала к маме в деревню не вернусь вовремя отмена записи,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_286
-var_seed_286_6e42d7,хочу отменить запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_286
 var_seed_286_ac7487,не могу прийти снимите запись,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_286
-var_seed_288_b0b827,отмените запись,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_288
 var_seed_288_ce664f,ребёнок заболел не сможем на завтра отмените запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_288
 var_seed_288_3731a7,голова болит сильно не дойду до вас отменить надо,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_288
 var_seed_288_a46991,погода плохая не поеду сегодня отмените мою запись пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_288
 var_seed_288_3f2f08,нужно отменить приём на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_288
 var_seed_288_a1cf64,отменить визит к вам,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_288
-var_seed_289_ce9a6b,отмена записи,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_289
 var_seed_289_728acb,не приду снимите,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_289
 var_seed_289_a9499b,заболела не смогу завтра отмените мою запись на 15 число,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_289
 var_seed_289_3f026b,в командировку уезжаю срочно откажитесь от моей записи на понедельник,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_289
 var_seed_289_42517a,отмените мою запись пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_289
 var_seed_289_3b56b1,не смогу прийти снимите с очереди,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_289
-var_seed_290_9a0249,отмените запись,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_290
 var_seed_290_287bbe,заболела не смогу на завтра отмените мою запись пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_290
 var_seed_290_a72662,поезд опоздал вернусь поздно уберите запись на сегодня,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_290
-var_seed_290_077fe1,хочу отменить запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_290
 var_seed_291_c3748c,отмените,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_291
 var_seed_291_a26f37,ребёнку 5 лет температурит не придём сегодня на приём отмените нас,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_291
 var_seed_291_2988d1,отменить запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_291
@@ -1914,11 +1891,9 @@ var_seed_294_4ca168,ребёнку 6 лет температурит не при
 var_seed_294_cf4751,погода плохая боюсь выезжать отмени визит на утро пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_294
 var_seed_294_f817bd,другая клиника ближе передумал идти к вам отмените слот,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_294
 var_seed_294_5a5f65,не смогу прийти завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_294
-var_seed_295_cfed18,отмените запись,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_295
 var_seed_295_1c3c6e,заболел не смогу в среду отмените мою запись на приём,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_295
 var_seed_295_526ca2,уезжаю срочно в отпуск нужно отменить на следующую неделю,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_295
 var_seed_295_c6aa1c,на работе задержка отмените приём на пятницу для жены,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_295
-var_seed_295_53b089,хочу отменить запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_295
 var_seed_298_bd929a,отмените лечение,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_298
 var_seed_298_a28efd,не хочу лечить,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_298
 var_seed_298_3ab2cc,отмена приёма,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_298
@@ -1929,7 +1904,6 @@ var_seed_298_147db4,начиталась отзывов про осложнен�
 var_seed_298_385796,хочу отменить лечение,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_298
 var_seed_298_834ed6,прошу отказаться от приёма,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_298
 var_seed_298_fa2ec8,нужно отменить запись на лечение,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_298
-var_seed_300_6e0e4c,отмена,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_300
 var_seed_300_43cc9e,заболела не смогу завтра к вам отмените запись,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_300
 var_seed_300_bc0249,уехал внезапно отменяю приём на этой неделе,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_300
 var_seed_300_157bb7,семья передумала пока не будем лечить отмените всё,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_300
@@ -1945,7 +1919,6 @@ var_seed_304_3b27a6,в командировку уезжаю срочно не �
 var_seed_304_d67c0f,не смогу прийти отмените запись,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_304
 var_seed_308_e7effc,отмените срочно уезжаю,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_308
 var_seed_308_704919,ребёнок заболел не сможем завтра отмените запись нашу,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_308
-var_seed_308_12eb60,отмените запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_308
 var_seed_310_ea81ee,отмените иду в др,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_310
 var_seed_310_d073c8,не иду к вам,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_310
 var_seed_310_a5f6eb,пойду к конкурентам,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_310
@@ -1955,15 +1928,12 @@ var_seed_310_4952f5,ребенку нашли другого врача в по�
 var_seed_310_927a91,муж сказал что в другой дешевле пойду туда отмените мою на среду,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_310
 var_seed_310_e037ef,отмените запись пойду в другую клинику,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_310
 var_seed_310_3fbb7c,нужно отменить иду к конкурентам,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_310
-var_seed_312_bef2c5,отмените запись,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_312
 var_seed_312_36a0c1,заболела не могу в пятницу прийти отмените мою запись пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_312
 var_seed_312_03957d,отмените мою запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_312
 var_seed_313_4b92f2,снимите меня,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_313
 var_seed_313_472d55,заболел не успеваю на приём сегодня снимите запись пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_313
 var_seed_313_bcc128,дочка в садик не отдадут из за кашля снимите нас,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_313
-var_seed_313_89e16b,отмените запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_313
 var_seed_313_bcc01f,пожалуйста отмените меня,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_313
-var_seed_315_fc438b,отмена,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_315
 var_seed_315_559ca4,отмените пж,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_315
 var_seed_315_5fdff7,заболела отмените запись на завтра не смогу дойти,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_315
 var_seed_315_459d5a,на работе завал передумал не надо отменяйте приём,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_315
@@ -2169,439 +2139,3 @@ var_seed_414_960d67,на обеде заскочил камень снимали
 var_seed_414_5a28d9,клиника классная,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_414
 var_seed_414_51630a,все уютно чисто,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_414
 var_seed_414_20e939,нравится у вас атмосфера,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_414
-p5_001,сколько вставка штифта,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_002,стоимость удаления камня,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_003,СКОЛЬКО ИМПЛАНТ,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_004,замена пломбы скока,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_005,до скольки в пятницу,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_006,открыто ли воскресенье,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_007,время работы будни,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_008,какие часы приема,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_009,обеденный перерыв когда,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_010,выходные дни график,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_011,адрес клиники точный,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_012,как доехать автобусом,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_013,где находитесь метро,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_014,улица и дом клиники,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_015,на карте покажите,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_016,район где стоите,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_017,гарантия на лечение сколько,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_018,Какие пломбы используете?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_019,подготовка к импланту,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_020,виды отбеливания какие,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_021,оборудование какое новое,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_022,протезы съемные есть,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_023,анестезия безболезненная,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_024,сколько сеансов чистка,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_025,рентген на месте делают,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_026,пломбировка каналов цена,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_027,керамические коронки сколько,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_028,съемный протез цена,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_029,металлокерамика зуба цена,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_030,гигиена полости рта скока,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_031,акции на лечение есть,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_032,понедельник с какого часа,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_033,летний график работы,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_034,закрыто ли в жару,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_035,дети с какого возраста,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_036,ночь накануне открыты,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_037,кабинеты по скольку работают,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_038,маршрут от центра,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_039,телефон для ориентира,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_040,ближайший остановка какая,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_041,вход с какой стороны,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_042,фото фасада покажите,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_043,район спальный или центр,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_044,навигатор ведет точно,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_045,синий забор или красный,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_046,костные импланты ставят,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_047,после пломбы что нельзя,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_048,виниры какие материалы,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_049,рентген цифровой или пленка,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_050,детская стоматология услуги,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_051,гарантия на отбеливание,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_052,процедура установки брекетов,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_053,сколько держится пломба,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_054,терапевт или хирург нужен,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_055,цена на мостовидный протез,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_056,удаление зуба скока стоит,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_057,зубной налет чистка цена,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_058,среда вечерний прием,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_059,зимой график меняется,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_060,открытие в 8 утра,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_061,троллейбусом номер какой,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_062,парковка бесплатная ли,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_063,как найти вход в подвал,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_064,от метро 5 минут пешком,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_065,Работаете ли после 20:00?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_066,Сколько пломбирование?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_067,До какого времени в пятницу?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_068,Перерыв на обед есть?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_069,Ближайший метро к вам?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_070,Рабочие дни недели?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_071,Скока ультразвук чистка?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_072,Открытие в понедельник во сколько?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_073,Точный адрес с индексом?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_074,Гарантия на пломбы сколько?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_075,Какие услуги предлагаете?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_076,Подготовка к импланту нужна?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_077,Сколько стоит коронка?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_078,Закрытие в праздники?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_079,Ваш телефон для справок?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_080,Какие акции сейчас?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_081,Прием в обеденное время?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_082,Какой вход в клинику?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_083,Сколько консультация?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_084,График на декабрь?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_085,Скока рентген?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_086,Работаете допоздна?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_087,Гарантия на протезы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_088,Цены на детей?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_089,Понедельник с обеда?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_090,Рядом с каким магазином?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_091,Выходной в четверг?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_092,Автобусом как до вас?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_093,Подготовка к чистке?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_094,Закрыто 8 марта?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_095,Фото клиники можно?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_096,Какие врачи есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_097,Сколько стоит мост?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_098,От метро сколько минут?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_099,Скока съемный протез?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_100,Лето график меняется?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_101,Табличка на входе есть?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_102,Виды чистки?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_103,Цены обновили?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_104,С 12 до 14 прием?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_105,Яндекс карты ссылка?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_106,Сколько сеанс отбеливания?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_107,Пятница вечером открыто?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_108,Лифт в здании?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_109,Какие сертификаты?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_110,Пломба световая скока?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_111,Зимой короче часы?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_112,Парковка под окнами?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_113,Подготовка к протезу?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_114,Удаление мудрости цена?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_115,Суббота полдня?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_116,Второй этаж клиника?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_117,Акции на чистку?,faq,price,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_118,Новый год график?,faq,schedule,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_119,Трамвай до вас ходит?,faq,location,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_120,Какие аппараты используете?,faq,general,False,normal,False,,False,,,grok_phase5_audited,simple_faq_clean
-p5_121,Можно к стоматологу в субботу?,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_122,на 15 число свободно?,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_123,ЗПИСАТЬСЯ К ВРАЧУ,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_124,для ребенка на вечерок,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_125,хочу к терапевту утром,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_126,можно на 11 утра?,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_127,Запиши жену на понедельник,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_128,для мамы на утро,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_129,хочу попасть в пятницу,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_130,Запись на 20 число,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_131,можно ребенку после обеда,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_132,ХОЧУ НА ПРИЕМ СЕГОДНЯ,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_133,для мужа на вечер,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_134,свободно ли в 14:00,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_135,на пятницу после 16,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_136,сдвиньте мою запись позже,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_137,Мою запись сдвинуть на 17,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_138,измени дату приема,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_139,сдвиг на утро вторника,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_140,мою на вечерок перекиньте,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_141,Изменить на 10 число,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_142,Можно позже сделать?,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_143,сдвиг по времени,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_144,Перенос на 15:00,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_145,снимаю запись на среду,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_146,Не приду в пятницу,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_147,Отмена на 14:00,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_148,Отменить на понедельник,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_149,снять прием вечером,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_150,Не нужно на завтра,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_151,СНИМАЮ НА СУББОТУ,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_152,отмените на 20 число,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_153,моя запись не актуальна,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_154,убрать из графика,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_155,не пойду к врачу завтра,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_156,снимите на четверг,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_157,запись на пятницу убрать,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_158,НЕТ ВРЕМЕНИ НА СРЕДУ,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_159,отмена для жены,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_160,снять на вечер,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_161,запишись меня на вечер пятницы,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_162,Хочу к врачу на следующей неделе,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_163,зпитесь ребенка утром,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_164,на прием свободно ли,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_165,сдвинуть запись жены,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_166,снимаю на 16 часов,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_167,можно на среду к стоматологу,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_168,запись на прием завтра,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_169,подскажите когда можно записаться,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_170,нужно место на пятницу,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_171,запишите ребенка на вечер,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_172,хочу к стоматологу на следующей неделе,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_173,запись на удаление камня,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_174,мне нужно записаться срочно но не сейчас,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_175,хочу прием в субботу,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_176,для мамы запись сделайте,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_177,Перенесите на 16 число,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_178,неудобно в это время поменяйте,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_179,меня на 14:00 переставьте,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_180,снимите меня с 10 утра,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_181,отменяю визит в пятницу,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_182,не нужно больше запись удалите,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_183,Отменить на 15 число,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_184,вычеркните меня из графика,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_185,стоматологу на завтра место,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_186,ребенку прием запишите,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_187,на выходные можно?,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_188,отложу прием на неделю,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_189,мне на 12 перенести,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_190,снимите запись ребенка,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_191,не приду в субботу отмените,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_192,удалить мою очередь,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_193,к стоматологу утром,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_194,место на осмотр есть,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_195,для жены запишете,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_196,вычеркнуть из списка,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_197,не нужен прием снимите,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_198,запись к доктору,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_199,утренний слот свободен,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_200,папе нужно записаться,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_201,перенос на 17е,booking,reschedule,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_202,уберите меня на завтра,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_203,отменяю на вечер,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_204,зписать на пятницу,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_205,стоматология запись,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_206,на лечение запишитесь,booking,new_appointment,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_207,не иду отмените очередь,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_208,снимите с графика,booking,cancel,True,normal,False,,False,,,grok_phase5_audited,simple_booking_clean
-p5_209,десна ноет уже третий день,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_210,Зуб реагирует на горячую еду,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_211,Щека припухла после вчерашнего,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_212,Болит когда жую хлеб,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_213,эмаль стирается на передних,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_214,десны красные и чешутся,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_215,После яблока зуб заныл,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_216,язык прикусываю больно,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_217,десна отекла слегка,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_218,Зубы чувствительны к сладкому,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_219,корень зуба ломит,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_220,щека тянет когда открываю рот,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_221,кровь из десны утром,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_222,температура щека горячая,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_223,ноет жевательный зуб,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_224,боль пульсирует в зубе,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_225,реагирует на холодный воздух,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_226,десна болит при нажатии,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_227,устал от зубной боли,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_228,флюс надувается,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_229,чувствую дискомфорт в деснах,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_230,больно глотать слюну,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_231,кровоточит десна еле чищу,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_232,нижняя челюсть ноет,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_233,зубы болят от кислого,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_234,отек под языком,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_235,температура поднялась от зуба,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_236,дырка черная в боку,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_237,десны отступают от зубов,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_238,боль простреливает в ухо,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_239,щека болит внутри,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_240,кровь мешает есть,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_241,ноет после еды сладкой,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_242,десна гноится чуть,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_243,челюсть клинит иногда,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_244,зуб чувствительный стал,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_245,раздражает постоянная боль,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_246,температура и зуб ноет,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_247,дырка в молочном зубе,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_248,десны зудят ночью,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_249,боль от верхнего зуба,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_250,кровит когда чищу сильно,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_251,щека тянет и болит,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_252,зубы желтеют быстро,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_253,пульсация в десне,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_254,устала терпеть ноющую боль,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_255,отек десны вырос,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_256,больно кусать твердое,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_257,кровь из зуба капает,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_258,десна воспалена красная,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_259,температура от флюса,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_260,ноет весь ряд зубов,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_261,десны болят при еде,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_262,боль отдаёт в голову,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_263,кровоточит сильно десна,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_264,зуб ноет от вчера,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_265,щека горячая опухшая,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_266,эмаль тонкая трескалась,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_267,пульсирует корень,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_268,больно дышать холодным,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_269,десна кровит утром кофе,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_270,зубы ноют от усталости,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_271,отек челюсти небольшой,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_272,не могу есть нормально,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_273,температура щека жжёт,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_274,дырка болит надавить,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_275,десны чувствительные стали,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_276,Зуб ноет уже третий день подряд,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_277,щука опухла чуток после вчерашнего,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_278,зубик реагирует на холодную воду,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_279,Десны чешутся и красные стали,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_280,ноет корень зуба при наклоне,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_281,флюс на десне выскочил вчера,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_282,боль в зубе усиливается вечером,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_283,чувствую дырку в переднем зубе,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_284,Ребенку 7 лет зуб болит сильно,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_285,десна отекла под нижним зубом,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_286,постоянно тянет щеку изнутри,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_287,Болит когда на него нажимаю,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_288,жевательный зуб заболел внезапно,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_289,Щека припухла после удара,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_290,устал от этой боли в десне,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_291,опухоль на десне растет,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_292,больно чистить зубы теперь,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_293,Дырка большая в зубе появилась,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_294,кровит десна без причины,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_295,зубы ноют от мороженого,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_296,десна воспалилась сильно,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_297,чувствительность к теплу выросла,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_298,ноет верхний зуб справа,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_299,гнилостный привкус во рту,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_300,Болит десна у молочного зуба,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_301,зуб пульсирует при ходьбе,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_302,кровь с десны капает,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_303,реагирует на соленое сильно,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_304,устала терпеть эту зубную боль,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_305,Десна болит и чешется,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_306,зуб ноет после чая горячего,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_307,прострелило зуб вчера вечером,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_308,дырка в зубе углубилась,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_309,больно глотать из-за десны,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_310,щука тянет и ноет,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_311,кровоточивость десен усилилась,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_312,зуб чувствителен к давлению,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_313,флюс прорвало гноем,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_314,ноет зубик у ребенка ночью,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_315,десны краснеют и болят,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_316,запах из зуба плохой,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_317,опухло под зубом сильно,anamnesis,complaint,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_318,реагирует на сладкий сок,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_319,десна ноет постоянно,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_320,зубы болят при вдохе,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_321,щека увеличилась в размере,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_322,больно трогать десну,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_323,дырка чёрная в зубе видна,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_324,пульсирует десна у корня,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_325,чувствую нагноение внутри,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_326,зуб реагирует на ветерок,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_327,надоело от этой боли в щеке,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_328,десна отекает по вечерам,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_329,кровит после каждого приема пищи,anamnesis,symptom,False,urgent,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_330,ноет нижний ряд зубов,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_331,боль простреляет в челюсть,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_332,ребенок плачет из-за зуба,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_333,опухоль на десне не спадает,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_334,зубик чувствительный к кислому,anamnesis,symptom,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_335,ужасно болит при жевании,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_336,десны зудят и саднят,anamnesis,complaint,False,normal,False,,False,,,grok_phase5_audited,simple_symptom_clean
-p5_337,есть брекеты металлические?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_338,чистка ультразвуком делаете?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_339,Есть ли лазерное отбеливание?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_340,лечение каналов под микроскопом возможно?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_341,фибры ставите?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_342,сколько панорамный снимок,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_343,есть услуга установки штифтов,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_344,Скока брекеты сапфировые?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_345,воздушная абразия есть у вас,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_346,профессиональная чистка сколько,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_347,делаете мостовидные протезы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_348,сколько стоит реставрация зуба,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_349,Есть ли несъемные протезы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_350,керамические вкладки ставят?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_351,скока элайнеры,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_352,лечение пародонтита делаете,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_353,векторная чистка есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_354,сколько адгезивные мосты,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_355,делаете ли отбеливание капами,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_356,есть бюгельные протезы,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_357,Сколько стоит пломба световая,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_358,терапия корневых каналов под лупой?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_359,скока стоит трейнеры для прикуса,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_360,лазерное лечение десен делаете,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_361,сколько циркониевые коронки,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_362,Делаете ли селективное шлифование?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_363,гибкие протезы ставите,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_364,скока кт челюсти,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_365,есть миобрейсы,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_366,лечение гингивита возможно,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_367,сколько стоит композитные виниры,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_368,делаете установку диастемных плакеток?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_369,акриловые протезы есть у вас,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_370,Скока стоит фиссурная пломба,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_371,эндодонтия машинными файлами?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_372,есть услуга реминирализации эмали,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_373,сколько брекеты лингвальные,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_374,пластика уздечки делаете,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_375,керамические брекеты ставят?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_376,есть озонирование каналов,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_377,делаете ли ретенционные аппараты,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_378,металлокерамика коронки скока,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_379,есть лазерное вапоризаторное отбеливание?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_380,лечение гиперчувствительности зубов,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_381,Сколько стоит артроскопия ВНЧС,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_382,делаете установку мини-имплантов,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_383,скока аппараты функциональной окклюзии,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_384,есть услуга установки телескопических коронок,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_385,процедура установки кнопочных замков для протезов?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_386,сколько стоит шлифовка зубов,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_387,сколько протезирование на имплантах?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_388,устанавливаете брекеты сапфировые?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_389,возможна чистка ультразвуком?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_390,делаете съемные протезы акриловые?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_391,профилактика для детей есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_392,удаление зубов мудрости под наркозом?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_393,элайнеры прозрачные делаете?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_394,пломбы светоотверждаемые ставят?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_395,резекция корня возможна?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_396,мостовидные мосты на зубы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_397,герметизация фиссур у вас?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_398,лингвальные брекеты ставите?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_399,фторирование эмали делают?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_400,адгезивные мосты возможны?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_401,сколько одноэтапные импланты?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_402,пломбирование временное есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_403,кэпинг перед имплантами?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_404,самолигирующие брекеты?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_405,серебрение зубов детям?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_406,артроскопия челюсти есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_407,реконструкция десны?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_408,миниимпланты ставят?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_409,шлифовка для брекетов?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_410,У вас есть услуга установки коронок из циркония?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_411,возможно лечение пародонтита?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_412,металлокерамика на зубы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_413,аппликации кальция делают?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_414,дискотомия челюсти?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_415,гибкие протезы есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_416,активированное отбеливание?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_417,пластика уздечки языка?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_418,скобы на зубы ставите?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_419,делаете ли реставрацию композитами?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_420,есть ли услуга трейнеров для челюсти?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_421,подгонка капы ночной?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_422,иммобилизация зуба?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_423,оксид циркония коронки?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_424,магнитные замки на протезы?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_425,фибровые штифты ставят?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_426,миотерапия для детей?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_427,телемикроскопия есть?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_428,кальцификация каналов?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_429,телескопические коронки?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_430,суперэластичные дуги для брекетов?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_431,пародонтальный скейлинг?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_432,обточка под коронку?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_433,штифтование корневых каналов?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_434,есть ли услуга установки кнопочных замков?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_435,клампы на протез?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple
-p5_436,реминирализация эмали?,faq,general,False,normal,False,,False,,,grok_phase5_audited,entity_held_out_simple

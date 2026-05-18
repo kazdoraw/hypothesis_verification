@@ -312,9 +312,13 @@ def _bca_quantiles(
 
 METRICS: dict[str, MetricFn] = {
     "macro_f1": macro_f1_metric,
-    "recall_anamnesis": recall_anamnesis_metric,
     "recall_urgent": recall_urgent_metric,
 }
+# `recall_anamnesis_metric` остаётся как функция для in-process использования
+# (см. d1/scripts/error_taxonomy.py при необходимости), но из METRICS
+# словаря исключена: для сравнения моделей достаточно macro_f1
+# (на test/hard_test) и recall_urgent (на safety_set). См. cleanup-релиз
+# 2026-05-11.
 
 
 __all__ = [

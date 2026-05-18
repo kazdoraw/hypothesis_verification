@@ -28,7 +28,6 @@ seed_128,На сколько месяцев рассрочка?,faq,price,False,
 seed_129,Цена снятия брекетов?,faq,price,False,normal,False,,False,,,seed,seed_129
 seed_131,Сколько стоит снимок зуба?,faq,price,False,normal,False,,False,,,seed,seed_131
 seed_143,Какой телефон клиники?,faq,clinic_info,False,normal,False,,False,,,seed,seed_143
-seed_144,Работаете в воскресенье?,faq,clinic_info,False,normal,False,,False,,,seed,seed_144
 seed_145,Есть ли у вас лицензия?,faq,clinic_info,False,normal,False,,False,,,seed,seed_145
 seed_150,Даёте гарантию на лечение?,faq,clinic_info,False,normal,False,,False,,,seed,seed_150
 seed_168,Какой стаж у хирурга?,faq,doctor_info,False,normal,False,,False,,,seed,seed_168
@@ -50,9 +49,7 @@ seed_247,Нужна срочная запись,booking,new_appointment,True,urg
 seed_252,Запишите на ближайшее время,booking,new_appointment,True,normal,False,,False,,,seed,seed_252
 seed_261,Перенесите на следующую неделю,booking,reschedule,True,normal,False,,False,,,seed,seed_261
 seed_266,Хочу на другой день,booking,reschedule,True,normal,False,,False,,,seed,seed_266
-seed_270,Не получается прийти завтра,booking,reschedule,True,normal,False,,False,,,seed,seed_270
 seed_281,Давайте лучше в пятницу,booking,reschedule,True,normal,False,,False,,,seed,seed_281
-seed_287,Не приду завтра,booking,cancel,False,normal,False,,False,,,seed,seed_287
 seed_293,Отменяю запись на среду,booking,cancel,False,normal,False,,False,,,seed,seed_293
 seed_296,Не смогу прийти на приём,booking,cancel,False,normal,False,,False,,,seed,seed_296
 seed_297,Отменить запись ребёнка,booking,cancel,False,normal,False,,False,,,seed,seed_297
@@ -62,13 +59,10 @@ seed_317,Расскажи анекдот,unsupported,offtopic,False,normal,True,
 seed_319,Закажи мне пиццу,unsupported,offtopic,False,normal,True,,False,,,seed,seed_319
 seed_328,Сколько будет 2+2?,unsupported,offtopic,False,normal,True,,False,,,seed,seed_328
 seed_334,Поиграем?,unsupported,offtopic,False,normal,True,,False,,,seed,seed_334
-seed_337,Добрый день,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_337
 seed_342,Добрый вечер,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_342
-seed_352,Здрасте,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_352
 seed_355,Кто-нибудь на связи?,unsupported,greeting_only,False,normal,False,,False,,,seed,seed_355
 seed_361,До скорого,unsupported,farewell_only,False,normal,False,,False,,,seed,seed_361
 seed_364,"Всё, пока",unsupported,farewell_only,False,normal,False,,False,,,seed,seed_364
-seed_365,Хорошего дня,unsupported,farewell_only,False,normal,False,,False,,,seed,seed_365
 seed_369,"Ок, спасибо",unsupported,farewell_only,False,normal,False,,False,,,seed,seed_369
 seed_376,Ааа,unsupported,unclear_short,False,normal,False,,False,,,seed,seed_376
 seed_383,Ага,unsupported,unclear_short,False,normal,False,,False,,,seed,seed_383
@@ -153,7 +147,6 @@ var_seed_031_5d7f3e,на футболе мячом в челюсть попал�
 var_seed_031_284256,споткнулся дома ударился зубом стал розовый помагите старику,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_031
 var_seed_031_1f9f4f,дверью на работе врезало в зуб теперь розоватый чую беду,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_031
 var_seed_031_de847a,после удара зуб розовый стал,anamnesis,symptom,False,normal,False,,False,,normal,grok_variation,seed_031
-var_seed_033_9c8047,шишка на десне,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_033
 var_seed_033_e4cbfa,свищ вылез чот,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_033
 var_seed_033_90eab6,десна гнойник,anamnesis,symptom,False,normal,False,,False,,hurried,grok_variation,seed_033
 var_seed_033_2dfe3c,у сына 6 лет на десне свищ выскочил вчера упал ударился,anamnesis,symptom,False,normal,False,,False,,contextual,grok_variation,seed_033
@@ -333,7 +326,6 @@ var_seed_143_0af2e2,на работе сижу сайт не открывает 
 var_seed_143_347fee,мама с коляской стою у метро не вижу номер телефона клиники дайте позвонить,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_143
 var_seed_143_181939,едем из другого города телефон клиники скажите заранее чтобы не потеряться,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_143
 var_seed_143_19b958,вчера был на приёме потерял визитку телефон клиники напомните пожалуйста,faq,clinic_info,False,normal,False,,False,,contextual,grok_variation,seed_143
-var_seed_143_5bad4d,подскажите телефон клиники,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_143
 var_seed_143_9eb074,какой у вас номер телефона,faq,clinic_info,False,normal,False,,False,,normal,grok_variation,seed_143
 var_seed_144_b51b51,воскресенье работаете?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_144
 var_seed_144_ad2ea8,в вск открыты?,faq,clinic_info,False,normal,False,,False,,hurried,grok_variation,seed_144
@@ -398,7 +390,6 @@ var_seed_190_0896b5,кто у вас эстетику делает,faq,doctor_in
 var_seed_190_e05c90,подскажите врача по эстетике,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_190
 var_seed_190_3c9453,кто специалист эстетика зубов,faq,doctor_info,False,normal,False,,False,,normal,grok_variation,seed_190
 var_seed_194_2f3120,хирург по имплантам есть,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_194
-var_seed_194_dd69ce,имплант кто ставит у вас,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_194
 var_seed_194_8e7679,есть спец на имплантацию,faq,doctor_info,False,normal,False,,False,,hurried,grok_variation,seed_194
 var_seed_194_5be1b8,потерял передний зуб нужен имплант а хирурга у вас есть кто опытный,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_194
 var_seed_194_96857d,на работе травма зуб сломал теперь имплант думает есть ли хирург для этого,faq,doctor_info,False,normal,False,,False,,contextual,grok_variation,seed_194
@@ -497,7 +488,6 @@ var_seed_252_7b1778,работаю до ночи запишите на утро 
 var_seed_252_c009dd,ребёнку 4 года после сада запиши на вечер ближайший,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_252
 var_seed_252_40c4b2,в командировке до пятницы нужно на субботу самое раннее,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_252
 var_seed_252_0dd281,свадьба жены на носу запишите меня на сегодня или завтра утро,booking,new_appointment,True,normal,False,,False,,contextual,grok_variation,seed_252
-var_seed_252_8e8783,можно на завтра?,booking,new_appointment,True,normal,False,,False,,normal,grok_variation,seed_252
 var_seed_261_22f58b,сдвиньте на след нед,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_261
 var_seed_261_b24232,перенос на следнюю неделю,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_261
 var_seed_261_c08d8f,на след нед меня,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_261
@@ -516,7 +506,6 @@ var_seed_266_c69573,на работе аврал завтра не выйдет 
 var_seed_266_082e7c,собака родила срочно нужен другой день вместо субботы,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_266
 var_seed_266_b2c50f,можно на другой день перенести,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_266
 var_seed_266_de6d2c,подскажите перенос даты,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_266
-var_seed_270_dbec92,завтра не смогу,booking,reschedule,True,normal,False,,False,,hurried,grok_variation,seed_270
 var_seed_270_52229c,на работе задержусь не могу завтра перенесите на вечер пятницы,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_270
 var_seed_270_966dfb,дочке плохо не приеду завтра запишите на субботу пожалуйста,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_270
 var_seed_270_20dbd6,пробки будут огромные завтра не доберусь на когда можно отложить,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_270
@@ -527,26 +516,18 @@ var_seed_281_faeea0,в четверг не могу на работе допоз
 var_seed_281_6a66c9,ребёнку записали на завтра но у него кружок лучше пятницу после обеда,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_281
 var_seed_281_e59e15,заболел сын не придём в среду давайте пятницу утром перенести,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_281
 var_seed_281_8545c5,в будни некогда пятница подойдёт свободно есть на вечер,booking,reschedule,True,normal,False,,False,,contextual,grok_variation,seed_281
-var_seed_281_b0e7d8,можно на пятницу перенести,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_281
 var_seed_281_6108da,предпочитаю пятницу,booking,reschedule,True,normal,False,,False,,normal,grok_variation,seed_281
-var_seed_287_63c3e5,завтра не иду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_287
 var_seed_287_167681,отмена завт,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_287
-var_seed_287_53ad82,ребёнок температурит завтра не сможем на приём прийти отмените,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_287
 var_seed_287_4b8b18,на работе завал завтра не вырвусь отменить запись на завтра,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_287
 var_seed_287_8964b9,дочка упала разбила губу завтра боится идти отмените нам,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_287
-var_seed_287_aa4e2e,отмените запись на завтра пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_287
 var_seed_293_8e55bc,отмена на среду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_293
 var_seed_293_3248a9,не приду среду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_293
-var_seed_293_cfb424,заболела отмените запись на среду не смогу дойти,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_293
 var_seed_293_4a4cb0,ребенку плохо не придем в среду срочно отмените,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_293
 var_seed_293_4ec3c2,на работе задержка отменяю приём на среду блин,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_293
 var_seed_293_1f2fd3,вылет опоздал не успею отмените мою на среду пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_293
 var_seed_293_0e85c9,отмените запись на среду пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_293
 var_seed_293_f4e883,хочу отменить на среду,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_293
-var_seed_296_546b5b,не приду,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_296
-var_seed_296_c5358d,ребёнок температурит не сможем завтра прийти отмените пожалуйста,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_296
 var_seed_296_5311a9,сессия сдвинулась не вырвусь в четверг снимите меня с записи,booking,cancel,False,normal,False,,False,,contextual,grok_variation,seed_296
-var_seed_296_b7734e,отмените мою запись на завтра,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_296
 var_seed_296_f9863e,снимите с приёма пожалуйста,booking,cancel,False,normal,False,,False,,normal,grok_variation,seed_296
 var_seed_297_aa589b,отмените дочку,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_297
 var_seed_297_595279,ребёнка не приведу,booking,cancel,False,normal,False,,False,,hurried,grok_variation,seed_297
@@ -599,9 +580,7 @@ var_seed_396_8f62dd,привела дочку вчера ждали час вр�
 var_seed_396_5932fb,на работе срочно пошёл к вам потерял время врач опоздал и грубо всё сделал,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_396
 var_seed_396_7605fe,читала отзывы пришла а тут грязно инструменты не стерильные страшно стало,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_396
 var_seed_396_0f20c4,мужа водила пломбу поставили а она на следующий день выпала деньги на ветер,unsupported,feedback,False,normal,False,,True,,contextual,grok_variation,seed_396
-var_seed_396_d69ecd,очень разочарован клиникой,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_396
 var_seed_396_634a65,плохое обслуживание у вас,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_396
-var_seed_396_6b37ba,не доволен приёмом был,unsupported,feedback,False,normal,False,,True,,normal,grok_variation,seed_396
 var_seed_400_8bc715,крутая клиника,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_400
 var_seed_400_bad81a,всем советую вас,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_400
 var_seed_400_7c4b9f,топ рекомендую,unsupported,feedback,False,normal,False,,True,,hurried,grok_variation,seed_400

@@ -1,7 +1,0 @@
-eval_set,router,n,coverage,accepted_accuracy,accepted_recall_anam,defer_rate,complexity_defer_rate,tag_policy_defer_rate,hybrid_defer_rate,false_negative_deferred
-val,SimpleRouter[ComplexityGate->B4],351,0.698,0.8735,0.9873,0.302,0.1595,0.0228,0.1197,16
-test,SimpleRouter[ComplexityGate->B4],730,0.7192,0.9162,0.9718,0.2808,0.1219,0.0123,0.1466,39
-hard_test,SimpleRouter[ComplexityGate->B4],355,0.6085,0.8194,0.9355,0.3915,0.2535,0.0338,0.1042,104
-blind_test,SimpleRouter[ComplexityGate->B4],40,0.8,0.9062,0.9,0.2,0.075,0.025,0.1,2
-entity_held_out,SimpleRouter[ComplexityGate->B4],100,0.63,0.873,0.7895,0.37,0.19,0.0,0.18,10
-extended_eval,SimpleRouter[ComplexityGate->B4],101,0.5842,0.7627,0.0,0.4158,0.1188,0.0297,0.2673,0

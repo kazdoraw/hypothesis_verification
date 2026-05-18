@@ -9,11 +9,31 @@ import time
 from typing import Any, Literal
 
 import numpy as np
+from collections import Counter
+
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
+
+# Дефолтное число fold-ов для CalibratedClassifierCV. На реальном train
+# (~2K на 4 класса) cv=5 устойчивее, чем cv=3; smoke-тесты с микро-train
+# фоллбекают через `_adaptive_cv` до minимально-валидного значения.
+_DEFAULT_CALIBRATION_CV = 5
+
+
+def _adaptive_cv(labels: list[str], requested: int = _DEFAULT_CALIBRATION_CV) -> int:
+    """Возвращает min(requested, count_of_smallest_class).
+
+    sklearn-CalibratedClassifierCV требует ``cv ≤ min_samples_per_class``.
+    Без этого fallback тесты с micro-train (< requested примеров на класс)
+    падают с ValueError.
+    """
+    if not labels:
+        return 2
+    min_count = min(Counter(labels).values())
+    return max(2, min(requested, min_count))
 
 
 # Параметры по умолчанию
@@ -26,16 +46,19 @@ _DEFAULT_TFIDF_PARAMS: dict[str, Any] = {
     "max_features": 50_000,
 }
 
+# NOTE: class_weight='balanced' убрано из дефолтов после аудита 2026-05-11.
+# Train сильно дисбалансен (faq:anam:booking:unsupported ≈ 3.1:2.8:2.2:1.0),
+# balanced разгоняет prior для минорных классов и снижает recall_anamnesis
+# на anamnesis-heavy eval-сетах (safety_set, hard_test). Включается по
+# желанию через head_params={"class_weight": "balanced"}.
 _DEFAULT_SVC_PARAMS: dict[str, Any] = {
     "C": 1.0,
     "max_iter": 5000,
-    "class_weight": "balanced",
 }
 
 _DEFAULT_LR_PARAMS: dict[str, Any] = {
     "C": 1.0,
     "max_iter": 2000,
-    "class_weight": "balanced",
     "solver": "lbfgs",
 }
 
@@ -59,25 +82,34 @@ class B1TfidfClassifier:
         calibrate: bool = True,
     ):
         self.head_type = head_type
-        tfidf_kw = {**_DEFAULT_TFIDF_PARAMS, **(tfidf_params or {})}
-
-        if head_type == "logistic":
-            lr_kw = {**_DEFAULT_LR_PARAMS, **(head_params or {})}
-            clf = LogisticRegression(**lr_kw)
-        else:
-            svc_kw = {**_DEFAULT_SVC_PARAMS, **(head_params or {})}
-            base_svc = LinearSVC(**svc_kw)
-            clf = CalibratedClassifierCV(base_svc, cv=3, method="sigmoid") if calibrate else base_svc
-
-        self.pipeline = Pipeline([
-            ("tfidf", TfidfVectorizer(**tfidf_kw)),
-            ("clf", clf),
-        ])
+        self.calibrate = calibrate
+        self.tfidf_params = tfidf_params or {}
+        self.head_params = head_params or {}
+        self._tfidf_kw = {**_DEFAULT_TFIDF_PARAMS, **self.tfidf_params}
+        self.pipeline: Pipeline | None = None
         self._is_fitted = False
         self.train_time_ms: float = 0.0
 
+    def _build_head(self, labels: list[str]):
+        """Строит классификатор с адаптивным cv для CalibratedClassifierCV."""
+        if self.head_type == "logistic":
+            lr_kw = {**_DEFAULT_LR_PARAMS, **self.head_params}
+            return LogisticRegression(**lr_kw)
+        svc_kw = {**_DEFAULT_SVC_PARAMS, **self.head_params}
+        base_svc = LinearSVC(**svc_kw)
+        if not self.calibrate:
+            return base_svc
+        return CalibratedClassifierCV(
+            base_svc, cv=_adaptive_cv(labels), method="sigmoid",
+        )
+
     def fit(self, texts: list[str], labels: list[str]) -> None:
         """Обучение на train данных."""
+        clf = self._build_head(labels)
+        self.pipeline = Pipeline([
+            ("tfidf", TfidfVectorizer(**self._tfidf_kw)),
+            ("clf", clf),
+        ])
         t0 = time.perf_counter()
         self.pipeline.fit(texts, labels)
         self.train_time_ms = (time.perf_counter() - t0) * 1000

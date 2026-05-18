@@ -26,10 +26,12 @@ if str(_STUDY_ROOT) not in sys.path:
 from d1.config import (
     DATA_DIR,
     DATASET_PREFIX,
-    EMBEDDING_MODEL_PRIMARY,
     LEAKAGE_COSINE_THRESHOLD,
     resolve_model_path,
 )
+
+# Согласован с dense baseline B2.1 (BGE-M3).
+_LEAKAGE_EMBEDDING_MODEL = "BAAI/bge-m3"
 
 logger = logging.getLogger(__name__)
 
@@ -48,6 +50,28 @@ def load_split(name: str) -> pd.DataFrame:
         logger.warning("Split не найден: %s", path)
         return pd.DataFrame()
     return pd.read_csv(path, dtype=str).fillna("")
+
+
+def check_within_train_duplicates(splits: dict[str, pd.DataFrame]) -> int:
+    """Точные дубликаты текста ВНУТРИ train.
+
+    Дубликат внутри train (например, две вариации с одинаковым нормализованным
+    текстом из разных seed-семей) даёт «двойной» вклад в loss и искажает
+    эффективный размер train. Должно быть 0 после `split_dataset.dedup_within_train`.
+    """
+    train = splits.get("train")
+    if train is None or train.empty:
+        return 0
+    norm = train["text"].astype(str).str.strip().str.lower()
+    dup_mask = norm.duplicated(keep=False)
+    n_dups = int(dup_mask.sum())
+    if n_dups:
+        logger.error("WITHIN-TRAIN DUP: %d строк имеют точный дубль текста внутри train", n_dups)
+        for text in sorted(set(norm[dup_mask]))[:5]:
+            logger.error("  '%s'", text[:80])
+        return n_dups
+    logger.info("OK: within-train exact dups = 0")
+    return 0
 
 
 def check_seed_overlap(splits: dict[str, pd.DataFrame]) -> int:
@@ -113,7 +137,7 @@ def check_cosine_leakage(
     """
     from sentence_transformers import SentenceTransformer
 
-    model = SentenceTransformer(resolve_model_path(EMBEDDING_MODEL_PRIMARY))
+    model = SentenceTransformer(resolve_model_path(_LEAKAGE_EMBEDDING_MODEL))
     issues = 0
 
     for split_a, split_b in _PAIRS_TO_CHECK:
@@ -189,11 +213,13 @@ def run_audit(threshold: float = LEAKAGE_COSINE_THRESHOLD) -> dict[str, int]:
     print("D1 v6 Leakage Audit")
     print("=" * 50)
 
+    within_train_issues = check_within_train_duplicates(splits)
     seed_issues = check_seed_overlap(splits)
     dup_issues = check_exact_duplicates(splits)
     cosine_issues = check_cosine_leakage(splits, threshold)
 
     results = {
+        "within_train_dups": within_train_issues,
         "seed_overlap": seed_issues,
         "exact_duplicates": dup_issues,
         "cosine_leakage": cosine_issues,

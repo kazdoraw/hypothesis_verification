@@ -65,12 +65,6 @@ MAX_TOKENS_VARIATION = 1500
 COSINE_DEDUP_THRESHOLD = 0.85  # внутри домена: similarity > порога → дубль
 
 # ---------------------------------------------------------------------------
-# Embedding модели для baselines
-# ---------------------------------------------------------------------------
-EMBEDDING_MODEL_PRIMARY = "ai-forever/ru-en-RoSBERTa"
-EMBEDDING_MODEL_COMPARISON = "paraphrase-multilingual-MiniLM-L12-v2"
-
-# ---------------------------------------------------------------------------
 # Параметры split
 # ---------------------------------------------------------------------------
 SPLIT_RANDOM_STATE = 42

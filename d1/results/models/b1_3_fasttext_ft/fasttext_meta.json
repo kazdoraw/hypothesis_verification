@@ -13,6 +13,6 @@
     "minCount": 1,
     "thread": 1
   },
-  "train_size": 2606,
-  "train_time_ms": 315.87862499873154
+  "train_size": 2140,
+  "train_time_ms": 236.35687500001268
 }

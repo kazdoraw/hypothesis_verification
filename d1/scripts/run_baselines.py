@@ -136,15 +136,9 @@ def run_all_baselines(
     # присутствовать в этом списке (проверяется в run-time ниже).
     _BASELINE_ORDER = [
         "B0_rules",
-        "B1_tfidf_svc",
         "B1.1_tfidf_lr",
-        "B1.2_tfidf_lr_tuned",
         "B1.3_fasttext",
-        "B2_bge-m3_linear",
         "B2.1_bge-m3_svc",
-        "B2.2_bge-m3_centroid",
-        "B2.3_bge-m3_linear_tuned",
-        "B2.4_e5-small_linear",
         "B2.5_e5-small_svc",
     ]
     # Защита от drift: если enabled baseline добавлен в конфиг, но забыт
@@ -292,10 +286,12 @@ def save_results(
         print(f"{'='*80}")
         summary_cols = [
             "eval_set", "baseline", "accuracy", "macro_f1",
-            "balanced_accuracy", "recall_anamnesis", "latency_ms",
+            "balanced_accuracy", "false_faq_for_anamnesis",
         ]
         existing_cols = [c for c in summary_cols if c in df.columns]
         print(df[existing_cols].to_string(index=False))
+        print("  Latency — d1/results/latency_breakdown.csv (n=100, repeats=5)")
+        print("  recall_urgent / FN / misrouted — d1/results/safety_results.csv (safety_set n=87)")
 
     if safety_reports:
         print(f"\n{'='*80}")
@@ -346,9 +342,9 @@ def _save_switch_results(
                 "n_samples": sr.n_samples,
                 "route_accuracy": round(sr.route_accuracy, 4),
             }
-            if sr.latency_ms is not None:
-                row["latency_ms"] = round(sr.latency_ms, 2)
-            # Разворачиваем ключевые transition'ы в отдельные колонки (по алфавиту)
+            # latency_ms намеренно не пишем: источник истины
+            # latency_breakdown.csv (n=100, repeats=5). Inline-замер во
+            # время switch_test (n=38) шумный и вводит в заблуждение.
             for key in sorted(sr.per_transition):
                 row[f"acc__{key}"] = round(
                     sr.per_transition[key]["accuracy"], 4,

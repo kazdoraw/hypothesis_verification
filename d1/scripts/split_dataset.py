@@ -3,6 +3,22 @@
 Использует GroupShuffleSplit для разделения так, чтобы все вариации
 одного seed оказались в одном split (предотвращение data leakage).
 
+Anti-leakage pipeline (cleanup-релиз 2026-05-11):
+1. Group-aware split по `seed_id` — все вариации одного семантического
+   зерна остаются в одном split.
+2. `dedup_within_train` — exact-text дедуп внутри train.
+3. `dedup_cross_splits` — exact-text дедуп между disjoint primary splits
+   (train > val > test > hard_test > blind_test > switch_test > extended_eval).
+4. `dedup_cross_splits_cosine` — семантический cosine-дедуп (BGE-M3,
+   threshold=`LEAKAGE_COSINE_THRESHOLD` = 0.92) для тех же пар: ловит
+   парафразы (порядок слов, опечатки, синонимы), которые exact-dedup
+   пропускает.
+5. `refresh_subset_views` — пересборка `safety_set` (⊂ hard_test) и
+   `entity_held_out` (⊂ test) после dedup родителей.
+
+Гарантия после run_split: `leakage_audit.run_audit()` показывает
+`cosine_leakage=0` при том же пороге 0.92.
+
 Выход:
   - d1/data/d1_v6_{full,train,val,test,hard_test,switch_test}.csv
   - d1/data/d1_v6_safety_set.csv (ургентные случаи)
@@ -18,10 +34,12 @@ import argparse
 import json
 import logging
 import random
+import re
 import sys
 from collections import Counter
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import yaml
 
@@ -36,11 +54,20 @@ from d1.config import (
     ENTITY_HELD_OUT,
     EXTENDED_FAQ_CATEGORIES,
     HARD_CASES_FILE,
+    LEAKAGE_COSINE_THRESHOLD,
     SPLIT_RANDOM_STATE,
     TEST_RATIO,
     VAL_RATIO,
+    resolve_model_path,
 )
-from utils.taxonomy_v6 import ROUTE_DOMAINS
+
+# Согласован с dense baseline B2.1 и leakage_audit.py.
+_DEDUP_EMBEDDING_MODEL = "BAAI/bge-m3"
+
+# Локальная константа доменов: utils.taxonomy_v6 был удалён в прошлой
+# чистке. Семантический контракт — четыре закрытых класса route_domain
+# (см. d1/ontology/route_domain.yaml).
+ROUTE_DOMAINS: tuple[str, ...] = ("anamnesis", "faq", "booking", "unsupported")
 
 logger = logging.getLogger(__name__)
 
@@ -279,6 +306,187 @@ def separate_extended_cases(
     return core_df, extended_df
 
 
+# Унифицированная нормализация текста для text-level dedup между splits.
+# Цель — поймать «одинаковые до пунктуации/регистра/пробелов» примеры,
+# которые LLM-аугментация может породить из разных seed-семей.
+_DEDUP_PUNCT_RE = re.compile(r"[^\w\s]", flags=re.UNICODE)
+_DEDUP_WS_RE = re.compile(r"\s+")
+
+
+def _normalize_for_dedup(text: str) -> str:
+    """lower → strip → удалить пунктуацию → схлопнуть whitespace."""
+    if text is None:
+        return ""
+    normalized = str(text).lower().strip()
+    normalized = _DEDUP_PUNCT_RE.sub(" ", normalized)
+    normalized = _DEDUP_WS_RE.sub(" ", normalized).strip()
+    return normalized
+
+
+def dedup_within_train(train_df: pd.DataFrame) -> pd.DataFrame:
+    """Удаляет точные/near-exact дубликаты текста ВНУТРИ train.
+
+    Дубликаты при обучении дают «двойной» вклад в loss и искажают priors
+    классов. Оставляем первое вхождение каждой нормализованной строки.
+    """
+    if train_df.empty:
+        return train_df
+
+    norm = train_df["text"].apply(_normalize_for_dedup)
+    keep_mask = ~norm.duplicated(keep="first")
+    n_before = len(train_df)
+    train_df = train_df[keep_mask].reset_index(drop=True)
+    n_removed = n_before - len(train_df)
+    if n_removed:
+        logger.warning(
+            "Train text-dedup: удалено %d дубликатов (из %d → %d)",
+            n_removed, n_before, len(train_df),
+        )
+    else:
+        logger.info("Train text-dedup: дубликатов не найдено")
+    return train_df
+
+
+def dedup_cross_splits(splits: dict[str, pd.DataFrame]) -> dict[str, pd.DataFrame]:
+    """Удаляет текстовые дубликаты МЕЖДУ disjoint primary splits.
+
+    Политика: train неприкосновенен (это источник обучения), а каждый
+    последующий disjoint primary split проверяется против всех «более
+    ранних» в фиксированном порядке. ВАЖНО: `safety_set` и
+    `entity_held_out` — это subsets (view) от `hard_test` и `test`
+    соответственно (см. `extract_safety_set`, `separate_entity_seeds`).
+    Их не нужно отдельно дедупить — они автоматически очищаются вместе
+    со своими «родителями» через `_refresh_subset_views`.
+
+    Порядок приоритета primary splits (от высокого к низкому):
+        train > val > test > hard_test > blind_test > switch_test
+        > extended_eval
+
+    Returns:
+        dict с обновлёнными DataFrame.
+    """
+    primary_priority = [
+        "train", "val", "test", "hard_test",
+        "blind_test", "switch_test", "extended_eval",
+    ]
+
+    seen_texts: set[str] = set()
+    for name in primary_priority:
+        df = splits.get(name)
+        if df is None or df.empty:
+            continue
+        norm = df["text"].apply(_normalize_for_dedup)
+        keep_mask = ~norm.isin(seen_texts)
+        n_before = len(df)
+        df_clean = df[keep_mask].reset_index(drop=True)
+        n_removed = n_before - len(df_clean)
+        if n_removed:
+            logger.warning(
+                "Cross-split text-dedup: из %s удалено %d строк (пересечение с более приоритетными сетами)",
+                name, n_removed,
+            )
+        splits[name] = df_clean
+        seen_texts.update(norm[keep_mask].tolist())
+
+    return splits
+
+
+def dedup_cross_splits_cosine(
+    splits: dict[str, pd.DataFrame],
+    threshold: float = LEAKAGE_COSINE_THRESHOLD,
+) -> dict[str, pd.DataFrame]:
+    """Удаляет семантические near-duplicates между disjoint primary splits.
+
+    Дополняет `dedup_cross_splits` (exact-text): LLM-аугментация даёт
+    парафразы (порядок слов, опечатки, синонимы), которые exact-dedup не
+    ловит, но которые при cos ≥ 0.92 фактически переносят train-пример
+    в test и завышают метрики на 1–3 пп.
+
+    Тот же приоритет, что у `dedup_cross_splits`:
+        train > val > test > hard_test > blind_test > switch_test > extended_eval
+
+    Для каждой строки `B` считается max-cosine ко всем уже принятым
+    splits (накопительно, чтобы поймать val↔train, test↔(train∪val) и т. д.).
+    Если max-cos ≥ threshold — строка удаляется из `B`.
+
+    Subset-views (`safety_set`, `entity_held_out`) не трогаются здесь —
+    они пересобираются `refresh_subset_views()` после.
+    """
+    primary_priority = [
+        "train", "val", "test", "hard_test",
+        "blind_test", "switch_test", "extended_eval",
+    ]
+
+    relevant_names = [
+        name for name in primary_priority
+        if name in splits and not splits[name].empty
+    ]
+    if len(relevant_names) < 2:
+        logger.info("Cross-split cosine-dedup: меньше двух непустых splits, пропуск")
+        return splits
+
+    from sentence_transformers import SentenceTransformer
+
+    logger.info(
+        "Cross-split cosine-dedup: модель=%s, threshold=%.2f, splits=%s",
+        _DEDUP_EMBEDDING_MODEL, threshold, relevant_names,
+    )
+    model = SentenceTransformer(resolve_model_path(_DEDUP_EMBEDDING_MODEL))
+
+    embeddings: dict[str, np.ndarray] = {}
+    for name in relevant_names:
+        texts = splits[name]["text"].astype(str).tolist()
+        embeddings[name] = model.encode(
+            texts, normalize_embeddings=True, show_progress_bar=False,
+        )
+
+    kept_names: list[str] = []
+    for name in relevant_names:
+        if not kept_names:
+            kept_names.append(name)
+            continue
+
+        emb_current = embeddings[name]
+        max_sims = np.zeros(emb_current.shape[0], dtype=np.float32)
+        for prior in kept_names:
+            sim = emb_current @ embeddings[prior].T
+            max_sims = np.maximum(max_sims, sim.max(axis=1))
+
+        keep_mask = max_sims < threshold
+        n_before = len(splits[name])
+        n_removed = int((~keep_mask).sum())
+        if n_removed:
+            logger.warning(
+                "Cross-split cosine-dedup: из %s удалено %d строк (cos ≥ %.2f с более приоритетными сетами)",
+                name, n_removed, threshold,
+            )
+            splits[name] = splits[name][keep_mask].reset_index(drop=True)
+            embeddings[name] = emb_current[keep_mask]
+        else:
+            logger.info(
+                "Cross-split cosine-dedup: %s — без удалений (max_sim=%.3f < %.2f)",
+                name, float(max_sims.max()) if max_sims.size else 0.0, threshold,
+            )
+        kept_names.append(name)
+
+    return splits
+
+
+def refresh_subset_views(
+    splits: dict[str, pd.DataFrame],
+) -> dict[str, pd.DataFrame]:
+    """Пересоздаёт subset-views после dedup primary splits.
+
+    `safety_set` ⊂ `hard_test` (urgent/emergency anamnesis) и
+    `entity_held_out` ⊂ `test` (rows с unseen entities) могут «исчезнуть»,
+    если их родители прошли dedup. Чтобы метрики safety/entity_held_out
+    остались валидными, пересобираем их после text-dedup.
+    """
+    if "hard_test" in splits:
+        splits["safety_set"] = extract_safety_set(splits["hard_test"])
+    return splits
+
+
 def check_class_balance(df: pd.DataFrame, name: str, min_pct: float = 0.05) -> None:
     """Проверка минимального баланса классов."""
     counts = df["route_domain"].value_counts(normalize=True)
@@ -358,7 +566,13 @@ def run_split() -> dict[str, pd.DataFrame]:
     # 7. Blind test (human-written)
     blind_test_df = load_blind_test()
 
-    # Сохранение CSV
+    # 8. Anti-leakage пайплайн (4 шага):
+    #    8a. exact-text dedup внутри train
+    #    8b. exact-text dedup между disjoint primary splits (по приоритету)
+    #    8c. cosine-dedup BGE-M3 (threshold=0.92) между теми же splits
+    #    8d. refresh subset-views (safety_set, entity_held_out)
+    train_df = dedup_within_train(train_df)
+
     splits = {
         "full": full_df,
         "core": core_df,
@@ -371,7 +585,19 @@ def run_split() -> dict[str, pd.DataFrame]:
         "switch_test": switch_test_df,
         "extended_eval": extended_df,
     }
+    splits = dedup_cross_splits(splits)
+    splits = dedup_cross_splits_cosine(splits)
+    splits = refresh_subset_views(splits)
+    train_df = splits["train"]
+    val_df = splits["val"]
+    test_df = splits["test"]
+    hard_test_df = splits["hard_test"]
+    safety_set_df = splits["safety_set"]
+    blind_test_df = splits["blind_test"]
+    switch_test_df = splits["switch_test"]
+    extended_df = splits["extended_eval"]
 
+    # Сохранение CSV
     for name, df in splits.items():
         path = DATA_DIR / f"{DATASET_PREFIX}_{name}.csv"
         df.to_csv(path, index=False, encoding="utf-8")

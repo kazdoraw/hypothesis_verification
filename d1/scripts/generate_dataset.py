@@ -42,7 +42,6 @@ from d1.config import (
     COSINE_DEDUP_THRESHOLD,
     CSV_COLUMNS,
     DATA_DIR,
-    EMBEDDING_MODEL_PRIMARY,
     MAX_TOKENS_VARIATION,
     MIN_VARIATIONS_WARN,
     PROMPTS_DIR,
@@ -53,6 +52,9 @@ from d1.config import (
     VARIATIONS_PER_SEED,
     resolve_model_path,
 )
+
+# Тот же encoder, что в B2EmbeddingClassifier по умолчанию (BGE-M3).
+_DEDUP_EMBEDDING_MODEL = "BAAI/bge-m3"
 from utils.openrouter_client import OpenRouterClient
 
 logger = logging.getLogger(__name__)
@@ -140,7 +142,7 @@ def deduplicate_by_similarity(
     if not rows:
         return rows
 
-    model = SentenceTransformer(resolve_model_path(EMBEDDING_MODEL_PRIMARY))
+    model = SentenceTransformer(resolve_model_path(_DEDUP_EMBEDDING_MODEL))
     texts = [r["text"] for r in rows]
     embeddings = model.encode(texts, normalize_embeddings=True, show_progress_bar=True)
 

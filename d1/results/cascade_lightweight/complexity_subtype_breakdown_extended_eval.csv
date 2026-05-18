@@ -1,7 +1,0 @@
-tag,n,n_accept,n_defer_complexity,n_defer_tag_policy,n_defer_ml,accepted_accuracy,accepted_recall_anamnesis
-mixed_intent,1,0,1,0,0,0.0,0.0
-short_ambiguous,11,0,11,0,0,0.0,0.0
-simple_booking,3,2,1,0,0,0.0,0.0
-simple_faq,1,1,0,0,0,1.0,0.0
-simple_symptom,8,1,0,3,4,0.0,0.0
-symptom_doctor,1,0,1,0,0,0.0,0.0

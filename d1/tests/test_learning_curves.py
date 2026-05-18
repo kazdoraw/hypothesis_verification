@@ -69,7 +69,9 @@ def test_run_learning_curves_writes_raw_summary_and_figure(
         def get(self, name: str):
             return _Model()
 
-    def fake_train_bundle(names, use_cache, cache_dir, train_csv_path):
+    def fake_train_bundle(
+        names, use_cache, cache_dir, train_csv_path=None, device_override=None,
+    ):
         assert use_cache is False
         assert train_csv_path is not None
         assert cache_dir is not None

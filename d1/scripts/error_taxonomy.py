@@ -79,9 +79,12 @@ def classify_error_types(row: dict[str, Any] | pd.Series) -> list[str]:
     if len(_tokens(text)) <= 3:
         tags.append("vague_short_error")
 
-    # Disagreement taxonomy: обе модели ошиблись относительно gold.
+    # Both-models-wrong: обе модели ошиблись (любые предсказания, могут
+    # совпадать или нет). Если хотим именно disagreement — отдельный тег.
     if pred_sparse != true_label and pred_dense != true_label:
-        tags.append("both_wrong_disagreement")
+        tags.append("both_wrong")
+        if pred_sparse != pred_dense:
+            tags.append("models_disagree_both_wrong")
 
     if not tags:
         tags.append("generic_error")

@@ -1,6 +1,0 @@
-text_preview,gold,predicted,primary_tag,confidence,margin,reason
-Можно ли записаться онлайн?,faq,booking,simple_booking,0.8813,0.8147,general_confident
-лучший доктор у вас,faq,unsupported,unclassified,0.6541,0.3875,general_confident
-лечила зубы у вас чистку делала нужна справка для налогового вычета дадите,faq,anamnesis,unclassified,0.5647,0.2415,anamnesis_confident
-кто лидер по отзывам,faq,unsupported,unclassified,0.7259,0.5185,general_confident
-можно к вам на первый приём,faq,booking,simple_booking,0.8252,0.7358,general_confident

@@ -99,11 +99,10 @@ class TestRunnableConfigs:
 
         expected = {
             "B0_rules",
-            "B1_tfidf_svc", "B1.1_tfidf_lr", "B1.2_tfidf_lr_tuned",
+            "B1.1_tfidf_lr",
             "B1.3_fasttext",
-            "B2_bge-m3_linear", "B2.1_bge-m3_svc", "B2.2_bge-m3_centroid",
-            "B2.3_bge-m3_linear_tuned",
-            "B2.4_e5-small_linear", "B2.5_e5-small_svc",
+            "B2.1_bge-m3_svc",
+            "B2.5_e5-small_svc",
         }
         assert set(BASELINE_CONFIGS) == expected
 
@@ -115,39 +114,33 @@ class TestRunnableConfigs:
             assert "enabled" in cfg, f"{name}: отсутствует `enabled` флаг"
             assert isinstance(cfg["enabled"], bool)
 
-    def test_phase3_baselines_enabled(self) -> None:
-        """Контракт Phase 3 (2026-05-01): новые baseline'ы все enabled.
-
-        B2.3 разблокирован после добавления head_params в B2EmbeddingClassifier.
-        B2.4/B2.5/B1.3 — новые lightweight кандидаты.
-        """
+    def test_five_canonical_baselines_enabled(self) -> None:
+        """Оставшиеся 5 baseline'ов — все enabled."""
         from d1.baselines.trained_bundle import BASELINE_CONFIGS
 
         for name in (
-            "B1.2_tfidf_lr_tuned",
+            "B0_rules",
+            "B1.1_tfidf_lr",
             "B1.3_fasttext",
-            "B2.3_bge-m3_linear_tuned",
-            "B2.4_e5-small_linear",
+            "B2.1_bge-m3_svc",
             "B2.5_e5-small_svc",
         ):
-            assert BASELINE_CONFIGS[name]["enabled"] is True, (
-                f"{name} должен быть enabled после Phase 3"
-            )
+            assert BASELINE_CONFIGS[name]["enabled"] is True
 
     def test_train_bundle_returns_fitted_b0_b1(
         self, tmp_train_csv: Path, tmp_cache_dir: Path,
     ) -> None:
-        """train_bundle обучает B0 (без fit) и B1 на toy данных."""
+        """train_bundle обучает B0 (без fit) и B1.1 на toy данных."""
         from d1.baselines.trained_bundle import train_bundle
 
         bundle = train_bundle(
-            names=["B0_rules", "B1_tfidf_svc"],
+            names=["B0_rules", "B1.1_tfidf_lr"],
             use_cache=False,
             cache_dir=tmp_cache_dir,
         )
-        assert set(bundle.models) == {"B0_rules", "B1_tfidf_svc"}
-        # B0 не требует fit, B1 должен быть fitted
-        assert bundle.get("B1_tfidf_svc")._is_fitted
+        assert set(bundle.models) == {"B0_rules", "B1.1_tfidf_lr"}
+        # B0 не требует fit, B1.1 должен быть fitted
+        assert bundle.get("B1.1_tfidf_lr")._is_fitted
 
     def test_bundle_get_raises_on_missing(
         self, tmp_train_csv: Path, tmp_cache_dir: Path,
@@ -158,7 +151,7 @@ class TestRunnableConfigs:
         bundle = train_bundle(
             names=["B0_rules"], use_cache=False, cache_dir=tmp_cache_dir,
         )
-        with pytest.raises(KeyError, match="B1.1_tfidf_lr"):
+        with pytest.raises(KeyError, match=r"B1\.1_tfidf_lr"):
             bundle.get("B1.1_tfidf_lr")
 
     def test_cache_hit_on_second_call(
@@ -169,17 +162,17 @@ class TestRunnableConfigs:
 
         # Первый вызов: полное обучение
         bundle1 = train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
-        first_fit_time = bundle1.get("B1_tfidf_svc").train_time_ms
+        first_fit_time = bundle1.get("B1.1_tfidf_lr").train_time_ms
 
         # Второй вызов: должен загрузить из кэша (train_time_ms исходный, ≠ 0)
         bundle2 = train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
         # Cache hit означает, что модель загружена с сохранённым train_time_ms,
         # а не переобучена. Проверяем идентичность состояния.
-        assert bundle2.get("B1_tfidf_svc").train_time_ms == first_fit_time
+        assert bundle2.get("B1.1_tfidf_lr").train_time_ms == first_fit_time
 
     def test_cache_files_created(
         self, tmp_train_csv: Path, tmp_cache_dir: Path,
@@ -188,10 +181,10 @@ class TestRunnableConfigs:
         from d1.baselines.trained_bundle import train_bundle
 
         train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
         joblib_files = list(tmp_cache_dir.glob("*.joblib"))
-        assert any("b1_tfidf_svc" in p.name.lower() for p in joblib_files)
+        assert any("b1_1_tfidf_lr" in p.name.lower() for p in joblib_files)
         assert (tmp_cache_dir / "bundle_metadata.json").exists()
 
 
@@ -263,7 +256,7 @@ class TestCacheContract:
         from d1.baselines.trained_bundle import train_bundle
 
         train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
 
         # Меняем содержимое CSV: добавляем строку
@@ -277,7 +270,7 @@ class TestCacheContract:
         # Второй вызов должен переобучить (cache miss)
         with patch("d1.baselines.trained_bundle.logger") as mock_log:
             train_bundle(
-                names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+                names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
             )
             # Проверяем что был залогирован cache_miss с причиной dataset
             miss_logs = [
@@ -297,9 +290,9 @@ class TestCacheContract:
         from d1.baselines.trained_bundle import train_bundle
 
         bundle1 = train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
-        original_time = bundle1.get("B1_tfidf_svc").train_time_ms
+        original_time = bundle1.get("B1.1_tfidf_lr").train_time_ms
 
         # Имитация file copy: перезаписываем файл тем же содержимым
         content = tmp_train_csv.read_bytes()
@@ -310,10 +303,10 @@ class TestCacheContract:
         os.utime(tmp_train_csv, (now, now))
 
         bundle2 = train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
         # Cache hit — модель загружена, train_time сохранён
-        assert bundle2.get("B1_tfidf_svc").train_time_ms == original_time
+        assert bundle2.get("B1.1_tfidf_lr").train_time_ms == original_time
 
     def test_params_change_invalidates_cache(
         self, tmp_train_csv: Path, tmp_cache_dir: Path, monkeypatch,
@@ -351,14 +344,14 @@ class TestCacheContract:
         import d1.baselines.trained_bundle as tb
 
         tb.train_bundle(
-            names=["B1_tfidf_svc"], use_cache=True, cache_dir=tmp_cache_dir,
+            names=["B1.1_tfidf_lr"], use_cache=True, cache_dir=tmp_cache_dir,
         )
 
         # Mock-апгрейд версии sklearn через подмену env_hash
         with patch.object(tb, "_compute_env_hash", return_value="x" * 16):
             with patch.object(tb, "logger") as mock_log:
                 tb.train_bundle(
-                    names=["B1_tfidf_svc"], use_cache=True,
+                    names=["B1.1_tfidf_lr"], use_cache=True,
                     cache_dir=tmp_cache_dir,
                 )
                 miss_logs = [

@@ -2,7 +2,8 @@
 
 Проверяем:
 - rule-based категории по true/pred/subtype/urgency;
-- `both_wrong_disagreement` для кейсов, где sparse и dense оба ошиблись;
+- `both_wrong` для кейсов, где sparse и dense оба ошиблись (любые предсказания);
+- `models_disagree_both_wrong` для подмножества, где sparse != dense;
 - сохранение taxonomy CSV + summary CSV;
 - audit sample создаётся как шаблон для ручной проверки категорий;
 - модуль использует `train_bundle`, но сам не обучает модели.
@@ -56,7 +57,8 @@ def test_classify_error_types_can_return_multiple_tags() -> None:
 
     assert "anamnesis_to_faq" in tags
     assert "mixed_intent_error" in tags
-    assert "both_wrong_disagreement" in tags
+    assert "both_wrong" in tags
+    assert "models_disagree_both_wrong" in tags
 
 
 def test_classify_error_types_required_single_tags() -> None:
@@ -121,7 +123,8 @@ def test_build_error_taxonomy_uses_sparse_and_dense_predictions() -> None:
 
     assert set(tax["id"]) == {"a"}
     assert {"pred_sparse", "pred_dense", "error_type"}.issubset(tax.columns)
-    assert "both_wrong_disagreement" in set(tax["error_type"])
+    assert "both_wrong" in set(tax["error_type"])
+    assert "models_disagree_both_wrong" in set(tax["error_type"])
 
 
 def test_summarize_taxonomy_counts_pct_and_examples() -> None:
@@ -138,7 +141,7 @@ def test_summarize_taxonomy_counts_pct_and_examples() -> None:
             "id": "a",
             "eval_set": "hard_test",
             "text": "t1",
-            "error_type": "both_wrong_disagreement",
+            "error_type": "both_wrong",
         },
         {
             "id": "b",
